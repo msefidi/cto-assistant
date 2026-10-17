@@ -1,0 +1,60 @@
+kind	stage	spec	customers	ltv12	ltv24	became_member
+Membership	Assistenzarzt	Allgemeinmedizin	417	737.0	918.0	417
+Membership	Assistenzarzt	Innere Medizin	271	731.0	964.0	271
+Membership	Assistenzarzt	Other	200	678.0	875.0	200
+Membership	Assistenzarzt	Several	96	844.0	1099.0	96
+Membership	Assistenzarzt	Kardiologie	81	710.0	892.0	81
+Membership	Assistenzarzt	Pädiatrie	66	748.0	983.0	66
+Membership	Assistenzarzt	Psychiatrie	63	853.0	1039.0	63
+Membership	Assistenzarzt	Neurologie	26	652.0	847.0	26
+Membership	Assistenzarzt	Anästhesiologie	16	681.0	854.0	16
+Membership	Assistenzarzt	Not stated	2	500.0	500.0	2
+Membership	Facharzt	Allgemeinmedizin	944	1054.0	1472.0	944
+Membership	Facharzt	Other	515	928.0	1261.0	515
+Membership	Facharzt	Innere Medizin	451	987.0	1320.0	451
+Membership	Facharzt	Several	251	980.0	1418.0	251
+Membership	Facharzt	Psychiatrie	245	1081.0	1492.0	245
+Membership	Facharzt	Kardiologie	160	914.0	1264.0	160
+Membership	Facharzt	Pädiatrie	134	1011.0	1368.0	134
+Membership	Facharzt	Anästhesiologie	67	979.0	1379.0	67
+Membership	Facharzt	Neurologie	31	881.0	1188.0	31
+Membership	Facharzt	Not stated	2	1473.0	1473.0	2
+Membership	Facharzt	Gynäkologie	1	1320.0	1320.0	1
+Membership	Other / unknown	Psychiatrie	15	963.0	1356.0	15
+Membership	Other / unknown	Other	8	783.0	1304.0	8
+Membership	Other / unknown	Several	2	1196.0	2270.0	2
+Membership	Other / unknown	Allgemeinmedizin	1	1035.0	1525.0	1
+Membership	Other / unknown	Innere Medizin	1	935.0	935.0	1
+Single course	Assistenzarzt	Allgemeinmedizin	975	604.0	688.0	70
+Single course	Assistenzarzt	Other	763	487.0	545.0	41
+Single course	Assistenzarzt	Innere Medizin	751	614.0	687.0	51
+Single course	Assistenzarzt	Pädiatrie	586	571.0	656.0	20
+Single course	Assistenzarzt	Neurologie	360	340.0	391.0	15
+Single course	Assistenzarzt	Psychiatrie	253	644.0	755.0	13
+Single course	Assistenzarzt	Kardiologie	160	513.0	597.0	13
+Single course	Assistenzarzt	Several	141	620.0	775.0	26
+Single course	Assistenzarzt	Anästhesiologie	61	406.0	425.0	1
+Single course	Assistenzarzt	Gynäkologie	7	515.0	585.0	1
+Single course	Assistenzarzt	Not stated	1	585.0	585.0	0
+Single course	Facharzt	Allgemeinmedizin	2637	759.0	986.0	373
+Single course	Facharzt	Other	2530	571.0	713.0	156
+Single course	Facharzt	Innere Medizin	1209	721.0	900.0	135
+Single course	Facharzt	Psychiatrie	901	666.0	905.0	82
+Single course	Facharzt	Pädiatrie	809	688.0	920.0	66
+Single course	Facharzt	Neurologie	548	386.0	482.0	19
+Single course	Facharzt	Several	461	702.0	905.0	76
+Single course	Facharzt	Kardiologie	435	587.0	738.0	33
+Single course	Facharzt	Anästhesiologie	374	534.0	669.0	20
+Single course	Facharzt	Gynäkologie	57	572.0	686.0	1
+Single course	Facharzt	Not stated	28	447.0	490.0	0
+Single course	Other / unknown	Other	432	416.0	474.0	6
+Single course	Other / unknown	Allgemeinmedizin	191	521.0	548.0	0
+Single course	Other / unknown	Innere Medizin	145	517.0	535.0	1
+Single course	Other / unknown	Psychiatrie	140	452.0	581.0	2
+Single course	Other / unknown	Not stated	121	385.0	387.0	0
+Single course	Other / unknown	Pädiatrie	106	452.0	468.0	0
+Single course	Other / unknown	Neurologie	82	281.0	281.0	0
+Single course	Other / unknown	Kardiologie	48	418.0	442.0	0
+Single course	Other / unknown	Several	32	463.0	463.0	0
+Single course	Other / unknown	Anästhesiologie	23	356.0	356.0	0
+Single course	Other / unknown	Gynäkologie	7	481.0	572.0	0

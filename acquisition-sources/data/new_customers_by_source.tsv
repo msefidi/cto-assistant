@@ -1,0 +1,1109 @@
+month	country	kind	channel	customers	first_purchase_eur
+2023-09	AUT	Membership	Membership	37	20910.0
+2023-09	AUT	Single course	FOMF website / former participant	22	7815.0
+2023-09	AUT	Single course	Colleague recommendation	17	6535.0
+2023-09	AUT	Single course	Print: postal flyer	12	4755.0
+2023-09	AUT	Single course	Email / newsletter	12	4595.0
+2023-09	AUT	Single course	Social media	7	3470.0
+2023-09	AUT	Single course	Search	7	2170.0
+2023-09	AUT	Single course	Print: journal insert	6	2490.0
+2023-09	AUT	Single course	Print: journal ad	2	780.0
+2023-09	AUT	Single course	Print: clinic poster	2	600.0
+2023-09	CHE	Membership	Membership	45	41286.0
+2023-09	CHE	Single course	Print: postal flyer	16	6489.0
+2023-09	CHE	Single course	FOMF website / former participant	15	8930.0
+2023-09	CHE	Single course	Print: journal insert	10	4463.0
+2023-09	CHE	Single course	Colleague recommendation	9	4116.0
+2023-09	CHE	Single course	Search	8	3922.0
+2023-09	CHE	Single course	Email / newsletter	7	3029.0
+2023-09	CHE	Single course	Print: journal ad	4	1759.0
+2023-09	CHE	Single course	Print: clinic poster	4	2184.0
+2023-09	CHE	Single course	Social media	2	1013.0
+2023-09	CHE	Single course	Invitation / sponsor	2	389.0
+2023-09	DEU	Membership	Membership	125	69210.0
+2023-09	DEU	Single course	Print: journal insert	54	24725.0
+2023-09	DEU	Single course	Colleague recommendation	51	21035.0
+2023-09	DEU	Single course	Print: postal flyer	41	18325.0
+2023-09	DEU	Single course	FOMF website / former participant	36	15890.0
+2023-09	DEU	Single course	Search	35	15205.0
+2023-09	DEU	Single course	Print: clinic poster	18	7350.0
+2023-09	DEU	Single course	Email / newsletter	16	6315.0
+2023-09	DEU	Single course	Print: journal ad	15	7135.0
+2023-09	DEU	Single course	Social media	9	2920.0
+2023-09	DEU	Single course	Invitation / sponsor	3	60.0
+2023-09	DEU	Single course	Other	2	920.0
+2023-10	AUT	Membership	Membership	34	19150.0
+2023-10	AUT	Single course	Colleague recommendation	41	14315.0
+2023-10	AUT	Single course	FOMF website / former participant	27	8890.0
+2023-10	AUT	Single course	Email / newsletter	20	7235.0
+2023-10	AUT	Single course	Print: postal flyer	13	4545.0
+2023-10	AUT	Single course	Print: journal insert	11	3885.0
+2023-10	AUT	Single course	Search	10	3040.0
+2023-10	AUT	Single course	Social media	6	2075.0
+2023-10	AUT	Single course	Print: journal ad	4	1990.0
+2023-10	AUT	Single course	Print: clinic poster	3	1280.0
+2023-10	CHE	Membership	Membership	65	60239.0
+2023-10	CHE	Single course	Colleague recommendation	36	22360.0
+2023-10	CHE	Single course	Print: postal flyer	32	17567.0
+2023-10	CHE	Single course	FOMF website / former participant	28	15062.0
+2023-10	CHE	Single course	Print: journal insert	19	10568.0
+2023-10	CHE	Single course	Print: journal ad	11	6153.0
+2023-10	CHE	Single course	Print: clinic poster	9	5492.0
+2023-10	CHE	Single course	Search	8	4305.0
+2023-10	CHE	Single course	Email / newsletter	7	2305.0
+2023-10	CHE	Single course	Social media	6	4631.0
+2023-10	CHE	Single course	Other	4	2210.0
+2023-10	DEU	Membership	Membership	142	78181.0
+2023-10	DEU	Single course	Print: journal insert	58	26278.0
+2023-10	DEU	Single course	Search	46	23245.0
+2023-10	DEU	Single course	Print: postal flyer	44	20440.0
+2023-10	DEU	Single course	Colleague recommendation	36	18255.0
+2023-10	DEU	Single course	FOMF website / former participant	25	11530.0
+2023-10	DEU	Single course	Print: clinic poster	22	9130.0
+2023-10	DEU	Single course	Email / newsletter	17	8010.0
+2023-10	DEU	Single course	Print: journal ad	16	7475.0
+2023-10	DEU	Single course	Social media	10	4470.0
+2023-10	DEU	Single course	Invitation / sponsor	5	100.0
+2023-11	AUT	Membership	Membership	39	21370.0
+2023-11	AUT	Single course	Colleague recommendation	33	12285.0
+2023-11	AUT	Single course	FOMF website / former participant	23	8795.0
+2023-11	AUT	Single course	Email / newsletter	22	6940.0
+2023-11	AUT	Single course	Search	11	2740.0
+2023-11	AUT	Single course	Print: journal ad	9	2960.0
+2023-11	AUT	Single course	Print: journal insert	8	3465.0
+2023-11	AUT	Single course	Print: postal flyer	8	2580.0
+2023-11	AUT	Single course	Social media	5	1810.0
+2023-11	AUT	Single course	Print: clinic poster	1	340.0
+2023-11	CHE	Membership	Membership	102	91875.0
+2023-11	CHE	Single course	Colleague recommendation	67	38845.0
+2023-11	CHE	Single course	FOMF website / former participant	58	34031.0
+2023-11	CHE	Single course	Print: postal flyer	38	21956.0
+2023-11	CHE	Single course	Print: journal insert	27	14690.0
+2023-11	CHE	Single course	Search	21	14186.0
+2023-11	CHE	Single course	Email / newsletter	20	10337.0
+2023-11	CHE	Single course	Other	11	7061.0
+2023-11	CHE	Single course	Print: clinic poster	10	4662.0
+2023-11	CHE	Single course	Print: journal ad	8	6227.0
+2023-11	CHE	Single course	Social media	3	1428.0
+2023-11	DEU	Membership	Membership	185	100390.0
+2023-11	DEU	Single course	Colleague recommendation	97	44485.0
+2023-11	DEU	Single course	Print: postal flyer	93	40538.0
+2023-11	DEU	Single course	Print: journal insert	92	43075.0
+2023-11	DEU	Single course	Search	81	36993.0
+2023-11	DEU	Single course	FOMF website / former participant	57	26415.0
+2023-11	DEU	Single course	Email / newsletter	41	21320.0
+2023-11	DEU	Single course	Print: clinic poster	24	10375.0
+2023-11	DEU	Single course	Print: journal ad	20	9235.0
+2023-11	DEU	Single course	Social media	8	4075.0
+2023-11	DEU	Single course	Other	8	3235.0
+2023-11	DEU	Single course	Invitation / sponsor	4	160.0
+2023-12	AUT	Membership	Membership	8	4170.0
+2023-12	AUT	Single course	Colleague recommendation	5	1990.0
+2023-12	AUT	Single course	FOMF website / former participant	3	1490.0
+2023-12	AUT	Single course	Search	3	1070.0
+2023-12	AUT	Single course	Email / newsletter	2	1140.0
+2023-12	AUT	Single course	Print: journal insert	2	490.0
+2023-12	CHE	Membership	Membership	30	27584.0
+2023-12	CHE	Single course	Colleague recommendation	27	20075.0
+2023-12	CHE	Single course	FOMF website / former participant	19	14611.0
+2023-12	CHE	Single course	Search	16	11093.0
+2023-12	CHE	Single course	Print: postal flyer	14	9828.0
+2023-12	CHE	Single course	Email / newsletter	11	6263.0
+2023-12	CHE	Single course	Print: journal ad	7	6290.0
+2023-12	CHE	Single course	Print: clinic poster	5	3371.0
+2023-12	CHE	Single course	Print: journal insert	5	3896.0
+2023-12	CHE	Single course	Other	5	2535.0
+2023-12	CHE	Single course	Social media	2	1911.0
+2023-12	CHE	Single course	(no answer)	1	924.0
+2023-12	DEU	Membership	Membership	104	56350.0
+2023-12	DEU	Single course	Print: journal insert	78	40590.0
+2023-12	DEU	Single course	Print: postal flyer	50	26775.0
+2023-12	DEU	Single course	Search	50	25895.0
+2023-12	DEU	Single course	Colleague recommendation	40	20260.0
+2023-12	DEU	Single course	Print: clinic poster	29	14525.0
+2023-12	DEU	Single course	FOMF website / former participant	29	14275.0
+2023-12	DEU	Single course	Email / newsletter	23	11485.0
+2023-12	DEU	Single course	Print: journal ad	11	6315.0
+2023-12	DEU	Single course	Other	9	5095.0
+2023-12	DEU	Single course	Social media	7	3230.0
+2023-12	DEU	Single course	(no answer)	6	2900.0
+2023-12	DEU	Single course	Invitation / sponsor	1	200.0
+2024-01	AUT	Membership	Membership	32	17960.0
+2024-01	AUT	Single course	Print: postal flyer	18	5295.0
+2024-01	AUT	Single course	Colleague recommendation	15	5595.0
+2024-01	AUT	Single course	FOMF website / former participant	7	2990.0
+2024-01	AUT	Single course	Email / newsletter	7	2130.0
+2024-01	AUT	Single course	Social media	6	2455.0
+2024-01	AUT	Single course	Print: journal insert	5	2160.0
+2024-01	AUT	Single course	Search	5	2025.0
+2024-01	AUT	Single course	Print: journal ad	4	1965.0
+2024-01	AUT	Single course	Print: clinic poster	2	695.0
+2024-01	AUT	Single course	Invitation / sponsor	1	15.0
+2024-01	CHE	Membership	Membership	46	42210.0
+2024-01	CHE	Single course	Colleague recommendation	18	10526.0
+2024-01	CHE	Single course	FOMF website / former participant	12	7156.0
+2024-01	CHE	Single course	Search	5	2494.0
+2024-01	CHE	Single course	Print: journal insert	4	1575.0
+2024-01	CHE	Single course	Print: postal flyer	3	2405.0
+2024-01	CHE	Single course	Other	2	1019.0
+2024-01	CHE	Single course	Email / newsletter	2	630.0
+2024-01	CHE	Single course	Print: clinic poster	1	620.0
+2024-01	CHE	Single course	Social media	1	263.0
+2024-01	DEU	Membership	Membership	140	74750.0
+2024-01	DEU	Single course	Search	50	24075.0
+2024-01	DEU	Single course	Print: journal insert	44	23515.0
+2024-01	DEU	Single course	Colleague recommendation	43	19950.0
+2024-01	DEU	Single course	Print: postal flyer	33	14395.0
+2024-01	DEU	Single course	FOMF website / former participant	29	14670.0
+2024-01	DEU	Single course	Email / newsletter	20	8295.0
+2024-01	DEU	Single course	Print: journal ad	15	6670.0
+2024-01	DEU	Single course	Invitation / sponsor	9	195.0
+2024-01	DEU	Single course	Print: clinic poster	7	3145.0
+2024-01	DEU	Single course	Social media	7	2620.0
+2024-01	DEU	Single course	Other	1	540.0
+2024-02	AUT	Membership	Membership	15	8180.0
+2024-02	AUT	Single course	Colleague recommendation	15	3955.0
+2024-02	AUT	Single course	Email / newsletter	11	3150.0
+2024-02	AUT	Single course	Print: clinic poster	9	2640.0
+2024-02	AUT	Single course	Print: postal flyer	7	1810.0
+2024-02	AUT	Single course	Social media	7	2085.0
+2024-02	AUT	Single course	FOMF website / former participant	4	1250.0
+2024-02	AUT	Single course	Search	4	1400.0
+2024-02	AUT	Single course	Print: journal insert	4	1030.0
+2024-02	CHE	Membership	Membership	30	28014.0
+2024-02	CHE	Single course	Colleague recommendation	19	10484.0
+2024-02	CHE	Single course	FOMF website / former participant	13	8211.0
+2024-02	CHE	Single course	Print: postal flyer	6	3633.0
+2024-02	CHE	Single course	Print: journal insert	5	2027.0
+2024-02	CHE	Single course	Search	4	1932.0
+2024-02	CHE	Single course	Print: journal ad	4	2147.0
+2024-02	CHE	Single course	Email / newsletter	3	1916.0
+2024-02	CHE	Single course	Social media	2	1071.0
+2024-02	DEU	Membership	Membership	103	55760.0
+2024-02	DEU	Single course	Colleague recommendation	31	14831.0
+2024-02	DEU	Single course	Search	25	10305.0
+2024-02	DEU	Single course	Print: journal insert	24	12320.0
+2024-02	DEU	Single course	Print: postal flyer	22	11240.0
+2024-02	DEU	Single course	FOMF website / former participant	16	6860.0
+2024-02	DEU	Single course	Email / newsletter	11	4685.0
+2024-02	DEU	Single course	Print: clinic poster	9	4365.0
+2024-02	DEU	Single course	Print: journal ad	8	4155.0
+2024-02	DEU	Single course	Social media	3	1515.0
+2024-02	DEU	Single course	Other	2	970.0
+2024-02	DEU	Single course	Invitation / sponsor	2	210.0
+2024-03	AUT	Membership	Membership	14	8270.0
+2024-03	AUT	Single course	Print: postal flyer	8	2590.0
+2024-03	AUT	Single course	Print: journal insert	8	2930.0
+2024-03	AUT	Single course	FOMF website / former participant	5	2205.0
+2024-03	AUT	Single course	Colleague recommendation	4	770.0
+2024-03	AUT	Single course	Email / newsletter	4	1180.0
+2024-03	AUT	Single course	Invitation / sponsor	3	1160.0
+2024-03	AUT	Single course	Print: clinic poster	1	330.0
+2024-03	AUT	Single course	Print: journal ad	1	650.0
+2024-03	CHE	Membership	Membership	38	33994.0
+2024-03	CHE	Single course	Colleague recommendation	21	10148.0
+2024-03	CHE	Single course	Email / newsletter	8	2783.0
+2024-03	CHE	Single course	Print: journal insert	7	3885.0
+2024-03	CHE	Single course	Search	5	2515.0
+2024-03	CHE	Single course	FOMF website / former participant	4	1995.0
+2024-03	CHE	Single course	Print: clinic poster	2	1208.0
+2024-03	CHE	Single course	Print: postal flyer	2	567.0
+2024-03	CHE	Single course	Social media	2	987.0
+2024-03	CHE	Single course	Print: journal ad	1	830.0
+2024-03	CHE	Single course	Other	1	525.0
+2024-03	DEU	Membership	Membership	60	33780.0
+2024-03	DEU	Single course	Print: postal flyer	35	16384.0
+2024-03	DEU	Single course	Colleague recommendation	24	12025.0
+2024-03	DEU	Single course	Search	23	11060.0
+2024-03	DEU	Single course	Print: journal insert	20	10405.0
+2024-03	DEU	Single course	FOMF website / former participant	9	5275.0
+2024-03	DEU	Single course	Email / newsletter	8	4355.0
+2024-03	DEU	Single course	Social media	3	1025.0
+2024-03	DEU	Single course	Print: journal ad	3	905.0
+2024-03	DEU	Single course	Print: clinic poster	2	535.0
+2024-04	AUT	Membership	Membership	12	7220.0
+2024-04	AUT	Single course	Colleague recommendation	11	3975.0
+2024-04	AUT	Single course	Search	10	3300.0
+2024-04	AUT	Single course	Print: postal flyer	9	2150.0
+2024-04	AUT	Single course	Print: journal insert	7	2700.0
+2024-04	AUT	Single course	Email / newsletter	7	2140.0
+2024-04	AUT	Single course	Social media	3	1050.0
+2024-04	AUT	Single course	Print: clinic poster	1	270.0
+2024-04	AUT	Single course	Print: journal ad	1	280.0
+2024-04	CHE	Membership	Membership	45	40357.0
+2024-04	CHE	Single course	Colleague recommendation	25	13902.0
+2024-04	CHE	Single course	Print: postal flyer	11	5434.0
+2024-04	CHE	Single course	Email / newsletter	9	4793.0
+2024-04	CHE	Single course	Search	7	4704.0
+2024-04	CHE	Single course	Print: clinic poster	6	2793.0
+2024-04	CHE	Single course	Print: journal insert	5	2315.0
+2024-04	CHE	Single course	FOMF website / former participant	5	2725.0
+2024-04	CHE	Single course	Congress / fair	3	1727.0
+2024-04	CHE	Single course	Print: journal ad	3	1360.0
+2024-04	DEU	Membership	Membership	77	41590.0
+2024-04	DEU	Single course	Print: journal insert	48	22150.0
+2024-04	DEU	Single course	Print: postal flyer	31	15735.0
+2024-04	DEU	Single course	Colleague recommendation	25	11345.0
+2024-04	DEU	Single course	Search	21	8945.0
+2024-04	DEU	Single course	Email / newsletter	10	4980.0
+2024-04	DEU	Single course	Print: clinic poster	8	3540.0
+2024-04	DEU	Single course	Print: journal ad	6	2840.0
+2024-04	DEU	Single course	Social media	6	2110.0
+2024-04	DEU	Single course	FOMF website / former participant	3	1590.0
+2024-04	DEU	Single course	Congress / fair	1	590.0
+2024-05	AUT	Membership	Membership	25	13600.0
+2024-05	AUT	Single course	Colleague recommendation	9	3470.0
+2024-05	AUT	Single course	Email / newsletter	7	2453.0
+2024-05	AUT	Single course	Search	3	1110.0
+2024-05	AUT	Single course	Congress / fair	3	720.0
+2024-05	AUT	Single course	Print: postal flyer	3	1200.0
+2024-05	AUT	Single course	Print: clinic poster	3	1490.0
+2024-05	AUT	Single course	Print: journal insert	2	600.0
+2024-05	AUT	Single course	Social media	1	470.0
+2024-05	CHE	Membership	Membership	58	53403.0
+2024-05	CHE	Single course	Colleague recommendation	28	15136.0
+2024-05	CHE	Single course	Print: postal flyer	13	7476.0
+2024-05	CHE	Single course	Search	11	5229.0
+2024-05	CHE	Single course	Email / newsletter	10	4473.0
+2024-05	CHE	Single course	Print: journal insert	9	5161.0
+2024-05	CHE	Single course	Congress / fair	5	2987.0
+2024-05	CHE	Single course	Print: journal ad	4	1738.0
+2024-05	CHE	Single course	Print: clinic poster	4	2142.0
+2024-05	CHE	Single course	Social media	2	882.0
+2024-05	DEU	Membership	Membership	130	71350.0
+2024-05	DEU	Single course	Search	30	13490.0
+2024-05	DEU	Single course	Print: journal insert	27	13820.0
+2024-05	DEU	Single course	Colleague recommendation	26	12885.0
+2024-05	DEU	Single course	Print: postal flyer	25	11625.0
+2024-05	DEU	Single course	Social media	10	4360.0
+2024-05	DEU	Single course	Email / newsletter	9	3575.0
+2024-05	DEU	Single course	Print: journal ad	7	3940.0
+2024-05	DEU	Single course	Print: clinic poster	7	3755.0
+2024-05	DEU	Single course	FOMF website / former participant	2	1155.0
+2024-05	DEU	Single course	Congress / fair	1	320.0
+2024-05	DEU	Single course	Invitation / sponsor	1	20.0
+2024-06	AUT	Membership	Membership	47	26180.0
+2024-06	AUT	Single course	Email / newsletter	12	4415.0
+2024-06	AUT	Single course	Print: postal flyer	10	3590.0
+2024-06	AUT	Single course	Colleague recommendation	9	3625.0
+2024-06	AUT	Single course	Print: journal insert	6	2280.0
+2024-06	AUT	Single course	Search	4	1480.0
+2024-06	AUT	Single course	Social media	3	740.0
+2024-06	AUT	Single course	Print: clinic poster	3	990.0
+2024-06	AUT	Single course	FOMF website / former participant	1	650.0
+2024-06	AUT	Single course	Invitation / sponsor	1	20.0
+2024-06	CHE	Membership	Membership	58	51497.0
+2024-06	CHE	Single course	Colleague recommendation	31	18722.0
+2024-06	CHE	Single course	Search	16	7529.0
+2024-06	CHE	Single course	Print: journal insert	12	7775.0
+2024-06	CHE	Single course	Print: postal flyer	10	6001.0
+2024-06	CHE	Single course	Print: journal ad	8	4788.0
+2024-06	CHE	Single course	Email / newsletter	8	4289.0
+2024-06	CHE	Single course	FOMF website / former participant	4	2436.0
+2024-06	CHE	Single course	Print: clinic poster	4	1575.0
+2024-06	CHE	Single course	Congress / fair	4	1985.0
+2024-06	CHE	Single course	Social media	1	473.0
+2024-06	CHE	Single course	Other	1	1045.0
+2024-06	DEU	Membership	Membership	161	88460.0
+2024-06	DEU	Single course	Print: journal insert	45	21865.0
+2024-06	DEU	Single course	Search	35	16300.0
+2024-06	DEU	Single course	Colleague recommendation	31	16225.0
+2024-06	DEU	Single course	Print: postal flyer	28	14090.0
+2024-06	DEU	Single course	Email / newsletter	20	8580.0
+2024-06	DEU	Single course	Social media	10	4665.0
+2024-06	DEU	Single course	Print: journal ad	8	4050.0
+2024-06	DEU	Single course	Print: clinic poster	7	3315.0
+2024-06	DEU	Single course	FOMF website / former participant	4	2165.0
+2024-06	DEU	Single course	Congress / fair	2	955.0
+2024-06	DEU	Single course	Invitation / sponsor	2	40.0
+2024-07	AUT	Membership	Membership	9	4930.0
+2024-07	AUT	Single course	Colleague recommendation	8	2235.0
+2024-07	AUT	Single course	Print: postal flyer	5	1790.0
+2024-07	AUT	Single course	Social media	3	660.0
+2024-07	AUT	Single course	Print: journal ad	3	915.0
+2024-07	AUT	Single course	Email / newsletter	2	645.0
+2024-07	AUT	Single course	Print: journal insert	1	260.0
+2024-07	AUT	Single course	Search	1	240.0
+2024-07	CHE	Membership	Membership	24	21546.0
+2024-07	CHE	Single course	Colleague recommendation	13	8726.0
+2024-07	CHE	Single course	Print: journal insert	7	3938.0
+2024-07	CHE	Single course	Print: postal flyer	5	3539.0
+2024-07	CHE	Single course	Search	4	1974.0
+2024-07	CHE	Single course	Congress / fair	3	1838.0
+2024-07	CHE	Single course	Print: journal ad	2	966.0
+2024-07	CHE	Single course	Social media	2	1491.0
+2024-07	CHE	Single course	Print: clinic poster	1	830.0
+2024-07	CHE	Single course	Email / newsletter	1	735.0
+2024-07	DEU	Membership	Membership	61	32970.0
+2024-07	DEU	Single course	Search	24	11680.0
+2024-07	DEU	Single course	Colleague recommendation	24	12015.0
+2024-07	DEU	Single course	Print: journal insert	19	9610.0
+2024-07	DEU	Single course	Print: postal flyer	19	8740.0
+2024-07	DEU	Single course	Print: clinic poster	8	3540.0
+2024-07	DEU	Single course	Email / newsletter	7	2950.0
+2024-07	DEU	Single course	Other	2	820.0
+2024-07	DEU	Single course	Social media	2	995.0
+2024-07	DEU	Single course	Print: journal ad	1	530.0
+2024-08	AUT	Membership	Membership	13	7540.0
+2024-08	AUT	Single course	Colleague recommendation	22	7285.0
+2024-08	AUT	Single course	Email / newsletter	12	3385.0
+2024-08	AUT	Single course	Search	6	2500.0
+2024-08	AUT	Single course	Print: postal flyer	6	2315.0
+2024-08	AUT	Single course	Social media	5	1270.0
+2024-08	AUT	Single course	Print: journal ad	5	2040.0
+2024-08	AUT	Single course	FOMF website / former participant	5	1680.0
+2024-08	AUT	Single course	Print: journal insert	3	1165.0
+2024-08	AUT	Single course	Congress / fair	1	280.0
+2024-08	CHE	Membership	Membership	21	19751.0
+2024-08	CHE	Single course	Colleague recommendation	26	17708.0
+2024-08	CHE	Single course	Email / newsletter	19	9739.0
+2024-08	CHE	Single course	Search	12	6586.0
+2024-08	CHE	Single course	Print: postal flyer	9	4368.0
+2024-08	CHE	Single course	Print: journal insert	8	4883.0
+2024-08	CHE	Single course	Print: journal ad	5	2226.0
+2024-08	CHE	Single course	Other	4	1764.0
+2024-08	CHE	Single course	Social media	3	2683.0
+2024-08	CHE	Single course	FOMF website / former participant	1	473.0
+2024-08	CHE	Single course	(no answer)	1	441.0
+2024-08	DEU	Membership	Membership	37	20760.0
+2024-08	DEU	Single course	Colleague recommendation	50	23790.0
+2024-08	DEU	Single course	Print: postal flyer	49	20420.0
+2024-08	DEU	Single course	Print: journal insert	41	21035.0
+2024-08	DEU	Single course	Search	40	20520.0
+2024-08	DEU	Single course	Email / newsletter	18	7238.0
+2024-08	DEU	Single course	Print: clinic poster	13	4930.0
+2024-08	DEU	Single course	Other	7	2805.0
+2024-08	DEU	Single course	Social media	7	3140.0
+2024-08	DEU	Single course	Print: journal ad	6	2400.0
+2024-08	DEU	Single course	FOMF website / former participant	4	2405.0
+2024-08	DEU	Single course	Congress / fair	2	760.0
+2024-08	DEU	Single course	(no answer)	1	510.0
+2024-09	AUT	Membership	Membership	26	14350.0
+2024-09	AUT	Single course	Colleague recommendation	37	12470.0
+2024-09	AUT	Single course	Print: postal flyer	16	5030.0
+2024-09	AUT	Single course	Print: journal insert	13	4535.0
+2024-09	AUT	Single course	Email / newsletter	13	5375.0
+2024-09	AUT	Single course	Search	13	4170.0
+2024-09	AUT	Single course	Social media	9	2905.0
+2024-09	AUT	Single course	Congress / fair	4	1010.0
+2024-09	AUT	Single course	Print: journal ad	3	1125.0
+2024-09	AUT	Single course	Invitation / sponsor	2	1180.0
+2024-09	AUT	Single course	Print: clinic poster	2	685.0
+2024-09	AUT	Single course	FOMF website / former participant	1	130.0
+2024-09	CHE	Membership	Membership	49	45665.0
+2024-09	CHE	Single course	Colleague recommendation	33	21651.0
+2024-09	CHE	Single course	Print: postal flyer	16	9970.0
+2024-09	CHE	Single course	Email / newsletter	13	7576.0
+2024-09	CHE	Single course	Search	11	5471.0
+2024-09	CHE	Single course	Print: journal insert	9	5649.0
+2024-09	CHE	Single course	Print: clinic poster	7	3969.0
+2024-09	CHE	Single course	Social media	5	3166.0
+2024-09	CHE	Single course	Congress / fair	5	3990.0
+2024-09	CHE	Single course	Print: journal ad	2	1250.0
+2024-09	DEU	Membership	Membership	91	50920.0
+2024-09	DEU	Single course	Colleague recommendation	74	35763.0
+2024-09	DEU	Single course	Print: postal flyer	65	30170.0
+2024-09	DEU	Single course	Search	61	30310.0
+2024-09	DEU	Single course	Print: journal insert	60	29225.0
+2024-09	DEU	Single course	Email / newsletter	30	11582.0
+2024-09	DEU	Single course	Print: clinic poster	24	11830.0
+2024-09	DEU	Single course	Social media	14	6425.0
+2024-09	DEU	Single course	Print: journal ad	11	4700.0
+2024-09	DEU	Single course	Congress / fair	3	1240.0
+2024-09	DEU	Single course	Other	3	1375.0
+2024-09	DEU	Single course	FOMF website / former participant	2	1020.0
+2024-09	DEU	Single course	Invitation / sponsor	1	20.0
+2024-10	AUT	Membership	Membership	26	15140.0
+2024-10	AUT	Single course	Colleague recommendation	47	12660.0
+2024-10	AUT	Single course	Search	18	5495.0
+2024-10	AUT	Single course	Email / newsletter	17	4120.0
+2024-10	AUT	Single course	Print: journal insert	11	4265.0
+2024-10	AUT	Single course	Social media	11	2835.0
+2024-10	AUT	Single course	Print: postal flyer	10	3900.0
+2024-10	AUT	Single course	Print: journal ad	8	2570.0
+2024-10	AUT	Single course	Congress / fair	3	980.0
+2024-10	AUT	Single course	FOMF website / former participant	1	380.0
+2024-10	CHE	Membership	Membership	89	81942.0
+2024-10	CHE	Single course	Colleague recommendation	78	48820.0
+2024-10	CHE	Single course	Print: postal flyer	27	13309.0
+2024-10	CHE	Single course	Email / newsletter	19	10448.0
+2024-10	CHE	Single course	Print: journal insert	19	12017.0
+2024-10	CHE	Single course	Search	16	9728.0
+2024-10	CHE	Single course	Congress / fair	12	8306.0
+2024-10	CHE	Single course	Print: clinic poster	10	5098.0
+2024-10	CHE	Single course	Print: journal ad	8	5166.0
+2024-10	CHE	Single course	Other	1	368.0
+2024-10	DEU	Membership	Membership	96	53430.0
+2024-10	DEU	Single course	Print: journal insert	70	34180.0
+2024-10	DEU	Single course	Search	67	31425.0
+2024-10	DEU	Single course	Print: postal flyer	65	30625.0
+2024-10	DEU	Single course	Colleague recommendation	60	27128.0
+2024-10	DEU	Single course	Email / newsletter	25	11026.0
+2024-10	DEU	Single course	Print: clinic poster	23	9148.0
+2024-10	DEU	Single course	Print: journal ad	19	9295.0
+2024-10	DEU	Single course	Social media	10	5078.0
+2024-10	DEU	Single course	Congress / fair	5	1945.0
+2024-10	DEU	Single course	Invitation / sponsor	1	20.0
+2024-11	AUT	Membership	Membership	37	20520.0
+2024-11	AUT	Single course	Colleague recommendation	32	10315.0
+2024-11	AUT	Single course	Email / newsletter	19	7535.0
+2024-11	AUT	Single course	Print: postal flyer	16	6320.0
+2024-11	AUT	Single course	Search	14	4410.0
+2024-11	AUT	Single course	Print: journal insert	9	4115.0
+2024-11	AUT	Single course	Social media	6	1565.0
+2024-11	AUT	Single course	Congress / fair	5	2080.0
+2024-11	AUT	Single course	Print: journal ad	3	1690.0
+2024-11	AUT	Single course	Other	2	1140.0
+2024-11	CHE	Membership	Membership	76	70371.0
+2024-11	CHE	Single course	Colleague recommendation	59	33831.0
+2024-11	CHE	Single course	Print: postal flyer	36	20071.0
+2024-11	CHE	Single course	Search	24	13083.0
+2024-11	CHE	Single course	Email / newsletter	21	11823.0
+2024-11	CHE	Single course	Print: journal insert	18	9970.0
+2024-11	CHE	Single course	Print: clinic poster	15	9235.0
+2024-11	CHE	Single course	Social media	14	6547.0
+2024-11	CHE	Single course	Print: journal ad	13	6773.0
+2024-11	CHE	Single course	Congress / fair	12	9287.0
+2024-11	CHE	Single course	Other	5	2688.0
+2024-11	CHE	Single course	Speaker	1	37.0
+2024-11	DEU	Membership	Membership	151	84060.0
+2024-11	DEU	Single course	Search	101	49661.0
+2024-11	DEU	Single course	Colleague recommendation	98	47463.0
+2024-11	DEU	Single course	Print: journal insert	78	37810.0
+2024-11	DEU	Single course	Print: postal flyer	57	24556.0
+2024-11	DEU	Single course	Email / newsletter	31	11903.0
+2024-11	DEU	Single course	Print: clinic poster	31	13250.0
+2024-11	DEU	Single course	Social media	23	10010.0
+2024-11	DEU	Single course	Print: journal ad	17	8170.0
+2024-11	DEU	Single course	Congress / fair	8	3375.0
+2024-11	DEU	Single course	Invitation / sponsor	3	95.0
+2024-12	AUT	Membership	Membership	8	4500.0
+2024-12	AUT	Single course	Print: postal flyer	5	1990.0
+2024-12	AUT	Single course	Colleague recommendation	3	750.0
+2024-12	AUT	Single course	Print: journal insert	2	610.0
+2024-12	AUT	Single course	Other	2	825.0
+2024-12	AUT	Single course	Print: clinic poster	2	685.0
+2024-12	AUT	Single course	Print: journal ad	1	260.0
+2024-12	AUT	Single course	Search	1	105.0
+2024-12	AUT	Single course	Email / newsletter	1	500.0
+2024-12	CHE	Membership	Membership	23	20916.0
+2024-12	CHE	Single course	Colleague recommendation	20	15083.0
+2024-12	CHE	Single course	Print: postal flyer	10	5922.0
+2024-12	CHE	Single course	Search	8	4683.0
+2024-12	CHE	Single course	Email / newsletter	7	3119.0
+2024-12	CHE	Single course	Print: journal insert	4	2221.0
+2024-12	CHE	Single course	Print: journal ad	3	1628.0
+2024-12	CHE	Single course	Congress / fair	2	798.0
+2024-12	CHE	Single course	Print: clinic poster	2	1843.0
+2024-12	CHE	Single course	Social media	1	1040.0
+2024-12	DEU	Membership	Membership	95	53120.0
+2024-12	DEU	Single course	Print: journal insert	54	28160.0
+2024-12	DEU	Single course	Search	48	22955.0
+2024-12	DEU	Single course	Colleague recommendation	47	23255.0
+2024-12	DEU	Single course	Print: postal flyer	43	20900.0
+2024-12	DEU	Single course	Email / newsletter	25	13770.0
+2024-12	DEU	Single course	Social media	16	7805.0
+2024-12	DEU	Single course	Print: clinic poster	15	7175.0
+2024-12	DEU	Single course	Print: journal ad	11	6320.0
+2024-12	DEU	Single course	Congress / fair	3	1440.0
+2024-12	DEU	Single course	Other	1	555.0
+2025-01	AUT	Membership	Membership	23	12430.0
+2025-01	AUT	Single course	Colleague recommendation	27	10175.0
+2025-01	AUT	Single course	Search	10	3025.0
+2025-01	AUT	Single course	Print: postal flyer	9	3710.0
+2025-01	AUT	Single course	Email / newsletter	7	2920.0
+2025-01	AUT	Single course	Social media	5	1830.0
+2025-01	AUT	Single course	Print: journal insert	5	2590.0
+2025-01	AUT	Single course	Print: clinic poster	3	1295.0
+2025-01	AUT	Single course	Print: journal ad	2	1000.0
+2025-01	AUT	Single course	Other	1	220.0
+2025-01	AUT	Single course	FOMF website / former participant	1	300.0
+2025-01	CHE	Membership	Membership	32	29505.0
+2025-01	CHE	Single course	Colleague recommendation	29	20391.0
+2025-01	CHE	Single course	Search	12	7046.0
+2025-01	CHE	Single course	Print: postal flyer	6	4300.0
+2025-01	CHE	Single course	Print: journal ad	5	2762.0
+2025-01	CHE	Single course	Email / newsletter	5	3922.0
+2025-01	CHE	Single course	Social media	5	3350.0
+2025-01	CHE	Single course	Print: journal insert	3	1454.0
+2025-01	CHE	Single course	Congress / fair	3	2016.0
+2025-01	CHE	Single course	Print: clinic poster	1	410.0
+2025-01	DEU	Membership	Membership	122	69290.0
+2025-01	DEU	Single course	Colleague recommendation	58	26820.0
+2025-01	DEU	Single course	Search	50	24255.0
+2025-01	DEU	Single course	Print: journal insert	43	23045.0
+2025-01	DEU	Single course	Print: postal flyer	38	18230.0
+2025-01	DEU	Single course	Email / newsletter	21	9570.0
+2025-01	DEU	Single course	Social media	20	8390.0
+2025-01	DEU	Single course	Print: clinic poster	16	7950.0
+2025-01	DEU	Single course	Print: journal ad	10	5115.0
+2025-01	DEU	Single course	Congress / fair	1	520.0
+2025-01	DEU	Single course	FOMF website / former participant	1	540.0
+2025-01	DEU	Single course	Invitation / sponsor	1	210.0
+2025-02	AUT	Membership	Membership	21	11310.0
+2025-02	AUT	Single course	Colleague recommendation	23	7390.0
+2025-02	AUT	Single course	Print: postal flyer	7	2265.0
+2025-02	AUT	Single course	Email / newsletter	6	2295.0
+2025-02	AUT	Single course	Search	6	2170.0
+2025-02	AUT	Single course	Print: journal insert	5	1530.0
+2025-02	AUT	Single course	Social media	5	1500.0
+2025-02	AUT	Single course	Print: clinic poster	3	1045.0
+2025-02	AUT	Single course	Print: journal ad	2	990.0
+2025-02	CHE	Membership	Membership	31	28823.0
+2025-02	CHE	Single course	Colleague recommendation	25	15855.0
+2025-02	CHE	Single course	Search	8	4473.0
+2025-02	CHE	Single course	Print: journal ad	3	2184.0
+2025-02	CHE	Single course	Print: journal insert	3	1586.0
+2025-02	CHE	Single course	Print: postal flyer	3	1470.0
+2025-02	CHE	Single course	Congress / fair	1	410.0
+2025-02	CHE	Single course	Print: clinic poster	1	882.0
+2025-02	DEU	Membership	Membership	77	41490.0
+2025-02	DEU	Single course	Search	52	25035.0
+2025-02	DEU	Single course	Colleague recommendation	47	20180.0
+2025-02	DEU	Single course	Print: journal insert	39	18632.0
+2025-02	DEU	Single course	Print: postal flyer	24	10000.0
+2025-02	DEU	Single course	Email / newsletter	17	6550.0
+2025-02	DEU	Single course	Social media	15	6155.0
+2025-02	DEU	Single course	Print: clinic poster	13	5680.0
+2025-02	DEU	Single course	Print: journal ad	11	4380.0
+2025-02	DEU	Single course	Congress / fair	9	3635.0
+2025-02	DEU	Single course	FOMF website / former participant	1	665.0
+2025-03	AUT	Membership	Membership	17	10490.0
+2025-03	AUT	Single course	Colleague recommendation	13	3055.0
+2025-03	AUT	Single course	Print: postal flyer	9	2665.0
+2025-03	AUT	Single course	Search	6	2440.0
+2025-03	AUT	Single course	Print: journal insert	6	2130.0
+2025-03	AUT	Single course	Print: journal ad	4	2170.0
+2025-03	AUT	Single course	Social media	2	315.0
+2025-03	AUT	Single course	Email / newsletter	2	700.0
+2025-03	AUT	Single course	Congress / fair	1	320.0
+2025-03	CHE	Membership	Membership	43	39291.0
+2025-03	CHE	Single course	Colleague recommendation	23	15934.0
+2025-03	CHE	Single course	Search	15	7964.0
+2025-03	CHE	Single course	Print: postal flyer	11	6935.0
+2025-03	CHE	Single course	Email / newsletter	10	3654.0
+2025-03	CHE	Single course	Social media	8	5880.0
+2025-03	CHE	Single course	Print: journal insert	5	3098.0
+2025-03	CHE	Single course	Print: journal ad	3	1701.0
+2025-03	CHE	Single course	Congress / fair	2	1103.0
+2025-03	CHE	Single course	Print: clinic poster	2	1302.0
+2025-03	DEU	Membership	Membership	75	42700.0
+2025-03	DEU	Single course	Search	38	18295.0
+2025-03	DEU	Single course	Colleague recommendation	35	17575.0
+2025-03	DEU	Single course	Print: postal flyer	31	16545.0
+2025-03	DEU	Single course	Print: journal insert	18	8775.0
+2025-03	DEU	Single course	Email / newsletter	10	5205.0
+2025-03	DEU	Single course	Print: clinic poster	8	4145.0
+2025-03	DEU	Single course	Print: journal ad	3	1440.0
+2025-03	DEU	Single course	Social media	2	1015.0
+2025-03	DEU	Single course	Invitation / sponsor	1	25.0
+2025-03	DEU	Single course	Congress / fair	1	765.0
+2025-04	AUT	Membership	Membership	19	11200.0
+2025-04	AUT	Single course	Colleague recommendation	10	3300.0
+2025-04	AUT	Single course	Email / newsletter	6	2600.0
+2025-04	AUT	Single course	Print: postal flyer	4	1620.0
+2025-04	AUT	Single course	Congress / fair	2	680.0
+2025-04	AUT	Single course	Print: journal insert	2	1100.0
+2025-04	AUT	Single course	Social media	1	480.0
+2025-04	AUT	Single course	Print: journal ad	1	650.0
+2025-04	AUT	Single course	Search	1	450.0
+2025-04	CHE	Membership	Membership	28	27342.0
+2025-04	CHE	Single course	Colleague recommendation	21	11576.0
+2025-04	CHE	Single course	Email / newsletter	13	4835.0
+2025-04	CHE	Single course	Print: journal insert	8	4079.0
+2025-04	CHE	Single course	Search	7	3911.0
+2025-04	CHE	Single course	Print: postal flyer	4	2447.0
+2025-04	CHE	Single course	Print: clinic poster	4	2247.0
+2025-04	CHE	Single course	Print: journal ad	3	2310.0
+2025-04	CHE	Single course	Congress / fair	3	1187.0
+2025-04	CHE	Single course	Social media	2	1061.0
+2025-04	DEU	Membership	Membership	75	41850.0
+2025-04	DEU	Single course	Colleague recommendation	28	12765.0
+2025-04	DEU	Single course	Search	24	12178.0
+2025-04	DEU	Single course	Print: postal flyer	16	7675.0
+2025-04	DEU	Single course	Email / newsletter	13	6315.0
+2025-04	DEU	Single course	Print: clinic poster	12	5490.0
+2025-04	DEU	Single course	Print: journal insert	11	5760.0
+2025-04	DEU	Single course	Print: journal ad	4	1700.0
+2025-04	DEU	Single course	Social media	2	960.0
+2025-04	DEU	Single course	Congress / fair	2	1205.0
+2025-05	AUT	Membership	Membership	15	8110.0
+2025-05	AUT	Single course	Colleague recommendation	8	3930.0
+2025-05	AUT	Single course	Email / newsletter	6	1550.0
+2025-05	AUT	Single course	Search	5	1365.0
+2025-05	AUT	Single course	Print: journal ad	2	770.0
+2025-05	AUT	Single course	Print: journal insert	2	850.0
+2025-05	AUT	Single course	Congress / fair	2	930.0
+2025-05	AUT	Single course	Social media	2	570.0
+2025-05	AUT	Single course	Print: postal flyer	1	580.0
+2025-05	AUT	Single course	Print: clinic poster	1	550.0
+2025-05	CHE	Membership	Membership	44	40131.0
+2025-05	CHE	Single course	Colleague recommendation	38	23252.0
+2025-05	CHE	Single course	Email / newsletter	18	7949.0
+2025-05	CHE	Single course	Search	10	4851.0
+2025-05	CHE	Single course	Print: postal flyer	8	1890.0
+2025-05	CHE	Single course	Print: journal insert	7	3969.0
+2025-05	CHE	Single course	Print: clinic poster	3	1481.0
+2025-05	CHE	Single course	Congress / fair	3	1659.0
+2025-05	CHE	Single course	Print: journal ad	3	1082.0
+2025-05	CHE	Single course	Other	1	315.0
+2025-05	CHE	Single course	Social media	1	504.0
+2025-05	DEU	Membership	Membership	85	47970.0
+2025-05	DEU	Single course	Search	41	18255.0
+2025-05	DEU	Single course	Colleague recommendation	32	15675.0
+2025-05	DEU	Single course	Print: journal insert	16	8245.0
+2025-05	DEU	Single course	Print: postal flyer	16	8135.0
+2025-05	DEU	Single course	Email / newsletter	9	3585.0
+2025-05	DEU	Single course	Print: clinic poster	4	2130.0
+2025-05	DEU	Single course	Print: journal ad	3	1435.0
+2025-05	DEU	Single course	Invitation / sponsor	3	435.0
+2025-05	DEU	Single course	Social media	2	1065.0
+2025-05	DEU	Single course	Congress / fair	2	1020.0
+2025-05	DEU	Single course	Other	1	185.0
+2025-06	AUT	Membership	Membership	33	18380.0
+2025-06	AUT	Single course	Colleague recommendation	14	5070.0
+2025-06	AUT	Single course	Email / newsletter	9	2205.0
+2025-06	AUT	Single course	Print: journal insert	7	2645.0
+2025-06	AUT	Single course	Search	7	2650.0
+2025-06	AUT	Single course	Print: postal flyer	5	1425.0
+2025-06	AUT	Single course	Invitation / sponsor	3	90.0
+2025-06	AUT	Single course	Social media	3	1370.0
+2025-06	AUT	Single course	Congress / fair	2	950.0
+2025-06	AUT	Single course	Print: journal ad	1	570.0
+2025-06	CHE	Membership	Membership	19	17787.0
+2025-06	CHE	Single course	Colleague recommendation	12	7455.0
+2025-06	CHE	Single course	Search	6	3686.0
+2025-06	CHE	Single course	Congress / fair	3	504.0
+2025-06	CHE	Single course	Print: postal flyer	3	798.0
+2025-06	CHE	Single course	Email / newsletter	2	1334.0
+2025-06	CHE	Single course	Print: journal ad	1	1040.0
+2025-06	CHE	Single course	Print: journal insert	1	777.0
+2025-06	CHE	Single course	Social media	1	588.0
+2025-06	DEU	Membership	Membership	68	37090.0
+2025-06	DEU	Single course	Search	28	13500.0
+2025-06	DEU	Single course	Colleague recommendation	23	11150.0
+2025-06	DEU	Single course	Print: postal flyer	22	10620.0
+2025-06	DEU	Single course	Print: journal insert	20	10885.0
+2025-06	DEU	Single course	Email / newsletter	18	6395.0
+2025-06	DEU	Single course	Congress / fair	4	1530.0
+2025-06	DEU	Single course	Print: clinic poster	3	1450.0
+2025-06	DEU	Single course	Social media	3	1160.0
+2025-06	DEU	Single course	Other	2	595.0
+2025-06	DEU	Single course	Print: journal ad	2	1115.0
+2025-07	AUT	Membership	Membership	13	7020.0
+2025-07	AUT	Single course	Colleague recommendation	9	3160.0
+2025-07	AUT	Single course	Email / newsletter	6	1825.0
+2025-07	AUT	Single course	Print: postal flyer	6	2485.0
+2025-07	AUT	Single course	Search	4	1370.0
+2025-07	AUT	Single course	Print: journal insert	3	1210.0
+2025-07	AUT	Single course	Social media	3	670.0
+2025-07	AUT	Single course	Print: clinic poster	2	840.0
+2025-07	AUT	Single course	Congress / fair	2	825.0
+2025-07	AUT	Single course	Print: journal ad	1	260.0
+2025-07	AUT	Single course	FOMF website / former participant	1	500.0
+2025-07	CHE	Membership	Membership	27	25515.0
+2025-07	CHE	Single course	Colleague recommendation	13	8684.0
+2025-07	CHE	Single course	Print: postal flyer	8	3721.0
+2025-07	CHE	Single course	Search	8	4568.0
+2025-07	CHE	Single course	Email / newsletter	4	1113.0
+2025-07	CHE	Single course	Social media	3	1512.0
+2025-07	CHE	Single course	Print: journal insert	3	1250.0
+2025-07	CHE	Single course	Print: journal ad	1	410.0
+2025-07	DEU	Membership	Membership	55	29680.0
+2025-07	DEU	Single course	Colleague recommendation	28	12791.0
+2025-07	DEU	Single course	Search	26	11980.0
+2025-07	DEU	Single course	Print: journal insert	22	10635.0
+2025-07	DEU	Single course	Print: postal flyer	19	9325.0
+2025-07	DEU	Single course	Print: clinic poster	9	3592.0
+2025-07	DEU	Single course	Email / newsletter	7	2935.0
+2025-07	DEU	Single course	Social media	5	2585.0
+2025-07	DEU	Single course	Print: journal ad	2	1130.0
+2025-07	DEU	Single course	Congress / fair	2	760.0
+2025-08	AUT	Membership	Membership	11	6110.0
+2025-08	AUT	Single course	Colleague recommendation	19	6750.0
+2025-08	AUT	Single course	Print: postal flyer	10	3280.0
+2025-08	AUT	Single course	Print: journal ad	8	2550.0
+2025-08	AUT	Single course	Search	8	3225.0
+2025-08	AUT	Single course	Print: journal insert	7	3045.0
+2025-08	AUT	Single course	FOMF website / former participant	1	570.0
+2025-08	AUT	Single course	Social media	1	250.0
+2025-08	AUT	Single course	Print: clinic poster	1	320.0
+2025-08	AUT	Single course	Email / newsletter	1	285.0
+2025-08	CHE	Membership	Membership	23	21242.0
+2025-08	CHE	Single course	Colleague recommendation	22	12511.0
+2025-08	CHE	Single course	Search	17	7991.0
+2025-08	CHE	Single course	Email / newsletter	7	2573.0
+2025-08	CHE	Single course	Print: postal flyer	6	3644.0
+2025-08	CHE	Single course	Print: journal insert	5	3182.0
+2025-08	CHE	Single course	Congress / fair	4	3187.0
+2025-08	CHE	Single course	Print: clinic poster	2	1103.0
+2025-08	DEU	Membership	Membership	58	34040.0
+2025-08	DEU	Single course	Colleague recommendation	46	21104.0
+2025-08	DEU	Single course	Search	37	17070.0
+2025-08	DEU	Single course	Print: postal flyer	24	11755.0
+2025-08	DEU	Single course	Print: journal insert	20	9530.0
+2025-08	DEU	Single course	Email / newsletter	12	6486.0
+2025-08	DEU	Single course	Print: journal ad	10	5299.0
+2025-08	DEU	Single course	Print: clinic poster	7	3100.0
+2025-08	DEU	Single course	Congress / fair	5	2530.0
+2025-08	DEU	Single course	Social media	4	1850.0
+2025-09	AUT	Membership	Membership	31	17570.0
+2025-09	AUT	Single course	Colleague recommendation	34	10910.0
+2025-09	AUT	Single course	Email / newsletter	20	4830.0
+2025-09	AUT	Single course	Search	19	6090.0
+2025-09	AUT	Single course	Print: postal flyer	17	5435.0
+2025-09	AUT	Single course	Print: journal insert	12	4365.0
+2025-09	AUT	Single course	Print: journal ad	7	3225.0
+2025-09	AUT	Single course	Print: clinic poster	7	2170.0
+2025-09	AUT	Single course	Social media	6	1780.0
+2025-09	AUT	Single course	Congress / fair	2	830.0
+2025-09	CHE	Membership	Membership	49	45161.0
+2025-09	CHE	Single course	Colleague recommendation	36	21782.0
+2025-09	CHE	Single course	Search	20	9954.0
+2025-09	CHE	Single course	Email / newsletter	19	9618.0
+2025-09	CHE	Single course	Print: postal flyer	17	8285.0
+2025-09	CHE	Single course	Print: journal insert	15	9776.0
+2025-09	CHE	Single course	Print: journal ad	12	5964.0
+2025-09	CHE	Single course	Social media	3	2079.0
+2025-09	CHE	Single course	Print: clinic poster	2	1386.0
+2025-09	CHE	Single course	Congress / fair	2	1082.0
+2025-09	DEU	Membership	Membership	120	69250.0
+2025-09	DEU	Single course	Search	67	32135.0
+2025-09	DEU	Single course	Colleague recommendation	56	26930.0
+2025-09	DEU	Single course	Print: postal flyer	45	20545.0
+2025-09	DEU	Single course	Print: journal insert	44	21740.0
+2025-09	DEU	Single course	Email / newsletter	25	9430.0
+2025-09	DEU	Single course	Print: clinic poster	23	9562.0
+2025-09	DEU	Single course	Print: journal ad	7	2965.0
+2025-09	DEU	Single course	Social media	7	2690.0
+2025-09	DEU	Single course	Invitation / sponsor	1	30.0
+2025-09	DEU	Single course	Congress / fair	1	250.0
+2025-10	AUT	Membership	Membership	33	19490.0
+2025-10	AUT	Single course	Colleague recommendation	47	15250.0
+2025-10	AUT	Single course	Print: postal flyer	24	8120.0
+2025-10	AUT	Single course	Search	21	6635.0
+2025-10	AUT	Single course	Email / newsletter	17	4800.0
+2025-10	AUT	Single course	Print: journal insert	15	4615.0
+2025-10	AUT	Single course	Print: journal ad	6	2180.0
+2025-10	AUT	Single course	Social media	6	1565.0
+2025-10	AUT	Single course	Congress / fair	4	1460.0
+2025-10	AUT	Single course	Invitation / sponsor	4	820.0
+2025-10	AUT	Single course	Print: clinic poster	3	780.0
+2025-10	CHE	Membership	Membership	68	62160.0
+2025-10	CHE	Single course	Colleague recommendation	59	35837.0
+2025-10	CHE	Single course	Email / newsletter	25	13335.0
+2025-10	CHE	Single course	Search	19	10495.0
+2025-10	CHE	Single course	Print: postal flyer	16	10742.0
+2025-10	CHE	Single course	Print: journal ad	10	5833.0
+2025-10	CHE	Single course	Print: journal insert	8	4694.0
+2025-10	CHE	Single course	Congress / fair	7	5156.0
+2025-10	CHE	Single course	Print: clinic poster	3	1764.0
+2025-10	CHE	Single course	Social media	3	1712.0
+2025-10	DEU	Membership	Membership	86	53380.0
+2025-10	DEU	Single course	Colleague recommendation	56	26001.0
+2025-10	DEU	Single course	Search	53	25445.0
+2025-10	DEU	Single course	Print: journal insert	49	23190.0
+2025-10	DEU	Single course	Print: postal flyer	36	16809.0
+2025-10	DEU	Single course	Email / newsletter	22	10980.0
+2025-10	DEU	Single course	Print: journal ad	13	6535.0
+2025-10	DEU	Single course	Print: clinic poster	13	4944.0
+2025-10	DEU	Single course	Social media	7	3400.0
+2025-10	DEU	Single course	Invitation / sponsor	4	110.0
+2025-10	DEU	Single course	Congress / fair	4	2045.0
+2025-10	DEU	Single course	FOMF website / former participant	1	365.0
+2025-10	DEU	Single course	Other	1	410.0
+2025-11	AUT	Membership	Membership	30	16850.0
+2025-11	AUT	Single course	Colleague recommendation	27	8450.0
+2025-11	AUT	Single course	Email / newsletter	13	3805.0
+2025-11	AUT	Single course	Search	13	3975.0
+2025-11	AUT	Single course	Print: journal insert	11	4690.0
+2025-11	AUT	Single course	Print: journal ad	8	1705.0
+2025-11	AUT	Single course	Print: postal flyer	3	1270.0
+2025-11	AUT	Single course	Social media	2	740.0
+2025-11	AUT	Single course	Print: clinic poster	1	390.0
+2025-11	AUT	Single course	Congress / fair	1	420.0
+2025-11	CHE	Membership	Membership	103	98963.0
+2025-11	CHE	Single course	Colleague recommendation	54	37253.0
+2025-11	CHE	Single course	Email / newsletter	22	11361.0
+2025-11	CHE	Single course	Search	20	13372.0
+2025-11	CHE	Single course	Print: postal flyer	16	10001.0
+2025-11	CHE	Single course	Print: journal insert	14	7319.0
+2025-11	CHE	Single course	Print: journal ad	10	6515.0
+2025-11	CHE	Single course	Congress / fair	5	3035.0
+2025-11	CHE	Single course	Print: clinic poster	5	2373.0
+2025-11	CHE	Single course	Social media	3	1806.0
+2025-11	DEU	Membership	Membership	136	75300.0
+2025-11	DEU	Single course	Colleague recommendation	68	30823.0
+2025-11	DEU	Single course	Search	42	17664.0
+2025-11	DEU	Single course	Print: journal insert	37	16583.0
+2025-11	DEU	Single course	Email / newsletter	26	11160.0
+2025-11	DEU	Single course	Print: clinic poster	24	10705.0
+2025-11	DEU	Single course	Print: postal flyer	23	10275.0
+2025-11	DEU	Single course	Social media	18	6570.0
+2025-11	DEU	Single course	Print: journal ad	13	5705.0
+2025-11	DEU	Single course	Congress / fair	5	1926.0
+2025-11	DEU	Single course	Other	2	605.0
+2025-12	AUT	Membership	Membership	14	9100.0
+2025-12	AUT	Single course	Colleague recommendation	9	2855.0
+2025-12	AUT	Single course	Email / newsletter	3	1320.0
+2025-12	AUT	Single course	Search	3	1450.0
+2025-12	AUT	Single course	Print: journal insert	2	780.0
+2025-12	AUT	Single course	Print: journal ad	2	610.0
+2025-12	AUT	Single course	Print: clinic poster	1	105.0
+2025-12	AUT	Single course	Print: postal flyer	1	570.0
+2025-12	CHE	Membership	Membership	34	32981.0
+2025-12	CHE	Single course	Colleague recommendation	20	13161.0
+2025-12	CHE	Single course	Search	7	3806.0
+2025-12	CHE	Single course	Email / newsletter	4	2289.0
+2025-12	CHE	Single course	Congress / fair	3	1397.0
+2025-12	CHE	Single course	Print: journal insert	3	1649.0
+2025-12	CHE	Single course	Print: postal flyer	3	1647.0
+2025-12	CHE	Single course	Print: clinic poster	2	1523.0
+2025-12	CHE	Single course	Social media	1	483.0
+2025-12	DEU	Membership	Membership	101	56940.0
+2025-12	DEU	Single course	Search	39	17585.0
+2025-12	DEU	Single course	Colleague recommendation	36	15765.0
+2025-12	DEU	Single course	Print: journal insert	29	13900.0
+2025-12	DEU	Single course	Print: postal flyer	18	10105.0
+2025-12	DEU	Single course	Print: clinic poster	14	6200.0
+2025-12	DEU	Single course	Email / newsletter	7	3030.0
+2025-12	DEU	Single course	Print: journal ad	7	3330.0
+2025-12	DEU	Single course	Congress / fair	4	1365.0
+2025-12	DEU	Single course	Social media	2	1315.0
+2026-01	AUT	Membership	Membership	33	18230.0
+2026-01	AUT	Single course	Colleague recommendation	17	6420.0
+2026-01	AUT	Single course	Email / newsletter	10	2670.0
+2026-01	AUT	Single course	Search	9	3430.0
+2026-01	AUT	Single course	Print: postal flyer	6	3130.0
+2026-01	AUT	Single course	Print: journal ad	2	675.0
+2026-01	AUT	Single course	Social media	2	705.0
+2026-01	AUT	Single course	Print: clinic poster	2	670.0
+2026-01	AUT	Single course	Print: journal insert	1	150.0
+2026-01	CHE	Membership	Membership	42	40971.0
+2026-01	CHE	Single course	Colleague recommendation	11	6542.0
+2026-01	CHE	Single course	Search	10	7266.0
+2026-01	CHE	Single course	Print: journal ad	4	2877.0
+2026-01	CHE	Single course	Print: clinic poster	3	2231.0
+2026-01	CHE	Single course	Congress / fair	2	1502.0
+2026-01	CHE	Single course	Print: postal flyer	2	893.0
+2026-01	CHE	Single course	Email / newsletter	1	410.0
+2026-01	CHE	Single course	Social media	1	630.0
+2026-01	DEU	Membership	Membership	122	68260.0
+2026-01	DEU	Single course	Colleague recommendation	51	22945.0
+2026-01	DEU	Single course	Search	42	19870.0
+2026-01	DEU	Single course	Print: journal insert	39	20485.0
+2026-01	DEU	Single course	Email / newsletter	33	12975.0
+2026-01	DEU	Single course	Print: postal flyer	20	9605.0
+2026-01	DEU	Single course	Print: clinic poster	11	4735.0
+2026-01	DEU	Single course	Social media	10	3180.0
+2026-01	DEU	Single course	Print: journal ad	6	2970.0
+2026-01	DEU	Single course	Congress / fair	2	580.0
+2026-02	AUT	Membership	Membership	16	8570.0
+2026-02	AUT	Single course	Colleague recommendation	12	3520.0
+2026-02	AUT	Single course	Search	9	3310.0
+2026-02	AUT	Single course	Social media	6	1385.0
+2026-02	AUT	Single course	Print: postal flyer	6	2230.0
+2026-02	AUT	Single course	Email / newsletter	5	1725.0
+2026-02	AUT	Single course	Print: journal insert	4	1360.0
+2026-02	AUT	Single course	Print: clinic poster	1	365.0
+2026-02	CHE	Membership	Membership	33	32613.0
+2026-02	CHE	Single course	Colleague recommendation	13	9760.0
+2026-02	CHE	Single course	Search	13	6741.0
+2026-02	CHE	Single course	Email / newsletter	6	2247.0
+2026-02	CHE	Single course	Print: postal flyer	5	2961.0
+2026-02	CHE	Single course	Social media	1	693.0
+2026-02	CHE	Single course	Print: journal insert	1	410.0
+2026-02	CHE	Single course	Congress / fair	1	1255.0
+2026-02	CHE	Single course	Print: clinic poster	1	1208.0
+2026-02	CHE	Single course	Print: journal ad	1	221.0
+2026-02	DEU	Membership	Membership	81	44590.0
+2026-02	DEU	Single course	Colleague recommendation	37	16900.0
+2026-02	DEU	Single course	Email / newsletter	23	8720.0
+2026-02	DEU	Single course	Search	19	9250.0
+2026-02	DEU	Single course	Print: journal insert	15	6625.0
+2026-02	DEU	Single course	Social media	8	3755.0
+2026-02	DEU	Single course	Print: journal ad	7	3555.0
+2026-02	DEU	Single course	Print: postal flyer	6	2900.0
+2026-02	DEU	Single course	Print: clinic poster	4	2215.0
+2026-02	DEU	Single course	Congress / fair	3	1405.0
+2026-02	DEU	Single course	Invitation / sponsor	1	25.0
+2026-03	AUT	Membership	Membership	29	15830.0
+2026-03	AUT	Single course	Colleague recommendation	14	3730.0
+2026-03	AUT	Single course	Search	9	2055.0
+2026-03	AUT	Single course	Social media	5	410.0
+2026-03	AUT	Single course	Print: journal insert	4	1290.0
+2026-03	AUT	Single course	Print: clinic poster	4	1290.0
+2026-03	AUT	Single course	Print: postal flyer	2	520.0
+2026-03	AUT	Single course	Print: journal ad	2	760.0
+2026-03	AUT	Single course	Email / newsletter	2	780.0
+2026-03	AUT	Single course	Other	1	170.0
+2026-03	CHE	Membership	Membership	32	29117.0
+2026-03	CHE	Single course	Colleague recommendation	33	18433.0
+2026-03	CHE	Single course	Search	12	7214.0
+2026-03	CHE	Single course	Email / newsletter	11	7560.0
+2026-03	CHE	Single course	Print: journal insert	6	2972.0
+2026-03	CHE	Single course	Print: journal ad	6	3990.0
+2026-03	CHE	Single course	Congress / fair	3	851.0
+2026-03	CHE	Single course	Print: clinic poster	1	315.0
+2026-03	CHE	Single course	Social media	1	504.0
+2026-03	CHE	Single course	Print: postal flyer	1	126.0
+2026-03	DEU	Membership	Membership	77	43200.0
+2026-03	DEU	Single course	Search	27	12780.0
+2026-03	DEU	Single course	Colleague recommendation	25	12378.0
+2026-03	DEU	Single course	Email / newsletter	25	7230.0
+2026-03	DEU	Single course	Print: journal insert	16	7660.0
+2026-03	DEU	Single course	Print: postal flyer	13	6005.0
+2026-03	DEU	Single course	Print: clinic poster	4	2020.0
+2026-03	DEU	Single course	Print: journal ad	3	1710.0
+2026-03	DEU	Single course	Invitation / sponsor	1	25.0
+2026-03	DEU	Single course	Congress / fair	1	190.0
+2026-04	AUT	Membership	Membership	15	9350.0
+2026-04	AUT	Single course	Colleague recommendation	12	4595.0
+2026-04	AUT	Single course	Print: postal flyer	8	3115.0
+2026-04	AUT	Single course	Print: clinic poster	6	1760.0
+2026-04	AUT	Single course	Search	5	1100.0
+2026-04	AUT	Single course	Print: journal insert	3	1770.0
+2026-04	AUT	Single course	Print: journal ad	3	730.0
+2026-04	AUT	Single course	Social media	1	450.0
+2026-04	AUT	Single course	Email / newsletter	1	570.0
+2026-04	CHE	Membership	Membership	38	35438.0
+2026-04	CHE	Single course	Colleague recommendation	20	13157.0
+2026-04	CHE	Single course	Email / newsletter	12	4232.0
+2026-04	CHE	Single course	Print: journal insert	10	7350.0
+2026-04	CHE	Single course	Print: postal flyer	5	3612.0
+2026-04	CHE	Single course	Social media	4	2510.0
+2026-04	CHE	Single course	Search	3	1764.0
+2026-04	CHE	Single course	Congress / fair	2	252.0
+2026-04	CHE	Single course	Print: clinic poster	2	1271.0
+2026-04	CHE	Single course	Print: journal ad	1	851.0
+2026-04	DEU	Membership	Membership	83	47260.0
+2026-04	DEU	Single course	Search	32	14220.0
+2026-04	DEU	Single course	Colleague recommendation	18	7945.0
+2026-04	DEU	Single course	Print: journal insert	14	6740.0
+2026-04	DEU	Single course	Print: clinic poster	13	6015.0
+2026-04	DEU	Single course	Print: postal flyer	12	5975.0
+2026-04	DEU	Single course	Social media	9	4040.0
+2026-04	DEU	Single course	Email / newsletter	9	3150.0
+2026-04	DEU	Single course	Print: journal ad	2	900.0
+2026-04	DEU	Single course	(no answer)	2	1245.0
+2026-04	DEU	Single course	Congress / fair	1	60.0
+2026-04	DEU	Single course	FOMF website / former participant	1	590.0
+2026-05	AUT	Membership	Membership	21	12120.0
+2026-05	AUT	Single course	Colleague recommendation	8	3330.0
+2026-05	AUT	Single course	Email / newsletter	7	1860.0
+2026-05	AUT	Single course	Print: postal flyer	6	1545.0
+2026-05	AUT	Single course	Search	3	1380.0
+2026-05	AUT	Single course	Print: journal ad	3	1470.0
+2026-05	AUT	Single course	Social media	2	580.0
+2026-05	AUT	Single course	Print: journal insert	1	265.0
+2026-05	CHE	Membership	Membership	48	44100.0
+2026-05	CHE	Single course	Search	20	14117.0
+2026-05	CHE	Single course	Colleague recommendation	19	13661.0
+2026-05	CHE	Single course	Print: journal insert	5	2699.0
+2026-05	CHE	Single course	Print: clinic poster	3	1339.0
+2026-05	CHE	Single course	Print: postal flyer	2	1092.0
+2026-05	CHE	Single course	Print: journal ad	2	1281.0
+2026-05	CHE	Single course	Social media	1	588.0
+2026-05	CHE	Single course	Email / newsletter	1	483.0
+2026-05	DEU	Membership	Membership	107	59710.0
+2026-05	DEU	Single course	Search	32	14540.0
+2026-05	DEU	Single course	Colleague recommendation	31	14208.0
+2026-05	DEU	Single course	Email / newsletter	23	9810.0
+2026-05	DEU	Single course	Print: postal flyer	12	4880.0
+2026-05	DEU	Single course	Print: journal insert	9	4145.0
+2026-05	DEU	Single course	Print: clinic poster	6	2570.0
+2026-05	DEU	Single course	Social media	3	1365.0
+2026-05	DEU	Single course	Congress / fair	3	1050.0
+2026-05	DEU	Single course	Print: journal ad	2	1090.0
+2026-06	AUT	Membership	Membership	26	14550.0
+2026-06	AUT	Single course	Colleague recommendation	13	3515.0
+2026-06	AUT	Single course	Search	8	2170.0
+2026-06	AUT	Single course	Print: journal ad	4	1770.0
+2026-06	AUT	Single course	Print: clinic poster	3	920.0
+2026-06	AUT	Single course	Print: journal insert	3	890.0
+2026-06	AUT	Single course	Print: postal flyer	3	720.0
+2026-06	AUT	Single course	Email / newsletter	3	1240.0
+2026-06	AUT	Single course	Invitation / sponsor	1	30.0
+2026-06	AUT	Single course	Social media	1	280.0
+2026-06	CHE	Membership	Membership	36	38430.0
+2026-06	CHE	Single course	Colleague recommendation	28	17409.0
+2026-06	CHE	Single course	Print: journal ad	7	3623.0
+2026-06	CHE	Single course	Print: journal insert	7	4667.0
+2026-06	CHE	Single course	Search	7	4316.0
+2026-06	CHE	Single course	Email / newsletter	5	2641.0
+2026-06	CHE	Single course	Print: clinic poster	4	2247.0
+2026-06	CHE	Single course	Print: postal flyer	4	1701.0
+2026-06	CHE	Single course	Social media	1	504.0
+2026-06	CHE	Single course	Congress / fair	1	419.0
+2026-06	DEU	Membership	Membership	81	48080.0
+2026-06	DEU	Single course	Search	35	15920.0
+2026-06	DEU	Single course	Colleague recommendation	24	10975.0
+2026-06	DEU	Single course	Print: journal insert	15	7170.0
+2026-06	DEU	Single course	Email / newsletter	10	5215.0
+2026-06	DEU	Single course	Print: postal flyer	9	4325.0
+2026-06	DEU	Single course	Print: journal ad	7	2850.0
+2026-06	DEU	Single course	Social media	5	2083.0
+2026-06	DEU	Single course	Print: clinic poster	3	1270.0
+2026-06	DEU	Single course	Other	2	1385.0
+2026-06	DEU	Single course	Congress / fair	2	945.0
+2026-06	DEU	Single course	Invitation / sponsor	1	30.0
+2026-07	AUT	Membership	Membership	13	7230.0
+2026-07	AUT	Single course	Colleague recommendation	9	2515.0
+2026-07	AUT	Single course	Search	6	2200.0
+2026-07	AUT	Single course	Print: postal flyer	4	1950.0
+2026-07	AUT	Single course	Print: journal ad	3	1500.0
+2026-07	AUT	Single course	Email / newsletter	2	595.0
+2026-07	AUT	Single course	Print: clinic poster	1	265.0
+2026-07	CHE	Membership	Membership	20	18018.0
+2026-07	CHE	Single course	Colleague recommendation	13	7166.0
+2026-07	CHE	Single course	Search	10	5712.0
+2026-07	CHE	Single course	Print: journal insert	5	2489.0
+2026-07	CHE	Single course	Print: clinic poster	4	2079.0
+2026-07	CHE	Single course	Congress / fair	3	1670.0
+2026-07	CHE	Single course	Email / newsletter	3	609.0
+2026-07	CHE	Single course	Print: postal flyer	2	1176.0
+2026-07	CHE	Single course	Print: journal ad	2	1334.0
+2026-07	DEU	Membership	Membership	54	29300.0
+2026-07	DEU	Single course	Colleague recommendation	26	11400.0
+2026-07	DEU	Single course	Search	15	7325.0
+2026-07	DEU	Single course	Print: postal flyer	12	5515.0
+2026-07	DEU	Single course	Print: journal insert	12	5865.0
+2026-07	DEU	Single course	Email / newsletter	6	2520.0
+2026-07	DEU	Single course	Print: clinic poster	5	2560.0
+2026-07	DEU	Single course	Social media	3	1845.0
+2026-07	DEU	Single course	(no answer)	2	1380.0
+2026-07	DEU	Single course	Congress / fair	1	190.0
+2026-07	DEU	Single course	Invitation / sponsor	1	30.0
+2026-07	DEU	Single course	Print: journal ad	1	625.0
+2026-08	AUT	Membership	Membership	18	10070.0
+2026-08	AUT	Single course	Colleague recommendation	13	4165.0
+2026-08	AUT	Single course	Search	7	2335.0
+2026-08	AUT	Single course	Print: journal insert	6	2145.0
+2026-08	AUT	Single course	Print: postal flyer	5	1550.0
+2026-08	AUT	Single course	Email / newsletter	3	1075.0
+2026-08	AUT	Single course	Congress / fair	2	300.0
+2026-08	AUT	Single course	Social media	2	590.0
+2026-08	AUT	Single course	Print: journal ad	2	850.0
+2026-08	CHE	Membership	Membership	23	21441.0
+2026-08	CHE	Single course	Colleague recommendation	24	14417.0
+2026-08	CHE	Single course	Search	20	10448.0
+2026-08	CHE	Single course	Email / newsletter	6	2825.0
+2026-08	CHE	Single course	Print: journal insert	3	1229.0
+2026-08	CHE	Single course	Print: journal ad	3	2247.0
+2026-08	CHE	Single course	Print: clinic poster	2	1082.0
+2026-08	CHE	Single course	Print: postal flyer	2	494.0
+2026-08	CHE	Single course	Congress / fair	1	63.0
+2026-08	CHE	Single course	Social media	1	294.0
+2026-08	DEU	Membership	Membership	62	34200.0
+2026-08	DEU	Single course	Search	29	14205.0
+2026-08	DEU	Single course	Colleague recommendation	25	13460.0
+2026-08	DEU	Single course	Print: journal insert	17	8435.0
+2026-08	DEU	Single course	Email / newsletter	12	5199.0
+2026-08	DEU	Single course	Print: journal ad	6	3295.0
+2026-08	DEU	Single course	Print: postal flyer	5	2435.0
+2026-08	DEU	Single course	Social media	4	1950.0
+2026-08	DEU	Single course	(no answer)	2	1700.0
+2026-08	DEU	Single course	FOMF website / former participant	1	335.0
+2026-08	DEU	Single course	Congress / fair	1	380.0
+2026-08	DEU	Single course	Other	1	395.0
+2026-08	DEU	Single course	Print: clinic poster	1	275.0

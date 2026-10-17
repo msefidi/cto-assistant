@@ -1,0 +1,316 @@
+<title>Renewal Cancellations After the Price Notice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Layout: one reading column; verdict tiles → cumulative curve (the proof) → calendar weeks → breakdowns → separate trend → method */
+:root{
+  --bg:#f7f8fa; --panel:#ffffff; --ink:#12161c; --ink-2:#4a5260; --ink-3:#7a8290; --rule:#e2e5ea; --grid:#eceef2;
+  --base:#8b93a1; --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --email:#c24d2c;
+  --good:#1f7a4d; --good-bg:#e3f3ea; --warn:#8a5a00; --warn-bg:#fbf0d9;
+  --f-display:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif; --f-body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#111418; --panel:#191d23; --ink:#f1f3f6; --ink-2:#b9c0cb; --ink-3:#8a93a0; --rule:#2c323b; --grid:#252a31;
+  --base:#7d8594; --s1:#3987e5; --s2:#d95926; --s3:#199e70; --email:#e0795a;
+  --good:#6fd39c; --good-bg:#16301f; --warn:#f0c060; --warn-bg:#352a12; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111418; --panel:#191d23; --ink:#f1f3f6; --ink-2:#b9c0cb; --ink-3:#8a93a0; --rule:#2c323b; --grid:#252a31;
+  --base:#7d8594; --s1:#3987e5; --s2:#d95926; --s3:#199e70; --email:#e0795a;
+  --good:#6fd39c; --good-bg:#16301f; --warn:#f0c060; --warn-bg:#352a12; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 var(--f-body)}
+.wrap{max-width:980px;margin:0 auto;padding-inline:20px;padding-block:36px 64px;display:grid;gap:28px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.2}
+h1{font-size:2rem;font-weight:700;letter-spacing:-.01em}
+h2{font-size:1.25rem;font-weight:700}
+h3{font-size:1rem;font-weight:500}
+p{margin:0;max-width:68ch}
+.eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);font-weight:600}
+.lede{font-size:1.1rem;color:var(--ink-2)}
+header{display:grid;gap:10px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.tile{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:16px;display:grid;gap:8px;align-content:start}
+.tile .who{font-weight:600}
+.tile .nums{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;font-variant-numeric:tabular-nums}
+.tile .big{font-family:var(--f-display);font-size:1.9rem;font-weight:700}
+.tile .vs{color:var(--ink-2)}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:.82rem;font-weight:600;padding:2px 9px;border-radius:99px;width:fit-content}
+.chip.good{background:var(--good-bg);color:var(--good)} .chip.warn{background:var(--warn-bg);color:var(--warn)}
+.chip svg{width:12px;height:12px}
+.tile .note{font-size:.9rem;color:var(--ink-2)}
+section.card{background:var(--panel);border:1px solid var(--rule);border-radius:12px;padding:20px;display:grid;gap:12px;min-width:0}
+.sub{color:var(--ink-2);font-size:.95rem}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.88rem;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{display:inline-block;width:16px;height:3px;border-radius:2px}
+.legend i.dash{background:repeating-linear-gradient(90deg,var(--base) 0 5px,transparent 5px 8px)!important}
+.chart{position:relative;min-width:0}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart text{font-family:var(--f-body);fill:var(--ink-3);font-size:12px}
+.chart .lbl{fill:var(--ink-2);font-weight:600}
+.tip{position:absolute;pointer-events:none;background:var(--panel);border:1px solid var(--rule);border-radius:8px;padding:8px 10px;font-size:.85rem;box-shadow:0 4px 14px rgba(0,0,0,.12);min-width:170px;z-index:2;font-variant-numeric:tabular-nums}
+.tip b{font-family:var(--f-display);font-weight:500}
+.tip .row{display:flex;justify-content:space-between;gap:14px}
+.tip .row i{display:inline-block;width:10px;height:3px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.multiples{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:.93rem}
+th,td{padding:7px 10px;text-align:right;border-bottom:1px solid var(--rule);white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th{font-weight:600;color:var(--ink-2);font-size:.82rem;text-transform:uppercase;letter-spacing:.05em}
+td.up{color:var(--warn);font-weight:600}
+.watch{display:grid;gap:10px;padding-left:1.2em;margin:0}
+details summary{cursor:pointer;font-weight:600}
+details .tbl{margin-top:8px}
+.method{font-size:.9rem;color:var(--ink-2);display:grid;gap:8px}
+.method p{max-width:80ch}
+code{font-size:.85em}
+:focus-visible{outline:2px solid var(--s1);outline-offset:2px}
+@media (max-width:520px){h1{font-size:1.6rem}.tile .big{font-size:1.6rem}section.card{padding:16px}}
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">B2C membership · price increase for renewals from 1 Oct 2026 · data as of 30 Sep 2026</div>
+  <h1>Renewal cancellations after the price notice</h1>
+  <p class="lede">Since the notice emails started (sent every day to members whose renewal is exactly 60 days away), cancellations for renewals at the new price run about 30 above last year at the same point before renewal. For the renewals closest to their date (1–15 October) the total is below last year, so there the notice moved cancellations earlier. For late October and November it is too early to tell: last year most of their cancellations came in the final weeks, which are still ahead. Separately, more members cancel long before any notice, a trend that started in spring.</p>
+</header>
+
+<div class="tiles">
+  <div class="tile">
+    <div class="who">Renewals 1–15 Oct 2026</div>
+    <div class="nums"><span class="big">4.7%</span><span class="vs">vs 4.6% baseline</span></div>
+    <span class="chip good"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6.5l2.5 2.5L10 3.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>Same total so far</span>
+    <div class="note">Cancelled between 60 and 6 days before renewal. 480 memberships. Year over year at the same point: 22 vs 30. More cancellations right after the email, fewer in the last month.</div>
+  </div>
+  <div class="tile">
+    <div class="who">Renewals 16–31 Oct 2026</div>
+    <div class="nums"><span class="big">5.0%</span><span class="vs">vs 3.4% baseline</span></div>
+    <span class="chip warn"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1.5L11 10.5H1z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6 5v2.5" stroke="currentColor" stroke-width="1.6"/></svg>Earlier, too soon to call</span>
+    <div class="note">60 to 19 days before renewal. 671 memberships. Year over year at the same point: 32 vs 15. The last weeks, when baseline members usually cancel, are still ahead.</div>
+  </div>
+  <div class="tile">
+    <div class="who">Renewals Nov 2026</div>
+    <div class="nums"><span class="big">3.1%</span><span class="vs">vs 1.9% baseline</span></div>
+    <span class="chip warn"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1.5L11 10.5H1z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6 5v2.5" stroke="currentColor" stroke-width="1.6"/></svg>Earlier, too soon to call</span>
+    <div class="note">60 to 34 days before renewal. 1,515 memberships. Year over year at the same point: 36 vs 14. Only the first weeks after the email are observed.</div>
+  </div>
+</div>
+
+<section class="card" aria-labelledby="h-curve">
+  <h2 id="h-curve">Share cancelled, counted from 60 days before renewal</h2>
+  <p class="sub">Of the memberships still set to renew 60 days out, the share that switched renewal off by each day. Baseline = renewals Oct 2025 – Sep 2026 (8,875), before the new notice. Each 2026 line stops where fewer than 150 of its memberships have reached that day.</p>
+  <div class="legend" id="lg-curve"></div>
+  <div class="chart" id="c-curve"></div>
+  <p class="sub">Read it from right to left of the grey line. Baseline members cancel mostly in the last 30 days (the old reminder), with a jump on the day before renewal. The 2026 lines rise earlier. The 1–15 October line has caught up with the baseline, not overtaken it.</p>
+</section>
+
+<section class="card" aria-labelledby="h-weeks">
+  <h2 id="h-weeks">Cancellations per week, per 1,000 renewals</h2>
+  <p class="sub">Same renewal month one year apart. Calendar weeks from June; the partial week from 28 Sep is left out.</p>
+  <div class="legend" id="lg-weeks"></div>
+  <div class="multiples">
+    <div><h3>Renewals in October</h3><div class="chart" id="c-oct"></div></div>
+    <div><h3>Renewals in November</h3><div class="chart" id="c-nov"></div></div>
+  </div>
+  <p class="sub">In 2025, cancellations for October renewals picked up in September. In 2026 they start in the first week of August, right when the notice emails begin. November renewals follow a month later.</p>
+</section>
+
+<section class="card" aria-labelledby="h-yoy">
+  <h2 id="h-yoy">Year over year: cancellations per week</h2>
+  <p class="sub">All renewal cancellations of paid B2C memberships, by the week they were made, 2026 against the same calendar week of 2025 (Monday to Sunday). The right panel keeps only memberships that renew between 1 Oct and 31 Dec of that year, the ones that get the new price in 2026. Up to the week of 21 Sep.</p>
+  <div class="legend" id="lg-yoy"></div>
+  <div class="multiples">
+    <div><h3>All renewal cancellations</h3><div class="chart" id="c-yoy-all"></div></div>
+    <div><h3>Renewing Oct–Dec (new price in 2026)</h3><div class="chart" id="c-yoy-q4"></div></div>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>Cancellations</th><th>Jun–Jul 2025</th><th>Jun–Jul 2026</th><th>YoY</th><th>Aug–Sep 2025</th><th>Aug–Sep 2026</th><th>YoY</th></tr></thead>
+    <tbody id="t-yoy"></tbody></table></div>
+  <p class="sub">Before the notice, cancellations for Oct–Dec renewals were flat year over year (63 vs 59) while the rest grew. From August they are 60 above last year (104 vs 164). The notice goes to each member 60 days before their own renewal, so the August–September cancellations split into those made after the member's notice and those made before it:</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Oct–Dec renewals, cancelled 3 Aug – 27 Sep</th><th>2025</th><th>2026</th><th>YoY</th></tr></thead>
+    <tbody>
+      <tr><td>After their own notice (≤ 60 days before renewal)</td><td>52</td><td>82</td><td class="up">+30</td></tr>
+      <tr><td>Before their own notice (&gt; 60 days)</td><td>49</td><td>82</td><td>+33</td></tr>
+      <tr><td>All</td><td>101</td><td>164</td><td>+63</td></tr>
+    </tbody></table></div>
+  <p class="sub">Half of the increase comes from members who had not yet received a notice, so it is the general rise in early cancellations, not the price. About 30 follow the notice. About 14 of the total come from having 13% more Oct–Dec renewals (3,914 vs 3,470). Counts of 3 Aug – 26 Sep for 2025, so the table differs from the weekly bars by 3.</p>
+  <p class="sub">The same comparison by renewal date, counted from 60 days before renewal up to where the 2026 renewals stand on 30 Sep:</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Renewal date</th><th>2025</th><th>2026</th><th>YoY</th><th>2025: still to come before renewal</th></tr></thead>
+    <tbody>
+      <tr><td>1–15 Oct</td><td>30 (5.9%)</td><td>22 (4.6%)</td><td>−8</td><td>3</td></tr>
+      <tr><td>16–31 Oct</td><td>15 (2.5%)</td><td>32 (4.8%)</td><td class="up">+17</td><td>16</td></tr>
+      <tr><td>Nov</td><td>14 (1.0%)</td><td>36 (2.4%)</td><td class="up">+22</td><td>71</td></tr>
+      <tr><td>All</td><td>59</td><td>90</td><td>+31</td><td>90</td></tr>
+    </tbody></table></div>
+  <p class="sub">Percentages are of memberships still set to renew 60 days out. If late October and November flatten the way early October did, the extra disappears by renewal day. If they keep running above last year, it is extra churn.</p>
+  <details><summary class="sub">Week by week</summary>
+  <div class="tbl"><table>
+    <thead><tr><th>Week of (2026)</th><th>All 2025</th><th>All 2026</th><th>YoY</th><th>Oct–Dec 2025</th><th>Oct–Dec 2026</th><th>YoY</th></tr></thead>
+    <tbody id="t-yoy-w"></tbody></table></div></details>
+</section>
+
+<section class="card" aria-labelledby="h-where">
+  <h2 id="h-where">Where the extra early cancellations come from</h2>
+  <p class="sub">October 2026 renewals, share cancelled 60 to 32 days before renewal (the month after the email), against the same window for the baseline.</p>
+  <div class="two">
+    <div class="tbl"><table>
+      <thead><tr><th>Renewal</th><th>Oct 2026</th><th>Baseline</th><th>n</th></tr></thead>
+      <tbody id="t-ren"></tbody></table></div>
+    <div class="tbl"><table>
+      <thead><tr><th>Country · type</th><th>Oct 2026</th><th>Baseline</th><th>n</th></tr></thead>
+      <tbody id="t-cty"></tbody></table></div>
+  </div>
+  <p class="sub">First-time renewers react most. Germany and Austria Online are higher than Switzerland. Groups of 50 to 400 memberships, so a few cancellations move these rates by a point.</p>
+</section>
+
+<section class="card" aria-labelledby="h-pre">
+  <h2 id="h-pre">A separate trend: cancelling long before renewal</h2>
+  <p class="sub">Share of memberships per renewal month whose renewal was switched off more than 90 days before the date, before any notice email.</p>
+  <div class="chart" id="c-pre"></div>
+  <p class="sub">This moved from about 7% to 10–11% with the April 2026 renewals, months before the price emails. It lifts the year-on-year comparison of total cancellations, so the price effect is read against the last 12 months, not against October 2025 alone.</p>
+</section>
+
+<section class="card" aria-labelledby="h-watch">
+  <h2 id="h-watch">What settles it</h2>
+  <ol class="watch">
+    <li><strong>Early November:</strong> the final cancellation rate of October renewals. If the late-October line flattens like the early one did, the notice changed timing only.</li>
+    <li><strong>From 1 October:</strong> withdrawals within 14 days of an automatic renewal at the new price. Members who ignore the email may react only when charged.</li>
+    <li><strong>Early December:</strong> the same curve for November renewals, then December once its notices go out.</li>
+  </ol>
+</section>
+
+<section class="card method" aria-labelledby="h-method">
+  <h2 id="h-method">How this is counted</h2>
+  <p>Paid B2C memberships (no group or clinic membership; states newly created, renewed, paused), by scheduled renewal date. A cancellation is the first <code>CANCEL_MEMBERSHIP</code> request on the membership (<code>public_membership_cancellation_request</code>), dated by when it was made, counted only if made before the renewal date. A later switch back on still counts as a cancellation here.</p>
+  <p>The curve uses a survival count over days before renewal, so memberships that have not yet reached a given day drop out of that day's denominator instead of counting as not cancelled. Baseline months before Oct 2025 have too few memberships in this table to use.</p>
+  <p>Queries: <code>price-increase-cancellations/sql/</code> in the CTO assistant workspace.</p>
+</section>
+</div>
+
+<script>
+const KM = {"base":[[60,0.05,8875],[59,0.09,8871],[58,0.16,8867],[57,0.2,8861],[56,0.26,8857],[55,0.29,8852],[54,0.33,8849],[53,0.39,8846],[52,0.44,8840],[51,0.5,8836],[50,0.54,8831],[49,0.61,8827],[48,0.7,8821],[47,0.78,8813],[46,0.83,8806],[45,0.91,8801],[44,1.0,8794],[43,1.06,8786],[42,1.12,8781],[41,1.19,8776],[40,1.35,8769],[39,1.45,8755],[38,1.52,8746],[37,1.63,8740],[36,1.75,8730],[35,1.8,8720],[34,1.86,8715],[33,1.93,8710],[32,2.07,8704],[31,2.16,8691],[30,2.26,8683],[29,2.38,8674],[28,2.47,8664],[27,2.59,8656],[26,2.69,8645],[25,2.79,8636],[24,2.88,8627],[23,3.0,8619],[22,3.09,8609],[21,3.19,8601],[20,3.3,8592],[19,3.43,8582],[18,3.49,8571],[17,3.56,8565],[16,3.63,8559],[15,3.72,8553],[14,3.83,8545],[13,3.91,8535],[12,3.98,8528],[11,4.06,8522],[10,4.2,8515],[9,4.25,8502],[8,4.43,8498],[7,4.48,8482],[6,4.64,8477],[5,4.7,8463],[4,4.8,8458],[3,4.96,8449],[2,5.1,8435],[1,5.7,8422],[0,5.74,8369]],"oct_early":[[60,0.21,480],[59,0.83,479],[58,0.83,476],[57,1.25,476],[56,1.46,474],[55,1.46,473],[54,1.46,473],[53,1.46,473],[52,1.46,473],[51,1.67,473],[50,1.67,472],[49,1.67,472],[48,1.67,472],[47,1.67,472],[46,1.67,472],[45,1.67,472],[44,1.67,472],[43,1.67,472],[42,2.08,472],[41,2.08,470],[40,2.08,470],[39,2.29,470],[38,2.29,469],[37,2.29,469],[36,2.5,469],[35,2.5,468],[34,2.92,468],[33,2.92,466],[32,2.92,466],[31,2.92,466],[30,2.92,466],[29,2.92,466],[28,2.92,466],[27,3.12,466],[26,3.12,465],[25,3.12,465],[24,3.33,465],[23,3.33,464],[22,3.33,464],[21,3.75,464],[20,3.75,462],[19,3.96,462],[18,3.96,461],[17,4.17,461],[16,4.17,460],[15,4.37,460],[14,4.37,409],[13,4.37,369],[12,4.37,327],[11,4.7,291],[10,4.7,270],[9,4.7,238],[8,4.7,202],[7,4.7,177],[6,4.7,152]],"oct_late":[[60,0.75,671],[59,1.04,666],[58,1.04,664],[57,1.34,664],[56,1.34,662],[55,1.49,662],[54,1.49,661],[53,1.49,661],[52,1.64,661],[51,1.79,660],[50,2.09,659],[49,2.24,657],[48,2.24,656],[47,2.24,656],[46,2.24,656],[45,2.24,656],[44,2.24,656],[43,2.24,656],[42,2.38,656],[41,2.53,655],[40,2.68,654],[39,2.83,653],[38,2.83,652],[37,3.28,652],[36,3.28,649],[35,3.43,649],[34,3.73,648],[33,4.17,646],[32,4.17,643],[31,4.17,643],[30,4.17,603],[29,4.51,566],[28,4.7,520],[27,4.7,483],[26,4.7,425],[25,4.95,379],[24,4.95,358],[23,4.95,312],[22,4.95,263],[21,4.95,222],[20,4.95,191],[19,4.95,152]],"nov":[[60,0.47,1475],[59,0.82,1430],[58,1.4,1384],[57,1.69,1325],[56,1.85,1262],[55,1.93,1210],[54,2.02,1155],[53,2.19,1100],[52,2.19,1065],[51,2.29,1011],[50,2.39,968],[49,2.39,910],[48,2.39,879],[47,2.39,849],[46,2.39,805],[45,2.39,765],[44,2.39,724],[43,2.39,677],[42,2.7,630],[41,2.87,564],[40,3.06,512],[39,3.06,470],[38,3.06,428],[37,3.06,382],[36,3.06,313],[35,3.06,246],[34,3.06,169]]};
+const WEEKS = ["1 Jun","8 Jun","15 Jun","22 Jun","29 Jun","6 Jul","13 Jul","20 Jul","27 Jul","3 Aug","10 Aug","17 Aug","24 Aug","31 Aug","7 Sep","14 Sep","21 Sep"];
+const WK = { // weekly cancellations (absolute) and renewals in the month
+  oct:{y25:[4,1,1,5,4,1,2,0,3,2,2,4,4,7,8,11,7],n25:1213,y26:[2,3,2,2,3,1,3,1,1,7,5,9,13,9,8,10,10],n26:1300},
+  nov:{y25:[3,5,6,3,4,4,2,3,3,3,5,2,5,3,8,10,8],n25:1504,y26:[3,3,4,3,4,4,1,1,2,1,3,4,5,8,16,16,17],n26:1714}};
+const PRE = [["2025-07",8.0,326],["2025-08",7.0,445],["2025-09",6.2,841],["2025-10",7.0,1213],["2025-11",7.0,1504],["2025-12",7.3,753],["2026-01",7.2,1042],["2026-02",7.3,617],["2026-03",7.4,634],["2026-04",10.8,502],["2026-05",9.4,678],["2026-06",11.5,841],["2026-07",10.9,433],["2026-08",9.6,553],["2026-09",10.6,1073],["2026-10",10.1,1300],["2026-11",9.4,1714],["2026-12",10.8,900]];
+const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const NS="http://www.w3.org/2000/svg";
+function el(tag,attrs,parent){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e}
+function svgBox(host,W,H){const s=el("svg",{viewBox:`0 0 ${W} ${H}`,role:"img"});host.appendChild(s);return s}
+function tipEl(host){const t=document.createElement("div");t.className="tip";t.hidden=true;host.appendChild(t);return t}
+function placeTip(tip,host,px,py){const r=host.getBoundingClientRect();tip.hidden=false;let x=px+14;if(x+tip.offsetWidth>r.width)x=px-tip.offsetWidth-14;tip.style.left=Math.max(0,x)+"px";tip.style.top=Math.max(0,py-tip.offsetHeight/2)+"px"}
+const fmt=v=>v.toFixed(1)+"%";
+function legend(id,items){document.getElementById(id).innerHTML=items.map(([c,l,d])=>`<span><i class="${d?'dash':''}" style="background:var(${c})"></i>${l}</span>`).join("")}
+
+/* 1. cumulative curve */
+(function(){
+  const host=document.getElementById("c-curve"),W=900,H=360,m={l:44,r:120,t:14,b:40};
+  const s=svgBox(host,W,H),tip=tipEl(host);
+  s.setAttribute("aria-label","Cumulative share cancelled by days before renewal");
+  const x=L=>m.l+(60-L)/60*(W-m.l-m.r), y=v=>H-m.b-v/6*(H-m.t-m.b);
+  for(let v=0;v<=6;v++){el("line",{x1:m.l,x2:W-m.r,y1:y(v),y2:y(v),stroke:"var(--grid)"},s);el("text",{x:m.l-8,y:y(v)+4,"text-anchor":"end"},s).textContent=v+"%"}
+  [60,50,40,30,20,10,0].forEach(L=>{el("text",{x:x(L),y:H-m.b+18,"text-anchor":"middle"},s).textContent=L===0?"renewal":"D-"+L});
+  el("text",{x:m.l,y:H-4},s).textContent="days before renewal →";
+  // notice goes out at D-60 (left edge); mark the old reminder at D-30
+  el("line",{x1:x(30),x2:x(30),y1:m.t,y2:H-m.b,stroke:"var(--ink-3)","stroke-dasharray":"2 4"},s);
+  el("text",{x:x(30)+6,y:m.t+12},s).textContent="old reminder (≈ D-30)";
+  const S=[["base","--base","Baseline (Oct 2025 – Sep 2026)",true],["oct_early","--s1","1–15 Oct 2026"],["oct_late","--s2","16–31 Oct 2026"],["nov","--s3","Nov 2026"]];
+  legend("lg-curve",S.map(([k,c,l,d])=>[c,l,d]));
+  const ends=[];
+  S.forEach(([k,c,l,d])=>{const p=KM[k];
+    el("path",{d:p.map((q,i)=>(i?"L":"M")+x(q[0]).toFixed(1)+","+y(q[1]).toFixed(1)).join(""),fill:"none",stroke:`var(${c})`,"stroke-width":d?2:2.5,"stroke-dasharray":d?"5 3":"none","stroke-linejoin":"round"},s);
+    const e=p[p.length-1];el("circle",{cx:x(e[0]),cy:y(e[1]),r:4,fill:`var(${c})`,stroke:"var(--panel)","stroke-width":2},s);ends.push([k,c,l,e])});
+  // direct labels, nudged apart
+  const lab=ends.map(([k,c,l,e])=>({t:(k==="base"?"Baseline ":"")+fmt(e[1]),x:k==="oct_early"?x(e[0])-4:x(e[0])+8,y:k==="oct_early"?y(e[1])-10:y(e[1])+4,c,a:k==="oct_early"?"end":"start"}));
+  lab.sort((a,b)=>a.y-b.y);for(let i=1;i<lab.length;i++)if(Math.abs(lab[i].y-lab[i-1].y)<14&&Math.abs(lab[i].x-lab[i-1].x)<60)lab[i].y=lab[i-1].y+14;
+  lab.forEach(o=>{el("text",{x:o.x,y:o.y,class:"lbl","text-anchor":o.a},s).textContent=o.t});
+  const cross=el("line",{y1:m.t,y2:H-m.b,stroke:"var(--ink-3)",opacity:0},s);
+  const hit=el("rect",{x:m.l,y:m.t,width:W-m.l-m.r,height:H-m.t-m.b,fill:"transparent"},s);
+  function move(ev){const r=s.getBoundingClientRect(),sx=(ev.clientX-r.left)/r.width*W;const L=Math.max(0,Math.min(60,Math.round(60-(sx-m.l)/(W-m.l-m.r)*60)));
+    cross.setAttribute("x1",x(L));cross.setAttribute("x2",x(L));cross.setAttribute("opacity",.5);
+    tip.innerHTML=`<b>${L===0?"Renewal day":L+" days before renewal"}</b>`+S.map(([k,c,l])=>{const q=KM[k].find(q=>q[0]===L);return `<div class="row"><span><i style="background:var(${c})"></i>${l.replace(" (Oct 2025 – Sep 2026)","")}</span><span>${q?fmt(q[1]):"–"}</span></div>`}).join("");
+    placeTip(tip,host,(x(L)/W)*r.width,(ev.clientY-r.top))}
+  hit.addEventListener("pointermove",move);hit.addEventListener("pointerleave",()=>{tip.hidden=true;cross.setAttribute("opacity",0)});
+})();
+
+/* 2. weekly small multiples */
+legend("lg-weeks",[["--base","2025 renewals",true],["--s1","2026 renewals (new price)"]]);
+function weekly(id,d){
+  const host=document.getElementById(id),W=460,H=240,m={l:34,r:12,t:22,b:34};
+  const s=svgBox(host,W,H),tip=tipEl(host);
+  const a=d.y25.map(v=>v/d.n25*1000),b=d.y26.map(v=>v/d.n26*1000),n=a.length;
+  const x=i=>m.l+i/(n-1)*(W-m.l-m.r),y=v=>H-m.b-v/12*(H-m.t-m.b);
+  [0,4,8,12].forEach(v=>{el("line",{x1:m.l,x2:W-m.r,y1:y(v),y2:y(v),stroke:"var(--grid)"},s);el("text",{x:m.l-6,y:y(v)+4,"text-anchor":"end"},s).textContent=v});
+  [0,5,9,13,16].forEach(i=>{el("text",{x:x(i),y:H-m.b+18,"text-anchor":"middle"},s).textContent=WEEKS[i]});
+  const xe=x(8)+(x(9)-x(8))*5/7;el("line",{x1:xe,x2:xe,y1:m.t,y2:H-m.b,stroke:"var(--email)","stroke-dasharray":"3 3"},s);
+  el("text",{x:xe-4,y:m.t-8,"text-anchor":"end",style:"fill:var(--email)"},s).textContent="notice emails start 1 Aug";
+  [[a,"--base",true],[b,"--s1",false]].forEach(([v,c,dash])=>{el("path",{d:v.map((q,i)=>(i?"L":"M")+x(i).toFixed(1)+","+y(q).toFixed(1)).join(""),fill:"none",stroke:`var(${c})`,"stroke-width":dash?2:2.5,"stroke-dasharray":dash?"5 3":"none","stroke-linejoin":"round"},s);
+    el("circle",{cx:x(n-1),cy:y(v[n-1]),r:4,fill:`var(${c})`,stroke:"var(--panel)","stroke-width":2},s)});
+  const cross=el("line",{y1:m.t,y2:H-m.b,stroke:"var(--ink-3)",opacity:0},s);
+  const hit=el("rect",{x:m.l,y:m.t,width:W-m.l-m.r,height:H-m.t-m.b,fill:"transparent"},s);
+  hit.addEventListener("pointermove",ev=>{const r=s.getBoundingClientRect(),sx=(ev.clientX-r.left)/r.width*W;const i=Math.max(0,Math.min(n-1,Math.round((sx-m.l)/(W-m.l-m.r)*(n-1))));
+    cross.setAttribute("x1",x(i));cross.setAttribute("x2",x(i));cross.setAttribute("opacity",.5);
+    tip.innerHTML=`<b>Week of ${WEEKS[i]}</b><div class="row"><span><i style="background:var(--base)"></i>2025</span><span>${a[i].toFixed(1)} · ${d.y25[i]} of ${d.n25.toLocaleString("en")}</span></div><div class="row"><span><i style="background:var(--s1)"></i>2026</span><span>${b[i].toFixed(1)} · ${d.y26[i]} of ${d.n26.toLocaleString("en")}</span></div>`;
+    placeTip(tip,host,x(i)/W*r.width,ev.clientY-r.top)});
+  hit.addEventListener("pointerleave",()=>{tip.hidden=true;cross.setAttribute("opacity",0)});
+}
+weekly("c-oct",WK.oct);weekly("c-nov",WK.nov);
+
+
+/* 2b. YoY absolute weekly */
+const YOY=[[23,"2026-06-01",25,20,9,5],[24,"2026-06-08",17,28,6,8],[25,"2026-06-15",25,34,7,9],[26,"2026-06-22",26,35,10,6],[27,"2026-06-29",28,29,8,9],[28,"2026-07-06",19,20,6,6],[29,"2026-07-13",10,21,6,8],[30,"2026-07-20",16,16,3,4],[31,"2026-07-27",21,14,8,4],[32,"2026-08-03",17,27,5,8],[33,"2026-08-10",20,26,8,10],[34,"2026-08-17",17,31,6,15],[35,"2026-08-24",25,42,9,23],[36,"2026-08-31",34,45,13,22],[37,"2026-09-07",42,41,20,26],[38,"2026-09-14",52,63,24,29],[39,"2026-09-21",39,55,19,31]];
+const wkLabel=d=>{const [y,m,dd]=d.split("-");return (+dd)+" "+MON[+m-1]};
+const sgn=v=>(v>0?"+":v<0?"−":"±")+Math.abs(v);
+const pct=(a,b)=>(b>=a?"+":"−")+Math.abs(Math.round((b-a)/a*100))+"%";
+legend("lg-yoy",[["--base","2025"],["--s1","2026"]]);
+function yoyBars(id,i25,i26){
+  const host=document.getElementById(id),W=460,H=250,m={l:34,r:8,t:22,b:34};
+  const s=svgBox(host,W,H),tip=tipEl(host),n=YOY.length,gw=(W-m.l-m.r)/n,bw=Math.max(3,(gw-4)/2);
+  const y=v=>H-m.b-v/70*(H-m.t-m.b);
+  [0,20,40,60].forEach(v=>{el("line",{x1:m.l,x2:W-m.r,y1:y(v),y2:y(v),stroke:"var(--grid)"},s);el("text",{x:m.l-6,y:y(v)+4,"text-anchor":"end"},s).textContent=v});
+  const xe=m.l+9*gw;el("line",{x1:xe,x2:xe,y1:m.t,y2:H-m.b,stroke:"var(--email)","stroke-dasharray":"3 3"},s);
+  el("text",{x:xe-4,y:m.t-8,"text-anchor":"end",style:"fill:var(--email)"},s).textContent="notice emails start 1 Aug";
+  YOY.forEach((r,i)=>{const g0=m.l+i*gw+1;
+    [[r[i25],"--base",0],[r[i26],"--s1",1]].forEach(([v,c,k])=>{const x0=g0+k*(bw+1),top=y(v),rr=Math.min(3,bw/2,(H-m.b-top));
+      el("path",{d:`M${x0},${H-m.b}V${top+rr}Q${x0},${top} ${x0+rr},${top}H${x0+bw-rr}Q${x0+bw},${top} ${x0+bw},${top+rr}V${H-m.b}Z`,fill:`var(${c})`},s)});
+    if([0,5,9,13,16].includes(i))el("text",{x:g0+bw,y:H-m.b+18,"text-anchor":"middle"},s).textContent=wkLabel(r[1]);
+    const hit=el("rect",{x:m.l+i*gw,y:m.t,width:gw,height:H-m.t-m.b,fill:"transparent"},s);
+    hit.addEventListener("pointermove",ev=>{const R=s.getBoundingClientRect();const a=r[i25],b=r[i26];
+      tip.innerHTML=`<b>Week of ${wkLabel(r[1])} (W${r[0]})</b><div class="row"><span><i style="background:var(--base)"></i>2025</span><span>${a}</span></div><div class="row"><span><i style="background:var(--s1)"></i>2026</span><span>${b}</span></div><div class="row"><span>YoY</span><span>${sgn(b-a)} (${pct(a,b)})</span></div>`;
+      placeTip(tip,host,(g0+gw/2)/W*R.width,ev.clientY-R.top)});
+    hit.addEventListener("pointerleave",()=>{tip.hidden=true});
+  });
+}
+yoyBars("c-yoy-all",2,3);yoyBars("c-yoy-q4",4,5);
+(function(){const sum=(lo,hi,k)=>YOY.filter(r=>r[0]>=lo&&r[0]<=hi).reduce((t,r)=>t+r[k],0);
+  const line=(label,f)=>{const a=f(23,31,0),b=f(23,31,1),c=f(32,39,0),d=f(32,39,1);return `<tr><td>${label}</td><td>${a}</td><td>${b}</td><td>${sgn(b-a)} (${pct(a,b)})</td><td>${c}</td><td>${d}</td><td class="${(d-c)/c>=.3?'up':''}">${sgn(d-c)} (${pct(c,d)})</td></tr>`};
+  document.getElementById("t-yoy").innerHTML=line("All renewals",(lo,hi,k)=>sum(lo,hi,2+k))+line("Renewing Oct–Dec",(lo,hi,k)=>sum(lo,hi,4+k))+line("Other renewals",(lo,hi,k)=>sum(lo,hi,2+k)-sum(lo,hi,4+k));
+  document.getElementById("t-yoy-w").innerHTML=YOY.map(r=>`<tr><td>${wkLabel(r[1])}</td><td>${r[2]}</td><td>${r[3]}</td><td>${sgn(r[3]-r[2])}</td><td>${r[4]}</td><td>${r[5]}</td><td>${sgn(r[5]-r[4])}</td></tr>`).join("")})();
+
+/* 3. tables */
+function rows(id,data){document.getElementById(id).innerHTML=data.map(([l,a,b,n])=>`<tr><td>${l}</td><td class="${a-b>=1?'up':''}">${fmt(a)}</td><td>${fmt(+b)}</td><td>${n}</td></tr>`).join("")}
+rows("t-ren",[["All",3.6,2.1,1151],["First renewal",5.4,2.3,349],["Later renewal",2.9,1.9,802]]);
+rows("t-cty",[["Germany · Online",5.2,2.6,329],["Austria · Online",5.0,1.8,121],["Germany · Hybrid",4.2,2.7,96],["Switzerland · Online",2.6,1.3,383],["Switzerland · Hybrid",2.3,1.8,171],["Austria · Hybrid",2.0,1.1,51]]);
+
+/* 4. pre-cancelled bars */
+(function(){
+  const host=document.getElementById("c-pre"),W=900,H=250,m={l:40,r:10,t:22,b:44};
+  const s=svgBox(host,W,H),tip=tipEl(host);s.setAttribute("aria-label","Share cancelled more than 90 days before renewal, by renewal month");
+  const n=PRE.length,bw=(W-m.l-m.r)/n,y=v=>H-m.b-v/12*(H-m.t-m.b);
+  [0,4,8,12].forEach(v=>{el("line",{x1:m.l,x2:W-m.r,y1:y(v),y2:y(v),stroke:"var(--grid)"},s);el("text",{x:m.l-6,y:y(v)+4,"text-anchor":"end"},s).textContent=v+"%"});
+  PRE.forEach(([mo,v,N],i)=>{const [yy,mm]=mo.split("-");const x0=m.l+i*bw+1,w=bw-2,h=H-m.b-y(v),r=Math.min(4,w/2);
+    const p=`M${x0},${H-m.b}V${y(v)+r}Q${x0},${y(v)} ${x0+r},${y(v)}H${x0+w-r}Q${x0+w},${y(v)} ${x0+w},${y(v)+r}V${H-m.b}Z`;
+    const bar=el("path",{d:p,fill:+mo.slice(0,4)===2026&&+mm>=4?"var(--s1)":"var(--base)"},s);
+    const cx=x0+w/2;
+    if(i%3===0||i===n-1){el("text",{x:cx,y:H-m.b+16,"text-anchor":"middle"},s).textContent=MON[+mm-1];}
+    if(mm==="01"||i===0){el("text",{x:cx,y:H-m.b+32,"text-anchor":"middle",class:"lbl"},s).textContent=yy}
+    if(i===0||mo==="2026-03"||mo==="2026-06"||i===n-1)el("text",{x:cx,y:y(v)-6,"text-anchor":"middle",class:"lbl"},s).textContent=fmt(v);
+    const hit=el("rect",{x:m.l+i*bw,y:m.t,width:bw,height:H-m.t-m.b,fill:"transparent"},s);
+    hit.addEventListener("pointermove",ev=>{const r=s.getBoundingClientRect();tip.innerHTML=`<b>Renewals ${MON[+mm-1]} ${yy}</b><div class="row"><span>Cancelled &gt; 90 days before</span><span>${fmt(v)}</span></div><div class="row"><span>Memberships</span><span>${N.toLocaleString("en")}</span></div>`;placeTip(tip,host,cx/W*r.width,ev.clientY-r.top);bar.setAttribute("opacity",.8)});
+    hit.addEventListener("pointerleave",()=>{tip.hidden=true;bar.setAttribute("opacity",1)});
+  });
+})();
+</script>

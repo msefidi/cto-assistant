@@ -1,0 +1,386 @@
+<title>fomf Registration Funnel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; filters → headline numbers → step funnel (label | bar | numbers) → breakdowns → method notes */
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --fg: #14171c;
+  --fg-2: #4d5562;
+  --fg-3: #7a828f;
+  --line: #e1e4ea;
+  --track: #eceef2;
+  --bar: #2a78d6;
+  --bar-soft: #86b6ef;
+  --login: #b9c2cf;
+  --flag: #c4462f;
+  --flag-bg: #fbeae6;
+  --focus: #2a78d6;
+  --f-display: "IBM Plex Sans Condensed", "Arial Narrow", system-ui, sans-serif;
+  --f-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121418; --surface: #1a1d22; --fg: #eef0f3; --fg-2: #b4bbc6; --fg-3: #88909c;
+    --line: #2b3038; --track: #252930; --bar: #3987e5; --bar-soft: #1c5cab; --login: #4a5361;
+    --flag: #f08a73; --flag-bg: #3a221d; --focus: #6da7ec; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121418; --surface: #1a1d22; --fg: #eef0f3; --fg-2: #b4bbc6; --fg-3: #88909c;
+  --line: #2b3038; --track: #252930; --bar: #3987e5; --bar-soft: #1c5cab; --login: #4a5361;
+  --flag: #f08a73; --flag-bg: #3a221d; --focus: #6da7ec; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font: 15px/1.5 var(--f-body); }
+.wrap { max-width: 1040px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 56px; display: grid; gap: 28px; }
+h1, h2, h3 { font-family: var(--f-display); font-weight: 600; text-wrap: balance; margin: 0; letter-spacing: -0.005em; }
+h1 { font-size: 30px; line-height: 1.15; }
+h2 { font-size: 20px; }
+p { margin: 0; }
+.eyebrow { font: 500 12px/1.2 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--fg-3); }
+.lede { color: var(--fg-2); max-width: 68ch; }
+header { display: grid; gap: 10px; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* filters */
+.filters { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: end; }
+.filters label { display: grid; gap: 4px; font: 500 12px var(--f-mono); color: var(--fg-3); letter-spacing: .04em; text-transform: uppercase; }
+select { font: 14px var(--f-body); color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 6px 28px 6px 10px; min-width: 0; }
+select:focus-visible, input:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.check { display: flex !important; align-items: center; gap: 8px; text-transform: none !important; letter-spacing: 0 !important; font: 14px var(--f-body) !important; color: var(--fg-2) !important; padding-bottom: 6px; cursor: pointer; }
+.check input { width: 16px; height: 16px; accent-color: var(--bar); }
+
+/* headline numbers */
+.kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.kpi { background: var(--surface); padding: 14px 16px; display: grid; gap: 2px; align-content: start; }
+.kpi .v { font: 600 28px/1.1 var(--f-display); font-variant-numeric: tabular-nums; }
+.kpi .l { font-size: 13px; color: var(--fg-2); }
+.kpi .s { font: 12px var(--f-mono); color: var(--fg-3); }
+@media (max-width: 720px) { .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* funnel */
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 20px; display: grid; gap: 16px; }
+.panel-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; align-items: baseline; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: var(--fg-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+.funnel { display: grid; }
+.step { display: grid; grid-template-columns: 230px minmax(0, 1fr) 132px; gap: 14px; align-items: center; padding-block: 6px; }
+.step .name { display: grid; gap: 1px; min-width: 0; }
+.step .name b { font: 600 15px/1.25 var(--f-display); }
+.step .name small { font-size: 12.5px; color: var(--fg-3); line-height: 1.35; }
+.track { position: relative; height: 30px; background: var(--track); border-radius: 4px; cursor: default; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--bar); border-radius: 4px; transition: width .35s ease; }
+.fill.login { background: var(--login); border-radius: 0 4px 4px 0; }
+.step.milestone .fill:not(.login) { background: var(--bar-soft); }
+.vals { text-align: right; display: grid; gap: 0; }
+.vals .n { font: 600 18px/1.1 var(--f-display); font-variant-numeric: tabular-nums; }
+.vals .p { font: 12px var(--f-mono); color: var(--fg-3); font-variant-numeric: tabular-nums; }
+.drop { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 14px; padding-block: 2px; }
+.drop .d { grid-column: 2; font-size: 13px; color: var(--fg-2); display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: center; padding-left: 4px; border-left: 2px solid var(--line); margin-left: 8px; padding-block: 4px; }
+.drop .d .amt { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--fg); }
+.pill { font: 600 11px/1 var(--f-mono); letter-spacing: .05em; text-transform: uppercase; padding: 4px 7px; border-radius: 99px; color: var(--flag); background: var(--flag-bg); display: inline-flex; gap: 4px; align-items: center; }
+.drop.big .d { border-left-color: var(--flag); }
+@media (max-width: 720px) {
+  .step { grid-template-columns: minmax(0, 1fr) auto; gap: 6px 12px; }
+  .step .name { grid-column: 1 / -1; }
+  .drop { grid-template-columns: minmax(0, 1fr); }
+  .drop .d { grid-column: 1; }
+}
+
+/* tooltip */
+.tip { position: fixed; z-index: 10; pointer-events: none; background: var(--fg); color: var(--bg); font-size: 12.5px; line-height: 1.4; padding: 8px 10px; border-radius: 6px; max-width: 260px; font-variant-numeric: tabular-nums; }
+
+/* findings */
+.findings { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.finding { display: grid; gap: 6px; align-content: start; padding-top: 12px; border-top: 2px solid var(--fg); }
+.finding h3 { font-size: 16px; }
+.finding p { font-size: 14px; color: var(--fg-2); }
+@media (max-width: 820px) { .findings { grid-template-columns: minmax(0, 1fr); } }
+
+/* tables */
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+.tabs button { font: 500 13px var(--f-body); color: var(--fg-2); background: transparent; border: 1px solid var(--line); border-radius: 99px; padding: 5px 12px; cursor: pointer; }
+.tabs button[aria-selected="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.tabs button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.tbl { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; min-width: 620px; }
+th, td { padding: 8px 10px; text-align: right; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+th { font: 500 12px var(--f-mono); color: var(--fg-3); text-transform: uppercase; letter-spacing: .04em; }
+td.rate { position: relative; }
+.mini { display: inline-block; width: 54px; height: 6px; background: var(--track); border-radius: 3px; margin-left: 8px; vertical-align: middle; position: relative; overflow: hidden; }
+.mini i { position: absolute; inset: 0 auto 0 0; background: var(--bar); border-radius: 3px; }
+td.small { color: var(--fg-3); }
+
+.notes { display: grid; gap: 10px; font-size: 14px; color: var(--fg-2); max-width: 78ch; }
+.notes ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+.notes code { font: 12.5px var(--f-mono); background: var(--track); padding: 1px 5px; border-radius: 4px; color: var(--fg); }
+@media (prefers-reduced-motion: reduce) { .fill { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">fomf.de · fomf.at · fomf.ch &nbsp;/&nbsp; web registration &nbsp;/&nbsp; 7 Jul – 6 Oct 2026</div>
+    <h1>Where people drop out of registration</h1>
+    <p class="lede">Each person who opened <code style="font:13px var(--f-mono)">/user/registration</code> is followed through the email screen and the four form steps until they finish. Source: Segment events in BigQuery (<code style="font:13px var(--f-mono)">fomf-dl.segment_raw_unify</code>). Crawler traffic is removed.</p>
+  </header>
+
+  <div class="filters" role="group" aria-label="Filters">
+    <label for="f-period">Period
+      <select id="f-period">
+        <option value="all">All 3 months</option>
+        <option value="s4">4-step form only (from 27 Jul)</option>
+        <option value="07">July (from 7 Jul)</option>
+        <option value="08">August</option>
+        <option value="09">September</option>
+        <option value="10">October (1–6)</option>
+      </select>
+    </label>
+    <label for="f-country">Site
+      <select id="f-country">
+        <option value="all">All sites</option>
+        <option value="DE">fomf.de</option>
+        <option value="AT">fomf.at</option>
+        <option value="CH">fomf.ch</option>
+      </select>
+    </label>
+    <label for="f-device">Device
+      <select id="f-device">
+        <option value="all">All devices</option>
+        <option value="d">Desktop</option>
+        <option value="m">Mobile</option>
+      </select>
+    </label>
+    <label for="f-type">Registration type
+      <select id="f-type">
+        <option value="all">All types</option>
+        <option value="std">Standard</option>
+        <option value="pj">PJ (students)</option>
+        <option value="other">Clinic / MFA</option>
+      </select>
+    </label>
+    <label class="check" for="f-excl"><input type="checkbox" id="f-excl"> Leave out people who logged in instead</label>
+  </div>
+
+  <section class="kpis" id="kpis" aria-label="Headline numbers"></section>
+
+  <section class="panel" aria-labelledby="funnel-h">
+    <div class="panel-head">
+      <h2 id="funnel-h">Registration funnel</h2>
+      <div class="legend">
+        <span><i class="sw" style="background:var(--bar)"></i>Reached this screen</span>
+        <span><i class="sw" style="background:var(--bar-soft)"></i>Background event (no screen)</span>
+        <span><i class="sw" style="background:var(--login)"></i>Logged in within 24 h instead</span>
+      </div>
+    </div>
+    <div class="funnel" id="funnel"></div>
+  </section>
+
+  <section class="findings" aria-label="What the data says" id="findings"></section>
+
+  <section class="panel" aria-labelledby="bd-h">
+    <div class="panel-head">
+      <h2 id="bd-h">Breakdown</h2>
+      <div class="tabs" role="tablist" id="tabs">
+        <button role="tab" data-dim="country" aria-selected="true">Site</button>
+        <button role="tab" data-dim="device" aria-selected="false">Device</button>
+        <button role="tab" data-dim="month" aria-selected="false">Month</button>
+        <button role="tab" data-dim="type" aria-selected="false">Type</button>
+      </div>
+    </div>
+    <div class="tbl"><table id="bd"></table></div>
+    <p style="font-size:13px;color:var(--fg-3)">Each breakdown applies every filter above except its own dimension.</p>
+  </section>
+
+  <section class="notes" aria-labelledby="m-h">
+    <h2 id="m-h">How this is counted</h2>
+    <ul>
+      <li><b>People</b> = Segment <code>anonymous_id</code> (one browser). The cohort is everyone whose first <code>Registration Step · landing</code> falls between 7 Jul and 6 Oct 2026. A later step counts if it happened within 30 days. 97% of completions happen within 30 minutes of step 1, and the median is 3 minutes.</li>
+      <li><b>Steps</b> come from the <code>Registration Step</code> event, which fires when a screen is <i>shown</i> (<code>RegistrationFormContainer.tsx</code>). "Account created" is <code>Signup Started</code>, which fires after step 1 is submitted and just before the login redirect. "Complete" is the frontend <code>Signup Completed</code>.</li>
+      <li><b>Deepest step reached</b>: a person who shows a later step is counted as having passed every earlier one. This covers events lost during the login redirect.</li>
+      <li><b>Step 4 (marketing source)</b> went live on 27 Jul 2026. Before that, the form had three steps, and anyone who finished it counts as having passed step 4. Choose "4-step form only" to see the current flow without that assumption.</li>
+      <li><b>Crawlers removed</b>: 9,045 visitor IDs in the window. About 7,700 are Baidu's renderer (<code>Baiduspider-render</code>). It loaded the page thousands of times on fomf.ch in July, on fomf.at on 27 Sep and on fomf.de on 14 Sep. The rest are IP addresses that opened the page as a "new visitor" 3+ times in one day. Only 6 of about 5,500 such visitors went past the email screen.</li>
+      <li><b>Logged in instead</b>: the email screen rejects an address that already has an account. People who left there but fired a <code>Login</code> event within 24 hours very likely already had an account. They count as visitors but aren't lost registrations.</li>
+      <li><b>Coverage</b>: Segment saw about 1,830 accounts created through this form. The user service recorded about 4,100 new self-registered accounts (no company link) in the same window. Two likely reasons, not yet checked: visitors who decline cookie consent aren't tracked, and some accounts come from other sign-up paths. Read the percentages as representative. Treat the absolute counts as a lower bound.</li>
+    </ul>
+    <p style="color:var(--fg-3);font-size:13px">Query: <code>cto-assistant/registration-funnel/sql/funnel.sql</code> · run through Metabase (DB 2, BigQuery fomf-dl) on 7 Oct 2026.</p>
+  </section>
+</div>
+<div class="tip" id="tip" hidden></div>
+
+<script>
+// rows: [month, has_step4, site, type, device, logged_in_24h, deepest_stage, people]
+const DATA = __DATA__;
+const STEPS = [
+  { name: "Registration page", sub: "Email screen · checks the address is new", screen: true },
+  { name: "Step 1 · Personal info", sub: "Password, name, title, phone, consents", screen: true },
+  { name: "Account created", sub: "Step 1 submitted → login redirect", screen: false },
+  { name: "Step 2 · Medical info", sub: "Occupation type, country", screen: true },
+  { name: "Step 3 · Professional details", sub: "Specialties, field of activity, medical ID", screen: true },
+  { name: "Step 4 · Marketing source", sub: "Optional · live since 27 Jul", screen: true },
+  { name: "Registration complete", sub: "Profile saved", screen: false },
+];
+const DROP_TEXT = [
+  "left without entering an email",
+  "left on step 1 before the account was created",
+  "lost between account creation and step 2 (login redirect)",
+  "left on step 2",
+  "left on step 3",
+  "left on step 4",
+];
+const MONTH = { "07": "July (from 7th)", "08": "August", "09": "September", "10": "October (1–6)" };
+const SITE = { DE: "fomf.de", AT: "fomf.at", CH: "fomf.ch" };
+const DEV = { d: "Desktop", m: "Mobile" };
+const TYPE = { std: "Standard", pj: "PJ (students)", other: "Clinic / MFA" };
+
+const $ = (id) => document.getElementById(id);
+const fmt = (n) => n.toLocaleString("en-US");
+const pct = (a, b, d = 0) => (b ? (100 * a / b).toFixed(d) : "0") + "%";
+
+function filters() {
+  return {
+    period: $("f-period").value, country: $("f-country").value,
+    device: $("f-device").value, type: $("f-type").value, excl: $("f-excl").checked,
+  };
+}
+function match(r, f, skip) {
+  const [m, s4, c, t, d] = r;
+  if (skip !== "month") {
+    if (f.period === "s4" && !s4) return false;
+    if (f.period !== "all" && f.period !== "s4" && m !== f.period) return false;
+  }
+  if (skip !== "country" && f.country !== "all" && c !== f.country) return false;
+  if (skip !== "device" && f.device !== "all" && d !== f.device) return false;
+  if (skip !== "type" && f.type !== "all" && t !== f.type) return false;
+  return true;
+}
+// reached[k] = people whose deepest stage >= k; login = stage-0 people who logged in within 24 h
+function aggregate(rows, excl) {
+  const reached = Array(7).fill(0); let login = 0;
+  for (const r of rows) {
+    const n = r[7], st = r[6], lg = r[5];
+    if (st === 0 && lg) { login += n; if (excl) continue; }
+    for (let k = 0; k <= st; k++) reached[k] += n;
+  }
+  return { reached, login };
+}
+
+function renderKpis(a, excl) {
+  const R = a.reached, start = R[0];
+  const items = [
+    { v: fmt(start), l: "People on the registration page", s: excl ? fmt(a.login) + " who logged in instead are left out" : fmt(a.login) + " of them logged in instead" },
+    { v: pct(R[1], start), l: "Entered an email", s: fmt(R[1]) + " people" },
+    { v: pct(R[6], start), l: "Finished registration", s: fmt(R[6]) + " people" },
+    { v: pct(R[6], R[1]), l: "Finished, once past the email screen", s: fmt(R[1] - R[6]) + " lost inside the form" },
+  ];
+  $("kpis").innerHTML = items.map(i => `<div class="kpi"><div class="v">${i.v}</div><div class="l">${i.l}</div><div class="s">${i.s}</div></div>`).join("");
+}
+
+function renderFunnel(a, f) {
+  const R = a.reached, start = R[0] || 1;
+  // biggest step-to-step loss (by people) gets flagged
+  let big = -1, bigN = -1;
+  for (let k = 1; k < 7; k++) { const lost = R[k - 1] - R[k]; if (lost > bigN) { bigN = lost; big = k; } }
+  let html = "";
+  STEPS.forEach((s, k) => {
+    if (k > 0) {
+      const lost = R[k - 1] - R[k];
+      const extra = (k === 1 && a.login && !f.excl)
+        ? `<span>· ${fmt(a.login)} of them logged in within 24 h, so they probably had an account already</span>` : "";
+      html += `<div class="drop${k === big ? " big" : ""}"><div class="d">
+        ${k === big ? '<span class="pill">▼ Biggest drop</span>' : ""}
+        <span><span class="amt">${fmt(lost)}</span> ${DROP_TEXT[k - 1]}</span>
+        <span class="num" style="color:var(--fg-3)">(${pct(lost, R[k - 1], 1)} of the step before)</span>${extra}
+      </div></div>`;
+    }
+    const w = 100 * R[k] / start;
+    const loginW = (k === 0 && a.login && !f.excl) ? 100 * a.login / start : 0;
+    const prev = k ? R[k - 1] : R[0];
+    html += `<div class="step${s.screen ? "" : " milestone"}" data-k="${k}">
+      <div class="name"><b>${s.name}</b><small>${s.sub}</small></div>
+      <div class="track" data-k="${k}" tabindex="0" aria-label="${s.name}: ${fmt(R[k])} people, ${pct(R[k], start, 1)} of start">
+        <div class="fill" style="width:${w}%"></div>
+        ${loginW ? `<div class="fill login" style="left:${100 - loginW}%;width:${loginW}%"></div>` : ""}
+      </div>
+      <div class="vals"><span class="n">${fmt(R[k])}</span><span class="p">${pct(R[k], start, 1)} of start${k ? " · " + pct(R[k], prev, 1) + " step" : ""}</span></div>
+    </div>`;
+  });
+  $("funnel").innerHTML = html;
+  const tip = $("tip");
+  $("funnel").querySelectorAll(".track").forEach(t => {
+    const k = +t.dataset.k;
+    const show = (x, y) => {
+      const lost = k ? R[k - 1] - R[k] : 0;
+      tip.innerHTML = `<b>${STEPS[k].name}</b><br>${fmt(R[k])} people · ${pct(R[k], start, 1)} of start` +
+        (k ? `<br>${pct(R[k], R[k - 1], 1)} of previous step · ${fmt(lost)} lost` : "") +
+        (k === 0 && a.login && !f.excl ? `<br>${fmt(a.login)} left and logged in within 24 h` : "");
+      tip.hidden = false;
+      const r = tip.getBoundingClientRect();
+      tip.style.left = Math.min(x + 14, innerWidth - r.width - 8) + "px";
+      tip.style.top = Math.max(8, y - r.height - 10) + "px";
+    };
+    t.addEventListener("mousemove", e => show(e.clientX, e.clientY));
+    t.addEventListener("mouseleave", () => tip.hidden = true);
+    t.addEventListener("focus", () => { const b = t.getBoundingClientRect(); show(b.left + b.width / 2, b.top); });
+    t.addEventListener("blur", () => tip.hidden = true);
+  });
+}
+
+function renderFindings(a, excl) {
+  const R = a.reached;
+  const emailLoss = R[0] - R[1];
+  const allEmailLoss = excl ? emailLoss + a.login : emailLoss;
+  const realLeft = allEmailLoss - a.login;
+  // largest loss among the in-form transitions (step 1 → complete)
+  const NAMES = ["", "Step 1 (personal info)", "the login redirect", "Step 2 (medical info)", "Step 3 (professional details)", "Step 4 (marketing source)"];
+  const losses = [1, 2, 3, 4, 5].map(k => ({ k, lost: R[k] - R[k + 1], rate: R[k] ? (R[k] - R[k + 1]) / R[k] : 0 })).sort((x, y) => y.lost - x.lost);
+  const inForm = R[1] - R[6];
+  const f = [
+    { h: "Most people leave on the email screen",
+      p: excl
+        ? `With people who logged in instead left out, ${pct(emailLoss, R[0])} of visitors still leave without entering an email. That is ${fmt(emailLoss)} people.`
+        : `${pct(emailLoss, R[0])} of visitors never get past the first screen. ${pct(a.login, emailLoss)} of those log in within a day, which points to people who already have an account and came in through "register". That leaves about ${fmt(Math.max(realLeft, 0))} people who simply left.` },
+    { h: "Once the email is in, most people finish",
+      p: `${pct(R[6], R[1])} of people who enter an email complete all steps, typically within 3 minutes. Across the four steps, ${fmt(inForm)} people are lost in total.` },
+    { h: `Inside the form, ${NAMES[losses[0].k].split(" (")[0].replace("the ", "")} loses the most`,
+      p: `${NAMES[losses[0].k]} loses ${fmt(losses[0].lost)} people (${(100 * losses[0].rate).toFixed(1)}% of those who reach it). ${NAMES[losses[1].k]} is next with ${fmt(losses[1].lost)} (${(100 * losses[1].rate).toFixed(1)}%). Step 4 is optional and loses almost no one.` },
+  ];
+  $("findings").innerHTML = f.map(x => `<div class="finding"><h3>${x.h}</h3><p>${x.p}</p></div>`).join("");
+}
+
+let DIM = "country";
+function renderBreakdown(f) {
+  const idx = { month: 0, country: 2, type: 3, device: 4 }[DIM];
+  const labels = { month: MONTH, country: SITE, type: TYPE, device: DEV }[DIM];
+  const groups = {};
+  for (const r of DATA) if (match(r, f, DIM)) (groups[r[idx]] ||= []).push(r);
+  const keys = Object.keys(labels).filter(k => groups[k]);
+  const head = `<thead><tr><th>${{ month: "Month", country: "Site", type: "Type", device: "Device" }[DIM]}</th><th>People</th><th>Entered email</th><th>Account</th><th>Finished</th><th>Finished / people</th><th>Finished / entered email</th><th>Logged in instead</th></tr></thead>`;
+  const bar = (v) => `<span class="mini"><i style="width:${Math.min(100, v)}%"></i></span>`;
+  const body = keys.map(k => {
+    const a = aggregate(groups[k], f.excl), R = a.reached;
+    const r1 = R[0] ? 100 * R[6] / R[0] : 0, r2 = R[1] ? 100 * R[6] / R[1] : 0;
+    return `<tr><td>${labels[k]}</td><td>${fmt(R[0])}</td><td>${fmt(R[1])} <span class="small" style="color:var(--fg-3)">${pct(R[1], R[0])}</span></td><td>${fmt(R[2])}</td><td>${fmt(R[6])}</td>
+      <td class="rate">${r1.toFixed(0)}%${bar(r1)}</td><td class="rate">${r2.toFixed(0)}%${bar(r2)}</td><td class="small">${f.excl ? "left out" : fmt(a.login)}</td></tr>`;
+  }).join("");
+  $("bd").innerHTML = head + `<tbody>${body}</tbody>`;
+}
+
+function render() {
+  const f = filters();
+  const a = aggregate(DATA.filter(r => match(r, f)), f.excl);
+  renderKpis(a, f.excl); renderFunnel(a, f); renderFindings(a, f.excl); renderBreakdown(f);
+}
+["f-period", "f-country", "f-device", "f-type", "f-excl"].forEach(id => $(id).addEventListener("change", render));
+$("tabs").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  DIM = b.dataset.dim;
+  $("tabs").querySelectorAll("button").forEach(x => x.setAttribute("aria-selected", x === b));
+  render();
+});
+render();
+</script>

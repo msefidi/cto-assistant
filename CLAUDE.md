@@ -91,6 +91,32 @@ Ask Mahyar to confirm/refresh this section when it feels stale — priorities sh
 
 ---
 
+## Commercial ownership (from September 2026, outside the CTO role)
+
+The Executive Board handed Mahyar the **commercials of two learning-platform products** — pricing, packaging, positioning, go-to-market and marketing. This is a business-owner mandate, not engineering work; keep it separate from Platform / Meviq in comms and docs.
+
+- **SYFAT** (Facharzt / specialist-exam preparation) — brief in `syfat/AGENTS.md`
+- **On-Demand Accredited** (CME-point-bearing on-demand courses) — brief in `on-demand-accredited/AGENTS.md`
+
+Goal for both: **double revenue in the coming year** (to Sep 2027). Revenue = membership fees attributed to product-led members + stand-alone course sales, **B2C only**. The medical team owns the content. SYFAT has a business owner, **Marie Fiebig** (a doctor), and a Notion project page; On-Demand Accredited has no owner, marketing or docs yet. Content roadmap is probably in scope; marketing budget about €50k (internal figure). Baselines are the first deliverable in each folder. Established numbers come from `b2c-value-journey/` (data as of 21 Sep 2026) and its agreed definitions apply.
+
+---
+
+## Sub-project folders
+
+| Folder | What it is | Entry point |
+|---|---|---|
+| `b2c-value-journey/` | Interactive dashboard on monthly B2C member cohorts for the Sep 2026 EB strategy meeting | `b2c-value-journey/AGENTS.md` |
+| `b2c-income-dashboard/` | SQL behind the Metabase dashboard "B2C Membership Income" (1816) | `b2c-income-dashboard/sql/` |
+| `syfat/` | SYFAT commercials: pricing → marketing, 2× revenue goal | `syfat/AGENTS.md` |
+| `on-demand-accredited/` | On-Demand Accredited commercials: pricing → marketing, 2× revenue goal | `on-demand-accredited/AGENTS.md` |
+| `registration-funnel/` | Web registration drop-off funnel (Segment), Jul–Oct 2026 | `registration-funnel/AGENTS.md` |
+| `ai-hackathon-2026/` | AI Hackathon at the FOMF Teamtreffen, Tue 20 Oct 2026: plan, teams, workstreams | `ai-hackathon-2026/AGENTS.md` |
+
+Each sub-folder has a `CLAUDE.md` pointing at its `AGENTS.md`; read that brief before working in the folder.
+
+---
+
 ## Recurring rituals
 
 | Day | Slot | Meeting |

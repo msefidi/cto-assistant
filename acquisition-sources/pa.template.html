@@ -1,0 +1,271 @@
+<title>The Skipped June Mailing</title>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --plane:#f4f4f0; --surface:#fdfdfb; --surface-2:#f0efea; --ink:#15150f; --ink-2:#55544e; --muted:#8a887f;
+  --grid:#e2e1d9; --axis:#c4c2b7; --ring:rgba(21,21,15,.10);
+  --y24:#9ec5f4; --y25:#2a78d6; --y26:#eb6834; --exp:#c9c7bd;
+  --up:#006300; --down:#b3261e; --accent:#2a78d6; --accent-ink:#ffffff;
+  --h1:#e8f0fb; --h2:#bcd5f5; --h3:#7fb0ec; --h4:#3f86dc; --h5:#1c5cab; --hink-dark:#ffffff;
+  --shadow:0 1px 2px rgba(21,21,15,.06), 0 6px 20px -12px rgba(21,21,15,.18);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --plane:#0f0f0e; --surface:#1a1a19; --surface-2:#232321; --ink:#f3f2ec; --ink-2:#c3c2b7; --muted:#8a887f;
+    --grid:#2c2c2a; --axis:#3a3a37; --ring:rgba(255,255,255,.10);
+    --y24:#1c3a63; --y25:#3987e5; --y26:#d95926; --exp:#4a4944;
+    --up:#3fbf3f; --down:#ef6b63; --accent:#3987e5; --accent-ink:#ffffff;
+    --h1:#1a2433; --h2:#1c3a63; --h3:#1f5596; --h4:#3987e5; --h5:#86b6ef; --hink-dark:#0f0f0e;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -14px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --plane:#0f0f0e; --surface:#1a1a19; --surface-2:#232321; --ink:#f3f2ec; --ink-2:#c3c2b7; --muted:#8a887f;
+  --grid:#2c2c2a; --axis:#3a3a37; --ring:rgba(255,255,255,.10);
+  --y24:#1c3a63; --y25:#3987e5; --y26:#d95926; --exp:#4a4944;
+  --up:#3fbf3f; --down:#ef6b63; --accent:#3987e5; --accent-ink:#ffffff;
+  --h1:#1a2433; --h2:#1c3a63; --h3:#1f5596; --h4:#3987e5; --h5:#86b6ef; --hink-dark:#0f0f0e;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -14px rgba(0,0,0,.8);
+}
+*{box-sizing:border-box}
+body{background:var(--plane);color:var(--ink);font-family:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:15px;line-height:1.45;margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-block:20px 56px;padding-inline:20px;display:flex;flex-direction:column;gap:22px}
+@media (max-width:480px){.wrap{padding-inline:16px}}
+h1,h2,h3{margin:0;text-wrap:balance;font-weight:600;letter-spacing:-.01em}
+h1{font-size:26px} h2{font-size:17px}
+p{margin:0}
+.eyebrow{font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600}
+.head{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:flex-end;justify-content:space-between}
+.head .sub{color:var(--ink-2);max-width:70ch;margin-top:6px}
+.card{background:var(--surface);border:1px solid var(--ring);border-radius:12px;padding:18px 20px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:12px;min-width:0}
+.card .note{color:var(--ink-2);font-size:13.5px;max-width:84ch}
+.thesis{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+@media (max-width:860px){.thesis{grid-template-columns:1fr}}
+.finding h2{font-size:20px;line-height:1.3}
+.finding ul{margin:0;padding-left:18px;color:var(--ink-2);display:flex;flex-direction:column;gap:6px;max-width:74ch}
+.finding strong{color:var(--ink);font-weight:600}
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.tile{background:var(--surface);border:1px solid var(--ring);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:4px}
+.tile .v{font-size:26px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.tile .d{font-size:13px;color:var(--ink-2)}
+.up{color:var(--up)} .down{color:var(--down)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{display:inline-block;width:10px;height:10px;border-radius:3px;flex:none}
+svg text{fill:var(--muted);font-size:11px;font-family:inherit;font-variant-numeric:tabular-nums}
+svg .lbl{fill:var(--ink-2)} svg .ink{fill:var(--ink);font-weight:600}
+.chart{width:100%;overflow:hidden}
+.tbl-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:13.5px}
+th{font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600;text-align:right;padding:6px 8px;border-bottom:1px solid var(--grid);white-space:nowrap;vertical-align:bottom}
+th:first-child,td:first-child{text-align:left}
+td{padding:6px 8px;border-bottom:1px solid var(--grid);text-align:right;white-space:nowrap}
+td.l{text-align:left;white-space:normal;color:var(--ink-2);font-size:12.5px;min-width:220px}
+tr.tot td{font-weight:600;border-top:1px solid var(--axis)}
+tr.hl td{background:var(--surface-2)}
+.pill{display:inline-block;font-size:11.5px;font-weight:600;padding:1px 7px;border-radius:999px;border:1px solid var(--ring);color:var(--ink-2)}
+.pill.est{border-style:dashed}
+.heat td.h{min-width:70px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:860px){.two{grid-template-columns:1fr}}
+details{color:var(--ink-2);font-size:13.5px}
+details summary{cursor:pointer;font-weight:600;color:var(--ink)}
+details ul{margin:10px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:6px;max-width:92ch}
+code{font-size:12.5px;background:var(--surface-2);padding:1px 4px;border-radius:4px}
+#tip{position:fixed;pointer-events:none;background:var(--surface);color:var(--ink);border:1px solid var(--ring);box-shadow:var(--shadow);border-radius:8px;padding:8px 10px;font-size:12.5px;line-height:1.4;z-index:10;font-variant-numeric:tabular-nums;max-width:280px}
+.foot{color:var(--muted);font-size:12.5px}
+</style>
+
+<div class="wrap">
+  <header class="head">
+    <div>
+      <div class="eyebrow">Postaussendung · DACH · 1 January – 22 September, 2024 to 2026</div>
+      <h1>What skipping the June mailing cost us</h1>
+      <p class="sub">In 2024 and 2025 a mailing went out in June. In 2026 none went out between the end of March and 9 September. This page compares spend and return for the same window in each year, values new customers at their 24-month revenue by specialty and career stage, and estimates what the missing mailing lost.</p>
+    </div>
+  </header>
+
+  <section class="thesis">
+    <div class="card finding">
+      <div class="eyebrow">Result so far</div>
+      <h2 id="headline"></h2>
+      <ul id="bullets"></ul>
+    </div>
+    <div class="tiles" id="tiles"></div>
+  </section>
+
+  <section class="card">
+    <div class="head"><div><h2>When the mailings landed, and how people answered</h2>
+      <p class="note">Weekly bookings (new and existing customers) that answered “Postaussendung (Flyer)”, DACH. Markers show mailings. 2026 dates are from the DE marketing plan. 2024 and 2025 dates are the send months from the PA analysis (FJ2 Feb, FJ3 May, HW1 Jun, HW2 Aug), placed at the week the answers jump.</p></div></div>
+    <div class="chart" id="c-weekly"></div>
+  </section>
+
+  <section class="card">
+    <div class="head"><div><h2>Spend and return, 1 January – 22 September</h2>
+      <p class="note">Spend = mailings that landed from 1 November of the year before until 22 September, so the pre-Christmas mailing that drives January bookings counts. Address purchases are not included. New customers from the postal flyer = single-course buyers who answered it plus their share of new members, as on the sources page. Value = 24-month revenue for their specialty, career stage and entry product.</p></div></div>
+    <div class="tbl-wrap"><table id="t-year"></table></div>
+    <div class="tbl-wrap"><table id="t-cost"></table></div>
+  </section>
+
+  <section class="card">
+    <div class="head"><div><h2>The June test: 2026 against the trend</h2>
+      <p class="note">January to May is the baseline: both years had a winter and a spring mailing. The 2026/2025 ratio from that period gives the expected 2026 figure for the later periods. From 1 June to 17 August only the June mailing differs. From 18 August the timing of the autumn mailing also differs (late August 2025, 9 September 2026).</p></div>
+      <div class="legend"><span><i class="sw" style="background:var(--y25)"></i>2025</span><span><i class="sw" style="background:var(--exp)"></i>2026 expected</span><span><i class="sw" style="background:var(--y26)"></i>2026 actual</span></div></div>
+    <div class="two">
+      <div><h3 class="eyebrow">New customers, all sources</h3><div class="chart" id="c-did-n"></div></div>
+      <div><h3 class="eyebrow">Their 24-month value</h3><div class="chart" id="c-did-v"></div></div>
+    </div>
+    <div class="tbl-wrap"><table id="t-did"></table></div>
+  </section>
+
+  <section class="card">
+    <div class="head"><div><h2>24-month value of a new customer</h2>
+      <p class="note">Average revenue in the 24 months from the first purchase (course bookings plus membership fees, cash), for new customers acquired June 2022 – August 2024. Grey cells have fewer than 30 customers; the calculation then uses the average of their career stage.</p></div></div>
+    <div class="tbl-wrap"><table id="t-ltv" class="heat"></table></div>
+  </section>
+
+  <section class="card">
+    <div class="head"><div><h2>Who the postal flyer brought in, June – 22 September</h2>
+      <p class="note">New customers who came via the postal flyer (including their share of new members), by career stage, and their 24-month value.</p></div></div>
+    <div class="tbl-wrap"><table id="t-seg"></table></div>
+  </section>
+
+  <details class="card">
+    <summary>How this is counted, and what it cannot tell yet</summary>
+    <ul>
+      <li><b>New customer</b>: first paid purchase ever (a paid single course, or a paid membership above €0), accounts created from March 2022 on, DACH, without FOMF staff. Free memberships offered by FOMF and revoked orders are not purchases. Same definition as the sources page.</li>
+      <li><b>24-month value</b>: revenue, not margin. Specialty uses the v2 profile field with the old field as fallback. Facharzt = occupation DOCTOR, Assistenzarzt = ASSISTANT_DOCTOR.</li>
+      <li><b>Costs</b>: 2025 from “Postaussendung Kosten 2025” (marketing, per mailing, CHF × 1.05). 2026 DE mailings 2 and 3 from the print cost estimates in “Marketingplan_2026” (one repeated €43,325 print item counted once), AT from the same plan, DE mailing 1 and all CH 2026 estimated from 2025 cost per letter or the matching 2025 mailing. 2024 from the annual postal cost per country in the marketing cost master (EB PA analysis, <code>kosten_kanal.csv</code>), share of letters that landed in the window.</li>
+      <li><b>Autumn harvest is still open</b>: summer mailings mostly sell autumn courses, booked from late August to November. The 9 September 2026 mailing has had two weeks. Repeat this comparison in December for 23 September – 30 November before calling it final.</li>
+      <li><b>The survey undercounts print</b>: people give one answer, so a flyer that reminded someone who then booked after an email counts as email. The all-sources comparison in the June test does not depend on the survey. The EB PA analysis (recipient matching, Habib's team) attributes far more customers to post and finds no measurable effect of sending more often: reach and timing matter, repeat contacts do not.</li>
+      <li><b>Data</b>: BigQuery <code>fomf-dl</code> (bookings, membership orders, both checkout surveys, <code>analysis.print_campaigns</code>); SharePoint Marketing and EB PA analysis files. Queried 24 Sep 2026. SQL in <code>cto-assistant/acquisition-sources/sql/</code>, calculation in <code>pa_analysis.py</code>.</li>
+    </ul>
+  </details>
+  <p class="foot">Data as of 24 Sep 2026 · DACH · B2C</p>
+</div>
+<div id="tip" hidden></div>
+
+<script>
+/*DATA*/
+const JUNE_COST={DE:302983,AT:54395,CH:60182*1.05};
+const COST={ // mailings landing 1 Nov (year before) – 22 Sep; [label, EUR, source]
+  2024:[['DE, all mailings Dec 2023 – Aug 2024',1043316,'est'],['AT, all mailings',126022,'est'],['CH, mailings Nov 2023 – Aug 2024 (82% of letters)',227600,'est']],
+  2025:[['DE PA1 spring (Dec 2024) + membership mailing',223208,'inv'],['DE PA2 spring (Feb)',211301,'inv'],['DE PA1 autumn (Jun)',302983,'inv'],['DE PA2 autumn (Aug)',292467,'inv'],
+        ['AT spring 1 + 2 + membership mailing',68731,'inv'],['AT autumn 1 (Jun)',54395,'inv'],['AT autumn 2 (Aug)',49533,'inv'],['CH all 2025 mailings (CHF 196,889)',206733,'inv']],
+  2026:[['DE PA1 (27/28 Nov 2025)',265100,'est'],['DE PA2 (22–26 Mar)',314642,'plan'],['DE PA3 (9/10 Sep)',281841,'plan'],['AT PA1 + PA2 + PA3',138228,'plan'],['CH three mailings',136500,'est']],
+};
+const COST_NOTE={2024:'estimate from annual cost',2025:'invoices',2026:'plan + estimates; PA3 (€330k incl. AT/CH share) landed 9 Sep and mostly pays off after 22 Sep'};
+const YEARS=['2024','2025','2026'];const PER=['A','B','C'];const PLAB={A:'Jan – May',B:'1 Jun – 17 Aug',C:'18 Aug – 22 Sep'};
+const fmt=v=>Math.round(v).toLocaleString('en-US');
+const eur=v=>'€'+(Math.abs(v)>=1e6?(v/1e6).toFixed(2)+'M':Math.round(v/1e3).toLocaleString('en-US')+'k');
+const eur0=v=>'€'+fmt(v);
+const sgn=(v,f)=>`<span class="${v>=0?'up':'down'}">${v>=0?'+':'−'}${f(Math.abs(v))}</span>`;
+const tip=document.getElementById('tip');
+function showTip(e,h){tip.innerHTML=h;tip.hidden=false;const r=tip.getBoundingClientRect();let x=e.clientX+14,y=e.clientY+14;if(x+r.width>innerWidth-8)x=e.clientX-r.width-14;if(y+r.height>innerHeight-8)y=e.clientY-r.height-14;tip.style.left=x+'px';tip.style.top=y+'px'}
+function bindTips(root){root.querySelectorAll('[data-tip]').forEach(el=>{el.addEventListener('mousemove',e=>showTip(e,el.dataset.tip));el.addEventListener('mouseleave',()=>tip.hidden=true)})}
+const niceMax=v=>{const p=Math.pow(10,Math.floor(Math.log10(v)));const n=v/p;return (n<=1?1:n<=2?2:n<=2.5?2.5:n<=5?5:10)*p};
+const P=DATA.per;
+const tot=(y,k,ps=PER)=>ps.reduce((a,p)=>a+P[y][p][k],0);
+const costTot=y=>COST[y].reduce((a,c)=>a+c[1],0);
+const juneCost=JUNE_COST.DE+JUNE_COST.AT+JUNE_COST.CH;
+// expected 2026 from Jan–May ratio
+const ratio=k=>P['2026'].A[k]/P['2025'].A[k];
+const exp=(k,p)=>P['2025'][p][k]*ratio(k);
+const gap=(k,p)=>P['2026'][p][k]-exp(k,p);
+
+function render(){
+  const gN=gap('all','B')+gap('all','C'),gV=gap('all_v','B')+gap('all_v','C');
+  const gCash=gap('cash','B')+gap('cash','C');
+  const avgV=P['2025'].B.all_v/P['2025'].B.all;
+  const be=juneCost/avgV;
+  document.getElementById('headline').textContent=`Skipping the June mailing saved about ${eur(juneCost)}. By 22 September, 2026 is ${fmt(-gN)} new customers below trend, worth about ${eur(-gV)} over 24 months. The whole gap appears after 18 August.`;
+  document.getElementById('bullets').innerHTML=[
+    `<strong>1 June – 17 August</strong> (only the June mailing differs): new customers ${sgn(gap('all','B'),fmt)} against trend, their value ${sgn(gap('all_v','B'),eur)}, postal-flyer customers ${sgn(gap('post','B'),fmt)}. No measurable loss.`,
+    `<strong>18 August – 22 September</strong>: ${sgn(gap('all','C'),fmt)} new customers (${sgn(gap('all_v','C'),eur)}). In 2025 the August mailing was already working. In 2026 the next one landed on 9 September, so part of this is delay, not loss.`,
+    `<strong>Break-even</strong>: at about ${eur0(avgV)} per new customer, the June mailing would have had to bring about ${fmt(be)} extra new customers. In 2025, June to 22 September, the postal flyer brought ${fmt(P['2025'].B.post+P['2025'].C.post)} in total.`,
+    `<strong>Existing customers</strong>: non-member course cash (new and existing customers) is ${sgn(gap('cash','B'),eur)} against trend in June – mid-August and ${sgn(gap('cash','C'),eur)} after. Some of this overlaps with the new-customer value.`,
+    `The autumn season is still running. The final answer needs the comparison for 23 September – 30 November, in December.`
+  ].map(x=>`<li>${x}</li>`).join('');
+  document.getElementById('tiles').innerHTML=[
+    ['Cost saved','June mailing 2025, DACH',eur(juneCost)],
+    ['Value below trend so far','new customers, 24-month revenue',eur(-gV)],
+    ['New customers below trend','all of it after 18 Aug',fmt(-gN)],
+    ['Break-even','extra new customers needed',fmt(be)]
+  ].map(([k,d,v])=>`<div class="tile"><div class="eyebrow">${k}</div><div class="v">${v}</div><div class="d">${d}</div></div>`).join('');
+  weekly();yearTable();didCharts();ltvTable();segTable();
+}
+function weekly(){
+  const el=document.getElementById('c-weekly');const W=Math.max(el.clientWidth,320);const rowH=92,L=38,R=10,T=6;
+  const MK={2024:[['02-05','FJ2'],['05-13','FJ3'],['06-10','HW1'],['08-19','HW2']],2025:[['02-10','FJ2'],['06-16','HW1 (June)'],['08-18','HW2']],2026:[['03-23','PA2'],['09-07','PA3']]};
+  const all=YEARS.flatMap(y=>(DATA.weekly[y]||[]).map(d=>d[1]));const mx=niceMax(Math.max(...all));
+  const doy=d=>{const dt=new Date(d+'T00:00:00Z');const s=new Date(Date.UTC(dt.getUTCFullYear(),0,1));return (dt-s)/864e5};
+  const x=v=>L+v/266*(W-L-R);const bw=Math.max((W-L-R)/38*.7,2);
+  let s='';YEARS.forEach((y,i)=>{const y0=T+i*rowH,ih=rowH-26;const yy=v=>y0+ih-v/mx*ih;
+    s+=`<text x="0" y="${y0+12}" class="ink">${y}</text><line x1="${L}" x2="${W-R}" y1="${y0+ih}" y2="${y0+ih}" stroke="var(--axis)"/>`;
+    for(const [d,n] of (DATA.weekly[y]||[])){const xv=x(doy(d));s+=`<rect x="${xv}" y="${yy(n)}" width="${bw}" height="${y0+ih-yy(n)}" rx="1.5" fill="var(--y${y.slice(2)})"/><rect x="${xv-1}" y="${y0}" width="${bw+2}" height="${ih}" fill="transparent" data-tip="<b>Week of ${d}</b><br>${n} bookings answered postal flyer"/>`}
+    for(const [md,l] of MK[y]){const xv=x(doy(y+'-'+md));s+=`<line x1="${xv}" x2="${xv}" y1="${y0+2}" y2="${y0+ih}" stroke="var(--ink-2)" stroke-dasharray="2 3"/><text x="${xv+3}" y="${y0+10}" class="lbl">${l}</text>`}
+    if(y==='2026')s+=`<rect x="${x(doy('2026-04-06'))}" y="${y0+ih+3}" width="${x(doy('2026-09-07'))-x(doy('2026-04-06'))}" height="3" rx="1.5" fill="var(--y26)" opacity=".6"/><text x="${(x(doy('2026-04-06'))+x(doy('2026-09-07')))/2}" y="${y0+ih+16}" text-anchor="middle" class="lbl">no mailing, April – early September</text>`;
+    else ['01-01','03-01','05-01','07-01','09-01'].forEach(md=>{s+=`<text x="${x(doy(y+'-'+md))}" y="${y0+ih+14}">${['Jan','','Mar','','May','','Jul','','Sep'][+md.slice(0,2)-1]}</text>`});
+  });
+  el.innerHTML=`<p class="note" style="margin-bottom:6px">Same scale in all three rows, top = ${mx} bookings a week.</p><svg viewBox="0 0 ${W} ${T+rowH*3}" width="100%" height="${T+rowH*3}" role="img" aria-label="Weekly postal-flyer answers per year with mailing dates">${s}</svg>`;bindTips(el);
+}
+function yearTable(){
+  let h=`<thead><tr><th>1 Jan – 22 Sep</th><th>Mailing spend</th><th>New customers</th><th>via postal flyer</th><th>their 24-month value</th><th>Spend per postal new customer</th><th>Value / spend</th><th>Course cash, postal answer<br>(new + existing)</th></tr></thead><tbody>`;
+  for(const y of YEARS){const c=costTot(y),pn=tot(y,'post'),pv=tot(y,'post_v');
+    h+=`<tr${y==='2026'?' class="hl"':''}><td>${y}</td><td>${eur(c)} <span class="pill ${y==='2025'?'':'est'}">${y==='2025'?'invoices':'estimate'}</span></td><td>${fmt(tot(y,'all'))}</td><td>${fmt(pn)}</td><td>${eur(pv)}</td><td>${eur0(c/pn)}</td><td>${(pv/c).toFixed(2)}×</td><td>${eur(tot(y,'cash_post'))}</td></tr>`}
+  h+=`</tbody><caption style="caption-side:bottom;text-align:left;color:var(--muted);font-size:12.5px;padding-top:8px">The postal flyer is the only source counted here, so value / spend understates what mailings do (see notes). 2026 spend includes the 9 September mailing, which has had two weeks.</caption>`;
+  document.getElementById('t-year').innerHTML=h;
+  let c=`<thead><tr><th>Mailing costs by year</th><th>EUR</th><th>Source</th></tr></thead><tbody>`;
+  for(const y of YEARS){for(const [l,v,s] of COST[y])c+=`<tr><td>${y} · ${l}</td><td>${eur0(v)}</td><td><span class="pill ${s==='inv'?'':'est'}">${s==='inv'?'invoice':s==='plan'?'plan estimate':'estimate'}</span></td></tr>`;
+    c+=`<tr class="tot"><td>${y} total</td><td>${eur0(costTot(y))}</td><td style="text-align:left;color:var(--muted);font-weight:400;white-space:normal">${COST_NOTE[y]}</td></tr>`}
+  document.getElementById('t-cost').innerHTML=c+'</tbody>';
+}
+function didBars(el,k,f){
+  const W=Math.max(el.clientWidth,300),H=200,L=46,R=6,T=10,B=28;const iw=W-L-R,ih=H-T-B;
+  const vals=PER.flatMap(p=>[P['2025'][p][k],exp(k,p),P['2026'][p][k]]);const mx=niceMax(Math.max(...vals));const y=v=>T+ih-v/mx*ih;
+  let s='';for(let i=0;i<=4;i++){const v=mx*i/4;s+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--grid)"/><text x="${L-6}" y="${y(v)+4}" text-anchor="end">${f(v)}</text>`}
+  const gw=iw/3;PER.forEach((p,i)=>{const x0=L+i*gw+gw*.12,bw=gw*.76/3;
+    [['2025',P['2025'][p][k],'var(--y25)'],['2026 expected',exp(k,p),'var(--exp)'],['2026 actual',P['2026'][p][k],'var(--y26)']].forEach(([l,v,c],j)=>{
+      const x=x0+j*bw;s+=`<rect x="${x+1}" y="${y(v)}" width="${bw-2}" height="${T+ih-y(v)}" rx="3" fill="${c}" data-tip="<b>${PLAB[p]}</b><br>${l}: ${f(v)}${j===2?`<br>Gap to expected: ${f(v-exp(k,p))}`:''}"/>`});
+    s+=`<text x="${L+i*gw+gw/2}" y="${H-8}" text-anchor="middle" class="lbl">${PLAB[p]}</text>`});
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" width="100%" height="${H}" role="img">${s}<line x1="${L}" x2="${W-R}" y1="${T+ih}" y2="${T+ih}" stroke="var(--axis)"/></svg>`;bindTips(el);
+}
+function didCharts(){
+  didBars(document.getElementById('c-did-n'),'all',fmt);didBars(document.getElementById('c-did-v'),'all_v',eur);
+  const rows=[['New customers, all sources','all',fmt],['Their 24-month value','all_v',eur],['New customers via postal flyer','post',fmt],['Non-member course cash (new + existing)','cash',eur],['… of which postal-flyer answer','cash_post',eur]];
+  let h=`<thead><tr><th>Measure</th><th>2026 / 2025, Jan – May</th>${['B','C'].map(p=>`<th>${PLAB[p]}<br>2025</th><th>2026 expected</th><th>2026 actual</th><th>Gap</th>`).join('')}</tr></thead><tbody>`;
+  for(const [l,k,f] of rows){h+=`<tr><td>${l}</td><td>${(ratio(k)*100).toFixed(0)}%</td>${['B','C'].map(p=>`<td>${f(P['2025'][p][k])}</td><td>${f(exp(k,p))}</td><td>${f(P['2026'][p][k])}</td><td>${sgn(gap(k,p),f)}</td>`).join('')}</tr>`}
+  document.getElementById('t-did').innerHTML=h+'</tbody>';
+}
+function ltvTable(){
+  const specs=['Allgemeinmedizin','Innere Medizin','Psychiatrie','Pädiatrie','Kardiologie','Neurologie','Anästhesiologie','Several','Other'];
+  const cols=[['Facharzt','Single course'],['Facharzt','Membership'],['Assistenzarzt','Single course'],['Assistenzarzt','Membership'],['Other / unknown','Single course']];
+  const get=(st,k,sp)=>DATA.ltv.find(r=>r[0]===k&&r[1]===st&&r[2]===sp);
+  const vals=DATA.ltv.filter(r=>r[3]>=30).map(r=>r[5]);const lo=Math.min(...vals),hi=Math.max(...vals);
+  const shade=v=>{const t=(v-lo)/(hi-lo);return t<.2?'var(--h1)':t<.4?'var(--h2)':t<.6?'var(--h3)':t<.8?'var(--h4)':'var(--h5)'};
+  const ink=v=>((v-lo)/(hi-lo))>=.6?'color:var(--hink-dark)':'';
+  let h=`<thead><tr><th>Specialty</th>${cols.map(([s,k])=>`<th>${s}<br>${k==='Membership'?'joined as member':'single course first'}</th>`).join('')}</tr></thead><tbody>`;
+  for(const sp of specs){h+=`<tr><td>${sp==='Several'?'Several specialties':sp}</td>`;
+    for(const [st,k] of cols){const r=get(st,k,sp);
+      if(!r){h+='<td class="h" style="color:var(--muted)">–</td>';continue}
+      const small=r[3]<30;h+=`<td class="h" style="${small?'color:var(--muted)':`background:${shade(r[5])};${ink(r[5])}`}" data-tip="<b>${sp}, ${st}, ${k}</b><br>${fmt(r[3])} customers<br>12 months ${eur0(r[4])} · 24 months ${eur0(r[5])}">${eur0(r[5])}<br><span style="font-size:11px;opacity:.8">n=${fmt(r[3])}</span></td>`}
+    h+='</tr>'}
+  const el=document.getElementById('t-ltv');el.innerHTML=h+'</tbody>';bindTips(el);
+}
+function segTable(){
+  const st=['Facharzt','Assistenzarzt','Other / unknown'];
+  let h=`<thead><tr><th>Career stage</th>${YEARS.map(y=>`<th>${y}<br>customers</th><th>value</th>`).join('')}</tr></thead><tbody>`;
+  const sum=(y,s,i)=>Object.entries(DATA.seg[y]).filter(([k])=>k.split('|')[0]===s).reduce((a,[,v])=>a+v[i],0);
+  // Jun–Sep only: seg in data covers all periods, so scale by B+C share is not exact; use per-period seg if present
+  for(const s of st){h+=`<tr><td>${s}</td>${YEARS.map(y=>`<td>${fmt(sumBC(y,s,0))}</td><td>${eur(sumBC(y,s,1))}</td>`).join('')}</tr>`}
+  h+=`<tr class="tot"><td>Total</td>${YEARS.map(y=>`<td>${fmt(st.reduce((a,s)=>a+sumBC(y,s,0),0))}</td><td>${eur(st.reduce((a,s)=>a+sumBC(y,s,1),0))}</td>`).join('')}</tr>`;
+  document.getElementById('t-seg').innerHTML=h+'</tbody>';
+}
+const sumBC=(y,s,i)=>Object.entries(DATA.segBC[y]).filter(([k])=>k.split('|')[0]===s).reduce((a,[,v])=>a+v[i],0);
+render();
+let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(render,150)});
+</script>

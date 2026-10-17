@@ -1,0 +1,1764 @@
+yr	period	month	country	kind	channel	stage	spec	customers	first_purchase_eur
+2024	B	2024-06	DEU	Single course	Print: postal flyer	Other / unknown	Not stated	2	680.0
+2024	A	2024-03	DEU	Single course	Search	Other / unknown	Not stated	1	240.0
+2024	A	2024-02	AUT	Single course	Print: postal flyer	Other / unknown	Not stated	2	625.0
+2024	A	2024-04	AUT	Single course	Search	Other / unknown	Not stated	2	290.0
+2024	A	2024-05	DEU	Single course	Print: postal flyer	Other / unknown	Not stated	1	585.0
+2024	A	2024-02	DEU	Single course	FOMF website / former participant	Facharzt	Allgemeinmedizin	8	3410.0
+2024	C	2024-08	DEU	Single course	Print: journal insert	Other / unknown	Several	1	525.0
+2024	A	2024-01	DEU	Membership	Membership	Assistenzarzt	Allgemeinmedizin	14	6850.0
+2024	A	2024-04	CHE	Membership	Membership	Assistenzarzt	Allgemeinmedizin	3	2678.0
+2024	B	2024-06	DEU	Membership	Membership	Facharzt	Allgemeinmedizin	33	18540.0
+2024	C	2024-09	CHE	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	3	1428.0
+2024	A	2024-01	DEU	Single course	Colleague recommendation	Facharzt	Allgemeinmedizin	6	3280.0
+2024	A	2024-03	DEU	Membership	Membership	Facharzt	Allgemeinmedizin	12	6870.0
+2024	A	2024-02	CHE	Single course	Search	Facharzt	Allgemeinmedizin	2	630.0
+2024	B	2024-08	DEU	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	3	2050.0
+2024	A	2024-05	DEU	Single course	FOMF website / former participant	Facharzt	Allgemeinmedizin	1	615.0
+2024	A	2024-02	AUT	Single course	Print: postal flyer	Assistenzarzt	Allgemeinmedizin	4	915.0
+2024	A	2024-02	DEU	Single course	Search	Facharzt	Allgemeinmedizin	2	640.0
+2024	C	2024-09	DEU	Single course	Colleague recommendation	Assistenzarzt	Allgemeinmedizin	8	3885.0
+2024	C	2024-08	DEU	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	4	2355.0
+2024	C	2024-09	AUT	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	2	790.0
+2024	C	2024-08	AUT	Single course	Colleague recommendation	Other / unknown	Allgemeinmedizin	1	230.0
+2024	A	2024-01	AUT	Single course	Print: postal flyer	Assistenzarzt	Allgemeinmedizin	2	535.0
+2024	B	2024-08	DEU	Membership	Membership	Assistenzarzt	Allgemeinmedizin	2	1070.0
+2024	C	2024-09	CHE	Single course	Print: postal flyer	Facharzt	Allgemeinmedizin	5	2331.0
+2024	A	2024-03	DEU	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	4	2340.0
+2024	B	2024-08	AUT	Single course	Colleague recommendation	Assistenzarzt	Allgemeinmedizin	1	450.0
+2024	A	2024-05	CHE	Single course	Print: clinic poster	Facharzt	Allgemeinmedizin	1	525.0
+2024	C	2024-08	DEU	Single course	Search	Facharzt	Allgemeinmedizin	4	2410.0
+2024	A	2024-03	CHE	Single course	Colleague recommendation	Facharzt	Allgemeinmedizin	1	263.0
+2024	A	2024-02	AUT	Single course	Search	Assistenzarzt	Allgemeinmedizin	1	150.0
+2024	A	2024-01	DEU	Single course	Email / newsletter	Assistenzarzt	Allgemeinmedizin	1	280.0
+2024	B	2024-06	DEU	Single course	Search	Facharzt	Allgemeinmedizin	1	590.0
+2024	A	2024-02	DEU	Single course	Print: clinic poster	Facharzt	Allgemeinmedizin	1	640.0
+2024	B	2024-06	DEU	Membership	Membership	Assistenzarzt	Several	4	2050.0
+2024	A	2024-01	CHE	Single course	Search	Facharzt	Anästhesiologie	2	924.0
+2024	B	2024-06	DEU	Membership	Membership	Assistenzarzt	Anästhesiologie	1	490.0
+2024	A	2024-02	DEU	Single course	Print: journal insert	Assistenzarzt	Anästhesiologie	1	310.0
+2024	A	2024-05	DEU	Membership	Membership	Facharzt	Anästhesiologie	7	3910.0
+2024	A	2024-04	CHE	Single course	FOMF website / former participant	Facharzt	Anästhesiologie	2	893.0
+2024	B	2024-06	CHE	Single course	Email / newsletter	Assistenzarzt	Anästhesiologie	1	431.0
+2024	A	2024-03	DEU	Single course	Print: postal flyer	Facharzt	Other	9	4264.0
+2024	A	2024-04	CHE	Single course	Colleague recommendation	Assistenzarzt	Other	2	1092.0
+2024	C	2024-08	DEU	Membership	Membership	Facharzt	Other	4	2360.0
+2024	B	2024-06	DEU	Single course	Search	Assistenzarzt	Other	6	2500.0
+2024	B	2024-06	CHE	Single course	Colleague recommendation	Assistenzarzt	Other	1	263.0
+2024	C	2024-08	DEU	Single course	Colleague recommendation	Facharzt	Other	8	4250.0
+2024	A	2024-05	CHE	Single course	Colleague recommendation	Assistenzarzt	Other	3	1229.0
+2024	A	2024-02	CHE	Single course	Colleague recommendation	Assistenzarzt	Other	3	1029.0
+2024	A	2024-02	CHE	Single course	Colleague recommendation	Facharzt	Other	1	1045.0
+2024	C	2024-09	AUT	Single course	Search	Assistenzarzt	Other	1	385.0
+2024	A	2024-03	DEU	Single course	Colleague recommendation	Facharzt	Other	5	2245.0
+2024	C	2024-09	AUT	Single course	Print: journal insert	Facharzt	Other	3	830.0
+2024	A	2024-04	CHE	Membership	Membership	Facharzt	Other	7	6531.0
+2024	A	2024-02	AUT	Single course	Print: clinic poster	Assistenzarzt	Other	2	490.0
+2024	A	2024-02	AUT	Single course	Search	Facharzt	Other	1	390.0
+2024	A	2024-04	DEU	Single course	Social media	Facharzt	Other	1	190.0
+2024	A	2024-04	DEU	Single course	Print: postal flyer	Facharzt	Gynäkologie	1	480.0
+2024	B	2024-07	AUT	Single course	Email / newsletter	Facharzt	Gynäkologie	1	380.0
+2024	A	2024-01	DEU	Single course	Colleague recommendation	Facharzt	Several	3	1490.0
+2024	A	2024-03	DEU	Single course	Email / newsletter	Facharzt	Other	1	375.0
+2024	B	2024-06	AUT	Single course	Colleague recommendation	Assistenzarzt	Other	1	590.0
+2024	A	2024-04	AUT	Single course	Print: clinic poster	Facharzt	Other	1	270.0
+2024	B	2024-07	DEU	Single course	Social media	Assistenzarzt	Several	1	310.0
+2024	A	2024-05	DEU	Single course	Search	Facharzt	Innere Medizin	4	2135.0
+2024	C	2024-09	DEU	Membership	Membership	Assistenzarzt	Innere Medizin	7	3700.0
+2024	C	2024-08	DEU	Single course	(no answer)	Other / unknown	Innere Medizin	1	510.0
+2024	A	2024-05	CHE	Single course	Colleague recommendation	Assistenzarzt	Innere Medizin	3	1155.0
+2024	A	2024-04	CHE	Single course	Colleague recommendation	Assistenzarzt	Innere Medizin	4	3302.0
+2024	A	2024-01	DEU	Membership	Membership	Assistenzarzt	Innere Medizin	14	7130.0
+2024	B	2024-07	CHE	Single course	Colleague recommendation	Assistenzarzt	Innere Medizin	1	1040.0
+2024	B	2024-06	AUT	Single course	Colleague recommendation	Facharzt	Innere Medizin	1	670.0
+2024	A	2024-05	CHE	Single course	Print: clinic poster	Facharzt	Innere Medizin	1	525.0
+2024	C	2024-08	CHE	Membership	Membership	Facharzt	Innere Medizin	2	1911.0
+2024	C	2024-08	DEU	Single course	Print: clinic poster	Other / unknown	Innere Medizin	1	525.0
+2024	A	2024-04	AUT	Single course	Colleague recommendation	Assistenzarzt	Innere Medizin	1	450.0
+2024	A	2024-03	DEU	Single course	Search	Assistenzarzt	Innere Medizin	1	540.0
+2024	C	2024-09	DEU	Single course	Colleague recommendation	Facharzt	Innere Medizin	4	2155.0
+2024	B	2024-06	DEU	Single course	Colleague recommendation	Assistenzarzt	Innere Medizin	1	540.0
+2024	C	2024-09	AUT	Single course	Colleague recommendation	Facharzt	Innere Medizin	1	610.0
+2024	C	2024-09	CHE	Membership	Membership	Facharzt	Innere Medizin	4	3927.0
+2024	B	2024-07	DEU	Single course	Other	Assistenzarzt	Innere Medizin	1	270.0
+2024	C	2024-08	CHE	Membership	Membership	Assistenzarzt	Innere Medizin	1	809.0
+2024	A	2024-02	DEU	Single course	Invitation / sponsor	Assistenzarzt	Innere Medizin	1	25.0
+2024	C	2024-09	CHE	Single course	Print: clinic poster	Assistenzarzt	Innere Medizin	1	347.0
+2024	B	2024-06	DEU	Single course	Print: postal flyer	Facharzt	Kardiologie	1	680.0
+2024	B	2024-08	DEU	Single course	Print: postal flyer	Facharzt	Innere Medizin	2	965.0
+2024	C	2024-09	DEU	Single course	Search	Other / unknown	Several	2	940.0
+2024	A	2024-03	CHE	Single course	Colleague recommendation	Facharzt	Other	4	1922.0
+2024	A	2024-02	DEU	Membership	Membership	Assistenzarzt	Kardiologie	3	1410.0
+2024	C	2024-08	DEU	Membership	Membership	Facharzt	Kardiologie	3	1890.0
+2024	C	2024-08	DEU	Single course	Colleague recommendation	Facharzt	Kardiologie	1	470.0
+2024	A	2024-02	CHE	Single course	Print: postal flyer	Facharzt	Kardiologie	1	473.0
+2024	B	2024-06	CHE	Membership	Membership	Assistenzarzt	Kardiologie	1	809.0
+2024	A	2024-01	DEU	Single course	Email / newsletter	Facharzt	Kardiologie	3	1170.0
+2024	C	2024-09	DEU	Single course	Colleague recommendation	Assistenzarzt	Kardiologie	1	540.0
+2024	B	2024-07	CHE	Single course	Print: journal insert	Facharzt	Kardiologie	1	504.0
+2024	A	2024-02	DEU	Single course	Print: clinic poster	Facharzt	Kardiologie	1	490.0
+2024	A	2024-02	DEU	Single course	FOMF website / former participant	Facharzt	Kardiologie	1	590.0
+2024	A	2024-02	DEU	Single course	Print: postal flyer	Facharzt	Kardiologie	2	975.0
+2024	B	2024-06	AUT	Single course	Colleague recommendation	Facharzt	Other	2	850.0
+2024	C	2024-09	DEU	Single course	Print: journal ad	Facharzt	Neurologie	1	305.0
+2024	A	2024-01	DEU	Single course	Print: journal insert	Facharzt	Neurologie	1	290.0
+2024	A	2024-04	CHE	Single course	Colleague recommendation	Assistenzarzt	Neurologie	1	284.0
+2024	A	2024-01	DEU	Single course	Email / newsletter	Facharzt	Neurologie	3	870.0
+2024	A	2024-02	DEU	Single course	Email / newsletter	Assistenzarzt	Neurologie	1	185.0
+2024	B	2024-06	DEU	Single course	Colleague recommendation	Assistenzarzt	Neurologie	1	250.0
+2024	A	2024-03	DEU	Single course	Print: postal flyer	Other / unknown	Neurologie	1	290.0
+2024	A	2024-05	AUT	Membership	Membership	Assistenzarzt	Other	1	580.0
+2024	B	2024-06	CHE	Single course	Print: journal ad	Assistenzarzt	Other	1	431.0
+2024	A	2024-04	CHE	Single course	Print: journal ad	Facharzt	Other	1	452.0
+2024	A	2024-02	CHE	Membership	Membership	Assistenzarzt	Pädiatrie	1	809.0
+2024	C	2024-09	CHE	Single course	Colleague recommendation	Facharzt	Pädiatrie	2	1502.0
+2024	B	2024-07	CHE	Single course	Colleague recommendation	Assistenzarzt	Pädiatrie	2	1386.0
+2024	C	2024-08	CHE	Single course	(no answer)	Other / unknown	Pädiatrie	1	441.0
+2024	C	2024-08	DEU	Single course	Colleague recommendation	Other / unknown	Pädiatrie	1	430.0
+2024	B	2024-06	DEU	Single course	Print: postal flyer	Facharzt	Pädiatrie	1	470.0
+2024	C	2024-08	CHE	Single course	Print: journal ad	Assistenzarzt	Pädiatrie	1	693.0
+2024	C	2024-09	CHE	Single course	Colleague recommendation	Assistenzarzt	Pädiatrie	4	2772.0
+2024	A	2024-02	CHE	Membership	Membership	Facharzt	Pädiatrie	1	1008.0
+2024	B	2024-08	CHE	Membership	Membership	Facharzt	Pädiatrie	1	903.0
+2024	B	2024-07	DEU	Single course	Print: postal flyer	Assistenzarzt	Pädiatrie	2	910.0
+2024	A	2024-03	CHE	Membership	Membership	Facharzt	Psychiatrie	6	5660.0
+2024	A	2024-05	DEU	Membership	Membership	Assistenzarzt	Psychiatrie	4	2230.0
+2024	C	2024-08	AUT	Single course	FOMF website / former participant	Facharzt	Psychiatrie	1	145.0
+2024	C	2024-09	CHE	Single course	Print: postal flyer	Facharzt	Psychiatrie	1	782.0
+2024	A	2024-04	DEU	Membership	Membership	Facharzt	Psychiatrie	8	4840.0
+2024	A	2024-05	AUT	Single course	Colleague recommendation	Other / unknown	Psychiatrie	1	240.0
+2024	B	2024-06	DEU	Single course	Print: postal flyer	Facharzt	Psychiatrie	4	2180.0
+2024	A	2024-05	DEU	Single course	Email / newsletter	Facharzt	Psychiatrie	1	530.0
+2024	A	2024-04	DEU	Single course	Print: postal flyer	Assistenzarzt	Psychiatrie	3	1260.0
+2024	B	2024-06	DEU	Single course	Social media	Assistenzarzt	Psychiatrie	1	460.0
+2024	C	2024-08	CHE	Membership	Membership	Assistenzarzt	Psychiatrie	1	809.0
+2024	C	2024-09	AUT	Single course	Email / newsletter	Facharzt	Other	1	275.0
+2024	A	2024-01	DEU	Single course	Email / newsletter	Facharzt	Psychiatrie	1	190.0
+2024	B	2024-06	CHE	Single course	Congress / fair	Facharzt	Other	1	525.0
+2024	B	2024-08	DEU	Single course	Print: journal insert	Assistenzarzt	Other	1	540.0
+2024	B	2024-08	DEU	Single course	Colleague recommendation	Assistenzarzt	Other	1	575.0
+2024	C	2024-09	DEU	Single course	Search	Other / unknown	Other	1	35.0
+2024	C	2024-09	AUT	Single course	Social media	Assistenzarzt	Allgemeinmedizin	1	470.0
+2024	A	2024-02	AUT	Single course	Email / newsletter	Facharzt	Neurologie	1	260.0
+2024	A	2024-04	CHE	Single course	Congress / fair	Facharzt	Psychiatrie	1	756.0
+2024	A	2024-04	AUT	Single course	Email / newsletter	Facharzt	Allgemeinmedizin	1	280.0
+2024	B	2024-08	CHE	Single course	Print: journal insert	Assistenzarzt	Allgemeinmedizin	1	935.0
+2024	C	2024-08	CHE	Single course	Colleague recommendation	Assistenzarzt	Several	1	940.0
+2024	A	2024-04	CHE	Membership	Membership	Assistenzarzt	Pädiatrie	1	935.0
+2024	C	2024-08	DEU	Single course	Other	Facharzt	Pädiatrie	1	350.0
+2024	A	2024-05	CHE	Single course	Print: journal ad	Facharzt	Anästhesiologie	1	452.0
+2024	B	2024-08	CHE	Membership	Membership	Facharzt	Several	1	1008.0
+2024	A	2024-01	DEU	Single course	Search	Facharzt	Several	3	1590.0
+2024	A	2024-04	CHE	Single course	Colleague recommendation	Facharzt	Anästhesiologie	1	452.0
+2024	A	2024-02	CHE	Single course	FOMF website / former participant	Facharzt	Other	2	1391.0
+2024	A	2024-05	CHE	Single course	Colleague recommendation	Facharzt	Innere Medizin	2	1832.0
+2024	C	2024-08	DEU	Single course	Colleague recommendation	Facharzt	Neurologie	1	250.0
+2024	A	2024-05	CHE	Single course	Print: journal ad	Facharzt	Psychiatrie	1	593.0
+2024	C	2024-09	DEU	Membership	Membership	Assistenzarzt	Several	1	490.0
+2024	C	2024-08	DEU	Single course	Colleague recommendation	Facharzt	Several	1	525.0
+2024	A	2024-03	CHE	Single course	Search	Facharzt	Several	1	347.0
+2024	A	2024-03	DEU	Single course	FOMF website / former participant	Facharzt	Allgemeinmedizin	1	615.0
+2024	B	2024-06	DEU	Single course	Social media	Facharzt	Allgemeinmedizin	1	560.0
+2024	C	2024-09	DEU	Single course	Print: clinic poster	Facharzt	Anästhesiologie	1	540.0
+2024	A	2024-01	AUT	Single course	Print: journal ad	Facharzt	Other	1	390.0
+2024	A	2024-03	AUT	Single course	Colleague recommendation	Facharzt	Other	1	300.0
+2024	B	2024-08	DEU	Single course	Search	Assistenzarzt	Several	1	575.0
+2024	A	2024-03	DEU	Single course	Print: postal flyer	Facharzt	Kardiologie	1	490.0
+2024	B	2024-06	DEU	Membership	Membership	Facharzt	Neurologie	1	570.0
+2024	B	2024-08	CHE	Single course	Search	Facharzt	Neurologie	1	504.0
+2024	A	2024-05	CHE	Single course	Print: journal insert	Facharzt	Pädiatrie	1	683.0
+2024	A	2024-02	AUT	Membership	Membership	Facharzt	Other	1	570.0
+2024	C	2024-09	DEU	Single course	Print: postal flyer	Other / unknown	Other	2	1100.0
+2024	A	2024-01	DEU	Single course	Social media	Other / unknown	Psychiatrie	1	190.0
+2024	C	2024-09	DEU	Membership	Membership	Other / unknown	Other	1	570.0
+2024	A	2024-03	DEU	Membership	Membership	Other / unknown	Other	1	570.0
+2024	A	2024-01	DEU	Single course	Print: postal flyer	Other / unknown	Not stated	1	395.0
+2024	A	2024-02	AUT	Single course	Email / newsletter	Other / unknown	Not stated	1	140.0
+2024	A	2024-04	DEU	Single course	Email / newsletter	Facharzt	Several	2	970.0
+2024	B	2024-07	DEU	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	3	2190.0
+2024	B	2024-06	CHE	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	3	3045.0
+2024	B	2024-08	DEU	Single course	Print: postal flyer	Facharzt	Allgemeinmedizin	1	590.0
+2024	C	2024-09	AUT	Single course	Email / newsletter	Facharzt	Allgemeinmedizin	3	1760.0
+2024	A	2024-02	CHE	Single course	Print: postal flyer	Facharzt	Allgemeinmedizin	3	1649.0
+2024	A	2024-04	AUT	Single course	Search	Facharzt	Allgemeinmedizin	3	1020.0
+2024	A	2024-02	AUT	Single course	Colleague recommendation	Assistenzarzt	Allgemeinmedizin	5	1330.0
+2024	A	2024-03	DEU	Single course	Colleague recommendation	Facharzt	Allgemeinmedizin	3	2040.0
+2024	A	2024-04	DEU	Membership	Membership	Facharzt	Allgemeinmedizin	10	5900.0
+2024	B	2024-06	DEU	Single course	Print: journal ad	Assistenzarzt	Allgemeinmedizin	1	575.0
+2024	A	2024-05	AUT	Membership	Membership	Assistenzarzt	Allgemeinmedizin	5	2540.0
+2024	C	2024-09	AUT	Single course	Social media	Facharzt	Allgemeinmedizin	2	540.0
+2024	C	2024-08	DEU	Single course	Colleague recommendation	Other / unknown	Allgemeinmedizin	4	2120.0
+2024	B	2024-06	AUT	Single course	Print: postal flyer	Facharzt	Allgemeinmedizin	2	1200.0
+2024	A	2024-03	AUT	Single course	Email / newsletter	Facharzt	Allgemeinmedizin	4	1180.0
+2024	B	2024-08	CHE	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	1	399.0
+2024	A	2024-02	CHE	Single course	FOMF website / former participant	Facharzt	Allgemeinmedizin	3	2494.0
+2024	B	2024-08	DEU	Membership	Membership	Facharzt	Allgemeinmedizin	3	1800.0
+2024	C	2024-09	AUT	Single course	Colleague recommendation	Assistenzarzt	Allgemeinmedizin	6	2545.0
+2024	B	2024-07	CHE	Membership	Membership	Facharzt	Allgemeinmedizin	7	6615.0
+2024	A	2024-02	DEU	Single course	Print: postal flyer	Facharzt	Allgemeinmedizin	2	935.0
+2024	B	2024-06	CHE	Single course	Colleague recommendation	Facharzt	Allgemeinmedizin	8	5723.0
+2024	A	2024-02	CHE	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	1	368.0
+2024	B	2024-07	CHE	Membership	Membership	Assistenzarzt	Allgemeinmedizin	3	2426.0
+2024	C	2024-09	DEU	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	6	3060.0
+2024	A	2024-02	DEU	Single course	Print: journal insert	Assistenzarzt	Allgemeinmedizin	1	280.0
+2024	A	2024-05	CHE	Single course	Colleague recommendation	Assistenzarzt	Allgemeinmedizin	3	1832.0
+2024	A	2024-05	CHE	Single course	Search	Facharzt	Allgemeinmedizin	1	452.0
+2024	C	2024-08	DEU	Single course	Colleague recommendation	Facharzt	Allgemeinmedizin	1	595.0
+2024	B	2024-06	CHE	Single course	Other	Facharzt	Allgemeinmedizin	1	1045.0
+2024	C	2024-08	CHE	Single course	Colleague recommendation	Facharzt	Allgemeinmedizin	2	2247.0
+2024	C	2024-09	AUT	Single course	Print: journal insert	Other / unknown	Allgemeinmedizin	1	220.0
+2024	A	2024-02	CHE	Membership	Membership	Assistenzarzt	Allgemeinmedizin	2	1869.0
+2024	C	2024-09	DEU	Single course	Print: journal ad	Facharzt	Allgemeinmedizin	2	980.0
+2024	B	2024-06	CHE	Single course	Print: journal ad	Facharzt	Allgemeinmedizin	1	1045.0
+2024	B	2024-06	CHE	Single course	Colleague recommendation	Facharzt	Several	1	284.0
+2024	A	2024-05	CHE	Single course	Colleague recommendation	Facharzt	Anästhesiologie	2	924.0
+2024	B	2024-06	DEU	Membership	Membership	Facharzt	Anästhesiologie	2	1140.0
+2024	B	2024-06	CHE	Single course	Email / newsletter	Facharzt	Anästhesiologie	1	263.0
+2024	A	2024-04	DEU	Single course	Search	Facharzt	Anästhesiologie	5	1765.0
+2024	A	2024-04	DEU	Single course	Colleague recommendation	Assistenzarzt	Anästhesiologie	1	320.0
+2024	A	2024-05	CHE	Single course	Email / newsletter	Facharzt	Anästhesiologie	2	903.0
+2024	C	2024-09	DEU	Single course	Email / newsletter	Facharzt	Anästhesiologie	1	365.0
+2024	A	2024-05	DEU	Membership	Membership	Assistenzarzt	Anästhesiologie	1	490.0
+2024	C	2024-08	DEU	Single course	Print: journal insert	Facharzt	Other	3	1650.0
+2024	B	2024-07	AUT	Single course	Colleague recommendation	Facharzt	Other	2	640.0
+2024	A	2024-01	DEU	Single course	Print: journal insert	Facharzt	Other	3	1295.0
+2024	C	2024-09	DEU	Single course	Search	Facharzt	Other	8	4425.0
+2024	A	2024-01	DEU	Single course	Colleague recommendation	Facharzt	Other	5	2020.0
+2024	A	2024-03	CHE	Single course	Social media	Assistenzarzt	Other	1	200.0
+2024	A	2024-01	CHE	Membership	Membership	Facharzt	Other	6	5418.0
+2024	C	2024-09	DEU	Single course	Social media	Other / unknown	Other	1	105.0
+2024	A	2024-05	DEU	Single course	Search	Assistenzarzt	Other	3	1430.0
+2024	A	2024-05	DEU	Membership	Membership	Assistenzarzt	Other	10	5080.0
+2024	A	2024-04	DEU	Membership	Membership	Assistenzarzt	Other	4	1960.0
+2024	B	2024-06	DEU	Single course	Search	Facharzt	Other	6	2475.0
+2024	A	2024-02	DEU	Single course	Email / newsletter	Facharzt	Other	2	840.0
+2024	C	2024-08	DEU	Single course	Print: postal flyer	Facharzt	Other	3	955.0
+2024	A	2024-02	AUT	Single course	Email / newsletter	Other / unknown	Other	2	435.0
+2024	A	2024-04	DEU	Single course	FOMF website / former participant	Assistenzarzt	Other	1	660.0
+2024	C	2024-09	DEU	Single course	Search	Assistenzarzt	Other	5	2095.0
+2024	A	2024-05	DEU	Single course	Print: postal flyer	Facharzt	Other	6	1945.0
+2024	A	2024-04	DEU	Single course	Social media	Assistenzarzt	Other	1	460.0
+2024	B	2024-07	AUT	Single course	Print: journal ad	Assistenzarzt	Other	1	330.0
+2024	B	2024-08	AUT	Membership	Membership	Facharzt	Other	3	1710.0
+2024	B	2024-07	DEU	Membership	Membership	Assistenzarzt	Other	5	2450.0
+2024	A	2024-05	CHE	Membership	Membership	Assistenzarzt	Other	3	2426.0
+2024	B	2024-08	CHE	Single course	Email / newsletter	Facharzt	Other	2	1008.0
+2024	A	2024-05	DEU	Membership	Membership	Facharzt	Gynäkologie	1	660.0
+2024	A	2024-03	CHE	Single course	Email / newsletter	Facharzt	Other	4	1260.0
+2024	C	2024-09	DEU	Single course	Colleague recommendation	Facharzt	Other	9	3143.0
+2024	A	2024-01	DEU	Single course	Invitation / sponsor	Facharzt	Other	3	50.0
+2024	A	2024-05	DEU	Single course	Colleague recommendation	Facharzt	Other	7	3900.0
+2024	B	2024-06	AUT	Single course	Social media	Assistenzarzt	Other	2	470.0
+2024	B	2024-07	DEU	Single course	Print: clinic poster	Assistenzarzt	Innere Medizin	1	540.0
+2024	C	2024-09	DEU	Single course	Colleague recommendation	Assistenzarzt	Innere Medizin	3	1675.0
+2024	C	2024-09	DEU	Single course	Social media	Assistenzarzt	Innere Medizin	4	2190.0
+2024	A	2024-01	DEU	Single course	Print: clinic poster	Assistenzarzt	Innere Medizin	1	565.0
+2024	C	2024-09	AUT	Single course	Print: clinic poster	Assistenzarzt	Innere Medizin	1	355.0
+2024	A	2024-04	CHE	Single course	Print: clinic poster	Assistenzarzt	Innere Medizin	1	452.0
+2024	B	2024-07	DEU	Single course	Search	Facharzt	Innere Medizin	5	2815.0
+2024	A	2024-04	CHE	Single course	Colleague recommendation	Facharzt	Innere Medizin	1	1045.0
+2024	A	2024-05	DEU	Single course	Colleague recommendation	Assistenzarzt	Innere Medizin	1	540.0
+2024	A	2024-04	AUT	Single course	Search	Assistenzarzt	Innere Medizin	1	570.0
+2024	B	2024-08	CHE	Single course	Social media	Facharzt	Innere Medizin	1	1040.0
+2024	A	2024-01	DEU	Single course	Search	Assistenzarzt	Innere Medizin	6	3395.0
+2024	A	2024-02	DEU	Single course	FOMF website / former participant	Other / unknown	Innere Medizin	1	205.0
+2024	A	2024-05	CHE	Single course	Email / newsletter	Facharzt	Innere Medizin	1	452.0
+2024	A	2024-05	DEU	Single course	Print: journal insert	Facharzt	Innere Medizin	3	1745.0
+2024	A	2024-05	DEU	Single course	Print: journal ad	Facharzt	Innere Medizin	1	590.0
+2024	C	2024-09	DEU	Single course	FOMF website / former participant	Facharzt	Innere Medizin	1	510.0
+2024	C	2024-08	DEU	Single course	FOMF website / former participant	Assistenzarzt	Innere Medizin	1	700.0
+2024	C	2024-08	DEU	Single course	Colleague recommendation	Facharzt	Innere Medizin	3	1760.0
+2024	C	2024-09	AUT	Single course	Email / newsletter	Facharzt	Innere Medizin	1	690.0
+2024	A	2024-04	AUT	Single course	Print: journal insert	Facharzt	Innere Medizin	2	840.0
+2024	A	2024-01	CHE	Single course	Search	Facharzt	Innere Medizin	1	1045.0
+2024	A	2024-03	DEU	Single course	Social media	Facharzt	Innere Medizin	1	340.0
+2024	C	2024-09	AUT	Single course	Print: journal ad	Assistenzarzt	Innere Medizin	1	570.0
+2024	C	2024-09	CHE	Single course	Search	Facharzt	Innere Medizin	1	368.0
+2024	A	2024-01	DEU	Single course	FOMF website / former participant	Other / unknown	Innere Medizin	2	1220.0
+2024	A	2024-05	DEU	Single course	Print: journal insert	Facharzt	Kardiologie	2	980.0
+2024	C	2024-08	DEU	Single course	Search	Facharzt	Kardiologie	1	595.0
+2024	C	2024-08	DEU	Membership	Membership	Assistenzarzt	Kardiologie	1	580.0
+2024	A	2024-05	DEU	Single course	Colleague recommendation	Assistenzarzt	Kardiologie	1	480.0
+2024	B	2024-07	DEU	Membership	Membership	Facharzt	Kardiologie	2	1140.0
+2024	B	2024-08	CHE	Single course	Print: journal ad	Facharzt	Kardiologie	1	504.0
+2024	B	2024-06	DEU	Single course	Colleague recommendation	Facharzt	Kardiologie	1	640.0
+2024	A	2024-05	DEU	Membership	Membership	Assistenzarzt	Kardiologie	2	1160.0
+2024	C	2024-08	DEU	Single course	Email / newsletter	Facharzt	Other	3	1298.0
+2024	C	2024-09	DEU	Single course	Email / newsletter	Facharzt	Other	5	1910.0
+2024	A	2024-01	DEU	Single course	Colleague recommendation	Assistenzarzt	Neurologie	3	800.0
+2024	A	2024-01	AUT	Single course	Colleague recommendation	Facharzt	Neurologie	1	120.0
+2024	C	2024-09	AUT	Single course	Search	Assistenzarzt	Neurologie	2	450.0
+2024	A	2024-05	CHE	Single course	Congress / fair	Facharzt	Other	3	1491.0
+2024	A	2024-02	DEU	Single course	Print: journal insert	Assistenzarzt	Other	1	650.0
+2024	A	2024-04	DEU	Single course	Search	Assistenzarzt	Pädiatrie	1	440.0
+2024	A	2024-01	DEU	Single course	Print: journal insert	Facharzt	Pädiatrie	1	510.0
+2024	A	2024-04	CHE	Single course	Email / newsletter	Other / unknown	Pädiatrie	1	525.0
+2024	A	2024-03	DEU	Single course	Search	Assistenzarzt	Pädiatrie	1	440.0
+2024	C	2024-09	CHE	Single course	Print: clinic poster	Assistenzarzt	Pädiatrie	4	2373.0
+2024	A	2024-03	CHE	Membership	Membership	Assistenzarzt	Pädiatrie	2	1617.0
+2024	C	2024-09	DEU	Single course	Search	Assistenzarzt	Pädiatrie	2	920.0
+2024	A	2024-02	CHE	Single course	FOMF website / former participant	Assistenzarzt	Pädiatrie	4	2478.0
+2024	C	2024-09	CHE	Single course	Email / newsletter	Facharzt	Pädiatrie	3	1649.0
+2024	A	2024-03	DEU	Single course	Colleague recommendation	Assistenzarzt	Pädiatrie	1	460.0
+2024	C	2024-08	DEU	Single course	Print: postal flyer	Assistenzarzt	Pädiatrie	2	880.0
+2024	B	2024-06	AUT	Membership	Membership	Facharzt	Pädiatrie	1	660.0
+2024	C	2024-09	AUT	Single course	Print: journal ad	Facharzt	Pädiatrie	1	280.0
+2024	C	2024-08	DEU	Single course	Print: clinic poster	Assistenzarzt	Pädiatrie	1	525.0
+2024	A	2024-01	CHE	Single course	FOMF website / former participant	Facharzt	Other	2	1134.0
+2024	A	2024-02	DEU	Single course	Email / newsletter	Assistenzarzt	Other	2	1080.0
+2024	B	2024-06	DEU	Single course	Search	Assistenzarzt	Psychiatrie	2	910.0
+2024	A	2024-03	DEU	Membership	Membership	Facharzt	Psychiatrie	8	4730.0
+2024	A	2024-01	DEU	Single course	Search	Assistenzarzt	Psychiatrie	2	540.0
+2024	C	2024-08	AUT	Single course	Colleague recommendation	Facharzt	Psychiatrie	2	270.0
+2024	C	2024-09	CHE	Single course	Print: journal insert	Facharzt	Psychiatrie	1	851.0
+2024	B	2024-07	CHE	Single course	Colleague recommendation	Facharzt	Psychiatrie	2	1701.0
+2024	A	2024-01	DEU	Single course	Print: journal insert	Assistenzarzt	Psychiatrie	2	760.0
+2024	B	2024-07	AUT	Single course	Search	Other / unknown	Psychiatrie	1	240.0
+2024	C	2024-09	CHE	Single course	Colleague recommendation	Assistenzarzt	Psychiatrie	1	630.0
+2024	C	2024-09	CHE	Single course	Email / newsletter	Other / unknown	Psychiatrie	1	777.0
+2024	C	2024-09	AUT	Single course	Print: postal flyer	Other / unknown	Psychiatrie	1	145.0
+2024	A	2024-02	DEU	Single course	Colleague recommendation	Assistenzarzt	Psychiatrie	1	490.0
+2024	A	2024-05	DEU	Single course	Colleague recommendation	Other / unknown	Psychiatrie	1	510.0
+2024	C	2024-09	AUT	Single course	Email / newsletter	Other / unknown	Other	1	145.0
+2024	B	2024-06	CHE	Single course	Search	Other / unknown	Other	1	284.0
+2024	A	2024-04	DEU	Membership	Membership	Assistenzarzt	Not stated	1	490.0
+2024	A	2024-05	AUT	Single course	Print: postal flyer	Facharzt	Allgemeinmedizin	1	670.0
+2024	A	2024-02	AUT	Single course	Email / newsletter	Assistenzarzt	Allgemeinmedizin	2	475.0
+2024	A	2024-01	AUT	Single course	Search	Other / unknown	Other	1	295.0
+2024	B	2024-06	AUT	Single course	Social media	Facharzt	Several	1	270.0
+2024	A	2024-01	AUT	Single course	Print: journal ad	Facharzt	Allgemeinmedizin	1	570.0
+2024	A	2024-04	CHE	Single course	Print: clinic poster	Assistenzarzt	Other	1	620.0
+2024	A	2024-01	DEU	Single course	Print: clinic poster	Assistenzarzt	Several	1	460.0
+2024	B	2024-06	AUT	Single course	Print: clinic poster	Assistenzarzt	Kardiologie	1	590.0
+2024	A	2024-04	CHE	Single course	Email / newsletter	Assistenzarzt	Kardiologie	1	431.0
+2024	A	2024-02	AUT	Membership	Membership	Assistenzarzt	Pädiatrie	1	490.0
+2024	A	2024-01	DEU	Single course	Print: clinic poster	Assistenzarzt	Psychiatrie	1	270.0
+2024	B	2024-08	AUT	Single course	Colleague recommendation	Assistenzarzt	Psychiatrie	1	240.0
+2024	A	2024-02	CHE	Single course	Print: journal ad	Facharzt	Anästhesiologie	1	462.0
+2024	A	2024-03	CHE	Single course	FOMF website / former participant	Facharzt	Allgemeinmedizin	2	1050.0
+2024	A	2024-02	DEU	Single course	Print: journal ad	Facharzt	Anästhesiologie	1	350.0
+2024	B	2024-06	AUT	Single course	Print: journal insert	Facharzt	Other	1	280.0
+2024	C	2024-08	CHE	Single course	Search	Facharzt	Innere Medizin	1	200.0
+2024	A	2024-01	AUT	Single course	Social media	Facharzt	Allgemeinmedizin	1	160.0
+2024	B	2024-06	DEU	Single course	Search	Facharzt	Psychiatrie	1	560.0
+2024	B	2024-07	CHE	Single course	Print: journal ad	Facharzt	Neurologie	1	483.0
+2024	A	2024-05	CHE	Single course	Email / newsletter	Other / unknown	Other	2	567.0
+2024	C	2024-08	CHE	Single course	Print: postal flyer	Other / unknown	Other	1	315.0
+2024	A	2024-03	DEU	Membership	Membership	Other / unknown	Psychiatrie	1	570.0
+2024	A	2024-01	DEU	Single course	FOMF website / former participant	Other / unknown	Not stated	1	280.0
+2024	C	2024-08	DEU	Single course	Other	Other / unknown	Not stated	1	430.0
+2024	A	2024-04	AUT	Single course	Email / newsletter	Other / unknown	Not stated	1	600.0
+2024	A	2024-02	DEU	Membership	Membership	Assistenzarzt	Other	11	5370.0
+2024	A	2024-03	DEU	Single course	Print: postal flyer	Facharzt	Allgemeinmedizin	4	1905.0
+2024	A	2024-04	DEU	Single course	Print: postal flyer	Facharzt	Allgemeinmedizin	8	4760.0
+2024	A	2024-02	AUT	Single course	Email / newsletter	Facharzt	Allgemeinmedizin	2	590.0
+2024	A	2024-01	DEU	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	13	7420.0
+2024	A	2024-01	DEU	Single course	Invitation / sponsor	Assistenzarzt	Allgemeinmedizin	1	25.0
+2024	A	2024-02	DEU	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	6	3290.0
+2024	A	2024-01	DEU	Membership	Membership	Assistenzarzt	Several	3	1470.0
+2024	A	2024-03	DEU	Single course	Colleague recommendation	Assistenzarzt	Several	1	685.0
+2024	C	2024-09	AUT	Membership	Membership	Facharzt	Several	1	660.0
+2024	C	2024-09	DEU	Single course	Colleague recommendation	Facharzt	Several	2	1160.0
+2024	A	2024-02	DEU	Membership	Membership	Assistenzarzt	Several	1	490.0
+2024	A	2024-02	AUT	Single course	Print: postal flyer	Facharzt	Allgemeinmedizin	1	270.0
+2024	C	2024-08	CHE	Single course	Print: journal ad	Facharzt	Allgemeinmedizin	1	368.0
+2024	B	2024-07	DEU	Single course	Search	Assistenzarzt	Allgemeinmedizin	2	830.0
+2024	B	2024-07	DEU	Single course	Colleague recommendation	Assistenzarzt	Allgemeinmedizin	5	2285.0
+2024	A	2024-01	AUT	Single course	Colleague recommendation	Facharzt	Allgemeinmedizin	4	1910.0
+2024	C	2024-09	DEU	Single course	Print: clinic poster	Facharzt	Allgemeinmedizin	1	715.0
+2024	A	2024-03	DEU	Single course	Search	Assistenzarzt	Allgemeinmedizin	3	1450.0
+2024	A	2024-02	AUT	Single course	FOMF website / former participant	Assistenzarzt	Allgemeinmedizin	1	340.0
+2024	C	2024-08	DEU	Single course	FOMF website / former participant	Assistenzarzt	Allgemeinmedizin	1	530.0
+2024	A	2024-04	AUT	Single course	Search	Assistenzarzt	Allgemeinmedizin	1	280.0
+2024	C	2024-09	DEU	Single course	Colleague recommendation	Facharzt	Allgemeinmedizin	8	5100.0
+2024	A	2024-05	DEU	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	6	3160.0
+2024	B	2024-06	CHE	Single course	FOMF website / former participant	Facharzt	Allgemeinmedizin	1	263.0
+2024	A	2024-05	CHE	Single course	Social media	Assistenzarzt	Allgemeinmedizin	1	452.0
+2024	A	2024-05	AUT	Single course	Colleague recommendation	Assistenzarzt	Allgemeinmedizin	3	1420.0
+2024	A	2024-04	DEU	Single course	Print: clinic poster	Facharzt	Allgemeinmedizin	2	685.0
+2024	A	2024-03	AUT	Membership	Membership	Facharzt	Allgemeinmedizin	6	3510.0
+2024	B	2024-08	AUT	Single course	Search	Facharzt	Allgemeinmedizin	1	570.0
+2024	A	2024-05	DEU	Single course	Search	Other / unknown	Allgemeinmedizin	1	560.0
+2024	C	2024-09	AUT	Membership	Membership	Facharzt	Allgemeinmedizin	2	1140.0
+2024	A	2024-03	AUT	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	1	280.0
+2024	A	2024-03	CHE	Membership	Membership	Assistenzarzt	Allgemeinmedizin	3	1979.0
+2024	A	2024-02	CHE	Single course	Colleague recommendation	Assistenzarzt	Allgemeinmedizin	2	1307.0
+2024	B	2024-07	CHE	Single course	Congress / fair	Other / unknown	Allgemeinmedizin	1	294.0
+2024	C	2024-09	CHE	Single course	Search	Facharzt	Allgemeinmedizin	2	1355.0
+2024	B	2024-07	DEU	Single course	Print: journal insert	Assistenzarzt	Allgemeinmedizin	1	540.0
+2024	B	2024-07	AUT	Membership	Membership	Facharzt	Allgemeinmedizin	2	1140.0
+2024	A	2024-03	AUT	Single course	FOMF website / former participant	Facharzt	Allgemeinmedizin	3	1280.0
+2024	A	2024-04	CHE	Single course	Colleague recommendation	Assistenzarzt	Allgemeinmedizin	1	940.0
+2024	A	2024-05	CHE	Single course	Colleague recommendation	Facharzt	Allgemeinmedizin	3	2111.0
+2024	A	2024-02	AUT	Single course	Print: clinic poster	Facharzt	Allgemeinmedizin	2	610.0
+2024	A	2024-02	DEU	Single course	Search	Facharzt	Several	2	905.0
+2024	C	2024-08	DEU	Single course	Print: postal flyer	Facharzt	Several	1	280.0
+2024	A	2024-02	CHE	Single course	FOMF website / former participant	Facharzt	Several	1	452.0
+2024	C	2024-09	AUT	Single course	Search	Facharzt	Anästhesiologie	1	150.0
+2024	A	2024-04	CHE	Single course	Print: clinic poster	Facharzt	Anästhesiologie	1	452.0
+2024	C	2024-08	AUT	Single course	Colleague recommendation	Facharzt	Anästhesiologie	1	650.0
+2024	B	2024-06	DEU	Single course	Print: journal insert	Facharzt	Anästhesiologie	1	690.0
+2024	B	2024-06	CHE	Single course	Colleague recommendation	Facharzt	Anästhesiologie	1	452.0
+2024	B	2024-06	CHE	Membership	Membership	Facharzt	Anästhesiologie	2	1911.0
+2024	A	2024-01	DEU	Single course	Search	Facharzt	Anästhesiologie	2	1015.0
+2024	A	2024-04	DEU	Membership	Membership	Assistenzarzt	Anästhesiologie	2	980.0
+2024	A	2024-02	CHE	Single course	FOMF website / former participant	Facharzt	Anästhesiologie	1	452.0
+2024	A	2024-02	DEU	Membership	Membership	Facharzt	Anästhesiologie	2	1230.0
+2024	A	2024-04	DEU	Single course	FOMF website / former participant	Assistenzarzt	Anästhesiologie	1	310.0
+2024	B	2024-06	CHE	Single course	Colleague recommendation	Facharzt	Other	6	2541.0
+2024	A	2024-03	CHE	Membership	Membership	Facharzt	Other	4	3612.0
+2024	B	2024-08	AUT	Single course	Colleague recommendation	Facharzt	Other	1	550.0
+2024	A	2024-04	DEU	Single course	Print: journal insert	Assistenzarzt	Other	5	2205.0
+2024	B	2024-06	DEU	Membership	Membership	Facharzt	Other	21	12130.0
+2024	A	2024-01	DEU	Single course	Search	Assistenzarzt	Other	6	2740.0
+2024	B	2024-06	CHE	Single course	Colleague recommendation	Other / unknown	Other	3	1260.0
+2024	A	2024-03	CHE	Single course	Colleague recommendation	Other / unknown	Other	1	431.0
+2024	A	2024-01	CHE	Single course	Colleague recommendation	Other / unknown	Other	1	431.0
+2024	A	2024-01	DEU	Single course	Invitation / sponsor	Assistenzarzt	Other	2	35.0
+2024	B	2024-07	DEU	Single course	Print: journal insert	Facharzt	Other	5	2010.0
+2024	C	2024-08	CHE	Membership	Membership	Facharzt	Other	2	2016.0
+2024	A	2024-04	CHE	Single course	Colleague recommendation	Facharzt	Other	6	2021.0
+2024	B	2024-07	CHE	Single course	Search	Assistenzarzt	Other	1	693.0
+2024	B	2024-07	CHE	Membership	Membership	Assistenzarzt	Other	1	809.0
+2024	A	2024-03	AUT	Single course	Colleague recommendation	Other / unknown	Other	1	190.0
+2024	A	2024-02	DEU	Single course	Search	Facharzt	Other	4	2375.0
+2024	A	2024-01	DEU	Single course	FOMF website / former participant	Assistenzarzt	Other	2	1030.0
+2024	A	2024-02	CHE	Membership	Membership	Facharzt	Other	1	903.0
+2024	A	2024-01	AUT	Single course	Print: postal flyer	Facharzt	Other	5	1360.0
+2024	B	2024-07	DEU	Single course	Print: journal insert	Assistenzarzt	Innere Medizin	5	2040.0
+2024	A	2024-05	CHE	Single course	Print: postal flyer	Facharzt	Innere Medizin	1	368.0
+2024	A	2024-01	DEU	Single course	Print: journal insert	Assistenzarzt	Innere Medizin	3	1790.0
+2024	A	2024-04	DEU	Single course	Colleague recommendation	Facharzt	Innere Medizin	3	1965.0
+2024	A	2024-03	CHE	Membership	Membership	Facharzt	Innere Medizin	2	1901.0
+2024	A	2024-01	DEU	Single course	Search	Facharzt	Innere Medizin	2	1180.0
+2024	A	2024-03	CHE	Membership	Membership	Assistenzarzt	Innere Medizin	2	1617.0
+2024	A	2024-01	DEU	Membership	Membership	Facharzt	Innere Medizin	27	15750.0
+2024	A	2024-03	DEU	Single course	Email / newsletter	Assistenzarzt	Innere Medizin	1	690.0
+2024	A	2024-04	DEU	Membership	Membership	Assistenzarzt	Innere Medizin	9	4770.0
+2024	A	2024-03	DEU	Single course	Print: journal insert	Facharzt	Innere Medizin	5	2750.0
+2024	A	2024-03	DEU	Membership	Membership	Assistenzarzt	Innere Medizin	5	2540.0
+2024	C	2024-08	DEU	Single course	Print: clinic poster	Assistenzarzt	Innere Medizin	1	540.0
+2024	A	2024-05	CHE	Single course	Print: journal insert	Facharzt	Innere Medizin	1	525.0
+2024	B	2024-06	CHE	Single course	Colleague recommendation	Assistenzarzt	Innere Medizin	4	3801.0
+2024	A	2024-02	DEU	Single course	FOMF website / former participant	Facharzt	Innere Medizin	1	615.0
+2024	A	2024-05	DEU	Single course	Print: journal insert	Assistenzarzt	Innere Medizin	2	920.0
+2024	A	2024-05	AUT	Single course	Colleague recommendation	Facharzt	Innere Medizin	1	420.0
+2024	A	2024-01	DEU	Single course	Print: journal insert	Facharzt	Innere Medizin	3	2060.0
+2024	B	2024-07	DEU	Single course	Search	Assistenzarzt	Innere Medizin	2	1150.0
+2024	A	2024-01	DEU	Single course	Email / newsletter	Assistenzarzt	Innere Medizin	1	560.0
+2024	A	2024-05	AUT	Single course	Congress / fair	Facharzt	Innere Medizin	1	300.0
+2024	C	2024-08	CHE	Single course	Search	Assistenzarzt	Innere Medizin	2	532.0
+2024	A	2024-05	DEU	Single course	Colleague recommendation	Facharzt	Innere Medizin	3	1145.0
+2024	C	2024-08	DEU	Single course	Print: postal flyer	Assistenzarzt	Innere Medizin	1	155.0
+2024	A	2024-03	CHE	Single course	Colleague recommendation	Assistenzarzt	Innere Medizin	1	431.0
+2024	A	2024-01	DEU	Single course	Invitation / sponsor	Facharzt	Innere Medizin	2	65.0
+2024	A	2024-05	CHE	Membership	Membership	Facharzt	Kardiologie	3	2709.0
+2024	C	2024-08	CHE	Single course	Colleague recommendation	Assistenzarzt	Kardiologie	1	483.0
+2024	A	2024-03	DEU	Membership	Membership	Assistenzarzt	Kardiologie	3	1560.0
+2024	B	2024-06	DEU	Membership	Membership	Assistenzarzt	Kardiologie	3	1470.0
+2024	A	2024-01	DEU	Single course	Print: journal insert	Facharzt	Kardiologie	6	3230.0
+2024	A	2024-05	DEU	Single course	Search	Assistenzarzt	Kardiologie	1	460.0
+2024	A	2024-04	DEU	Single course	Print: journal insert	Assistenzarzt	Kardiologie	1	480.0
+2024	C	2024-08	DEU	Single course	Colleague recommendation	Other / unknown	Kardiologie	1	430.0
+2024	B	2024-07	DEU	Single course	Print: postal flyer	Facharzt	Other	3	1490.0
+2024	A	2024-04	DEU	Single course	Print: postal flyer	Facharzt	Neurologie	1	530.0
+2024	B	2024-07	DEU	Single course	Print: postal flyer	Facharzt	Neurologie	1	280.0
+2024	B	2024-07	CHE	Single course	Print: journal insert	Assistenzarzt	Neurologie	1	483.0
+2024	A	2024-02	DEU	Membership	Membership	Assistenzarzt	Neurologie	2	980.0
+2024	A	2024-04	DEU	Single course	Email / newsletter	Assistenzarzt	Neurologie	1	530.0
+2024	B	2024-07	AUT	Single course	Colleague recommendation	Other / unknown	Other	1	130.0
+2024	A	2024-01	AUT	Single course	Social media	Assistenzarzt	Several	1	340.0
+2024	B	2024-06	DEU	Single course	Colleague recommendation	Assistenzarzt	Pädiatrie	2	940.0
+2024	A	2024-03	CHE	Single course	Colleague recommendation	Assistenzarzt	Pädiatrie	6	3743.0
+2024	C	2024-08	CHE	Single course	Print: postal flyer	Other / unknown	Pädiatrie	1	462.0
+2024	A	2024-04	CHE	Single course	Print: journal insert	Facharzt	Pädiatrie	1	263.0
+2024	C	2024-08	AUT	Single course	Search	Assistenzarzt	Pädiatrie	1	140.0
+2024	A	2024-04	DEU	Single course	Colleague recommendation	Assistenzarzt	Pädiatrie	3	1320.0
+2024	A	2024-01	DEU	Single course	Print: journal ad	Assistenzarzt	Pädiatrie	1	480.0
+2024	C	2024-08	CHE	Single course	Other	Other / unknown	Pädiatrie	2	1145.0
+2024	C	2024-08	CHE	Single course	Colleague recommendation	Other / unknown	Pädiatrie	5	2846.0
+2024	C	2024-09	CHE	Single course	Print: postal flyer	Facharzt	Pädiatrie	1	651.0
+2024	B	2024-06	DEU	Single course	Print: journal insert	Assistenzarzt	Pädiatrie	2	880.0
+2024	C	2024-08	DEU	Single course	Search	Other / unknown	Pädiatrie	1	420.0
+2024	B	2024-07	DEU	Single course	Search	Facharzt	Pädiatrie	1	500.0
+2024	B	2024-08	DEU	Single course	Social media	Assistenzarzt	Pädiatrie	1	470.0
+2024	B	2024-07	CHE	Single course	Email / newsletter	Assistenzarzt	Pädiatrie	1	735.0
+2024	B	2024-07	DEU	Membership	Membership	Assistenzarzt	Pädiatrie	2	980.0
+2024	A	2024-03	CHE	Single course	FOMF website / former participant	Facharzt	Pädiatrie	1	683.0
+2024	C	2024-09	CHE	Single course	Search	Assistenzarzt	Pädiatrie	1	693.0
+2024	B	2024-06	CHE	Membership	Membership	Facharzt	Pädiatrie	2	1806.0
+2024	B	2024-08	DEU	Single course	Print: journal insert	Assistenzarzt	Pädiatrie	1	440.0
+2024	C	2024-08	CHE	Single course	Print: postal flyer	Facharzt	Pädiatrie	1	767.0
+2024	C	2024-08	DEU	Single course	Email / newsletter	Other / unknown	Pädiatrie	1	460.0
+2024	B	2024-06	DEU	Membership	Membership	Assistenzarzt	Psychiatrie	5	2450.0
+2024	B	2024-06	DEU	Single course	Print: journal insert	Facharzt	Psychiatrie	7	3360.0
+2024	A	2024-03	CHE	Single course	Colleague recommendation	Assistenzarzt	Psychiatrie	2	1386.0
+2024	A	2024-05	CHE	Membership	Membership	Facharzt	Psychiatrie	7	6531.0
+2024	C	2024-09	DEU	Single course	Print: postal flyer	Facharzt	Psychiatrie	10	4110.0
+2024	C	2024-09	AUT	Single course	Colleague recommendation	Assistenzarzt	Psychiatrie	2	520.0
+2024	A	2024-04	DEU	Single course	Print: journal ad	Facharzt	Psychiatrie	2	1070.0
+2024	A	2024-03	CHE	Single course	Print: postal flyer	Facharzt	Psychiatrie	2	567.0
+2024	C	2024-09	AUT	Single course	Search	Assistenzarzt	Psychiatrie	2	500.0
+2024	A	2024-01	CHE	Membership	Membership	Facharzt	Psychiatrie	5	4830.0
+2024	A	2024-04	DEU	Single course	Print: clinic poster	Assistenzarzt	Psychiatrie	1	490.0
+2024	B	2024-07	CHE	Membership	Membership	Assistenzarzt	Psychiatrie	1	809.0
+2024	C	2024-09	DEU	Single course	Congress / fair	Facharzt	Psychiatrie	1	550.0
+2024	A	2024-04	CHE	Membership	Membership	Facharzt	Psychiatrie	4	3602.0
+2024	A	2024-03	DEU	Single course	Print: postal flyer	Other / unknown	Psychiatrie	2	780.0
+2024	B	2024-07	CHE	Single course	Print: postal flyer	Facharzt	Psychiatrie	3	2552.0
+2024	B	2024-07	AUT	Single course	Colleague recommendation	Facharzt	Psychiatrie	1	265.0
+2024	C	2024-09	DEU	Single course	Search	Assistenzarzt	Psychiatrie	2	740.0
+2024	A	2024-04	DEU	Single course	Email / newsletter	Facharzt	Psychiatrie	1	550.0
+2024	A	2024-01	AUT	Single course	Email / newsletter	Assistenzarzt	Psychiatrie	1	15.0
+2024	A	2024-04	DEU	Single course	Email / newsletter	Assistenzarzt	Psychiatrie	1	510.0
+2024	A	2024-05	DEU	Single course	Print: postal flyer	Other / unknown	Psychiatrie	1	550.0
+2024	A	2024-02	CHE	Single course	Print: journal ad	Other / unknown	Other	1	431.0
+2024	C	2024-09	DEU	Single course	Social media	Assistenzarzt	Other	1	335.0
+2024	A	2024-01	CHE	Single course	FOMF website / former participant	Facharzt	Innere Medizin	2	525.0
+2024	C	2024-08	DEU	Membership	Membership	Facharzt	Pädiatrie	1	570.0
+2024	C	2024-09	DEU	Single course	Print: journal insert	Assistenzarzt	Allgemeinmedizin	1	585.0
+2024	A	2024-04	CHE	Single course	Print: journal ad	Assistenzarzt	Other	1	646.0
+2024	A	2024-05	AUT	Single course	Colleague recommendation	Assistenzarzt	Innere Medizin	1	230.0
+2024	A	2024-04	CHE	Single course	Search	Assistenzarzt	Innere Medizin	2	1727.0
+2024	B	2024-07	DEU	Single course	Email / newsletter	Assistenzarzt	Innere Medizin	1	290.0
+2024	A	2024-03	DEU	Single course	Email / newsletter	Assistenzarzt	Kardiologie	1	460.0
+2024	C	2024-09	DEU	Single course	Congress / fair	Assistenzarzt	Neurologie	1	250.0
+2024	A	2024-05	AUT	Membership	Membership	Assistenzarzt	Neurologie	1	490.0
+2024	A	2024-01	AUT	Single course	Print: clinic poster	Assistenzarzt	Psychiatrie	1	340.0
+2024	A	2024-05	DEU	Membership	Membership	Facharzt	Pädiatrie	1	570.0
+2024	C	2024-09	DEU	Single course	Search	Facharzt	Psychiatrie	1	380.0
+2024	C	2024-09	DEU	Membership	Membership	Facharzt	Anästhesiologie	1	570.0
+2024	A	2024-02	DEU	Single course	Social media	Facharzt	Other	1	690.0
+2024	A	2024-05	AUT	Single course	Print: postal flyer	Facharzt	Innere Medizin	1	270.0
+2024	A	2024-04	DEU	Single course	Print: postal flyer	Facharzt	Anästhesiologie	1	365.0
+2024	C	2024-09	AUT	Single course	Email / newsletter	Facharzt	Pädiatrie	1	280.0
+2024	B	2024-07	DEU	Single course	Print: postal flyer	Facharzt	Several	1	625.0
+2024	C	2024-08	AUT	Single course	Colleague recommendation	Assistenzarzt	Allgemeinmedizin	1	570.0
+2024	A	2024-02	AUT	Single course	Print: journal insert	Assistenzarzt	Allgemeinmedizin	1	370.0
+2024	A	2024-01	DEU	Single course	Print: clinic poster	Assistenzarzt	Allgemeinmedizin	1	685.0
+2024	B	2024-07	CHE	Single course	Search	Facharzt	Allgemeinmedizin	1	347.0
+2024	B	2024-08	AUT	Single course	Social media	Facharzt	Other	1	280.0
+2024	A	2024-03	CHE	Single course	Print: journal insert	Facharzt	Pädiatrie	1	620.0
+2024	B	2024-06	AUT	Single course	Colleague recommendation	Other / unknown	Other	1	135.0
+2024	A	2024-01	AUT	Single course	Search	Other / unknown	Not stated	1	160.0
+2024	A	2024-01	AUT	Single course	Print: postal flyer	Other / unknown	Not stated	1	465.0
+2024	A	2024-02	DEU	Single course	Invitation / sponsor	Other / unknown	Not stated	1	185.0
+2024	C	2024-09	DEU	Single course	Print: postal flyer	Other / unknown	Not stated	3	1510.0
+2024	B	2024-06	DEU	Single course	Email / newsletter	Assistenzarzt	Other	5	1240.0
+2024	A	2024-03	DEU	Single course	Email / newsletter	Assistenzarzt	Allgemeinmedizin	1	640.0
+2024	A	2024-02	DEU	Single course	Email / newsletter	Assistenzarzt	Allgemeinmedizin	1	660.0
+2024	A	2024-02	DEU	Single course	Other	Facharzt	Allgemeinmedizin	1	640.0
+2024	B	2024-06	AUT	Single course	Invitation / sponsor	Facharzt	Allgemeinmedizin	1	20.0
+2024	A	2024-01	DEU	Single course	Email / newsletter	Other / unknown	Allgemeinmedizin	2	710.0
+2024	A	2024-04	AUT	Single course	Print: postal flyer	Other / unknown	Allgemeinmedizin	1	270.0
+2024	C	2024-09	DEU	Single course	Print: journal insert	Facharzt	Several	4	1985.0
+2024	A	2024-05	CHE	Single course	Email / newsletter	Facharzt	Several	1	683.0
+2024	A	2024-01	AUT	Membership	Membership	Facharzt	Several	3	1700.0
+2024	C	2024-09	DEU	Membership	Membership	Facharzt	Several	4	2370.0
+2024	B	2024-06	AUT	Single course	Email / newsletter	Assistenzarzt	Allgemeinmedizin	1	570.0
+2024	A	2024-01	AUT	Single course	Colleague recommendation	Assistenzarzt	Allgemeinmedizin	7	2410.0
+2024	A	2024-01	AUT	Single course	Email / newsletter	Assistenzarzt	Allgemeinmedizin	1	470.0
+2024	A	2024-02	DEU	Membership	Membership	Assistenzarzt	Allgemeinmedizin	13	6900.0
+2024	C	2024-09	DEU	Membership	Membership	Assistenzarzt	Allgemeinmedizin	5	2430.0
+2024	A	2024-04	DEU	Single course	Search	Assistenzarzt	Allgemeinmedizin	2	925.0
+2024	C	2024-08	CHE	Single course	FOMF website / former participant	Other / unknown	Allgemeinmedizin	1	473.0
+2024	C	2024-09	CHE	Single course	Colleague recommendation	Facharzt	Allgemeinmedizin	4	1974.0
+2024	C	2024-08	CHE	Single course	Search	Facharzt	Allgemeinmedizin	2	1901.0
+2024	C	2024-09	CHE	Single course	Colleague recommendation	Assistenzarzt	Allgemeinmedizin	4	2557.0
+2024	A	2024-05	CHE	Single course	Print: postal flyer	Facharzt	Allgemeinmedizin	4	2898.0
+2024	A	2024-02	DEU	Membership	Membership	Facharzt	Allgemeinmedizin	21	11760.0
+2024	B	2024-06	DEU	Single course	Colleague recommendation	Facharzt	Allgemeinmedizin	4	2535.0
+2024	A	2024-03	DEU	Single course	Search	Facharzt	Allgemeinmedizin	4	2580.0
+2024	A	2024-01	DEU	Single course	FOMF website / former participant	Facharzt	Allgemeinmedizin	12	6205.0
+2024	A	2024-01	AUT	Membership	Membership	Facharzt	Allgemeinmedizin	21	12080.0
+2024	A	2024-04	DEU	Single course	Print: journal ad	Assistenzarzt	Allgemeinmedizin	1	645.0
+2024	B	2024-07	DEU	Membership	Membership	Assistenzarzt	Allgemeinmedizin	9	4480.0
+2024	B	2024-07	DEU	Single course	Print: postal flyer	Assistenzarzt	Allgemeinmedizin	2	980.0
+2024	B	2024-08	DEU	Single course	Email / newsletter	Facharzt	Allgemeinmedizin	1	315.0
+2024	B	2024-06	DEU	Single course	Colleague recommendation	Assistenzarzt	Allgemeinmedizin	3	1580.0
+2024	B	2024-06	CHE	Single course	Search	Facharzt	Allgemeinmedizin	4	2546.0
+2024	A	2024-02	DEU	Single course	Print: journal ad	Assistenzarzt	Allgemeinmedizin	1	540.0
+2024	A	2024-02	AUT	Single course	Social media	Assistenzarzt	Allgemeinmedizin	3	1005.0
+2024	A	2024-02	CHE	Single course	Social media	Assistenzarzt	Allgemeinmedizin	1	452.0
+2024	A	2024-01	CHE	Single course	FOMF website / former participant	Assistenzarzt	Allgemeinmedizin	2	1370.0
+2024	C	2024-09	CHE	Membership	Membership	Assistenzarzt	Allgemeinmedizin	1	809.0
+2024	A	2024-05	CHE	Membership	Membership	Assistenzarzt	Anästhesiologie	1	809.0
+2024	A	2024-04	DEU	Single course	Social media	Facharzt	Anästhesiologie	4	1460.0
+2024	A	2024-01	AUT	Single course	Print: journal insert	Facharzt	Anästhesiologie	1	140.0
+2024	B	2024-07	AUT	Single course	Social media	Other / unknown	Anästhesiologie	1	240.0
+2024	B	2024-07	AUT	Single course	Colleague recommendation	Facharzt	Anästhesiologie	1	260.0
+2024	C	2024-09	DEU	Single course	Print: postal flyer	Facharzt	Anästhesiologie	1	625.0
+2024	A	2024-02	DEU	Single course	Print: journal insert	Facharzt	Anästhesiologie	3	1340.0
+2024	A	2024-03	DEU	Single course	Print: journal insert	Facharzt	Anästhesiologie	1	365.0
+2024	A	2024-02	AUT	Single course	Print: clinic poster	Assistenzarzt	Anästhesiologie	1	340.0
+2024	A	2024-05	AUT	Single course	Search	Other / unknown	Anästhesiologie	1	170.0
+2024	A	2024-03	DEU	Single course	Print: journal ad	Facharzt	Anästhesiologie	1	365.0
+2024	A	2024-03	DEU	Membership	Membership	Assistenzarzt	Anästhesiologie	1	480.0
+2024	C	2024-08	DEU	Single course	Print: postal flyer	Facharzt	Kardiologie	1	450.0
+2024	C	2024-08	DEU	Single course	Print: journal insert	Other / unknown	Other	2	930.0
+2024	A	2024-03	DEU	Single course	FOMF website / former participant	Facharzt	Several	2	1305.0
+2024	B	2024-06	DEU	Single course	Print: postal flyer	Facharzt	Other	4	2025.0
+2024	A	2024-05	DEU	Single course	Search	Facharzt	Other	8	3235.0
+2024	A	2024-05	CHE	Single course	Print: postal flyer	Facharzt	Other	3	966.0
+2024	B	2024-08	DEU	Single course	Search	Assistenzarzt	Other	3	1480.0
+2024	B	2024-08	CHE	Single course	Colleague recommendation	Assistenzarzt	Other	1	347.0
+2024	B	2024-06	DEU	Single course	Invitation / sponsor	Assistenzarzt	Other	2	40.0
+2024	A	2024-02	DEU	Single course	Print: journal ad	Facharzt	Other	1	490.0
+2024	B	2024-06	DEU	Single course	Print: postal flyer	Assistenzarzt	Other	3	1360.0
+2024	A	2024-05	DEU	Membership	Membership	Facharzt	Other	19	11090.0
+2024	C	2024-09	DEU	Single course	Print: journal insert	Facharzt	Other	9	4420.0
+2024	A	2024-03	DEU	Single course	Print: postal flyer	Assistenzarzt	Other	1	460.0
+2024	A	2024-02	CHE	Single course	Print: journal insert	Other / unknown	Other	1	263.0
+2024	A	2024-01	DEU	Single course	Print: postal flyer	Facharzt	Other	6	3035.0
+2024	C	2024-09	CHE	Single course	Colleague recommendation	Facharzt	Other	3	2562.0
+2024	A	2024-04	DEU	Membership	Membership	Facharzt	Other	12	6380.0
+2024	C	2024-08	CHE	Single course	Print: journal insert	Facharzt	Other	2	1859.0
+2024	A	2024-05	AUT	Single course	Print: clinic poster	Facharzt	Other	2	820.0
+2024	A	2024-02	DEU	Single course	Print: postal flyer	Facharzt	Other	6	3140.0
+2024	A	2024-02	AUT	Single course	Email / newsletter	Assistenzarzt	Other	1	590.0
+2024	B	2024-07	CHE	Single course	Print: journal insert	Facharzt	Other	2	872.0
+2024	A	2024-04	CHE	Single course	Print: journal insert	Facharzt	Other	2	525.0
+2024	A	2024-04	CHE	Membership	Membership	Assistenzarzt	Other	2	1859.0
+2024	A	2024-02	CHE	Single course	Print: postal flyer	Facharzt	Other	1	683.0
+2024	A	2024-04	CHE	Single course	Congress / fair	Facharzt	Other	1	709.0
+2024	A	2024-05	DEU	Single course	Print: journal ad	Facharzt	Other	1	490.0
+2024	A	2024-02	AUT	Single course	Print: journal insert	Facharzt	Other	2	390.0
+2024	B	2024-08	AUT	Single course	Print: postal flyer	Facharzt	Other	1	570.0
+2024	B	2024-07	DEU	Single course	Search	Assistenzarzt	Other	4	1955.0
+2024	B	2024-06	AUT	Single course	Email / newsletter	Assistenzarzt	Other	2	440.0
+2024	B	2024-06	AUT	Single course	Search	Assistenzarzt	Other	1	220.0
+2024	A	2024-03	DEU	Membership	Membership	Facharzt	Several	2	1140.0
+2024	B	2024-06	DEU	Membership	Membership	Facharzt	Innere Medizin	15	8490.0
+2024	C	2024-09	AUT	Single course	Search	Assistenzarzt	Innere Medizin	1	570.0
+2024	B	2024-07	AUT	Single course	Print: postal flyer	Facharzt	Innere Medizin	1	420.0
+2024	C	2024-08	DEU	Single course	Search	Assistenzarzt	Innere Medizin	5	2205.0
+2024	B	2024-06	DEU	Single course	Print: journal insert	Assistenzarzt	Innere Medizin	3	1475.0
+2024	C	2024-08	DEU	Single course	Search	Other / unknown	Innere Medizin	3	1220.0
+2024	A	2024-04	AUT	Single course	Print: journal insert	Assistenzarzt	Innere Medizin	1	590.0
+2024	C	2024-08	DEU	Single course	Colleague recommendation	Assistenzarzt	Innere Medizin	1	660.0
+2024	A	2024-04	DEU	Membership	Membership	Facharzt	Innere Medizin	7	3920.0
+2024	A	2024-01	DEU	Single course	Social media	Facharzt	Innere Medizin	1	185.0
+2024	A	2024-04	DEU	Single course	Colleague recommendation	Assistenzarzt	Innere Medizin	2	1045.0
+2024	A	2024-05	AUT	Single course	Print: clinic poster	Facharzt	Innere Medizin	1	670.0
+2024	A	2024-01	DEU	Single course	Print: journal ad	Facharzt	Innere Medizin	3	1220.0
+2024	B	2024-07	DEU	Single course	Colleague recommendation	Facharzt	Innere Medizin	3	2070.0
+2024	B	2024-06	CHE	Single course	Print: postal flyer	Facharzt	Innere Medizin	1	1076.0
+2024	B	2024-06	AUT	Single course	Colleague recommendation	Other / unknown	Kardiologie	1	170.0
+2024	A	2024-05	DEU	Single course	Email / newsletter	Facharzt	Kardiologie	1	190.0
+2024	A	2024-01	DEU	Single course	FOMF website / former participant	Assistenzarzt	Kardiologie	1	460.0
+2024	A	2024-05	DEU	Membership	Membership	Facharzt	Kardiologie	7	3670.0
+2024	A	2024-04	DEU	Membership	Membership	Assistenzarzt	Kardiologie	4	1960.0
+2024	A	2024-01	AUT	Single course	Print: journal ad	Facharzt	Kardiologie	1	650.0
+2024	A	2024-02	AUT	Single course	Search	Facharzt	Kardiologie	1	650.0
+2024	B	2024-07	DEU	Single course	Email / newsletter	Facharzt	Other	4	1690.0
+2024	C	2024-08	DEU	Single course	Print: postal flyer	Facharzt	Neurologie	7	1955.0
+2024	C	2024-08	DEU	Single course	Print: clinic poster	Assistenzarzt	Neurologie	1	260.0
+2024	C	2024-09	CHE	Single course	Colleague recommendation	Assistenzarzt	Neurologie	1	483.0
+2024	C	2024-08	DEU	Single course	Print: clinic poster	Other / unknown	Neurologie	2	510.0
+2024	A	2024-05	CHE	Single course	Colleague recommendation	Facharzt	Neurologie	1	504.0
+2024	B	2024-08	DEU	Single course	Search	Other / unknown	Neurologie	1	335.0
+2024	B	2024-07	DEU	Membership	Membership	Assistenzarzt	Neurologie	1	490.0
+2024	C	2024-08	DEU	Single course	Print: clinic poster	Facharzt	Neurologie	1	260.0
+2024	C	2024-09	DEU	Membership	Membership	Assistenzarzt	Neurologie	1	580.0
+2024	A	2024-02	DEU	Membership	Membership	Facharzt	Neurologie	1	570.0
+2024	A	2024-04	CHE	Single course	Search	Assistenzarzt	Other	1	431.0
+2024	A	2024-05	DEU	Single course	Email / newsletter	Facharzt	Pädiatrie	2	910.0
+2024	C	2024-09	CHE	Membership	Membership	Facharzt	Pädiatrie	4	3549.0
+2024	A	2024-01	CHE	Single course	Print: journal insert	Assistenzarzt	Pädiatrie	1	263.0
+2024	C	2024-08	AUT	Single course	Search	Facharzt	Pädiatrie	1	320.0
+2024	A	2024-05	CHE	Single course	Colleague recommendation	Assistenzarzt	Pädiatrie	1	646.0
+2024	C	2024-08	DEU	Single course	Print: clinic poster	Other / unknown	Pädiatrie	2	850.0
+2024	B	2024-06	DEU	Membership	Membership	Facharzt	Pädiatrie	4	2260.0
+2024	C	2024-08	AUT	Single course	Print: journal insert	Assistenzarzt	Pädiatrie	1	260.0
+2024	B	2024-08	AUT	Single course	Social media	Other / unknown	Pädiatrie	1	280.0
+2024	A	2024-04	DEU	Membership	Membership	Assistenzarzt	Pädiatrie	1	490.0
+2024	B	2024-07	CHE	Single course	Print: journal insert	Other / unknown	Pädiatrie	1	756.0
+2024	C	2024-09	CHE	Single course	Print: journal insert	Facharzt	Pädiatrie	1	735.0
+2024	C	2024-09	DEU	Single course	Congress / fair	Assistenzarzt	Pädiatrie	1	440.0
+2024	A	2024-02	DEU	Single course	Print: journal ad	Facharzt	Pädiatrie	1	490.0
+2024	C	2024-09	AUT	Single course	Print: postal flyer	Facharzt	Pädiatrie	3	1110.0
+2024	A	2024-03	CHE	Single course	Print: journal insert	Facharzt	Several	1	452.0
+2024	B	2024-06	CHE	Membership	Membership	Facharzt	Psychiatrie	9	8442.0
+2024	A	2024-01	DEU	Single course	Colleague recommendation	Facharzt	Psychiatrie	2	780.0
+2024	A	2024-03	DEU	Single course	Email / newsletter	Facharzt	Psychiatrie	1	540.0
+2024	A	2024-04	DEU	Single course	Search	Facharzt	Psychiatrie	1	665.0
+2024	A	2024-01	DEU	Single course	Colleague recommendation	Assistenzarzt	Psychiatrie	1	270.0
+2024	C	2024-09	CHE	Membership	Membership	Facharzt	Psychiatrie	8	7392.0
+2024	A	2024-01	DEU	Single course	Print: journal insert	Facharzt	Psychiatrie	3	1540.0
+2024	C	2024-08	DEU	Single course	Social media	Assistenzarzt	Psychiatrie	1	290.0
+2024	C	2024-08	AUT	Single course	Email / newsletter	Facharzt	Psychiatrie	1	265.0
+2024	A	2024-01	CHE	Single course	Colleague recommendation	Other / unknown	Psychiatrie	1	284.0
+2024	C	2024-09	DEU	Single course	Print: clinic poster	Assistenzarzt	Psychiatrie	1	510.0
+2024	C	2024-09	CHE	Single course	Colleague recommendation	Facharzt	Psychiatrie	2	1701.0
+2024	B	2024-06	CHE	Single course	Print: journal ad	Facharzt	Psychiatrie	1	756.0
+2024	A	2024-01	DEU	Membership	Membership	Assistenzarzt	Psychiatrie	2	980.0
+2024	B	2024-06	DEU	Single course	Print: postal flyer	Assistenzarzt	Psychiatrie	1	510.0
+2024	A	2024-03	DEU	Single course	Colleague recommendation	Facharzt	Psychiatrie	1	490.0
+2024	B	2024-08	AUT	Single course	Email / newsletter	Facharzt	Psychiatrie	1	265.0
+2024	A	2024-01	AUT	Single course	Email / newsletter	Facharzt	Psychiatrie	1	155.0
+2024	A	2024-05	CHE	Single course	Colleague recommendation	Facharzt	Psychiatrie	1	756.0
+2024	A	2024-01	AUT	Single course	Colleague recommendation	Facharzt	Other	1	550.0
+2024	B	2024-07	CHE	Single course	Print: journal insert	Other / unknown	Other	1	588.0
+2024	A	2024-02	AUT	Single course	Colleague recommendation	Facharzt	Other	2	240.0
+2024	C	2024-08	AUT	Single course	Social media	Other / unknown	Other	1	210.0
+2024	A	2024-01	AUT	Single course	Colleague recommendation	Assistenzarzt	Other	1	355.0
+2024	A	2024-02	AUT	Single course	Email / newsletter	Other / unknown	Several	1	270.0
+2024	A	2024-05	CHE	Single course	Search	Assistenzarzt	Innere Medizin	1	431.0
+2024	C	2024-09	AUT	Single course	Colleague recommendation	Other / unknown	Other	1	250.0
+2024	A	2024-01	AUT	Single course	FOMF website / former participant	Facharzt	Neurologie	1	280.0
+2024	C	2024-09	DEU	Single course	Print: postal flyer	Assistenzarzt	Other	1	595.0
+2024	B	2024-08	DEU	Single course	Colleague recommendation	Assistenzarzt	Several	1	660.0
+2024	C	2024-09	CHE	Single course	Social media	Assistenzarzt	Several	1	693.0
+2024	B	2024-06	AUT	Membership	Membership	Assistenzarzt	Kardiologie	1	490.0
+2024	B	2024-06	CHE	Single course	Print: postal flyer	Assistenzarzt	Other	1	21.0
+2024	A	2024-02	CHE	Single course	Email / newsletter	Facharzt	Anästhesiologie	1	452.0
+2024	A	2024-05	CHE	Membership	Membership	Facharzt	Anästhesiologie	2	1911.0
+2024	C	2024-08	DEU	Single course	Social media	Facharzt	Innere Medizin	1	500.0
+2024	A	2024-01	AUT	Membership	Membership	Facharzt	Innere Medizin	1	490.0
+2024	C	2024-08	CHE	Membership	Membership	Facharzt	Several	1	1008.0
+2024	B	2024-07	AUT	Single course	Print: postal flyer	Facharzt	Neurologie	1	280.0
+2024	A	2024-02	DEU	Single course	Print: journal ad	Facharzt	Psychiatrie	1	540.0
+2024	B	2024-06	AUT	Single course	FOMF website / former participant	Facharzt	Allgemeinmedizin	1	650.0
+2024	A	2024-01	AUT	Membership	Membership	Facharzt	Kardiologie	1	660.0
+2024	C	2024-08	CHE	Single course	Social media	Assistenzarzt	Pädiatrie	1	662.0
+2024	B	2024-08	DEU	Single course	Print: journal ad	Facharzt	Allgemeinmedizin	1	575.0
+2024	A	2024-05	DEU	Single course	Email / newsletter	Assistenzarzt	Other	1	460.0
+2024	B	2024-07	AUT	Single course	Print: postal flyer	Facharzt	Other	1	380.0
+2024	A	2024-02	DEU	Single course	Email / newsletter	Facharzt	Allgemeinmedizin	1	335.0
+2024	B	2024-07	AUT	Membership	Membership	Facharzt	Kardiologie	1	520.0
+2024	C	2024-08	AUT	Single course	Print: postal flyer	Facharzt	Pädiatrie	1	350.0
+2024	A	2024-04	DEU	Single course	Print: journal insert	Facharzt	Psychiatrie	2	1050.0
+2024	A	2024-05	DEU	Single course	FOMF website / former participant	Facharzt	Psychiatrie	1	540.0
+2024	C	2024-08	DEU	Single course	Other	Facharzt	Not stated	4	1500.0
+2024	C	2024-08	CHE	Single course	Email / newsletter	Other / unknown	Not stated	1	620.0
+2024	C	2024-08	DEU	Single course	Email / newsletter	Facharzt	Not stated	1	280.0
+2024	A	2024-04	AUT	Single course	Print: postal flyer	Other / unknown	Not stated	2	410.0
+2024	C	2024-09	DEU	Single course	Email / newsletter	Assistenzarzt	Other	4	912.0
+2024	B	2024-06	DEU	Single course	Print: journal ad	Facharzt	Other	2	1000.0
+2024	A	2024-01	DEU	Membership	Membership	Facharzt	Allgemeinmedizin	23	12480.0
+2024	A	2024-04	DEU	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	7	4660.0
+2024	B	2024-06	DEU	Single course	Email / newsletter	Facharzt	Allgemeinmedizin	2	1305.0
+2024	B	2024-06	DEU	Membership	Membership	Facharzt	Several	14	7950.0
+2024	C	2024-08	DEU	Single course	Search	Assistenzarzt	Allgemeinmedizin	2	1050.0
+2024	A	2024-04	DEU	Single course	Print: postal flyer	Assistenzarzt	Allgemeinmedizin	1	565.0
+2024	A	2024-01	DEU	Single course	Search	Assistenzarzt	Allgemeinmedizin	7	4025.0
+2024	B	2024-08	CHE	Single course	Print: postal flyer	Other / unknown	Allgemeinmedizin	1	294.0
+2024	A	2024-05	CHE	Membership	Membership	Facharzt	Allgemeinmedizin	18	16895.0
+2024	A	2024-04	CHE	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	1	1076.0
+2024	B	2024-07	AUT	Single course	Colleague recommendation	Other / unknown	Allgemeinmedizin	1	280.0
+2024	B	2024-06	AUT	Single course	Search	Assistenzarzt	Allgemeinmedizin	2	940.0
+2024	C	2024-09	DEU	Single course	Print: postal flyer	Assistenzarzt	Allgemeinmedizin	1	540.0
+2024	A	2024-04	CHE	Single course	Colleague recommendation	Facharzt	Allgemeinmedizin	1	263.0
+2024	A	2024-01	DEU	Single course	Print: journal insert	Assistenzarzt	Allgemeinmedizin	3	1830.0
+2024	C	2024-08	CHE	Membership	Membership	Facharzt	Allgemeinmedizin	4	3843.0
+2024	B	2024-06	DEU	Single course	Print: clinic poster	Assistenzarzt	Allgemeinmedizin	1	565.0
+2024	A	2024-04	CHE	Single course	Congress / fair	Facharzt	Allgemeinmedizin	1	263.0
+2024	A	2024-05	CHE	Membership	Membership	Assistenzarzt	Allgemeinmedizin	3	2426.0
+2024	B	2024-08	DEU	Single course	Print: journal insert	Assistenzarzt	Allgemeinmedizin	1	540.0
+2024	A	2024-05	AUT	Single course	Email / newsletter	Facharzt	Allgemeinmedizin	2	920.0
+2024	B	2024-07	DEU	Single course	Print: postal flyer	Facharzt	Allgemeinmedizin	1	470.0
+2024	A	2024-01	CHE	Membership	Membership	Facharzt	Anästhesiologie	1	924.0
+2024	A	2024-02	DEU	Membership	Membership	Assistenzarzt	Anästhesiologie	1	580.0
+2024	B	2024-06	CHE	Single course	Search	Facharzt	Anästhesiologie	3	977.0
+2024	A	2024-04	DEU	Single course	Search	Assistenzarzt	Anästhesiologie	3	1000.0
+2024	A	2024-05	AUT	Membership	Membership	Facharzt	Anästhesiologie	1	570.0
+2024	A	2024-02	DEU	Single course	Search	Assistenzarzt	Anästhesiologie	2	620.0
+2024	B	2024-06	CHE	Single course	Search	Assistenzarzt	Anästhesiologie	1	431.0
+2024	B	2024-06	AUT	Membership	Membership	Assistenzarzt	Anästhesiologie	1	490.0
+2024	A	2024-05	CHE	Single course	Colleague recommendation	Other / unknown	Anästhesiologie	1	431.0
+2024	B	2024-07	CHE	Single course	Search	Facharzt	Anästhesiologie	1	452.0
+2024	A	2024-03	CHE	Single course	Print: clinic poster	Facharzt	Anästhesiologie	1	452.0
+2024	A	2024-04	DEU	Single course	Colleague recommendation	Facharzt	Anästhesiologie	2	715.0
+2024	A	2024-03	AUT	Single course	FOMF website / former participant	Facharzt	Other	1	570.0
+2024	C	2024-09	DEU	Single course	Print: journal insert	Other / unknown	Other	1	105.0
+2024	B	2024-08	DEU	Single course	Search	Facharzt	Other	2	1205.0
+2024	B	2024-06	DEU	Single course	Email / newsletter	Facharzt	Other	4	1410.0
+2024	A	2024-02	DEU	Single course	Colleague recommendation	Assistenzarzt	Other	3	1465.0
+2024	B	2024-06	CHE	Single course	Print: journal insert	Other / unknown	Other	2	998.0
+2024	C	2024-08	DEU	Single course	Print: journal insert	Assistenzarzt	Other	2	940.0
+2024	C	2024-09	CHE	Single course	Print: journal insert	Other / unknown	Other	1	693.0
+2024	C	2024-08	CHE	Single course	Print: journal ad	Other / unknown	Other	1	294.0
+2024	C	2024-08	DEU	Single course	Search	Other / unknown	Other	2	960.0
+2024	A	2024-05	CHE	Single course	Email / newsletter	Facharzt	Other	2	1134.0
+2024	A	2024-03	AUT	Single course	Print: journal insert	Facharzt	Other	3	840.0
+2024	A	2024-01	AUT	Single course	Social media	Assistenzarzt	Other	1	345.0
+2024	C	2024-09	CHE	Single course	Print: journal insert	Facharzt	Other	1	767.0
+2024	C	2024-09	DEU	Membership	Membership	Assistenzarzt	Other	2	980.0
+2024	A	2024-05	CHE	Membership	Membership	Facharzt	Other	4	3707.0
+2024	B	2024-06	AUT	Single course	Email / newsletter	Facharzt	Other	2	570.0
+2024	A	2024-03	DEU	Single course	Search	Facharzt	Other	5	1975.0
+2024	A	2024-05	AUT	Single course	Colleague recommendation	Other / unknown	Other	1	210.0
+2024	A	2024-05	AUT	Single course	Email / newsletter	Facharzt	Other	4	1020.0
+2024	A	2024-05	AUT	Single course	Print: journal insert	Facharzt	Other	1	280.0
+2024	A	2024-01	DEU	Single course	Print: postal flyer	Other / unknown	Several	1	325.0
+2024	C	2024-08	AUT	Single course	Print: journal ad	Facharzt	Innere Medizin	1	670.0
+2024	A	2024-02	CHE	Single course	Print: journal insert	Facharzt	Innere Medizin	1	368.0
+2024	A	2024-03	AUT	Membership	Membership	Facharzt	Innere Medizin	1	570.0
+2024	B	2024-06	CHE	Membership	Membership	Assistenzarzt	Innere Medizin	3	2678.0
+2024	B	2024-08	CHE	Single course	Search	Assistenzarzt	Innere Medizin	1	935.0
+2024	C	2024-09	CHE	Single course	Colleague recommendation	Assistenzarzt	Innere Medizin	2	1465.0
+2024	A	2024-04	DEU	Single course	Print: postal flyer	Facharzt	Innere Medizin	2	1260.0
+2024	B	2024-06	AUT	Membership	Membership	Facharzt	Innere Medizin	4	2200.0
+2024	A	2024-03	CHE	Single course	Search	Facharzt	Innere Medizin	1	368.0
+2024	A	2024-01	DEU	Single course	Email / newsletter	Facharzt	Innere Medizin	2	1180.0
+2024	C	2024-08	DEU	Single course	Print: postal flyer	Facharzt	Innere Medizin	5	2945.0
+2024	A	2024-01	CHE	Single course	Search	Assistenzarzt	Innere Medizin	1	263.0
+2024	B	2024-07	DEU	Single course	Colleague recommendation	Assistenzarzt	Innere Medizin	2	1035.0
+2024	C	2024-09	AUT	Single course	Colleague recommendation	Assistenzarzt	Innere Medizin	1	420.0
+2024	A	2024-05	AUT	Single course	Print: journal insert	Facharzt	Innere Medizin	1	320.0
+2024	A	2024-01	AUT	Single course	FOMF website / former participant	Facharzt	Innere Medizin	1	260.0
+2024	A	2024-01	CHE	Membership	Membership	Facharzt	Innere Medizin	7	6741.0
+2024	A	2024-05	DEU	Single course	Print: clinic poster	Facharzt	Innere Medizin	1	755.0
+2024	C	2024-09	DEU	Single course	Print: clinic poster	Facharzt	Kardiologie	1	510.0
+2024	A	2024-04	CHE	Single course	Print: postal flyer	Facharzt	Kardiologie	1	441.0
+2024	C	2024-09	DEU	Single course	FOMF website / former participant	Facharzt	Kardiologie	1	510.0
+2024	B	2024-08	DEU	Single course	Colleague recommendation	Assistenzarzt	Kardiologie	1	290.0
+2024	A	2024-04	AUT	Single course	Email / newsletter	Assistenzarzt	Kardiologie	1	290.0
+2024	B	2024-06	DEU	Single course	Social media	Assistenzarzt	Kardiologie	1	440.0
+2024	C	2024-08	DEU	Single course	Print: journal insert	Other / unknown	Kardiologie	1	430.0
+2024	A	2024-01	AUT	Single course	Social media	Facharzt	Other	1	470.0
+2024	C	2024-08	DEU	Single course	Search	Assistenzarzt	Other	1	480.0
+2024	B	2024-08	DEU	Single course	Colleague recommendation	Facharzt	Other	2	860.0
+2024	C	2024-09	DEU	Single course	Print: postal flyer	Facharzt	Several	3	1090.0
+2024	A	2024-05	DEU	Single course	Search	Facharzt	Neurologie	1	490.0
+2024	B	2024-06	DEU	Single course	Email / newsletter	Assistenzarzt	Neurologie	1	270.0
+2024	C	2024-09	CHE	Single course	Email / newsletter	Facharzt	Neurologie	1	294.0
+2024	A	2024-01	DEU	Single course	Colleague recommendation	Facharzt	Neurologie	2	600.0
+2024	A	2024-02	DEU	Single course	Print: journal insert	Assistenzarzt	Neurologie	1	265.0
+2024	A	2024-02	DEU	Single course	Print: postal flyer	Assistenzarzt	Neurologie	1	290.0
+2024	C	2024-09	DEU	Single course	Print: journal insert	Assistenzarzt	Neurologie	2	525.0
+2024	A	2024-02	AUT	Single course	Colleague recommendation	Other / unknown	Other	2	345.0
+2024	B	2024-06	CHE	Single course	Print: postal flyer	Facharzt	Other	3	1187.0
+2024	B	2024-06	CHE	Single course	Email / newsletter	Facharzt	Other	1	452.0
+2024	A	2024-02	CHE	Single course	Colleague recommendation	Assistenzarzt	Pädiatrie	4	2531.0
+2024	A	2024-02	CHE	Single course	Colleague recommendation	Facharzt	Pädiatrie	2	1334.0
+2024	B	2024-07	DEU	Single course	Print: clinic poster	Assistenzarzt	Pädiatrie	4	1760.0
+2024	B	2024-07	DEU	Single course	Colleague recommendation	Facharzt	Pädiatrie	1	470.0
+2024	C	2024-08	DEU	Single course	Print: postal flyer	Other / unknown	Pädiatrie	2	840.0
+2024	A	2024-01	CHE	Single course	Print: clinic poster	Assistenzarzt	Pädiatrie	1	620.0
+2024	A	2024-02	CHE	Single course	FOMF website / former participant	Facharzt	Pädiatrie	1	683.0
+2024	C	2024-08	DEU	Single course	Print: clinic poster	Facharzt	Pädiatrie	1	470.0
+2024	C	2024-09	DEU	Single course	Print: postal flyer	Assistenzarzt	Pädiatrie	1	460.0
+2024	B	2024-08	AUT	Single course	Colleague recommendation	Other / unknown	Other	3	690.0
+2024	A	2024-04	CHE	Single course	Email / newsletter	Assistenzarzt	Other	1	431.0
+2024	A	2024-04	DEU	Single course	Print: postal flyer	Other / unknown	Other	3	1120.0
+2024	A	2024-05	CHE	Single course	Search	Facharzt	Other	2	714.0
+2024	A	2024-04	CHE	Single course	Colleague recommendation	Other / unknown	Other	1	263.0
+2024	B	2024-06	DEU	Single course	Print: clinic poster	Assistenzarzt	Psychiatrie	2	1040.0
+2024	C	2024-09	DEU	Single course	Print: journal insert	Assistenzarzt	Psychiatrie	1	490.0
+2024	A	2024-02	CHE	Membership	Membership	Facharzt	Psychiatrie	5	4610.0
+2024	C	2024-08	CHE	Single course	Search	Facharzt	Psychiatrie	1	1045.0
+2024	C	2024-09	DEU	Membership	Membership	Facharzt	Psychiatrie	5	3120.0
+2024	A	2024-03	DEU	Single course	Print: postal flyer	Facharzt	Psychiatrie	6	2630.0
+2024	C	2024-09	AUT	Single course	Email / newsletter	Facharzt	Psychiatrie	2	845.0
+2024	A	2024-04	AUT	Membership	Membership	Facharzt	Psychiatrie	1	570.0
+2024	B	2024-08	DEU	Single course	Print: postal flyer	Facharzt	Psychiatrie	2	710.0
+2024	C	2024-09	AUT	Single course	Colleague recommendation	Other / unknown	Psychiatrie	1	250.0
+2024	B	2024-08	DEU	Single course	Congress / fair	Facharzt	Psychiatrie	1	520.0
+2024	B	2024-08	AUT	Single course	Colleague recommendation	Facharzt	Psychiatrie	1	265.0
+2024	A	2024-01	DEU	Single course	Print: postal flyer	Facharzt	Psychiatrie	3	1600.0
+2024	A	2024-05	DEU	Single course	Print: clinic poster	Facharzt	Psychiatrie	3	1590.0
+2024	A	2024-02	CHE	Single course	Print: journal insert	Facharzt	Psychiatrie	1	347.0
+2024	A	2024-05	DEU	Single course	Print: journal insert	Facharzt	Psychiatrie	3	1440.0
+2024	B	2024-08	CHE	Membership	Membership	Facharzt	Psychiatrie	2	1785.0
+2024	B	2024-06	CHE	Single course	Colleague recommendation	Assistenzarzt	Psychiatrie	1	819.0
+2024	C	2024-08	DEU	Single course	Social media	Facharzt	Psychiatrie	1	380.0
+2024	A	2024-03	DEU	Single course	FOMF website / former participant	Facharzt	Psychiatrie	1	520.0
+2024	B	2024-07	DEU	Single course	Colleague recommendation	Facharzt	Psychiatrie	2	1070.0
+2024	A	2024-04	DEU	Single course	Print: journal insert	Assistenzarzt	Psychiatrie	1	490.0
+2024	C	2024-08	CHE	Single course	Email / newsletter	Other / unknown	Other	1	630.0
+2024	B	2024-07	CHE	Single course	Print: postal flyer	Other / unknown	Other	1	588.0
+2024	A	2024-01	DEU	Single course	Social media	Facharzt	Other	2	880.0
+2024	A	2024-03	CHE	Single course	Print: journal insert	Other / unknown	Other	1	263.0
+2024	A	2024-04	CHE	Single course	Search	Facharzt	Other	1	525.0
+2024	B	2024-08	AUT	Single course	Search	Other / unknown	Other	1	240.0
+2024	A	2024-01	AUT	Single course	Email / newsletter	Facharzt	Several	1	320.0
+2024	A	2024-04	DEU	Single course	FOMF website / former participant	Facharzt	Allgemeinmedizin	1	620.0
+2024	B	2024-06	CHE	Single course	Print: journal insert	Facharzt	Anästhesiologie	3	1355.0
+2024	A	2024-04	DEU	Membership	Membership	Facharzt	Kardiologie	2	980.0
+2024	B	2024-07	CHE	Single course	Colleague recommendation	Assistenzarzt	Allgemeinmedizin	1	483.0
+2024	A	2024-03	AUT	Single course	Colleague recommendation	Assistenzarzt	Other	1	140.0
+2024	A	2024-03	DEU	Single course	Print: journal insert	Assistenzarzt	Kardiologie	1	650.0
+2024	A	2024-02	DEU	Single course	Print: clinic poster	Assistenzarzt	Neurologie	1	285.0
+2024	A	2024-03	CHE	Single course	Other	Assistenzarzt	Pädiatrie	1	525.0
+2024	A	2024-02	AUT	Single course	Colleague recommendation	Assistenzarzt	Pädiatrie	1	340.0
+2024	B	2024-06	CHE	Membership	Membership	Assistenzarzt	Pädiatrie	2	1617.0
+2024	B	2024-06	AUT	Single course	Print: clinic poster	Facharzt	Allgemeinmedizin	1	150.0
+2024	C	2024-09	AUT	Membership	Membership	Facharzt	Other	2	1140.0
+2024	B	2024-06	CHE	Single course	Congress / fair	Facharzt	Innere Medizin	1	263.0
+2024	B	2024-07	CHE	Single course	Congress / fair	Facharzt	Other	1	1040.0
+2024	A	2024-03	CHE	Single course	Print: journal insert	Facharzt	Neurologie	1	683.0
+2024	C	2024-08	AUT	Single course	Print: journal ad	Facharzt	Allgemeinmedizin	1	600.0
+2024	A	2024-03	DEU	Single course	Email / newsletter	Facharzt	Allgemeinmedizin	1	590.0
+2024	B	2024-07	CHE	Membership	Membership	Facharzt	Several	1	935.0
+2024	A	2024-02	CHE	Single course	Search	Facharzt	Other	1	683.0
+2024	C	2024-08	AUT	Single course	Print: postal flyer	Facharzt	Other	2	510.0
+2024	A	2024-05	CHE	Membership	Membership	Other / unknown	Psychiatrie	1	1008.0
+2024	A	2024-02	DEU	Single course	Print: postal flyer	Other / unknown	Not stated	2	1100.0
+2024	A	2024-05	DEU	Single course	Email / newsletter	Other / unknown	Not stated	1	15.0
+2024	A	2024-05	CHE	Single course	Print: clinic poster	Assistenzarzt	Other	1	830.0
+2024	A	2024-02	DEU	Single course	Print: journal insert	Facharzt	Several	1	730.0
+2024	C	2024-09	AUT	Single course	Colleague recommendation	Facharzt	Several	2	420.0
+2024	A	2024-02	DEU	Single course	Colleague recommendation	Assistenzarzt	Several	3	1120.0
+2024	A	2024-02	CHE	Membership	Membership	Facharzt	Several	4	3927.0
+2024	C	2024-09	AUT	Single course	Print: journal insert	Facharzt	Several	2	620.0
+2024	A	2024-01	CHE	Membership	Membership	Facharzt	Several	2	1911.0
+2024	A	2024-03	DEU	Single course	Colleague recommendation	Assistenzarzt	Allgemeinmedizin	5	2580.0
+2024	C	2024-08	AUT	Single course	Print: postal flyer	Facharzt	Allgemeinmedizin	2	885.0
+2024	A	2024-04	DEU	Single course	Colleague recommendation	Facharzt	Allgemeinmedizin	1	370.0
+2024	B	2024-06	DEU	Single course	Search	Assistenzarzt	Allgemeinmedizin	8	4195.0
+2024	A	2024-02	CHE	Single course	Email / newsletter	Facharzt	Allgemeinmedizin	1	683.0
+2024	B	2024-06	AUT	Membership	Membership	Facharzt	Allgemeinmedizin	15	8840.0
+2024	A	2024-04	AUT	Membership	Membership	Facharzt	Allgemeinmedizin	9	5420.0
+2024	A	2024-05	AUT	Membership	Membership	Facharzt	Allgemeinmedizin	4	2140.0
+2024	C	2024-08	CHE	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	2	788.0
+2024	A	2024-01	AUT	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	3	1750.0
+2024	A	2024-03	AUT	Single course	Colleague recommendation	Assistenzarzt	Allgemeinmedizin	1	140.0
+2024	A	2024-01	DEU	Single course	FOMF website / former participant	Assistenzarzt	Allgemeinmedizin	2	1120.0
+2024	A	2024-03	AUT	Single course	FOMF website / former participant	Assistenzarzt	Allgemeinmedizin	1	355.0
+2024	B	2024-06	CHE	Single course	Colleague recommendation	Assistenzarzt	Allgemeinmedizin	2	609.0
+2024	A	2024-01	CHE	Single course	Colleague recommendation	Facharzt	Allgemeinmedizin	4	2725.0
+2024	A	2024-03	CHE	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	1	263.0
+2024	B	2024-08	CHE	Single course	Search	Facharzt	Allgemeinmedizin	1	368.0
+2024	A	2024-03	AUT	Single course	Print: journal insert	Assistenzarzt	Allgemeinmedizin	1	420.0
+2024	A	2024-04	CHE	Single course	Email / newsletter	Facharzt	Allgemeinmedizin	2	1307.0
+2024	A	2024-01	CHE	Single course	Print: postal flyer	Assistenzarzt	Allgemeinmedizin	1	940.0
+2024	A	2024-04	AUT	Single course	Colleague recommendation	Facharzt	Allgemeinmedizin	2	820.0
+2024	C	2024-08	DEU	Single course	Email / newsletter	Facharzt	Allgemeinmedizin	2	780.0
+2024	B	2024-06	CHE	Single course	Email / newsletter	Assistenzarzt	Allgemeinmedizin	1	431.0
+2024	C	2024-09	DEU	Single course	Email / newsletter	Facharzt	Allgemeinmedizin	2	1230.0
+2024	A	2024-05	DEU	Single course	Print: journal ad	Facharzt	Allgemeinmedizin	2	1190.0
+2024	A	2024-02	DEU	Single course	Colleague recommendation	Facharzt	Several	2	786.0
+2024	A	2024-04	AUT	Membership	Membership	Facharzt	Anästhesiologie	1	570.0
+2024	B	2024-08	AUT	Single course	Colleague recommendation	Other / unknown	Anästhesiologie	1	130.0
+2024	A	2024-03	AUT	Single course	Print: clinic poster	Facharzt	Anästhesiologie	1	330.0
+2024	A	2024-05	CHE	Single course	Social media	Assistenzarzt	Anästhesiologie	1	431.0
+2024	B	2024-06	CHE	Single course	Print: postal flyer	Assistenzarzt	Anästhesiologie	1	420.0
+2024	A	2024-03	AUT	Single course	Print: journal insert	Facharzt	Anästhesiologie	1	170.0
+2024	B	2024-06	AUT	Single course	Print: journal insert	Facharzt	Anästhesiologie	1	340.0
+2024	A	2024-04	CHE	Single course	Print: postal flyer	Facharzt	Anästhesiologie	1	473.0
+2024	A	2024-01	DEU	Single course	Colleague recommendation	Facharzt	Anästhesiologie	1	350.0
+2024	A	2024-05	DEU	Single course	Print: postal flyer	Facharzt	Anästhesiologie	1	365.0
+2024	A	2024-02	DEU	Single course	Print: journal insert	Facharzt	Other	6	3050.0
+2024	A	2024-05	AUT	Single course	Colleague recommendation	Assistenzarzt	Other	1	280.0
+2024	B	2024-06	DEU	Membership	Membership	Assistenzarzt	Other	14	6820.0
+2024	B	2024-08	AUT	Single course	Congress / fair	Facharzt	Other	1	280.0
+2024	A	2024-02	DEU	Membership	Membership	Facharzt	Other	18	9530.0
+2024	C	2024-09	DEU	Membership	Membership	Facharzt	Other	6	3470.0
+2024	A	2024-02	DEU	Single course	Search	Assistenzarzt	Other	6	2050.0
+2024	A	2024-04	DEU	Single course	Print: postal flyer	Assistenzarzt	Other	1	430.0
+2024	A	2024-05	CHE	Single course	Colleague recommendation	Other / unknown	Other	1	693.0
+2024	B	2024-06	CHE	Single course	FOMF website / former participant	Other / unknown	Other	1	263.0
+2024	C	2024-09	DEU	Single course	Other	Other / unknown	Other	1	310.0
+2024	B	2024-08	CHE	Single course	Email / newsletter	Other / unknown	Other	1	735.0
+2024	A	2024-03	CHE	Single course	Email / newsletter	Other / unknown	Other	1	525.0
+2024	B	2024-07	DEU	Membership	Membership	Facharzt	Other	11	6010.0
+2024	A	2024-01	DEU	Single course	Print: journal insert	Assistenzarzt	Other	3	1230.0
+2024	A	2024-05	CHE	Single course	Search	Assistenzarzt	Other	1	347.0
+2024	C	2024-09	CHE	Single course	Print: clinic poster	Facharzt	Other	1	767.0
+2024	C	2024-09	AUT	Single course	Colleague recommendation	Facharzt	Other	5	1965.0
+2024	C	2024-08	CHE	Single course	Colleague recommendation	Facharzt	Other	2	998.0
+2024	A	2024-03	CHE	Single course	Search	Facharzt	Other	1	683.0
+2024	A	2024-04	DEU	Single course	Print: clinic poster	Assistenzarzt	Other	1	480.0
+2024	B	2024-07	DEU	Single course	Colleague recommendation	Assistenzarzt	Other	3	1350.0
+2024	B	2024-08	DEU	Single course	Print: journal ad	Facharzt	Other	2	695.0
+2024	B	2024-06	AUT	Single course	Print: clinic poster	Facharzt	Other	1	250.0
+2024	B	2024-07	DEU	Membership	Membership	Assistenzarzt	Several	2	1070.0
+2024	C	2024-08	CHE	Single course	Colleague recommendation	Assistenzarzt	Innere Medizin	2	1281.0
+2024	C	2024-09	DEU	Single course	Search	Assistenzarzt	Innere Medizin	10	5365.0
+2024	A	2024-02	DEU	Single course	Colleague recommendation	Facharzt	Innere Medizin	3	2010.0
+2024	A	2024-03	DEU	Single course	Print: postal flyer	Facharzt	Innere Medizin	4	2865.0
+2024	C	2024-09	DEU	Single course	Print: clinic poster	Facharzt	Innere Medizin	2	1180.0
+2024	A	2024-03	AUT	Membership	Membership	Assistenzarzt	Innere Medizin	2	1070.0
+2024	B	2024-07	CHE	Membership	Membership	Assistenzarzt	Innere Medizin	2	1617.0
+2024	A	2024-02	CHE	Single course	Colleague recommendation	Assistenzarzt	Innere Medizin	1	646.0
+2024	C	2024-09	DEU	Membership	Membership	Facharzt	Innere Medizin	10	5800.0
+2024	A	2024-02	DEU	Single course	Email / newsletter	Facharzt	Innere Medizin	1	590.0
+2024	C	2024-09	AUT	Membership	Membership	Assistenzarzt	Innere Medizin	4	1960.0
+2024	A	2024-02	AUT	Membership	Membership	Assistenzarzt	Innere Medizin	3	1560.0
+2024	C	2024-08	DEU	Single course	Email / newsletter	Facharzt	Innere Medizin	2	1040.0
+2024	A	2024-03	DEU	Membership	Membership	Facharzt	Innere Medizin	5	3030.0
+2024	C	2024-09	DEU	Single course	Print: postal flyer	Assistenzarzt	Innere Medizin	1	540.0
+2024	A	2024-05	DEU	Single course	Social media	Assistenzarzt	Innere Medizin	1	690.0
+2024	C	2024-09	AUT	Single course	Print: journal insert	Assistenzarzt	Innere Medizin	1	550.0
+2024	A	2024-01	DEU	Single course	Colleague recommendation	Facharzt	Innere Medizin	1	640.0
+2024	C	2024-09	DEU	Single course	Print: postal flyer	Facharzt	Innere Medizin	5	2380.0
+2024	A	2024-01	DEU	Single course	Colleague recommendation	Assistenzarzt	Innere Medizin	3	1750.0
+2024	B	2024-06	AUT	Membership	Membership	Assistenzarzt	Innere Medizin	3	1560.0
+2024	C	2024-08	DEU	Membership	Membership	Assistenzarzt	Innere Medizin	3	1560.0
+2024	B	2024-06	DEU	Single course	Print: journal insert	Facharzt	Innere Medizin	2	950.0
+2024	A	2024-01	AUT	Single course	Print: postal flyer	Assistenzarzt	Innere Medizin	1	345.0
+2024	A	2024-02	AUT	Membership	Membership	Facharzt	Innere Medizin	1	570.0
+2024	C	2024-09	CHE	Single course	Colleague recommendation	Facharzt	Innere Medizin	2	1575.0
+2024	A	2024-05	DEU	Single course	Print: journal ad	Assistenzarzt	Innere Medizin	1	620.0
+2024	A	2024-05	DEU	Single course	Print: postal flyer	Facharzt	Innere Medizin	1	590.0
+2024	C	2024-08	DEU	Single course	Print: journal insert	Facharzt	Innere Medizin	3	1695.0
+2024	A	2024-03	CHE	Single course	Social media	Assistenzarzt	Innere Medizin	1	788.0
+2024	A	2024-01	DEU	Single course	Print: postal flyer	Assistenzarzt	Innere Medizin	1	320.0
+2024	A	2024-04	DEU	Single course	Print: journal insert	Assistenzarzt	Innere Medizin	1	650.0
+2024	A	2024-03	DEU	Single course	Search	Assistenzarzt	Kardiologie	1	460.0
+2024	B	2024-06	CHE	Membership	Membership	Facharzt	Kardiologie	1	903.0
+2024	C	2024-08	DEU	Single course	FOMF website / former participant	Facharzt	Kardiologie	1	595.0
+2024	A	2024-05	AUT	Membership	Membership	Facharzt	Kardiologie	1	570.0
+2024	B	2024-06	DEU	Membership	Membership	Facharzt	Kardiologie	4	2270.0
+2024	A	2024-04	DEU	Single course	Congress / fair	Facharzt	Kardiologie	1	590.0
+2024	C	2024-09	DEU	Membership	Membership	Assistenzarzt	Kardiologie	1	580.0
+2024	A	2024-02	DEU	Single course	Colleague recommendation	Assistenzarzt	Kardiologie	1	440.0
+2024	C	2024-09	CHE	Single course	Email / newsletter	Facharzt	Kardiologie	1	504.0
+2024	C	2024-09	CHE	Membership	Membership	Facharzt	Kardiologie	1	1008.0
+2024	B	2024-07	CHE	Single course	Colleague recommendation	Assistenzarzt	Kardiologie	1	483.0
+2024	C	2024-08	DEU	Single course	Print: postal flyer	Other / unknown	Neurologie	2	520.0
+2024	B	2024-06	AUT	Membership	Membership	Facharzt	Neurologie	2	1140.0
+2024	C	2024-09	DEU	Single course	Print: clinic poster	Assistenzarzt	Neurologie	3	830.0
+2024	B	2024-07	DEU	Single course	Print: postal flyer	Assistenzarzt	Neurologie	1	250.0
+2024	A	2024-01	DEU	Single course	Print: postal flyer	Assistenzarzt	Neurologie	4	1100.0
+2024	C	2024-09	CHE	Single course	Congress / fair	Other / unknown	Neurologie	1	483.0
+2024	A	2024-05	AUT	Single course	Email / newsletter	Facharzt	Neurologie	1	513.0
+2024	A	2024-02	DEU	Single course	Colleague recommendation	Assistenzarzt	Neurologie	2	515.0
+2024	B	2024-07	DEU	Single course	Print: clinic poster	Assistenzarzt	Neurologie	1	250.0
+2024	B	2024-07	CHE	Single course	Print: journal ad	Assistenzarzt	Neurologie	1	483.0
+2024	A	2024-03	DEU	Single course	Print: postal flyer	Facharzt	Neurologie	3	1005.0
+2024	C	2024-09	AUT	Single course	Social media	Assistenzarzt	Several	1	295.0
+2024	B	2024-07	CHE	Single course	Social media	Assistenzarzt	Other	2	1491.0
+2024	A	2024-02	DEU	Single course	Colleague recommendation	Assistenzarzt	Pädiatrie	1	460.0
+2024	A	2024-05	DEU	Single course	Search	Assistenzarzt	Pädiatrie	2	880.0
+2024	B	2024-06	DEU	Single course	Colleague recommendation	Facharzt	Pädiatrie	1	470.0
+2024	C	2024-09	DEU	Single course	Colleague recommendation	Assistenzarzt	Pädiatrie	7	3140.0
+2024	B	2024-07	DEU	Membership	Membership	Facharzt	Pädiatrie	1	570.0
+2024	B	2024-08	AUT	Single course	Colleague recommendation	Assistenzarzt	Pädiatrie	2	620.0
+2024	A	2024-03	CHE	Membership	Membership	Facharzt	Pädiatrie	3	2804.0
+2024	A	2024-05	DEU	Single course	Print: journal ad	Assistenzarzt	Pädiatrie	1	460.0
+2024	A	2024-04	CHE	Single course	Print: clinic poster	Facharzt	Pädiatrie	1	263.0
+2024	A	2024-05	DEU	Single course	Colleague recommendation	Assistenzarzt	Pädiatrie	1	440.0
+2024	A	2024-03	CHE	Single course	Search	Assistenzarzt	Pädiatrie	1	646.0
+2024	A	2024-04	AUT	Single course	Colleague recommendation	Facharzt	Other	2	840.0
+2024	B	2024-06	DEU	Single course	Email / newsletter	Facharzt	Psychiatrie	5	2730.0
+2024	A	2024-01	AUT	Single course	Print: postal flyer	Other / unknown	Psychiatrie	1	240.0
+2024	A	2024-05	CHE	Membership	Membership	Assistenzarzt	Psychiatrie	2	1743.0
+2024	A	2024-04	CHE	Single course	Print: clinic poster	Facharzt	Psychiatrie	1	746.0
+2024	C	2024-08	DEU	Single course	Colleague recommendation	Other / unknown	Psychiatrie	1	260.0
+2024	C	2024-09	DEU	Single course	Print: clinic poster	Facharzt	Psychiatrie	1	520.0
+2024	C	2024-09	DEU	Single course	Colleague recommendation	Facharzt	Psychiatrie	5	2630.0
+2024	A	2024-02	DEU	Single course	Search	Other / unknown	Psychiatrie	1	310.0
+2024	B	2024-07	DEU	Membership	Membership	Facharzt	Psychiatrie	3	1710.0
+2024	A	2024-05	DEU	Single course	Print: postal flyer	Facharzt	Psychiatrie	2	480.0
+2024	B	2024-06	DEU	Single course	FOMF website / former participant	Facharzt	Psychiatrie	1	520.0
+2024	A	2024-01	CHE	Single course	Print: postal flyer	Facharzt	Psychiatrie	1	782.0
+2024	B	2024-06	CHE	Single course	Print: postal flyer	Assistenzarzt	Psychiatrie	1	693.0
+2024	C	2024-08	AUT	Single course	Email / newsletter	Facharzt	Other	3	690.0
+2024	A	2024-03	AUT	Membership	Membership	Facharzt	Other	3	1890.0
+2024	B	2024-08	DEU	Single course	Print: clinic poster	Facharzt	Other	1	190.0
+2024	B	2024-08	DEU	Single course	Congress / fair	Facharzt	Other	1	240.0
+2024	A	2024-04	CHE	Single course	Print: journal ad	Other / unknown	Other	1	263.0
+2024	B	2024-08	CHE	Single course	Colleague recommendation	Other / unknown	Allgemeinmedizin	1	294.0
+2024	B	2024-06	DEU	Membership	Membership	Other / unknown	Psychiatrie	1	490.0
+2024	B	2024-06	AUT	Membership	Membership	Facharzt	Several	2	1140.0
+2024	A	2024-03	DEU	Single course	Print: journal insert	Facharzt	Several	1	325.0
+2024	B	2024-06	DEU	Single course	Email / newsletter	Facharzt	Several	1	590.0
+2024	A	2024-03	DEU	Single course	Print: postal flyer	Facharzt	Anästhesiologie	1	365.0
+2024	A	2024-03	DEU	Single course	Print: journal ad	Facharzt	Other	1	350.0
+2024	C	2024-09	DEU	Single course	Search	Facharzt	Kardiologie	2	1030.0
+2024	B	2024-07	CHE	Membership	Membership	Assistenzarzt	Several	1	903.0
+2024	B	2024-08	DEU	Single course	Email / newsletter	Facharzt	Neurologie	1	280.0
+2024	B	2024-07	CHE	Single course	Colleague recommendation	Other / unknown	Psychiatrie	1	777.0
+2024	C	2024-08	CHE	Membership	Membership	Other / unknown	Innere Medizin	1	935.0
+2024	B	2024-08	AUT	Membership	Membership	Assistenzarzt	Allgemeinmedizin	1	580.0
+2024	A	2024-04	CHE	Membership	Membership	Assistenzarzt	Kardiologie	1	924.0
+2024	B	2024-06	AUT	Membership	Membership	Assistenzarzt	Psychiatrie	1	490.0
+2024	B	2024-08	CHE	Membership	Membership	Facharzt	Other	1	903.0
+2024	B	2024-06	CHE	Single course	Social media	Facharzt	Several	1	473.0
+2024	A	2024-03	AUT	Membership	Membership	Facharzt	Anästhesiologie	1	570.0
+2024	A	2024-02	AUT	Single course	Print: clinic poster	Facharzt	Innere Medizin	1	240.0
+2024	A	2024-04	CHE	Single course	Print: postal flyer	Facharzt	Innere Medizin	1	515.0
+2024	B	2024-07	DEU	Single course	Colleague recommendation	Facharzt	Several	1	510.0
+2024	A	2024-01	DEU	Single course	Print: postal flyer	Facharzt	Neurologie	2	595.0
+2024	C	2024-08	DEU	Single course	Colleague recommendation	Facharzt	Psychiatrie	1	520.0
+2024	C	2024-09	AUT	Single course	Search	Facharzt	Psychiatrie	1	250.0
+2024	A	2024-01	CHE	Membership	Membership	Facharzt	Pädiatrie	2	1911.0
+2024	A	2024-01	DEU	Single course	Print: clinic poster	Facharzt	Allgemeinmedizin	1	615.0
+2024	C	2024-08	DEU	Single course	Search	Assistenzarzt	Several	1	540.0
+2024	A	2024-04	DEU	Single course	Print: postal flyer	Facharzt	Several	1	615.0
+2024	A	2024-04	DEU	Single course	Print: journal insert	Facharzt	Several	1	665.0
+2024	C	2024-09	DEU	Single course	Invitation / sponsor	Facharzt	Innere Medizin	1	20.0
+2024	B	2024-08	CHE	Single course	Print: journal insert	Facharzt	Other	1	399.0
+2024	A	2024-01	AUT	Single course	Print: journal insert	Facharzt	Neurologie	1	270.0
+2024	A	2024-01	DEU	Single course	Print: clinic poster	Facharzt	Neurologie	1	280.0
+2024	C	2024-09	CHE	Membership	Membership	Facharzt	Neurologie	1	903.0
+2024	A	2024-02	AUT	Single course	FOMF website / former participant	Other / unknown	Kardiologie	1	280.0
+2024	B	2024-08	DEU	Single course	Email / newsletter	Assistenzarzt	Neurologie	1	275.0
+2024	A	2024-05	DEU	Membership	Membership	Other / unknown	Other	1	570.0
+2024	A	2024-01	CHE	Membership	Membership	Other / unknown	Psychiatrie	1	903.0
+2024	A	2024-01	DEU	Single course	Colleague recommendation	Other / unknown	Psychiatrie	1	520.0
+2024	C	2024-09	DEU	Single course	Email / newsletter	Other / unknown	Psychiatrie	1	520.0
+2024	A	2024-02	DEU	Single course	Email / newsletter	Other / unknown	Not stated	2	805.0
+2024	A	2024-01	CHE	Single course	Other	Other / unknown	Not stated	2	1019.0
+2024	B	2024-06	AUT	Single course	Email / newsletter	Facharzt	Allgemeinmedizin	5	2290.0
+2024	B	2024-06	DEU	Single course	Print: postal flyer	Facharzt	Allgemeinmedizin	5	3130.0
+2024	A	2024-01	DEU	Single course	Print: postal flyer	Facharzt	Allgemeinmedizin	3	1470.0
+2024	B	2024-06	CHE	Single course	Search	Assistenzarzt	Several	1	263.0
+2024	A	2024-04	CHE	Single course	Colleague recommendation	Other / unknown	Several	1	525.0
+2024	B	2024-06	CHE	Membership	Membership	Facharzt	Several	3	2720.0
+2024	A	2024-04	AUT	Single course	Search	Facharzt	Several	1	590.0
+2024	C	2024-08	DEU	Single course	Email / newsletter	Facharzt	Several	1	590.0
+2024	B	2024-08	DEU	Single course	Social media	Facharzt	Allgemeinmedizin	1	590.0
+2024	A	2024-01	CHE	Membership	Membership	Facharzt	Allgemeinmedizin	14	12710.0
+2024	B	2024-07	DEU	Membership	Membership	Facharzt	Allgemeinmedizin	10	5630.0
+2024	B	2024-06	DEU	Single course	Print: journal ad	Facharzt	Allgemeinmedizin	3	1770.0
+2024	A	2024-01	CHE	Membership	Membership	Assistenzarzt	Allgemeinmedizin	2	1617.0
+2024	B	2024-08	CHE	Membership	Membership	Facharzt	Allgemeinmedizin	4	3822.0
+2024	C	2024-08	CHE	Single course	Other	Facharzt	Allgemeinmedizin	1	389.0
+2024	C	2024-08	AUT	Membership	Membership	Facharzt	Allgemeinmedizin	4	2460.0
+2024	B	2024-06	AUT	Single course	Colleague recommendation	Facharzt	Allgemeinmedizin	3	1210.0
+2024	B	2024-06	CHE	Membership	Membership	Facharzt	Allgemeinmedizin	19	16805.0
+2024	C	2024-09	DEU	Single course	Email / newsletter	Assistenzarzt	Allgemeinmedizin	3	1875.0
+2024	C	2024-09	AUT	Single course	Search	Facharzt	Allgemeinmedizin	1	570.0
+2024	A	2024-01	DEU	Single course	Search	Facharzt	Allgemeinmedizin	3	1820.0
+2024	A	2024-04	AUT	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	3	1000.0
+2024	C	2024-08	DEU	Single course	Colleague recommendation	Assistenzarzt	Allgemeinmedizin	2	1080.0
+2024	B	2024-08	AUT	Single course	Email / newsletter	Facharzt	Allgemeinmedizin	2	720.0
+2024	C	2024-09	CHE	Single course	Email / newsletter	Facharzt	Allgemeinmedizin	1	368.0
+2024	A	2024-03	AUT	Single course	Print: postal flyer	Facharzt	Allgemeinmedizin	6	2170.0
+2024	B	2024-06	AUT	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	4	1660.0
+2024	A	2024-05	CHE	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	2	1229.0
+2024	C	2024-08	CHE	Single course	Print: postal flyer	Facharzt	Allgemeinmedizin	1	368.0
+2024	A	2024-01	CHE	Single course	FOMF website / former participant	Facharzt	Allgemeinmedizin	2	1570.0
+2024	A	2024-02	AUT	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	1	270.0
+2024	A	2024-01	AUT	Single course	Social media	Assistenzarzt	Allgemeinmedizin	1	470.0
+2024	B	2024-07	CHE	Membership	Membership	Facharzt	Anästhesiologie	1	1008.0
+2024	A	2024-02	DEU	Single course	Colleague recommendation	Assistenzarzt	Anästhesiologie	2	620.0
+2024	A	2024-04	CHE	Single course	Email / newsletter	Facharzt	Anästhesiologie	1	441.0
+2024	A	2024-05	DEU	Single course	Social media	Facharzt	Anästhesiologie	2	380.0
+2024	A	2024-02	DEU	Single course	Search	Facharzt	Anästhesiologie	3	1050.0
+2024	B	2024-06	CHE	Single course	Print: clinic poster	Facharzt	Anästhesiologie	2	714.0
+2024	A	2024-04	DEU	Single course	Print: journal insert	Facharzt	Anästhesiologie	8	2930.0
+2024	A	2024-02	CHE	Single course	Colleague recommendation	Facharzt	Anästhesiologie	2	903.0
+2024	A	2024-05	CHE	Single course	Print: postal flyer	Facharzt	Anästhesiologie	2	977.0
+2024	A	2024-02	DEU	Single course	Colleague recommendation	Facharzt	Other	3	1430.0
+2024	A	2024-01	DEU	Single course	Search	Facharzt	Other	4	2170.0
+2024	A	2024-05	DEU	Single course	Print: journal insert	Facharzt	Other	6	2935.0
+2024	A	2024-01	DEU	Single course	FOMF website / former participant	Facharzt	Other	5	2640.0
+2024	A	2024-02	AUT	Single course	Colleague recommendation	Assistenzarzt	Other	4	1360.0
+2024	B	2024-06	DEU	Single course	Print: journal insert	Facharzt	Other	8	3450.0
+2024	A	2024-04	DEU	Single course	Search	Assistenzarzt	Other	2	920.0
+2024	A	2024-01	DEU	Membership	Membership	Facharzt	Other	19	10180.0
+2024	A	2024-04	DEU	Single course	Colleague recommendation	Assistenzarzt	Other	8	3365.0
+2024	B	2024-07	CHE	Membership	Membership	Facharzt	Other	4	3717.0
+2024	B	2024-06	DEU	Single course	Colleague recommendation	Assistenzarzt	Other	4	1880.0
+2024	A	2024-03	DEU	Single course	Print: journal insert	Assistenzarzt	Other	2	760.0
+2024	B	2024-08	DEU	Single course	Print: journal insert	Facharzt	Other	2	1060.0
+2024	C	2024-08	CHE	Single course	Email / newsletter	Facharzt	Other	3	1638.0
+2024	C	2024-09	CHE	Single course	Print: postal flyer	Other / unknown	Other	2	1439.0
+2024	A	2024-01	DEU	Single course	Print: postal flyer	Other / unknown	Other	3	1210.0
+2024	B	2024-07	DEU	Single course	Print: postal flyer	Assistenzarzt	Other	2	1130.0
+2024	A	2024-01	DEU	Single course	Email / newsletter	Facharzt	Other	5	2115.0
+2024	A	2024-05	AUT	Single course	Search	Facharzt	Other	1	270.0
+2024	A	2024-02	CHE	Single course	Print: journal insert	Facharzt	Other	1	683.0
+2024	A	2024-03	DEU	Membership	Membership	Assistenzarzt	Other	1	480.0
+2024	B	2024-07	AUT	Single course	Colleague recommendation	Assistenzarzt	Other	2	660.0
+2024	A	2024-02	AUT	Single course	Social media	Assistenzarzt	Other	1	340.0
+2024	A	2024-02	AUT	Single course	Email / newsletter	Facharzt	Other	1	390.0
+2024	A	2024-03	CHE	Single course	Print: journal insert	Facharzt	Other	1	683.0
+2024	C	2024-09	CHE	Single course	Print: postal flyer	Facharzt	Other	4	2804.0
+2024	A	2024-01	AUT	Single course	FOMF website / former participant	Facharzt	Other	1	380.0
+2024	A	2024-01	AUT	Single course	Invitation / sponsor	Facharzt	Gynäkologie	1	15.0
+2024	A	2024-04	DEU	Single course	Email / newsletter	Assistenzarzt	Other	1	320.0
+2024	A	2024-04	AUT	Single course	Email / newsletter	Facharzt	Other	3	750.0
+2024	B	2024-06	AUT	Membership	Membership	Assistenzarzt	Other	2	1040.0
+2024	B	2024-06	AUT	Single course	Print: postal flyer	Facharzt	Other	5	1320.0
+2024	A	2024-05	DEU	Membership	Membership	Assistenzarzt	Several	3	1320.0
+2024	A	2024-01	DEU	Single course	Print: journal insert	Facharzt	Several	3	1560.0
+2024	A	2024-05	CHE	Membership	Membership	Assistenzarzt	Innere Medizin	2	1838.0
+2024	B	2024-06	CHE	Membership	Membership	Facharzt	Innere Medizin	7	5996.0
+2024	B	2024-08	DEU	Single course	Colleague recommendation	Assistenzarzt	Innere Medizin	3	1555.0
+2024	A	2024-04	CHE	Membership	Membership	Assistenzarzt	Innere Medizin	4	3360.0
+2024	A	2024-05	CHE	Membership	Membership	Facharzt	Innere Medizin	10	9566.0
+2024	C	2024-09	DEU	Single course	Print: journal insert	Facharzt	Innere Medizin	4	2445.0
+2024	B	2024-06	DEU	Single course	Print: journal ad	Facharzt	Innere Medizin	1	185.0
+2024	A	2024-02	DEU	Membership	Membership	Assistenzarzt	Innere Medizin	5	2450.0
+2024	A	2024-02	DEU	Single course	Print: postal flyer	Facharzt	Innere Medizin	2	1395.0
+2024	C	2024-08	DEU	Single course	Search	Facharzt	Innere Medizin	2	1185.0
+2024	A	2024-01	DEU	Single course	Print: journal ad	Assistenzarzt	Innere Medizin	4	1945.0
+2024	B	2024-08	DEU	Membership	Membership	Assistenzarzt	Innere Medizin	3	1470.0
+2024	A	2024-02	DEU	Single course	Colleague recommendation	Assistenzarzt	Innere Medizin	2	1200.0
+2024	A	2024-05	AUT	Membership	Membership	Facharzt	Innere Medizin	2	1230.0
+2024	A	2024-03	DEU	Single course	FOMF website / former participant	Facharzt	Innere Medizin	1	715.0
+2024	A	2024-01	DEU	Single course	Social media	Assistenzarzt	Innere Medizin	1	590.0
+2024	A	2024-02	DEU	Single course	Print: journal insert	Facharzt	Innere Medizin	3	1820.0
+2024	C	2024-08	AUT	Membership	Membership	Assistenzarzt	Innere Medizin	1	490.0
+2024	B	2024-08	DEU	Single course	Print: journal insert	Facharzt	Innere Medizin	1	590.0
+2024	A	2024-04	AUT	Single course	Social media	Assistenzarzt	Innere Medizin	1	570.0
+2024	B	2024-06	DEU	Membership	Membership	Assistenzarzt	Innere Medizin	2	980.0
+2024	A	2024-02	CHE	Membership	Membership	Assistenzarzt	Other	1	809.0
+2024	B	2024-08	DEU	Membership	Membership	Facharzt	Kardiologie	2	1140.0
+2024	A	2024-01	DEU	Single course	Colleague recommendation	Assistenzarzt	Kardiologie	3	1455.0
+2024	A	2024-04	CHE	Single course	Print: journal insert	Facharzt	Kardiologie	1	452.0
+2024	A	2024-03	DEU	Membership	Membership	Facharzt	Kardiologie	3	1790.0
+2024	C	2024-08	DEU	Single course	Search	Other / unknown	Kardiologie	1	450.0
+2024	A	2024-02	DEU	Single course	Search	Facharzt	Kardiologie	1	510.0
+2024	A	2024-05	DEU	Single course	Social media	Facharzt	Kardiologie	1	490.0
+2024	A	2024-05	DEU	Single course	Print: postal flyer	Facharzt	Kardiologie	4	1820.0
+2024	C	2024-09	DEU	Single course	Colleague recommendation	Facharzt	Kardiologie	1	590.0
+2024	A	2024-03	CHE	Single course	Colleague recommendation	Assistenzarzt	Kardiologie	1	431.0
+2024	A	2024-05	DEU	Single course	Print: journal ad	Facharzt	Several	1	590.0
+2024	C	2024-08	DEU	Single course	Print: journal insert	Assistenzarzt	Several	1	250.0
+2024	A	2024-01	DEU	Single course	Search	Facharzt	Neurologie	4	1055.0
+2024	C	2024-08	DEU	Single course	Email / newsletter	Other / unknown	Neurologie	1	250.0
+2024	A	2024-01	DEU	Single course	Print: clinic poster	Assistenzarzt	Neurologie	1	270.0
+2024	A	2024-01	DEU	Membership	Membership	Assistenzarzt	Neurologie	1	490.0
+2024	C	2024-08	CHE	Single course	Print: postal flyer	Assistenzarzt	Other	1	263.0
+2024	C	2024-08	CHE	Single course	Email / newsletter	Assistenzarzt	Other	1	483.0
+2024	A	2024-01	CHE	Single course	FOMF website / former participant	Assistenzarzt	Pädiatrie	4	2557.0
+2024	B	2024-08	DEU	Single course	Print: journal insert	Facharzt	Pädiatrie	4	1880.0
+2024	A	2024-04	DEU	Membership	Membership	Facharzt	Pädiatrie	1	570.0
+2024	C	2024-08	DEU	Single course	Email / newsletter	Assistenzarzt	Pädiatrie	1	430.0
+2024	A	2024-04	CHE	Membership	Membership	Facharzt	Pädiatrie	4	3717.0
+2024	B	2024-08	DEU	Single course	Colleague recommendation	Assistenzarzt	Pädiatrie	2	380.0
+2024	B	2024-06	DEU	Single course	Print: journal insert	Facharzt	Pädiatrie	1	490.0
+2024	A	2024-04	CHE	Single course	Search	Assistenzarzt	Pädiatrie	2	1265.0
+2024	A	2024-04	CHE	Single course	Email / newsletter	Facharzt	Pädiatrie	2	1145.0
+2024	A	2024-03	DEU	Single course	Colleague recommendation	Facharzt	Pädiatrie	1	470.0
+2024	B	2024-07	AUT	Single course	Print: journal ad	Facharzt	Pädiatrie	1	375.0
+2024	B	2024-07	DEU	Single course	Email / newsletter	Assistenzarzt	Other	1	470.0
+2024	A	2024-05	DEU	Single course	Print: clinic poster	Facharzt	Other	1	470.0
+2024	A	2024-03	CHE	Single course	Colleague recommendation	Assistenzarzt	Several	1	200.0
+2024	A	2024-05	CHE	Single course	Colleague recommendation	Assistenzarzt	Psychiatrie	1	693.0
+2024	B	2024-06	DEU	Single course	Colleague recommendation	Assistenzarzt	Psychiatrie	2	1060.0
+2024	A	2024-04	DEU	Single course	Print: postal flyer	Facharzt	Psychiatrie	7	3370.0
+2024	B	2024-07	DEU	Single course	Print: journal ad	Facharzt	Psychiatrie	1	530.0
+2024	B	2024-06	DEU	Membership	Membership	Facharzt	Psychiatrie	18	10790.0
+2024	C	2024-08	AUT	Single course	Email / newsletter	Other / unknown	Psychiatrie	1	145.0
+2024	A	2024-02	DEU	Single course	Print: postal flyer	Facharzt	Psychiatrie	3	1365.0
+2024	A	2024-05	CHE	Single course	Print: postal flyer	Facharzt	Psychiatrie	3	2268.0
+2024	C	2024-09	AUT	Single course	Colleague recommendation	Facharzt	Psychiatrie	2	550.0
+2024	A	2024-05	DEU	Single course	Colleague recommendation	Assistenzarzt	Psychiatrie	1	380.0
+2024	A	2024-05	DEU	Single course	Colleague recommendation	Facharzt	Psychiatrie	3	1440.0
+2024	A	2024-05	DEU	Single course	Print: journal insert	Assistenzarzt	Psychiatrie	1	510.0
+2024	C	2024-09	CHE	Single course	Email / newsletter	Facharzt	Psychiatrie	2	1481.0
+2024	C	2024-08	DEU	Single course	Print: postal flyer	Facharzt	Psychiatrie	3	1590.0
+2024	A	2024-05	DEU	Single course	Search	Assistenzarzt	Psychiatrie	1	510.0
+2024	C	2024-09	DEU	Single course	Print: journal insert	Facharzt	Psychiatrie	3	1420.0
+2024	C	2024-08	DEU	Single course	Search	Facharzt	Psychiatrie	1	520.0
+2024	C	2024-08	DEU	Single course	Email / newsletter	Facharzt	Psychiatrie	1	520.0
+2024	B	2024-06	DEU	Single course	Print: postal flyer	Facharzt	Several	1	550.0
+2024	A	2024-02	CHE	Single course	Email / newsletter	Facharzt	Psychiatrie	1	782.0
+2024	B	2024-08	AUT	Single course	Email / newsletter	Other / unknown	Other	1	240.0
+2024	B	2024-08	DEU	Single course	Print: postal flyer	Facharzt	Other	3	1230.0
+2024	A	2024-04	DEU	Single course	Colleague recommendation	Other / unknown	Other	2	725.0
+2024	A	2024-05	DEU	Single course	Social media	Facharzt	Other	1	350.0
+2024	B	2024-06	CHE	Single course	Email / newsletter	Other / unknown	Psychiatrie	1	284.0
+2024	A	2024-01	AUT	Single course	FOMF website / former participant	Facharzt	Anästhesiologie	1	590.0
+2024	A	2024-04	DEU	Single course	Email / newsletter	Facharzt	Innere Medizin	1	510.0
+2024	A	2024-01	DEU	Single course	FOMF website / former participant	Facharzt	Innere Medizin	1	690.0
+2024	A	2024-03	DEU	Single course	Search	Facharzt	Innere Medizin	4	2135.0
+2024	C	2024-08	DEU	Single course	FOMF website / former participant	Facharzt	Innere Medizin	1	580.0
+2024	C	2024-09	DEU	Single course	Print: journal ad	Facharzt	Innere Medizin	1	310.0
+2024	C	2024-09	CHE	Single course	Search	Assistenzarzt	Innere Medizin	1	347.0
+2024	A	2024-01	DEU	Single course	Search	Assistenzarzt	Several	1	190.0
+2024	B	2024-06	CHE	Single course	Colleague recommendation	Assistenzarzt	Several	1	971.0
+2024	B	2024-08	AUT	Single course	Search	Assistenzarzt	Innere Medizin	1	580.0
+2024	C	2024-08	DEU	Single course	Email / newsletter	Assistenzarzt	Innere Medizin	1	250.0
+2024	A	2024-02	DEU	Single course	Other	Assistenzarzt	Several	1	330.0
+2024	C	2024-09	DEU	Single course	Print: journal ad	Assistenzarzt	Neurologie	1	250.0
+2024	A	2024-02	DEU	Single course	Search	Assistenzarzt	Neurologie	1	250.0
+2024	A	2024-05	CHE	Single course	Congress / fair	Facharzt	Allgemeinmedizin	1	1045.0
+2024	B	2024-07	AUT	Membership	Membership	Facharzt	Innere Medizin	1	570.0
+2024	A	2024-02	CHE	Membership	Membership	Facharzt	Innere Medizin	3	2804.0
+2024	A	2024-01	DEU	Single course	Print: postal flyer	Facharzt	Innere Medizin	2	1120.0
+2024	A	2024-01	DEU	Single course	Other	Facharzt	Several	1	540.0
+2024	C	2024-09	AUT	Single course	Search	Facharzt	Innere Medizin	1	280.0
+2024	A	2024-05	CHE	Single course	Print: journal insert	Facharzt	Other	1	452.0
+2024	B	2024-07	CHE	Single course	Print: journal insert	Facharzt	Pädiatrie	1	735.0
+2024	A	2024-02	DEU	Single course	Colleague recommendation	Facharzt	Psychiatrie	1	510.0
+2024	A	2024-04	CHE	Single course	Print: clinic poster	Facharzt	Other	1	263.0
+2024	A	2024-03	DEU	Single course	Search	Facharzt	Neurologie	1	280.0
+2024	A	2024-03	AUT	Single course	Invitation / sponsor	Other / unknown	Not stated	1	370.0
+2024	A	2024-01	AUT	Single course	Print: clinic poster	Other / unknown	Other	1	355.0
+2024	B	2024-06	DEU	Single course	Email / newsletter	Assistenzarzt	Allgemeinmedizin	1	565.0
+2024	A	2024-02	DEU	Single course	Print: postal flyer	Other / unknown	Allgemeinmedizin	1	310.0
+2024	C	2024-08	AUT	Single course	FOMF website / former participant	Facharzt	Several	1	360.0
+2024	A	2024-04	DEU	Single course	Colleague recommendation	Assistenzarzt	Several	1	565.0
+2024	C	2024-08	CHE	Single course	Social media	Assistenzarzt	Several	1	982.0
+2024	B	2024-06	DEU	Membership	Membership	Assistenzarzt	Allgemeinmedizin	16	7930.0
+2024	B	2024-06	DEU	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	11	6120.0
+2024	A	2024-04	CHE	Single course	FOMF website / former participant	Facharzt	Allgemeinmedizin	3	1832.0
+2024	C	2024-08	CHE	Single course	Email / newsletter	Facharzt	Allgemeinmedizin	5	2090.0
+2024	A	2024-02	AUT	Membership	Membership	Facharzt	Allgemeinmedizin	4	2450.0
+2024	B	2024-06	AUT	Single course	Print: postal flyer	Other / unknown	Allgemeinmedizin	1	160.0
+2024	A	2024-05	DEU	Single course	Print: journal insert	Assistenzarzt	Allgemeinmedizin	2	900.0
+2024	A	2024-01	AUT	Single course	Print: postal flyer	Facharzt	Allgemeinmedizin	7	1960.0
+2024	B	2024-06	DEU	Single course	Print: journal insert	Assistenzarzt	Allgemeinmedizin	3	1685.0
+2024	A	2024-02	DEU	Single course	Colleague recommendation	Assistenzarzt	Allgemeinmedizin	5	3115.0
+2024	C	2024-09	CHE	Membership	Membership	Facharzt	Allgemeinmedizin	11	10542.0
+2024	B	2024-06	DEU	Single course	Congress / fair	Assistenzarzt	Allgemeinmedizin	1	585.0
+2024	A	2024-05	DEU	Membership	Membership	Facharzt	Allgemeinmedizin	22	12820.0
+2024	B	2024-07	DEU	Single course	Print: clinic poster	Facharzt	Allgemeinmedizin	1	520.0
+2024	B	2024-06	DEU	Single course	FOMF website / former participant	Facharzt	Allgemeinmedizin	1	615.0
+2024	B	2024-07	DEU	Single course	Colleague recommendation	Facharzt	Allgemeinmedizin	2	1045.0
+2024	C	2024-08	CHE	Single course	Colleague recommendation	Other / unknown	Allgemeinmedizin	3	2788.0
+2024	C	2024-09	AUT	Single course	Print: postal flyer	Facharzt	Allgemeinmedizin	4	1280.0
+2024	A	2024-03	DEU	Membership	Membership	Assistenzarzt	Allgemeinmedizin	7	3700.0
+2024	A	2024-05	DEU	Single course	Social media	Facharzt	Allgemeinmedizin	1	730.0
+2024	A	2024-05	CHE	Single course	Search	Other / unknown	Allgemeinmedizin	1	693.0
+2024	A	2024-03	CHE	Single course	Print: journal ad	Other / unknown	Allgemeinmedizin	1	830.0
+2024	B	2024-08	AUT	Membership	Membership	Facharzt	Allgemeinmedizin	1	660.0
+2024	A	2024-05	DEU	Single course	Search	Facharzt	Allgemeinmedizin	2	370.0
+2024	A	2024-02	AUT	Membership	Membership	Assistenzarzt	Allgemeinmedizin	5	2540.0
+2024	B	2024-07	CHE	Single course	Search	Assistenzarzt	Allgemeinmedizin	1	483.0
+2024	B	2024-08	CHE	Single course	Search	Assistenzarzt	Allgemeinmedizin	2	735.0
+2024	A	2024-01	AUT	Single course	FOMF website / former participant	Assistenzarzt	Allgemeinmedizin	1	340.0
+2024	A	2024-03	DEU	Single course	FOMF website / former participant	Assistenzarzt	Allgemeinmedizin	1	185.0
+2024	A	2024-02	DEU	Single course	Colleague recommendation	Facharzt	Allgemeinmedizin	1	320.0
+2024	B	2024-06	CHE	Single course	Email / newsletter	Facharzt	Allgemeinmedizin	1	788.0
+2024	A	2024-03	CHE	Single course	Email / newsletter	Facharzt	Allgemeinmedizin	3	998.0
+2024	C	2024-09	AUT	Single course	Social media	Facharzt	Anästhesiologie	1	320.0
+2024	A	2024-01	DEU	Single course	Print: journal ad	Assistenzarzt	Anästhesiologie	1	325.0
+2024	A	2024-03	CHE	Single course	Colleague recommendation	Facharzt	Anästhesiologie	1	452.0
+2024	B	2024-06	CHE	Single course	Print: journal ad	Facharzt	Other	2	714.0
+2024	A	2024-03	DEU	Membership	Membership	Facharzt	Other	11	6320.0
+2024	A	2024-05	CHE	Single course	Colleague recommendation	Facharzt	Other	6	2331.0
+2024	B	2024-06	DEU	Single course	Colleague recommendation	Facharzt	Other	7	3950.0
+2024	B	2024-06	DEU	Single course	Social media	Assistenzarzt	Other	4	1695.0
+2024	C	2024-08	AUT	Single course	Social media	Facharzt	Other	1	260.0
+2024	A	2024-04	DEU	Single course	Search	Facharzt	Other	5	2360.0
+2024	A	2024-01	DEU	Single course	Print: postal flyer	Assistenzarzt	Other	2	1065.0
+2024	C	2024-09	DEU	Single course	Print: clinic poster	Facharzt	Other	4	2155.0
+2024	A	2024-02	DEU	Single course	Print: postal flyer	Assistenzarzt	Other	1	460.0
+2024	B	2024-06	DEU	Single course	FOMF website / former participant	Facharzt	Other	1	490.0
+2024	B	2024-08	AUT	Single course	Print: journal ad	Facharzt	Other	1	380.0
+2024	B	2024-07	DEU	Single course	Search	Facharzt	Other	3	1370.0
+2024	A	2024-05	DEU	Single course	Print: clinic poster	Assistenzarzt	Other	2	940.0
+2024	A	2024-03	DEU	Single course	Print: clinic poster	Assistenzarzt	Other	1	440.0
+2024	A	2024-01	CHE	Single course	Colleague recommendation	Facharzt	Other	1	452.0
+2024	A	2024-04	CHE	Single course	Print: postal flyer	Facharzt	Gynäkologie	1	698.0
+2024	A	2024-02	DEU	Single course	Print: clinic poster	Facharzt	Other	1	365.0
+2024	A	2024-03	AUT	Single course	Print: postal flyer	Facharzt	Other	2	420.0
+2024	A	2024-05	AUT	Single course	Congress / fair	Facharzt	Other	2	420.0
+2024	C	2024-09	DEU	Single course	Colleague recommendation	Assistenzarzt	Several	2	780.0
+2024	A	2024-05	DEU	Membership	Membership	Facharzt	Several	2	1140.0
+2024	A	2024-05	CHE	Membership	Membership	Facharzt	Several	1	903.0
+2024	A	2024-05	DEU	Membership	Membership	Facharzt	Innere Medizin	16	9060.0
+2024	A	2024-01	CHE	Single course	Print: journal insert	Facharzt	Innere Medizin	1	263.0
+2024	A	2024-01	CHE	Membership	Membership	Assistenzarzt	Innere Medizin	2	1591.0
+2024	A	2024-02	DEU	Membership	Membership	Facharzt	Innere Medizin	13	7440.0
+2024	C	2024-09	CHE	Single course	Social media	Facharzt	Innere Medizin	2	1622.0
+2024	B	2024-08	CHE	Single course	Colleague recommendation	Assistenzarzt	Innere Medizin	2	1454.0
+2024	B	2024-07	DEU	Single course	Print: postal flyer	Facharzt	Innere Medizin	2	1100.0
+2024	B	2024-08	DEU	Single course	Search	Facharzt	Innere Medizin	4	2350.0
+2024	C	2024-09	CHE	Single course	Print: postal flyer	Assistenzarzt	Innere Medizin	1	588.0
+2024	B	2024-07	CHE	Membership	Membership	Facharzt	Innere Medizin	1	903.0
+2024	A	2024-04	DEU	Single course	Search	Facharzt	Innere Medizin	1	380.0
+2024	A	2024-02	DEU	Single course	Print: journal ad	Facharzt	Innere Medizin	1	470.0
+2024	C	2024-08	DEU	Single course	Print: journal insert	Assistenzarzt	Innere Medizin	1	510.0
+2024	A	2024-02	AUT	Single course	Colleague recommendation	Assistenzarzt	Innere Medizin	1	340.0
+2024	B	2024-06	CHE	Single course	Search	Assistenzarzt	Innere Medizin	1	940.0
+2024	A	2024-01	DEU	Single course	Print: postal flyer	Facharzt	Kardiologie	5	2160.0
+2024	A	2024-01	AUT	Membership	Membership	Assistenzarzt	Kardiologie	2	980.0
+2024	A	2024-05	CHE	Membership	Membership	Assistenzarzt	Kardiologie	1	935.0
+2024	A	2024-02	DEU	Single course	Search	Assistenzarzt	Kardiologie	1	370.0
+2024	A	2024-05	DEU	Single course	Invitation / sponsor	Other / unknown	Kardiologie	1	20.0
+2024	B	2024-08	AUT	Single course	Search	Facharzt	Kardiologie	1	650.0
+2024	B	2024-07	DEU	Single course	Print: clinic poster	Facharzt	Other	1	470.0
+2024	A	2024-01	DEU	Membership	Membership	Facharzt	Neurologie	3	1290.0
+2024	B	2024-07	DEU	Single course	Search	Assistenzarzt	Neurologie	3	750.0
+2024	B	2024-08	DEU	Single course	Print: journal insert	Facharzt	Neurologie	1	280.0
+2024	C	2024-08	DEU	Single course	Colleague recommendation	Assistenzarzt	Neurologie	2	500.0
+2024	C	2024-09	AUT	Single course	Email / newsletter	Facharzt	Neurologie	2	540.0
+2024	B	2024-06	DEU	Single course	Print: postal flyer	Facharzt	Neurologie	2	660.0
+2024	A	2024-02	DEU	Single course	FOMF website / former participant	Assistenzarzt	Neurologie	1	265.0
+2024	B	2024-07	DEU	Single course	Other	Facharzt	Neurologie	1	550.0
+2024	A	2024-01	DEU	Single course	FOMF website / former participant	Facharzt	Neurologie	2	515.0
+2024	A	2024-05	DEU	Single course	Congress / fair	Assistenzarzt	Other	1	320.0
+2024	B	2024-06	CHE	Single course	Search	Facharzt	Other	3	1376.0
+2024	B	2024-06	CHE	Single course	Print: journal insert	Facharzt	Other	1	452.0
+2024	C	2024-09	DEU	Single course	Print: postal flyer	Facharzt	Pädiatrie	2	960.0
+2024	B	2024-08	CHE	Single course	Colleague recommendation	Assistenzarzt	Pädiatrie	3	2079.0
+2024	C	2024-08	CHE	Single course	Other	Facharzt	Pädiatrie	1	231.0
+2024	C	2024-08	DEU	Single course	Print: postal flyer	Facharzt	Pädiatrie	2	920.0
+2024	C	2024-09	DEU	Single course	Other	Assistenzarzt	Pädiatrie	1	470.0
+2024	A	2024-02	CHE	Single course	Search	Assistenzarzt	Pädiatrie	1	620.0
+2024	B	2024-07	CHE	Single course	Colleague recommendation	Facharzt	Pädiatrie	3	1817.0
+2024	C	2024-09	DEU	Single course	Email / newsletter	Facharzt	Pädiatrie	1	220.0
+2024	B	2024-07	AUT	Single course	Social media	Other / unknown	Other	1	210.0
+2024	A	2024-05	DEU	Single course	Search	Assistenzarzt	Several	2	915.0
+2024	B	2024-06	DEU	Single course	Colleague recommendation	Facharzt	Psychiatrie	4	1790.0
+2024	A	2024-01	AUT	Single course	Colleague recommendation	Assistenzarzt	Psychiatrie	1	250.0
+2024	A	2024-03	CHE	Single course	Print: clinic poster	Facharzt	Psychiatrie	1	756.0
+2024	B	2024-07	DEU	Membership	Membership	Assistenzarzt	Psychiatrie	3	1560.0
+2024	A	2024-03	DEU	Single course	Print: journal insert	Facharzt	Psychiatrie	2	1060.0
+2024	A	2024-01	CHE	Membership	Membership	Assistenzarzt	Psychiatrie	1	809.0
+2024	B	2024-06	DEU	Single course	Print: journal ad	Facharzt	Psychiatrie	1	520.0
+2024	A	2024-05	CHE	Single course	Print: journal insert	Facharzt	Psychiatrie	2	1349.0
+2024	B	2024-08	AUT	Single course	Social media	Other / unknown	Other	1	240.0
+2024	A	2024-02	AUT	Single course	Search	Other / unknown	Other	1	210.0
+2024	B	2024-06	CHE	Membership	Membership	Assistenzarzt	Other	2	1743.0
+2024	C	2024-09	AUT	Single course	Social media	Other / unknown	Other	1	140.0
+2024	C	2024-08	AUT	Single course	FOMF website / former participant	Other / unknown	Other	1	280.0
+2024	C	2024-09	DEU	Single course	Email / newsletter	Facharzt	Neurologie	2	565.0
+2024	B	2024-08	DEU	Membership	Membership	Facharzt	Innere Medizin	1	570.0
+2024	A	2024-04	DEU	Single course	Print: clinic poster	Facharzt	Psychiatrie	1	380.0
+2024	A	2024-02	CHE	Membership	Membership	Assistenzarzt	Several	1	935.0
+2024	C	2024-08	AUT	Single course	Email / newsletter	Assistenzarzt	Several	1	250.0
+2024	A	2024-04	CHE	Membership	Membership	Assistenzarzt	Several	1	935.0
+2024	A	2024-04	DEU	Membership	Membership	Assistenzarzt	Several	1	490.0
+2024	C	2024-09	DEU	Single course	Email / newsletter	Assistenzarzt	Pädiatrie	1	460.0
+2024	A	2024-05	DEU	Membership	Membership	Assistenzarzt	Pädiatrie	1	490.0
+2024	B	2024-06	CHE	Single course	Search	Assistenzarzt	Psychiatrie	1	284.0
+2024	C	2024-08	AUT	Single course	Email / newsletter	Assistenzarzt	Psychiatrie	1	240.0
+2024	C	2024-09	CHE	Membership	Membership	Assistenzarzt	Psychiatrie	1	809.0
+2024	A	2024-02	DEU	Membership	Membership	Facharzt	Several	3	1720.0
+2024	A	2024-02	CHE	Single course	Print: journal ad	Facharzt	Other	1	473.0
+2024	B	2024-06	DEU	Single course	Print: clinic poster	Facharzt	Psychiatrie	2	1050.0
+2024	C	2024-08	AUT	Membership	Membership	Facharzt	Other	1	570.0
+2024	A	2024-02	AUT	Single course	Print: clinic poster	Facharzt	Other	1	340.0
+2024	B	2024-06	DEU	Single course	Email / newsletter	Facharzt	Innere Medizin	1	470.0
+2024	C	2024-08	AUT	Single course	Email / newsletter	Facharzt	Innere Medizin	1	570.0
+2024	A	2024-02	AUT	Single course	FOMF website / former participant	Facharzt	Psychiatrie	1	265.0
+2024	B	2024-08	CHE	Single course	Colleague recommendation	Facharzt	Psychiatrie	1	483.0
+2024	C	2024-08	AUT	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	1	565.0
+2024	A	2024-05	DEU	Single course	Colleague recommendation	Facharzt	Allgemeinmedizin	1	590.0
+2024	A	2024-03	AUT	Membership	Membership	Assistenzarzt	Several	1	660.0
+2024	C	2024-09	CHE	Single course	Print: journal ad	Facharzt	Allgemeinmedizin	1	368.0
+2024	C	2024-09	AUT	Single course	Congress / fair	Facharzt	Other	1	380.0
+2024	A	2024-01	CHE	Single course	Print: journal insert	Facharzt	Pädiatrie	1	683.0
+2024	A	2024-01	DEU	Single course	Print: journal ad	Facharzt	Pädiatrie	1	470.0
+2024	B	2024-07	DEU	Single course	Email / newsletter	Facharzt	Pädiatrie	1	500.0
+2024	A	2024-02	DEU	Single course	Print: journal ad	Facharzt	Allgemeinmedizin	1	590.0
+2024	A	2024-03	DEU	Single course	Print: postal flyer	Other / unknown	Not stated	2	1040.0
+2024	B	2024-06	CHE	Single course	Print: postal flyer	Other / unknown	Not stated	1	525.0
+2024	C	2024-08	CHE	Single course	Search	Facharzt	Other	1	368.0
+2024	A	2024-01	DEU	Membership	Membership	Facharzt	Several	12	6520.0
+2024	B	2024-08	AUT	Membership	Membership	Assistenzarzt	Several	1	580.0
+2024	C	2024-09	CHE	Membership	Membership	Assistenzarzt	Several	3	2751.0
+2024	A	2024-04	DEU	Single course	Print: journal insert	Assistenzarzt	Allgemeinmedizin	3	1690.0
+2024	A	2024-02	CHE	Membership	Membership	Facharzt	Allgemeinmedizin	10	9335.0
+2024	C	2024-09	DEU	Membership	Membership	Facharzt	Allgemeinmedizin	14	8240.0
+2024	C	2024-08	AUT	Single course	Colleague recommendation	Facharzt	Allgemeinmedizin	4	1510.0
+2024	A	2024-03	CHE	Membership	Membership	Facharzt	Allgemeinmedizin	15	13902.0
+2024	A	2024-05	DEU	Membership	Membership	Assistenzarzt	Allgemeinmedizin	25	12680.0
+2024	C	2024-09	DEU	Single course	Search	Assistenzarzt	Allgemeinmedizin	2	905.0
+2024	B	2024-07	DEU	Single course	Search	Facharzt	Allgemeinmedizin	4	2310.0
+2024	B	2024-06	AUT	Membership	Membership	Assistenzarzt	Allgemeinmedizin	7	3470.0
+2024	A	2024-01	CHE	Single course	Colleague recommendation	Other / unknown	Allgemeinmedizin	2	609.0
+2024	A	2024-03	CHE	Single course	Colleague recommendation	Assistenzarzt	Allgemeinmedizin	2	693.0
+2024	C	2024-08	DEU	Single course	Print: postal flyer	Facharzt	Allgemeinmedizin	5	2440.0
+2024	C	2024-08	DEU	Membership	Membership	Facharzt	Allgemeinmedizin	5	2940.0
+2024	A	2024-02	CHE	Single course	FOMF website / former participant	Assistenzarzt	Allgemeinmedizin	1	263.0
+2024	C	2024-08	DEU	Single course	Print: journal insert	Other / unknown	Allgemeinmedizin	3	1315.0
+2024	C	2024-09	DEU	Single course	Search	Facharzt	Allgemeinmedizin	8	4090.0
+2024	A	2024-04	CHE	Membership	Membership	Facharzt	Allgemeinmedizin	9	7912.0
+2024	A	2024-04	AUT	Single course	Social media	Assistenzarzt	Allgemeinmedizin	2	480.0
+2024	A	2024-04	AUT	Single course	Colleague recommendation	Assistenzarzt	Allgemeinmedizin	3	1115.0
+2024	A	2024-04	DEU	Single course	Print: journal ad	Facharzt	Allgemeinmedizin	2	775.0
+2024	C	2024-08	AUT	Single course	Print: journal ad	Other / unknown	Allgemeinmedizin	1	170.0
+2024	A	2024-01	AUT	Single course	FOMF website / former participant	Facharzt	Allgemeinmedizin	2	1140.0
+2024	B	2024-08	CHE	Single course	Print: journal ad	Facharzt	Allgemeinmedizin	1	368.0
+2024	A	2024-02	DEU	Single course	Print: postal flyer	Assistenzarzt	Allgemeinmedizin	2	1270.0
+2024	A	2024-01	DEU	Single course	Print: journal ad	Facharzt	Allgemeinmedizin	1	590.0
+2024	A	2024-02	AUT	Single course	Print: clinic poster	Assistenzarzt	Allgemeinmedizin	2	620.0
+2024	C	2024-08	DEU	Single course	Print: postal flyer	Other / unknown	Allgemeinmedizin	1	525.0
+2024	B	2024-06	CHE	Single course	Print: journal ad	Assistenzarzt	Allgemeinmedizin	1	940.0
+2024	B	2024-08	DEU	Single course	Colleague recommendation	Facharzt	Allgemeinmedizin	1	590.0
+2024	C	2024-09	AUT	Membership	Membership	Assistenzarzt	Allgemeinmedizin	2	980.0
+2024	A	2024-01	AUT	Single course	Email / newsletter	Facharzt	Allgemeinmedizin	3	1170.0
+2024	A	2024-02	DEU	Single course	Social media	Facharzt	Allgemeinmedizin	1	335.0
+2024	B	2024-08	DEU	Single course	Search	Assistenzarzt	Allgemeinmedizin	1	540.0
+2024	B	2024-06	DEU	Single course	FOMF website / former participant	Assistenzarzt	Allgemeinmedizin	1	540.0
+2024	A	2024-05	DEU	Single course	Social media	Assistenzarzt	Anästhesiologie	2	700.0
+2024	C	2024-08	DEU	Single course	Print: journal insert	Facharzt	Anästhesiologie	1	380.0
+2024	A	2024-04	CHE	Membership	Membership	Facharzt	Anästhesiologie	4	2972.0
+2024	C	2024-08	DEU	Single course	Colleague recommendation	Facharzt	Anästhesiologie	1	490.0
+2024	A	2024-05	AUT	Single course	Print: postal flyer	Facharzt	Anästhesiologie	1	260.0
+2024	A	2024-05	CHE	Single course	Congress / fair	Facharzt	Anästhesiologie	1	452.0
+2024	A	2024-01	DEU	Single course	Print: journal ad	Facharzt	Anästhesiologie	2	700.0
+2024	A	2024-05	CHE	Single course	Print: journal insert	Facharzt	Anästhesiologie	2	924.0
+2024	A	2024-03	CHE	Single course	Search	Facharzt	Anästhesiologie	1	473.0
+2024	A	2024-05	CHE	Single course	Search	Facharzt	Anästhesiologie	2	903.0
+2024	A	2024-04	DEU	Single course	Print: journal ad	Facharzt	Anästhesiologie	1	350.0
+2024	A	2024-01	DEU	Single course	Colleague recommendation	Assistenzarzt	Other	3	1520.0
+2024	A	2024-05	DEU	Single course	Colleague recommendation	Assistenzarzt	Other	3	1480.0
+2024	A	2024-03	DEU	Single course	Colleague recommendation	Assistenzarzt	Other	2	1005.0
+2024	C	2024-09	DEU	Single course	Print: clinic poster	Assistenzarzt	Other	2	960.0
+2024	B	2024-06	DEU	Single course	Social media	Facharzt	Other	1	490.0
+2024	A	2024-05	DEU	Single course	Print: postal flyer	Assistenzarzt	Other	1	450.0
+2024	B	2024-06	DEU	Single course	Print: journal insert	Assistenzarzt	Other	4	1790.0
+2024	C	2024-09	DEU	Single course	Print: postal flyer	Facharzt	Other	13	5670.0
+2024	B	2024-07	DEU	Single course	Colleague recommendation	Facharzt	Other	2	920.0
+2024	B	2024-07	DEU	Single course	Print: journal insert	Facharzt	Several	1	590.0
+2024	A	2024-03	DEU	Single course	Print: journal insert	Facharzt	Other	4	2155.0
+2024	B	2024-07	CHE	Single course	Colleague recommendation	Other / unknown	Other	2	1040.0
+2024	B	2024-06	CHE	Membership	Membership	Facharzt	Other	3	2709.0
+2024	A	2024-05	DEU	Single course	Email / newsletter	Facharzt	Other	3	1470.0
+2024	C	2024-08	CHE	Single course	Print: postal flyer	Facharzt	Other	2	1533.0
+2024	A	2024-04	CHE	Single course	Print: postal flyer	Facharzt	Other	7	3308.0
+2024	C	2024-09	AUT	Single course	Print: postal flyer	Facharzt	Other	3	660.0
+2024	A	2024-01	AUT	Single course	Print: postal flyer	Other / unknown	Gynäkologie	1	390.0
+2024	A	2024-05	DEU	Single course	Print: postal flyer	Facharzt	Gynäkologie	1	490.0
+2024	A	2024-03	AUT	Single course	Invitation / sponsor	Facharzt	Gynäkologie	1	420.0
+2024	B	2024-07	DEU	Single course	Print: journal insert	Assistenzarzt	Other	1	645.0
+2024	C	2024-08	DEU	Single course	Other	Other / unknown	Allgemeinmedizin	1	525.0
+2024	A	2024-05	DEU	Single course	Print: journal insert	Facharzt	Several	2	1230.0
+2024	B	2024-06	CHE	Single course	FOMF website / former participant	Assistenzarzt	Innere Medizin	2	1911.0
+2024	A	2024-05	AUT	Membership	Membership	Assistenzarzt	Innere Medizin	6	3200.0
+2024	B	2024-07	DEU	Membership	Membership	Facharzt	Innere Medizin	3	1800.0
+2024	B	2024-07	DEU	Membership	Membership	Assistenzarzt	Innere Medizin	4	2050.0
+2024	C	2024-09	AUT	Membership	Membership	Facharzt	Innere Medizin	3	1710.0
+2024	C	2024-08	DEU	Membership	Membership	Facharzt	Innere Medizin	2	1140.0
+2024	C	2024-09	CHE	Single course	Email / newsletter	Facharzt	Innere Medizin	1	635.0
+2024	A	2024-02	DEU	Single course	Print: clinic poster	Assistenzarzt	Innere Medizin	1	620.0
+2024	B	2024-07	DEU	Single course	Print: journal insert	Facharzt	Innere Medizin	2	1020.0
+2024	B	2024-06	DEU	Single course	Search	Assistenzarzt	Innere Medizin	4	2115.0
+2024	B	2024-08	DEU	Single course	Print: journal insert	Assistenzarzt	Innere Medizin	3	1655.0
+2024	B	2024-06	DEU	Single course	Search	Facharzt	Innere Medizin	6	2770.0
+2024	B	2024-06	DEU	Single course	Print: postal flyer	Facharzt	Innere Medizin	4	1845.0
+2024	A	2024-01	AUT	Single course	Search	Facharzt	Innere Medizin	1	670.0
+2024	B	2024-07	AUT	Single course	Social media	Other / unknown	Innere Medizin	1	210.0
+2024	A	2024-02	CHE	Single course	Colleague recommendation	Facharzt	Innere Medizin	1	452.0
+2024	C	2024-08	CHE	Single course	Print: postal flyer	Facharzt	Innere Medizin	1	368.0
+2024	A	2024-01	CHE	Single course	Colleague recommendation	Facharzt	Innere Medizin	1	1045.0
+2024	C	2024-08	CHE	Single course	Email / newsletter	Assistenzarzt	Innere Medizin	1	200.0
+2024	B	2024-07	DEU	Single course	Print: postal flyer	Assistenzarzt	Innere Medizin	1	290.0
+2024	B	2024-06	CHE	Single course	Search	Assistenzarzt	Other	1	431.0
+2024	A	2024-01	DEU	Single course	Search	Facharzt	Kardiologie	3	1620.0
+2024	A	2024-04	DEU	Single course	Print: journal insert	Facharzt	Kardiologie	1	510.0
+2024	A	2024-05	CHE	Single course	Email / newsletter	Facharzt	Kardiologie	1	452.0
+2024	A	2024-01	DEU	Membership	Membership	Facharzt	Kardiologie	8	4490.0
+2024	C	2024-08	DEU	Single course	Colleague recommendation	Assistenzarzt	Kardiologie	1	290.0
+2024	B	2024-08	DEU	Single course	Colleague recommendation	Facharzt	Kardiologie	1	590.0
+2024	A	2024-02	DEU	Single course	Print: clinic poster	Assistenzarzt	Kardiologie	1	440.0
+2024	A	2024-02	DEU	Single course	Email / newsletter	Facharzt	Kardiologie	1	190.0
+2024	A	2024-01	DEU	Single course	Social media	Facharzt	Kardiologie	1	505.0
+2024	A	2024-02	DEU	Membership	Membership	Facharzt	Kardiologie	5	2860.0
+2024	C	2024-09	AUT	Single course	Congress / fair	Assistenzarzt	Kardiologie	1	220.0
+2024	A	2024-05	DEU	Single course	Search	Facharzt	Kardiologie	1	510.0
+2024	B	2024-07	AUT	Single course	Print: journal ad	Assistenzarzt	Kardiologie	1	210.0
+2024	B	2024-07	DEU	Single course	Print: postal flyer	Other / unknown	Kardiologie	1	475.0
+2024	B	2024-07	DEU	Single course	Print: postal flyer	Assistenzarzt	Kardiologie	1	270.0
+2024	A	2024-01	DEU	Single course	Colleague recommendation	Other / unknown	Other	1	380.0
+2024	B	2024-06	AUT	Membership	Membership	Facharzt	Other	4	2370.0
+2024	C	2024-09	AUT	Single course	Social media	Assistenzarzt	Neurologie	1	210.0
+2024	A	2024-01	DEU	Single course	Social media	Assistenzarzt	Neurologie	1	270.0
+2024	A	2024-05	CHE	Single course	Email / newsletter	Other / unknown	Neurologie	1	284.0
+2024	B	2024-08	DEU	Single course	Print: postal flyer	Facharzt	Neurologie	1	280.0
+2024	A	2024-03	DEU	Single course	Print: clinic poster	Other / unknown	Other	1	95.0
+2024	A	2024-01	CHE	Single course	Search	Assistenzarzt	Other	1	263.0
+2024	A	2024-05	AUT	Membership	Membership	Facharzt	Pädiatrie	1	570.0
+2024	A	2024-01	CHE	Single course	Colleague recommendation	Assistenzarzt	Pädiatrie	5	3098.0
+2024	A	2024-04	CHE	Single course	Colleague recommendation	Assistenzarzt	Pädiatrie	4	2027.0
+2024	C	2024-08	DEU	Single course	Colleague recommendation	Facharzt	Pädiatrie	2	940.0
+2024	A	2024-01	CHE	Single course	Colleague recommendation	Facharzt	Pädiatrie	3	1885.0
+2024	A	2024-03	DEU	Single course	FOMF website / former participant	Facharzt	Pädiatrie	1	490.0
+2024	B	2024-08	DEU	Single course	Print: postal flyer	Facharzt	Pädiatrie	2	940.0
+2024	C	2024-09	DEU	Single course	Colleague recommendation	Facharzt	Pädiatrie	1	470.0
+2024	A	2024-04	CHE	Single course	Email / newsletter	Assistenzarzt	Pädiatrie	1	515.0
+2024	C	2024-09	AUT	Single course	Colleague recommendation	Assistenzarzt	Pädiatrie	1	280.0
+2024	C	2024-08	DEU	Single course	Colleague recommendation	Assistenzarzt	Pädiatrie	2	880.0
+2024	A	2024-01	CHE	Single course	Social media	Assistenzarzt	Pädiatrie	1	263.0
+2024	A	2024-02	AUT	Single course	FOMF website / former participant	Facharzt	Pädiatrie	1	365.0
+2024	A	2024-04	DEU	Single course	Colleague recommendation	Facharzt	Other	2	955.0
+2024	A	2024-02	DEU	Single course	FOMF website / former participant	Facharzt	Other	3	1375.0
+2024	A	2024-05	DEU	Single course	Colleague recommendation	Facharzt	Several	1	530.0
+2024	A	2024-03	DEU	Single course	Print: journal ad	Facharzt	Psychiatrie	1	190.0
+2024	A	2024-05	DEU	Membership	Membership	Facharzt	Psychiatrie	5	2940.0
+2024	A	2024-02	DEU	Membership	Membership	Facharzt	Psychiatrie	3	1980.0
+2024	B	2024-07	CHE	Membership	Membership	Facharzt	Psychiatrie	2	1806.0
+2024	B	2024-08	DEU	Single course	Print: journal insert	Facharzt	Psychiatrie	1	520.0
+2024	A	2024-02	DEU	Single course	Social media	Assistenzarzt	Psychiatrie	1	490.0
+2024	B	2024-06	CHE	Single course	Email / newsletter	Facharzt	Psychiatrie	1	567.0
+2024	A	2024-02	DEU	Single course	FOMF website / former participant	Facharzt	Psychiatrie	1	400.0
+2024	C	2024-09	DEU	Single course	Email / newsletter	Facharzt	Psychiatrie	1	280.0
+2024	A	2024-05	AUT	Single course	Colleague recommendation	Facharzt	Other	1	670.0
+2024	A	2024-02	AUT	Single course	Social media	Other / unknown	Other	1	210.0
+2024	A	2024-05	CHE	Single course	Print: clinic poster	Facharzt	Other	1	263.0
+2024	B	2024-06	DEU	Membership	Membership	Assistenzarzt	Not stated	1	490.0
+2024	A	2024-05	DEU	Single course	Print: postal flyer	Other / unknown	Other	1	510.0
+2024	C	2024-08	AUT	Single course	FOMF website / former participant	Facharzt	Allgemeinmedizin	1	585.0
+2024	C	2024-08	AUT	Single course	Print: journal ad	Assistenzarzt	Allgemeinmedizin	1	220.0
+2024	A	2024-03	DEU	Single course	Social media	Facharzt	Anästhesiologie	2	685.0
+2024	A	2024-02	DEU	Single course	Colleague recommendation	Facharzt	Anästhesiologie	1	350.0
+2024	A	2024-04	AUT	Single course	Print: journal insert	Facharzt	Other	1	270.0
+2024	A	2024-04	AUT	Single course	Search	Facharzt	Other	2	550.0
+2024	C	2024-08	CHE	Single course	Colleague recommendation	Assistenzarzt	Allgemeinmedizin	1	777.0
+2024	B	2024-06	AUT	Membership	Membership	Assistenzarzt	Several	1	490.0
+2024	B	2024-07	AUT	Membership	Membership	Assistenzarzt	Other	1	490.0
+2024	A	2024-05	AUT	Single course	Social media	Assistenzarzt	Kardiologie	1	470.0
+2024	B	2024-06	DEU	Membership	Membership	Assistenzarzt	Neurologie	1	580.0
+2024	B	2024-06	DEU	Single course	Print: journal insert	Assistenzarzt	Neurologie	1	275.0
+2024	A	2024-02	DEU	Single course	Print: journal ad	Assistenzarzt	Neurologie	1	685.0
+2024	B	2024-06	CHE	Membership	Membership	Assistenzarzt	Several	1	935.0
+2024	A	2024-03	DEU	Single course	Search	Facharzt	Kardiologie	1	440.0
+2024	B	2024-06	AUT	Single course	Search	Facharzt	Allgemeinmedizin	1	320.0
+2024	A	2024-02	CHE	Membership	Membership	Facharzt	Anästhesiologie	1	1008.0
+2024	B	2024-06	CHE	Single course	Print: journal ad	Facharzt	Anästhesiologie	2	903.0
+2024	A	2024-05	AUT	Membership	Membership	Facharzt	Other	2	1140.0
+2024	A	2024-03	AUT	Single course	Print: journal insert	Facharzt	Innere Medizin	1	650.0
+2024	A	2024-01	DEU	Single course	Print: journal ad	Facharzt	Kardiologie	2	940.0
+2024	B	2024-08	DEU	Single course	Colleague recommendation	Facharzt	Psychiatrie	1	520.0
+2024	A	2024-05	DEU	Single course	Colleague recommendation	Assistenzarzt	Allgemeinmedizin	2	1100.0
+2024	A	2024-03	CHE	Single course	Colleague recommendation	Assistenzarzt	Other	1	200.0
+2024	B	2024-07	CHE	Single course	Print: postal flyer	Facharzt	Several	1	399.0
+2024	C	2024-08	DEU	Membership	Membership	Facharzt	Several	1	570.0
+2024	C	2024-08	CHE	Single course	Print: journal insert	Facharzt	Several	1	504.0
+2024	C	2024-09	DEU	Single course	Social media	Facharzt	Allgemeinmedizin	1	620.0
+2024	A	2024-04	DEU	Single course	Print: postal flyer	Facharzt	Other	1	490.0
+2024	C	2024-09	AUT	Single course	Print: postal flyer	Facharzt	Several	1	405.0
+2024	C	2024-09	AUT	Single course	Social media	Facharzt	Kardiologie	1	710.0
+2024	A	2024-04	DEU	Single course	Print: postal flyer	Facharzt	Kardiologie	1	490.0
+2024	A	2024-01	AUT	Single course	Social media	Facharzt	Kardiologie	1	670.0
+2024	C	2024-08	DEU	Single course	Social media	Facharzt	Pädiatrie	1	470.0
+2024	B	2024-06	AUT	Single course	Email / newsletter	Other / unknown	Other	1	265.0
+2024	B	2024-06	DEU	Single course	Search	Other / unknown	Not stated	1	185.0
+2024	C	2024-08	CHE	Single course	Email / newsletter	Facharzt	Not stated	3	1523.0
+2024	B	2024-06	AUT	Single course	Email / newsletter	Other / unknown	Not stated	1	280.0
+2024	A	2024-04	AUT	Single course	Print: postal flyer	Facharzt	Allgemeinmedizin	6	1470.0
+2024	A	2024-05	DEU	Single course	Print: postal flyer	Facharzt	Allgemeinmedizin	6	3840.0
+2024	C	2024-08	DEU	Single course	Colleague recommendation	Other / unknown	Several	1	530.0
+2024	A	2024-04	DEU	Membership	Membership	Facharzt	Several	4	2290.0
+2024	C	2024-09	CHE	Membership	Membership	Facharzt	Several	2	1995.0
+2024	B	2024-07	DEU	Membership	Membership	Facharzt	Several	5	3030.0
+2024	A	2024-04	DEU	Membership	Membership	Assistenzarzt	Allgemeinmedizin	8	4100.0
+2024	C	2024-09	DEU	Single course	Print: postal flyer	Facharzt	Allgemeinmedizin	8	4870.0
+2024	C	2024-09	CHE	Single course	Congress / fair	Facharzt	Allgemeinmedizin	3	3003.0
+2024	C	2024-08	DEU	Single course	Print: journal ad	Facharzt	Allgemeinmedizin	2	690.0
+2024	A	2024-04	AUT	Single course	Print: journal ad	Facharzt	Allgemeinmedizin	1	280.0
+2024	A	2024-01	DEU	Single course	Colleague recommendation	Assistenzarzt	Allgemeinmedizin	5	2625.0
+2024	B	2024-06	CHE	Membership	Membership	Assistenzarzt	Allgemeinmedizin	3	2426.0
+2024	A	2024-05	CHE	Single course	Search	Assistenzarzt	Allgemeinmedizin	2	935.0
+2024	A	2024-01	CHE	Single course	Email / newsletter	Facharzt	Allgemeinmedizin	2	630.0
+2024	A	2024-01	DEU	Single course	Email / newsletter	Facharzt	Allgemeinmedizin	2	1220.0
+2024	A	2024-02	CHE	Single course	Colleague recommendation	Facharzt	Allgemeinmedizin	3	1239.0
+2024	A	2024-02	DEU	Single course	Print: clinic poster	Assistenzarzt	Allgemeinmedizin	1	540.0
+2024	C	2024-09	CHE	Single course	Search	Assistenzarzt	Allgemeinmedizin	1	483.0
+2024	A	2024-01	AUT	Membership	Membership	Assistenzarzt	Allgemeinmedizin	4	2050.0
+2024	C	2024-08	DEU	Membership	Membership	Assistenzarzt	Allgemeinmedizin	3	1470.0
+2024	A	2024-01	AUT	Single course	Search	Facharzt	Allgemeinmedizin	2	900.0
+2024	B	2024-08	DEU	Single course	Search	Facharzt	Allgemeinmedizin	1	590.0
+2024	B	2024-07	AUT	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	1	260.0
+2024	A	2024-02	CHE	Single course	Print: postal flyer	Assistenzarzt	Allgemeinmedizin	1	830.0
+2024	A	2024-02	DEU	Single course	Search	Assistenzarzt	Allgemeinmedizin	2	1225.0
+2024	B	2024-07	AUT	Membership	Membership	Assistenzarzt	Allgemeinmedizin	2	980.0
+2024	C	2024-08	CHE	Single course	Email / newsletter	Other / unknown	Allgemeinmedizin	1	814.0
+2024	A	2024-05	DEU	Single course	Social media	Assistenzarzt	Allgemeinmedizin	1	560.0
+2024	B	2024-06	CHE	Single course	Print: journal insert	Other / unknown	Allgemeinmedizin	1	263.0
+2024	B	2024-06	CHE	Single course	Print: postal flyer	Facharzt	Allgemeinmedizin	2	2079.0
+2024	A	2024-05	DEU	Single course	Search	Assistenzarzt	Allgemeinmedizin	2	1130.0
+2024	A	2024-01	AUT	Single course	Print: journal ad	Assistenzarzt	Allgemeinmedizin	1	355.0
+2024	A	2024-04	DEU	Single course	Print: journal insert	Assistenzarzt	Anästhesiologie	4	1270.0
+2024	A	2024-03	CHE	Membership	Membership	Facharzt	Anästhesiologie	1	903.0
+2024	A	2024-01	DEU	Membership	Membership	Facharzt	Anästhesiologie	1	570.0
+2024	A	2024-03	DEU	Single course	Colleague recommendation	Facharzt	Anästhesiologie	2	510.0
+2024	B	2024-08	AUT	Single course	Print: journal insert	Facharzt	Anästhesiologie	1	340.0
+2024	A	2024-05	DEU	Single course	Colleague recommendation	Assistenzarzt	Anästhesiologie	1	350.0
+2024	A	2024-04	DEU	Single course	Search	Assistenzarzt	Several	1	490.0
+2024	A	2024-04	DEU	Single course	Email / newsletter	Facharzt	Other	3	1590.0
+2024	A	2024-03	DEU	Single course	FOMF website / former participant	Facharzt	Other	2	1445.0
+2024	A	2024-04	DEU	Single course	Print: journal insert	Facharzt	Other	12	5030.0
+2024	A	2024-01	DEU	Membership	Membership	Assistenzarzt	Other	8	4010.0
+2024	C	2024-09	CHE	Membership	Membership	Facharzt	Other	1	1008.0
+2024	C	2024-08	DEU	Single course	Print: postal flyer	Other / unknown	Other	3	1250.0
+2024	C	2024-08	DEU	Membership	Membership	Assistenzarzt	Several	1	490.0
+2024	C	2024-08	DEU	Single course	Search	Facharzt	Other	3	1410.0
+2024	C	2024-09	DEU	Single course	Colleague recommendation	Assistenzarzt	Other	3	1045.0
+2024	A	2024-05	DEU	Single course	Social media	Assistenzarzt	Other	1	460.0
+2024	C	2024-08	CHE	Single course	Colleague recommendation	Assistenzarzt	Other	1	693.0
+2024	B	2024-06	DEU	Single course	Print: clinic poster	Facharzt	Other	2	660.0
+2024	B	2024-06	AUT	Single course	Print: postal flyer	Other / unknown	Other	1	260.0
+2024	A	2024-04	AUT	Single course	Email / newsletter	Assistenzarzt	Other	1	220.0
+2024	A	2024-01	CHE	Membership	Membership	Assistenzarzt	Several	1	935.0
+2024	A	2024-01	DEU	Membership	Membership	Assistenzarzt	Kardiologie	5	2540.0
+2024	C	2024-09	DEU	Single course	Search	Facharzt	Innere Medizin	6	2970.0
+2024	A	2024-03	CHE	Single course	Print: journal insert	Facharzt	Innere Medizin	1	924.0
+2024	A	2024-03	AUT	Single course	Print: journal insert	Assistenzarzt	Innere Medizin	1	570.0
+2024	B	2024-07	DEU	Single course	Social media	Assistenzarzt	Innere Medizin	1	685.0
+2024	A	2024-05	CHE	Single course	Print: journal ad	Assistenzarzt	Innere Medizin	1	431.0
+2024	A	2024-05	DEU	Membership	Membership	Assistenzarzt	Innere Medizin	3	1470.0
+2024	B	2024-06	AUT	Single course	Print: postal flyer	Facharzt	Innere Medizin	1	650.0
+2024	C	2024-09	CHE	Membership	Membership	Assistenzarzt	Innere Medizin	4	3602.0
+2024	A	2024-04	CHE	Membership	Membership	Facharzt	Innere Medizin	5	4935.0
+2024	C	2024-09	DEU	Single course	Email / newsletter	Facharzt	Innere Medizin	3	1205.0
+2024	B	2024-06	CHE	Single course	Colleague recommendation	Facharzt	Innere Medizin	2	1307.0
+2024	B	2024-06	CHE	Single course	Email / newsletter	Facharzt	Innere Medizin	1	1076.0
+2024	A	2024-03	DEU	Single course	Email / newsletter	Other / unknown	Innere Medizin	1	540.0
+2024	A	2024-02	DEU	Single course	Print: journal insert	Assistenzarzt	Innere Medizin	1	585.0
+2024	A	2024-05	AUT	Single course	Search	Facharzt	Innere Medizin	1	670.0
+2024	A	2024-02	AUT	Single course	Social media	Assistenzarzt	Innere Medizin	2	530.0
+2024	C	2024-08	AUT	Single course	Colleague recommendation	Assistenzarzt	Innere Medizin	1	570.0
+2024	A	2024-05	DEU	Single course	Search	Assistenzarzt	Innere Medizin	1	335.0
+2024	B	2024-07	DEU	Single course	Print: journal insert	Assistenzarzt	Several	1	575.0
+2024	C	2024-08	DEU	Single course	Print: clinic poster	Facharzt	Kardiologie	1	420.0
+2024	A	2024-01	DEU	Single course	Colleague recommendation	Facharzt	Kardiologie	3	1470.0
+2024	B	2024-06	AUT	Membership	Membership	Facharzt	Kardiologie	3	1800.0
+2024	A	2024-01	DEU	Single course	Search	Assistenzarzt	Kardiologie	4	1650.0
+2024	A	2024-04	DEU	Single course	Print: clinic poster	Facharzt	Kardiologie	3	1505.0
+2024	C	2024-08	DEU	Single course	Print: journal insert	Facharzt	Kardiologie	1	500.0
+2024	A	2024-01	DEU	Single course	FOMF website / former participant	Facharzt	Kardiologie	1	510.0
+2024	B	2024-07	CHE	Single course	Congress / fair	Facharzt	Kardiologie	1	504.0
+2024	A	2024-01	CHE	Membership	Membership	Facharzt	Kardiologie	2	1911.0
+2024	C	2024-09	DEU	Single course	Colleague recommendation	Assistenzarzt	Neurologie	1	275.0
+2024	C	2024-09	DEU	Single course	Print: postal flyer	Facharzt	Neurologie	1	305.0
+2024	A	2024-01	DEU	Single course	Search	Assistenzarzt	Neurologie	2	535.0
+2024	C	2024-09	DEU	Single course	Social media	Assistenzarzt	Neurologie	1	305.0
+2024	C	2024-09	AUT	Single course	Congress / fair	Facharzt	Neurologie	1	260.0
+2024	A	2024-03	DEU	Single course	Print: postal flyer	Other / unknown	Several	1	290.0
+2024	A	2024-04	DEU	Single course	Print: journal insert	Other / unknown	Other	2	520.0
+2024	C	2024-09	DEU	Single course	Print: journal insert	Assistenzarzt	Other	1	440.0
+2024	B	2024-06	CHE	Single course	Print: clinic poster	Assistenzarzt	Other	2	861.0
+2024	C	2024-09	DEU	Single course	Print: journal insert	Facharzt	Pädiatrie	5	2420.0
+2024	C	2024-09	DEU	Membership	Membership	Facharzt	Pädiatrie	4	2220.0
+2024	B	2024-06	CHE	Single course	Print: journal insert	Assistenzarzt	Pädiatrie	1	620.0
+2024	C	2024-08	DEU	Single course	Social media	Assistenzarzt	Pädiatrie	1	440.0
+2024	B	2024-07	DEU	Single course	Colleague recommendation	Assistenzarzt	Pädiatrie	3	1260.0
+2024	B	2024-06	CHE	Single course	Colleague recommendation	Assistenzarzt	Pädiatrie	1	693.0
+2024	A	2024-02	DEU	Membership	Membership	Assistenzarzt	Pädiatrie	1	490.0
+2024	C	2024-08	AUT	Single course	FOMF website / former participant	Facharzt	Pädiatrie	1	310.0
+2024	B	2024-08	DEU	Single course	Colleague recommendation	Facharzt	Pädiatrie	2	790.0
+2024	B	2024-06	DEU	Single course	Congress / fair	Facharzt	Pädiatrie	1	370.0
+2024	B	2024-07	AUT	Single course	Print: postal flyer	Facharzt	Pädiatrie	2	710.0
+2024	A	2024-01	CHE	Single course	Print: postal flyer	Facharzt	Pädiatrie	1	683.0
+2024	C	2024-08	AUT	Single course	Colleague recommendation	Facharzt	Pädiatrie	1	260.0
+2024	B	2024-08	DEU	Single course	Print: journal ad	Assistenzarzt	Pädiatrie	1	440.0
+2024	B	2024-07	DEU	Single course	Print: postal flyer	Facharzt	Pädiatrie	1	470.0
+2024	A	2024-03	CHE	Single course	FOMF website / former participant	Other / unknown	Other	1	263.0
+2024	A	2024-05	AUT	Membership	Membership	Facharzt	Several	1	570.0
+2024	C	2024-09	DEU	Single course	Social media	Assistenzarzt	Psychiatrie	1	490.0
+2024	B	2024-06	DEU	Single course	Print: journal insert	Assistenzarzt	Psychiatrie	1	510.0
+2024	B	2024-07	AUT	Single course	Email / newsletter	Facharzt	Psychiatrie	1	265.0
+2024	A	2024-04	CHE	Single course	Colleague recommendation	Assistenzarzt	Psychiatrie	2	1691.0
+2024	A	2024-02	CHE	Single course	Print: journal ad	Facharzt	Psychiatrie	1	782.0
+2024	A	2024-03	DEU	Single course	Colleague recommendation	Assistenzarzt	Psychiatrie	3	1540.0
+2024	A	2024-04	DEU	Membership	Membership	Assistenzarzt	Psychiatrie	3	1470.0
+2024	A	2024-03	DEU	Single course	Search	Facharzt	Psychiatrie	1	520.0
+2024	A	2024-04	CHE	Single course	Search	Facharzt	Psychiatrie	1	756.0
+2024	A	2024-05	DEU	Single course	Search	Facharzt	Psychiatrie	1	530.0
+2024	B	2024-07	CHE	Single course	Print: clinic poster	Facharzt	Psychiatrie	1	830.0
+2024	B	2024-06	CHE	Single course	Congress / fair	Facharzt	Psychiatrie	2	1197.0
+2024	C	2024-09	AUT	Single course	Print: journal insert	Facharzt	Psychiatrie	1	295.0
+2024	A	2024-04	AUT	Single course	Colleague recommendation	Other / unknown	Other	3	750.0
+2024	A	2024-05	CHE	Single course	Print: journal ad	Facharzt	Other	1	263.0
+2024	B	2024-06	DEU	Membership	Membership	Other / unknown	Other	1	570.0
+2024	B	2024-08	DEU	Single course	Email / newsletter	Facharzt	Pädiatrie	1	470.0
+2024	C	2024-09	AUT	Single course	Print: journal ad	Facharzt	Psychiatrie	1	275.0
+2024	B	2024-06	DEU	Single course	Social media	Assistenzarzt	Allgemeinmedizin	2	1020.0
+2024	C	2024-09	CHE	Single course	Search	Facharzt	Other	1	767.0
+2024	A	2024-01	DEU	Single course	Invitation / sponsor	Facharzt	Several	1	20.0
+2024	A	2024-03	AUT	Single course	Print: journal ad	Facharzt	Innere Medizin	1	650.0
+2024	C	2024-08	AUT	Single course	Colleague recommendation	Facharzt	Innere Medizin	1	280.0
+2024	A	2024-01	DEU	Single course	Search	Facharzt	Psychiatrie	1	550.0
+2024	C	2024-08	AUT	Membership	Membership	Assistenzarzt	Several	1	490.0
+2024	A	2024-02	CHE	Single course	Social media	Assistenzarzt	Other	1	620.0
+2024	B	2024-06	CHE	Single course	Print: journal insert	Assistenzarzt	Other	1	1045.0
+2024	A	2024-03	DEU	Single course	Email / newsletter	Facharzt	Innere Medizin	1	520.0
+2024	A	2024-02	DEU	Single course	Print: clinic poster	Facharzt	Innere Medizin	1	690.0
+2024	A	2024-04	AUT	Membership	Membership	Facharzt	Innere Medizin	1	660.0
+2024	C	2024-09	AUT	Single course	Print: journal insert	Facharzt	Neurologie	1	270.0
+2024	C	2024-09	AUT	Single course	Colleague recommendation	Facharzt	Neurologie	2	540.0
+2024	A	2024-02	DEU	Single course	Print: clinic poster	Facharzt	Neurologie	1	295.0
+2024	A	2024-05	CHE	Single course	Search	Facharzt	Psychiatrie	1	756.0
+2024	A	2024-03	AUT	Single course	Invitation / sponsor	Facharzt	Other	1	370.0
+2024	C	2024-09	DEU	Single course	Email / newsletter	Facharzt	Several	1	520.0
+2024	B	2024-07	AUT	Membership	Membership	Facharzt	Several	1	570.0
+2024	A	2024-01	CHE	Single course	Print: journal insert	Facharzt	Allgemeinmedizin	1	368.0
+2024	B	2024-08	DEU	Membership	Membership	Facharzt	Other	2	1140.0
+2024	B	2024-06	DEU	Single course	Colleague recommendation	Facharzt	Innere Medizin	1	590.0
+2024	B	2024-08	DEU	Single course	Print: clinic poster	Facharzt	Pädiatrie	1	380.0
+2024	B	2024-07	AUT	Membership	Membership	Facharzt	Other	1	660.0
+2024	B	2024-06	DEU	Single course	Print: journal insert	Other / unknown	Other	1	190.0

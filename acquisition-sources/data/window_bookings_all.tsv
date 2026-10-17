@@ -1,0 +1,38 @@
+yr	period	is_member	postal	bookings	cash_eur	credit_value_eur
+2024	A	false	false	5064	1916305.0	0
+2024	A	false	true	838	395736.0	0
+2024	A	true	false	3905	34861.0	963338
+2024	A	true	true	1	0.0	0
+2024	B	false		1	0.0	0
+2024	B	false	false	2414	845632.0	0
+2024	B	false	true	388	181637.0	0
+2024	B	true	false	1812	11998.0	475162
+2024	C	false		25	9866.0	0
+2024	C	false	false	2414	963079.0	0
+2024	C	false	true	529	251510.0	0
+2024	C	true	false	1278	12137.0	304909
+2025	A	false		8	0.0	0
+2025	A	false	false	5251	1926257.0	0
+2025	A	false	true	806	398974.0	0
+2025	A	true	false	5120	29782.0	1668130
+2025	B	false		15	0.0	0
+2025	B	false	false	1954	684559.0	0
+2025	B	false	true	316	140652.0	0
+2025	B	true	false	1729	10345.0	536620
+2025	C	false		39	0.0	0
+2025	C	false	false	2052	757261.0	0
+2025	C	false	true	389	180334.0	0
+2025	C	true	false	1678	9608.0	499587
+2026	A	false		12	2095.0	0
+2026	A	false	false	4588	1598471.0	0
+2026	A	false	true	530	258444.0	0
+2026	A	true	false	5880	28457.0	1931311
+2026	A	true	true	1	588.0	450
+2026	B	false		10	4755.0	0
+2026	B	false	false	2111	634516.0	0
+2026	B	false	true	202	91640.0	0
+2026	B	true	false	2363	9398.0	747452
+2026	C	false		4	0.0	0
+2026	C	false	false	1536	575230.0	0
+2026	C	false	true	146	73487.0	0
+2026	C	true	false	1895	6838.0	562893
