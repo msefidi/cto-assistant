@@ -121,10 +121,24 @@ Goal for both: **double revenue in the coming year** (to Sep 2027). Revenue = me
 | `eviplex-changelog/` | Internal Eviplex changelog emails (DE) | `eviplex-changelog/src/` |
 | `eviplex-uae-pitch/` | EN pitch deck for the UAE contact, Oct 2026 | the `.pptx` in the folder |
 | `eviplex-weekly/` | Weekly Eviplex plan memos, one file per week | latest dated `.md` |
+| `artifact-index/` | Source of the Artifact Index page (see below) | `artifact-index/artifact-index.html` |
 
 Folders with an `AGENTS.md` also have a `CLAUDE.md` pointing at it; read that brief before working in the folder. The others are smaller and have no brief.
 
 Security findings and pentest / audit results (e.g. Blaze reports) go in `cybersecurity/reports/`, which git ignores. Keep the originals in SharePoint.
+
+---
+
+## Artifact Index — record every output
+
+The **Artifact Index** (https://claude.ai/artifact/KPVNKWy8eCpyvHexVeJFuZ) is the single register of what this workspace has produced: Claude pages, docs, decks and designs, Office files, emails and memos, skills, and things that live in Metabase, Notion, Linear or Figma. Its rows are in the page's database, not in the HTML.
+
+- **Looking for an earlier output?** Read the index first: `ArtifactData` with `action: "list"`, `collection: "outputs"`.
+- **Produced or changed an output?** Add or update its row in the same session with `ArtifactData` (`set` / `update` on `outputs/<slug>`). Do not republish the page for this.
+- **Row fields:** `title`, `kind` (`page`, `doc`, `deck`, `design`, `ds`, `data`, `file`, `message`, `skill`, `metabase`, `notion`, `linear`, `figma`, `other`), `status` (`live`, `done`, `draft`, `reusable`, `check`, `archived`, `unsorted`), `url` (where the real thing lives, https only, may be empty), `repo` (path in this repo that rebuilds it), `project` (folder name where one exists), `date` (`YYYY-MM-DD`), `note` (one or two plain sentences; put a SharePoint location here when there is no link).
+- **The repo keeps what rebuilds it:** save a Claude page's source HTML, the SQL, scripts, templates and prompts in the project folder, not in a temp directory. Final sent versions of Office files go to SharePoint.
+- **Leave out** personal items and HR documents.
+- The page source is `artifact-index/artifact-index.html`; change it only to change the page itself.
 
 ---
 

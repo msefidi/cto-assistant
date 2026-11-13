@@ -1,0 +1,586 @@
+<title>Artifact Index</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Roboto:wght@400;500&family=Roboto+Mono:wght@400&display=swap">
+<style>
+/* Layout: one working column. Toolbar (search, status chips, kind and project filters) sits above a dense
+   register table; on phones each row becomes a stacked card. The add/edit form opens inline above the table. */
+:root {
+  --bg: #F3F6F9;
+  --surface: #FFFFFF;
+  --fg: #12385C;
+  --body: #33485C;
+  --muted: #5B7186;
+  --line: #D5DDE6;
+  --accent: #01718A;
+  --on-accent: #FFFFFF;
+  --ok: #0B7A57;
+  --warn: #8A5A00;
+  --alert: #B21C00;
+  --info: #1B62B3;
+  --font-display: "Poppins", "Avenir Next", "Segoe UI", sans-serif;
+  --font-body: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Roboto Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0B1926; --surface: #12263A; --fg: #EAF1F7; --body: #C9D6E2; --muted: #93A8BC; --line: #25405A;
+    --accent: #56C7E0; --on-accent: #06202B; --ok: #4FD1A5; --warn: #F0B95A; --alert: #FF8A73; --info: #7FB5F5;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0B1926; --surface: #12263A; --fg: #EAF1F7; --body: #C9D6E2; --muted: #93A8BC; --line: #25405A;
+  --accent: #56C7E0; --on-accent: #06202B; --ok: #4FD1A5; --warn: #F0B95A; --alert: #FF8A73; --info: #7FB5F5;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--body);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.45;
+}
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-block: 28px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Header */
+.head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 24px; }
+.head h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--fg);
+  text-wrap: balance;
+}
+.head p { margin: 4px 0 0; color: var(--muted); max-width: 62ch; }
+
+/* Buttons and inputs */
+button, input, select, textarea { font: inherit; color: inherit; }
+.btn {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--fg);
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-weight: 500;
+  cursor: pointer;
+  min-height: 38px;
+}
+.btn:hover { border-color: var(--accent); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.btn.danger { color: var(--alert); }
+.btn.small { padding: 4px 10px; min-height: 30px; font-size: 13px; }
+.btn:disabled { opacity: .55; cursor: default; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+input[type="search"], input[type="text"], input[type="url"], input[type="date"], select, textarea {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 8px 10px;
+  min-height: 38px;
+  color: var(--fg);
+}
+textarea { min-height: 64px; resize: vertical; }
+
+/* Toolbar */
+.tools { display: flex; flex-direction: column; gap: 12px; }
+.tools-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.tools-row .grow { flex: 1 1 240px; min-width: 0; }
+.tools-row select { width: auto; flex: 0 1 200px; min-width: 0; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--body);
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  min-height: 32px;
+}
+.chip b { font-weight: 500; color: var(--muted); margin-left: 4px; font-variant-numeric: tabular-nums; }
+.chip[aria-pressed="true"] { background: var(--fg); border-color: var(--fg); color: var(--bg); }
+.chip[aria-pressed="true"] b { color: var(--bg); opacity: .8; }
+
+/* Form */
+.form {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.form h2 { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: 17px; color: var(--fg); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px 14px; }
+.grid .wide { grid-column: 1 / -1; }
+.field { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.field label { font-size: 12px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+.field small { color: var(--muted); font-size: 12px; }
+.form-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.form-actions .spacer { flex: 1 1 auto; }
+.msg { color: var(--alert); font-size: 13px; min-height: 1em; }
+
+/* Register */
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+thead th {
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+tbody td { padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tbody tr:last-child td { border-bottom: 0; }
+.t-title { min-width: 240px; }
+.t-title a, .t-title .name { color: var(--fg); font-weight: 500; text-decoration: none; overflow-wrap: anywhere; }
+.t-title a { text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
+.t-title a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+.note { margin-top: 3px; color: var(--muted); font-size: 13px; max-width: 60ch; overflow-wrap: anywhere; }
+.kind { font-size: 13px; white-space: nowrap; }
+.proj { font-size: 13px; overflow-wrap: anywhere; }
+.proj button { background: none; border: 0; padding: 0; color: var(--body); cursor: pointer; text-align: left; }
+.proj button:hover { color: var(--accent); text-decoration: underline; }
+.src { display: flex; align-items: flex-start; gap: 6px; }
+.src code { font-family: var(--font-mono); font-size: 12px; color: var(--body); overflow-wrap: anywhere; }
+.copy { border: 0; background: none; color: var(--accent); cursor: pointer; font-size: 12px; padding: 0 2px; white-space: nowrap; }
+.date { white-space: nowrap; font-variant-numeric: tabular-nums; font-size: 13px; }
+.pill {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  --c: var(--muted);
+  color: var(--c);
+  background: color-mix(in srgb, var(--c) 13%, var(--surface));
+}
+.pill.live { --c: var(--ok); }
+.pill.draft { --c: var(--warn); }
+.pill.check { --c: var(--alert); }
+.pill.reusable { --c: var(--info); }
+.pill.done { --c: var(--body); }
+.pill.archived { --c: var(--muted); }
+.pill.unsorted { background: transparent; border: 1px dashed var(--line); }
+.dash { color: var(--muted); }
+
+.empty { padding: 40px 20px; text-align: center; color: var(--muted); }
+.empty strong { display: block; font-family: var(--font-display); font-weight: 600; color: var(--fg); font-size: 16px; margin-bottom: 4px; }
+.foot { color: var(--muted); font-size: 13px; }
+
+@media (max-width: 760px) {
+  thead { display: none; }
+  table, tbody, tr, td { display: block; width: 100%; }
+  tbody tr { padding: 12px 14px; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 1fr auto; gap: 6px 12px; }
+  tbody tr:last-child { border-bottom: 0; }
+  tbody td { padding: 0; border: 0; }
+  .t-title { grid-column: 1 / -1; min-width: 0; }
+  .t-src { grid-column: 1 / -1; }
+  .t-kind, .t-proj { grid-column: 1; }
+  .t-date, .t-status { grid-column: 2; text-align: right; }
+  .t-act { grid-column: 1 / -1; }
+  td:empty { display: none; }
+}
+@media (prefers-reduced-motion: no-preference) { .btn, .chip { transition: border-color .12s, background-color .12s; } }
+</style>
+
+<div class="wrap">
+  <header class="head">
+    <div>
+      <h1>Artifact Index</h1>
+      <p id="summary">Every output from the CTO workspace, and where the real thing lives.</p>
+    </div>
+    <button class="btn primary" id="add-btn" type="button" hidden>Add output</button>
+  </header>
+
+  <form class="form" id="form" hidden novalidate>
+    <h2 id="form-title">Add output</h2>
+    <div class="grid">
+      <div class="field wide">
+        <label for="f-title">Title</label>
+        <input type="text" id="f-title" maxlength="200" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="f-kind">Kind</label>
+        <select id="f-kind"></select>
+      </div>
+      <div class="field">
+        <label for="f-status">Status</label>
+        <select id="f-status"></select>
+      </div>
+      <div class="field wide">
+        <label for="f-url">Link</label>
+        <input type="url" id="f-url" placeholder="https://…" autocomplete="off">
+        <small>Where the real thing lives. Leave empty if it only exists as a file.</small>
+      </div>
+      <div class="field wide">
+        <label for="f-repo">Source in repo</label>
+        <input type="text" id="f-repo" placeholder="cto-assistant/…" autocomplete="off">
+        <small>The folder or file in ai-folders that rebuilds it.</small>
+      </div>
+      <div class="field">
+        <label for="f-project">Project</label>
+        <input type="text" id="f-project" list="projects" autocomplete="off">
+        <datalist id="projects"></datalist>
+      </div>
+      <div class="field">
+        <label for="f-date">Date</label>
+        <input type="date" id="f-date">
+      </div>
+      <div class="field wide">
+        <label for="f-note">Note</label>
+        <textarea id="f-note" maxlength="600"></textarea>
+      </div>
+    </div>
+    <div class="form-actions">
+      <button class="btn primary" type="submit" id="save-btn">Save</button>
+      <button class="btn" type="button" id="cancel-btn">Cancel</button>
+      <span class="msg" id="form-msg" role="status"></span>
+      <span class="spacer"></span>
+      <button class="btn danger" type="button" id="delete-btn" hidden>Remove from index</button>
+    </div>
+  </form>
+
+  <section class="tools" aria-label="Filters">
+    <div class="tools-row">
+      <input class="grow" type="search" id="q" placeholder="Search title, project, note, path" aria-label="Search">
+      <select id="kind-filter" aria-label="Kind"></select>
+      <select id="project-filter" aria-label="Project"></select>
+      <select id="sort" aria-label="Sort">
+        <option value="date">Newest first</option>
+        <option value="title">Title A–Z</option>
+        <option value="project">By project</option>
+      </select>
+    </div>
+    <div class="chips" id="status-chips" role="group" aria-label="Status"></div>
+  </section>
+
+  <section class="panel">
+    <div class="scroll">
+      <table id="table" hidden>
+        <thead>
+          <tr><th>Output</th><th>Kind</th><th>Project</th><th>Source in repo</th><th>Date</th><th>Status</th><th></th></tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <div class="empty" id="empty"><strong>Loading the index…</strong>Rows come from the page's shared database.</div>
+  </section>
+
+  <p class="foot" id="foot">The link column points to the real thing. The repo column points to what rebuilds it.</p>
+</div>
+
+<script>
+(function () {
+  var KINDS = {
+    page: "Claude page",
+    doc: "Claude doc",
+    deck: "Claude deck",
+    design: "Claude design",
+    ds: "Design system",
+    data: "Claude dashboard",
+    file: "File",
+    message: "Email / memo",
+    skill: "Skill",
+    metabase: "Metabase",
+    notion: "Notion",
+    linear: "Linear",
+    figma: "Figma",
+    other: "Other"
+  };
+  var STATUSES = {
+    live: "Live",
+    done: "Done",
+    draft: "Draft",
+    reusable: "Reusable",
+    check: "To check",
+    archived: "Archived",
+    unsorted: "Unsorted"
+  };
+  var state = {
+    rows: [], loaded: false, unavailable: false, error: "",
+    q: "", kind: "", project: "", status: "", sort: "date",
+    canEdit: false, db: null, editing: null, confirmDelete: false
+  };
+  function $(id) { return document.getElementById(id); }
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  }
+  function str(v) { return typeof v === "string" ? v : ""; }
+  function safeUrl(u) { return /^https:\/\//i.test(str(u)) ? str(u) : ""; }
+  function fmtDate(d) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(str(d))) return "";
+    var t = new Date(d + "T00:00:00");
+    if (isNaN(t)) return "";
+    return t.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+  }
+  function statusOf(r) { return STATUSES[r.status] ? r.status : "unsorted"; }
+  function kindOf(r) { return KINDS[r.kind] ? r.kind : "other"; }
+
+  function fillSelect(sel, first, map, value) {
+    sel.textContent = "";
+    if (first != null) { var o = el("option", "", first); o.value = ""; sel.appendChild(o); }
+    Object.keys(map).forEach(function (k) {
+      var opt = el("option", "", map[k]); opt.value = k; sel.appendChild(opt);
+    });
+    sel.value = value || "";
+  }
+
+  function matches(r, skipStatus) {
+    if (state.kind && kindOf(r) !== state.kind) return false;
+    if (state.project && str(r.project) !== state.project) return false;
+    if (!skipStatus && state.status && statusOf(r) !== state.status) return false;
+    if (state.q) {
+      var hay = [r.title, r.project, r.note, r.repo, r.url, KINDS[kindOf(r)]].map(str).join(" ").toLowerCase();
+      var words = state.q.toLowerCase().split(/\s+/).filter(Boolean);
+      for (var i = 0; i < words.length; i++) if (hay.indexOf(words[i]) === -1) return false;
+    }
+    return true;
+  }
+  function sorted(list) {
+    var by = state.sort;
+    return list.slice().sort(function (a, b) {
+      if (by === "title") return str(a.title).localeCompare(str(b.title));
+      if (by === "project") {
+        var p = str(a.project).localeCompare(str(b.project));
+        if (p) return p;
+      }
+      var d = str(b.date).localeCompare(str(a.date));
+      return d || str(a.title).localeCompare(str(b.title));
+    });
+  }
+
+  function copyText(text, btn) {
+    var done = function () { btn.textContent = "Copied"; setTimeout(function () { btn.textContent = "Copy"; }, 1200); };
+    try {
+      navigator.clipboard.writeText(text).then(done, function () { selectNode(btn.previousSibling); });
+    } catch (e) { selectNode(btn.previousSibling); }
+  }
+  function selectNode(node) {
+    try { var r = document.createRange(); r.selectNodeContents(node); var s = getSelection(); s.removeAllRanges(); s.addRange(r); } catch (e) {}
+  }
+
+  function renderRow(r) {
+    var tr = el("tr");
+
+    var tdTitle = el("td", "t-title");
+    var url = safeUrl(r.url);
+    var name;
+    if (url) { name = el("a", "", str(r.title) || "Untitled"); name.href = url; name.target = "_blank"; name.rel = "noopener noreferrer"; }
+    else { name = el("span", "name", str(r.title) || "Untitled"); }
+    tdTitle.appendChild(name);
+    if (str(r.note)) tdTitle.appendChild(el("div", "note", r.note));
+    tr.appendChild(tdTitle);
+
+    tr.appendChild(el("td", "t-kind kind", KINDS[kindOf(r)]));
+
+    var tdProj = el("td", "t-proj proj");
+    if (str(r.project)) {
+      var pb = el("button", "", r.project); pb.type = "button"; pb.title = "Show only this project";
+      pb.addEventListener("click", function () { state.project = r.project; render(); });
+      tdProj.appendChild(pb);
+    }
+    tr.appendChild(tdProj);
+
+    var tdSrc = el("td", "t-src");
+    if (str(r.repo)) {
+      var box = el("div", "src");
+      box.appendChild(el("code", "", r.repo));
+      var cb = el("button", "copy", "Copy"); cb.type = "button"; cb.setAttribute("aria-label", "Copy path");
+      cb.addEventListener("click", function () { copyText(r.repo, cb); });
+      box.appendChild(cb);
+      tdSrc.appendChild(box);
+    }
+    tr.appendChild(tdSrc);
+
+    tr.appendChild(el("td", "t-date date", fmtDate(r.date)));
+
+    var tdStatus = el("td", "t-status");
+    var st = statusOf(r);
+    tdStatus.appendChild(el("span", "pill " + st, STATUSES[st]));
+    tr.appendChild(tdStatus);
+
+    var tdAct = el("td", "t-act");
+    if (state.canEdit) {
+      var eb = el("button", "btn small", "Edit"); eb.type = "button";
+      eb.addEventListener("click", function () { openForm(r); });
+      tdAct.appendChild(eb);
+    }
+    tr.appendChild(tdAct);
+    return tr;
+  }
+
+  function render() {
+    // filters
+    fillSelect($("kind-filter"), "All kinds", KINDS, state.kind);
+    var projects = {};
+    state.rows.forEach(function (r) { if (str(r.project)) projects[r.project] = r.project; });
+    var pm = {}; Object.keys(projects).sort().forEach(function (k) { pm[k] = k; });
+    if (state.project && !pm[state.project]) state.project = "";
+    fillSelect($("project-filter"), "All projects", pm, state.project);
+    var dl = $("projects"); dl.textContent = "";
+    Object.keys(pm).forEach(function (k) { var o = el("option"); o.value = k; dl.appendChild(o); });
+
+    // status chips with counts (within the other filters)
+    var base = state.rows.filter(function (r) { return matches(r, true); });
+    var counts = {}; base.forEach(function (r) { var s = statusOf(r); counts[s] = (counts[s] || 0) + 1; });
+    var chips = $("status-chips"); chips.textContent = "";
+    var mk = function (key, label, n) {
+      var b = el("button", "chip", label); b.type = "button";
+      b.appendChild(el("b", "", String(n)));
+      b.setAttribute("aria-pressed", String(state.status === key));
+      b.addEventListener("click", function () { state.status = key; render(); });
+      chips.appendChild(b);
+    };
+    mk("", "All", base.length);
+    Object.keys(STATUSES).forEach(function (k) { if (counts[k] || state.status === k) mk(k, STATUSES[k], counts[k] || 0); });
+
+    // rows
+    var list = sorted(state.rows.filter(function (r) { return matches(r, false); }));
+    var tbody = $("rows"); tbody.textContent = "";
+    list.forEach(function (r) { tbody.appendChild(renderRow(r)); });
+
+    var empty = $("empty"); empty.textContent = "";
+    var table = $("table");
+    if (list.length) { table.hidden = false; empty.hidden = true; }
+    else {
+      table.hidden = true; empty.hidden = false;
+      var head, body;
+      if (!state.loaded) { head = "Loading the index…"; body = "Rows come from the page's shared database."; }
+      else if (state.unavailable) { head = "The index can't load here"; body = "Open this page on claude.ai while signed in to the FOMF organization."; }
+      else if (state.error) { head = "The index stopped updating"; body = state.error; }
+      else if (state.rows.length) { head = "Nothing matches these filters"; body = "Clear the search or pick another status."; }
+      else { head = "No outputs recorded yet"; body = state.canEdit ? "Use “Add output” to record the first one, or ask Claude to add a row." : "Rows appear here once the owner adds them."; }
+      empty.appendChild(el("strong", "", head));
+      empty.appendChild(document.createTextNode(body));
+    }
+
+    var toCheck = state.rows.filter(function (r) { return statusOf(r) === "check"; }).length;
+    var unsorted = state.rows.filter(function (r) { return statusOf(r) === "unsorted"; }).length;
+    if (state.loaded && state.rows.length) {
+      var parts = [state.rows.length + " outputs"];
+      if (toCheck) parts.push(toCheck + " to check");
+      if (unsorted) parts.push(unsorted + " unsorted");
+      $("summary").textContent = parts.join(" · ") + ". Each row says where the real thing lives.";
+    }
+    $("add-btn").hidden = !(state.canEdit && state.db);
+  }
+
+  // form
+  function openForm(r) {
+    state.editing = r ? r.id : null;
+    state.confirmDelete = false;
+    $("form-title").textContent = r ? "Edit output" : "Add output";
+    $("f-title").value = r ? str(r.title) : "";
+    fillSelect($("f-kind"), null, KINDS, r ? kindOf(r) : "page");
+    fillSelect($("f-status"), null, STATUSES, r ? statusOf(r) : "live");
+    $("f-url").value = r ? str(r.url) : "";
+    $("f-repo").value = r ? str(r.repo) : "";
+    $("f-project").value = r ? str(r.project) : (state.project || "");
+    $("f-date").value = r && /^\d{4}-\d{2}-\d{2}$/.test(str(r.date)) ? r.date : new Date().toISOString().slice(0, 10);
+    $("f-note").value = r ? str(r.note) : "";
+    $("form-msg").textContent = "";
+    $("delete-btn").hidden = !r;
+    $("delete-btn").textContent = "Remove from index";
+    $("form").hidden = false;
+    $("f-title").focus();
+    $("form").scrollIntoView({ block: "nearest" });
+  }
+  function closeForm() { $("form").hidden = true; state.editing = null; state.confirmDelete = false; }
+  function fail(e) {
+    var code = e && e.code;
+    $("form-msg").textContent = code === "quota_exceeded" ? "The index is full. Remove old rows first."
+      : code === "invalid_argument" ? "Not saved. You may not have edit access to this page."
+      : "Not saved. Try again in a moment.";
+    $("save-btn").disabled = false; $("delete-btn").disabled = false;
+  }
+
+  $("add-btn").addEventListener("click", function () { openForm(null); });
+  $("cancel-btn").addEventListener("click", closeForm);
+  $("form").addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    if (!state.db) return;
+    var title = $("f-title").value.trim();
+    var url = $("f-url").value.trim();
+    if (!title) { $("form-msg").textContent = "Give it a title."; $("f-title").focus(); return; }
+    if (url && !safeUrl(url)) { $("form-msg").textContent = "The link must start with https://"; $("f-url").focus(); return; }
+    var data = {
+      title: title,
+      kind: $("f-kind").value,
+      status: $("f-status").value,
+      url: url,
+      repo: $("f-repo").value.trim(),
+      project: $("f-project").value.trim(),
+      date: $("f-date").value,
+      note: $("f-note").value.trim()
+    };
+    $("save-btn").disabled = true; $("form-msg").textContent = "";
+    var p = state.editing ? state.db.doc("outputs/" + state.editing).set(data) : state.db.collection("outputs").add(data);
+    p.then(function () { $("save-btn").disabled = false; closeForm(); }, fail);
+  });
+  $("delete-btn").addEventListener("click", function () {
+    if (!state.db || !state.editing) return;
+    if (!state.confirmDelete) { state.confirmDelete = true; $("delete-btn").textContent = "Click again to remove"; return; }
+    $("delete-btn").disabled = true;
+    state.db.doc("outputs/" + state.editing).delete().then(function () { $("delete-btn").disabled = false; closeForm(); }, fail);
+  });
+
+  // filters
+  $("q").addEventListener("input", function (e) { state.q = e.target.value.trim(); render(); });
+  $("kind-filter").addEventListener("change", function (e) { state.kind = e.target.value; render(); });
+  $("project-filter").addEventListener("change", function (e) { state.project = e.target.value; render(); });
+  $("sort").addEventListener("change", function (e) { state.sort = e.target.value; render(); });
+
+  function init() {
+    render();
+    var c = window.claude;
+    if (!c || typeof c.use !== "function") { state.loaded = true; state.unavailable = true; render(); return; }
+    Promise.all([c.use("db"), c.use("user")]).then(function (res) {
+      var db = res[0], user = res[1];
+      if (!db) { state.loaded = true; state.unavailable = true; render(); return; }
+      state.db = db;
+      Promise.resolve(user ? user.canEdit() : true).then(function (ok) { state.canEdit = !!ok; render(); }, function () {});
+      db.collection("outputs").limit(1000).onSnapshot(function (snap) {
+        state.rows = snap.docs.map(function (d) {
+          var data = d.data() || {};
+          var row = { id: d.id };
+          Object.keys(data).forEach(function (k) { row[k] = data[k]; });
+          return row;
+        });
+        state.loaded = true; state.error = "";
+        render();
+      }, function () {
+        state.loaded = true; state.error = "Reload the page to reconnect.";
+        render();
+      });
+    }, function () { state.loaded = true; state.unavailable = true; render(); });
+  }
+  init();
+})();
+</script>
