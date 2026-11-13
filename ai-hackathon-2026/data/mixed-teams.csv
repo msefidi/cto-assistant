@@ -1,0 +1,73 @@
+team_no,buddy,person,department,role
+1,George Balan,Anya Hubmayer,Events AT,Veranstaltungsleitung & Business Relation
+1,George Balan,Benigna Hassler,Team CH,Geschäftsführung Schweiz
+1,George Balan,Daniela König,Marketing,Digital Marketing Managerin
+1,George Balan,Gerald Rupp,Sales,Head of Sales AT & DE
+1,George Balan,Jaquelin Matthes,B2B & Kooperationen,Kooperationsmanagement
+1,George Balan,Marie Beckmann,Customer Ops,Customer Support
+1,George Balan,Natalie Gutacker,Sales Admin,Key Account Administration DE
+1,George Balan,Tamara Naumann,Events DE,Veranstaltungsleitung
+1,George Balan,Viktoria Haßl,Livestream,Livestream & Videotechnik
+2,Vahid Zierau,Alexander Bielau,Sales,stv. Head of Sales DE
+2,Vahid Zierau,Carolin Link,Events DE,Veranstaltungsleitung
+2,Vahid Zierau,Felix Dümpert,GF-Assistenz / HR / QM + UK,"Executive Assistant, QM und Sonderprojekte"
+2,Vahid Zierau,Gea Sokol,Marketing,Marketing Managerin
+2,Vahid Zierau,Kevin Rupp,Livestream,Livestream & Videotechnik
+2,Vahid Zierau,Marie Fiebig,Medical,Medical
+2,Vahid Zierau,Sinja Huwendiek,Sales Admin,Sales Administration
+2,Vahid Zierau,Steffi Günther,Events AT,Veranstaltungsleitung
+2,Vahid Zierau,Ute Schellerer,B2B & Kooperationen,Head of B2B & Business Development
+3,Rahim Sharifi,Daniel Müller,Events DE,Veranstaltungsleitung
+3,Rahim Sharifi,Fabio Pasquali,Livestream,"Leitung Livestream, Video & IT Schweiz"
+3,Rahim Sharifi,Isgard Eyberg,Medical,Medical
+3,Rahim Sharifi,Lisa Weigl-Pollack,Events AT,Veranstaltungsleitung
+3,Rahim Sharifi,Morgane Daepp,Team CH,Veranstaltungsleitung
+3,Rahim Sharifi,Nicole Pils,Sales Admin,Sales Administration
+3,Rahim Sharifi,Paola Vacca,Sales,Head of Sales CH
+3,Rahim Sharifi,Tanja Zimmermann,WebUp,Projektleitung WebUp
+3,Rahim Sharifi,Vanessa Schützl,GF-Assistenz / HR / QM + UK,HR & Assistenz der Geschäftsführung
+4,Simone Herak,Alena Nüchter,Events DE,Veranstaltungsleitung
+4,Simone Herak,Asim Aslan,Livestream,Livestream & Videotechnik
+4,Simone Herak,Cornelia Seiz,Events AT,Head of Events Österreich
+4,Simone Herak,Daniela Brunner,GF-Assistenz / HR / QM + UK,Assistenz der Geschäftsführung
+4,Simone Herak,Esra Perius,Sales,Sales Manager
+4,Simone Herak,Jasmin Unzeitig,Sales Admin,Sales Administration
+4,Simone Herak,Sabrina Diggelmann,Team CH,Backoffice CH
+4,Simone Herak,Shadi Aghdam,Tech,Product Designer
+4,Simone Herak,Sharon Frietsch,WebUp,Projektleitung WebUp
+5,Andreas Langer,Andrea Pohl,GF-Assistenz / HR / QM + UK,Assistenz der Geschäftsführung
+5,Andreas Langer,Angela Beutler,Team CH,Kooperationen & Projektmanagement
+5,Andreas Langer,Heike Bothe,Sales,Sales Managerin
+5,Andreas Langer,Larissa Mariscal Aroca,WebUp,Projektleitung WebUp
+5,Andreas Langer,Nadja Bauer,Events AT,Veranstaltungsleitung
+5,Andreas Langer,Raman Sinclair,Tech,Software Engineer Platform
+5,Andreas Langer,Theresa Danhel,Sales Admin,Sales Administration
+5,Andreas Langer,Theresa Wieser,Marketing,Marketing Managerin Industriepartner
+5,Andreas Langer,Vanessa Nieminen,Events DE,Head of Events DE & AT
+6,Ignasi Brosa,Andrea Pieler,Sales Admin,Sales Administration
+6,Ignasi Brosa,Antje Raeder,Events DE,Head of Events Deutschland & Leitung Zertifizierung
+6,Ignasi Brosa,Badi Aiff,GF-Assistenz / HR / QM + UK,Business Manager UK
+6,Ignasi Brosa,Laura Trognon,Marketing,Marketing Managerin
+6,Ignasi Brosa,Marc Bornschein,Sales,Sales Manager
+6,Ignasi Brosa,Marlies Nasr,WebUp,Head of WebUp DACH
+6,Ignasi Brosa,Nikola Rendic,Tech,Software Engineer Internal Productivity
+6,Ignasi Brosa,Nina Zahlner,Events AT,Helferin Events
+6,Ignasi Brosa,Tatjana Gallardo,B2B & Kooperationen,Sales B2B
+7,Florian Pfleger,Andreas Eberl,B2B & Kooperationen,Sales B2B
+7,Florian Pfleger,Astrid Winiker,Team CH,Veranstaltungsleitung
+7,Florian Pfleger,Dominik Schreiner,Livestream,Head of Livestream DACH
+7,Florian Pfleger,Jara Elgharably,Marketing,Marketing Medical
+7,Florian Pfleger,Josip Jurenic,Tech,Mobile Engineer Eviplex & Platform
+7,Florian Pfleger,Max Aigner,Medical,Medical
+7,Florian Pfleger,Nova Burkhardt,Events DE,Veranstaltungsleitung
+7,Florian Pfleger,Raphaela Groß,Customer Ops,Head of Customer Operations DACH
+7,Florian Pfleger,Verena Buchart,Sales,Sales Managerin Österreich
+8,Mateo Keretic,Daniela Löw,Livestream,Livestream & Videotechnik
+8,Mateo Keretic,Faisal Sheikh,Customer Ops,Customer Support
+8,Mateo Keretic,Jasmin Naimi,B2B & Kooperationen,Sales B2B
+8,Mateo Keretic,Jessica Woidt,Sales,Sales Managerin
+8,Mateo Keretic,Julia Abraham,Events AT,Veranstaltungsleitung
+8,Mateo Keretic,Michael Duss,Team CH,Veranstaltungsleitung & Marketing
+8,Mateo Keretic,Ricarda Zierau,Sales Admin,Sales Administration
+8,Mateo Keretic,Tina Hoffmann,Marketing,Head of Marketing DACH
+8,Mateo Keretic,Tomislav Cupurdija,Tech,Software Engineer Internal Productivity

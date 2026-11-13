@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AVV-Prüfung Eviplex</title>
+<style>
+:root {
+  --bg: #fff; --soft: #f9f9f9; --card: #fff;
+  --text: rgba(0,0,0,.9); --text-2: rgba(0,0,0,.6); --text-3: rgba(0,0,0,.47);
+  --line: rgba(0,0,0,.12); --shadow: 0 4px 20px rgba(0,0,0,.075);
+  --clay: #d97757; --clay-strong: #c6613f;
+  --good: #006c10; --good-bg: rgba(16,161,34,.14);
+  --bad: #a42528; --bad-bg: rgba(220,60,61,.12);
+  --watch: #794c02; --watch-bg: rgba(251,179,21,.16);
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #151515; --soft: #0b0b0b; --card: #1f1f1f;
+  --text: rgba(255,255,255,.93); --text-2: rgba(255,255,255,.57); --text-3: rgba(255,255,255,.4);
+  --line: rgba(255,255,255,.12); --shadow: none;
+  --good: #53c556; --bad: #f17778; --watch: #e49c06; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #151515; --soft: #0b0b0b; --card: #1f1f1f;
+  --text: rgba(255,255,255,.93); --text-2: rgba(255,255,255,.57); --text-3: rgba(255,255,255,.4);
+  --line: rgba(255,255,255,.12); --shadow: none;
+  --good: #53c556; --bad: #f17778; --watch: #e49c06; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 var(--sans); }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px 48px; }
+h1, h2 { font-family: var(--serif); font-weight: 400; margin: 0; text-wrap: balance; }
+h1 { font-size: 32px; line-height: 1.2; margin: 20px 0 16px; }
+h2 { font-size: 22px; line-height: 1.3; margin: 0 0 14px; }
+.meta { font-size: 13px; color: var(--text-2); border-bottom: 1px solid var(--line); padding: 12px 0; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); padding: 20px; }
+.num { font-size: 40px; font-weight: 500; line-height: 1; }
+.pill { display: inline-block; border-radius: 999px; padding: 2px 10px; font-size: 13px; font-weight: 500; }
+.good { color: var(--good); background: var(--good-bg); }
+.bad { color: var(--bad); background: var(--bad-bg); }
+.watch { color: var(--watch); background: var(--watch-bg); }
+.neutral { color: var(--text-2); background: var(--soft); border: 1px solid var(--line); }
+.ask { border-left: 4px solid var(--clay-strong); padding: 14px 18px; background: var(--soft); border-radius: 0 12px 12px 0; margin-bottom: 20px; }
+.ask b { color: var(--clay-strong); }
+.tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.tile .num { margin-bottom: 8px; }
+.tile.bad .num { color: var(--bad); }
+.tile { background: var(--card); color: var(--text); }
+section { margin-top: 40px; }
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; font-size: 13px; font-weight: 500; color: var(--text-2); padding: 8px 10px; border-bottom: 1px solid var(--line); }
+td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+td.svc { font-weight: 600; }
+.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.grid5 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+ul.items { list-style: none; margin: 0; padding: 0; }
+ul.items li { display: flex; gap: 10px; padding: 8px 0; border-top: 1px solid var(--line); }
+ul.items li:first-child { border-top: 0; padding-top: 0; }
+ul.items svg { flex: 0 0 18px; margin-top: 3px; }
+.card h3 { font: 600 16px var(--sans); margin: 0 0 12px; display: flex; gap: 8px; align-items: center; }
+.clause .row { padding: 8px 0; border-top: 1px solid var(--line); }
+.clause .row:first-of-type { border-top: 0; }
+.lbl { font-size: 13px; color: var(--text-2); display: block; }
+.steps { list-style: none; margin: 0; padding: 0; counter-reset: s; }
+.steps li { display: flex; gap: 14px; padding: 12px 0; border-top: 1px solid var(--line); align-items: flex-start; }
+.steps li:first-child { border-top: 0; }
+.who { flex: 0 0 auto; min-width: 210px; }
+@media (max-width: 760px) {
+  .tiles, .grid3 { grid-template-columns: 1fr; }
+  thead { display: none; }
+  table, tbody, tr, td { display: block; width: 100%; }
+  tr { padding: 10px 0; border-bottom: 1px solid var(--line); }
+  td { border: 0; padding: 2px 0; }
+  .steps li { flex-direction: column; gap: 4px; }
+  .who { min-width: 0; }
+  h1 { font-size: 28px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="meta">AVV Eviplex · Prüfung der Anlagen und der Berufsgeheimnis-Vereinbarung · Mahyar an Habib, cc Felix · 3. Nov. 2026</div>
+
+<h1>Die Anlagen versprechen mehr, als Eviplex heute technisch einhält</h1>
+
+<div class="ask"><b>Bitte AVV und Vereinbarung noch nicht unterschreiben oder veröffentlichen.</b> Ich schlage 45 Minuten mit Felix und mir diese Woche vor – antworte mir einfach mit einem Termin.</div>
+
+<div class="tiles">
+  <div class="card tile bad"><div class="num">3</div><b>Dienste fehlen</b> in Anlage 2.2: Vercel, Datadog, Retool</div>
+  <div class="card tile bad"><div class="num">7</div><b>TOM-Aussagen</b> in Anlage 2.1 stimmen heute nicht</div>
+  <div class="card tile bad"><div class="num">5</div><b>Klauseln</b> der Berufsgeheimnis-Vereinbarung kann FOMF heute nicht einhalten</div>
+</div>
+
+<section>
+<h2>Anlage 2.2: Welcher Dienst was aus dem Chat bekommt</h2>
+<div class="card">
+<table>
+<thead><tr><th>Dienst</th><th>Bekommt aus dem Chat</th><th>Ort</th><th>Änderung</th></tr></thead>
+<tbody>
+<tr><td class="svc">FOMF GmbH</td><td>Betreibt den ganzen Dienst; Lernplattform bekommt nur 2–6 Suchwörter</td><td>Deutschland</td><td><span class="pill watch">Zweck erweitern</span></td></tr>
+<tr><td class="svc">Google Cloud</td><td><b>Alle Gespräche</b>, gespeichert (Datenbank, Redis, Backups)</td><td>Frankfurt</td><td><span class="pill good">stimmt</span></td></tr>
+<tr><td class="svc">OpenAI</td><td><b>Frage, Verlauf und Antwort</b>; Diktat als Audio</td><td>Nicht auf EU festgelegt</td><td><span class="pill bad">Ort falsch</span></td></tr>
+<tr><td class="svc">Vercel AI Gateway</td><td><b>Alles, was an OpenAI geht</b></td><td>Nicht festgelegt</td><td><span class="pill bad">fehlt</span></td></tr>
+<tr><td class="svc">Elastic Cloud</td><td>Von der KI umformulierte Suchanfragen</td><td>Frankfurt; Embedding-Modell offen</td><td><span class="pill watch">Ort prüfen</span></td></tr>
+<tr><td class="svc">Google Vertex AI</td><td>Suchanfragen zum Sortieren der Treffer, keine Antworten</td><td>Offen</td><td><span class="pill watch">Zweck + Ort ändern</span></td></tr>
+<tr><td class="svc">Braintrust</td><td>Fragen und Antworten, Namen maskiert</td><td>EU</td><td><span class="pill good">stimmt</span></td></tr>
+<tr><td class="svc">Datadog</td><td>Logs mit umformulierten Suchanfragen</td><td>EU</td><td><span class="pill bad">fehlt</span></td></tr>
+<tr><td class="svc">Retool</td><td><b>Direkter Zugriff</b> auf die Gesprächs-Datenbank</td><td>US-Adressen freigegeben</td><td><span class="pill bad">fehlt</span></td></tr>
+<tr><td class="svc">Azure</td><td>Nichts – nicht im Einsatz</td><td>–</td><td><span class="pill neutral">streichen</span></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section>
+<h2>Anlage 2.1: Was davon heute stimmt</h2>
+<div class="grid3">
+  <div class="card">
+    <h3><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="var(--good)" stroke-width="2"><path d="M3 9.5l4 4 8-9"/></svg>Stimmt</h3>
+    <ul class="items">
+      <li><span><b>Hosting</b> in Frankfurt (europe-west3)</span></li>
+      <li><span><b>Schlüssel</b> im Secret Manager, nicht im Code</span></li>
+      <li><span><b>API-Schlüssel</b> laufzeitkonstant geprüft</span></li>
+      <li><span><b>Backups</b> täglich, 7 Tage, plus Point-in-Time</span></li>
+      <li><span><b>Braintrust</b> auf EU-Servern, Namen maskiert</span></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="var(--bad)" stroke-width="2"><path d="M4 4l10 10M14 4L4 14"/></svg>Stimmt nicht: Datenfluss</h3>
+    <ul class="items">
+      <li><span><b>„Nur EU, fail closed“:</b> OpenAI ohne EU-Region; Abweichung wird nur geloggt</span></li>
+      <li><span><b>Diktat</b> geht an den US-Endpunkt von OpenAI</span></li>
+      <li><span><b>„Keine Kopien“:</b> DB-Dump (11,5 GB, Nov. 2025) und Prod-Klon (Sep. 2026) liegen noch</span></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="var(--bad)" stroke-width="2"><path d="M4 4l10 10M14 4L4 14"/></svg>Stimmt nicht: Betrieb</h3>
+    <ul class="items">
+      <li><span><b>„Nicht öffentlich erreichbar“:</b> Datenbank hat öffentliche IP, Retool freigeschaltet</span></li>
+      <li><span><b>„Alles mit TLS“:</b> Datenbank erlaubt Unverschlüsseltes, Redis ohne TLS</span></li>
+      <li><span><b>„Vier-Augen-Prüfung Pflicht“:</b> Pull Request nötig, aber 0 Freigaben</span></li>
+      <li><span><b>„Ratenbegrenzung“:</b> nur Monatskontingente</span></li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>Berufsgeheimnis-Vereinbarung: Was FOMF so nicht zusagen kann</h2>
+<div class="grid5">
+  <div class="card clause">
+    <h3>§ 5, § 6 · Keine Speicherung</h3>
+    <div class="row"><span class="lbl">Heute</span>FOMF <b>speichert Gespräche</b> für den Verlauf, plus Backups</div>
+    <div class="row"><span class="lbl">Vorschlag</span>Nur für KI-Anbieter; für FOMF Speicherung nach Weisung</div>
+  </div>
+  <div class="card clause">
+    <h3>§ 2, § 6 · Keine Qualitätsprüfung</h3>
+    <div class="row"><span class="lbl">Heute</span><b>Braintrust</b> zeichnet jede Antwort zur Prüfung auf</div>
+    <div class="row"><span class="lbl">Vorschlag</span>QS im Auftrag erlauben; Felix' Art.-26-Frage an die Anwältin</div>
+  </div>
+  <div class="card clause">
+    <h3>Anlage 2 (rot) · Zertifikate</h3>
+    <div class="row"><span class="lbl">Heute</span><b>Kein</b> ISO 27001, C5 oder SOC; Pentest mit Blaze erst Nov.–Jan.</div>
+    <div class="row"><span class="lbl">Vorschlag</span>Streichen oder als Ziel mit Datum</div>
+  </div>
+  <div class="card clause">
+    <h3>§ 8 · Meldung in 12 Stunden</h3>
+    <div class="row"><span class="lbl">Heute</span>Braucht <b>Rufbereitschaft</b>, auch nachts und am Wochenende</div>
+    <div class="row"><span class="lbl">Vorschlag</span>24 Stunden, oder wir richten Rufbereitschaft ein</div>
+  </div>
+  <div class="card clause">
+    <h3>§ 9 · Unbegrenzte Haftung</h3>
+    <div class="row"><span class="lbl">Heute</span>Freistellung inkl. <b>Rufschaden</b> zwischen Schwesterfirmen</div>
+    <div class="row"><span class="lbl">Vorschlag</span>Mit Erfan und Anwältin entscheiden – keine Technikfrage</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>So geht es weiter</h2>
+<div class="card">
+<ol class="steps">
+  <li><span class="who"><span class="pill watch">Mahyar + Parham</span></span><span><b>Technik-Lücken schließen:</b> Retool-Zugriff, OpenAI-EU-Endpunkt, TLS, Dump und Klon löschen, Code-Freigaben</span></li>
+  <li><span class="who"><span class="pill watch">Mahyar</span></span><span><b>Anlagen 2.1 und 2.2</b> als Änderungen in V-06, mit Firmierungen aus den Verträgen und Datenflussdiagramm</span></li>
+  <li><span class="who"><span class="pill watch">Felix</span></span><span><b>DPIA-Stand</b> klären; Braintrust-Frage (Art. 26) mit der Anwältin</span></li>
+  <li><span class="who"><span class="pill watch">Habib</span></span><span><b>Haftung § 9</b> mit Erfan und der Anwältin</span></li>
+  <li><span class="who"><span class="pill neutral">Danach</span></span><span><b>Mitarbeiter verpflichten.</b> Google-Zusatz (§ 203) läuft, neue Ansprechpartnerinnen seit 30. Okt.</span></li>
+</ol>
+</div>
+</section>
+
+</div>
+</body>
+</html>

@@ -72,7 +72,7 @@ Medical AI assistant — evidence-based answers to doctors' questions, grounded 
 - EM: Simone
 - Engineers: Nikola, Tomislav, Borna, Farzam
 
-**Meviq team** — the AI assistant product
+**Eviplex team** — the AI assistant product (formerly Meviq team)
 - PM: **Mahyar** (himself, for now)
 - Medical Lead: **Max**
 - Designers: Shadi, Bardia
@@ -85,7 +85,7 @@ Medical AI assistant — evidence-based answers to doctors' questions, grounded 
 ## Current priorities (as of July 2026)
 
 1. **Eviplex (ex-Meviq) launch & corporate separation** — dev started June 2025; v1 launched quietly December 2025 (~500 users). Answer-quality issues drove a rewrite; technical blockers (quality, latency, cost-per-question) are now resolved. Focus has shifted from tech to the **corporate/legal separation**: standing up **Eviplex GmbH** as the product-owning entity (regulatory/liability holder, GDPR controller) with **FOMF** as SaaS provider / asset company (GDPR processor). DPAs in preparation; FOMF↔Eviplex cooperation contract to be signed. See the meviq → Eviplex section above. Top near-term focus.
-2. **Cybersecurity** — hardening custom + cloud workloads (GCP-hosted and Microsoft-side alike). A joint M365 + GCP assessment was scoped with Mandiant but **not commissioned (too expensive, decided July 2026)**; the replacement approach (cheaper assessment vendor, tooling-first e.g. CSPM/SCC/Datadog Security, or internal hardening) is still open. Scoping artifacts remain reusable in `cybersecurity/` — see that folder's `CLAUDE.md` for details.
+2. **Cybersecurity** — hardening custom + cloud workloads (GCP-hosted and Microsoft-side alike). A joint M365 + GCP assessment was scoped with Mandiant but **not commissioned (too expensive, decided July 2026)**; on 27 Oct 2026 **Blaze Information Security** was chosen over PCG (M365 + GCP review, pentests of the learning platform and Eviplex incl. mobile/AI, + OSINT + GKE review of the learning-platform cluster; revised 6 Nov 2026 to €31,900 net for 29 days at €1,100/day, Eviplex now 9 days; NDA signed by Habib; Phase 1 can start last week of Nov if decided by mid-Nov; contract signed by Mahyar on 9 Nov 2026 (v4, #2026.11.014)). See `cybersecurity/vendor-comparison-2026-10.md`.
 
 Ask Mahyar to confirm/refresh this section when it feels stale — priorities shift and this list should reflect reality.
 
@@ -93,7 +93,7 @@ Ask Mahyar to confirm/refresh this section when it feels stale — priorities sh
 
 ## Commercial ownership (from September 2026, outside the CTO role)
 
-The Executive Board handed Mahyar the **commercials of two learning-platform products** — pricing, packaging, positioning, go-to-market and marketing. This is a business-owner mandate, not engineering work; keep it separate from Platform / Meviq in comms and docs.
+The Executive Board handed Mahyar the **commercials of two learning-platform products** — pricing, packaging, positioning, go-to-market and marketing. This is a business-owner mandate, not engineering work; keep it separate from Platform / Eviplex in comms and docs.
 
 - **SYFAT** (Facharzt / specialist-exam preparation) — brief in `syfat/AGENTS.md`
 - **On-Demand Accredited** (CME-point-bearing on-demand courses) — brief in `on-demand-accredited/AGENTS.md`
@@ -112,8 +112,19 @@ Goal for both: **double revenue in the coming year** (to Sep 2027). Revenue = me
 | `on-demand-accredited/` | On-Demand Accredited commercials: pricing → marketing, 2× revenue goal | `on-demand-accredited/AGENTS.md` |
 | `registration-funnel/` | Web registration drop-off funnel (Segment), Jul–Oct 2026 | `registration-funnel/AGENTS.md` |
 | `ai-hackathon-2026/` | AI Hackathon at the FOMF Teamtreffen, Tue 20 Oct 2026: plan, teams, workstreams | `ai-hackathon-2026/AGENTS.md` |
+| `eviplex-partnermodell/` | Eviplex partner commission model (Medichub, Webop) and partner contract for counsel review, Nov 2026 | `eviplex-partnermodell/AGENTS.md` |
+| `signals/` | Posts and thoughts on leading product & tech into the AI age: capture, themes, monthly reflection (since Nov 2026) | `signals/AGENTS.md` |
+| `acquisition-sources/` | New B2C customers by survey source, skipped-June-mailing economics, Sep 2026 | `acquisition-sources/new-customer-sources.html` |
+| `price-increase-cancellations/` | Cancellations after the Oct 2026 renewal price rise | `price-increase-cancellations/cancellations.html` |
+| `cybersecurity/` | Security assessment vendor choice (Blaze), NDA/contract reviews, EB memo, Oct–Nov 2026 | `cybersecurity/vendor-comparison-2026-10.md` |
+| `eviplex-avv/` | Review of the FOMF↔Eviplex AVV (Anlage 2.1/2.2, § 203), Nov 2026 | `eviplex-avv/avv-pruefung-2026-11-03.html` |
+| `eviplex-changelog/` | Internal Eviplex changelog emails (DE) | `eviplex-changelog/src/` |
+| `eviplex-uae-pitch/` | EN pitch deck for the UAE contact, Oct 2026 | the `.pptx` in the folder |
+| `eviplex-weekly/` | Weekly Eviplex plan memos, one file per week | latest dated `.md` |
 
-Each sub-folder has a `CLAUDE.md` pointing at its `AGENTS.md`; read that brief before working in the folder.
+Folders with an `AGENTS.md` also have a `CLAUDE.md` pointing at it; read that brief before working in the folder. The others are smaller and have no brief.
+
+Security findings and pentest / audit results (e.g. Blaze reports) go in `cybersecurity/reports/`, which git ignores. Keep the originals in SharePoint.
 
 ---
 
@@ -125,7 +136,7 @@ Each sub-folder has a `CLAUDE.md` pointing at its `AGENTS.md`; read that brief b
 | Tuesday | morning | Unit-manager meeting with EB |
 | Tuesday | afternoon | Executive Board |
 | Wednesday | afternoon | Platform weekly (with other EB members reviewing platform projects) |
-| Wednesday | afternoon | Meviq weekly (Mahyar runs it as PM) |
+| Friday | morning | Eviplex weekly (Mahyar runs it as PM) |
 
 - **1:1s** with all six direct reports on a rolling cadence.
 
@@ -138,7 +149,7 @@ Each sub-folder has a `CLAUDE.md` pointing at its `AGENTS.md`; read that brief b
 
 ### Product development
 - **Miro** — whiteboarding
-- **Linear** — issue tracking. Mahyar interacts at project level across most teams; **personally manages the Meviq Linear team**.
+- **Linear** — issue tracking. Mahyar interacts at project level across most teams; **personally manages the Eviplex Linear team** (as Eviplex PM).
 - **Notion** — three primary workspaces he lives in:
   - **Product & Engineering**
   - **Meviq**
