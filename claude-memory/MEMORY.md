@@ -1,0 +1,36 @@
+- [Workspace repo setup](workspace-repo-setup.md) — ai-folders is work-only on msefidi; memory lives in ai-folders/claude-memory (symlinked); PR + squash
+- [Artifact Index](artifact-index.md) — claude.ai page listing every workspace output (rows in its db); add a row when producing one
+- [Comms style: short](comms-style-short.md) — Mahyar's drafts: kind, clear, precise, short; ~5–8 lines, link out for details
+- [Research = sourced facts only](research-sourced-facts-only.md) — drop estimates/unverified claims from findings; suggestions may stay
+- [Linear = product work](linear-is-product-work.md) — frame Linear as product work (bugs/improvements/features), not engineering work
+- [Signals log](signals-log.md) — cto-assistant/signals/ for AI-age posts/thoughts; a bare shared link means "capture it"
+- [Metabase native cards via REST API](metabase-native-cards-via-api.md) — MCP cannot save SQL questions; use curl + key in cto-assistant/.env
+- [folm.org short links](folm-shortlink-domain.md) — link.folm.org is FOMF's T2M short-link domain, not a typo
+- [FOMF-All-Access-Paket](fomf-all-access-paket.md) — B2C "Mitgliedschaft" renamed; use this name externally (Nov 2026)
+- [FOMF team mail addresses](fomf-team-mail-addresses.md) — intern_events@, sponsoring@fomf.de/.at, kongress@fomf.ch, marketing@; no B2B group
+- [B2C Membership Income dashboard (1816)](b2c-membership-income-dashboard.md) — Metabase 1816 for the Sep 2026 EB meeting; card ids, agreed definitions, caveats
+- [B2C Value Journey](b2c-value-journey-dashboard.md) — Sep 2026 cohort page (v23); definitions and log in cto-assistant/b2c-value-journey/
+- [New Customer Sources](new-customer-sources.md) — acquisition by survey source, free memberships excluded, skipped-June-mailing economics (Sep 2026)
+- [Price increase cancellations](price-increase-cancellations.md) — Oct 2026 renewal price rise; first read 30 Sep: timing shift, not extra churn yet
+- [Platform North Star](platform-north-star.md) — usage/CME does not predict renewal (85% auto); annual churn 22.4%; loss breakdown (Oct 2026)
+- [WebUp acquisition](webup-acquisition.md) — free WebUps drive ≤2–7% of new paying customers; mostly existing customers attend (Oct 2026)
+- [Registration funnel](registration-funnel.md) — Segment sign-up drop-off Jul–Oct 2026; 47% visitor→done; Baidu crawler noise
+- [B2C retention emails](b2c-retention-emails.md) — monthly course and video/Eviplex emails per role, win-back discount; Figma node ids (Sep 2026)
+- [fomf.de bot traffic](fomf-de-bot-traffic.md) — CN = real Baiduspider (login crawl trap); FI = one-off SISTRIX crawl 4 Nov (Nov 2026)
+- [ÄKW tender](aekw-tender.md) — Ärztekammer Wien streaming tender WON (Nov 2026); start 01.02.2027; committed SSO and data model
+- [Security assessment vendor](security-assessment-vendor.md) — Blaze contract signed 9 Nov 2026 (€31,900 net, 29 d); next: give Blaze final dates
+- [php2shell Drupal incident](php2shell-drupal-incident.md) — Oct 2026 PHP RCE on legacy Drupal in v2; ingress mitigation gaps, secret rotation open
+- [Retool audit logs](retool-audit-logs.md) — Retool MCP reads audit logs; Oct 2026 new-IP alert = likely IPv6 rotation
+- [Team-service agents](team-service-agents.md) — when a Claude helper becomes a team service; Claude Tag vs Managed Agents vs Copilot (Oct 2026)
+- [Eviplex Linear structure](eviplex-linear-structure.md) — EVP Track + Surface labels, title prefixes, weekly format (Oct 2026)
+- [Eviplex plan memo format](eviplex-plan-memo-format.md) — weekly Teams plan by project: This week + Target, side issues, On the horizon
+- [Eviplex brand concept](eviplex-brand-concept.md) — words in meviq brand/ (#1102 merged), look follows the code; DS build #1103 open
+- [Anika (Eviplex marketing)](anika-eviplex-marketing.md) — Eviplex marketing manager; reviews brand PRs; co-owns brand and claims with Shadi
+- [Eviplex changelog email](eviplex-changelog-email.md) — first internal changelog (DE, ihr), Nov 2026; Linear view + PRs; HTML in eviplex-changelog/
+- [Eviplex customer support](eviplex-customer-support.md) — FOMF CS stays in front, support@ only, quotas 30/150/300 (Oct 2026)
+- [Eviplex document upload answer](eviplex-document-upload-answer.md) — Befunde/Bilder upload not today; roadmap under § 203, no date (Nov 2026)
+- [Eviplex CH tech fact sheet](eviplex-ch-tech-factsheet.md) — CH pitch + fact-sheet slides; legal wording; Google Cloud § 203 gap (Oct–Nov 2026)
+- [Eviplex UAE pitch](eviplex-uae-pitch.md) — EN deck for the UAE contact; render via the PowerPoint sandbox (Oct 2026)
+- [Eviplex AVV review](eviplex-avv-review.md) — FOMF↔Eviplex AVV draft; Vercel gateway in path, Retool on prod DB, no EU pin for OpenAI
+- [Eviplex Medichub partner contract](eviplex-medichub-partner-contract.md) — partner model (Medichub, Webop); contract draft v0.1 not yet sent to counsel
+- [KIS/PVS integration research](kis-pvs-integration-research.md) — MDR line = patient data; Valmed is the rival; partner candidates; Notion page (Oct 2026)

@@ -142,6 +142,12 @@ The **Artifact Index** (https://claude.ai/artifact/KPVNKWy8eCpyvHexVeJFuZ) is th
 
 ---
 
+## Memory
+
+Claude Code's memory for this repo lives in `../claude-memory/` (the repo root folder `claude-memory/`): one fact per file, indexed in `MEMORY.md`. Claude Code reaches it through a symlink, so memory changes appear in `git status`; commit them with the rest of the work. Repo files (briefs, logs, SQL) stay the source of truth; memory holds decisions, preferences and pointers.
+
+---
+
 ## Recurring rituals
 
 | Day | Slot | Meeting |

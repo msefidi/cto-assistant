@@ -1,0 +1,34 @@
+---
+name: aekw-tender
+description: "Ärztekammer Wien (ÄKW) streaming tender — FOMF WON it (Nov 2026); start 01.02.2027; committed scope: iFrame landing page, OIDC SSO via ÄSP, full FOMF accounts with consent"
+metadata:
+  node_type: memory
+  type: project
+  originSessionId: 0be8b0c3-6aef-4312-9ced-c9251bd98866
+  modified: 2026-10-27T14:13:38.253Z
+---
+
+**Outcome (Mahyar, 13 Nov 2026):** the clarification answers went in by 11 Nov and **FOMF won the contract**. The work is now delivery for the 01.02.2027 start; what we promised is in the concept v2 and the clarification answers below.
+
+FOMF bid in the ÄKW public tender (BVergG, Breitenfeld Rechtsanwälte, RA Kröswang) for group access of ~15,300 ÄKW members + ~1,000 KPJ students, start 01.02.2027.
+
+- First offer due **23.10.2026 10:00** via breitenfeld.vergabeportal.at; questions closed 09.10.2026; presentation + live demo KW 44–45; award KW 49.
+- Files: SharePoint `Sales Membership/Ausschreibung Ärztekammer Wien` (our drafts = `_US` files; `original/`; `Unsere Angebote an Ärztekammer Wien/` holds April 2026 offer). Core offer = "ÄK Wien_Angebot_17042026.pdf" + "Kurzversion": €280k net/yr, ÄKW landing page (own URL + fomf.at/aekw), video pool 8/month, 10 FOMF credits = 10 DFP, KPJ-Begleiter, 15% combo discount (membership + KI-Produkt = Eviplex), SYROT.
+- Scoring: price 40, SOLL 20, Konzept 40 (ch.4 Implementierung 12, ch.5 Integration 8; max 20 pages, German; commission = 3 ÄKW doctors).
+- Mahyar's decisions (14.10.2026): tick Beilage 2 6.1/6.2/6.4.a as erfüllt; **iFrame = catalog only** — live courses, on-demand courses, booking, account open on fomf.at via SSO; group access is a defined subset, not all content.
+- Concept is co-written in Claude Doc "ÄKW Konzept – Kapitel 4 & 5" (https://claude.ai/code/artifact/9e938f7c-f8ba-4fef-b58b-a59df15ba18f); move to Word in SharePoint at the end. Do not mention partner pages or SGMO in the concept (the fomf.ch/sgmo Partnerforum page is only the internal UI reference for the catalog).
+- Team edits the Word concept in SharePoint: latest `ÄKW (Stream)-Konzept_Entwurf_MS_US_ST.docx` (21.10; parallel older `…_Final_die Anmerkungen noch finalisieren.docx` 18.10). As of 21.10 it still held only ch. 5; team narrowed the iFrame to "Terminübersicht + ausgewählte Empfehlungen" (conflicts with Beilage 2 4.5/6.2 and rest of ch. 5).
+- Binding Q&A 16.10.2026 in `Aktualisierung 16.10.2026/` (Bieteranfragen-161026.pdf): completion = tracked playback, resume, no seek-to-end; e-learning needs knowledge test; live = proven attendance time; live chat/questions/polls, up to 500 concurrent per stream, moderator roles; H.264 1080p25/AAC/WebVTT/SRT/HLS-CMAF, WCAG 2.0; bidder stores content; all our promotion needs ÄKW approval.
+- 21.10.2026: team's Word version "ÄKW (Stream)-Konzept_Entwurf_MS_US_ST.docx" became the master; reworked to v2 (Downloads) as ONE "Implementierungs- und Integrationskonzept" without chapter numbers (sections 1–7). Decisions: iFrame = landing page with dates, recommendations, search/filter and the 8 monthly videos playable in the ÄSP; no personal area; courses/livestreams in FOMF learning env; Mahyar kept the "Zuschlag bis 15. November" wording in section 6 (flagged as Vorbehalt risk, his call). SharePoint upload tool unavailable — files go via Downloads.
+- 27.10.2026: v2 is in SharePoint (`Ausschreibung Ärztekammer Wien/ÄKW (Stream)-Konzept_Entwurf_MS_US_ST_v2.docx`, 4 pages, sections 1–7: Zielbild, iFrame 6.4.a, Funktionsumfang, SSO OIDC/Keycloak 6.3, Betrieb 99,5 %/5.000 concurrent 6.5, Umsetzung/Abnahme, Anforderungsmatrix 6.1–6.5). Sina attended the ÄKW meeting that day with Mahyar on call. Open tension: the concept's "Zuschlag bis 15. November" condition vs. the tender's award in KW 49.
+- ÄKW said verbally that smooth login is what matters (not binding — tender 1.15).
+- Claude drafting concept ch. 4+5 step by step → Word file in that SharePoint folder.
+
+- 04.11.2026: Breitenfeld "Aufforderungsschreiben" (Aufklärung), answer due **11.11.2026** via vergabeportal: (1) KPJ access — ÄKW has no KPJ data, doctors log in via ID Austria; (2) ÄKW-side SSO effort/budget, joint logout, return to ÄSP; (3) are the 8 monthly videos personalised per specialty; (4) which data is transferred, deletion when a doctor leaves the Ärzteliste; (5) data only for ÄKW, no FOMF use/storage; (6) merging with existing FOMF accounts, deletion on either side; (7) upgrade options (e.g. 50 DFP/yr) with member discounts → answer: FOMF-All-Access-Paket, 20 % for ÄKW members for the whole term of the ÄKW cooperation (existing All Access customers excluded); optional ÄKW subsidy €60 per doctor / €36 per Assistenzarzt per year net, paid by ÄKW to FOMF; promotion jointly by FOMF + ÄKW. Also: return signed presentation protocol + submit Registerauskunft für Verbände. Point 5 clashes with the deal rationale (traffic onto fomf.at).
+
+- 05.11.2026 SSO decisions for the Aufklärung: ÄSP = OIDC provider (fallback SAML / signed token). Two silent SSO sessions: iFrame does OIDC prompt=none on first load (session in memory, no 3rd-party cookies), fomf.at opens in a new tab and does its own silent top-level SSO via ÄSP; the user never notices either. With OIDC, ÄKW's only development item is the leaver signal (no token signing). ID Austria sits upstream of ÄSP only; KPJ = separate verified registration on fomf.at. Our side: ÄKW login must link by `sub` only — the DocCheck flow auto-merges by e-mail, must not be copied; joint (back-channel) logout is new work. Prototype prompt=none-in-iframe in Safari/Firefox/Chrome before committing.
+
+- 05.11.2026 data model decided by Mahyar (overrides earlier processor idea): doctors get a FULL FOMF account, created only with consent (one-time terms/privacy dialog at first ÄSP login); FOMF uses it under its own terms. ÄSP logout logs out of FOMF; leaving the Ärzteliste removes only the ÄKW status; account deletion only on the doctor's request, never automatic. 8 videos selected per specialty (FOMF profile / ÄSP data), general/cross-specialty set as fallback. Letter must not estimate ÄKW's effort (depends on OIDC support) and must not mention SAML/token fallback. Risk flagged: contradicts ÄKW's "no FOMF use/storage" demand, contract 15.3 and Beilage 2 precedence.
+
+**Why:** strategic B2B deal (price cut ~1M→300k to bring ÄKW traffic onto fomf.at).
+**How to apply:** treat the concept v2 and the 05.11 SSO / data-model decisions as commitments to deliver. Open build items: OIDC login via ÄSP linked by `sub` only (not the DocCheck e-mail merge), silent SSO in iFrame + new tab (prototype in Safari/Firefox/Chrome), back-channel logout, leaver signal removing only the ÄKW status, consent dialog at first login, 8 videos per specialty, KPJ registration, 20 % All-Access discount for ÄKW members. Watch contract 15.3 (no own use of member data), Beilage 2 precedence over our concept (contract 2.2), Hydra/Keycloak SSO via user-service like DocCheck.
