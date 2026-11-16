@@ -102,28 +102,28 @@ Goal for both: **double revenue in the coming year** (to Sep 2027). Revenue = me
 
 ---
 
-## Sub-project folders
+## Initiatives — one shape
 
-| Folder | What it is | Entry point |
+An **initiative** is any work that runs longer than one session: a deal, a project, a vendor process, a product mandate. Each is a folder here with the same four files, copied from `_template/`. It is not a Linear initiative. `INITIATIVES.md` lists every folder with its status and next step; it is loaded at the end of this section.
+
+| File | Holds | Changes by |
 |---|---|---|
-| `b2c-value-journey/` | Interactive dashboard on monthly B2C member cohorts for the Sep 2026 EB strategy meeting | `b2c-value-journey/AGENTS.md` |
-| `b2c-income-dashboard/` | SQL behind the Metabase dashboard "B2C Membership Income" (1816) | `b2c-income-dashboard/sql/` |
-| `syfat/` | SYFAT commercials: pricing → marketing, 2× revenue goal | `syfat/AGENTS.md` |
-| `on-demand-accredited/` | On-Demand Accredited commercials: pricing → marketing, 2× revenue goal | `on-demand-accredited/AGENTS.md` |
-| `registration-funnel/` | Web registration drop-off funnel (Segment), Jul–Oct 2026 | `registration-funnel/AGENTS.md` |
-| `ai-hackathon-2026/` | AI Hackathon at the FOMF Teamtreffen, Tue 20 Oct 2026: plan, teams, workstreams | `ai-hackathon-2026/AGENTS.md` |
-| `eviplex-partnermodell/` | Eviplex partner commission model (Medichub, Webop) and partner contract for counsel review, Nov 2026 | `eviplex-partnermodell/AGENTS.md` |
-| `signals/` | Posts and thoughts on leading product & tech into the AI age: capture, themes, monthly reflection (since Nov 2026) | `signals/AGENTS.md` |
-| `acquisition-sources/` | New B2C customers by survey source, skipped-June-mailing economics, Sep 2026 | `acquisition-sources/new-customer-sources.html` |
-| `price-increase-cancellations/` | Cancellations after the Oct 2026 renewal price rise | `price-increase-cancellations/cancellations.html` |
-| `cybersecurity/` | Security assessment vendor choice (Blaze), NDA/contract reviews, EB memo, Oct–Nov 2026 | `cybersecurity/vendor-comparison-2026-10.md` |
-| `eviplex-avv/` | Review of the FOMF↔Eviplex AVV (Anlage 2.1/2.2, § 203), Nov 2026 | `eviplex-avv/avv-pruefung-2026-11-03.html` |
-| `eviplex-changelog/` | Internal Eviplex changelog emails (DE) | `eviplex-changelog/src/` |
-| `eviplex-uae-pitch/` | EN pitch deck for the UAE contact, Oct 2026 | the `.pptx` in the folder |
-| `eviplex-weekly/` | Weekly Eviplex plan memos, one file per week | latest dated `.md` |
-| `artifact-index/` | Source of the Artifact Index page (see below) | `artifact-index/artifact-index.html` |
+| `AGENTS.md` | The brief: status, goal, people, open points, rules, source map | Rewriting, so it is always current |
+| `docs/decisions.md` | Every decision, one line each, newest first, with who and where | Appending only; a changed decision gets a new line saying what it replaces |
+| `docs/log.md` | Events and results, newest first; each entry names who and where | Appending only |
+| `CLAUDE.md` | One line pointing at `AGENTS.md` | Never |
 
-Folders with an `AGENTS.md` also have a `CLAUDE.md` pointing at it; read that brief before working in the folder. The others are smaller and have no brief.
+- **Starting one:** copy `_template/` to a kebab-case folder. Done when every heading of the brief is filled (write "none" where there is nothing), the log has its first entry, decisions made so far have their lines and `INITIATIVES.md` has its line.
+- **Working in one:** read the brief, the decisions and the newest log entries first. Done when each decision of the session has its line in `decisions.md`, each result is logged and the brief's Status and the `INITIATIVES.md` line match it.
+- **"Catch up on X":** search every row of X's source map from the newest log date to today. Done when the news is logged, new decisions have their lines, the Status is updated and each new thread, chat or person is in the source map. Then tell Mahyar what changed.
+- **Sources stay where they are.** The log summarises an email, chat or contract with who, where and when. The original stays in Outlook, Teams or SharePoint.
+- **Memory** keeps one pointer note per initiative. The history goes in the log.
+- **Linear:** when part of an initiative becomes product work, link the Linear project in the brief. Linear tracks that part.
+- **Finished:** write the outcome at the top of the brief and move the line to "Done or reference" in `INITIATIVES.md`. The folder stays.
+- **One-off output** (one analysis or deck, finished in a session): a plain folder with the files that rebuild it and a line under "Done or reference". It needs no brief.
+- **Older folders** are listed under "Not yet in shape" in `INITIATIVES.md`. Bring one in line when you next work in it, and keep its existing files where they are.
+
+@INITIATIVES.md
 
 Security findings and pentest / audit results (e.g. Blaze reports) go in `cybersecurity/reports/`, which git ignores. Keep the originals in SharePoint.
 

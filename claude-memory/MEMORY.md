@@ -1,5 +1,7 @@
 - [Workspace repo setup](workspace-repo-setup.md) — ai-folders is work-only on msefidi; memory lives in ai-folders/claude-memory (symlinked); PR + squash
 - [Artifact Index](artifact-index.md) — claude.ai page listing every workspace output (rows in its db); add a row when producing one
+- [Initiative shape](initiative-shape.md) — conventions go into CLAUDE.md with a template; initiative folders copy cto-assistant/_template/
+- [People: M365 names](people-m365-names.md) — Sina is Martin S. Taheri in Outlook/Teams; Andreas Eberl is a second Andreas
 - [Comms style: short](comms-style-short.md) — Mahyar's drafts: kind, clear, precise, short; ~5–8 lines, link out for details
 - [Research = sourced facts only](research-sourced-facts-only.md) — drop estimates/unverified claims from findings; suggestions may stay
 - [Linear = product work](linear-is-product-work.md) — frame Linear as product work (bugs/improvements/features), not engineering work
@@ -17,8 +19,8 @@
 - [Registration funnel](registration-funnel.md) — Segment sign-up drop-off Jul–Oct 2026; 47% visitor→done; Baidu crawler noise
 - [B2C retention emails](b2c-retention-emails.md) — monthly course and video/Eviplex emails per role, win-back discount; Figma node ids (Sep 2026)
 - [fomf.de bot traffic](fomf-de-bot-traffic.md) — CN = real Baiduspider (login crawl trap); FI = one-off SISTRIX crawl 4 Nov (Nov 2026)
-- [ÄKW tender](aekw-tender.md) — Ärztekammer Wien streaming tender WON (Nov 2026); start 01.02.2027; committed SSO and data model
-- [Security assessment vendor](security-assessment-vendor.md) — Blaze contract signed 9 Nov 2026 (€31,900 net, 29 d); next: give Blaze final dates
+- [ÄKW](aekw-tender.md) — Ärztekammer Wien cooperation, won unofficially (not to be passed on); brief and log in cto-assistant/aekw/
+- [Security assessment vendor](security-assessment-vendor.md) — Blaze (M365, GCP, pentests): contract + DPA signed 9 Nov 2026; brief and log in cto-assistant/cybersecurity/
 - [php2shell Drupal incident](php2shell-drupal-incident.md) — Oct 2026 PHP RCE on legacy Drupal in v2; ingress mitigation gaps, secret rotation open
 - [Retool audit logs](retool-audit-logs.md) — Retool MCP reads audit logs; Oct 2026 new-IP alert = likely IPv6 rotation
 - [Team-service agents](team-service-agents.md) — when a Claude helper becomes a team service; Claude Tag vs Managed Agents vs Copilot (Oct 2026)
@@ -31,6 +33,6 @@
 - [Eviplex document upload answer](eviplex-document-upload-answer.md) — Befunde/Bilder upload not today; roadmap under § 203, no date (Nov 2026)
 - [Eviplex CH tech fact sheet](eviplex-ch-tech-factsheet.md) — CH pitch + fact-sheet slides; legal wording; Google Cloud § 203 gap (Oct–Nov 2026)
 - [Eviplex UAE pitch](eviplex-uae-pitch.md) — EN deck for the UAE contact; render via the PowerPoint sandbox (Oct 2026)
-- [Eviplex AVV review](eviplex-avv-review.md) — FOMF↔Eviplex AVV draft; Vercel gateway in path, Retool on prod DB, no EU pin for OpenAI
-- [Eviplex Medichub partner contract](eviplex-medichub-partner-contract.md) — partner model (Medichub, Webop); contract draft v0.1 not yet sent to counsel
+- [Eviplex AVV review](eviplex-avv-review.md) — user AVV + FOMF↔Eviplex § 203 agreement; documents = end state; brief in cto-assistant/eviplex-avv/
+- [Eviplex partner model](eviplex-medichub-partner-contract.md) — Medichub/Webop commission model; draft v0.1 not yet with Risch-Kerst; brief in cto-assistant/eviplex-partnermodell/
 - [KIS/PVS integration research](kis-pvs-integration-research.md) — MDR line = patient data; Valmed is the rival; partner candidates; Notion page (Oct 2026)
