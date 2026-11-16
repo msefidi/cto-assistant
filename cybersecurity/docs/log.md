@@ -2,6 +2,14 @@
 
 Newest first. One entry per event or result. Decisions go in `decisions.md`, one line each. Each entry ends with who said it and where, in brackets. Summarise the source; the original stays where it is. Findings and pentest results never go here; they go in `../reports/` (git-ignored) and SharePoint.
 
+## 2026-11-16: team onboarded in Slack
+
+Mahyar created the private channel #p-cybersecurity-assessment and posted the onboarding message there for Andreas, Shervin, Simone, George and Rahim. Andreas and Shervin are asked to block the proposed weeks for access and configuration work; Simone, George and Rahim are kept informed. (Mahyar, Slack #p-cybersecurity-assessment, C0CHXPGCWHH; text in `slack-draft-team-onboarding-2026-11-16.md`)
+
+## 2026-11-16: Slack onboarding for the team drafted
+
+Claude drafted a Slack message for Andreas, Shervin, Simone, George and Rahim: what Blaze tests, the proposed weekly timeline (not yet confirmed by Blaze), Andreas and Shervin to block the weeks for access and configuration work, Simone, George and Rahim kept informed (test accounts and data before the January pentests, fixes as product work from February), findings kept confidential. Not yet sent. (session with Mahyar; `slack-draft-team-onboarding-2026-11-16.md`)
+
 ## 2026-11-16: weekly timeline sent to Blaze
 
 Mahyar sent Carol and Mariana Teixeira the weekly timeline below, in his own wording, and asked whether it works for Blaze. (Mahyar, mail "Re: Kick-off call | Blaze x FomF - Penetration test"; text in `email-draft-blaze-dates-2026-11-16.md`)
