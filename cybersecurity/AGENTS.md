@@ -8,7 +8,7 @@ An outside security assessment of FOMF: a configuration review of Microsoft 365 
 
 - **Next step:** wait for Blaze to confirm the weeks and set exact dates; make sure Andreas holds the week of 7 Dec (he called it optimistic) and that GCP access for Blaze is ready by 6 Jan.
 - **Next date:** proposed weeks, one per part: Phase 1 kick-off week of 30 Nov; M365 week of 7 Dec, with the debrief by 11 Dec; GCP 6–8 Jan, kick-off in the same week; OSINT week of 11 Jan; GKE week of 18 Jan; Eviplex pentest from 25 Jan; learning-platform pentest from 1 Feb 2027.
-- **Waiting on:** Blaze's answer to the timeline sent on 16 Nov.
+- **Waiting on:** Blaze's answer to the timeline sent on 16 Nov. The team was onboarded the same day in #p-cybersecurity-assessment; post the exact dates there once Blaze confirms.
 
 ## Goal
 
@@ -23,6 +23,8 @@ All six parts tested, each phase reported and debriefed, the fixed findings rete
 | Sina (in Outlook and Teams: Martin S. Taheri) | Asked in the EB chat how often such a check should run |
 | Erfan (Erfan Abedian) | CFO. Supplies the VAT ID, invoicing email and PO number for Blaze |
 | Andreas (Head of IT; Andreas Langer in Slack) | Grants Blaze M365 Global Reader for Phase 1 and supports the M365 phase. Event high season until 28 Nov; vacation from 27 Dec |
+| Shervin | Supports Andreas with GCP/GKE access and configuration for Blaze; blocks the proposed weeks (asked 16 Nov) |
+| Simone, George, Rahim | EM Productivity, EM Platform, TL Backend. Kept informed; test accounts, data and windows before the January pentests; fixes land in their teams as product work |
 | Caroline "Carol" Galatoli (Blaze) | Cybersecurity Account Executive. Offers, contract, DPA |
 | Mariana Teixeira (Blaze, PM Europe) | Schedules the kick-off call before each phase |
 | Jan Weis (Blaze, in copy) | Blaze contact. Also wrote from Exaspace Security offering separate consulting |
@@ -62,7 +64,7 @@ Where this initiative lives outside this folder. A catch-up searches every row.
 |---|---|
 | Outlook | Search `Blaze`, `blazeinfosec.com`, `Pentest`, `Security Assessment`, `PCG`, `Mandiant`. Threads: "Ihre Anfrage für einen Pentest bei Blaze Information Security" (main thread with Carol, cc Jan Weis and Habib: offers, answers, the 9 Nov "dates not binding" mail); "NDA \| Blaze <> FOMF", "NDA Blaze addition/changes", "NDA Blaze" (Habib, Amendment No. 1); "Blaze Contract" (Habib, 3 Nov); "Completed: Complete with Docusign: DPA FomF.docx.pdf, FomF x Blaze Security Assessment v4.pdf" (signed PDFs attached); "Kick-off call \| Blaze x FomF - Penetration test" (Carol, Mariana Teixeira, pm-europe@ and service-delivery@blazeinfosec.com); "Your access to Blaze Client Portal". PCG: "Fomf <> PCG Security Check - Google", "Kurze Frage zu unserem Projekt" (Alexander Stati). Exaspace: "InfoSec Consulting" (Jan Weis). |
 | Teams | Search `Blaze OR Pentest OR "Security Assessment" OR Mandiant`. Group chat "Executive Board" (15 Oct, 26 Oct, EB memo 9 Nov, Sina's question 10 Nov); Mahyar's 1:1 chat with Habib (NDA, 27 Oct and 9 Nov). |
-| Slack | Mahyar's DM with Andreas (D01N5T0MV9B): thread of 12 Nov on Blaze's dates (high season, 7 Dec earliest, vacation from 27 Dec). Not searched more widely. |
+| Slack | Private channel #p-cybersecurity-assessment (C0CHXPGCWHH), created 16 Nov with Andreas, Shervin, Simone, George and Rahim: the team's project channel. Mahyar's DM with Andreas (D01N5T0MV9B): thread of 12 Nov on Blaze's dates (high season, 7 Dec earliest, vacation from 27 Dec). Not searched more widely. |
 | SharePoint | Not searched yet. The place for the signed contract, DPA, NDA and the reports is not recorded. |
 | Notion | Not searched yet. |
 | Linear | No project for this (checked 15 Nov 2026). "Eli Lilly Cybersecurity" (P-ENG-190) is a different matter by its name. |
@@ -79,6 +81,7 @@ Where this initiative lives outside this folder. A catch-up searches every row.
 | `blaze-contract-review-2026-11-09.md` | Review of #2026.11.013, the v4 check, the MSA date and cancellation rules, the learning-platform days |
 | `email-drafts-2026-10-27.md` | Mails of 27 Oct: questions to Blaze (DE), decline to PCG (DE) |
 | `email-draft-blaze-dates-2026-11-16.md` | Reply to Blaze with the weekly phase timeline and the reasons (EN), sent 16 Nov |
+| `slack-draft-team-onboarding-2026-11-16.md` | Slack onboarding for Andreas, Shervin, Simone, George and Rahim (EN), posted 16 Nov in #p-cybersecurity-assessment |
 | `eb-memo-blaze-2026-11-09.md` | EB memo (DE) on the signed contract |
 | `eviplex-field-encryption.html` | Design draft of 2 Nov 2026 for field-level encryption of Eviplex conversations, so Google cannot read them (§ 203 StGB). It belongs to the Eviplex § 203 / Google gap topic (memory note `eviplex-ch-tech-factsheet`), not to this assessment. Moving it is proposed, not confirmed by Mahyar |
 | `reports/` | Blaze's findings and reports. Git-ignored; not created yet. Originals in SharePoint |
