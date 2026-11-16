@@ -2,6 +2,14 @@
 
 Newest first. One entry per event or result. Decisions go in `decisions.md`, one line each. Each entry ends with who said it and where, in brackets. Summarise the source; the original stays where it is.
 
+## 2026-11-16: PSA question sent to counsel
+
+Mahyar asked Prof. Risch-Kerst (cc Habib) whether FOMF should sign Google's fixed pay-as-you-go PSA now, to cover DE and AT, and sign a custom PSA after an Enterprise Agreement. He asked for her view by the end of the week (20 Nov). The first forward had no PSA attached; Mahyar sent the PDF "GCP and Workspace Professional Secrecy Addendum (DE)_11_11_2026.pdf" three minutes later. (Mahyar, mails "FW: DRAFT version - PSA", 16 Nov 07:56 and 07:59 CET)
+
+## 2026-11-16: Google PSA is ready to sign, waiting on FOMF
+
+On 11 Nov, after the call, Stefanie Wonneberger sent the draft PSA (German) and then said Google already has the final version ready for signature, which can be signed any time. She asked who should receive the DocuSign envelope and whether FOMF's counsel has questions. Mahyar said he would pass it to counsel and come back to her. No later mail from Mahyar to Google or to counsel was found up to 16 Nov. Christian Putzar and Laura Latsch (Google) are on cc. (Stefanie Wonneberger and Mahyar, mail thread "DRAFT version - PSA")
+
 ## 2026-11-15: folder set up
 
 Brief, decisions and log written from the review page, the memory note `eviplex-avv-review` and a search of Outlook, Teams, Linear and the meviq PRs. No reply from Habib, Felix or counsel on the AVV after 4 Nov was found. Slack and SharePoint were not searched. (session with Mahyar)
