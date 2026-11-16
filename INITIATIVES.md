@@ -7,7 +7,7 @@ Every folder in this workspace, one line each. `CLAUDE.md` loads this file into 
 | Folder | What | Status | Next step |
 |---|---|---|---|
 | `aekw/` | Ärztekammer Wien streaming cooperation, start 01.02.2027 | 13 Nov 2026: won, unofficially; award not released | Plan the delivery; official award due KW 49 |
-| `cybersecurity/` | Security assessment with Blaze: M365, GCP, pentests | 15 Nov 2026: contract and DPA signed 9 Nov; Blaze proposed phase dates on 12 Nov, unanswered | Mahyar confirms or changes the dates (Phase 1 from 23 Nov) |
+| `cybersecurity/` | Security assessment with Blaze: M365, GCP, pentests | 16 Nov 2026: weekly timeline sent to Blaze (M365 + debrief week of 7 Dec; then one part per week from 6 Jan; tests end week of 8 Feb) | Wait for Blaze's confirmation; Andreas holds the week of 7 Dec |
 | `eviplex-partnermodell/` | Eviplex partner commission model and contract (Medichub, Webop) | 15 Nov 2026: contract draft v0.1 not yet with counsel; Medichub waiting to launch | Send the draft to Risch-Kerst; answer Medichub with Wafa |
 | `eviplex-avv/` | Review of the Eviplex AVV and the FOMF↔Eviplex secrecy agreement | 16 Nov 2026: Google PSA with Risch-Kerst, answer due 20 Nov; wording with Habib since 4 Nov, no reply; TLS PR #1079 open | To confirm with Mahyar (proposed: close #1079, then tell Habib the documents can go out) |
 | `syfat/` | SYFAT commercials, 2× revenue by Sep 2027 | 15 Nov 2026: baseline not done; SEO Linear project stalled since 22 Sep; Marie preparing a user survey | To confirm with Mahyar (proposed: build the revenue baseline) |

@@ -2,6 +2,18 @@
 
 Newest first. One entry per event or result. Decisions go in `decisions.md`, one line each. Each entry ends with who said it and where, in brackets. Summarise the source; the original stays where it is. Findings and pentest results never go here; they go in `../reports/` (git-ignored) and SharePoint.
 
+## 2026-11-16: weekly timeline sent to Blaze
+
+Mahyar sent Carol and Mariana Teixeira the weekly timeline below, in his own wording, and asked whether it works for Blaze. (Mahyar, mail "Re: Kick-off call | Blaze x FomF - Penetration test"; text in `email-draft-blaze-dates-2026-11-16.md`)
+
+## 2026-11-16: new phase dates drafted
+
+Blaze's dates of 12 Nov do not work for us. Mahyar decided to move every phase and keep the order. He is away from 14 Dec, so only Phase 1 and its debrief run in December and GCP opens January. The draft gives Blaze one week per part and lets it fit the dates: M365 week of 7 Dec with the debrief by 11 Dec 2026; GCP 6–8 Jan, kick-off in the same week; OSINT week of 11 Jan, after GCP and before the pentests; GKE week of 18 Jan; Eviplex pentest from 25 Jan; learning-platform pentest from 1 Feb 2027, one week after Eviplex. Mahyar wrote the final wording of the mail. The reply to Blaze is in `email-draft-blaze-dates-2026-11-16.md` and not yet sent. No new mail from Blaze since 12 Nov. (session with Mahyar; Outlook thread "Re: Kick-off call | Blaze x FomF - Penetration test")
+
+## 2026-11-12: Andreas on the dates
+
+Mahyar asked Andreas about Blaze's dates, the first one most of all. Andreas: IT is in event high season until 28 Nov, so mid-December would be ideal, and he asked whether Google could go first. Mahyar preferred to keep the phase order and asked for the earliest Phase 1 start; Andreas said 7 Dec, as an optimistic assumption. On 13 Nov Andreas said his vacation starts on 27 Dec. (Mahyar and Andreas, Slack DM, thread of 12 Nov)
+
 ## 2026-11-15: folder set up
 
 Brief, decisions and log written from the memory note `security-assessment-vendor`, the files in this folder and a search of Outlook and Teams. The search found Blaze's proposed phase dates of 12 Nov and no reply from Mahyar yet. It also found that the DPA was signed with the contract on 9 Nov. Slack, SharePoint and Notion were not searched. No Linear project exists. (session with Mahyar)

@@ -4,15 +4,15 @@ An outside security assessment of FOMF: a configuration review of Microsoft 365 
 
 ## Status
 
-**As of 15 Nov 2026:** Contract v4 (#2026.11.014, €31,900 net, 29 days) and Blaze's Art. 28 DPA were signed on 9 Nov. On 12 Nov Blaze proposed dates for every phase, starting with M365 on 23–26 Nov. No reply from Mahyar was found.
+**As of 16 Nov 2026:** Contract v4 (#2026.11.014, €31,900 net, 29 days) and Blaze's Art. 28 DPA were signed on 9 Nov. Blaze proposed phase dates on 12 Nov, starting with M365 on 23–26 Nov. Those dates do not work: Andreas is in event high season until 28 Nov, Mahyar is away from 14 Dec, and nobody can support the work from 25 Dec to 5 Jan. On 16 Nov Mahyar sent Blaze a weekly timeline (`email-draft-blaze-dates-2026-11-16.md`) in which Blaze fits its own dates: only Phase 1 and its debrief in December, GCP and everything else from 6 Jan, same phase order.
 
-- **Next step:** Mahyar confirms or changes Blaze's proposed dates with Carol and Mariana Teixeira. Phase 1 (M365) would start on 23 Nov, so this is urgent.
-- **Next date:** Phase 1 kick-off call, about a week before 23 Nov (not yet scheduled). Proposed phases: M365 23–26 Nov; GCP 2–4 Dec; OSINT 28–29 Dec; GKE 31 Dec–6 Jan; Eviplex 4–14 Jan 2027; learning platform 7–15 Jan 2027.
-- **Waiting on:** Blaze waits on Mahyar's date confirmation.
+- **Next step:** wait for Blaze to confirm the weeks and set exact dates; make sure Andreas holds the week of 7 Dec (he called it optimistic) and that GCP access for Blaze is ready by 6 Jan.
+- **Next date:** proposed weeks, one per part: Phase 1 kick-off week of 30 Nov; M365 week of 7 Dec, with the debrief by 11 Dec; GCP 6–8 Jan, kick-off in the same week; OSINT week of 11 Jan; GKE week of 18 Jan; Eviplex pentest from 25 Jan; learning-platform pentest from 1 Feb 2027.
+- **Waiting on:** Blaze's answer to the timeline sent on 16 Nov.
 
 ## Goal
 
-All six parts tested, each phase reported and debriefed, the fixed findings retested within 90 days of each phase's report, and Blaze's attestation letter received. With the proposed dates, testing ends on 15 Jan 2027. Behind this sit two aims from 27 Oct: fix most security issues, and prepare for ISO 27001, at least for Eviplex. A pentest alone does not make FOMF ISO-ready; that needs a separate ISMS track.
+All six parts tested, each phase reported and debriefed, the fixed findings retested within 90 days of each phase's report, and Blaze's attestation letter received. With the weeks we propose, testing ends in the week of 8 Feb 2027. Behind this sit two aims from 27 Oct: fix most security issues, and prepare for ISO 27001, at least for Eviplex. A pentest alone does not make FOMF ISO-ready; that needs a separate ISMS track.
 
 ## People
 
@@ -22,7 +22,7 @@ All six parts tested, each phase reported and debriefed, the fixed findings rete
 | Habib (Habib Modabber) | CGO. Signed the NDA and its Amendment No. 1; checked the first DocuSign envelope |
 | Sina (in Outlook and Teams: Martin S. Taheri) | Asked in the EB chat how often such a check should run |
 | Erfan (Erfan Abedian) | CFO. Supplies the VAT ID, invoicing email and PO number for Blaze |
-| Andreas (Head of IT) | Grants Blaze M365 Global Reader for Phase 1 |
+| Andreas (Head of IT; Andreas Langer in Slack) | Grants Blaze M365 Global Reader for Phase 1 and supports the M365 phase. Event high season until 28 Nov; vacation from 27 Dec |
 | Caroline "Carol" Galatoli (Blaze) | Cybersecurity Account Executive. Offers, contract, DPA |
 | Mariana Teixeira (Blaze, PM Europe) | Schedules the kick-off call before each phase |
 | Jan Weis (Blaze, in copy) | Blaze contact. Also wrote from Exaspace Security offering separate consulting |
@@ -32,7 +32,7 @@ All six parts tested, each phase reported and debriefed, the fixed findings rete
 
 ## Open points
 
-- Confirm Blaze's proposed phase dates. Once agreed, MSA 10.3 cancellation fees apply, and Phase 1 on 23 Nov is close. (owner: Mahyar)
+- Blaze to confirm the weekly timeline sent on 16 Nov. Once agreed, MSA 10.3 cancellation fees apply, and the week of 7 Dec is already within 15 working days, so Andreas must hold it. (owner: Mahyar)
 - M365 Global Reader for Blaze before Phase 1; whether it is granted is not recorded. (owner: Andreas)
 - Test accounts in two organisations per product for the January pentests; test data, test windows and the AI usage limit before Phase 3. (owner: Mahyar)
 - The learning-platform pentest keeps 7 days although the scope grew to about 400 GraphQL operations and 100 REST handlers. Plan of 9 Nov: ask Carol how 7 days cover it, get a quote for 3 more days (€3,300 net at €1,100) and add them before the Phase 3 kick-off if her answer is thin. (owner: Mahyar)
@@ -62,7 +62,7 @@ Where this initiative lives outside this folder. A catch-up searches every row.
 |---|---|
 | Outlook | Search `Blaze`, `blazeinfosec.com`, `Pentest`, `Security Assessment`, `PCG`, `Mandiant`. Threads: "Ihre Anfrage für einen Pentest bei Blaze Information Security" (main thread with Carol, cc Jan Weis and Habib: offers, answers, the 9 Nov "dates not binding" mail); "NDA \| Blaze <> FOMF", "NDA Blaze addition/changes", "NDA Blaze" (Habib, Amendment No. 1); "Blaze Contract" (Habib, 3 Nov); "Completed: Complete with Docusign: DPA FomF.docx.pdf, FomF x Blaze Security Assessment v4.pdf" (signed PDFs attached); "Kick-off call \| Blaze x FomF - Penetration test" (Carol, Mariana Teixeira, pm-europe@ and service-delivery@blazeinfosec.com); "Your access to Blaze Client Portal". PCG: "Fomf <> PCG Security Check - Google", "Kurze Frage zu unserem Projekt" (Alexander Stati). Exaspace: "InfoSec Consulting" (Jan Weis). |
 | Teams | Search `Blaze OR Pentest OR "Security Assessment" OR Mandiant`. Group chat "Executive Board" (15 Oct, 26 Oct, EB memo 9 Nov, Sina's question 10 Nov); Mahyar's 1:1 chat with Habib (NDA, 27 Oct and 9 Nov). |
-| Slack | Not searched yet. |
+| Slack | Mahyar's DM with Andreas (D01N5T0MV9B): thread of 12 Nov on Blaze's dates (high season, 7 Dec earliest, vacation from 27 Dec). Not searched more widely. |
 | SharePoint | Not searched yet. The place for the signed contract, DPA, NDA and the reports is not recorded. |
 | Notion | Not searched yet. |
 | Linear | No project for this (checked 15 Nov 2026). "Eli Lilly Cybersecurity" (P-ENG-190) is a different matter by its name. |
@@ -78,6 +78,7 @@ Where this initiative lives outside this folder. A catch-up searches every row.
 | `blaze-nda-review-2026-10-27.md` | Review of Blaze's NDA and the reply to Carol |
 | `blaze-contract-review-2026-11-09.md` | Review of #2026.11.013, the v4 check, the MSA date and cancellation rules, the learning-platform days |
 | `email-drafts-2026-10-27.md` | Mails of 27 Oct: questions to Blaze (DE), decline to PCG (DE) |
+| `email-draft-blaze-dates-2026-11-16.md` | Reply to Blaze with the weekly phase timeline and the reasons (EN), sent 16 Nov |
 | `eb-memo-blaze-2026-11-09.md` | EB memo (DE) on the signed contract |
 | `eviplex-field-encryption.html` | Design draft of 2 Nov 2026 for field-level encryption of Eviplex conversations, so Google cannot read them (§ 203 StGB). It belongs to the Eviplex § 203 / Google gap topic (memory note `eviplex-ch-tech-factsheet`), not to this assessment. Moving it is proposed, not confirmed by Mahyar |
 | `reports/` | Blaze's findings and reports. Git-ignored; not created yet. Originals in SharePoint |
