@@ -8,7 +8,7 @@ Eviplex GmbH needs a data processing agreement (AVV) with the doctors who book P
 
 - **Next step:** close the remaining technical items (PR #1079, the Vercel gateway location, the unverified TOMs), then tell Habib the documents can go out (proposed, not confirmed by Mahyar). Owner: Mahyar.
 - **Next date:** none
-- **Waiting on:** Habib for the certificate wording and § 9 liability (with Erfan and counsel); Felix for the Art. 26 question and the DPIA; Google for the signed Professional Secrecy Addendum (PSA).
+- **Waiting on:** Habib for the certificate wording and § 9 liability (with Erfan and counsel); Felix for the Art. 26 question and the DPIA; FOMF on the Google Professional Secrecy Addendum (PSA): Google has the final version ready for DocuSign since 11 Nov and needs the signer's name; Risch-Kerst asked on 16 Nov whether to sign now, answer due 20 Nov.
 
 ## Goal
 
@@ -40,7 +40,7 @@ Habib can hand out the user AVV (V-05 or later) and sign the FOMF↔Eviplex secr
 - § 9 unlimited liability between the sister companies. (owner: Habib, with Erfan and counsel)
 - Braintrust: Art. 26 (joint controllership) or quality checks on Eviplex's behalf under Art. 28. (owner: Felix, with counsel)
 - DPIA status. (owner: Felix)
-- Google PSA: the pay-as-you-go template is close but unsigned (11 Nov); it does not cover Switzerland. Until it is signed, Google is a gap in the § 203 chain. (owner: Mahyar and Habib)
+- Google PSA: the pay-as-you-go version is final and ready for DocuSign (11 Nov); Google needs the signer's name and any questions from counsel. It does not cover Switzerland. Until it is signed, Google is a gap in the § 203 chain. (owner: Mahyar and Habib)
 - The review planned Anlagen 2.1 and 2.2 as tracked changes in a V-06 with legal entity names and a data-flow diagram. Whether V-06 exists is not recorded. (owner: Mahyar)
 - Habib announced on 28 Oct a revised terms of use that separates Free and paid; not seen yet. (owner: Habib)
 - The review page in this folder lists security gaps and is tracked in git. `cto-assistant/CLAUDE.md` puts security findings in `cybersecurity/reports/`, which git ignores. Whether to move it is for Mahyar to decide. (owner: Mahyar)
@@ -57,7 +57,7 @@ Habib can hand out the user AVV (V-05 or later) and sign the FOMF↔Eviplex secr
 
 | Where | What to search or open |
 |---|---|
-| Outlook | Main thread "AVV und Datenschutzerklärung Eviplex" (Jul to Nov; Habib, Felix, Mahyar). Earlier: "Datenschutz / AVV Topics" (27–28 Jul), "Datenschutzerklärung und AVV für Ziliar/Eviplex" (20 Jul), "Impressum und Nutzungsbedingungen Eviplex", "Datenfluss mit OpenAI" (5 Oct). Counsel: "EVIPLEX / OpenAI – § 203 StGB in der LLM-Lieferkette unsere Fragen", "Berufsgeheimnis -Dokumentation 1. Entwurf und to does", "Empfehlung für Bewerbung und Finales Compliances-Gutachten als Dokumentation für Berufsgeheimnis" (risch@eventlawyers.de). Google PSA: "Urgent: Gemini API Usage / Privacy Agreement" (wonneberger@google.com). Search `AVV`, `Verschwiegenheitsvereinbarung`, `Berufsgeheimnis`, `TOMs`. |
+| Outlook | Main thread "AVV und Datenschutzerklärung Eviplex" (Jul to Nov; Habib, Felix, Mahyar). Earlier: "Datenschutz / AVV Topics" (27–28 Jul), "Datenschutzerklärung und AVV für Ziliar/Eviplex" (20 Jul), "Impressum und Nutzungsbedingungen Eviplex", "Datenfluss mit OpenAI" (5 Oct). Counsel: "EVIPLEX / OpenAI – § 203 StGB in der LLM-Lieferkette unsere Fragen", "Berufsgeheimnis -Dokumentation 1. Entwurf und to does", "Empfehlung für Bewerbung und Finales Compliances-Gutachten als Dokumentation für Berufsgeheimnis" (risch@eventlawyers.de). Google PSA: "Urgent: Gemini API Usage / Privacy Agreement" and "DRAFT version - PSA" (wonneberger@google.com). Search `AVV`, `Verschwiegenheitsvereinbarung`, `Berufsgeheimnis`, `TOMs`. |
 | Teams | Mahyar's 1:1 chat with Habib (2–4 Nov: reminder, "5 points open", end-state question). Eviplex weekly meeting chat (plan memo, project "Professional secrecy (§203)"). Search `AVV OR Verschwiegenheit OR TOMs OR Berufsgeheimnis`. |
 | Slack | Not searched yet. |
 | SharePoint | Not searched yet. The draft `Entwurf_AVV-Anlage-Nutzungsbedingungen-Eviplex_V-05.docx` came as a mail attachment (Felix, 5 Oct; Habib, 28 Oct). |
