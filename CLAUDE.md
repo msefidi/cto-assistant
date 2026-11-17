@@ -98,7 +98,7 @@ The Executive Board handed Mahyar the **commercials of two learning-platform pro
 - **SYFAT** (Facharzt / specialist-exam preparation) — brief in `syfat/AGENTS.md`
 - **On-Demand Accredited** (CME-point-bearing on-demand courses) — brief in `on-demand-accredited/AGENTS.md`
 
-Goal for both: **double revenue in the coming year** (to Sep 2027). Revenue = membership fees attributed to product-led members + stand-alone course sales, **B2C only**. The medical team owns the content. SYFAT has a business owner, **Marie Fiebig** (a doctor), and a Notion project page; On-Demand Accredited has no owner, marketing or docs yet. Content roadmap is probably in scope; marketing budget about €50k (internal figure). Baselines are the first deliverable in each folder. Established numbers come from `b2c-value-journey/` (data as of 21 Sep 2026) and its agreed definitions apply.
+Goal for both: **double revenue in the coming year** (to Sep 2027). Revenue = membership fees attributed to product-led members + stand-alone course sales, **B2C only**. The medical team owns the content. SYFAT has a business owner, **Marie Fiebig** (a doctor), and a Notion project page; On-Demand Accredited has no owner, marketing or docs yet. Content roadmap is probably in scope; marketing budget about €50k (internal figure). Baselines are the first deliverable in each folder. Established numbers come from `archive/b2c-value-journey/` (data as of 21 Sep 2026) and its agreed definitions apply.
 
 ---
 
@@ -110,11 +110,11 @@ A **topic** is any folder in this workspace except the tooling named below. `TOP
 |---|---|---|
 | **Active** | Work that runs longer than one session: a deal, a project, a vendor process, a product mandate | The four files below, copied from `_template/` |
 | **Recurring** | Work that repeats with no end: a weekly memo, a changelog, a collection of posts | An `AGENTS.md` that says what recurs, its format and where to start |
-| **Done or reference** | A finished topic, or one output finished in a session (an analysis, a deck) | The files that rebuild it; a finished topic keeps its four files |
+| **Done or reference** | A finished topic, or one output finished in a session (an analysis, a deck) | Lives in `archive/`: the files that rebuild it; a finished topic keeps its four files |
 
-- **Opening a topic:** work that will run longer than this session gets the four files; work that repeats gets an `AGENTS.md`; an output finished in this session is a plain folder with a line in `TOPICS-DONE.md`. A question that leaves no files is not a topic. Done when the folder holds what its group needs and its line is in `TOPICS.md` or `TOPICS-DONE.md`.
-- **A topic changes group** (a one-off analysis turns into a project, a recurring job gets a goal): add the files the new group needs and move its line, between `TOPICS.md` and `TOPICS-DONE.md` if needed.
-- **Not topics:** `_template/`, `artifact-index/` and `topics-overview/` are workspace tooling. Each is described where this file uses it; they have no line in either file.
+- **Opening a topic:** work that will run longer than this session gets the four files; work that repeats gets an `AGENTS.md`; an output finished in this session is a plain folder in `archive/` with a line in `TOPICS-DONE.md`. A question that leaves no files is not a topic. Done when the folder holds what its group needs and its line is in `TOPICS.md` or `TOPICS-DONE.md`.
+- **A topic changes group** (a one-off analysis turns into a project, a recurring job gets a goal): add the files the new group needs and move its line, between `TOPICS.md` and `TOPICS-DONE.md` if needed. A topic that comes back moves out of `archive/` again.
+- **Not topics:** `_template/`, `artifact-index/` and `topics-overview/` are workspace tooling, and `archive/` only holds finished topics. Each is described where this file uses it; they have no line in either file.
 - **Topics overview:** the [CTO Topics page](https://claude.ai/artifact/8W7smjQh7rx3hjS8HCNhni) shows the active and recurring topics, built from `TOPICS.md` and the briefs. After a session that changes a Status or a `TOPICS.md` line, rebuild and republish it as `topics-overview/AGENTS.md` says.
 
 ### One shape for active topics
@@ -134,7 +134,7 @@ Every active topic has the same four files:
 - **Sources stay where they are.** The log summarises an email, chat or contract with who, where and when. The original stays in Outlook, Teams or SharePoint.
 - **Memory** keeps one pointer note per active topic. The history goes in the log.
 - **Linear:** when part of a topic becomes product work, link the Linear project in the brief. Linear tracks that part.
-- **Finished:** write the outcome at the top of the brief, move the line from `TOPICS.md` to `TOPICS-DONE.md`, and mark the memory pointer note closed (date and outcome in one line), so no agent treats it as live. The folder stays.
+- **Finished:** write the outcome at the top of the brief, `git mv` the folder into `archive/`, move its line from `TOPICS.md` to `TOPICS-DONE.md` with the new path, and mark the memory pointer note closed (date, outcome and new path). Then update every path that pointed at the old folder: other briefs, memory notes and the `repo` field of its Artifact Index rows. Logs and decisions are not rewritten. Done when `grep -rn "<folder>/"` finds no live reference to the old path.
 - **Older folders** are listed under "Not yet in shape" in `TOPICS.md`. Bring one in line when you next work in it, and keep its existing files where they are.
 
 @TOPICS.md

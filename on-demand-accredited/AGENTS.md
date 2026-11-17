@@ -110,7 +110,7 @@ Page "OnDemand akkreditierte Kurse", dated 23 Oct 2026, last edited 12 Nov 2026,
 
 ## Numbers already established
 
-From `../b2c-value-journey/` (data as of 21 Sep 2026; definitions in its `docs/definitions.md`, agreed with Mahyar, do not contradict them):
+From `../archive/b2c-value-journey/` (data as of 21 Sep 2026; definitions in its `docs/definitions.md`, agreed with Mahyar, do not contradict them):
 
 | Fact | Value |
 |---|---|
@@ -124,7 +124,7 @@ These cover membership revenue only. Stand-alone course sales, B2B usage and non
 
 ## Where the data lives
 
-BigQuery project `fomf-dl` (region europe-west3), read-only preapproved. Query with `bq query --use_legacy_sql=false --project_id=fomf-dl` or, when gcloud auth is expired, `../b2c-value-journey/tools/mbq.sh "<sql>"` (Metabase REST, 2000-row cap, needs `METABASE_API_KEY` in `../.env`, never print it). Fully qualify tables as `` `fomf-dl`.dataset.table ``. Table inventory, brand codes and gotchas: `../b2c-value-journey/docs/data-pipeline.md`.
+BigQuery project `fomf-dl` (region europe-west3), read-only preapproved. Query with `bq query --use_legacy_sql=false --project_id=fomf-dl` or, when gcloud auth is expired, `../archive/b2c-value-journey/tools/mbq.sh "<sql>"` (Metabase REST, 2000-row cap, needs `METABASE_API_KEY` in `../.env`, never print it). Fully qualify tables as `` `fomf-dl`.dataset.table ``. Table inventory, brand codes and gotchas: `../archive/b2c-value-journey/docs/data-pipeline.md`.
 
 Most relevant: `analysis.dim_contents` (catalogue, brands, titles), `analysis.fct_user_watched_content_events` (who watched what, minutes), `analysis.fct_content_progress_by_user` and `analysis.fct_content_certificates` (completion, CME points), `analysis.dim_users` (occupation, specialty v2, country), membership orders in `platform_raw_membershipservice.*`, marketing sources in `analysis.fct_membership_marketing_sources`, web behaviour in `segment_raw_unify.*` (on-demand pages under `/mediathek`). Metabase: https://fomf2.metabaseapp.com (companion dashboard "B2C Membership Income", 1816).
 
@@ -132,7 +132,7 @@ Other systems: HubSpot (marketing / CRM, MCP connected), Notion (Isgard's page a
 
 ## Workstreams (the commercial funnel, in order)
 
-1. **Baseline:** last-12-months B2C revenue on the agreed definition: (a) first-year and renewal fees of accredited-led members (reuse the intent logic from `../b2c-value-journey/sql/`), (b) stand-alone on-demand course orders (find the order table; check `platform_raw_membershipservice.*`, `analysis.fct_course_bookings` and the content-order tables). Then the Sep 2027 target = 2× that. Confirm the number with Mahyar; align with Erfan on the accounting view.
+1. **Baseline:** last-12-months B2C revenue on the agreed definition: (a) first-year and renewal fees of accredited-led members (reuse the intent logic from `../archive/b2c-value-journey/sql/`), (b) stand-alone on-demand course orders (find the order table; check `platform_raw_membershipservice.*`, `analysis.fct_course_bookings` and the content-order tables). Then the Sep 2027 target = 2× that. Confirm the number with Mahyar; align with Erfan on the accounting view.
 2. **Pricing and packaging:** the single course priced just under the membership; options: reposition the single course (e.g. a clear CME-per-euro story), an on-demand-only membership tier, bundles per specialty, CME-deadline offers.
 3. **Content roadmap:** which specialties next (Refresher live courses that exist without an on-demand edition; specialty populations in `dim_users`), yearly edition cadence, Highlights vs. full Refresher mix. With the medical team, which owns production; Isgard's Notion roadmap is the starting point.
 4. **Audience and positioning:** doctors who need CME points but do not attend live courses; specialty, career stage and country cuts; CME-deadline seasonality (year-end point pressure; Austrian and Swiss rules).

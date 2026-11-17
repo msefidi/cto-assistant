@@ -8,7 +8,7 @@ metadata:
   modified: 2026-10-07T13:12:14.643Z
 ---
 
-Built 7 Oct 2026 in `cto-assistant/registration-funnel/` (artifact https://claude.ai/artifact/Uk1RMDh5kfkTfEPQBsRqm3). Window 7 Jul – 6 Oct 2026, people = Segment anonymous_id.
+Built 7 Oct 2026 in `cto-assistant/archive/registration-funnel/` (artifact https://claude.ai/artifact/Uk1RMDh5kfkTfEPQBsRqm3). Window 7 Jul – 6 Oct 2026, people = Segment anonymous_id.
 
 Result (crawlers removed): 3,470 visitors → 1,948 entered email (56%) → 1,828 accounts → 1,635 finished (47%; 84% of those past the email screen). Of the 1,522 who left on the email screen, 546 logged in within 24 h (existing users). Inside the form the largest losses are step 3 (professional details, ~7%) and step 1 (~6%).
 

@@ -95,7 +95,7 @@ Conventions: `data/` holds extracts without identifiers, each stating its extrac
 
   Reading: the membership is priced at or below a single SYFAT course. Stand-alone SYFAT is effectively an on-ramp to the membership, not a product with its own price logic. Any pricing work starts from this fact.
 - In the platform data model SYFAT courses are `ADDON_COURSE` content (course pages) built from `LECTURE` items; in analytics they carry brand `SYFAT` or `SPECIALIST_CERTIFICATE` (`analysis.dim_contents.brand_type`, `analysis.fct_user_watched_content_events.content_brand`). Enrolments do not create booking rows; watching (`fct_user_watched_content_events`) and progress (`fct_content_progress_by_user`) are the usage signals. Stand-alone purchases should appear as orders; which table holds them is the first thing to check (workstream 1).
-- Timeline: SYFAT watching visible from Oct 2024; content re-tagged in 2025, so brand-based history before 2025 is unreliable (open check: growth vs. re-tagging effect, see `../b2c-value-journey/docs/log.md`).
+- Timeline: SYFAT watching visible from Oct 2024; content re-tagged in 2025, so brand-based history before 2025 is unreliable (open check: growth vs. re-tagging effect, see `../archive/b2c-value-journey/docs/log.md`).
 - Prices on fomf.de are rendered client-side; to re-read them, fetch `/content/<slug>` and parse `participantTypePrices` (cents) from the embedded JSON. Comparison tables on the course pages are the source for the packaging above.
 
 ### Marie's Notion project page
@@ -122,7 +122,7 @@ Read 22 Sep 2026 (then last edited 30 Jul 2026) and again 15 Nov 2026 (last edit
 
 ## Numbers already established
 
-From `../b2c-value-journey/` (data as of 21 Sep 2026; definitions in its `docs/definitions.md`, agreed with Mahyar, do not contradict them):
+From `../archive/b2c-value-journey/` (data as of 21 Sep 2026; definitions in its `docs/definitions.md`, agreed with Mahyar, do not contradict them):
 
 | Fact | Value |
 |---|---|
@@ -137,7 +137,7 @@ From Marie's survey concept (Metabase, as of 2 Nov 2026, FOMF staff excluded): 1
 
 ## Where the data lives
 
-BigQuery project `fomf-dl` (region europe-west3), read-only preapproved. Query with `bq query --use_legacy_sql=false --project_id=fomf-dl` or, when gcloud auth is expired, `../b2c-value-journey/tools/mbq.sh "<sql>"` (Metabase REST, 2000-row cap, needs `METABASE_API_KEY` in `../.env`, never print it). Fully qualify tables as `` `fomf-dl`.dataset.table ``. Table inventory, brand codes and gotchas: `../b2c-value-journey/docs/data-pipeline.md`.
+BigQuery project `fomf-dl` (region europe-west3), read-only preapproved. Query with `bq query --use_legacy_sql=false --project_id=fomf-dl` or, when gcloud auth is expired, `../archive/b2c-value-journey/tools/mbq.sh "<sql>"` (Metabase REST, 2000-row cap, needs `METABASE_API_KEY` in `../.env`, never print it). Fully qualify tables as `` `fomf-dl`.dataset.table ``. Table inventory, brand codes and gotchas: `../archive/b2c-value-journey/docs/data-pipeline.md`.
 
 Most relevant: `analysis.dim_contents` (catalogue, brands), `analysis.fct_user_watched_content_events` (who watched what, minutes), `analysis.fct_content_progress_by_user` and `analysis.fct_content_certificates` (completion, CME points), `analysis.dim_users` (occupation, specialty v2), membership orders in `platform_raw_membershipservice.*`, marketing sources in `analysis.fct_membership_marketing_sources`, web behaviour in `segment_raw_unify.*`. Metabase: https://fomf2.metabaseapp.com (companion dashboard "B2C Membership Income", 1816).
 
@@ -145,7 +145,7 @@ Other systems: HubSpot (marketing / CRM, MCP connected), Notion (Marie's page ab
 
 ## Workstreams (the commercial funnel, in order)
 
-1. **Baseline:** last-12-months B2C revenue on the agreed definition: (a) first-year and renewal fees of SYFAT-led members (reuse the intent logic from `../b2c-value-journey/sql/`), (b) stand-alone SYFAT course orders (find the order table; check `platform_raw_membershipservice.*`, `analysis.fct_course_bookings` and the content-order tables). Then the Sep 2027 target = 2× that. Confirm the number with Mahyar; align with Erfan on the accounting view.
+1. **Baseline:** last-12-months B2C revenue on the agreed definition: (a) first-year and renewal fees of SYFAT-led members (reuse the intent logic from `../archive/b2c-value-journey/sql/`), (b) stand-alone SYFAT course orders (find the order table; check `platform_raw_membershipservice.*`, `analysis.fct_course_bookings` and the content-order tables). Then the Sep 2027 target = 2× that. Confirm the number with Mahyar; align with Erfan on the accounting view.
 2. **Pricing and packaging:** the €590 / €520 single course vs. €580+ membership tension; options: reposition the single course, bundle SYFAT with a membership tier for assistant doctors, exam-timed offers, per-specialty pricing.
 3. **Content roadmap:** which specialties next (largest assistant-doctor populations without a SYFAT course; check `dim_users` specialty v2 counts), update cadence, what "4 (inkl. Updates)" promises. With Marie and the medical team, which owns production; the Notion roadmap (Psychiatrie next, livestream courses from 2027) is the starting point.
 4. **Audience and positioning:** assistant doctors by specialty and exam timing, DACH split, messaging against the alternatives (books, Repetitorien, peers).

@@ -4,7 +4,7 @@
 # Metabase database 2 = "Bigquery (fomf-dl)". Key: METABASE_API_KEY in cto-assistant/.env (never echo it).
 # Use this when gcloud/bq auth is expired; prefer read-only bq when it works.
 set -e
-ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
+ROOT="$(cd "$(dirname "$0")/../../.." && pwd)"
 KEY=$(grep METABASE_API_KEY "$ROOT/.env" | cut -d= -f2- | tr -d '"' | tr -d "'")
 [ -z "$KEY" ] && { echo "METABASE_API_KEY missing in $ROOT/.env — ask Mahyar to re-add it" >&2; exit 1; }
 if [ "$1" = "-f" ]; then BODY=$(jq -n --rawfile q "$2" '{database:2, type:"native", native:{query:$q}}');

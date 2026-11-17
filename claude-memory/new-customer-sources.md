@@ -1,11 +1,11 @@
 ---
 name: new-customer-sources
-description: "New Customer Sources artifact (24 Sep 2026) — new B2C customers by checkout-survey source, 'Mitgliedschaft' redistributed proportionally; SQL in cto-assistant/acquisition-sources/"
+description: "New Customer Sources artifact (24 Sep 2026) — new B2C customers by checkout-survey source, 'Mitgliedschaft' redistributed proportionally; SQL in cto-assistant/archive/acquisition-sources/"
 metadata:
   type: project
 ---
 
-Built 2026-09-24. Artifact https://claude.ai/artifact/S6Fwroo2vD5tuVgZV2YERr. Files: `cto-assistant/acquisition-sources/` (`sql/new_customers_by_source.sql`, `sql/new_members_membership_survey.sql`, `page.template.html` + `data/embed.js` → `new-customer-sources.html`).
+Built 2026-09-24. Artifact https://claude.ai/artifact/S6Fwroo2vD5tuVgZV2YERr. Files: `cto-assistant/archive/acquisition-sources/` (`sql/new_customers_by_source.sql`, `sql/new_members_membership_survey.sql`, `page.template.html` + `data/embed.js` → `new-customer-sources.html`).
 
 Mahyar's rule: member bookings are auto-answered "Mitgliedschaft" in `analysis.fct_course_booking_marketing_sources`; spread new members over the other sources in proportion to the single-course answers (implemented per month × country). New customer = first paid purchase (paid non-member booking > €0, or PAID B2C membership order). Cross-check against the membership checkout survey (`fct_membership_marketing_sources`, multi-select → 1/k weights; 39% unanswered in 2025/26).
 

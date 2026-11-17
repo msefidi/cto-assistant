@@ -23,7 +23,7 @@ Mahyar (CTO) is preparing slides for the **Executive Board strategy meeting, wee
 
 1. `cat docs/log.md | head -60` for the latest state; confirm the live artifact is v26 (`Artifact` read of the URL if unsure).
 2. Data date on the page is **21 Sep 2026** (`AS_OF` and `AS_OF_LABEL` in the script; every visible date reads from them). Re-extract with `tools/fetch_members.sh` only when a fresh date is wanted or the SQL changed (about 12 minutes since v23), then `python3 tools/embed.py` and republish.
-3. Check `../.env` has `METABASE_API_KEY` if `gcloud auth` is expired (`tools/mbq.sh "SELECT 1"` is the smoke test).
+3. Check `../../.env` has `METABASE_API_KEY` if `gcloud auth` is expired (`tools/mbq.sh "SELECT 1"` is the smoke test).
 
 ## How to work with Mahyar on this
 
