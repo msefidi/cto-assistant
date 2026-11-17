@@ -6,8 +6,8 @@
 # Verified 2026-09-20: output identical to the embedded data as a set (row order within a day was not deterministic before the ORDER BY fix).
 set -e
 cd "$(dirname "$0")/.."
-KEY=$(grep METABASE_API_KEY ../.env | cut -d= -f2- | tr -d '"' | tr -d "'")
-[ -z "$KEY" ] && { echo "METABASE_API_KEY missing in ../.env" >&2; exit 1; }
+KEY=$(grep METABASE_API_KEY ../../.env | cut -d= -f2- | tr -d '"' | tr -d "'")
+[ -z "$KEY" ] && { echo "METABASE_API_KEY missing in ../../.env" >&2; exit 1; }
 TMP=$(mktemp -d); i=0
 CHUNKS=("'2024-08','2024-09','2024-10'" "'2024-11','2024-12','2025-01'" "'2025-02','2025-03','2025-04','2025-05'" "'2025-06','2025-07','2025-08'"
         "'2025-09','2025-10','2025-11'" "'2025-12','2026-01','2026-02'" "'2026-03','2026-04','2026-05'" "'2026-06','2026-07','2026-08'")

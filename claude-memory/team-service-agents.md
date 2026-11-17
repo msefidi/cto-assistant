@@ -31,4 +31,4 @@ Repo files would go in fomf-code, not this workspace.
 
 **Why:** Mahyar is deciding how far departments self-serve vs IT/Eng. View so far: departments own the skill/prototype, IT/Eng owns identity, interface and governance.
 
-**How to apply:** reuse this framing for hackathon Level 4 and for any "make it a team service" request. Open questions: does FOMF have an Anthropic API org, M365 Copilot licenses, and is Teams the right channel for sales? The hackathon material is in `cto-assistant/ai-hackathon-2026/`.
+**How to apply:** reuse this framing for hackathon Level 4 and for any "make it a team service" request. Open questions: does FOMF have an Anthropic API org, M365 Copilot licenses, and is Teams the right channel for sales? The hackathon material is in `cto-assistant/archive/ai-hackathon-2026/`.

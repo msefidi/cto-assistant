@@ -185,7 +185,7 @@ code{font-size:.85em}
   <h2 id="h-method">How this is counted</h2>
   <p>Paid B2C memberships (no group or clinic membership; states newly created, renewed, paused), by scheduled renewal date. A cancellation is the first <code>CANCEL_MEMBERSHIP</code> request on the membership (<code>public_membership_cancellation_request</code>), dated by when it was made, counted only if made before the renewal date. A later switch back on still counts as a cancellation here.</p>
   <p>The curve uses a survival count over days before renewal, so memberships that have not yet reached a given day drop out of that day's denominator instead of counting as not cancelled. Baseline months before Oct 2025 have too few memberships in this table to use.</p>
-  <p>Queries: <code>price-increase-cancellations/sql/</code> in the CTO assistant workspace.</p>
+  <p>Queries: <code>archive/price-increase-cancellations/sql/</code> in the CTO assistant workspace.</p>
 </section>
 </div>
 

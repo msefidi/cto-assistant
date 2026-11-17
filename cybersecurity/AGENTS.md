@@ -58,7 +58,7 @@ All six parts tested, each phase reported and debriefed, the fixed findings rete
 
 ## Source map
 
-Where this initiative lives outside this folder. A catch-up searches every row.
+Where this topic lives outside this folder. A catch-up searches every row.
 
 | Where | What to search or open |
 |---|---|

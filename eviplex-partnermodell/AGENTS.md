@@ -58,7 +58,7 @@ A partner contract reviewed by counsel that Eviplex GmbH can sign with Medichub 
 
 ## Source map
 
-Where this initiative lives outside this folder. A catch-up searches every row.
+Where this topic lives outside this folder. A catch-up searches every row.
 
 | Where | What to search or open |
 |---|---|

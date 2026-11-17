@@ -98,13 +98,28 @@ The Executive Board handed Mahyar the **commercials of two learning-platform pro
 - **SYFAT** (Facharzt / specialist-exam preparation) — brief in `syfat/AGENTS.md`
 - **On-Demand Accredited** (CME-point-bearing on-demand courses) — brief in `on-demand-accredited/AGENTS.md`
 
-Goal for both: **double revenue in the coming year** (to Sep 2027). Revenue = membership fees attributed to product-led members + stand-alone course sales, **B2C only**. The medical team owns the content. SYFAT has a business owner, **Marie Fiebig** (a doctor), and a Notion project page; On-Demand Accredited has no owner, marketing or docs yet. Content roadmap is probably in scope; marketing budget about €50k (internal figure). Baselines are the first deliverable in each folder. Established numbers come from `b2c-value-journey/` (data as of 21 Sep 2026) and its agreed definitions apply.
+Goal for both: **double revenue in the coming year** (to Sep 2027). Revenue = membership fees attributed to product-led members + stand-alone course sales, **B2C only**. The medical team owns the content. SYFAT has a business owner, **Marie Fiebig** (a doctor), and a Notion project page; On-Demand Accredited has no owner, marketing or docs yet. Content roadmap is probably in scope; marketing budget about €50k (internal figure). Baselines are the first deliverable in each folder. Established numbers come from `archive/b2c-value-journey/` (data as of 21 Sep 2026) and its agreed definitions apply.
 
 ---
 
-## Initiatives — one shape
+## Topics
 
-An **initiative** is any work that runs longer than one session: a deal, a project, a vendor process, a product mandate. Each is a folder here with the same four files, copied from `_template/`. It is not a Linear initiative. `INITIATIVES.md` lists every folder with its status and next step; it is loaded at the end of this section.
+A **topic** is any folder in this workspace except the tooling named below. `TOPICS.md` lists the active and recurring topics with their status and next step; it is loaded at the end of this section. `TOPICS-DONE.md` lists the finished ones and is read only when needed. Topics sit in three groups:
+
+| Group | What | The folder holds |
+|---|---|---|
+| **Active** | Work that runs longer than one session: a deal, a project, a vendor process, a product mandate | The four files below, copied from `_template/` |
+| **Recurring** | Work that repeats with no end: a weekly memo, a changelog, a collection of posts | An `AGENTS.md` that says what recurs, its format and where to start |
+| **Done or reference** | A finished topic, or one output finished in a session (an analysis, a deck) | Lives in `archive/`: the files that rebuild it; a finished topic keeps its four files |
+
+- **Opening a topic:** work that will run longer than this session gets the four files; work that repeats gets an `AGENTS.md`; an output finished in this session is a plain folder in `archive/` with a line in `TOPICS-DONE.md`. A question that leaves no files is not a topic. Done when the folder holds what its group needs and its line is in `TOPICS.md` or `TOPICS-DONE.md`.
+- **A topic changes group** (a one-off analysis turns into a project, a recurring job gets a goal): add the files the new group needs and move its line, between `TOPICS.md` and `TOPICS-DONE.md` if needed. A topic that comes back moves out of `archive/` again.
+- **Not topics:** `_template/`, `artifact-index/` and `topics-overview/` are workspace tooling, and `archive/` only holds finished topics. Each is described where this file uses it; they have no line in either file.
+- **Topics overview:** the [CTO Topics page](https://claude.ai/artifact/8W7smjQh7rx3hjS8HCNhni) shows the active and recurring topics, built from `TOPICS.md` and the briefs. After a session that changes a Status or a `TOPICS.md` line, rebuild and republish it as `topics-overview/AGENTS.md` says.
+
+### One shape for active topics
+
+Every active topic has the same four files:
 
 | File | Holds | Changes by |
 |---|---|---|
@@ -113,17 +128,16 @@ An **initiative** is any work that runs longer than one session: a deal, a proje
 | `docs/log.md` | Events and results, newest first; each entry names who and where | Appending only |
 | `CLAUDE.md` | One line pointing at `AGENTS.md` | Never |
 
-- **Starting one:** copy `_template/` to a kebab-case folder. Done when every heading of the brief is filled (write "none" where there is nothing), the log has its first entry, decisions made so far have their lines and `INITIATIVES.md` has its line.
-- **Working in one:** read the brief, the decisions and the newest log entries first. Done when each decision of the session has its line in `decisions.md`, each result is logged and the brief's Status and the `INITIATIVES.md` line match it.
+- **Starting one:** copy `_template/` to a kebab-case folder. Done when every heading of the brief is filled (write "none" where there is nothing), the log has its first entry, decisions made so far have their lines and `TOPICS.md` has its line.
+- **Working in one:** read the brief, the decisions and the newest log entries first. Done when each decision of the session has its line in `decisions.md`, each result is logged and the brief's Status and the `TOPICS.md` line match it.
 - **"Catch up on X":** search every row of X's source map from the newest log date to today. Done when the news is logged, new decisions have their lines, the Status is updated and each new thread, chat or person is in the source map. Then tell Mahyar what changed.
 - **Sources stay where they are.** The log summarises an email, chat or contract with who, where and when. The original stays in Outlook, Teams or SharePoint.
-- **Memory** keeps one pointer note per initiative. The history goes in the log.
-- **Linear:** when part of an initiative becomes product work, link the Linear project in the brief. Linear tracks that part.
-- **Finished:** write the outcome at the top of the brief and move the line to "Done or reference" in `INITIATIVES.md`. The folder stays.
-- **One-off output** (one analysis or deck, finished in a session): a plain folder with the files that rebuild it and a line under "Done or reference". It needs no brief.
-- **Older folders** are listed under "Not yet in shape" in `INITIATIVES.md`. Bring one in line when you next work in it, and keep its existing files where they are.
+- **Memory** keeps one pointer note per active topic. The history goes in the log.
+- **Linear:** when part of a topic becomes product work, link the Linear project in the brief. Linear tracks that part.
+- **Finished:** write the outcome at the top of the brief, `git mv` the folder into `archive/`, move its line from `TOPICS.md` to `TOPICS-DONE.md` with the new path, and mark the memory pointer note closed (date, outcome and new path). Then update every path that pointed at the old folder: other briefs, memory notes and the `repo` field of its Artifact Index rows. Logs and decisions are not rewritten. Done when `grep -rn "<folder>/"` finds no live reference to the old path.
+- **Older folders** are listed under "Not yet in shape" in `TOPICS.md`. Bring one in line when you next work in it, and keep its existing files where they are.
 
-@INITIATIVES.md
+@TOPICS.md
 
 Security findings and pentest / audit results (e.g. Blaze reports) go in `cybersecurity/reports/`, which git ignores. Keep the originals in SharePoint.
 
@@ -145,6 +159,11 @@ The **Artifact Index** (https://claude.ai/artifact/KPVNKWy8eCpyvHexVeJFuZ) is th
 ## Memory
 
 Claude Code's memory for this repo lives in `../claude-memory/` (the repo root folder `claude-memory/`): one fact per file, indexed in `MEMORY.md`. Claude Code reaches it through a symlink, so memory changes appear in `git status`; commit them with the rest of the work. Repo files (briefs, logs, SQL) stay the source of truth; memory holds decisions, preferences and pointers.
+
+- **What goes in:** how Mahyar works (preferences and corrections), people and their names, one pointer note per active topic, pointers to things outside the repo (dashboard, card or Figma node ids), and conclusions that should shape later work across topics.
+- **What stays out:** status and dates that will change (they go in `TOPICS.md` and the brief), history and a topic's decisions (its log and `decisions.md`), outputs (the Artifact Index), security findings (`cybersecurity/reports/`), and anything the repo or git already records.
+- **A topic pointer note** names the folder, the rules that hold for the whole topic (confidentiality, approvals) and nothing that changes week to week.
+- **A note that turns out wrong or outdated** is corrected or deleted in the same session. Do not append "Update:" paragraphs; that turns memory into a second log.
 
 ---
 

@@ -38,7 +38,7 @@ Team size, EM/TL/PM roles, design in AI teams, hiring profiles, internal tools (
   - 2026-11-12 [Hire for product craft; AI is the easy part to learn](entries/2026-11-12-craft-over-ai-pilled.md) — hire for craft and first principles, AI fluency is learnable
 
 ## Skills and learning
-How people build AI skills: hackathons, pairing, rituals, shared skills and agents (see `ai-hackathon-2026/`).
+How people build AI skills: hackathons, pairing, rituals, shared skills and agents (see `archive/ai-hackathon-2026/`).
 
 - **Stance:** —
 - **Open questions:** —

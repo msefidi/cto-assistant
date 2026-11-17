@@ -11,7 +11,7 @@ metadata:
 27 Oct 2026: Wafa and Jasmin met a UAE contact interested in Eviplex. Mahyar asked for an English deck that introduces Eviplex and FOMF (established CME provider, ~140k doctors in DACH).
 
 Sources (SharePoint eng › 09-Eviplex/Marketing Planung/03_Pitches/Eviplex final): the "Luxembourg deck" is "Eviplex V 1_1 (final) mit FOMF - DE.pptx" (15 slides, FOMF intro on slides 2–6); fact sheet is slides 10–12 of "Eviplex V 1_1 (final) - CH - mit Tech-Factsheet.pptx". Both decks use the same layout 7 and theme, so slides copy across cleanly.
-Output: cto-assistant/eviplex-uae-pitch/"Eviplex x FOMF - UAE - EN (draft v1).pptx" (18 slides: Lux 1–15, fact sheet 16–18), pure translation pass. The § 203 footnotes use the CH-approved wording (OpenAI only, no "unbroken chain"), see [[eviplex-ch-tech-factsheet]]. Swiss DSG/Art. 321 removed.
+Output: cto-assistant/archive/eviplex-uae-pitch/"Eviplex x FOMF - UAE - EN (draft v1).pptx" (18 slides: Lux 1–15, fact sheet 16–18), pure translation pass. The § 203 footnotes use the CH-approved wording (OpenAI only, no "unbroken chain"), see [[eviplex-ch-tech-factsheet]]. Swiss DSG/Art. 321 removed.
 
 The SharePoint MCP returns text only, not the .pptx binary, so Mahyar has to download files into ~/Downloads. No LibreOffice is installed: render through PowerPoint via AppleScript, using files in ~/Library/Containers/com.microsoft.Powerpoint/Data/Documents/ (the sandbox blocks /tmp). A corrupt deck leaves PowerPoint stuck on a modal dialog that only Mahyar can dismiss, so always validate before rendering.
 
