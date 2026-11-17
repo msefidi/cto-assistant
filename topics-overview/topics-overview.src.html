@@ -4,7 +4,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: one working column, summary strip and filters on top, initiatives as expandable rows, other topics as a compact table. */
+/* Layout: one working column, summary strip and filters on top, active topics as expandable rows, recurring and workspace topics as a compact table. */
 :root {
   --bg: #f4f6f8;
   --surface: #ffffff;
@@ -146,7 +146,7 @@ table.others .w { color: var(--muted); }
   <header class="top">
     <div>
       <h1>CTO Topics</h1>
-      <p class="sub">Every folder in the <code>cto-assistant</code> workspace: initiatives with their status, next step and recent log, plus recurring work and reference outputs. Built from <code>TOPICS.md</code> and the briefs.</p>
+      <p class="sub">Every folder in the <code>cto-assistant</code> workspace that is still open: active topics with their status, next step and recent log, plus recurring work. Built from <code>TOPICS.md</code> and the briefs; done topics are left out.</p>
     </div>
     <div class="built num" id="built"></div>
   </header>
@@ -172,9 +172,8 @@ table.others .w { color: var(--muted); }
 
   var KINDS = [
     { id: "all", label: "All" },
-    { id: "initiative", label: "Initiatives", group: "Active initiatives", hint: "Goal and an end. Click a row for the brief, log and decisions." },
+    { id: "active", label: "Active", group: "Active", hint: "Runs longer than one session. Click a row for the brief, log and decisions." },
     { id: "recurring", label: "Recurring", group: "Recurring", hint: "Repeats with no end." },
-    { id: "reference", label: "Reference", group: "Done or reference", hint: "Finished outputs and analyses." },
     { id: "workspace", label: "Workspace", group: "Workspace", hint: "Folders that serve the workspace itself." }
   ];
 
@@ -261,15 +260,14 @@ table.others .w { color: var(--muted); }
   }
 
   function renderStrip() {
-    var ini = TOPICS.filter(function (t) { return t.kind === "initiative"; });
+    var act = TOPICS.filter(function (t) { return t.kind === "active"; });
     var you = TOPICS.filter(function (t) { return t._you; }).length;
     var stale = TOPICS.filter(function (t) { return t._fresh && t._fresh.cls === "stale"; }).length;
     var items = [
-      { k: "kind:initiative", n: ini.length, l: "active initiatives" },
+      { k: "kind:active", n: act.length, l: "active topics" },
       { k: "flag:you", n: you, l: "wait on you", cls: you ? "warn" : "" },
       { k: "flag:stale", n: stale, l: "status older than 7 days", cls: stale ? "stale" : "" },
-      { k: "kind:recurring", n: TOPICS.filter(function (t) { return t.kind === "recurring"; }).length, l: "recurring" },
-      { k: "kind:reference", n: TOPICS.filter(function (t) { return t.kind === "reference"; }).length, l: "reference" }
+      { k: "kind:recurring", n: TOPICS.filter(function (t) { return t.kind === "recurring"; }).length, l: "recurring" }
     ];
     document.getElementById("strip").innerHTML = items.map(function (i) {
       var p = i.k.split(":"), on = p[0] === "flag" ? state.flag === p[1] : (state.kind === p[1] && !state.flag);
@@ -283,7 +281,7 @@ table.others .w { color: var(--muted); }
     }).join("");
   }
 
-  function initiativeRow(t) {
+  function activeRow(t) {
     var s = t.status || {}, open = state.open === t.folder, f = t._fresh;
     var chips = "";
     if (t._you) chips += '<span class="chip you">Waits on you</span>';
@@ -342,13 +340,13 @@ table.others .w { color: var(--muted); }
     KINDS.slice(1).forEach(function (k) {
       var list = TOPICS.filter(function (t) { return t.kind === k.id && matches(t); });
       if (!list.length) return;
-      if (k.id === "initiative") {
+      if (k.id === "active") {
         list.sort(function (a, b) { return (b._you - a._you) || ((a.status && b.status) ? (a.status.as_of_iso < b.status.as_of_iso ? 1 : -1) : 0); });
       } else {
         list.sort(function (a, b) { return (b.last_change || "").localeCompare(a.last_change || ""); });
       }
       html += '<section class="group"><div class="group-head"><h2>' + k.group + ' <span class="num">(' + list.length + ")</span></h2><span class=\"hint\">" + k.hint + "</span></div>" +
-        (k.id === "initiative" ? '<div class="rows">' + list.map(initiativeRow).join("") + "</div>" : otherTable(list)) + "</section>";
+        (k.id === "active" ? '<div class="rows">' + list.map(activeRow).join("") + "</div>" : otherTable(list)) + "</section>";
     });
     document.getElementById("groups").innerHTML = html || '<div class="empty">No topic matches. Clear the search or pick "All".</div>';
   }
@@ -380,7 +378,7 @@ table.others .w { color: var(--muted); }
   });
   function fromHash() {
     var h = decodeURIComponent((location.hash || "").slice(1));
-    if (h && TOPICS.some(function (t) { return t.folder === h && t.kind === "initiative"; })) {
+    if (h && TOPICS.some(function (t) { return t.folder === h && t.kind === "active"; })) {
       state.open = h; render();
       var el = document.getElementById(h); if (el) el.scrollIntoView({ block: "start" });
     }

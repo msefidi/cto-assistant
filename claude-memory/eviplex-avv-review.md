@@ -8,7 +8,7 @@ metadata:
   modified: 2026-11-15T00:00:00.000Z
 ---
 
-The AVV initiative lives in `cto-assistant/eviplex-avv/`: `AGENTS.md` is the brief (status, open points, source map), `docs/decisions.md` the agreed wording and positions, `docs/log.md` the dated history. The review page lists security gaps and is in the git-ignored `cto-assistant/cybersecurity/reports/`. Read the brief before advising; this note is only the pointer.
+The AVV topic lives in `cto-assistant/eviplex-avv/`: `AGENTS.md` is the brief (status, open points, source map), `docs/decisions.md` the agreed wording and positions, `docs/log.md` the dated history. The review page lists security gaps and is in the git-ignored `cto-assistant/cybersecurity/reports/`. Read the brief before advising; this note is only the pointer.
 
 Two things to keep in mind even without opening the folder:
 
@@ -17,4 +17,4 @@ Two things to keep in mind even without opening the folder:
 
 **Why:** Eviplex GmbH holds the liability; the TOMs are promises to doctors under § 203.
 
-**How to apply:** "catch up on the AVV" means the routine in `cto-assistant/CLAUDE.md`, section "Topics", sub-section "Initiatives — one shape". Related: [[eviplex-ch-tech-factsheet]] (Google PSA status), [[security-assessment-vendor]].
+**How to apply:** "catch up on the AVV" means the routine in `cto-assistant/CLAUDE.md`, section "Topics", sub-section "One shape for active topics". Related: [[eviplex-ch-tech-factsheet]] (Google PSA status), [[security-assessment-vendor]].

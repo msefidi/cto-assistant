@@ -1,6 +1,6 @@
 # On-Demand Accredited: commercial ownership
 
-Since September 2026 Mahyar owns the commercials of the On-Demand Accredited product (CME-point-bearing on-demand courses, called "CME OnDemand" or "OnDemand akkreditierte Kurse" internally) for the Executive Board: pricing, packaging, positioning, go-to-market and marketing. This is not part of his CTO role; he acts as the product's commercial owner. The goal is to double its B2C revenue by Sep 2027. The folder was set up on 22 Sep 2026. Sister initiative with the same mandate and shape: `../syfat/`.
+Since September 2026 Mahyar owns the commercials of the On-Demand Accredited product (CME-point-bearing on-demand courses, called "CME OnDemand" or "OnDemand akkreditierte Kurse" internally) for the Executive Board: pricing, packaging, positioning, go-to-market and marketing. This is not part of his CTO role; he acts as the product's commercial owner. The goal is to double its B2C revenue by Sep 2027. The folder was set up on 22 Sep 2026. Sister topic with the same mandate and shape: `../syfat/`.
 
 ## Status
 

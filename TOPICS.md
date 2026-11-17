@@ -1,8 +1,8 @@
 # Topics
 
-Every folder in this workspace is a topic, one line each, grouped by kind. `CLAUDE.md` loads this file into every session, so keep the lines short. Change a line whenever its brief's Status changes. The kinds and the shape of an initiative folder are in `CLAUDE.md`, section "Topics".
+Every folder in this workspace is a topic, one line each, grouped. `CLAUDE.md` loads this file into every session, so keep the lines short. Change a line whenever its brief's Status changes. The groups and the shape of an active topic are in `CLAUDE.md`, section "Topics".
 
-## Active initiatives
+## Active
 
 | Folder | What | Status | Next step |
 |---|---|---|---|
@@ -37,7 +37,7 @@ Every folder in this workspace is a topic, one line each, grouped by kind. `CLAU
 
 | Folder | What |
 |---|---|
-| `_template/` | The shape every new initiative folder is copied from |
+| `_template/` | The shape every new active topic is copied from |
 | `artifact-index/` | Source of the Artifact Index page |
 | `topics-overview/` | Builds the CTO Topics page from this file and the briefs |
 

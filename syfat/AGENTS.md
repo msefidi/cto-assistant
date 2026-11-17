@@ -1,6 +1,6 @@
 # SYFAT: commercial ownership
 
-Since September 2026 Mahyar owns the commercials of SYFAT (Systematisiertes Facharzttraining, on-demand preparation for the Facharzt exam) for the Executive Board: pricing, packaging, positioning, go-to-market and marketing. This is not part of his CTO role; he acts as the product's commercial owner, next to the business owner Marie Fiebig. The goal is to double SYFAT's B2C revenue by Sep 2027. The folder was set up on 22 Sep 2026. Sister initiative with the same mandate and shape: `../on-demand-accredited/`.
+Since September 2026 Mahyar owns the commercials of SYFAT (Systematisiertes Facharzttraining, on-demand preparation for the Facharzt exam) for the Executive Board: pricing, packaging, positioning, go-to-market and marketing. This is not part of his CTO role; he acts as the product's commercial owner, next to the business owner Marie Fiebig. The goal is to double SYFAT's B2C revenue by Sep 2027. The folder was set up on 22 Sep 2026. Sister topic with the same mandate and shape: `../on-demand-accredited/`.
 
 ## Status
 

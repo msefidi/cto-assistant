@@ -8,7 +8,7 @@ metadata:
   modified: 2026-11-15T00:00:00.000Z
 ---
 
-The partner-model initiative lives in `cto-assistant/eviplex-partnermodell/`: `AGENTS.md` is the brief (status, people, open points, source map), `docs/decisions.md` holds every rate and rule with its date, `docs/log.md` the history. Read the brief before advising; this note is only the pointer.
+The partner-model topic lives in `cto-assistant/eviplex-partnermodell/`: `AGENTS.md` is the brief (status, people, open points, source map), `docs/decisions.md` holds every rate and rule with its date, `docs/log.md` the history. Read the brief before advising; this note is only the pointer.
 
 Two things to keep in mind even without opening the folder:
 
@@ -17,4 +17,4 @@ Two things to keep in mind even without opening the folder:
 
 **Why:** Eviplex GmbH holds liability and is GDPR controller, so the partner must not sell, price or hold customer data; prices and rates are confidential.
 
-**How to apply:** "catch up on the partner model" means the routine in `cto-assistant/CLAUDE.md`, section "Topics", sub-section "Initiatives — one shape". Partner marketing claims need the approved wording in [[eviplex-ch-tech-factsheet]]. Sina appears in Outlook and Teams as Martin S. Taheri, see [[people-m365-names]].
+**How to apply:** "catch up on the partner model" means the routine in `cto-assistant/CLAUDE.md`, section "Topics", sub-section "One shape for active topics". Partner marketing claims need the approved wording in [[eviplex-ch-tech-factsheet]]. Sina appears in Outlook and Teams as Martin S. Taheri, see [[people-m365-names]].

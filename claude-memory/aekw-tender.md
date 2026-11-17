@@ -5,7 +5,7 @@ metadata:
   type: project
 ---
 
-The ÄKW initiative lives in `cto-assistant/aekw/`: `AGENTS.md` is the brief (status, commitments, open points, source map) and `docs/log.md` the dated history. Read the brief before advising; this note is only the pointer.
+The ÄKW topic lives in `cto-assistant/aekw/`: `AGENTS.md` is the brief (status, commitments, open points, source map) and `docs/log.md` the dated history. Read the brief before advising; this note is only the pointer.
 
 Two things to keep in mind even without opening the folder:
 
@@ -14,4 +14,4 @@ Two things to keep in mind even without opening the folder:
 
 **Why:** strategic B2B deal (price cut from about €1M to about €300k a year to bring ÄKW's doctors onto fomf.at).
 
-**How to apply:** "catch up on ÄKW" means the routine in `cto-assistant/CLAUDE.md`, section "Topics", sub-section "Initiatives — one shape". It was the first folder built in that shape, see [[topic-shape]]. Sina appears in Outlook and Teams as Martin S. Taheri, see [[people-m365-names]].
+**How to apply:** "catch up on ÄKW" means the routine in `cto-assistant/CLAUDE.md`, section "Topics", sub-section "One shape for active topics". It was the first folder built in that shape, see [[topic-shape]]. Sina appears in Outlook and Teams as Martin S. Taheri, see [[people-m365-names]].

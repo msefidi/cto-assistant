@@ -1,4 +1,4 @@
-# <Initiative name>
+# <Topic name>
 
 <Two or three sentences: what this is, why FOMF does it, who owns it, when it started.>
 
@@ -18,7 +18,7 @@
 
 | Who | Role here |
 |---|---|
-| <name, with the name they carry in Outlook and Teams if it differs> | <what they do in this initiative> |
+| <name, with the name they carry in Outlook and Teams if it differs> | <what they do in this topic> |
 
 ## Open points
 
@@ -30,7 +30,7 @@
 
 ## Source map
 
-Where this initiative lives outside this folder. A catch-up searches every row.
+Where this topic lives outside this folder. A catch-up searches every row.
 
 | Where | What to search or open |
 |---|---|

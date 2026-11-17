@@ -104,23 +104,22 @@ Goal for both: **double revenue in the coming year** (to Sep 2027). Revenue = me
 
 ## Topics
 
-A **topic** is any folder in this workspace. `TOPICS.md` lists every topic with its status and next step; it is loaded at the end of this section. Each topic is one of four kinds:
+A **topic** is any folder in this workspace. `TOPICS.md` lists every topic with its status and next step; it is loaded at the end of this section. Topics sit in four groups:
 
-| Kind | What | The folder holds | Section in `TOPICS.md` |
-|---|---|---|---|
-| **Initiative** | Work with a goal and an end: a deal, a project, a vendor process, a product mandate | The four files below, copied from `_template/` | Active initiatives |
-| **Recurring** | Work that repeats with no end: a weekly memo, a changelog, a collection of posts | An `AGENTS.md` that says what recurs, its format and where to start | Recurring |
-| **Reference** | One output finished in a session (an analysis, a deck), or a finished initiative | The files that rebuild it; a finished initiative keeps its four files | Done or reference |
-| **Workspace** | Folders that serve the workspace itself | What it needs | Workspace |
+| Group | What | The folder holds |
+|---|---|---|
+| **Active** | Work that runs longer than one session: a deal, a project, a vendor process, a product mandate | The four files below, copied from `_template/` |
+| **Recurring** | Work that repeats with no end: a weekly memo, a changelog, a collection of posts | An `AGENTS.md` that says what recurs, its format and where to start |
+| **Done or reference** | A finished topic, or one output finished in a session (an analysis, a deck) | The files that rebuild it; a finished topic keeps its four files |
+| **Workspace** | Folders that serve the workspace itself | What it needs |
 
-- **Opening a topic:** decide the kind first. A goal and an end make an initiative; work that repeats is recurring; output finished in this session is reference. A question that leaves no files is not a topic. Done when the folder holds what its kind needs and `TOPICS.md` has its line.
-- **A topic changes kind** (a one-off analysis turns into a project, a recurring job gets a goal): add the files the new kind needs and move its line in `TOPICS.md`.
-- **Topics overview:** the [CTO Topics page](https://claude.ai/artifact/8W7smjQh7rx3hjS8HCNhni) is built from `TOPICS.md` and the briefs. After a session that changes a Status or a `TOPICS.md` line, rebuild and republish it as `topics-overview/AGENTS.md` says.
-- "Initiative" here is not a Linear initiative.
+- **Opening a topic:** work that will run longer than this session gets the four files; work that repeats gets an `AGENTS.md`; an output finished in this session is a plain folder with a line under "Done or reference". A question that leaves no files is not a topic. Done when the folder holds what its group needs and `TOPICS.md` has its line.
+- **A topic changes group** (a one-off analysis turns into a project, a recurring job gets a goal): add the files the new group needs and move its line in `TOPICS.md`.
+- **Topics overview:** the [CTO Topics page](https://claude.ai/artifact/8W7smjQh7rx3hjS8HCNhni) shows the active, recurring and workspace topics, built from `TOPICS.md` and the briefs. After a session that changes a Status or a `TOPICS.md` line, rebuild and republish it as `topics-overview/AGENTS.md` says.
 
-### Initiatives — one shape
+### One shape for active topics
 
-Every initiative has the same four files:
+Every active topic has the same four files:
 
 | File | Holds | Changes by |
 |---|---|---|
@@ -133,8 +132,8 @@ Every initiative has the same four files:
 - **Working in one:** read the brief, the decisions and the newest log entries first. Done when each decision of the session has its line in `decisions.md`, each result is logged and the brief's Status and the `TOPICS.md` line match it.
 - **"Catch up on X":** search every row of X's source map from the newest log date to today. Done when the news is logged, new decisions have their lines, the Status is updated and each new thread, chat or person is in the source map. Then tell Mahyar what changed.
 - **Sources stay where they are.** The log summarises an email, chat or contract with who, where and when. The original stays in Outlook, Teams or SharePoint.
-- **Memory** keeps one pointer note per initiative. The history goes in the log.
-- **Linear:** when part of an initiative becomes product work, link the Linear project in the brief. Linear tracks that part.
+- **Memory** keeps one pointer note per active topic. The history goes in the log.
+- **Linear:** when part of a topic becomes product work, link the Linear project in the brief. Linear tracks that part.
 - **Finished:** write the outcome at the top of the brief and move the line to "Done or reference" in `TOPICS.md`. The folder stays.
 - **Older folders** are listed under "Not yet in shape" in `TOPICS.md`. Bring one in line when you next work in it, and keep its existing files where they are.
 

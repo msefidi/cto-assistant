@@ -20,10 +20,10 @@ ROOT = HERE.parent  # cto-assistant/
 SRC = HERE / "topics-overview.src.html"
 OUT = HERE / "topics-overview.html"
 
+# "Done or reference" is left out on purpose: the page shows open topics only.
 KIND_BY_SECTION = {
-    "Active initiatives": "initiative",
+    "Active": "active",
     "Recurring": "recurring",
-    "Done or reference": "reference",
     "Workspace": "workspace",
 }
 
@@ -58,7 +58,7 @@ def parse_topics_md():
         if not kind:
             continue
         t = {"folder": folder, "kind": kind, "what": c[1] if len(c) > 1 else ""}
-        if kind == "initiative":
+        if kind == "active":
             t["line_status"] = c[2] if len(c) > 2 else ""
             t["line_next"] = c[3] if len(c) > 3 else ""
         elif len(c) > 2:
@@ -203,8 +203,8 @@ def build():
         if not title.startswith("<"):  # skip the template's placeholder
             t["title"] = title
             t["intro"] = first_paragraph(intro) or first_paragraph(sec.get("What this is", ""))
-        if t["kind"] != "initiative":
-            continue  # only initiatives carry status, log and decisions
+        if t["kind"] != "active":
+            continue  # only active topics carry status, log and decisions
         status = parse_status(sec.get("Status", ""))
         status["as_of_iso"] = to_iso(status["as_of"])
         t["status"] = status
