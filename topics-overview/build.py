@@ -20,7 +20,7 @@ ROOT = HERE.parent  # cto-assistant/
 SRC = HERE / "topics-overview.src.html"
 OUT = HERE / "topics-overview.html"
 
-# "Done or reference" is left out on purpose: the page shows open topics only.
+# Finished topics live in TOPICS-DONE.md and are left out: the page shows open topics only.
 KIND_BY_SECTION = {
     "Active": "active",
     "Recurring": "recurring",

@@ -1,6 +1,6 @@
 # Topics
 
-Every topic in this workspace, one line each, grouped. Workspace tooling (`_template/`, `artifact-index/`, `topics-overview/`) is not a topic and is not listed here. `CLAUDE.md` loads this file into every session, so keep the lines short. Change a line whenever its brief's Status changes. The groups and the shape of an active topic are in `CLAUDE.md`, section "Topics".
+Every topic in this workspace, one line each, grouped. Finished topics and one-off outputs are in `TOPICS-DONE.md`, which is not loaded every session. Workspace tooling (`_template/`, `artifact-index/`, `topics-overview/`) is not a topic and is not listed in either file. `CLAUDE.md` loads this file into every session, so keep the lines short. Change a line whenever its brief's Status changes. The groups and the shape of an active topic are in `CLAUDE.md`, section "Topics".
 
 ## Active
 
@@ -21,17 +21,6 @@ Every topic in this workspace, one line each, grouped. Workspace tooling (`_temp
 | `eviplex-changelog/` | Internal Eviplex changelog emails (DE) | `eviplex-changelog/src/` |
 | `signals/` | Posts and thoughts on leading product and tech into the AI age | `signals/AGENTS.md` |
 
-## Done or reference
-
-| Folder | What | Entry point |
-|---|---|---|
-| `b2c-value-journey/` | Dashboard on monthly B2C member cohorts for the Sep 2026 EB strategy meeting | `b2c-value-journey/AGENTS.md` |
-| `b2c-income-dashboard/` | SQL behind the Metabase dashboard "B2C Membership Income" (1816) | `b2c-income-dashboard/sql/` |
-| `registration-funnel/` | Web registration drop-off funnel (Segment), Jul–Oct 2026 | `registration-funnel/AGENTS.md` |
-| `acquisition-sources/` | New B2C customers by survey source, skipped-June-mailing economics, Sep 2026 | `acquisition-sources/new-customer-sources.html` |
-| `price-increase-cancellations/` | Cancellations after the Oct 2026 renewal price rise | `price-increase-cancellations/cancellations.html` |
-| `ai-hackathon-2026/` | AI Hackathon at the FOMF Teamtreffen, 20 Oct 2026 | `ai-hackathon-2026/AGENTS.md` |
-| `eviplex-uae-pitch/` | EN pitch deck for the UAE contact, Oct 2026 | the `.pptx` in the folder |
 
 ## Not yet in shape
 

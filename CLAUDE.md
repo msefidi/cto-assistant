@@ -104,7 +104,7 @@ Goal for both: **double revenue in the coming year** (to Sep 2027). Revenue = me
 
 ## Topics
 
-A **topic** is any folder in this workspace except the tooling named below. `TOPICS.md` lists every topic with its status and next step; it is loaded at the end of this section. Topics sit in three groups:
+A **topic** is any folder in this workspace except the tooling named below. `TOPICS.md` lists the active and recurring topics with their status and next step; it is loaded at the end of this section. `TOPICS-DONE.md` lists the finished ones and is read only when needed. Topics sit in three groups:
 
 | Group | What | The folder holds |
 |---|---|---|
@@ -112,9 +112,9 @@ A **topic** is any folder in this workspace except the tooling named below. `TOP
 | **Recurring** | Work that repeats with no end: a weekly memo, a changelog, a collection of posts | An `AGENTS.md` that says what recurs, its format and where to start |
 | **Done or reference** | A finished topic, or one output finished in a session (an analysis, a deck) | The files that rebuild it; a finished topic keeps its four files |
 
-- **Opening a topic:** work that will run longer than this session gets the four files; work that repeats gets an `AGENTS.md`; an output finished in this session is a plain folder with a line under "Done or reference". A question that leaves no files is not a topic. Done when the folder holds what its group needs and `TOPICS.md` has its line.
-- **A topic changes group** (a one-off analysis turns into a project, a recurring job gets a goal): add the files the new group needs and move its line in `TOPICS.md`.
-- **Not topics:** `_template/`, `artifact-index/` and `topics-overview/` are workspace tooling. Each is described where this file uses it; they have no line in `TOPICS.md`.
+- **Opening a topic:** work that will run longer than this session gets the four files; work that repeats gets an `AGENTS.md`; an output finished in this session is a plain folder with a line in `TOPICS-DONE.md`. A question that leaves no files is not a topic. Done when the folder holds what its group needs and its line is in `TOPICS.md` or `TOPICS-DONE.md`.
+- **A topic changes group** (a one-off analysis turns into a project, a recurring job gets a goal): add the files the new group needs and move its line, between `TOPICS.md` and `TOPICS-DONE.md` if needed.
+- **Not topics:** `_template/`, `artifact-index/` and `topics-overview/` are workspace tooling. Each is described where this file uses it; they have no line in either file.
 - **Topics overview:** the [CTO Topics page](https://claude.ai/artifact/8W7smjQh7rx3hjS8HCNhni) shows the active and recurring topics, built from `TOPICS.md` and the briefs. After a session that changes a Status or a `TOPICS.md` line, rebuild and republish it as `topics-overview/AGENTS.md` says.
 
 ### One shape for active topics
@@ -134,7 +134,7 @@ Every active topic has the same four files:
 - **Sources stay where they are.** The log summarises an email, chat or contract with who, where and when. The original stays in Outlook, Teams or SharePoint.
 - **Memory** keeps one pointer note per active topic. The history goes in the log.
 - **Linear:** when part of a topic becomes product work, link the Linear project in the brief. Linear tracks that part.
-- **Finished:** write the outcome at the top of the brief and move the line to "Done or reference" in `TOPICS.md`. The folder stays.
+- **Finished:** write the outcome at the top of the brief, move the line from `TOPICS.md` to `TOPICS-DONE.md`, and mark the memory pointer note closed (date and outcome in one line), so no agent treats it as live. The folder stays.
 - **Older folders** are listed under "Not yet in shape" in `TOPICS.md`. Bring one in line when you next work in it, and keep its existing files where they are.
 
 @TOPICS.md
