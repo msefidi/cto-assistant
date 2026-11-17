@@ -16,7 +16,7 @@ Decided 13 Nov 2026 during a cleanup of `ai-folders`:
 - `cto-assistant/cybersecurity/reports/` is git-ignored: pentest findings (Blaze) stay in SharePoint.
 - No timestamped backup copies in the repo; git is the backup.
 - **Memory is versioned:** the memory files live in `ai-folders/claude-memory/`. Claude Code's memory path (`~/.claude/projects/-Users-mahyar-Development-Repositories-ai-folders/memory`) is a symlink to it. Memory edits show up in `git status` and get committed with the rest of the work.
-- Project notes record a status at a date; when a project ends, shrink its note to the outcome and reusable lessons, or delete it (the hackathon note was dropped on 13 Nov 2026).
+- What goes into memory, and what stays out (status, history, findings), is in `cto-assistant/CLAUDE.md`, section "Memory". When a topic ends, its note is marked closed and shrunk to the outcome and reusable lessons.
 
 **Why:** four weeks of work existed only on the laptop, and the folder mixed personal and work material.
 

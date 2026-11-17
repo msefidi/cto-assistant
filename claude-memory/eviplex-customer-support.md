@@ -1,6 +1,6 @@
 ---
 name: eviplex-customer-support
-description: "Oct 2026 decisions on how FOMF Customer Support handles Eviplex requests (CS stays in front, support@ only address, quotas 30/150/300 (CS page wrongly says Plus 300), lectures for all soon); Notion page for Raphaela"
+description: "Oct 2026 decisions on how FOMF Customer Support handles Eviplex requests (CS stays in front, support@ only address, quotas 30/150/300, lectures for all soon); Notion page for Raphaela"
 metadata:
   node_type: memory
   type: project
@@ -12,8 +12,8 @@ On 8 Oct 2026 Mahyar answered Raphaela's (Head of FOMF CS) 18 questions on Evipl
 
 Decisions (Mahyar):
 - No separate Eviplex support team for the next few months. FOMF CS handles all Eviplex customer contact, the Eviplex team only supports CS internally.
-- support@eviplex.com is the single customer support address, decided 9 Oct, replacing the 8 Oct kontakt@ choice because the live terms already name support@. It is routed to FOMF CS; kontakt@ forwards to it; info@ is for general, press and partners; datenschutz@ is for privacy. Still to do: app button (web/shared-brand/src/brands/eviplex.ts), website footer, mailbox routing to CS (eviplex.com mail is not in FOMF M365).
-- Quotas the CS page states: Free 30/calendar month, Plus 300, Pro 300, anonymous 3. This clashes with the "+500%/+1000%" marketing copy. **Correction (Mahyar, 12 Nov 2026): Plus was never 300, it is 150 questions/month; Pro is 300.** The CS page (and possibly training material) still says "Plus oder Pro (je 300 Fragen pro Monat)" — needs fixing.
+- support@eviplex.com is the single customer support address, decided 9 Oct, replacing the 8 Oct kontakt@ choice because the live terms already name support@. It is routed to FOMF CS; kontakt@ forwards to it; info@ is for general, press and partners; datenschutz@ is for privacy. eviplex.com mail is not in FOMF M365.
+- Quotas the CS page states: Free 30/calendar month, Plus 300, Pro 300, anonymous 3. This clashes with the "+500%/+1000%" marketing copy. **Correction (Mahyar, 12 Nov 2026): Plus was never 300, it is 150 questions/month; Pro is 300.** Check the CS page and training material for the old "je 300" wording before quoting them.
 - FOMF expert lectures: "full access for all Eviplex users soon". The training's "All Access feature" wording is outdated.
 
 Internal escalation + status channel: Slack #triage-eviplex (C0C82GXJXE0, created by Mahyar 9 Oct). My assumptions in the page that Mahyar should confirm: Max as the medical reviewer; datenschutz@ handles deletion/DSARs.
