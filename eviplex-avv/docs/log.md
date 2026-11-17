@@ -2,6 +2,10 @@
 
 Newest first. One entry per event or result. Decisions go in `decisions.md`, one line each. Each entry ends with who said it and where, in brackets. Summarise the source; the original stays where it is.
 
+## 2026-11-17: Google § 203 history before 30 Oct, moved here from memory
+
+Until now only the memory note `eviplex-ch-tech-factsheet` held this. Google NDA n91499 is between Google Ireland and FomF GmbH, Baden (AT), which Mahyar named as the correct FOMF contracting entity. On 5 Aug 2026 FOMF sent a proposed § 203 clause; it covered inference only (its para 5 forbids persistent storage), so it did not cover Cloud SQL, GKE or Storage. On 9 Oct Google (Alex Vassileva) declined custom § 203 language and offered a CDPA review, Assured Workloads (EU Data Boundary, personnel controls, Access Approval and Transparency), Confidential Computing, and a Cloud Master Agreement with the Professional Secrecy Addendum (PSA) for DACH healthcare, subject to eligibility. FOMF had only the NDA, no CMA. Open questions then: eligibility of a SaaS processor serving doctors, CH and AT coverage, CMA and PSA as a bundle. (Mahyar, mail thread "Urgent: Gemini API Usage / Privacy Agreement" with Alex Vassileva and Rojan Gharadaghy; memory note of 9 Oct)
+
 ## 2026-11-16: PSA question sent to counsel
 
 Mahyar asked Prof. Risch-Kerst (cc Habib) whether FOMF should sign Google's fixed pay-as-you-go PSA now, to cover DE and AT, and sign a custom PSA after an Enterprise Agreement. He asked for her view by the end of the week (20 Nov). The first forward had no PSA attached; Mahyar sent the PDF "GCP and Workspace Professional Secrecy Addendum (DE)_11_11_2026.pdf" three minutes later. (Mahyar, mails "FW: DRAFT version - PSA", 16 Nov 07:56 and 07:59 CET)

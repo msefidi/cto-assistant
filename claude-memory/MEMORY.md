@@ -19,8 +19,8 @@
 - [Registration funnel](registration-funnel.md) — Segment sign-up drop-off Jul–Oct 2026; 47% visitor→done; Baidu crawler noise
 - [B2C retention emails](b2c-retention-emails.md) — monthly course and video/Eviplex emails per role, win-back discount; Figma node ids (Sep 2026)
 - [fomf.de bot traffic](fomf-de-bot-traffic.md) — CN = real Baiduspider (login crawl trap); FI = one-off SISTRIX crawl 4 Nov (Nov 2026)
-- [ÄKW](aekw-tender.md) — Ärztekammer Wien cooperation, won unofficially (not to be passed on); brief and log in cto-assistant/aekw/
-- [Security assessment vendor](security-assessment-vendor.md) — Blaze (M365, GCP, pentests): contract + DPA signed 9 Nov 2026; brief and log in cto-assistant/cybersecurity/
+- [ÄKW](aekw-tender.md) — Ärztekammer Wien cooperation; confidential until ÄKW releases it; brief in cto-assistant/aekw/
+- [Security assessment vendor](security-assessment-vendor.md) — Blaze (M365, GCP, pentests); agreed dates cost money; brief in cto-assistant/cybersecurity/
 - [php2shell Drupal incident](php2shell-drupal-incident.md) — Oct 2026 PHP RCE on legacy Drupal in v2; ingress mitigation gaps, secret rotation open
 - [Retool audit logs](retool-audit-logs.md) — Retool MCP reads audit logs; Oct 2026 new-IP alert = likely IPv6 rotation
 - [Team-service agents](team-service-agents.md) — when a Claude helper becomes a team service; Claude Tag vs Managed Agents vs Copilot (Oct 2026)
@@ -31,8 +31,8 @@
 - [Eviplex changelog email](eviplex-changelog-email.md) — first internal changelog (DE, ihr), Nov 2026; Linear view + PRs; HTML in eviplex-changelog/
 - [Eviplex customer support](eviplex-customer-support.md) — FOMF CS stays in front, support@ only, quotas 30/150/300 (Oct 2026)
 - [Eviplex document upload answer](eviplex-document-upload-answer.md) — Befunde/Bilder upload not today; roadmap under § 203, no date (Nov 2026)
-- [Eviplex CH tech fact sheet](eviplex-ch-tech-factsheet.md) — CH pitch + fact-sheet slides; legal wording; Google Cloud § 203 gap (Oct–Nov 2026)
+- [Eviplex CH tech fact sheet](eviplex-ch-tech-factsheet.md) — approved § 203 wording for external claims; Google gap until the PSA is signed
 - [Eviplex UAE pitch](eviplex-uae-pitch.md) — EN deck for the UAE contact; render via the PowerPoint sandbox (Oct 2026)
 - [Eviplex AVV review](eviplex-avv-review.md) — user AVV + FOMF↔Eviplex § 203 agreement; documents = end state; brief in cto-assistant/eviplex-avv/
-- [Eviplex partner model](eviplex-medichub-partner-contract.md) — Medichub/Webop commission model; draft v0.1 not yet with Risch-Kerst; brief in cto-assistant/eviplex-partnermodell/
+- [Eviplex partner model](eviplex-medichub-partner-contract.md) — Medichub/Webop commission model; rates only from decisions.md; brief in cto-assistant/eviplex-partnermodell/
 - [KIS/PVS integration research](kis-pvs-integration-research.md) — MDR line = patient data; Valmed is the rival; partner candidates; Notion page (Oct 2026)
