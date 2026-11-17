@@ -12,7 +12,7 @@ Recurring. An internal email that tells FOMF teams (Sales, CS, EB and everyone e
 
 - Mahyar's main points first, then "Außerdem neu", then "Ausblick · noch nicht live".
 - Brand rules from `brand/` in the meviq repo: no "empfehlen" or "diagnostizieren", no data-retention claims. § 203 is left out.
-- Keep it short (see the memory note `comms-style-short`).
+- Keep it short (see the memory note `comms-style-short`). Product facts: `../eviplex/AGENTS.md`.
 
 ## Files
 

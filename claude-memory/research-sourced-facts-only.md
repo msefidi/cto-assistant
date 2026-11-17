@@ -10,5 +10,5 @@ metadata:
 
 Research pages should hold only facts with a source in the findings sections. Estimates, "no X found" claims and "from practice" assumptions do not belong there, even when a "not verified" footer marks them, and that includes estimates from research subagents. Suggestions, architecture and next steps can stay as long as they read as suggestions. Open points go into next steps as things to check.
 
-**Why:** On 30 Oct 2026 Mahyar asked where the KIS sales-cycle numbers came from, then had all unverified facts removed from the KIS/PVS research page ([[kis-pvs-integration-research]]).
+**Why:** On 30 Oct 2026 Mahyar asked where the KIS sales-cycle numbers came from, then had all unverified facts removed from the KIS/PVS research page (Notion "KIS and PVS integration – research"; summary in `cto-assistant/eviplex/positioning.md`).
 **How to apply:** Before publishing research, check every number and claim against its source. Drop anything an agent labelled as an estimate or could not verify, and never put estimates in tables as if they were facts.

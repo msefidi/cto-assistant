@@ -7,6 +7,7 @@
 - [Linear = product work](linear-is-product-work.md) — frame Linear as product work (bugs/improvements/features), not engineering work
 - [Signals log](signals-log.md) — cto-assistant/signals/ for AI-age posts/thoughts; a bare shared link means "capture it"
 - [Metabase native cards via REST API](metabase-native-cards-via-api.md) — MCP cannot save SQL questions; use curl + key in cto-assistant/.env
+- [Office files: read and render](office-files-render.md) — SharePoint gives text only; render .pptx via PowerPoint AppleScript sandbox; validate first
 - [folm.org short links](folm-shortlink-domain.md) — link.folm.org is FOMF's T2M short-link domain, not a typo
 - [FOMF-All-Access-Paket](fomf-all-access-paket.md) — B2C "Mitgliedschaft" renamed; use this name externally (Nov 2026)
 - [FOMF team mail addresses](fomf-team-mail-addresses.md) — intern_events@, sponsoring@fomf.de/.at, kongress@fomf.ch, marketing@; no B2B group
@@ -24,15 +25,6 @@
 - [php2shell Drupal incident](php2shell-drupal-incident.md) — Oct 2026 PHP RCE on legacy Drupal in v2; findings and follow-ups in cybersecurity/reports/
 - [Retool audit logs](retool-audit-logs.md) — Retool MCP reads audit logs; 2FA enforced 27 Oct 2026; Oct alert case in cybersecurity/reports/
 - [Team-service agents](team-service-agents.md) — when a Claude helper becomes a team service; Claude Tag vs Managed Agents vs Copilot (Oct 2026)
-- [Eviplex Linear structure](eviplex-linear-structure.md) — EVP Track + Surface labels, title prefixes, naming rules, roadmap and Watchlist views
-- [Eviplex plan memo format](eviplex-plan-memo-format.md) — weekly Teams plan by project; format in cto-assistant/eviplex-weekly/AGENTS.md
-- [Eviplex brand concept](eviplex-brand-concept.md) — words in meviq brand/, look follows the code; one DS (EVP - DS Web); claim rules
-- [Anika (Eviplex marketing)](anika-eviplex-marketing.md) — Eviplex marketing manager; reviews brand PRs; co-owns brand and claims with Shadi
-- [Eviplex changelog email](eviplex-changelog-email.md) — internal changelog (DE, ihr); sources and template in cto-assistant/eviplex-changelog/AGENTS.md
-- [Eviplex customer support](eviplex-customer-support.md) — FOMF CS stays in front, kontakt@ + feedback@, quotas 30/150/300
-- [Eviplex document upload answer](eviplex-document-upload-answer.md) — Befunde/Bilder upload not today; roadmap under § 203, no date (Nov 2026)
-- [Eviplex CH tech fact sheet](eviplex-ch-tech-factsheet.md) — approved § 203 wording for external claims; Google gap until the PSA is signed
-- [Eviplex UAE pitch](eviplex-uae-pitch.md) — closed Oct 2026; non-EU claim and hosting decisions; PowerPoint render lessons
 - [Eviplex AVV review](eviplex-avv-review.md) — user AVV + FOMF↔Eviplex § 203 agreement; documents = end state; brief in cto-assistant/eviplex-avv/
 - [Eviplex partner model](eviplex-medichub-partner-contract.md) — Medichub/Webop commission model; rates only from decisions.md; brief in cto-assistant/eviplex-partnermodell/
-- [KIS/PVS integration research](kis-pvs-integration-research.md) — MDR line = patient data; Valmed is the rival; partner candidates; Notion page (Oct 2026)
+- [Eviplex product folder](eviplex-product.md) — what Eviplex is, tiers, claims, support, brand, Linear: read cto-assistant/eviplex/AGENTS.md first

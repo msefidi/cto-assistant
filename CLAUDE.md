@@ -20,22 +20,10 @@ Medical content (primarily CME — Continuing Medical Education, plus other form
 - **Logs, monitoring, observability:** Datadog (a July 2026 move to Elastic Observability serverless was reverted; confirmed August 2026). Elastic Cloud is used for search only.
 - **GCP project:** `fomf-v2-prod`
 
-### meviq → Eviplex
-Medical AI assistant — evidence-based answers to doctors' questions, grounded in curated guidelines and studies. Being rebranded from **Meviq** to **Eviplex** (brand + product name).
+### Eviplex (formerly Meviq)
+Medical AI assistant: evidence-based answers to physicians' questions from curated guidelines and studies. Brought to market by **Eviplex GmbH** (controller, liability holder); **FOMF** provides it as SaaS (processor). Repo `fomf-code/meviq`, GCP project `meviq-prod`.
 
-- **Repo:** https://github.com/fomf-code/meviq
-- **Backend:** multiple Node.js services + Vercel AI SDK
-- **Frontend:** Next.js + Vercel AI SDK
-- **CI/CD:** GitHub
-- **Evals & traces:** Braintrust
-- **GCP project:** `meviq-prod`
-
-**Corporate separation (in progress, as of July 2026):** the product is being split into an asset-company / operating-company structure.
-- **Eviplex GmbH** — new legal entity that launches and owns the market-facing medical AI product (Eviplex). It is the **regulatory and liability holder** (EU AI Act / MDR exposure sits here) and the **GDPR data controller**.
-- **FOMF** — the **asset company / SaaS provider**. Holds the assets (code, IP, hosting, curated medical knowledge base) and provides the software as a service to Eviplex. Acts as **GDPR data processor**. May later be spun into its own separate company.
-- **Data processing agreements (DPAs)** between FOMF and Eviplex are being prepared.
-- A **cooperation contract** between FOMF and Eviplex is to be signed — IP ownership, license/SaaS terms, and intercompany questions will be settled there.
-- **Technical blockers resolved:** answer quality, latency, and cost-per-question are now at acceptable levels (specific figures TBD — Mahyar to provide from Braintrust evals + latency/cost metrics).
+**Everything that stays true about Eviplex** (tiers, legal set-up, positioning, claims, support, brand, Linear, people, stack) **is in the product folder `eviplex/`. Read `eviplex/AGENTS.md` before any Eviplex work.**
 
 ### Shared / data
 - **Datalake & main BigQuery:** GCP project `fomf-dl`
@@ -72,11 +60,7 @@ Medical AI assistant — evidence-based answers to doctors' questions, grounded 
 - EM: Simone
 - Engineers: Nikola, Tomislav, Borna, Farzam
 
-**Eviplex team** — the AI assistant product (formerly Meviq team)
-- PM: **Mahyar** (himself, for now)
-- Medical Lead: **Max**
-- Designers: Shadi, Bardia
-- Engineering: Parham, Anah (data eng), Ehsan (data scientist), Josip (mobile), Viktor (frontend TL)
+**Eviplex team** — the AI assistant product; PM: **Mahyar**. Members and roles: `eviplex/AGENTS.md`.
 
 **IT team** — Andreas Langer + 3
 
@@ -115,6 +99,7 @@ A **topic** is any folder in this workspace except the tooling named below. `TOP
 - **Opening a topic:** work that will run longer than this session gets the four files; work that repeats gets an `AGENTS.md`; an output finished in this session is a plain folder in `archive/` with a line in `TOPICS-DONE.md`. A question that leaves no files is not a topic. Done when the folder holds what its group needs and its line is in `TOPICS.md` or `TOPICS-DONE.md`.
 - **A topic changes group** (a one-off analysis turns into a project, a recurring job gets a goal): add the files the new group needs and move its line, between `TOPICS.md` and `TOPICS-DONE.md` if needed. A topic that comes back moves out of `archive/` again.
 - **Not topics:** `_template/`, `artifact-index/` and `topics-overview/` are workspace tooling, and `archive/` only holds finished topics. Each is described where this file uses it; they have no line in either file.
+- **Product folders:** `eviplex/` holds what stays true about a product: what it is, tiers, legal set-up, positioning, claims, support, brand and how it is run. A `platform/` folder for the learning platform will follow. A product folder is not a topic and has no line in `TOPICS.md`. Before work on a product, read its `AGENTS.md`. When you learn a lasting fact about the product, rewrite the matching file there (who said it, when), not memory; status and next steps stay in the topics. Point to sources (repo, Notion, Linear) instead of copying them.
 - **Topics overview:** the [CTO Topics page](https://claude.ai/artifact/8W7smjQh7rx3hjS8HCNhni) shows the active and recurring topics, built from `TOPICS.md` and the briefs. After a session that changes a Status or a `TOPICS.md` line, rebuild and republish it as `topics-overview/AGENTS.md` says.
 
 ### One shape for active topics
