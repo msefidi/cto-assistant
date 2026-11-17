@@ -6,13 +6,13 @@ What may and may not be said about Eviplex in anything that leaves FOMF: decks, 
 
 ## Before reusing any claim
 
-Re-check it against the code and against the AVV brief (`../eviplex-avv/AGENTS.md`). The subprocessor facts in the CH fact sheet were true on 8 Oct 2026 only, and several TOMs in the AVV were untrue on 3 Nov 2026.
+Re-check it against the code and against the AVV brief (`../avv/AGENTS.md`). The subprocessor facts in the CH fact sheet were true on 8 Oct 2026 only, and several TOMs in the AVV were untrue on 3 Nov 2026.
 
 ## Professional secrecy (§ 203)
 
 - Plus and Pro are the § 203 tiers; Free is not (Mahyar, 26 Oct 2026).
 - On 8 Oct 2026 only OpenAI had signed a § 203 confidentiality agreement. Data sent to OpenAI is **not** anonymised; it is covered by zero data retention and the secrecy terms. Website text that says otherwise is wrong (Linear EVP-1349).
-- **Google Cloud is a gap** until Google's Professional Secrecy Addendum (PSA) is signed: it stores conversations with Google-managed keys. Encryption at rest does not take Google out of scope. PSA status and history: `../eviplex-avv/`.
+- **Google Cloud is a gap** until Google's Professional Secrecy Addendum (PSA) is signed: it stores conversations with Google-managed keys. Encryption at rest does not take Google out of scope. PSA status and history: `../avv/`.
 - Therefore never write „lückenlose Verschwiegenheitskette".
 - **Switzerland:** the CH deck writes „§ 203 dStGB". Counsel's wording (Risch-Kerst): OpenAI's § 203 obligation „wirkt analog" for Art. 321 StGB. Plus and Pro do not yet fully cover Art. 321 StGB: the pay-as-you-go PSA covers DE and AT only; CH needs an Enterprise Agreement PSA.
 
@@ -44,4 +44,4 @@ Eviplex is not a medical device under the MDR (EU 2017/745). Never use clinical 
 ## Where the decks are
 
 - CH pitch with tech fact sheet (Oct 2026): SharePoint eng › 09-Eviplex/Marketing Planung/03_Pitches/Eviplex final/"Eviplex V 1_1 (final) - CH - mit Tech-Factsheet.pptx", slides 9–11.
-- UAE deck (EN, Oct 2026): `../archive/eviplex-uae-pitch/`.
+- UAE deck (EN, Oct 2026): `../../archive/eviplex-uae-pitch/`.

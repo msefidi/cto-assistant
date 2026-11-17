@@ -71,4 +71,4 @@ Habib can hand out the user AVV (V-05 or later) and sign the FOMF↔Eviplex secr
 |---|---|
 | `docs/decisions.md` | Every decision, one line each, newest first |
 | `docs/log.md` | Dated record of events and results, newest first |
-| `../cybersecurity/reports/avv-pruefung-2026-11-03.html` | The review for Habib (German): Anlage 2.2 per service, which TOMs hold, what FOMF cannot promise in the secrecy agreement, next steps. Git-ignored because it lists security gaps |
+| `../../cybersecurity/reports/avv-pruefung-2026-11-03.html` | The review for Habib (German): Anlage 2.2 per service, which TOMs hold, what FOMF cannot promise in the secrecy agreement, next steps. Git-ignored because it lists security gaps |

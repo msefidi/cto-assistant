@@ -56,7 +56,8 @@ def parse_topics_md():
         kind = KIND_BY_SECTION.get(section)
         if not kind:
             continue
-        t = {"folder": folder, "kind": kind, "what": c[1] if len(c) > 1 else ""}
+        # slug: folder without "/" (page anchors allow only letters, digits and hyphens)
+        t = {"folder": folder, "slug": folder.replace("/", "-"), "kind": kind, "what": c[1] if len(c) > 1 else ""}
         if kind == "active":
             t["line_status"] = c[2] if len(c) > 2 else ""
             t["line_next"] = c[3] if len(c) > 3 else ""

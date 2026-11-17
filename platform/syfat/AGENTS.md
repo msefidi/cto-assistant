@@ -82,23 +82,11 @@ Double SYFAT revenue in the 12 months from Sep 2026, so by Sep 2027. Revenue = m
 
 Conventions: `data/` holds extracts without identifiers, each stating its extraction date. `comms/` holds drafts: EB updates (DE), marketing briefs (DE), team notes (EN). A `docs/definitions.md` (revenue definition, baseline, segments) is to be added once agreed.
 
-## The product (facts from fomf.de, 22 Sep 2026)
+## The product
 
-- **SYFAT = Systematisiertes Facharzttraining.** Structured on-demand video courses preparing assistant doctors for the Facharztprüfung, built along the official learning-objective catalogue ("nach offiziellem Lernzielkatalog"), updated yearly. Product page: https://www.fomf.de/syfat. Marketing label on course pages: "Facharztvorbereitung".
-- **Catalogue (German instance): 4 courses**: Innere Medizin, Allgemeinmedizin, Pädiatrie, Gynäkologie und Geburtshilfe (`/content/syfat-<fach>-de`). Each about 178 on-demand videos. No CME points on the stand-alone course.
-- **Pricing and packaging** (all participant types pay the same):
+What SYFAT is, catalogue, prices, packaging, data model, audience: `../knowledge/products/syfat.md`. B2C numbers and definitions: `../knowledge/b2c-members.md`. Where the data lives: `../knowledge/data.md`.
 
-| Offer | Price | What you get |
-|---|---|---|
-| Single course (Einzelkurs) | €590 Innere Medizin, Allgemeinmedizin · €520 Pädiatrie, Gynäkologie | one Facharztvorbereitung course, ~178 videos, FOMF Free content; no CME, no slides or notes, no certificates |
-| FOMF All Access Online/Hybrid 50 (membership) | from €580 | all 4 SYFAT courses incl. updates, 6,000+ videos, 150+ premium courses, 50 CME, slides and notes, certificates, livestreams, 6 on-site days (Hybrid 50) |
-
-  Reading: the membership is priced at or below a single SYFAT course. Stand-alone SYFAT is effectively an on-ramp to the membership, not a product with its own price logic. Any pricing work starts from this fact.
-- In the platform data model SYFAT courses are `ADDON_COURSE` content (course pages) built from `LECTURE` items; in analytics they carry brand `SYFAT` or `SPECIALIST_CERTIFICATE` (`analysis.dim_contents.brand_type`, `analysis.fct_user_watched_content_events.content_brand`). Enrolments do not create booking rows; watching (`fct_user_watched_content_events`) and progress (`fct_content_progress_by_user`) are the usage signals. Stand-alone purchases should appear as orders; which table holds them is the first thing to check (workstream 1).
-- Timeline: SYFAT watching visible from Oct 2024; content re-tagged in 2025, so brand-based history before 2025 is unreliable (open check: growth vs. re-tagging effect, see `../archive/b2c-value-journey/docs/log.md`).
-- Prices on fomf.de are rendered client-side; to re-read them, fetch `/content/<slug>` and parse `participantTypePrices` (cents) from the embedded JSON. Comparison tables on the course pages are the source for the packaging above.
-
-### Marie's Notion project page
+## Marie's Notion project page
 
 Read 22 Sep 2026 (then last edited 30 Jul 2026) and again 15 Nov 2026 (last edited 5 Nov 2026). German. What it adds beyond fomf.de:
 
@@ -120,33 +108,10 @@ Read 22 Sep 2026 (then last edited 30 Jul 2026) and again 15 Nov 2026 (last edit
   Content depth differs a lot: AM has 217 videos, Gyn 58, at the same two price points.
 - **Adjacent project, "Facharztvorbereitungskurs" livestream** (same page tree): 3 to 4-day live courses per specialty, CME via LÄK Hessen, sponsored symposia, VoD access afterwards, two-year rhythm. Plan: AM Feb/Mar 2027 (in contact with Events), Gyn autumn 2027, IM Feb/Mar 2028, Päd autumn 2028, Psych open. Planned price €490 / CHF 490 per participant, membership €570 / CHF 860 next to it. Sponsoring and Events contacts are on that page. Treat this as part of the SYFAT commercial line: a second revenue stream and a marketing moment for the on-demand course.
 
-## Numbers already established
-
-From `../archive/b2c-value-journey/` (data as of 21 Sep 2026; definitions in its `docs/definitions.md`, agreed with Mahyar, do not contradict them):
-
-| Fact | Value |
-|---|---|
-| New B2C members whose likely intent was SYFAT-led | 2% of the Aug 2024–Jul 2025 cohorts → 4% of the Aug 2025–Aug 2026 cohorts; peaks 7–9% in Apr and Jul 2026 |
-| SYFAT-led members, first-year membership fees | 234 members · €122k year 1 · €32k year 2 · €523 per member year 1 (lowest of all classes: more assistant doctors at the €490 price) |
-| Members who watched SYFAT content within 30 d / 90 d / 12 m of joining | 5% / 6% / 9% |
-| Reading | The CME products (accredited + SYFAT) are the only growing entry points into the membership; they grow at the expense of generic on-demand, not of Refresher. SYFAT-led members are among the most active (assistant doctors, German, renewing at 51–62%). |
-
-These cover membership revenue only. Stand-alone SYFAT sales, B2B usage and non-member buyers are not in these figures.
-
-From Marie's survey concept (Metabase, as of 2 Nov 2026, FOMF staff excluded): 1,666 SYFAT users and 2,127 enrolments (user × course); median watch time about 102 minutes and 4 videos per user (mean about 500 minutes, pulled up by a few heavy users); 241 users (15%) watched under 5 minutes, 943 (58%) over an hour; on average 83% of a video is watched. 74% of SYFAT users are active members; 34% of those members have submitted a cancellation. Enrolments: AM 934 (DE 763, AT 171), IM 1,159 (DE 801, AT 227, CH 131), Gyn 22, Päd 12. These are Marie's figures, not checked against the agreed definitions.
-
-## Where the data lives
-
-BigQuery project `fomf-dl` (region europe-west3), read-only preapproved. Query with `bq query --use_legacy_sql=false --project_id=fomf-dl` or, when gcloud auth is expired, `../archive/b2c-value-journey/tools/mbq.sh "<sql>"` (Metabase REST, 2000-row cap, needs `METABASE_API_KEY` in `../.env`, never print it). Fully qualify tables as `` `fomf-dl`.dataset.table ``. Table inventory, brand codes and gotchas: `../archive/b2c-value-journey/docs/data-pipeline.md`.
-
-Most relevant: `analysis.dim_contents` (catalogue, brands), `analysis.fct_user_watched_content_events` (who watched what, minutes), `analysis.fct_content_progress_by_user` and `analysis.fct_content_certificates` (completion, CME points), `analysis.dim_users` (occupation, specialty v2), membership orders in `platform_raw_membershipservice.*`, marketing sources in `analysis.fct_membership_marketing_sources`, web behaviour in `segment_raw_unify.*`. Metabase: https://fomf2.metabaseapp.com (companion dashboard "B2C Membership Income", 1816).
-
-Other systems: HubSpot (marketing / CRM, MCP connected), Notion (Marie's page above; the Executive Board space for strategy), Linear (project above), Slack. Use the MCP tools; do not guess state.
-
 ## Workstreams (the commercial funnel, in order)
 
-1. **Baseline:** last-12-months B2C revenue on the agreed definition: (a) first-year and renewal fees of SYFAT-led members (reuse the intent logic from `../archive/b2c-value-journey/sql/`), (b) stand-alone SYFAT course orders (find the order table; check `platform_raw_membershipservice.*`, `analysis.fct_course_bookings` and the content-order tables). Then the Sep 2027 target = 2× that. Confirm the number with Mahyar; align with Erfan on the accounting view.
-2. **Pricing and packaging:** the €590 / €520 single course vs. €580+ membership tension; options: reposition the single course, bundle SYFAT with a membership tier for assistant doctors, exam-timed offers, per-specialty pricing.
+1. **Baseline:** last-12-months B2C revenue on the agreed definition: (a) first-year and renewal fees of SYFAT-led members (reuse the intent logic from `../../archive/b2c-value-journey/sql/`), (b) stand-alone SYFAT course orders (find the order table; check `platform_raw_membershipservice.*`, `analysis.fct_course_bookings` and the content-order tables). Then the Sep 2027 target = 2× that. Confirm the number with Mahyar; align with Erfan on the accounting view.
+2. **Pricing and packaging:** the €590 / €520 single course vs. the €670 All Access Online membership tension (prices: Notion "FOMF All Access"); options: reposition the single course, bundle SYFAT with a membership tier for assistant doctors, exam-timed offers, per-specialty pricing.
 3. **Content roadmap:** which specialties next (largest assistant-doctor populations without a SYFAT course; check `dim_users` specialty v2 counts), update cadence, what "4 (inkl. Updates)" promises. With Marie and the medical team, which owns production; the Notion roadmap (Psychiatrie next, livestream courses from 2027) is the starting point.
 4. **Audience and positioning:** assistant doctors by specialty and exam timing, DACH split, messaging against the alternatives (books, Repetitorien, peers).
 5. **Channels and marketing:** owned first (fomf.de, newsletter, in-platform cross-sell to members who already watch SYFAT content), then paid and partnerships (clinics, Ärztekammern, specialty societies), referral. About €50k budget; plan spend by quarter and expected buyers per channel.

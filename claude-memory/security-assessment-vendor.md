@@ -10,6 +10,6 @@ The security assessment lives in `cto-assistant/cybersecurity/`: `AGENTS.md` is 
 - **Dates cost money once agreed.** MSA 10.3 charges 25/50/100 % for cancelling within 15/10/5 working days of an agreed start. Commit only to dates IT and the product teams can meet, and move them at least 4 weeks ahead.
 - **Findings never go in the brief, log or memory.** They go in `cto-assistant/cybersecurity/reports/` (git-ignored) and SharePoint, and never into external tools.
 
-**Why:** Blaze covers the dropped Mandiant scope (M365 + GCP) plus manual pentests of both products and a GKE review aimed at the in-cluster gaps from [[php2shell-drupal-incident]].
+**Why:** Blaze covers the dropped Mandiant scope (M365 + GCP) plus manual pentests of both products and a GKE review aimed at the in-cluster gaps from the php2shell incident (`cto-assistant/platform/knowledge/tech-and-security.md`).
 
 **How to apply:** "catch up on cybersecurity" means the routine in `cto-assistant/CLAUDE.md`, section "Topics", sub-section "One shape for active topics", see [[topic-shape]]. Sina appears in Outlook and Teams as Martin S. Taheri, see [[people-m365-names]].

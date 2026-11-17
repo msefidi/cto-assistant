@@ -8,13 +8,13 @@ Eviplex is an AI-supported information system for physicians in hospitals and pr
 
 - **Audience:** licensed physicians, who register with their EFN; the messaging also speaks to advanced medical students (PJ, WSJ, KPJ). Pharmacists, nursing staff and MFA follow later.
 - **History:** development started June 2025; v1 launched quietly in December 2025 (about 500 users); answer-quality issues led to a rewrite. Answer quality, latency and cost per question are now at acceptable levels (figures to come from Braintrust and the cost metrics, Mahyar). Formerly **Meviq**; the repo and the GCP project still carry that name.
-- **Not a medical device** under the MDR. Every wording must keep it that way, see `claims-and-legal.md`.
+- **Not a medical device** under the MDR. Every wording must keep it that way, see `knowledge/claims-and-legal.md`.
 
 ## Legal set-up
 
 - **Eviplex GmbH** (founded 2026 as a spin-off of FOMF) brings the product to market. It holds the regulatory risk and the liability (EU AI Act, MDR), is the GDPR **controller**, and owns the brand and trademark.
 - **FOMF** is the asset company and SaaS provider: code, IP, hosting and the curated medical knowledge base. It is the GDPR **processor**.
-- Between them: data processing agreements (AVV) and a cooperation contract on IP, licence and intercompany terms. Their status is in the topics, see `../eviplex-avv/`.
+- Between them: data processing agreements (AVV) and a cooperation contract on IP, licence and intercompany terms. Their status is in the topics, see `avv/`.
 
 ## Tiers
 
@@ -31,7 +31,7 @@ Eviplex is an AI-supported information system for physicians in hospitals and pr
 
 ## Areas
 
-The roadmap is organised by the Linear **Tracks**: Core product · Answer quality · Growth · Admin & analytics · Tech health · Product research and UX. The current projects and owners are in the Linear roadmap view and the latest weekly memo (`../eviplex-weekly/`); how Linear is set up is in `pm.md`.
+The roadmap is organised by the Linear **Tracks**: Core product · Answer quality · Growth · Admin & analytics · Tech health · Product research and UX. The current projects and owners are in the Linear roadmap view and the latest weekly memo (`weekly/`); how Linear is set up is in `knowledge/pm.md`.
 
 ## People
 
@@ -60,6 +60,7 @@ Point to these; do not copy them into this folder.
 
 | What | Where |
 |---|---|
+| Eviplex terms for FOMF All Access members, per tier | Notion "FOMF All Access": https://app.notion.com/p/fomf/FOMF-All-Access-12d7afedf30980ca8bb2ff2f0ace6e9c |
 | Messages, voice, claims, official German texts | meviq `brand/README.md` and `brand/texts.de.md` (owners Shadi and Anika) |
 | Look: colours, logo, assets | meviq `web/shared-brand`; design system artifact "EVP - DS Web" |
 | Website copy | meviq `web/marketing/messages/de-DE.json` |
@@ -72,15 +73,15 @@ Point to these; do not copy them into this folder.
 
 | File | What |
 |---|---|
-| `positioning.md` | Core message, markets and channels, differentiation, competitors, the MDR line |
-| `claims-and-legal.md` | What we may and may not claim: § 203, hosting, countries, uploads |
-| `support.md` | How Customer Support handles Eviplex: owners, addresses, quotas, escalation |
-| `brand.md` | How brand work is organised and synced |
-| `pm.md` | Linear scheme, weekly memo, changelog |
+| `knowledge/positioning.md` | Core message, markets and channels, differentiation, competitors, the MDR line |
+| `knowledge/claims-and-legal.md` | What we may and may not claim: § 203, hosting, countries, uploads |
+| `knowledge/support.md` | How Customer Support handles Eviplex: owners, addresses, quotas, escalation |
+| `knowledge/brand.md` | How brand work is organised and synced |
+| `knowledge/pm.md` | Linear scheme, weekly memo, changelog |
 
 ## Topics about Eviplex
 
-Active: `../eviplex-avv/` (AVV and secrecy agreement, Google PSA), `../eviplex-partnermodell/` (partner commissions). Recurring: `../eviplex-weekly/`, `../eviplex-changelog/`. Done: `../archive/eviplex-uae-pitch/`. The security assessment `../cybersecurity/` covers Eviplex too.
+Active: `avv/` (AVV and secrecy agreement, Google PSA), `partnermodell/` (partner commissions). Recurring: `weekly/`, `changelog/`. Done: `../archive/eviplex-uae-pitch/`. The security assessment `../cybersecurity/` covers Eviplex too.
 
 ## Keeping this folder current
 

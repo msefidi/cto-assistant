@@ -9,21 +9,21 @@ This folder is the home base for Claude Code agents that support **Mahyar (CTO o
 FOMF is a medical learning company. Two products:
 
 ### Learning Platform
-Medical content (primarily CME — Continuing Medical Education, plus other formats) for doctors, assistant doctors, and students. Monetization: individual course bookings, B2C membership, B2B membership. German instance: **fomf.de**.
+Medical continuing education (mostly CME) for doctors, assistant doctors and students on fomf.de, fomf.at and fomf.ch: single course bookings, the B2C membership ("FOMF-All-Access-Paket"), B2B memberships and sponsoring. Repo `fomf-code/fomf-learning-platform`, GCP project `fomf-v2-prod`.
 
-- **Repo:** https://github.com/fomf-code/fomf-learning-platform
-- **Backend:** Kotlin + Node.js microservices on GKE
-- **Frontend:** Next.js on Vercel
-- **CI/CD:** GitHub Actions + Vercel
-- **Storage:** Cloud SQL (relational) + Elastic Cloud (BM25 + semantic search)
-- **Analytics:** BigQuery + Metabase
-- **Logs, monitoring, observability:** Datadog (a July 2026 move to Elastic Observability serverless was reverted; confirmed August 2026). Elastic Cloud is used for search only.
-- **GCP project:** `fomf-v2-prod`
+**Everything that stays true about the platform** (offer, products, B2C definitions and findings, data, stack, incidents, people) **is in the product folder `platform/`: its `AGENTS.md` and `knowledge/`. Read `platform/AGENTS.md` before any platform work.**
 
 ### Eviplex (formerly Meviq)
 Medical AI assistant: evidence-based answers to physicians' questions from curated guidelines and studies. Brought to market by **Eviplex GmbH** (controller, liability holder); **FOMF** provides it as SaaS (processor). Repo `fomf-code/meviq`, GCP project `meviq-prod`.
 
-**Everything that stays true about Eviplex** (tiers, legal set-up, positioning, claims, support, brand, Linear, people, stack) **is in the product folder `eviplex/`. Read `eviplex/AGENTS.md` before any Eviplex work.**
+**Everything that stays true about Eviplex** (tiers, legal set-up, positioning, claims, support, brand, Linear, people, stack) **is in the product folder `eviplex/`: its `AGENTS.md` and `knowledge/`. Read `eviplex/AGENTS.md` before any Eviplex work.**
+
+### Product source of truth
+For now, the Notion page **"Produktwelt bei FOMF"** is the source of truth for all FOMF products (product families, offers for special audiences, sponsoring, team rules): https://app.notion.com/p/fomf/Produktwelt-bei-FOMF-3ea7afedf309808e8bfcf1891a76175e. The product folders point to it and add only what it does not say; where they disagree, the page wins. Two exceptions:
+- **All Access tiers and prices:** the Notion page **"FOMF All Access"** is the source of truth: https://app.notion.com/p/fomf/FOMF-All-Access-12d7afedf30980ca8bb2ff2f0ace6e9c
+- **Eviplex:** ignore what the Produktwelt page says about Eviplex; the source of truth is `eviplex/` (`AGENTS.md` and `knowledge/`; meviq `brand/` for wording).
+
+Company figures come only from the page "FOMF in Zahlen", linked from the Produktwelt page.
 
 ### Shared / data
 - **Datalake & main BigQuery:** GCP project `fomf-dl`
@@ -51,14 +51,7 @@ Medical AI assistant: evidence-based answers to physicians' questions from curat
 
 ### Teams
 
-**Platform team** — builds/operates the learning platform
-- EM: George · PM: Vahid
-- Engineers: Kamran, Ignasi, Raman, Matheo, Rahim (also TL), George (EM)
-- Designer: Shadi
-
-**Productivity team** — internal dashboards/back offices built on top of our backend, primarily in Retool
-- EM: Simone
-- Engineers: Nikola, Tomislav, Borna, Farzam
+**Platform team** — builds and runs the learning platform; EM George, PM Vahid. **Productivity team** — internal back offices in Retool; EM Simone. Members and roles: `platform/AGENTS.md`.
 
 **Eviplex team** — the AI assistant product; PM: **Mahyar**. Members and roles: `eviplex/AGENTS.md`.
 
@@ -68,7 +61,7 @@ Medical AI assistant: evidence-based answers to physicians' questions from curat
 
 ## Current priorities (as of July 2026)
 
-1. **Eviplex (ex-Meviq) launch & corporate separation** — dev started June 2025; v1 launched quietly December 2025 (~500 users). Answer-quality issues drove a rewrite; technical blockers (quality, latency, cost-per-question) are now resolved. Focus has shifted from tech to the **corporate/legal separation**: standing up **Eviplex GmbH** as the product-owning entity (regulatory/liability holder, GDPR controller) with **FOMF** as SaaS provider / asset company (GDPR processor). DPAs in preparation; FOMF↔Eviplex cooperation contract to be signed. See the meviq → Eviplex section above. Top near-term focus.
+1. **Eviplex (ex-Meviq) launch & corporate separation** — dev started June 2025; v1 launched quietly December 2025 (~500 users). Answer-quality issues drove a rewrite; technical blockers (quality, latency, cost-per-question) are now resolved. Focus has shifted from tech to the **corporate/legal separation**: standing up **Eviplex GmbH** as the product-owning entity (regulatory/liability holder, GDPR controller) with **FOMF** as SaaS provider / asset company (GDPR processor). DPAs in preparation; FOMF↔Eviplex cooperation contract to be signed. See `eviplex/AGENTS.md`. Top near-term focus.
 2. **Cybersecurity** — hardening custom + cloud workloads (GCP-hosted and Microsoft-side alike). A joint M365 + GCP assessment was scoped with Mandiant but **not commissioned (too expensive, decided July 2026)**; on 27 Oct 2026 **Blaze Information Security** was chosen over PCG (M365 + GCP review, pentests of the learning platform and Eviplex incl. mobile/AI, + OSINT + GKE review of the learning-platform cluster; revised 6 Nov 2026 to €31,900 net for 29 days at €1,100/day, Eviplex now 9 days; NDA signed by Habib; Phase 1 can start last week of Nov if decided by mid-Nov; contract signed by Mahyar on 9 Nov 2026 (v4, #2026.11.014)). See `cybersecurity/vendor-comparison-2026-10.md`.
 
 Ask Mahyar to confirm/refresh this section when it feels stale — priorities shift and this list should reflect reality.
@@ -79,16 +72,16 @@ Ask Mahyar to confirm/refresh this section when it feels stale — priorities sh
 
 The Executive Board handed Mahyar the **commercials of two learning-platform products** — pricing, packaging, positioning, go-to-market and marketing. This is a business-owner mandate, not engineering work; keep it separate from Platform / Eviplex in comms and docs.
 
-- **SYFAT** (Facharzt / specialist-exam preparation) — brief in `syfat/AGENTS.md`
-- **On-Demand Accredited** (CME-point-bearing on-demand courses) — brief in `on-demand-accredited/AGENTS.md`
+- **SYFAT** (Facharzt / specialist-exam preparation) — brief in `platform/syfat/AGENTS.md`
+- **On-Demand Accredited** (CME-point-bearing on-demand courses) — brief in `platform/on-demand-accredited/AGENTS.md`
 
-Goal for both: **double revenue in the coming year** (to Sep 2027). Revenue = membership fees attributed to product-led members + stand-alone course sales, **B2C only**. The medical team owns the content. SYFAT has a business owner, **Marie Fiebig** (a doctor), and a Notion project page; On-Demand Accredited has no owner, marketing or docs yet. Content roadmap is probably in scope; marketing budget about €50k (internal figure). Baselines are the first deliverable in each folder. Established numbers come from `archive/b2c-value-journey/` (data as of 21 Sep 2026) and its agreed definitions apply.
+Goal for both: **double revenue in the coming year** (to Sep 2027). Revenue = membership fees attributed to product-led members + stand-alone course sales, **B2C only**. The medical team owns the content. SYFAT has a business owner, **Marie Fiebig** (a doctor), and a Notion project page; On-Demand Accredited has no owner, marketing or docs yet. Content roadmap is probably in scope; marketing budget about €50k (internal figure). Baselines are the first deliverable in each folder. Established numbers and the agreed definitions are in `platform/knowledge/b2c-members.md`; the products are described in `platform/knowledge/products/`.
 
 ---
 
 ## Topics
 
-A **topic** is any folder in this workspace except the tooling named below. `TOPICS.md` lists the active and recurring topics with their status and next step; it is loaded at the end of this section. `TOPICS-DONE.md` lists the finished ones and is read only when needed. Topics sit in three groups:
+A **topic** is a folder of work. A topic that belongs to one product lives inside that product's folder (`platform/syfat/`, `eviplex/avv/`); a topic that spans products or none lives at the top level (`cybersecurity/`, `signals/`). `TOPICS.md` lists the active and recurring topics with their status and next step; it is loaded at the end of this section. `TOPICS-DONE.md` lists the finished ones and is read only when needed. Topics sit in three groups:
 
 | Group | What | The folder holds |
 |---|---|---|
@@ -98,8 +91,8 @@ A **topic** is any folder in this workspace except the tooling named below. `TOP
 
 - **Opening a topic:** work that will run longer than this session gets the four files; work that repeats gets an `AGENTS.md`; an output finished in this session is a plain folder in `archive/` with a line in `TOPICS-DONE.md`. A question that leaves no files is not a topic. Done when the folder holds what its group needs and its line is in `TOPICS.md` or `TOPICS-DONE.md`.
 - **A topic changes group** (a one-off analysis turns into a project, a recurring job gets a goal): add the files the new group needs and move its line, between `TOPICS.md` and `TOPICS-DONE.md` if needed. A topic that comes back moves out of `archive/` again.
-- **Not topics:** `_template/`, `artifact-index/` and `topics-overview/` are workspace tooling, and `archive/` only holds finished topics. Each is described where this file uses it; they have no line in either file.
-- **Product folders:** `eviplex/` holds what stays true about a product: what it is, tiers, legal set-up, positioning, claims, support, brand and how it is run. A `platform/` folder for the learning platform will follow. A product folder is not a topic and has no line in `TOPICS.md`. Before work on a product, read its `AGENTS.md`. When you learn a lasting fact about the product, rewrite the matching file there (who said it, when), not memory; status and next steps stay in the topics. Point to sources (repo, Notion, Linear) instead of copying them.
+- **Product folders:** `platform/` and `eviplex/` each hold one product. Their `AGENTS.md` is the product brief and `knowledge/` holds what stays true (offer or tiers, positioning, definitions and findings, data, stack, people, how it is run); every other subfolder is a topic about that product. Before work on a product, read its `AGENTS.md`. When you learn a lasting fact, rewrite the matching file in `knowledge/` (who said it, when), not memory; status and next steps stay in the topics. Point to sources (repo, Notion, Linear) instead of copying them.
+- **Not topics:** the product folders themselves and their `knowledge/`; `_template/`, `artifact-index/` and `topics-overview/` (workspace tooling); `archive/` (finished topics). They have no line in `TOPICS.md`.
 - **Topics overview:** the [CTO Topics page](https://claude.ai/artifact/8W7smjQh7rx3hjS8HCNhni) shows the active and recurring topics, built from `TOPICS.md` and the briefs. After a session that changes a Status or a `TOPICS.md` line, rebuild and republish it as `topics-overview/AGENTS.md` says.
 
 ### One shape for active topics
@@ -113,13 +106,13 @@ Every active topic has the same four files:
 | `docs/log.md` | Events and results, newest first; each entry names who and where | Appending only |
 | `CLAUDE.md` | One line pointing at `AGENTS.md` | Never |
 
-- **Starting one:** copy `_template/` to a kebab-case folder. Done when every heading of the brief is filled (write "none" where there is nothing), the log has its first entry, decisions made so far have their lines and `TOPICS.md` has its line.
+- **Starting one:** copy `_template/` to a kebab-case folder, inside the product folder when it belongs to one product, else at the top level. Done when every heading of the brief is filled (write "none" where there is nothing), the log has its first entry, decisions made so far have their lines and `TOPICS.md` has its line.
 - **Working in one:** read the brief, the decisions and the newest log entries first. Done when each decision of the session has its line in `decisions.md`, each result is logged and the brief's Status and the `TOPICS.md` line match it.
 - **"Catch up on X":** search every row of X's source map from the newest log date to today. Done when the news is logged, new decisions have their lines, the Status is updated and each new thread, chat or person is in the source map. Then tell Mahyar what changed.
 - **Sources stay where they are.** The log summarises an email, chat or contract with who, where and when. The original stays in Outlook, Teams or SharePoint.
 - **Memory** keeps one pointer note per active topic. The history goes in the log.
 - **Linear:** when part of a topic becomes product work, link the Linear project in the brief. Linear tracks that part.
-- **Finished:** write the outcome at the top of the brief, `git mv` the folder into `archive/`, move its line from `TOPICS.md` to `TOPICS-DONE.md` with the new path, and mark the memory pointer note closed (date, outcome and new path). Then update every path that pointed at the old folder: other briefs, memory notes and the `repo` field of its Artifact Index rows. Logs and decisions are not rewritten. Done when `grep -rn "<folder>/"` finds no live reference to the old path.
+- **Finished:** write the outcome at the top of the brief, `git mv` the folder into `archive/` (flat, also from a product folder), move its line from `TOPICS.md` to `TOPICS-DONE.md` with the new path, and mark the memory pointer note closed (date, outcome and new path). Then update every path that pointed at the old folder: other briefs, memory notes and the `repo` field of its Artifact Index rows. Logs and decisions are not rewritten. Done when `grep -rn "<folder>/"` finds no live reference to the old path.
 - **Older folders** are listed under "Not yet in shape" in `TOPICS.md`. Bring one in line when you next work in it, and keep its existing files where they are.
 
 @TOPICS.md

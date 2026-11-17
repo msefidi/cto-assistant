@@ -26,7 +26,7 @@ Source: `Complete_with_Docusign_FomF_x_Blaze_Security.pdf`, DocuSign envelope F2
 - **Admin/system operations:** we asked that they at least test that normal users can't call them. That isn't written anywhere. "Internal admin and back office tools" stay out of scope, which is fine as long as the authz check on admin ops on the public API is in.
 - **Eviplex GmbH** isn't mentioned. FomF GmbH is the only client party. The Eviplex pentest runs against production with data that Eviplex GmbH controls. Eviplex GmbH should at least co-authorise in the Rules of Engagement. This doesn't need to block signing.
 - **GCP scope:** 4 projects in europe-west3, "Learning Platform production, Eviplex production, Data Lake and Shared Services". Our known projects are `fomf-v2-prod`, `meviq-prod` and `fomf-dl`. Confirm which project is "Shared Services". (I couldn't check: gcloud needs re-auth.)
-- **AI section:** says OpenAI and Gemini run "through EU endpoints". The AVV review found no EU pin for OpenAI (see `eviplex-avv/`). It isn't a contract term, but it shouldn't sit in a document as our statement.
+- **AI section:** says OpenAI and Gemini run "through EU endpoints". The AVV review found no EU pin for OpenAI (see `../eviplex/avv/`). It isn't a contract term, but it shouldn't sit in a document as our statement.
 - **Payment:** § 9 says "30 business days of … the invoice" in one sentence and "30 days from the end of the project" in the next. Unused days become credits that expire after 12 months, so we pay in full even if we push a phase.
 
 ## Good, and now in the text

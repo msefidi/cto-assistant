@@ -16,5 +16,5 @@ How Mahyar runs Eviplex as PM. Linear holds the current projects and issues; thi
 ## Meetings and outputs
 
 - **Eviplex weekly**, Friday mornings, run by Mahyar: roadmap review of projects, then the Watchlist.
-- **Weekly plan memo** in the meeting's Teams chat, grouped by project: `../eviplex-weekly/AGENTS.md`.
-- **Internal changelog email** (German, company-wide): `../eviplex-changelog/AGENTS.md`.
+- **Weekly plan memo** in the meeting's Teams chat, grouped by project: `../weekly/AGENTS.md`.
+- **Internal changelog email** (German, company-wide): `../changelog/AGENTS.md`.

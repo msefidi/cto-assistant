@@ -281,12 +281,12 @@ table.others .w { color: var(--muted); }
   }
 
   function activeRow(t) {
-    var s = t.status || {}, open = state.open === t.folder, f = t._fresh;
+    var s = t.status || {}, open = state.open === t.slug, f = t._fresh;
     var chips = "";
     if (t._you) chips += '<span class="chip you">Waits on you</span>';
     if (f) chips += '<span class="chip ' + f.cls + '" title="Status as of ' + esc(s.as_of) + '">' + (f.cls === "stale" ? "Status " : "") + ageText(f.days) + "</span>";
     var head =
-      '<button type="button" class="row-head" data-open="' + esc(t.folder) + '" aria-expanded="' + open + '" aria-controls="d-' + esc(t.folder) + '">' +
+      '<button type="button" class="row-head" data-open="' + esc(t.slug) + '" aria-expanded="' + open + '" aria-controls="d-' + esc(t.slug) + '">' +
         '<span class="main">' +
           '<span class="titleline"><span class="t">' + esc(t.title) + '</span><span class="f">' + esc(t.folder) + "/</span></span>" +
           '<span class="line">' + inline(t.line_status) + "</span>" +
@@ -317,9 +317,9 @@ table.others .w { color: var(--muted); }
         '<div><h3>Recent log</h3><p class="counts num">Newest ' + (t.log || []).length + " of " + (t.log_count || 0) + " in <code>" + esc(t.folder) + '/docs/log.md</code></p><ul class="timeline">' + (log || "<li>No entries.</li>") + "</ul></div>" +
         '<div><h3>Recent decisions</h3><p class="counts num">Newest ' + (t.decisions || []).length + " of " + (t.decision_count || 0) + " in <code>" + esc(t.folder) + '/docs/decisions.md</code></p><ul class="timeline">' + (dec || "<li>None recorded.</li>") + "</ul></div>" +
         (people ? '<div><h3>People</h3><details class="more"><summary>' + t.people.length + ' people</summary><table class="people">' + people + "</table></details></div>" : "");
-      body = '<div class="detail" id="d-' + esc(t.folder) + '"><div class="col">' + left + '</div><div class="col">' + right + "</div></div>";
+      body = '<div class="detail" id="d-' + esc(t.slug) + '"><div class="col">' + left + '</div><div class="col">' + right + "</div></div>";
     }
-    return '<article class="row' + (open ? " open" : "") + '" id="' + esc(t.folder) + '">' + head + body + "</article>";
+    return '<article class="row' + (open ? " open" : "") + '" id="' + esc(t.slug) + '">' + head + body + "</article>";
   }
 
   function otherTable(list) {
@@ -377,7 +377,7 @@ table.others .w { color: var(--muted); }
   });
   function fromHash() {
     var h = decodeURIComponent((location.hash || "").slice(1));
-    if (h && TOPICS.some(function (t) { return t.folder === h && t.kind === "active"; })) {
+    if (h && TOPICS.some(function (t) { return t.slug === h && t.kind === "active"; })) {
       state.open = h; render();
       var el = document.getElementById(h); if (el) el.scrollIntoView({ block: "start" });
     }

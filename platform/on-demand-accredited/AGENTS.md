@@ -74,29 +74,11 @@ Double On-Demand Accredited revenue in the 12 months from Sep 2026, so by Sep 20
 
 Conventions: `sql/` holds extracts and checks with fully qualified `fomf-dl` tables. `data/` holds extracts without identifiers, each stating its extraction date. `comms/` holds drafts: EB updates (DE), marketing briefs (DE), team notes (EN). A `docs/definitions.md` (revenue definition, baseline, segments) is to be added once agreed.
 
-## The product (facts from fomf.de, 22 Sep 2026)
+## The product
 
-- **Accredited on-demand CME courses:** recorded, structured learning modules with a closing multiple-choice test, CME points per completed module, accredited (German courses via Landesärztekammer Hessen). Two formats: **Refresher OnDemand** (multi-day course equivalents, 30 to 60 CME) and **Highlights OnDemand / OnDemand Kurs** (compact, 8 CME). Product page: https://www.fomf.de/on-demand; catalogue at `/kurse`.
-- **Catalogue (German instance, 8 courses listed on the product page):**
+What On-Demand Accredited is, catalogue, prices, packaging, data model, audience: `../knowledge/products/on-demand-accredited.md`. B2C numbers and definitions: `../knowledge/b2c-members.md`. Where the data lives: `../knowledge/data.md`.
 
-| Course (`/content/<slug>`) | CME | Single price (specialists / doctors in training) |
-|---|---|---|
-| OnDemand Refresher Allgemein- und Innere Medizin 2026 | 60 | €790 / €740 |
-| OnDemand Refresher Innere Medizin 2026 | 48 | €640 / €590 |
-| OnDemand Refresher Allgemeinmedizin 2026 | 48 | €640 / €590 |
-| OnDemand Refresher Psychiatrie 2026 | 36 | €590 / €540 |
-| OnDemand Refresher Pädiatrie 2026 | 30 | €590 / €540 |
-| Gynäkologie SKU OnDemand 2026 | 24 | €395 / €370 |
-| OnDemand Kurs Psychiatrie 2026 (Highlights) | 8 | no single price shown |
-| OnDemand Kurs Pädiatrie 2025 (Highlights) | 8 | no single price shown |
-
-  Prices differ by participant type (two tiers: Fachärzte and "Sonstige" pay the higher one, doctors and psychologists in training the lower one). All prices per participant type are identical across early-bird, normal and late, and `memberPrice` is null: members get the course through the membership, not at a member price.
-- **Packaging** (comparison table on the course pages): a single course, e.g. €640 for 48 CME, 1 premium course, 27 videos, no slides, no certificates, no livestreams, against FOMF All Access Online/Hybrid 50 from €670: 50 CME, 150+ premium courses, 6,000+ videos, slides and notes, Facharztvorbereitung, certificates, livestreams, 6 on-site days. Reading: the single course is priced a few euros below the membership; it is an on-ramp to the membership, not a product with its own price logic. Any pricing work starts from this fact.
-- In the platform data model these courses are `ON_DEMAND_ACCREDITED` content built from `LECTURE` items; in analytics they carry brand `ONDEMAND_ACCREDITED` (`analysis.dim_contents.brand_type`, `analysis.fct_user_watched_content_events.content_brand`). Enrolments do not create booking rows; watching, progress (`fct_content_progress_by_user`) and certificates (`fct_content_certificates`) are the usage signals. Stand-alone purchases should appear as orders; which table holds them is the first thing to check (workstream 1).
-- Timeline: first accredited content Jul 2024, uptake from Q4 2024. Course editions are yearly (2025, 2026 in the slugs).
-- Prices on fomf.de are rendered client-side; to re-read them, fetch `/content/<slug>` and parse `participantTypePrices` (cents) from the embedded JSON.
-
-### Isgard's Notion project page (read 15 Nov 2026)
+## Isgard's Notion project page (read 15 Nov 2026)
 
 Page "OnDemand akkreditierte Kurse", dated 23 Oct 2026, last edited 12 Nov 2026, German. What it adds beyond fomf.de:
 
@@ -108,31 +90,9 @@ Page "OnDemand akkreditierte Kurse", dated 23 Oct 2026, last edited 12 Nov 2026,
 - **Marketing planned 2026/2027:** new product name, Google Ads keyword and conversion work, more social content, an explainer video, landing page and SEO, regular newsletters, a second direct mail and ads in specialist media, cross-selling with live courses and All Access, presence at FOMF live courses and events, Eviplex link, retention, better tracking, and using the planned budget more fully.
 - **Pricing (as of Oct 2026):** All Access Online 50 €670 a year (DE/AT), CHF 990 (CH). Single prices for the Refreshers and the Gyn update as on fomf.de (higher tier); Highlights are included in All Access only; CH is sold only through All Access.
 
-## Numbers already established
-
-From `../archive/b2c-value-journey/` (data as of 21 Sep 2026; definitions in its `docs/definitions.md`, agreed with Mahyar, do not contradict them):
-
-| Fact | Value |
-|---|---|
-| New B2C members whose likely intent was On-demand-accredited-led | 2% of the Aug 2024–Jul 2025 cohorts → 4% of the Aug 2025–Aug 2026 cohorts; 9–12% in Apr, Jul and Aug 2026 |
-| Accredited-led members, first-year membership fees | 235 members · €150k year 1 · €31k year 2 · €636 per member year 1 |
-| Members who watched accredited content within 30 d / 90 d / 12 m of joining | 6% / 8% / 13% |
-| CME-led (accredited + SYFAT) share of first-year fees | 3% (Aug 2024–Jul 2025 cohorts) → 7% (Aug 2025–Aug 2026); 18% in the Jul 2026 cohort |
-| Reading | The CME products are the only growing entry points into the membership; they grow at the expense of generic on-demand, not of Refresher. Accredited-led is the faster-growing of the two. |
-
-These cover membership revenue only. Stand-alone course sales, B2B usage and non-member buyers are not in these figures.
-
-## Where the data lives
-
-BigQuery project `fomf-dl` (region europe-west3), read-only preapproved. Query with `bq query --use_legacy_sql=false --project_id=fomf-dl` or, when gcloud auth is expired, `../archive/b2c-value-journey/tools/mbq.sh "<sql>"` (Metabase REST, 2000-row cap, needs `METABASE_API_KEY` in `../.env`, never print it). Fully qualify tables as `` `fomf-dl`.dataset.table ``. Table inventory, brand codes and gotchas: `../archive/b2c-value-journey/docs/data-pipeline.md`.
-
-Most relevant: `analysis.dim_contents` (catalogue, brands, titles), `analysis.fct_user_watched_content_events` (who watched what, minutes), `analysis.fct_content_progress_by_user` and `analysis.fct_content_certificates` (completion, CME points), `analysis.dim_users` (occupation, specialty v2, country), membership orders in `platform_raw_membershipservice.*`, marketing sources in `analysis.fct_membership_marketing_sources`, web behaviour in `segment_raw_unify.*` (on-demand pages under `/mediathek`). Metabase: https://fomf2.metabaseapp.com (companion dashboard "B2C Membership Income", 1816).
-
-Other systems: HubSpot (marketing / CRM, MCP connected), Notion (Isgard's page above; the Executive Board space for strategy), Linear (Platform team projects), Slack. Use the MCP tools; do not guess state.
-
 ## Workstreams (the commercial funnel, in order)
 
-1. **Baseline:** last-12-months B2C revenue on the agreed definition: (a) first-year and renewal fees of accredited-led members (reuse the intent logic from `../archive/b2c-value-journey/sql/`), (b) stand-alone on-demand course orders (find the order table; check `platform_raw_membershipservice.*`, `analysis.fct_course_bookings` and the content-order tables). Then the Sep 2027 target = 2× that. Confirm the number with Mahyar; align with Erfan on the accounting view.
+1. **Baseline:** last-12-months B2C revenue on the agreed definition: (a) first-year and renewal fees of accredited-led members (reuse the intent logic from `../../archive/b2c-value-journey/sql/`), (b) stand-alone on-demand course orders (find the order table; check `platform_raw_membershipservice.*`, `analysis.fct_course_bookings` and the content-order tables). Then the Sep 2027 target = 2× that. Confirm the number with Mahyar; align with Erfan on the accounting view.
 2. **Pricing and packaging:** the single course priced just under the membership; options: reposition the single course (e.g. a clear CME-per-euro story), an on-demand-only membership tier, bundles per specialty, CME-deadline offers.
 3. **Content roadmap:** which specialties next (Refresher live courses that exist without an on-demand edition; specialty populations in `dim_users`), yearly edition cadence, Highlights vs. full Refresher mix. With the medical team, which owns production; Isgard's Notion roadmap is the starting point.
 4. **Audience and positioning:** doctors who need CME points but do not attend live courses; specialty, career stage and country cuts; CME-deadline seasonality (year-end point pressure; Austrian and Swiss rules).

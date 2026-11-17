@@ -15,4 +15,4 @@ Working path (established 2026-09-18): Metabase REST API at https://fomf2.metaba
 Also: MCP `update_dashboard` add-actions ignore tabs, so cards added to tabbed dashboards are invisible; a remove-only call once flipped the dashboard to archived (reverted). Prefer the REST API for dashboard edits.
 
 **Why:** cost an hour of blocked attempts; Mahyar wanted the charts saved in Metabase, not pasted manually.
-**How to apply:** for any Metabase card on raw tables or with SQL, go straight to the REST API with the .env key. Ask Mahyar to re-add the key if `.env` is empty. Related: [[b2c-membership-income-dashboard]].
+**How to apply:** for any Metabase card on raw tables or with SQL, go straight to the REST API with the .env key. Ask Mahyar to re-add the key if `.env` is empty. Dashboard 1816 and the B2C tables: `cto-assistant/platform/knowledge/data.md` ([[platform-product]]).

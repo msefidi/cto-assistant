@@ -4,27 +4,17 @@
 - [People: M365 names](people-m365-names.md) — Sina is Martin S. Taheri; Head of IT is Andreas Langer, not Andreas Eberl (ÄKW)
 - [Comms style: short](comms-style-short.md) — Mahyar's drafts: kind, clear, precise, short; ~5–8 lines, link out for details
 - [Research = sourced facts only](research-sourced-facts-only.md) — drop estimates/unverified claims from findings; suggestions may stay
+- [Analysis pages style](analysis-pages-style.md) — finding first in a small table, one caveat; build step by step; pasted definitions implemented literally
 - [Linear = product work](linear-is-product-work.md) — frame Linear as product work (bugs/improvements/features), not engineering work
 - [Signals log](signals-log.md) — cto-assistant/signals/ for AI-age posts/thoughts; a bare shared link means "capture it"
 - [Metabase native cards via REST API](metabase-native-cards-via-api.md) — MCP cannot save SQL questions; use curl + key in cto-assistant/.env
 - [Office files: read and render](office-files-render.md) — SharePoint gives text only; render .pptx via PowerPoint AppleScript sandbox; validate first
 - [folm.org short links](folm-shortlink-domain.md) — link.folm.org is FOMF's T2M short-link domain, not a typo
-- [FOMF-All-Access-Paket](fomf-all-access-paket.md) — B2C "Mitgliedschaft" renamed; use this name externally (Nov 2026)
 - [FOMF team mail addresses](fomf-team-mail-addresses.md) — intern_events@, sponsoring@fomf.de/.at, kongress@fomf.ch, marketing@; no B2B group
-- [B2C Membership Income dashboard (1816)](b2c-membership-income-dashboard.md) — Metabase 1816 for the Sep 2026 EB meeting; card ids, agreed definitions, caveats
-- [B2C Value Journey](b2c-value-journey-dashboard.md) — Sep 2026 cohort page (v23); definitions and log in cto-assistant/archive/b2c-value-journey/
-- [New Customer Sources](new-customer-sources.md) — acquisition by survey source, free memberships excluded, skipped-June-mailing economics (Sep 2026)
-- [Price increase cancellations](price-increase-cancellations.md) — Oct 2026 price rise added ~1–1.5 pts of cancellations from mid-Oct; bigger rise is early cancels since Apr
-- [Platform North Star](platform-north-star.md) — usage/CME does not predict renewal (85% auto); annual churn 22.4%; loss breakdown (Oct 2026)
-- [WebUp acquisition](webup-acquisition.md) — free WebUps drive ≤2–7% of new paying customers; mostly existing customers attend (Oct 2026)
-- [Registration funnel](registration-funnel.md) — Segment sign-up drop-off Jul–Oct 2026; 47% visitor→done; Baidu crawler noise
-- [B2C retention emails](b2c-retention-emails.md) — monthly course and video/Eviplex emails per role, win-back; handover in pm/projects/
-- [fomf.de bot traffic](fomf-de-bot-traffic.md) — CN = real Baiduspider (login crawl trap); FI = one-off SISTRIX crawl 4 Nov (Nov 2026)
-- [ÄKW](aekw-tender.md) — Ärztekammer Wien cooperation; confidential until ÄKW releases it; brief in cto-assistant/aekw/
+- [ÄKW](aekw-tender.md) — Ärztekammer Wien cooperation; confidential until ÄKW releases it; brief in cto-assistant/platform/aekw/
 - [Security assessment vendor](security-assessment-vendor.md) — Blaze (M365, GCP, pentests); agreed dates cost money; brief in cto-assistant/cybersecurity/
-- [php2shell Drupal incident](php2shell-drupal-incident.md) — Oct 2026 PHP RCE on legacy Drupal in v2; findings and follow-ups in cybersecurity/reports/
-- [Retool audit logs](retool-audit-logs.md) — Retool MCP reads audit logs; 2FA enforced 27 Oct 2026; Oct alert case in cybersecurity/reports/
 - [Team-service agents](team-service-agents.md) — when a Claude helper becomes a team service; Claude Tag vs Managed Agents vs Copilot (Oct 2026)
-- [Eviplex AVV review](eviplex-avv-review.md) — user AVV + FOMF↔Eviplex § 203 agreement; documents = end state; brief in cto-assistant/eviplex-avv/
-- [Eviplex partner model](eviplex-medichub-partner-contract.md) — Medichub/Webop commission model; rates only from decisions.md; brief in cto-assistant/eviplex-partnermodell/
+- [Eviplex AVV review](eviplex-avv-review.md) — user AVV + FOMF↔Eviplex § 203 agreement; documents = end state; brief in cto-assistant/eviplex/avv/
+- [Eviplex partner model](eviplex-medichub-partner-contract.md) — Medichub/Webop commission model; rates only from decisions.md; brief in cto-assistant/eviplex/partnermodell/
 - [Eviplex product folder](eviplex-product.md) — what Eviplex is, tiers, claims, support, brand, Linear: read cto-assistant/eviplex/AGENTS.md first
+- [Platform product folder](platform-product.md) — offer, products, B2C definitions and findings, data, stack: read cto-assistant/platform/AGENTS.md first

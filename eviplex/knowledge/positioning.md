@@ -20,7 +20,7 @@ Compare by category only (klinische Wissensportale, internationale KI-Tools, gen
 ## FOMF proof points used in decks
 
 - „Europas größter Anbieter für ärztliche Fortbildung mit über 85.000 Kursteilnahmen jährlich" (website, brand book).
-- About 140,000 doctors in DACH, 3,200+ speakers (Mahyar's figure), 60+ scientific board members (UAE deck, Oct 2026). The website boards count DE 49, AT 14, CH 5, so don't write "tens per country".
+- Company figures only from the Notion page "FOMF in Zahlen" (updated 15 Jan and 15 Jul; as of 15 Jul 2026: 140,000+ registered users, 13,500+ paying members). The UAE deck (Oct 2026) also used 3,200+ speakers (Mahyar's figure) and 60+ scientific board members; the website boards count DE 49, AT 14, CH 5, so don't write "tens per country".
 
 ## Markets
 
@@ -28,15 +28,15 @@ Compare by category only (klinische Wissensportale, internationale KI-Tools, gen
 |---|---|
 | Germany, Austria | Home markets; the Google PSA (once signed) covers DE and AT |
 | Switzerland | B2B to hospitals (Hirslanden Zürich asked, Oct 2026). EU hosting only, no Swiss-hosting offer; cantonal DPOs may ask for Swiss servers. Art. 321 StGB is not covered by Google until an Enterprise Agreement PSA exists. See `claims-and-legal.md`. |
-| Romania | Through the partner Medichub (referral of doctors), see `../eviplex-partnermodell/` |
+| Romania | Through the partner Medichub (referral of doctors), see `../partnermodell/` |
 | UAE | One contact (Oct 2026). The deck offered regional and in-country hosting and made no UAE compliance claims, see `claims-and-legal.md` |
 
 ## Channels
 
 - **Self sign-up** by physicians, with EFN.
-- **FOMF All Access members:** Plus is cross-sold to them (Linear project "Cross-selling of Eviplex Plus to FOMF All Access users"). Check the current offer terms in that project before quoting them.
+- **FOMF All Access members:** Eviplex Free is included in every All Access tier, and Plus and Pro come on member terms per tier (the "FOMF All Access" page has them; quote from there). Plus is cross-sold to them (Linear project "Cross-selling of Eviplex Plus to FOMF All Access users"). Check the current offer terms in that project before quoting them.
 - **B2B hospitals:** Wafa, with Benignia for Switzerland. The CH pitch and fact sheet are in SharePoint eng › 09-Eviplex/Marketing Planung/03_Pitches/Eviplex final.
-- **Partners:** Medichub (Romania, referral) and Webop (surgery video platform: referral, hospital sales or introductions). Commission model and contract in `../eviplex-partnermodell/`; partners never sell, price or hold customer data.
+- **Partners:** Medichub (Romania, referral) and Webop (surgery video platform: referral, hospital sales or introductions). Commission model and contract in `../partnermodell/`; partners never sell, price or hold customer data.
 - **FOMF sales, events and CS staff** answer questions at events; give them the agreed wording (e.g. the upload answer in `claims-and-legal.md`).
 
 ## Competitors and integrations

@@ -14,7 +14,7 @@ Recurring. Mahyar posts a plan for the Eviplex team in the Eviplex weekly Teams 
 ## How to draft one
 
 1. Start from the previous week's file.
-2. Take projects, owners and target dates from the EVP Linear projects (roadmap view, see `../eviplex/pm.md`) and the current cycle.
+2. Take projects, owners and target dates from the EVP Linear projects (roadmap view, see `../knowledge/pm.md`) and the current cycle.
 3. Keep it short. Security findings never go into the chat; flag them to Mahyar separately.
 4. Save it here as the next Monday's file.
 
