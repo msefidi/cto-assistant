@@ -10,4 +10,4 @@ metadata:
 - A corrupt deck leaves PowerPoint stuck on a dialog that only Mahyar can close, so validate the file before rendering.
 - Mahyar's viewer uses a different font and ignores wrap="none": use wide text boxes that wrap.
 
-**Why:** learned building the UAE deck (Oct 2026, `cto-assistant/archive/eviplex-uae-pitch/`).
+**Why:** learned building the UAE deck (Oct 2026, `archive/eviplex-uae-pitch/`).

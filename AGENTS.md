@@ -141,7 +141,7 @@ The **Artifact Index** (https://claude.ai/artifact/KPVNKWy8eCpyvHexVeJFuZ) is th
 
 ## Memory
 
-Claude Code's memory for this repo lives in `../claude-memory/` (the repo root folder `claude-memory/`): one fact per file, indexed in `MEMORY.md`. Claude Code reaches it through a symlink, so memory changes appear in `git status`; commit them with the rest of the work. Repo files (briefs, logs, SQL) stay the source of truth; memory holds decisions, preferences and pointers.
+Claude Code's memory for this repo lives in `claude-memory/` at the repo root: one fact per file, indexed in `MEMORY.md`. Claude Code reaches it through `autoMemoryDirectory` in `.claude/settings.json` and a symlink from its path-keyed memory folder, so memory changes appear in `git status`; commit them with the rest of the work. Repo files (briefs, logs, SQL) stay the source of truth; memory holds decisions, preferences and pointers.
 
 - **What goes in:** how Mahyar works (preferences and corrections), people and their names, one pointer note per active topic, pointers to things outside the repo (dashboard, card or Figma node ids), and conclusions that should shape later work across topics.
 - **What stays out:** status and dates that will change (they go in `TOPICS.md` and the brief), history and a topic's decisions (its log and `decisions.md`), outputs (the Artifact Index), security findings (`cybersecurity/reports/`), and anything the repo or git already records.

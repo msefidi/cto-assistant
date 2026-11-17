@@ -1,6 +1,6 @@
 # Security assessment with Blaze
 
-An outside security assessment of FOMF: a configuration review of Microsoft 365 and Google Cloud, manual pentests of the learning platform and of Eviplex (web, API, iOS/Android, AI assistant), an OSINT check of the external attack surface and a review of the learning-platform GKE cluster. It is part of the cybersecurity priority in `cto-assistant/AGENTS.md`. Mahyar owns it. The search started with Mandiant, dropped in July 2026 as too expensive. Blaze Information Security was chosen over PCG on 27 Oct 2026, and Mahyar signed the contract on 9 Nov 2026.
+An outside security assessment of FOMF: a configuration review of Microsoft 365 and Google Cloud, manual pentests of the learning platform and of Eviplex (web, API, iOS/Android, AI assistant), an OSINT check of the external attack surface and a review of the learning-platform GKE cluster. It is part of the cybersecurity priority in the root `AGENTS.md`. Mahyar owns it. The search started with Mandiant, dropped in July 2026 as too expensive. Blaze Information Security was chosen over PCG on 27 Oct 2026, and Mahyar signed the contract on 9 Nov 2026.
 
 ## Status
 
@@ -53,7 +53,7 @@ All six parts tested, each phase reported and debriefed, the fixed findings rete
 - Only commit to dates that IT and the product teams can meet. Once a date is agreed, MSA 10.3 applies: cancelling within 15, 10 or 5 working days of the start costs 25, 50 or 100 % "of the quotation"; rescheduling at least 4 weeks ahead turns the days into credits.
 - Internal security details go to Blaze only under the NDA, which is now signed.
 - Requests to Blaze (a new test, a retest) go through the Blaze Client Portal.
-- English with Blaze; German for the EB and IT, as in `cto-assistant/AGENTS.md`.
+- English with Blaze; German for the EB and IT, as in the root `AGENTS.md`.
 - Contract prices may appear in this folder (the repo is private), but not in external tools.
 
 ## Source map

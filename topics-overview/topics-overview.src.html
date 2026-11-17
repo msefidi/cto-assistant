@@ -255,7 +255,7 @@ table.others .w { color: var(--muted); }
     var n = ageDays(DATA.built);
     var el = document.getElementById("built");
     el.textContent = "Built " + fmt(DATA.built) + (n > 0 ? " (" + ageText(n) + ")" : "");
-    if (n > 3) { el.classList.add("old"); el.title = "Rebuild with python3 cto-assistant/topics-overview/build.py and republish."; }
+    if (n > 3) { el.classList.add("old"); el.title = "Rebuild with python3 topics-overview/build.py and republish."; }
   }
 
   function renderStrip() {

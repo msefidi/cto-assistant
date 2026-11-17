@@ -12,4 +12,4 @@ metadata:
 
 **Why:** how he worked on the B2C Value Journey and the other B2C pages (Sep–Oct 2026).
 
-**How to apply:** for any analysis or dashboard for him. Agreed B2C definitions: `cto-assistant/platform/knowledge/b2c-members.md`. See [[comms-style-short]].
+**How to apply:** for any analysis or dashboard for him. Agreed B2C definitions: `platform/knowledge/b2c-members.md`. See [[comms-style-short]].

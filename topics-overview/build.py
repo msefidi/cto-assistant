@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """Build the Topics overview page from TOPICS.md and the topic folders.
 
-Reads `cto-assistant/TOPICS.md`, each folder's `AGENTS.md`, `docs/log.md` and
+Reads `TOPICS.md`, each folder's `AGENTS.md`, `docs/log.md` and
 `docs/decisions.md`, and the last git change per folder. Writes the data into
 `topics-overview.src.html` and saves the result as `topics-overview.html`,
 the file that is published.
 
-Run from anywhere: python3 cto-assistant/topics-overview/build.py
+Run from anywhere: python3 topics-overview/build.py (from the repo root)
 """
 
 import datetime as dt
@@ -16,7 +16,7 @@ import re
 import subprocess
 
 HERE = pathlib.Path(__file__).resolve().parent
-ROOT = HERE.parent  # cto-assistant/
+ROOT = HERE.parent  # repo root
 SRC = HERE / "topics-overview.src.html"
 OUT = HERE / "topics-overview.html"
 

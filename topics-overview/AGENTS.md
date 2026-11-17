@@ -1,14 +1,14 @@
 # Topics overview
 
-Builds the **CTO Topics** page on claude.ai: the open topics in `cto-assistant/TOPICS.md` (Active and Recurring), with each active topic's status, next step, recent log entries, decisions, open points and rules from its brief. Topics under "Done or reference" are left out. Workspace tooling, not a topic; started 17 Nov 2026. Owner: Mahyar.
+Builds the **CTO Topics** page on claude.ai: the open topics in `TOPICS.md` (Active and Recurring), with each active topic's status, next step, recent log entries, decisions, open points and rules from its brief. Topics under "Done or reference" are left out. Workspace tooling, not a topic; started 17 Nov 2026. Owner: Mahyar.
 
 - **Page:** https://claude.ai/artifact/8W7smjQh7rx3hjS8HCNhni (private)
 - **Source of truth:** `TOPICS.md` and the topic folders. The page is a read-only view; never edit content in it.
 
 ## Rebuild and republish
 
-1. `python3 cto-assistant/topics-overview/build.py` writes `topics-overview.html` (git-ignored) from `topics-overview.src.html`.
-2. Publish `cto-assistant/topics-overview/topics-overview.html` with the Artifact tool, passing the page URL above as `url`.
+1. `python3 topics-overview/build.py` writes `topics-overview.html` (git-ignored) from `topics-overview.src.html`.
+2. Publish `topics-overview/topics-overview.html` with the Artifact tool, passing the page URL above as `url`.
 
 Do this after a session that changes a Status or a line in `TOPICS.md`, or when Mahyar asks. The page shows its build date and turns it red after three days.
 

@@ -1,6 +1,6 @@
 ---
 name: signals-log
-description: "Mahyar's signals log (cto-assistant/signals/) for posts/thoughts on leading product & tech into the AI age; capture, themes, monthly reflection"
+description: "Mahyar's signals log (signals/) for posts/thoughts on leading product & tech into the AI age; capture, themes, monthly reflection"
 metadata:
   node_type: memory
   type: project
@@ -8,7 +8,7 @@ metadata:
   modified: 2026-11-12T21:29:38.400Z
 ---
 
-Started 12 Nov 2026. When Mahyar shares a post, article, link or thought about AI and how product/tech work or leadership changes, capture it in `cto-assistant/signals/` following `signals/AGENTS.md` (inbox → entry → themes.md; monthly reflection in `reflections/`). Three lenses: me / leads / department.
+Started 12 Nov 2026. When Mahyar shares a post, article, link or thought about AI and how product/tech work or leadership changes, capture it in `signals/` following `signals/AGENTS.md` (inbox → entry → themes.md; monthly reflection in `reflections/`). Three lenses: me / leads / department.
 
 **Why:** He wants to reflect on his own work regularly and use the material to help his direct reports and the P&E department grow into the AI age.
 
