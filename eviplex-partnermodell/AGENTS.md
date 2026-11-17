@@ -53,7 +53,7 @@ A partner contract reviewed by counsel that Eviplex GmbH can sign with Medichub 
 - External counsel is Risch-Kerst. Every contract draft goes to them before it is used. Mahyar sends it himself; agents do not send, upload or edit anything outside this folder.
 - The Claude Doc "Eviplex Partnermodell – Eckpunkte für Partnerverträge" is the concept. If it and a local file disagree, the doc wins. `konzept-stand-2026-11-12.md` is the frozen snapshot the draft was built from; it separates decided terms from open points.
 - Check `docs/decisions.md` before reusing any term; the rates changed several times on 12 Nov.
-- Marketing claims by partners need the approved wording, e.g. "zero data retention beim KI-Modellanbieter" (memory note `eviplex-ch-tech-factsheet`).
+- Marketing claims by partners need the approved wording, e.g. "zero data retention beim KI-Modellanbieter" (see `../eviplex/claims-and-legal.md`).
 - Skills for the contract work: `contract-drafter` and `brief-to-counsel-drafter` in `.claude/skills/`, adapted from rohasnagpal/legal-ai-skills (MIT license).
 
 ## Source map

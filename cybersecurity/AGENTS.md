@@ -83,7 +83,7 @@ Where this topic lives outside this folder. A catch-up searches every row.
 | `email-draft-blaze-dates-2026-11-16.md` | Reply to Blaze with the weekly phase timeline and the reasons (EN), sent 16 Nov |
 | `slack-draft-team-onboarding-2026-11-16.md` | Slack onboarding for Andreas, Shervin, Simone, George and Rahim (EN), posted 16 Nov in #p-cybersecurity-assessment |
 | `eb-memo-blaze-2026-11-09.md` | EB memo (DE) on the signed contract |
-| `eviplex-field-encryption.html` | Design draft of 2 Nov 2026 for field-level encryption of Eviplex conversations, so Google cannot read them (§ 203 StGB). It belongs to the Eviplex § 203 / Google gap topic (memory note `eviplex-ch-tech-factsheet`), not to this assessment. Moving it is proposed, not confirmed by Mahyar |
+| `eviplex-field-encryption.html` | Design draft of 2 Nov 2026 for field-level encryption of Eviplex conversations, so Google cannot read them (§ 203 StGB). It belongs to the Eviplex § 203 / Google gap work (`../eviplex-avv/`, wording in `../eviplex/claims-and-legal.md`), not to this assessment. Moving it is proposed, not confirmed by Mahyar |
 | `reports/` | Blaze's findings and reports. Git-ignored; not created yet. Originals in SharePoint |
 
 ## Contract at a glance

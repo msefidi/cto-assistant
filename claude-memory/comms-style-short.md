@@ -11,4 +11,4 @@ metadata:
 Mahyar's communication style: kind, clear, precise, short. Default to the shortest draft that still carries the ask: one-line context, the ask, minimal steps, thanks. No background paragraphs, no PS, no "why this matters" padding.
 
 **Why:** 12 Nov 2026, he asked to cut a draft email to sales/B2B/events (Eviplex LinkedIn invites) because it was too long.
-**How to apply:** for any email, Teams or Slack draft written for him, aim for roughly 5–8 lines of body. Link out for details (e.g. Notion) rather than repeating them. Related: [[eviplex-document-upload-answer]].
+**How to apply:** for any email, Teams or Slack draft written for him, aim for roughly 5–8 lines of body. Link out for details (e.g. Notion) rather than repeating them. Related: [[eviplex-product]].

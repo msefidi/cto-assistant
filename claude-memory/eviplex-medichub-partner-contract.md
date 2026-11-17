@@ -11,4 +11,4 @@ The partner-model topic lives in `cto-assistant/eviplex-partnermodell/`: `AGENTS
 - **The partner never sells, prices or holds customer data.** Eviplex GmbH holds the liability and is GDPR controller.
 - Billing by attribution needs UTM values stored on the account; check EVP-1348 before promising it.
 
-**How to apply:** "catch up on the partner model" means the routine in `cto-assistant/CLAUDE.md`, section "Topics", sub-section "One shape for active topics". Partner marketing claims need the approved wording in [[eviplex-ch-tech-factsheet]]. Sina appears in Outlook and Teams as Martin S. Taheri, see [[people-m365-names]].
+**How to apply:** "catch up on the partner model" means the routine in `cto-assistant/CLAUDE.md`, section "Topics", sub-section "One shape for active topics". Partner marketing claims need the approved wording in `cto-assistant/eviplex/claims-and-legal.md` ([[eviplex-product]]). Sina appears in Outlook and Teams as Martin S. Taheri, see [[people-m365-names]].
