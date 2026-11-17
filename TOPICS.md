@@ -1,6 +1,6 @@
 # Topics
 
-Every topic in this workspace, one line each, grouped. Finished topics and one-off outputs are in `TOPICS-DONE.md`, which is not loaded every session. Topics about one product sit in its folder (`platform/…`, `eviplex/…`). The product folders with their `knowledge/` and the workspace tooling (`_template/`, `artifact-index/`, `topics-overview/`) are not topics and are not listed in either file. `CLAUDE.md` loads this file into every session, so keep the lines short. Change a line whenever its brief's Status changes. The groups and the shape of an active topic are in `CLAUDE.md`, section "Topics".
+Every topic in this workspace, one line each, grouped. Finished topics and one-off outputs are in `TOPICS-DONE.md`, which is not loaded every session. Topics about one product sit in its folder (`platform/…`, `eviplex/…`). The product folders with their `knowledge/` and the workspace tooling (`_template/`, `artifact-index/`, `topics-overview/`) are not topics and are not listed in either file. `AGENTS.md` loads this file into every session, so keep the lines short. Change a line whenever its brief's Status changes. The groups and the shape of an active topic are in `AGENTS.md`, section "Topics".
 
 ## Active
 

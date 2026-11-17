@@ -1,6 +1,6 @@
 - [Workspace repo setup](workspace-repo-setup.md) — ai-folders is work-only on msefidi; memory lives in ai-folders/claude-memory (symlinked); PR + squash
 - [Artifact Index](artifact-index.md) — claude.ai page listing every workspace output (rows in its db); add a row when producing one
-- [Topic shape](topic-shape.md) — conventions go into CLAUDE.md with a template; every folder is a topic in TOPICS.md; active topics copy cto-assistant/_template/; no 'initiative'
+- [Topic shape](topic-shape.md) — conventions go into cto-assistant/AGENTS.md with a template; every folder is a topic in TOPICS.md; active topics copy cto-assistant/_template/; no 'initiative'
 - [People: M365 names](people-m365-names.md) — Sina is Martin S. Taheri; Head of IT is Andreas Langer, not Andreas Eberl (ÄKW)
 - [Comms style: short](comms-style-short.md) — Mahyar's drafts: kind, clear, precise, short; ~5–8 lines, link out for details
 - [Research = sourced facts only](research-sourced-facts-only.md) — drop estimates/unverified claims from findings; suggestions may stay

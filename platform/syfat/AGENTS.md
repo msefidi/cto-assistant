@@ -44,7 +44,7 @@ Double SYFAT revenue in the 12 months from Sep 2026, so by Sep 2027. Revenue = m
 
 ## Rules
 
-- Read the workspace `CLAUDE.md` first (company context, language rules, data-sensitivity rules, preapproved read-only access).
+- Read the workspace guide `../../AGENTS.md` first (company context, language rules, data-sensitivity rules, preapproved read-only access).
 - Keep this mandate separate from Platform and Eviplex engineering work in comms and docs.
 - Keep analyses comparable with `../on-demand-accredited/` and reuse SQL across the two folders where it makes sense.
 - Lead every reply with the finding and the numbers in a small table, then one caveat. Mahyar uses these directly in EB slides.

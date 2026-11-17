@@ -32,7 +32,7 @@ Double On-Demand Accredited revenue in the 12 months from Sep 2026, so by Sep 20
 
 - The last-12-months baseline number does not exist yet, and whether Erfan's accounting view matches is open. (owner: Mahyar)
 - Which table records stand-alone on-demand course purchases is unknown. The daily "Anmeldestand" booking report shows OnDemand rows at 0, which fits enrolments not creating booking rows. (owner: Mahyar)
-- How Isgard's project lead role relates to Mahyar's commercial ownership is not recorded; the workspace `CLAUDE.md` still says the product has no owner. (owner: Mahyar)
+- How Isgard's project lead role relates to Mahyar's commercial ownership is not recorded. (owner: Mahyar)
 - Full catalogue beyond the 8 DE/AT courses: the Notion page lists 2 CH courses and planned ones; `dim_contents` with brand `ONDEMAND_ACCREDITED` will show the rest. (owner: Mahyar)
 - Who in the medical team is the on-demand content contact (possibly Isgard, not confirmed). (owner: Mahyar)
 - Whether the EB confirmed the €50k marketing budget and who approves individual spends. (owner: Mahyar)
@@ -41,7 +41,7 @@ Double On-Demand Accredited revenue in the 12 months from Sep 2026, so by Sep 20
 
 ## Rules
 
-- Read the workspace `CLAUDE.md` first (company context, language rules, data-sensitivity rules, preapproved read-only access).
+- Read the workspace guide `../../AGENTS.md` first (company context, language rules, data-sensitivity rules, preapproved read-only access).
 - Keep this mandate separate from Platform and Eviplex engineering work in comms and docs.
 - Keep analyses comparable with `../syfat/` and reuse SQL across the two folders where it makes sense.
 - Lead every reply with the finding and the numbers in a small table, then one caveat. Mahyar uses these directly in EB slides.

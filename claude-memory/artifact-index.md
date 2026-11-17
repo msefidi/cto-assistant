@@ -8,7 +8,7 @@ metadata:
   modified: 2026-11-13T14:04:33.124Z
 ---
 
-The **Artifact Index** is https://claude.ai/artifact/KPVNKWy8eCpyvHexVeJFuZ (private, built 13 Nov 2026). It lists every output of the CTO workspace of any kind: Claude pages/docs/decks/designs, Office files, emails and memos, skills, and things in Metabase, Notion, Linear, Figma. Rows live in the page database, collection `outputs` (read/write with `ArtifactData`); the page source is `cto-assistant/artifact-index/artifact-index.html`. Field list and rules are in `cto-assistant/CLAUDE.md`, section "Artifact Index".
+The **Artifact Index** is https://claude.ai/artifact/KPVNKWy8eCpyvHexVeJFuZ (private, built 13 Nov 2026). It lists every output of the CTO workspace of any kind: Claude pages/docs/decks/designs, Office files, emails and memos, skills, and things in Metabase, Notion, Linear, Figma. Rows live in the page database, collection `outputs` (read/write with `ArtifactData`); the page source is `cto-assistant/artifact-index/artifact-index.html`. Field list and rules are in `cto-assistant/AGENTS.md`, section "Artifact Index".
 
 **Why:** Mahyar had 34 claude.ai artifacts and only 5 were linked from the repo; he wants one place to find earlier outputs, and "artifacts are not just HTML".
 

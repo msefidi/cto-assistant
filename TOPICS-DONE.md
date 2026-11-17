@@ -1,6 +1,6 @@
 # Topics: done or reference
 
-Finished topics and one-off outputs, one line each, newest first when you add one. Every folder listed here lives in `archive/`. This file is not loaded into every session; read it when you look for earlier work. The Artifact Index lists the outputs themselves. The rules are in `CLAUDE.md`, section "Topics".
+Finished topics and one-off outputs, one line each, newest first when you add one. Every folder listed here lives in `archive/`. This file is not loaded into every session; read it when you look for earlier work. The Artifact Index lists the outputs themselves. The rules are in `AGENTS.md`, section "Topics".
 
 | Folder | What | Entry point |
 |---|---|---|

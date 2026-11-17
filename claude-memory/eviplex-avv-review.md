@@ -12,4 +12,4 @@ The AVV topic lives in `cto-assistant/eviplex/avv/`: `AGENTS.md` is the brief (s
 
 **Why:** Eviplex GmbH holds the liability; the TOMs are promises to doctors under § 203.
 
-**How to apply:** "catch up on the AVV" means the routine in `cto-assistant/CLAUDE.md`, section "Topics", sub-section "One shape for active topics". Claim wording for Eviplex is in `cto-assistant/eviplex/knowledge/claims-and-legal.md` ([[eviplex-product]]). Related: [[security-assessment-vendor]].
+**How to apply:** "catch up on the AVV" means the routine in `cto-assistant/AGENTS.md`, section "Topics", sub-section "One shape for active topics". Claim wording for Eviplex is in `cto-assistant/eviplex/knowledge/claims-and-legal.md` ([[eviplex-product]]). Related: [[security-assessment-vendor]].

@@ -12,4 +12,4 @@ The ÄKW topic lives in `cto-assistant/platform/aekw/`: `AGENTS.md` is the brief
 
 **Why:** strategic B2B deal (price cut from about €1M to about €300k a year to bring ÄKW's doctors onto fomf.at).
 
-**How to apply:** "catch up on ÄKW" means the routine in `cto-assistant/CLAUDE.md`, section "Topics", sub-section "One shape for active topics", see [[topic-shape]]. Sina appears in Outlook and Teams as Martin S. Taheri, see [[people-m365-names]].
+**How to apply:** "catch up on ÄKW" means the routine in `cto-assistant/AGENTS.md`, section "Topics", sub-section "One shape for active topics", see [[topic-shape]]. Sina appears in Outlook and Teams as Martin S. Taheri, see [[people-m365-names]].

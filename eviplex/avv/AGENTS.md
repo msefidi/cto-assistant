@@ -43,12 +43,12 @@ Habib can hand out the user AVV (V-05 or later) and sign the FOMF↔Eviplex secr
 - Google PSA: the pay-as-you-go version is final and ready for DocuSign (11 Nov); Google needs the signer's name and any questions from counsel. It does not cover Switzerland. Until it is signed, Google is a gap in the § 203 chain. (owner: Mahyar and Habib)
 - The review planned Anlagen 2.1 and 2.2 as tracked changes in a V-06 with legal entity names and a data-flow diagram. Whether V-06 exists is not recorded. (owner: Mahyar)
 - Habib announced on 28 Oct a revised terms of use that separates Free and paid; not seen yet. (owner: Habib)
-- The review page in this folder lists security gaps and is tracked in git. `cto-assistant/CLAUDE.md` puts security findings in `cybersecurity/reports/`, which git ignores. Whether to move it is for Mahyar to decide. (owner: Mahyar)
+- The review page in this folder lists security gaps and is tracked in git. `cto-assistant/AGENTS.md` puts security findings in `cybersecurity/reports/`, which git ignores. Whether to move it is for Mahyar to decide. (owner: Mahyar)
 
 ## Rules
 
 - Write to Habib and Felix in German.
-- The review page is local only; do not publish it. It contains security gaps (see "Data sensitivity" in `cto-assistant/CLAUDE.md`).
+- The review page is local only; do not publish it. It contains security gaps (see "Data sensitivity" in `cto-assistant/AGENTS.md`).
 - The documents describe the end state. Habib hands them out only when everything in them is live, and Mahyar tells him when that is.
 - Re-verify a TOM claim in code and GCP before reusing it. Fixes land in the meviq repo and `meviq-prod` and need Mahyar's approval.
 - Anlage 2.2 lists only services that receive chat content that may hold personal (patient) data (Habib, 10 Oct).

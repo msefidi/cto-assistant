@@ -12,4 +12,4 @@ The security assessment lives in `cto-assistant/cybersecurity/`: `AGENTS.md` is 
 
 **Why:** Blaze covers the dropped Mandiant scope (M365 + GCP) plus manual pentests of both products and a GKE review aimed at the in-cluster gaps from the php2shell incident (`cto-assistant/platform/knowledge/tech-and-security.md`).
 
-**How to apply:** "catch up on cybersecurity" means the routine in `cto-assistant/CLAUDE.md`, section "Topics", sub-section "One shape for active topics", see [[topic-shape]]. Sina appears in Outlook and Teams as Martin S. Taheri, see [[people-m365-names]].
+**How to apply:** "catch up on cybersecurity" means the routine in `cto-assistant/AGENTS.md`, section "Topics", sub-section "One shape for active topics", see [[topic-shape]]. Sina appears in Outlook and Teams as Martin S. Taheri, see [[people-m365-names]].
