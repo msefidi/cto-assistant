@@ -104,18 +104,18 @@ Goal for both: **double revenue in the coming year** (to Sep 2027). Revenue = me
 
 ## Topics
 
-A **topic** is any folder in this workspace. `TOPICS.md` lists every topic with its status and next step; it is loaded at the end of this section. Topics sit in four groups:
+A **topic** is any folder in this workspace except the tooling named below. `TOPICS.md` lists every topic with its status and next step; it is loaded at the end of this section. Topics sit in three groups:
 
 | Group | What | The folder holds |
 |---|---|---|
 | **Active** | Work that runs longer than one session: a deal, a project, a vendor process, a product mandate | The four files below, copied from `_template/` |
 | **Recurring** | Work that repeats with no end: a weekly memo, a changelog, a collection of posts | An `AGENTS.md` that says what recurs, its format and where to start |
 | **Done or reference** | A finished topic, or one output finished in a session (an analysis, a deck) | The files that rebuild it; a finished topic keeps its four files |
-| **Workspace** | Folders that serve the workspace itself | What it needs |
 
 - **Opening a topic:** work that will run longer than this session gets the four files; work that repeats gets an `AGENTS.md`; an output finished in this session is a plain folder with a line under "Done or reference". A question that leaves no files is not a topic. Done when the folder holds what its group needs and `TOPICS.md` has its line.
 - **A topic changes group** (a one-off analysis turns into a project, a recurring job gets a goal): add the files the new group needs and move its line in `TOPICS.md`.
-- **Topics overview:** the [CTO Topics page](https://claude.ai/artifact/8W7smjQh7rx3hjS8HCNhni) shows the active, recurring and workspace topics, built from `TOPICS.md` and the briefs. After a session that changes a Status or a `TOPICS.md` line, rebuild and republish it as `topics-overview/AGENTS.md` says.
+- **Not topics:** `_template/`, `artifact-index/` and `topics-overview/` are workspace tooling. Each is described where this file uses it; they have no line in `TOPICS.md`.
+- **Topics overview:** the [CTO Topics page](https://claude.ai/artifact/8W7smjQh7rx3hjS8HCNhni) shows the active and recurring topics, built from `TOPICS.md` and the briefs. After a session that changes a Status or a `TOPICS.md` line, rebuild and republish it as `topics-overview/AGENTS.md` says.
 
 ### One shape for active topics
 

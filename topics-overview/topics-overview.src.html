@@ -4,7 +4,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: one working column, summary strip and filters on top, active topics as expandable rows, recurring and workspace topics as a compact table. */
+/* Layout: one working column, summary strip and filters on top, active topics as expandable rows, recurring topics as a compact table. */
 :root {
   --bg: #f4f6f8;
   --surface: #ffffff;
@@ -146,7 +146,7 @@ table.others .w { color: var(--muted); }
   <header class="top">
     <div>
       <h1>CTO Topics</h1>
-      <p class="sub">Every folder in the <code>cto-assistant</code> workspace that is still open: active topics with their status, next step and recent log, plus recurring work. Built from <code>TOPICS.md</code> and the briefs; done topics are left out.</p>
+      <p class="sub">Every open topic in the <code>cto-assistant</code> workspace: active topics with their status, next step and recent log, plus recurring work. Built from <code>TOPICS.md</code> and the briefs; done topics are left out.</p>
     </div>
     <div class="built num" id="built"></div>
   </header>
@@ -173,8 +173,7 @@ table.others .w { color: var(--muted); }
   var KINDS = [
     { id: "all", label: "All" },
     { id: "active", label: "Active", group: "Active", hint: "Runs longer than one session. Click a row for the brief, log and decisions." },
-    { id: "recurring", label: "Recurring", group: "Recurring", hint: "Repeats with no end." },
-    { id: "workspace", label: "Workspace", group: "Workspace", hint: "Folders that serve the workspace itself." }
+    { id: "recurring", label: "Recurring", group: "Recurring", hint: "Repeats with no end." }
   ];
 
   var state = { kind: "all", q: "", flag: null, open: null };

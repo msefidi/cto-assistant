@@ -24,7 +24,6 @@ OUT = HERE / "topics-overview.html"
 KIND_BY_SECTION = {
     "Active": "active",
     "Recurring": "recurring",
-    "Workspace": "workspace",
 }
 
 LOG_ENTRIES = 6

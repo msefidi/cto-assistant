@@ -1,6 +1,6 @@
 # Topics
 
-Every folder in this workspace is a topic, one line each, grouped. `CLAUDE.md` loads this file into every session, so keep the lines short. Change a line whenever its brief's Status changes. The groups and the shape of an active topic are in `CLAUDE.md`, section "Topics".
+Every topic in this workspace, one line each, grouped. Workspace tooling (`_template/`, `artifact-index/`, `topics-overview/`) is not a topic and is not listed here. `CLAUDE.md` loads this file into every session, so keep the lines short. Change a line whenever its brief's Status changes. The groups and the shape of an active topic are in `CLAUDE.md`, section "Topics".
 
 ## Active
 
@@ -32,14 +32,6 @@ Every folder in this workspace is a topic, one line each, grouped. `CLAUDE.md` l
 | `price-increase-cancellations/` | Cancellations after the Oct 2026 renewal price rise | `price-increase-cancellations/cancellations.html` |
 | `ai-hackathon-2026/` | AI Hackathon at the FOMF Teamtreffen, 20 Oct 2026 | `ai-hackathon-2026/AGENTS.md` |
 | `eviplex-uae-pitch/` | EN pitch deck for the UAE contact, Oct 2026 | the `.pptx` in the folder |
-
-## Workspace
-
-| Folder | What |
-|---|---|
-| `_template/` | The shape every new active topic is copied from |
-| `artifact-index/` | Source of the Artifact Index page |
-| `topics-overview/` | Builds the CTO Topics page from this file and the briefs |
 
 ## Not yet in shape
 
