@@ -17,4 +17,4 @@ Two things to keep in mind even without opening the folder:
 
 **Why:** Eviplex GmbH holds liability and is GDPR controller, so the partner must not sell, price or hold customer data; prices and rates are confidential.
 
-**How to apply:** "catch up on the partner model" means the routine in `cto-assistant/CLAUDE.md`, section "Initiatives". Partner marketing claims need the approved wording in [[eviplex-ch-tech-factsheet]]. Sina appears in Outlook and Teams as Martin S. Taheri, see [[people-m365-names]].
+**How to apply:** "catch up on the partner model" means the routine in `cto-assistant/CLAUDE.md`, section "Topics", sub-section "Initiatives — one shape". Partner marketing claims need the approved wording in [[eviplex-ch-tech-factsheet]]. Sina appears in Outlook and Teams as Martin S. Taheri, see [[people-m365-names]].

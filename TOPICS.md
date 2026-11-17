@@ -1,8 +1,8 @@
-# Initiatives
+# Topics
 
-Every folder in this workspace, one line each. `CLAUDE.md` loads this file into every session, so keep the lines short. Change a line whenever its brief's Status changes. The shape of an initiative folder is in `CLAUDE.md`, section "Initiatives".
+Every folder in this workspace is a topic, one line each, grouped by kind. `CLAUDE.md` loads this file into every session, so keep the lines short. Change a line whenever its brief's Status changes. The kinds and the shape of an initiative folder are in `CLAUDE.md`, section "Topics".
 
-## Active
+## Active initiatives
 
 | Folder | What | Status | Next step |
 |---|---|---|---|
@@ -39,9 +39,13 @@ Every folder in this workspace, one line each. `CLAUDE.md` loads this file into 
 |---|---|
 | `_template/` | The shape every new initiative folder is copied from |
 | `artifact-index/` | Source of the Artifact Index page |
+| `topics-overview/` | Builds the CTO Topics page from this file and the briefs |
 
 ## Not yet in shape
 
-Folders older than the shape. Fix one when you next work in it, then delete its line here.
+Folders that lack what their kind needs. Fix one when you next work in it, then delete its line here.
 
-none
+| Folder | Missing |
+|---|---|
+| `eviplex-weekly/` | `AGENTS.md` (recurring: format, cadence, where to start) |
+| `eviplex-changelog/` | `AGENTS.md` (recurring: format, cadence, where to start) |

@@ -102,9 +102,25 @@ Goal for both: **double revenue in the coming year** (to Sep 2027). Revenue = me
 
 ---
 
-## Initiatives — one shape
+## Topics
 
-An **initiative** is any work that runs longer than one session: a deal, a project, a vendor process, a product mandate. Each is a folder here with the same four files, copied from `_template/`. It is not a Linear initiative. `INITIATIVES.md` lists every folder with its status and next step; it is loaded at the end of this section.
+A **topic** is any folder in this workspace. `TOPICS.md` lists every topic with its status and next step; it is loaded at the end of this section. Each topic is one of four kinds:
+
+| Kind | What | The folder holds | Section in `TOPICS.md` |
+|---|---|---|---|
+| **Initiative** | Work with a goal and an end: a deal, a project, a vendor process, a product mandate | The four files below, copied from `_template/` | Active initiatives |
+| **Recurring** | Work that repeats with no end: a weekly memo, a changelog, a collection of posts | An `AGENTS.md` that says what recurs, its format and where to start | Recurring |
+| **Reference** | One output finished in a session (an analysis, a deck), or a finished initiative | The files that rebuild it; a finished initiative keeps its four files | Done or reference |
+| **Workspace** | Folders that serve the workspace itself | What it needs | Workspace |
+
+- **Opening a topic:** decide the kind first. A goal and an end make an initiative; work that repeats is recurring; output finished in this session is reference. A question that leaves no files is not a topic. Done when the folder holds what its kind needs and `TOPICS.md` has its line.
+- **A topic changes kind** (a one-off analysis turns into a project, a recurring job gets a goal): add the files the new kind needs and move its line in `TOPICS.md`.
+- **Topics overview:** the [CTO Topics page](https://claude.ai/artifact/8W7smjQh7rx3hjS8HCNhni) is built from `TOPICS.md` and the briefs. After a session that changes a Status or a `TOPICS.md` line, rebuild and republish it as `topics-overview/AGENTS.md` says.
+- "Initiative" here is not a Linear initiative.
+
+### Initiatives — one shape
+
+Every initiative has the same four files:
 
 | File | Holds | Changes by |
 |---|---|---|
@@ -113,17 +129,16 @@ An **initiative** is any work that runs longer than one session: a deal, a proje
 | `docs/log.md` | Events and results, newest first; each entry names who and where | Appending only |
 | `CLAUDE.md` | One line pointing at `AGENTS.md` | Never |
 
-- **Starting one:** copy `_template/` to a kebab-case folder. Done when every heading of the brief is filled (write "none" where there is nothing), the log has its first entry, decisions made so far have their lines and `INITIATIVES.md` has its line.
-- **Working in one:** read the brief, the decisions and the newest log entries first. Done when each decision of the session has its line in `decisions.md`, each result is logged and the brief's Status and the `INITIATIVES.md` line match it.
+- **Starting one:** copy `_template/` to a kebab-case folder. Done when every heading of the brief is filled (write "none" where there is nothing), the log has its first entry, decisions made so far have their lines and `TOPICS.md` has its line.
+- **Working in one:** read the brief, the decisions and the newest log entries first. Done when each decision of the session has its line in `decisions.md`, each result is logged and the brief's Status and the `TOPICS.md` line match it.
 - **"Catch up on X":** search every row of X's source map from the newest log date to today. Done when the news is logged, new decisions have their lines, the Status is updated and each new thread, chat or person is in the source map. Then tell Mahyar what changed.
 - **Sources stay where they are.** The log summarises an email, chat or contract with who, where and when. The original stays in Outlook, Teams or SharePoint.
 - **Memory** keeps one pointer note per initiative. The history goes in the log.
 - **Linear:** when part of an initiative becomes product work, link the Linear project in the brief. Linear tracks that part.
-- **Finished:** write the outcome at the top of the brief and move the line to "Done or reference" in `INITIATIVES.md`. The folder stays.
-- **One-off output** (one analysis or deck, finished in a session): a plain folder with the files that rebuild it and a line under "Done or reference". It needs no brief.
-- **Older folders** are listed under "Not yet in shape" in `INITIATIVES.md`. Bring one in line when you next work in it, and keep its existing files where they are.
+- **Finished:** write the outcome at the top of the brief and move the line to "Done or reference" in `TOPICS.md`. The folder stays.
+- **Older folders** are listed under "Not yet in shape" in `TOPICS.md`. Bring one in line when you next work in it, and keep its existing files where they are.
 
-@INITIATIVES.md
+@TOPICS.md
 
 Security findings and pentest / audit results (e.g. Blaze reports) go in `cybersecurity/reports/`, which git ignores. Keep the originals in SharePoint.
 

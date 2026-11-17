@@ -17,4 +17,4 @@ Two things to keep in mind even without opening the folder:
 
 **Why:** Eviplex GmbH holds the liability; the TOMs are promises to doctors under § 203.
 
-**How to apply:** "catch up on the AVV" means the routine in `cto-assistant/CLAUDE.md`, section "Initiatives". Related: [[eviplex-ch-tech-factsheet]] (Google PSA status), [[security-assessment-vendor]].
+**How to apply:** "catch up on the AVV" means the routine in `cto-assistant/CLAUDE.md`, section "Topics", sub-section "Initiatives — one shape". Related: [[eviplex-ch-tech-factsheet]] (Google PSA status), [[security-assessment-vendor]].

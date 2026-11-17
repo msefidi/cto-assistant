@@ -1,0 +1,394 @@
+<title>CTO Topics</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one working column, summary strip and filters on top, initiatives as expandable rows, other topics as a compact table. */
+:root {
+  --bg: #f4f6f8;
+  --surface: #ffffff;
+  --sunken: #eef1f4;
+  --ink: #15202b;
+  --muted: #5a6877;
+  --line: #dbe1e7;
+  --accent: #155e8c;
+  --accent-soft: #e3eef6;
+  --warn: #9a5b00;
+  --warn-bg: #fdf1dc;
+  --stale: #a8291b;
+  --stale-bg: #fbe6e3;
+  --ok: #17704a;
+  --ok-bg: #e2f3ea;
+  --bar: #9fb6c8;
+  --bar-hot: #155e8c;
+  --f-display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e141a; --surface: #151d25; --sunken: #111820; --ink: #e4eaf0; --muted: #94a3b2; --line: #263240;
+    --accent: #6cb4e8; --accent-soft: #17293a; --warn: #f0b552; --warn-bg: #33270f; --stale: #f28b7d; --stale-bg: #3a1a16;
+    --ok: #6fd19f; --ok-bg: #133024; --bar: #3a5063; --bar-hot: #6cb4e8; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e141a; --surface: #151d25; --sunken: #111820; --ink: #e4eaf0; --muted: #94a3b2; --line: #263240;
+  --accent: #6cb4e8; --accent-soft: #17293a; --warn: #f0b552; --warn-bg: #33270f; --stale: #f28b7d; --stale-bg: #3a1a16;
+  --ok: #6fd19f; --ok-bg: #133024; --bar: #3a5063; --bar-hot: #6cb4e8; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 15px/1.5 var(--f-body); }
+.wrap { max-width: 1080px; margin: 0 auto; padding-block: 28px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; }
+h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.01em; }
+h2 { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+h3 { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); margin-bottom: 6px; }
+code, .mono { font-family: var(--f-mono); font-size: 0.86em; }
+code { background: var(--sunken); padding: 1px 4px; border-radius: 4px; overflow-wrap: anywhere; }
+a { color: var(--accent); }
+.num { font-variant-numeric: tabular-nums; }
+
+header.top { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; justify-content: space-between; }
+.sub { color: var(--muted); margin: 6px 0 0; max-width: 68ch; }
+.private { margin-top: 14px; font-size: 13px; color: var(--warn); background: var(--warn-bg); border-radius: 6px; padding: 8px 12px; max-width: 72ch; }
+.built { font-size: 13px; color: var(--muted); }
+.built.old { color: var(--stale); }
+
+.strip { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 14px; }
+.stat { display: flex; gap: 8px; align-items: baseline; border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+  border-radius: 8px; padding: 8px 12px; font: inherit; cursor: pointer; }
+.stat b { font: 600 20px/1 var(--f-display); font-variant-numeric: tabular-nums; }
+.stat span { font-size: 13px; color: var(--muted); }
+.stat[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
+.stat.warn b { color: var(--warn); } .stat.stale b { color: var(--stale); }
+.stat:focus-visible, .seg button:focus-visible, .row-head:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 26px; }
+.controls input { flex: 1 1 220px; min-width: 0; font: inherit; padding: 8px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); }
+.seg { display: flex; flex-wrap: wrap; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--surface); }
+.seg button { font: inherit; font-size: 14px; border: 0; background: transparent; color: var(--muted); padding: 7px 12px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--surface); }
+
+section.group { margin-bottom: 34px; }
+.group-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 10px; }
+.group-head .hint { font-size: 12px; color: var(--muted); }
+
+.rows { display: flex; flex-direction: column; gap: 8px; }
+.row { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+.row.open { border-color: var(--accent); }
+.row-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 20px; width: 100%; text-align: left; font: inherit; color: inherit;
+  background: none; border: 0; padding: 14px 16px; cursor: pointer; border-radius: 10px; }
+.row-head .main { min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.titleline { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+.titleline .t { font: 600 17px/1.3 var(--f-display); }
+.titleline .f { color: var(--muted); font-family: var(--f-mono); font-size: 12px; }
+.line { color: var(--ink); }
+.next { color: var(--muted); font-size: 14px; }
+.next b { color: var(--ink); font-weight: 600; }
+.side { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; min-width: 150px; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+.chip { font-size: 12px; font-weight: 600; border-radius: 999px; padding: 2px 9px; white-space: nowrap; }
+.chip.you { background: var(--warn-bg); color: var(--warn); }
+.chip.fresh { background: var(--ok-bg); color: var(--ok); }
+.chip.aging { background: var(--sunken); color: var(--muted); }
+.chip.stale { background: var(--stale-bg); color: var(--stale); }
+.chip.gap { background: var(--sunken); color: var(--muted); font-weight: 500; }
+.spark { display: block; }
+.spark-cap { font-size: 11px; color: var(--muted); }
+
+.detail { border-top: 1px solid var(--line); padding: 16px; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 24px; }
+.detail .col { min-width: 0; display: flex; flex-direction: column; gap: 18px; }
+.kv { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 6px 12px; font-size: 14px; }
+.kv dt { color: var(--muted); font-weight: 500; }
+.kv dd { margin: 0; }
+.prose { font-size: 14px; max-width: 68ch; }
+.prose p { margin: 0 0 8px; }
+ul.plain { margin: 0; padding-left: 18px; font-size: 14px; display: flex; flex-direction: column; gap: 5px; }
+.timeline { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.timeline li { display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 10px; font-size: 14px; }
+.timeline .d { font-family: var(--f-mono); font-size: 12px; color: var(--muted); padding-top: 2px; }
+.timeline .h { font-weight: 600; }
+.timeline .b { color: var(--muted); }
+details.more summary { cursor: pointer; font-size: 13px; color: var(--accent); }
+details.more[open] summary { margin-bottom: 8px; }
+.people { width: 100%; border-collapse: collapse; font-size: 13px; }
+.people td { border-top: 1px solid var(--line); padding: 5px 8px 5px 0; vertical-align: top; }
+.people td:first-child { font-weight: 600; width: 38%; }
+.counts { font-size: 12px; color: var(--muted); }
+
+.tablewrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+table.others { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 640px; }
+table.others th { text-align: left; font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+table.others td { padding: 10px 14px; border-top: 1px solid var(--line); vertical-align: top; }
+table.others tr:first-child td { border-top: 0; }
+table.others .t { font-weight: 600; }
+table.others .f { display: block; color: var(--muted); font-family: var(--f-mono); font-size: 12px; }
+table.others .w { color: var(--muted); }
+.kindtag { font-size: 12px; color: var(--muted); }
+.empty { color: var(--muted); padding: 18px; background: var(--surface); border: 1px dashed var(--line); border-radius: 10px; }
+
+@media (max-width: 720px) {
+  .row-head { grid-template-columns: minmax(0, 1fr); }
+  .side { align-items: flex-start; min-width: 0; }
+  .chips { justify-content: flex-start; }
+  .detail { grid-template-columns: minmax(0, 1fr); }
+  h1 { font-size: 26px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .row { transition: border-color .15s ease; }
+}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1>CTO Topics</h1>
+      <p class="sub">Every folder in the <code>cto-assistant</code> workspace: initiatives with their status, next step and recent log, plus recurring work and reference outputs. Built from <code>TOPICS.md</code> and the briefs.</p>
+    </div>
+    <div class="built num" id="built"></div>
+  </header>
+  <p class="private">Private page. Some briefs hold confidential matters (for example the unofficial ÄKW award and contract terms). Check a topic's rules before you share this link.</p>
+
+  <div class="strip" id="strip"></div>
+
+  <div class="controls">
+    <input id="q" type="search" placeholder="Search topics, people, log entries" aria-label="Search topics">
+    <div class="seg" id="kinds" role="group" aria-label="Kind"></div>
+  </div>
+
+  <div id="groups"></div>
+</div>
+
+<script id="topics-data" type="application/json">__TOPICS_DATA__</script>
+<script>
+(function () {
+  var DATA = JSON.parse(document.getElementById("topics-data").textContent);
+  var TOPICS = DATA.topics;
+  var DAY = 86400000;
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+
+  var KINDS = [
+    { id: "all", label: "All" },
+    { id: "initiative", label: "Initiatives", group: "Active initiatives", hint: "Goal and an end. Click a row for the brief, log and decisions." },
+    { id: "recurring", label: "Recurring", group: "Recurring", hint: "Repeats with no end." },
+    { id: "reference", label: "Reference", group: "Done or reference", hint: "Finished outputs and analyses." },
+    { id: "workspace", label: "Workspace", group: "Workspace", hint: "Folders that serve the workspace itself." }
+  ];
+
+  var state = { kind: "all", q: "", flag: null, open: null };
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function inline(s) {
+    var out = esc(s);
+    out = out.replace(/`([^`]+)`/g, "<code>$1</code>");
+    out = out.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+    out = out.replace(/\[([^\]]+)\]\((https:\/\/[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+    out = out.replace(/(^|[\s(])(https:\/\/[^\s<)]+)/g, '$1<a href="$2" target="_blank" rel="noopener">$2</a>');
+    return out;
+  }
+  function block(s) {
+    if (!s) return "";
+    return String(s).split(/\n\s*\n/).map(function (para) {
+      var lines = para.split("\n");
+      if (lines.every(function (l) { return /^\s*- /.test(l) || /^\s{2,}\S/.test(l); }) && /^\s*- /.test(lines[0])) {
+        var items = [];
+        lines.forEach(function (l) { if (/^\s*- /.test(l)) items.push(l.replace(/^\s*- /, "")); else items[items.length - 1] += " " + l.trim(); });
+        return '<ul class="plain">' + items.map(function (i) { return "<li>" + inline(i) + "</li>"; }).join("") + "</ul>";
+      }
+      return "<p>" + inline(lines.join(" ")) + "</p>";
+    }).join("");
+  }
+  function parseISO(d) { if (!d) return null; var p = d.split("-"); return new Date(+p[0], +p[1] - 1, +p[2]); }
+  function fmt(d) {
+    var x = parseISO(d); if (!x) return "";
+    return x.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: x.getFullYear() === today.getFullYear() ? undefined : "numeric" });
+  }
+  function ageDays(d) { var x = parseISO(d); return x ? Math.round((today - x) / DAY) : null; }
+  function ageText(n) { return n === 0 ? "today" : n === 1 ? "1 day ago" : n + " days ago"; }
+
+  function needsYou(t) {
+    if (!t.status) return false;
+    var s = t.status, ln = t.line_next || "";
+    return /confirm(ed)? (with|by) Mahyar/i.test(s.next_step) || /^Mahyar\b/.test(s.next_step) ||
+      /^Mahyar\b/.test(s.waiting_on) || /^To confirm with Mahyar/i.test(ln);
+  }
+  function freshness(t) {
+    var n = t.status ? ageDays(t.status.as_of_iso) : null;
+    if (n == null) return null;
+    return { days: n, cls: n <= 3 ? "fresh" : n <= 7 ? "aging" : "stale" };
+  }
+  TOPICS.forEach(function (t) {
+    t._you = needsYou(t);
+    t._fresh = freshness(t);
+    t._hay = JSON.stringify([t.folder, t.title, t.what, t.line_status, t.line_next, t.intro, t.status, t.goal, t.people, t.open_points, t.log, t.decisions]).toLowerCase();
+  });
+  var maxAct = 1;
+  TOPICS.forEach(function (t) { (t.activity || []).forEach(function (v) { if (v > maxAct) maxAct = v; }); });
+
+  function spark(t) {
+    var a = t.activity; if (!a) return "";
+    var w = 8, gap = 3, h = 26, W = a.length * (w + gap) - gap;
+    var bars = a.map(function (v, i) {
+      var bh = v ? Math.max(3, Math.round(Math.sqrt(v / maxAct) * h)) : 1;
+      var fill = i >= a.length - 2 && v ? "var(--bar-hot)" : "var(--bar)";
+      return '<rect x="' + i * (w + gap) + '" y="' + (h - bh) + '" width="' + w + '" height="' + bh + '" rx="1.5" fill="' + fill + '"></rect>';
+    }).join("");
+    var total = a.reduce(function (s, v) { return s + v; }, 0);
+    return '<svg class="spark" width="' + W + '" height="' + h + '" viewBox="0 0 ' + W + " " + h + '" role="img" aria-label="' + total + ' log entries and decisions in the last ' + DATA.weeks + ' weeks">' + bars + "</svg>" +
+      '<span class="spark-cap num">' + total + " entries, " + DATA.weeks + " weeks</span>";
+  }
+
+  function matches(t) {
+    if (state.kind !== "all" && t.kind !== state.kind) return false;
+    if (state.flag === "you" && !t._you) return false;
+    if (state.flag === "stale" && !(t._fresh && t._fresh.cls === "stale")) return false;
+    if (state.q && t._hay.indexOf(state.q) === -1) return false;
+    return true;
+  }
+
+  function renderBuilt() {
+    var n = ageDays(DATA.built);
+    var el = document.getElementById("built");
+    el.textContent = "Built " + fmt(DATA.built) + (n > 0 ? " (" + ageText(n) + ")" : "");
+    if (n > 3) { el.classList.add("old"); el.title = "Rebuild with python3 cto-assistant/topics-overview/build.py and republish."; }
+  }
+
+  function renderStrip() {
+    var ini = TOPICS.filter(function (t) { return t.kind === "initiative"; });
+    var you = TOPICS.filter(function (t) { return t._you; }).length;
+    var stale = TOPICS.filter(function (t) { return t._fresh && t._fresh.cls === "stale"; }).length;
+    var items = [
+      { k: "kind:initiative", n: ini.length, l: "active initiatives" },
+      { k: "flag:you", n: you, l: "wait on you", cls: you ? "warn" : "" },
+      { k: "flag:stale", n: stale, l: "status older than 7 days", cls: stale ? "stale" : "" },
+      { k: "kind:recurring", n: TOPICS.filter(function (t) { return t.kind === "recurring"; }).length, l: "recurring" },
+      { k: "kind:reference", n: TOPICS.filter(function (t) { return t.kind === "reference"; }).length, l: "reference" }
+    ];
+    document.getElementById("strip").innerHTML = items.map(function (i) {
+      var p = i.k.split(":"), on = p[0] === "flag" ? state.flag === p[1] : (state.kind === p[1] && !state.flag);
+      return '<button type="button" class="stat ' + (i.cls || "") + '" data-k="' + i.k + '" aria-pressed="' + on + '"><b>' + i.n + "</b><span>" + i.l + "</span></button>";
+    }).join("");
+  }
+
+  function renderKinds() {
+    document.getElementById("kinds").innerHTML = KINDS.map(function (k) {
+      return '<button type="button" data-kind="' + k.id + '" aria-pressed="' + (state.kind === k.id) + '">' + k.label + "</button>";
+    }).join("");
+  }
+
+  function initiativeRow(t) {
+    var s = t.status || {}, open = state.open === t.folder, f = t._fresh;
+    var chips = "";
+    if (t._you) chips += '<span class="chip you">Waits on you</span>';
+    if (f) chips += '<span class="chip ' + f.cls + '" title="Status as of ' + esc(s.as_of) + '">' + (f.cls === "stale" ? "Status " : "") + ageText(f.days) + "</span>";
+    var head =
+      '<button type="button" class="row-head" data-open="' + esc(t.folder) + '" aria-expanded="' + open + '" aria-controls="d-' + esc(t.folder) + '">' +
+        '<span class="main">' +
+          '<span class="titleline"><span class="t">' + esc(t.title) + '</span><span class="f">' + esc(t.folder) + "/</span></span>" +
+          '<span class="line">' + inline(t.line_status) + "</span>" +
+          '<span class="next"><b>Next:</b> ' + inline(t.line_next) + "</span>" +
+        "</span>" +
+        '<span class="side"><span class="chips">' + chips + "</span>" + spark(t) + "</span>" +
+      "</button>";
+    var body = "";
+    if (open) {
+      var kv = '<dl class="kv">' +
+        "<dt>As of</dt><dd>" + esc(s.as_of || "not recorded") + "</dd>" +
+        "<dt>Next step</dt><dd>" + inline(s.next_step || "none") + "</dd>" +
+        "<dt>Next date</dt><dd>" + inline(s.next_date || "none") + "</dd>" +
+        "<dt>Waiting on</dt><dd>" + inline(s.waiting_on || "nobody") + "</dd></dl>";
+      var left =
+        '<div><h3>Status</h3><div class="prose"><p>' + inline(s.summary) + "</p></div>" + kv + "</div>" +
+        (t.goal ? '<div><h3>Goal</h3><div class="prose">' + block(t.goal) + "</div></div>" : "") +
+        (t.open_points && t.open_points.length ? '<div><h3>Open points (' + t.open_points.length + ')</h3><ul class="plain">' + t.open_points.map(function (o) { return "<li>" + inline(o) + "</li>"; }).join("") + "</ul></div>" : "") +
+        (t.rules && t.rules.length ? '<div><h3>Rules</h3><ul class="plain">' + t.rules.map(function (o) { return "<li>" + inline(o) + "</li>"; }).join("") + "</ul></div>" : "");
+      var log = (t.log || []).map(function (e) {
+        return '<li><span class="d">' + esc(fmt(e.date)) + '</span><div><div class="h">' + inline(e.title) + '</div><details class="more"><summary>Read entry</summary><div class="b prose">' + block(e.body) + "</div></details></div></li>";
+      }).join("");
+      var dec = (t.decisions || []).map(function (d) {
+        return '<li><span class="d">' + esc(fmt(d.date)) + '</span><div>' + inline(d.text) + "</div></li>";
+      }).join("");
+      var people = (t.people || []).map(function (p) { return "<tr><td>" + inline(p[0]) + "</td><td>" + inline(p[1]) + "</td></tr>"; }).join("");
+      var right =
+        '<div><h3>Recent log</h3><p class="counts num">Newest ' + (t.log || []).length + " of " + (t.log_count || 0) + " in <code>" + esc(t.folder) + '/docs/log.md</code></p><ul class="timeline">' + (log || "<li>No entries.</li>") + "</ul></div>" +
+        '<div><h3>Recent decisions</h3><p class="counts num">Newest ' + (t.decisions || []).length + " of " + (t.decision_count || 0) + " in <code>" + esc(t.folder) + '/docs/decisions.md</code></p><ul class="timeline">' + (dec || "<li>None recorded.</li>") + "</ul></div>" +
+        (people ? '<div><h3>People</h3><details class="more"><summary>' + t.people.length + ' people</summary><table class="people">' + people + "</table></details></div>" : "");
+      body = '<div class="detail" id="d-' + esc(t.folder) + '"><div class="col">' + left + '</div><div class="col">' + right + "</div></div>";
+    }
+    return '<article class="row' + (open ? " open" : "") + '" id="' + esc(t.folder) + '">' + head + body + "</article>";
+  }
+
+  function otherTable(list) {
+    var rows = list.map(function (t) {
+      var entry = t.entry ? inline(t.entry) : "";
+      var gap = t.gap ? ' <span class="chip gap" title="' + esc(t.gap) + '">Not yet in shape</span>' : "";
+      return "<tr><td><span class=\"t\">" + esc(t.title) + gap + '</span><span class="f">' + esc(t.folder) + "/</span></td>" +
+        "<td>" + (t.title !== t.what ? "<div>" + inline(t.what) + "</div>" : "") + (t.intro && t.intro !== t.what ? '<div class="w" style="margin-top:4px;font-size:13px">' + inline(t.intro.length > 260 ? t.intro.slice(0, 257) + "…" : t.intro) + "</div>" : "") + (t.gap ? '<div class="w" style="margin-top:4px;font-size:13px">Missing: ' + inline(t.gap) + "</div>" : "") + "</td>" +
+        "<td>" + (entry || '<span class="w">folder</span>') + "</td>" +
+        '<td class="num">' + esc(fmt(t.last_change) || "not committed") + "</td></tr>";
+    }).join("");
+    return '<div class="tablewrap"><table class="others"><thead><tr><th>Topic</th><th>What</th><th>Entry point</th><th>Last change</th></tr></thead><tbody>' + rows + "</tbody></table></div>";
+  }
+
+  function renderGroups() {
+    var html = "";
+    KINDS.slice(1).forEach(function (k) {
+      var list = TOPICS.filter(function (t) { return t.kind === k.id && matches(t); });
+      if (!list.length) return;
+      if (k.id === "initiative") {
+        list.sort(function (a, b) { return (b._you - a._you) || ((a.status && b.status) ? (a.status.as_of_iso < b.status.as_of_iso ? 1 : -1) : 0); });
+      } else {
+        list.sort(function (a, b) { return (b.last_change || "").localeCompare(a.last_change || ""); });
+      }
+      html += '<section class="group"><div class="group-head"><h2>' + k.group + ' <span class="num">(' + list.length + ")</span></h2><span class=\"hint\">" + k.hint + "</span></div>" +
+        (k.id === "initiative" ? '<div class="rows">' + list.map(initiativeRow).join("") + "</div>" : otherTable(list)) + "</section>";
+    });
+    document.getElementById("groups").innerHTML = html || '<div class="empty">No topic matches. Clear the search or pick "All".</div>';
+  }
+
+  function render() { renderStrip(); renderKinds(); renderGroups(); }
+
+  document.getElementById("strip").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-k]"); if (!b) return;
+    var p = b.dataset.k.split(":");
+    if (p[0] === "flag") { state.flag = state.flag === p[1] ? null : p[1]; state.kind = "all"; }
+    else { state.flag = null; state.kind = state.kind === p[1] ? "all" : p[1]; }
+    render();
+  });
+  document.getElementById("kinds").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-kind]"); if (!b) return;
+    state.kind = b.dataset.kind; state.flag = null; render();
+  });
+  document.getElementById("q").addEventListener("input", function (e) {
+    state.q = e.target.value.trim().toLowerCase(); renderGroups();
+  });
+  document.getElementById("groups").addEventListener("click", function (e) {
+    if (e.target.closest("a, summary, details .b")) return;
+    var b = e.target.closest("[data-open]"); if (!b) return;
+    var f = b.dataset.open;
+    state.open = state.open === f ? null : f;
+    try { history.replaceState(null, "", state.open ? "#" + state.open : location.pathname + location.search); } catch (err) {}
+    renderGroups();
+    var el = document.getElementById(f); if (el && state.open) el.querySelector(".row-head").focus({ preventScroll: true });
+  });
+  function fromHash() {
+    var h = decodeURIComponent((location.hash || "").slice(1));
+    if (h && TOPICS.some(function (t) { return t.folder === h && t.kind === "initiative"; })) {
+      state.open = h; render();
+      var el = document.getElementById(h); if (el) el.scrollIntoView({ block: "start" });
+    }
+  }
+  window.addEventListener("hashchange", fromHash);
+
+  renderBuilt();
+  render();
+  fromHash();
+})();
+</script>
