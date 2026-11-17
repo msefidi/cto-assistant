@@ -29,7 +29,7 @@
 - [Eviplex brand concept](eviplex-brand-concept.md) — words in meviq brand/, look follows the code; one DS (EVP - DS Web); claim rules
 - [Anika (Eviplex marketing)](anika-eviplex-marketing.md) — Eviplex marketing manager; reviews brand PRs; co-owns brand and claims with Shadi
 - [Eviplex changelog email](eviplex-changelog-email.md) — internal changelog (DE, ihr); sources and template in cto-assistant/eviplex-changelog/AGENTS.md
-- [Eviplex customer support](eviplex-customer-support.md) — FOMF CS stays in front, support@ only, quotas 30/150/300 (Oct 2026)
+- [Eviplex customer support](eviplex-customer-support.md) — FOMF CS stays in front, kontakt@ + feedback@, quotas 30/150/300
 - [Eviplex document upload answer](eviplex-document-upload-answer.md) — Befunde/Bilder upload not today; roadmap under § 203, no date (Nov 2026)
 - [Eviplex CH tech fact sheet](eviplex-ch-tech-factsheet.md) — approved § 203 wording for external claims; Google gap until the PSA is signed
 - [Eviplex UAE pitch](eviplex-uae-pitch.md) — closed Oct 2026; non-EU claim and hosting decisions; PowerPoint render lessons
