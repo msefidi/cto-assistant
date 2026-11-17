@@ -17,8 +17,8 @@ Every topic in this workspace, one line each, grouped. Finished topics and one-o
 
 | Folder | What | Entry point |
 |---|---|---|
-| `eviplex-weekly/` | Weekly Eviplex plan memo, one file per week | latest dated `.md` |
-| `eviplex-changelog/` | Internal Eviplex changelog emails (DE) | `eviplex-changelog/src/` |
+| `eviplex-weekly/` | Weekly Eviplex plan memo, one file per week | `eviplex-weekly/AGENTS.md` |
+| `eviplex-changelog/` | Internal Eviplex changelog emails (DE) | `eviplex-changelog/AGENTS.md` |
 | `signals/` | Posts and thoughts on leading product and tech into the AI age | `signals/AGENTS.md` |
 
 
@@ -26,7 +26,4 @@ Every topic in this workspace, one line each, grouped. Finished topics and one-o
 
 Folders that lack what their kind needs. Fix one when you next work in it, then delete its line here.
 
-| Folder | Missing |
-|---|---|
-| `eviplex-weekly/` | `AGENTS.md` (recurring: format, cadence, where to start) |
-| `eviplex-changelog/` | `AGENTS.md` (recurring: format, cadence, where to start) |
+none

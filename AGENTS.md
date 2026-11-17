@@ -61,7 +61,7 @@ Medical AI assistant — evidence-based answers to doctors' questions, grounded 
 - **Rahim** — Tech Lead, Backend (also contributes on Platform team)
 
 **IT department** (1 report):
-- **Andreas** — Head of IT (3 team members under him)
+- **Andreas Langer** — Head of IT (3 team members under him). Not Andreas Eberl, who holds the ÄKW relationship.
 
 ### Teams
 
@@ -80,7 +80,7 @@ Medical AI assistant — evidence-based answers to doctors' questions, grounded 
 - Designers: Shadi, Bardia
 - Engineering: Parham, Anah (data eng), Ehsan (data scientist), Josip (mobile), Viktor (frontend TL)
 
-**IT team** — Andreas + 3
+**IT team** — Andreas Langer + 3
 
 ---
 

@@ -17,4 +17,4 @@ Agreed line (Mahyar, 11 Nov 2026):
 - Images are not mentioned in the answer, so don't promise them.
 
 **Why:** staff at events were improvising answers on a § 203 topic, and Eviplex GmbH carries the liability.
-**How to apply:** reuse this wording for any upload or patient-data question. Open conflict: the 26 Oct note says the Plus/Pro Patient Context feature includes documents. Check which is right before saying more. See [[eviplex-customer-support]].
+**How to apply:** reuse this wording for any upload or patient-data question. The Plus/Pro Patient Context feature does not include documents today either (Mahyar, 17 Nov 2026); an earlier note of 26 Oct that said it did was wrong. See [[eviplex-customer-support]].
