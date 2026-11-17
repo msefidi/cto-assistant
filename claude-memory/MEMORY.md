@@ -13,7 +13,7 @@
 - [B2C Membership Income dashboard (1816)](b2c-membership-income-dashboard.md) — Metabase 1816 for the Sep 2026 EB meeting; card ids, agreed definitions, caveats
 - [B2C Value Journey](b2c-value-journey-dashboard.md) — Sep 2026 cohort page (v23); definitions and log in cto-assistant/archive/b2c-value-journey/
 - [New Customer Sources](new-customer-sources.md) — acquisition by survey source, free memberships excluded, skipped-June-mailing economics (Sep 2026)
-- [Price increase cancellations](price-increase-cancellations.md) — Oct 2026 renewal price rise; first read 30 Sep: timing shift, not extra churn yet
+- [Price increase cancellations](price-increase-cancellations.md) — Oct 2026 price rise added ~1–1.5 pts of cancellations from mid-Oct; bigger rise is early cancels since Apr
 - [Platform North Star](platform-north-star.md) — usage/CME does not predict renewal (85% auto); annual churn 22.4%; loss breakdown (Oct 2026)
 - [WebUp acquisition](webup-acquisition.md) — free WebUps drive ≤2–7% of new paying customers; mostly existing customers attend (Oct 2026)
 - [Registration funnel](registration-funnel.md) — Segment sign-up drop-off Jul–Oct 2026; 47% visitor→done; Baidu crawler noise

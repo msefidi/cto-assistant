@@ -1,16 +1,16 @@
 ---
 name: price-increase-cancellations
-description: B2C price increase (new members 1 Sep 2026, renewals from 1 Oct 2026, notice emails from 1 Aug at ~D-61) — how to measure renewal cancellations; first read 30 Sep 2026
+description: "B2C price increase (renewals from 1 Oct 2026): it added ~1–1.5 points of renewal cancellations from mid-Oct, no withdrawal spike; the bigger rise is pre-notice cancellations since Apr 2026 (read 17 Nov 2026)"
 metadata:
   type: project
 ---
 
-Price increase: new B2C members from 1 Sep 2026; existing members at renewals from 1 Oct 2026, notice email runs daily and goes to members whose renewal is exactly 60 days away (confirmed by Mahyar 30 Sep 2026), starting 1 Aug 2026. Mahyar asked (30 Sep 2026) whether renewal cancellations are trending up.
+Price increase: new B2C members from 1 Sep 2026, existing members at renewals from 1 Oct 2026. A notice email goes daily to members whose renewal is exactly 60 days away, starting 1 Aug 2026 (Mahyar, 30 Sep 2026).
 
-Data: `platform_raw_membershipservice.public_membership_cancellation_request` (cancellation_type CANCEL_MEMBERSHIP = renewal switched off, created_at = when; REVOKE_MEMBERSHIP = withdrawal; reason always empty). `public_user_membership` has no cancellation timestamp. SQL in `cto-assistant/archive/price-increase-cancellations/sql/`. Usable baseline starts with renewals from Jul 2025 (earlier months have few rows). Old regime evidently had a reminder ~30 days before renewal.
+**Conclusion (17 Nov 2026, data to 16 Nov):** the notice pulled the 1–15 Oct cancellations forward without adding any (5.9 % vs 5.7 % baseline). It added about 17 cancellations in 16–31 Oct (8.1 %) and about 20 so far in November (6.6 % vs 5.2 % on the same days), roughly 1–1.5 points of renewals, mostly first renewals. Withdrawals within 14 days of an October renewal did not rise (7.0 % vs 7.4 % in Oct 2025). All cancellations before renewal reached 17.0 % of October renewals (Oct 2025: 13.0 %); most of that gap is the separate rise in cancellations more than 60 days out, which has held at 11–12.6 % of renewals since Apr 2026 (before: 7.7–9.7 %), before the price emails.
 
-First read (30 Sep 2026): the notice pulls cancellations forward rather than adding them. Renewals 1–15 Oct (almost fully observed) cancelled 4.6% of those still renewing at D-60 vs a 4.7% baseline. Late-Oct and Nov renewals are elevated so far (4.8% vs 2.6%; Nov 2.4% vs 0.8%), about 35 extra cancellations. Concentrated in first renewals. Separate trend: cancellations more than 60 days out rose from 8–9% to 11–13% of renewals from Apr 2026, which is before the price emails.
+Measure: "at risk at D-60" = no renewal-cancellation request before D-60; a cancellation counts on its first CANCEL_MEMBERSHIP request on or before the renewal date; baseline = renewals Oct 2025 – Sep 2026. Data: `platform_raw_membershipservice.public_membership_cancellation_request` (CANCEL_MEMBERSHIP = renewal switched off; REVOKE_MEMBERSHIP = withdrawal; reason always empty). Withdrawn rows lose their "renewed" state, so a renewal = paid B2C membership starting within 48 h of the same user's previous one. SQL: `cto-assistant/archive/price-increase-cancellations/sql/` (30 Sep read) and `sql/2026-11-17-rerun/` (`00_base.sql` goes in front of 01, 02, 03 and 05). First read page: https://claude.ai/artifact/RJFk9kexEvmyfsfWZD2va6.
 
-Mahyar's pushback (30 Sep): the weekly YoY bars (Oct–Dec renewals, Aug–Sep 104 → 164) show clearly more cancellations. Agreed, and the page headline was softened. Split by each member's own notice day: +30 came after the notice, +33 before it (the general rise, not the price). At matched timing: 1–15 Oct −8, 16–31 Oct +17, Nov +22 (≈ +31). Artifact: https://claude.ai/artifact/RJFk9kexEvmyfsfWZD2va6 (file `archive/price-increase-cancellations/cancellations.html`).
+Not checked: whether renewals were actually billed at the new price.
 
-**How to apply:** re-run after the Oct renewals have passed (final Oct rate vs ~13–15%) and track REVOKE_MEMBERSHIP within 14 days of an Oct auto-renewal (withdrawal after being charged the new price).
+**How to apply:** the retention lever is the early cancellations (more than 60 days out), not the price notice; see [[b2c-retention-emails]] and [[platform-north-star]].
