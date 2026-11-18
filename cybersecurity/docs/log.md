@@ -2,6 +2,14 @@
 
 Newest first. One entry per event or result. Decisions go in `decisions.md`, one line each. Each entry ends with who said it and where, in brackets. Summarise the source; the original stays where it is. Findings and pentest results never go here; they go in `../reports/` (git-ignored) and SharePoint.
 
+## 2026-11-18: Eli Lilly quick wins folded into the roadmap
+
+Mahyar cancelled CTO-9 ("Review quick wins with Andreas"): the IT security management work with Andreas replaces it. Its idea was to check which quick wins FOMF promised Eli Lilly and cover them. The Linear project "Eli Lilly Cybersecurity" (P-ENG-190, lead Andreas) lists six: audit log management, media destruction and secure deletion are done (15 Jul); change management and the data inventory (due 1 Sep) are open; security training (due 31 Dec) is in research. Added as section 5 of `../it-security-management-2026-11-18.md`. An earlier version of the brief called P-ENG-190 "a different matter"; it is part of this work. (Mahyar, session of 18 Nov; Linear project P-ENG-190, read 18 Nov)
+
+## 2026-11-18: IT security management started with Andreas
+
+In their weekly 1:1, Mahyar and Andreas wrote down where FOMF stands on IT security management, in four areas: device management (Windows has basic hardening; macOS and Linux not onboarded; no hardening profiles; MDM not started; three update rings defined; device restrictions in audit mode only), Entra ID and access (MFA with passkeys and Authenticator, admin roles, joiner/leaver process, enterprise applications), SharePoint (no structure or per-site access yet) and Exchange (phishing and spam rules). The notes are incomplete; the point was to start. Mahyar runs a survey of Mac users (Andreas's MS Forms for engineers and unit leads, Slack DM thread of 8 Oct) before Macs are onboarded. Baseline in `../it-security-management-2026-11-18.md`; board sub-issue CTO-24. (Mahyar and Andreas, 1:1 on 18 Nov; notes from Mahyar, cleaned up in session)
+
 ## 2026-11-16: team onboarded in Slack
 
 Mahyar created the private channel #p-cybersecurity-assessment and posted the onboarding message there for Andreas, Shervin, Simone, George and Rahim. Andreas and Shervin are asked to block the proposed weeks for access and configuration work; Simone, George and Rahim are kept informed. (Mahyar, Slack #p-cybersecurity-assessment, C0CHXPGCWHH; text in `slack-draft-team-onboarding-2026-11-16.md`)

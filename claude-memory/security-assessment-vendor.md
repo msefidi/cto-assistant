@@ -1,6 +1,6 @@
 ---
 name: security-assessment-vendor
-description: "Blaze security assessment (M365, GCP, pentests); agreed dates cost money to move; brief and log in cybersecurity/"
+description: "Blaze security assessment (M365, GCP, pentests) and IT security management with Andreas; agreed dates cost money to move; brief and log in cybersecurity/"
 metadata:
   type: project
 ---
@@ -8,6 +8,7 @@ metadata:
 The security assessment lives in `cybersecurity/`: `AGENTS.md` is the brief (status, contract at a glance, open points, source map), `docs/decisions.md` the decisions and `docs/log.md` the history (Mandiant dropped July 2026, PCG vs Blaze, NDA, contract, phase dates). Status is in `TOPICS.md`. Read the brief before advising; this note is only the pointer.
 
 - **Dates cost money once agreed.** MSA 10.3 charges 25/50/100 % for cancelling within 15/10/5 working days of an agreed start. Commit only to dates IT and the product teams can meet, and move them at least 4 weeks ahead.
+- **IT security management with Andreas** (devices, Entra, SharePoint, Exchange) also lives in `cybersecurity/` since 18 Nov 2026 and runs on Andreas's own Linear board; Mahyar's board tracks only his part. Internal gap descriptions stay in the repo, never on Linear.
 - **Findings never go in the brief, log or memory.** They go in `cybersecurity/reports/` (git-ignored) and SharePoint, and never into external tools.
 
 **Why:** Blaze covers the dropped Mandiant scope (M365 + GCP) plus manual pentests of both products and a GKE review aimed at the in-cluster gaps from the php2shell incident (`platform/knowledge/tech-and-security.md`).

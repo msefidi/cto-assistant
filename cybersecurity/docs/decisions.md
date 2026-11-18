@@ -2,6 +2,10 @@
 
 One line per decision, newest first. Each line ends with who decided and where. A line is never edited; when a decision changes, add a new line that says which one it replaces.
 
+- 2026-11-18: The quick wins promised to Eli Lilly (open: change management, data inventory, security training) are covered in the 2027 IT security roadmap; CTO-9 is cancelled in favour of that work. (Mahyar, session of 18 Nov)
+- 2026-11-18: IT security management gets its own Linear board (Andreas's team). Mahyar's board holds only his follow-up on the Mac surveys (CTO-24) for now. (Mahyar, session of 18 Nov)
+- 2026-11-18: Mahyar and Andreas set the 2027 IT security roadmap together in person on 21 Dec 2026, starting from the 18 Nov baseline and adjusted with Blaze's input from its first round (Phase 1, M365). (Mahyar and Andreas, 1:1 on 18 Nov)
+- 2026-11-18: Onboard every laptop into device management first, then define hardening requirements per platform. (Mahyar and Andreas, 1:1 on 18 Nov)
 - 2026-11-16: Each part gets its own week: OSINT (week of 11 Jan) apart from GKE (week of 18 Jan); the pentests start one week apart, Eviplex from 25 Jan and the learning platform from 1 Feb. Testing ends in the week of 8 Feb. Replaces the pentest weeks in the line below. (Mahyar, session of 16 Nov)
 - 2026-11-16: Propose weeks, not exact days; Blaze fits its dates inside each week. Pentests move to the weeks of 18 and 25 Jan, testing ends by 29 Jan. (Mahyar, session of 16 Nov)
 - 2026-11-16: OSINT runs after the GCP review (11–12 Jan) and before the pentests, not in parallel with GCP, so its results feed the testers. (Mahyar, session of 16 Nov)
