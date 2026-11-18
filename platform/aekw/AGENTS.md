@@ -54,7 +54,7 @@ On 01.02.2027 ÄKW doctors reach FOMF content from ÄKW's Ärzte Service Portal 
 | Slack | Not searched yet. |
 | SharePoint | `Sales Membership/Ausschreibung Ärztekammer Wien`. Our drafts are the `_US` files. `original/` holds the tender documents, `Aktualisierung 16.10.2026/` the binding Q&A (`Bieteranfragen-161026.pdf`), `Unsere Angebote an Ärztekammer Wien/` the April 2026 offer. Concept as submitted: `ÄKW (Stream)-Konzept_Entwurf_MS_US_ST_v2.docx`. The letter of 4 Nov: `ÄKW _Stream_-Aufforderungsschreiben-041126.pdf`, shared in the Teams chat with Sina. |
 | Notion | none |
-| Linear | No project yet (checked 13 Nov 2026). |
+| Linear | Board issue CTO-6 (private team cto-assistant, neutral title). No project yet (checked 13 Nov 2026). |
 | Other | Tender portal breitenfeld.vergabeportal.at, Verfahren 256139-00, Aktenzahl 30/22-8. Claude Doc "ÄKW Konzept – Kapitel 4 & 5" (https://claude.ai/artifact/Lajot7bsky1A4DyCxhHy3U), an early draft that the Word v2 replaced. |
 
 ## Files

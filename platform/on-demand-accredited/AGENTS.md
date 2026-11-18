@@ -61,7 +61,7 @@ Double On-Demand Accredited revenue in the 12 months from Sep 2026, so by Sep 20
 | Slack | Not searched yet. |
 | SharePoint | Not searched yet. |
 | Notion | Isgard's project page "OnDemand akkreditierte Kurse" (https://app.notion.com/p/fomf/OnDemand-akkreditierte-Kurse-4027afedf3098099b06cc3a0fb9b8c72), with the "Roadmap OnDemand akkreditierte Kurse" database, "Statistik Zielgruppe OnDemand Kurse", "Marketing - OnDemand akkreditierte Kurse" (two databases, one a marketing roadmap) and "OnDemand – akkreditierte Kurse & wichtige Informationen". |
-| Linear | none |
+| Linear | Board issue CTO-5 (private team cto-assistant). none |
 | Other | BigQuery `fomf-dl` and Metabase https://fomf2.metabaseapp.com (dashboard "B2C Membership Income", 1816). fomf.de product page `/on-demand` and catalogue `/kurse`. HubSpot: not searched yet. |
 
 ## Files

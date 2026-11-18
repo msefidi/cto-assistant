@@ -2,6 +2,8 @@
 
 Builds the **CTO Topics** page on claude.ai: the open topics in `TOPICS.md` (Active and Recurring), with each active topic's status, next step, recent log entries, decisions, open points and rules from its brief. Topics under "Done or reference" are left out. Workspace tooling, not a topic; started 17 Nov 2026. Owner: Mahyar.
 
+**Retired on 17 Nov 2026.** The board in Mahyar's private Linear team cto-assistant (`CTO`) replaces this page (see "Board" in the root `AGENTS.md`). `TOPICS.md` no longer has Status and Next step columns, so `build.py` no longer builds; the page shows its last build. Do not rebuild it.
+
 - **Page:** https://claude.ai/artifact/8W7smjQh7rx3hjS8HCNhni (private)
 - **Source of truth:** `TOPICS.md` and the topic folders. The page is a read-only view; never edit content in it.
 

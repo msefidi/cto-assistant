@@ -84,7 +84,7 @@ Goal for both: **double revenue in the coming year** (to Sep 2027). Revenue = me
 
 ## Topics
 
-A **topic** is a folder of work. A topic that belongs to one product lives inside that product's folder (`platform/syfat/`, `eviplex/avv/`); a topic that spans products or none lives at the top level (`cybersecurity/`, `signals/`). `TOPICS.md` lists the active and recurring topics with their status and next step; it is loaded at the end of this section. `TOPICS-DONE.md` lists the finished ones and is read only when needed. Topics sit in three groups:
+A **topic** is a folder of work. A topic that belongs to one product lives inside that product's folder (`platform/syfat/`, `eviplex/avv/`); a topic that spans products or none lives at the top level (`cybersecurity/`, `signals/`). `TOPICS.md` lists the active and recurring topics and each active topic's board issue; it is loaded at the end of this section. `TOPICS-DONE.md` lists the finished ones and is read only when needed. Topics sit in three groups:
 
 | Group | What | The folder holds |
 |---|---|---|
@@ -95,8 +95,8 @@ A **topic** is a folder of work. A topic that belongs to one product lives insid
 - **Opening a topic:** work that will run longer than this session gets the four files; work that repeats gets an `AGENTS.md`; an output finished in this session is a plain folder in `archive/` with a line in `TOPICS-DONE.md`. A question that leaves no files is not a topic. Done when the folder holds what its group needs and its line is in `TOPICS.md` or `TOPICS-DONE.md`.
 - **A topic changes group** (a one-off analysis turns into a project, a recurring job gets a goal): add the files the new group needs and move its line, between `TOPICS.md` and `TOPICS-DONE.md` if needed. A topic that comes back moves out of `archive/` again.
 - **Product folders:** `platform/` and `eviplex/` each hold one product. Their `AGENTS.md` is the product brief and `knowledge/` holds what stays true (offer or tiers, positioning, definitions and findings, data, stack, people, how it is run); every other subfolder is a topic about that product. Before work on a product, read its `AGENTS.md`. When you learn a lasting fact, rewrite the matching file in `knowledge/` (who said it, when), not memory; status and next steps stay in the topics. Point to sources (repo, Notion, Linear) instead of copying them.
-- **Not topics:** the product folders themselves and their `knowledge/`; `_template/`, `artifact-index/` and `topics-overview/` (workspace tooling); `archive/` (finished topics). They have no line in `TOPICS.md`.
-- **Topics overview:** the [CTO Topics page](https://claude.ai/artifact/8W7smjQh7rx3hjS8HCNhni) shows the active and recurring topics, built from `TOPICS.md` and the briefs. After a session that changes a Status or a `TOPICS.md` line, rebuild and republish it as `topics-overview/AGENTS.md` says.
+- **Not topics:** the product folders themselves and their `knowledge/`; `_template/`, `artifact-index/` and `topics-overview/` (workspace tooling; `topics-overview/` is retired); `archive/` (finished topics). They have no line in `TOPICS.md`.
+- **Board:** every active topic has one issue in Mahyar's private Linear team **cto-assistant** (key `CTO`). The board's status says whose move it is: *Your move*, *With the team*, *With externals*; *Later* parks a topic, *Done* and *Dropped* end it. The issue holds a short status, the next step, the next date as due date, a product label (Platform, Eviplex, Cross) and the folder path; the brief stays the record. At the start of a session that works on topics, read the board (`list_issues`, team `CTO`) and write into the brief whatever Mahyar changed there (status, due date, description). At the end, update the issue to match the brief. Never put contract terms, prices or commission rates, security findings or a confidential partner's name on an issue; they stay in the repo. Never link or mention another team's issue, project or pull request on a board issue: Linear shows the reference on the other side, and a linked GitHub PR can move the issue when it merges. Name the project in words instead.
 
 ### One shape for active topics
 
@@ -109,16 +109,16 @@ Every active topic has the same four files:
 | `docs/log.md` | Events and results, newest first; each entry names who and where | Appending only |
 | `CLAUDE.md` | `@AGENTS.md`, an import, so Claude Code loads the brief | Never |
 
-- **Starting one:** copy `_template/` to a kebab-case folder, inside the product folder when it belongs to one product, else at the top level. Done when every heading of the brief is filled (write "none" where there is nothing), the log has its first entry, decisions made so far have their lines and `TOPICS.md` has its line.
-- **Working in one:** read the brief, the decisions and the newest log entries first. Done when each decision of the session has its line in `decisions.md`, each result is logged and the brief's Status and the `TOPICS.md` line match it.
-- **"Catch up on X":** search every row of X's source map from the newest log date to today. Done when the news is logged, new decisions have their lines, the Status is updated and each new thread, chat or person is in the source map. Then tell Mahyar what changed.
+- **Starting one:** copy `_template/` to a kebab-case folder, inside the product folder when it belongs to one product, else at the top level. Done when every heading of the brief is filled (write "none" where there is nothing), the log has its first entry, decisions made so far have their lines, `TOPICS.md` has its line and the board has its issue.
+- **Working in one:** read the brief, the decisions and the newest log entries first. Done when each decision of the session has its line in `decisions.md`, each result is logged and the brief's Status and the board issue match it.
+- **"Catch up on X":** search every row of X's source map from the newest log date to today. Done when the news is logged, new decisions have their lines, the Status and the board issue are updated and each new thread, chat or person is in the source map. Then tell Mahyar what changed.
 - **Sources stay where they are.** The log summarises an email, chat or contract with who, where and when. The original stays in Outlook, Teams or SharePoint.
 - **Memory** keeps one pointer note per active topic. The history goes in the log.
 - **Linear:** when part of a topic becomes product work, link the Linear project in the brief. Linear tracks that part.
-- **Finished:** write the outcome at the top of the brief, `git mv` the folder into `archive/` (flat, also from a product folder), move its line from `TOPICS.md` to `TOPICS-DONE.md` with the new path, and mark the memory pointer note closed (date, outcome and new path). Then update every path that pointed at the old folder: other briefs, memory notes and the `repo` field of its Artifact Index rows. Logs and decisions are not rewritten. Done when `grep -rn "<folder>/"` finds no live reference to the old path.
+- **Finished:** write the outcome at the top of the brief, `git mv` the folder into `archive/` (flat, also from a product folder), move its line from `TOPICS.md` to `TOPICS-DONE.md` with the new path, move its board issue to *Done*, and mark the memory pointer note closed (date, outcome and new path). Then update every path that pointed at the old folder: other briefs, memory notes and the `repo` field of its Artifact Index rows. Logs and decisions are not rewritten. Done when `grep -rn "<folder>/"` finds no live reference to the old path.
 - **Older folders** are listed under "Not yet in shape" in `TOPICS.md`. Bring one in line when you next work in it, and keep its existing files where they are.
 
-Read `TOPICS.md` at the start of every session: it lists the active and recurring topics. (Claude Code loads it through the import below.)
+Read `TOPICS.md` at the start of every session: it lists the active and recurring topics and their board issues. Status and next steps are in the briefs and on the board. (Claude Code loads it through the import below.)
 
 @TOPICS.md
 
@@ -171,7 +171,7 @@ Claude Code's memory for this repo lives in `claude-memory/` at the repo root: o
 
 ### Product development
 - **Miro** — whiteboarding
-- **Linear** — issue tracking. Mahyar interacts at project level across most teams; **personally manages the Eviplex Linear team** (as Eviplex PM).
+- **Linear** — issue tracking. Mahyar interacts at project level across most teams; **personally manages the Eviplex Linear team** (as Eviplex PM). His private team **cto-assistant** (`CTO`) is the topic board, not product work (section "Topics").
 - **Notion** — three primary workspaces he lives in:
   - **Product & Engineering**
   - **Meviq**

@@ -65,7 +65,7 @@ Double SYFAT revenue in the 12 months from Sep 2026, so by Sep 2027. Revenue = m
 | Slack | Not searched yet. |
 | SharePoint | Not searched yet. |
 | Notion | Marie's project page "SYFAT - Systematisiertes Facharzttraining" (https://app.notion.com/p/fomf/SYFAT-Systematisiertes-Facharzttraining-3817afedf30980c99589cda790d78cd0), with sub-pages "Marketing - SYFAT", "SYFAT User Survey - Konzept & Fragebogen", "Wettbewerbsanalyse SYFAT", "KI-Mentor / Coach (Chatbot)", "Konzept Gutschein nach erfolgreicher Facharztprüfung", "Erklärvideo / Anleitung SYFAT", "FAQ-Bereich", "SYFAT - Livestream Kurse", "OP-Lehre Gyn - WebOP", "Landing Page", and the "Roadmap SYFAT" database. |
-| Linear | Project "SYFAT SEO Baseline", P-MKS-238 (https://linear.app/fomf/project/syfat-seo-baseline-cc39cbac19f3), Marketing & SEO team plus Platform. Issue PLA-2014. |
+| Linear | Board issue CTO-4 (private team cto-assistant). Project "SYFAT SEO Baseline", P-MKS-238 (https://linear.app/fomf/project/syfat-seo-baseline-cc39cbac19f3), Marketing & SEO team plus Platform. Issue PLA-2014. |
 | Other | BigQuery `fomf-dl` and Metabase https://fomf2.metabaseapp.com (dashboard "B2C Membership Income", 1816). Google Search Console (`tools/gsc.sh`). fomf.de product and course pages. HubSpot: not searched yet. |
 
 ## Files

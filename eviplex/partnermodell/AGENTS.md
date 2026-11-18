@@ -67,7 +67,7 @@ Where this topic lives outside this folder. A catch-up searches every row.
 | Slack | Not searched yet. |
 | SharePoint | Sales Membership › Preislisten GMS › "2025_08_Staffelpreise GMS DE-AT-CH inkl. Klinik-Modell.xlsx" (Eviplex block, hospital prices). Executive Board site › Freigegebene Dokumente › Public › Eviplex (marketing assets Habib shared with Medichub on 26 Oct). Where the sent contract will be filed: not recorded. |
 | Notion | Executive Board › Documents › Eviplex › "Eviplex Romenia" (21 Aug 2026 meeting with Medichub and Mediamed; the 25 Sep follow-up has no notes). |
-| Linear | No project (checked 15 Nov 2026). Issues in Eviplex Product: EVP-1348 "Store partner attribution on the account for commission payouts" (Backlog), EVP-1312 "Mixpanel: Build attribution funnel and test end to end" (Viktor, Todo), EVP-1310 "Save UTM values on the user profile at sign-up" (canceled 12 Nov). |
+| Linear | Board issue CTO-3 (private team cto-assistant). No project (checked 15 Nov 2026). Issues in Eviplex Product: EVP-1348 "Store partner attribution on the account for commission payouts" (Backlog), EVP-1312 "Mixpanel: Build attribution funnel and test end to end" (Viktor, Todo), EVP-1310 "Save UTM values on the user profile at sign-up" (canceled 12 Nov). |
 | Other | Claude Doc "Eviplex Partnermodell – Eckpunkte für Partnerverträge" with tab "Simulation" (https://claude.ai/artifact/E1wgJe6ZdsKanfKCWTBfoz). Codex thread "Review Medichub Partnership Contract" (12 Nov). |
 
 ## Files

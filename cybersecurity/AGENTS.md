@@ -67,7 +67,7 @@ Where this topic lives outside this folder. A catch-up searches every row.
 | Slack | Private channel #p-cybersecurity-assessment (C0CHXPGCWHH), created 16 Nov with Andreas, Shervin, Simone, George and Rahim: the team's project channel. Mahyar's DM with Andreas (D01N5T0MV9B): thread of 12 Nov on Blaze's dates (high season, 7 Dec earliest, vacation from 27 Dec). Not searched more widely. |
 | SharePoint | Not searched yet. The place for the signed contract, DPA, NDA and the reports is not recorded. |
 | Notion | Not searched yet. |
-| Linear | No project for this (checked 15 Nov 2026). "Eli Lilly Cybersecurity" (P-ENG-190) is a different matter by its name. |
+| Linear | Board issue CTO-2 (private team cto-assistant). No project for this (checked 15 Nov 2026). "Eli Lilly Cybersecurity" (P-ENG-190) is a different matter by its name. |
 | Other | Blaze Client Portal (blazeinfosec.atlassian.net; access since 12 Nov); Blaze's VulnKeep portal for findings; DocuSign; Blaze MSA blazeinfosec.com/legal/terms and DPA blazeinfosec.com/legal/dpa. |
 
 ## Files

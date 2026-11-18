@@ -2,6 +2,7 @@
 
 One line per decision, newest first. Each line ends with who decided and where. A line is never edited; when a decision changes, add a new line that says which one it replaces.
 
+- 2026-11-17: Shervin takes over PR #1079. Its scope: Vercel AI Gateway EU endpoint (regional hosting) and TLS for Postgres and Redis; the EU model pin is done (PR #1093). (Mahyar, Slack https://fomf.slack.com/archives/C08RW4F6QJ1/p1794926193091819)
 - 2026-11-11: Sign Google's fixed pay-as-you-go PSA now (good for DE and AT), then negotiate an Enterprise Agreement for a PSA that can cover Switzerland. (Mahyar and Habib, call with Google; recorded in memory note `eviplex-ch-tech-factsheet`)
 - 2026-11-10: Dictation calls OpenAI's EU endpoint (`eu.api.openai.com`) directly, because the Vercel gateway has no EU region for transcription; with no URL set, dictation returns 503 and sends no audio. (jole141, meviq PR #1093)
 - 2026-11-10: The OpenAI EU inference pin is set in the `pr` and `prod` overlays. Replaces the off-by-default approach of PR #1079, which now holds only the TLS work. (jole141, meviq PR #1093)

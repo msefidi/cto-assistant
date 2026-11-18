@@ -39,7 +39,7 @@ Where this topic lives outside this folder. A catch-up searches every row.
 | Slack | <channels, search terms, or "none"> |
 | SharePoint | <folder path and the files that matter> |
 | Notion | <pages, or "none"> |
-| Linear | <project, or "none"> |
+| Linear | Board issue CTO-<n> (private team cto-assistant); <product project, or "none"> |
 | Other | <portals, Claude docs, vendor systems, or "none"> |
 
 ## Files

@@ -2,6 +2,10 @@
 
 Newest first. One entry per event or result. Decisions go in `decisions.md`, one line each. Each entry ends with who said it and where, in brackets. Summarise the source; the original stays where it is.
 
+## 2026-11-17: PR #1079 handed to Shervin; nothing on Mahyar's side
+
+Mahyar asked Shervin in Slack to take over PR #1079 and ideally finish it the same day, with three goals: (1) pin EU-enabled models, already done by Josip (cherry-picked and merged); (2) use the Vercel AI Gateway's EU endpoint (regional hosting); (3) enable TLS on Postgres and Redis. Parham is on cc. Shervin took it over on GitHub at 15:52 CET: rebased on main (the OpenAI EU part is gone, merged in #1093) and gave the CMS (MikroORM) the same verified TLS as Drizzle. Mahyar also said the Google PSA is waiting for Prof. Risch-Kerst's review and that nothing is on his side for now. (Mahyar, Slack https://fomf.slack.com/archives/C08RW4F6QJ1/p1794926193091819, 17 Nov 15:36 CET; Shervin, meviq PR #1079 comment; session with Mahyar)
+
 ## 2026-11-17: Google § 203 history before 30 Oct, moved here from memory
 
 Until now only the memory note `eviplex-ch-tech-factsheet` held this. Google NDA n91499 is between Google Ireland and FomF GmbH, Baden (AT), which Mahyar named as the correct FOMF contracting entity. On 5 Aug 2026 FOMF sent a proposed § 203 clause; it covered inference only (its para 5 forbids persistent storage), so it did not cover Cloud SQL, GKE or Storage. On 9 Oct Google (Alex Vassileva) declined custom § 203 language and offered a CDPA review, Assured Workloads (EU Data Boundary, personnel controls, Access Approval and Transparency), Confidential Computing, and a Cloud Master Agreement with the Professional Secrecy Addendum (PSA) for DACH healthcare, subject to eligibility. FOMF had only the NDA, no CMA. Open questions then: eligibility of a SaaS processor serving doctors, CH and AT coverage, CMA and PSA as a bundle. (Mahyar, mail thread "Urgent: Gemini API Usage / Privacy Agreement" with Alex Vassileva and Rojan Gharadaghy; memory note of 9 Oct)
