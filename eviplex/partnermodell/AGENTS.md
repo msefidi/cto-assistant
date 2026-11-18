@@ -4,11 +4,11 @@ The commission model and the partner contract for Eviplex sales partners. The fi
 
 ## Status
 
-**As of 15 Nov 2026:** The concept is settled and a contract draft v0.1 is ready, with drafting notes and a cover letter to counsel Risch-Kerst (all 12 Nov). It has not been sent to counsel (Mahyar, 13 Nov). Medichub has its Romanian launch campaign ready and is waiting for answers from FOMF; no reply to them is recorded since 12 Nov.
+**As of 18 Nov 2026:** The concept is settled and a contract draft v0.1 is ready, with drafting notes and a cover letter to counsel Risch-Kerst (all 12 Nov). It has not been sent to counsel. On 18 Nov Mahyar told Medichub that FOMF wants a written partner agreement before go-live and that he will come back by Wednesday 25 Nov, answering their open launch questions too.
 
-- **Next step:** Mahyar fills the four placeholders in the cover letter and sends the draft to Risch-Kerst (see Anhang C of `vertrag/Entwurfsnotizen v0.1.md`). Before that, the call with Wafa he asked for on 12 Nov, so that both agree before Medichub and Webop get an answer. No date set.
-- **Next date:** none.
-- **Waiting on:** Mahyar (sending to counsel). Medichub waits on FOMF for its launch questions.
+- **Next step:** agree with Wafa (call asked for on 12 Nov), fill the four placeholders in the cover letter and send the draft to Risch-Kerst (see Anhang C of `vertrag/Entwurfsnotizen v0.1.md`). Prepare the reply to Medichub for 25 Nov.
+- **Next date:** 25 Nov 2026, promised reply to Medichub.
+- **Waiting on:** Mahyar (sending to counsel, reply to Medichub).
 
 ## Goal
 
@@ -40,7 +40,7 @@ A partner contract reviewed by counsel that Eviplex GmbH can sign with Medichub 
 - Attribution is not built. UTM values reach Segment only with analytics consent and are not stored on the account. EVP-1348 "Store partner attribution on the account for commission payouts" is in Backlog with no assignee. (owner: Mahyar, Eviplex team)
 - Romania price and quota: €14.90 a month with 75 questions is a working assumption, to settle with Wafa and Medichub. Mahyar recalls a lower price with a lower quota agreed with the partners in August; no written record found. (owner: Mahyar with Wafa)
 - B2B prices: the Executive Board has not decided them yet. (owner: Executive Board)
-- Medichub's launch questions are unanswered: review of the campaign material, vector "Powered by FOMF" logo, use of the Eviplex symbol alone, who validates the Romanian disclaimer, written confirmation of the zero-data-retention wording, utm_content for print, Meta Ads budget (decided: Eviplex does not contribute, not yet told to Medichub as far as recorded), webinar date and demo. Who answers them is not recorded. (owner: Mahyar with Wafa)
+- Medichub's launch questions are unanswered (reply promised for 25 Nov): review of the campaign material, vector "Powered by FOMF" logo, use of the Eviplex symbol alone, who validates the Romanian disclaimer, written confirmation of the zero-data-retention wording, utm_content for print, Meta Ads budget (decided: Eviplex does not contribute, not yet told to Medichub as far as recorded), webinar date and demo. Who answers them is not recorded. (owner: Mahyar with Wafa)
 - Wafa's one-pager of 12 Nov 15:01 still says 5–10 % for introductions; the rate changed to 7.5 % that evening. Whether she has the updated file is not recorded. (owner: Mahyar)
 - 44 business placeholders (K01–K44) and 16 counsel questions (P01–P16) are listed in `vertrag/Entwurfsnotizen v0.1.md`. (owner: Mahyar; P-points: Risch-Kerst)
 

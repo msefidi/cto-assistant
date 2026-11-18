@@ -18,3 +18,4 @@
 - [Eviplex partner model](eviplex-medichub-partner-contract.md) — Medichub/Webop commission model; rates only from decisions.md; brief in eviplex/partnermodell/
 - [Eviplex product folder](eviplex-product.md) — what Eviplex is, tiers, claims, support, brand, Linear: read eviplex/AGENTS.md first
 - [Platform product folder](platform-product.md) — offer, products, B2C definitions and findings, data, stack: read platform/AGENTS.md first
+- [M365 connector is read-only](m365-connector-read-only.md) — no drafts/sending; open a pre-filled Outlook compose window via mailto

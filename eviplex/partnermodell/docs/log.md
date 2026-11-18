@@ -2,6 +2,10 @@
 
 Newest first. One entry per event or result. Decisions go in `decisions.md`, one line each. Each entry ends with who said it and where, in brackets. Summarise the source; the original stays where it is.
 
+## 2026-11-18: holding reply to Medichub
+
+Mahyar wrote to Ionut Stroea, Cristina Marin and Simona Melnic (Wafa and Habib in copy) that he is now working on the topic for FOMF, that FOMF wants a written partner agreement before go-live, and that he will come back by mid next week, probably Wednesday 25 Nov; that message should also answer their open launch questions. Sent as a new mail with the old subject, not inside the 12 Nov thread. (Mahyar, mail "RE: UTM Parameters Eviplex 4 Medichub", 18 Nov 12:33)
+
 ## 2026-11-15: folder set up in the initiative shape
 
 Brief rewritten into the template, decisions and log written from the memory note `eviplex-medichub-partner-contract`, the local files and a search of Outlook, Teams and Linear. Nothing newer than 12 Nov was found in Outlook or Teams. No Linear project exists; attribution sits in issues EVP-1348 and EVP-1312. Slack was not searched. (session with Mahyar)
