@@ -46,6 +46,7 @@ From the KIS/PVS research of 30 Oct 2026 (Notion Meviq › 01 - Product › "KIS
 - **Prof. Valmed** (CE class IIb) is the main rival in clinical systems: in medatixx's CDSS interface (Nov 2025) and Telekom iMedOne (Aug 2026).
 - **AMBOSS** in tomedo is a lookup only; no exclusivity was found.
 - Partner candidates: medatixx HealthHub (bookable "medical research tools" slot), T2med for a fast pilot, avelios for hospital systems.
+- **AlpineAI** (AlpineAI AG, Davos; "SwissGPT") is the benchmark for data protection in Swiss practices and hospitals: Benignia was told it is "setting the standard", and a practice group with 120+ doctors would adopt Eviplex if its data protection matched AlpineAI's (Benignia, Teams, 17 Nov 2026). AlpineAI is a general AI workspace, not an evidence tool. It offers chat, assistants built on your own documents (PDF upload), Swiss-German transcription, and connectors to Swiss practice systems. It runs its own models (Mistral Large 3, open source) on its own hardware in Swiss data centres, holds ISO 27001 and VDSZ certification, has a professional-secrecy addendum, and sells Swiss HealthAssist with HIN. It has no curated guideline or study base. Prices are CHF 80–90 per user per month. (alpineai.swiss, read 18 Nov 2026)
 
 ## The MDR line
 

@@ -2,6 +2,10 @@
 
 Newest first. One entry per event or result. Decisions go in `decisions.md`, one line each. Each entry ends with who said it and where, in brackets. Summarise the source; the original stays where it is.
 
+## 2026-11-18: PR #1079 merged
+
+PR #1079 "feat(avv): verified TLS for Postgres/Redis + EU AI Gateway endpoint" was merged into meviq main on 17 Nov at 19:49 UTC (20:49 CET). Together with #1093 (EU inference region for OpenAI calls and voice transcription, merged 10 Nov), the code now routes model calls through EU endpoints. Production deployment of both is not verified. (GitHub fomf-code/meviq; Mahyar in session)
+
 ## 2026-11-17: PR #1079 handed to Shervin; nothing on Mahyar's side
 
 Mahyar asked Shervin in Slack to take over PR #1079 and ideally finish it the same day, with three goals: (1) pin EU-enabled models, already done by Josip (cherry-picked and merged); (2) use the Vercel AI Gateway's EU endpoint (regional hosting); (3) enable TLS on Postgres and Redis. Parham is on cc. Shervin took it over on GitHub at 15:52 CET: rebased on main (the OpenAI EU part is gone, merged in #1093) and gave the CMS (MikroORM) the same verified TLS as Drizzle. Mahyar also said the Google PSA is waiting for Prof. Risch-Kerst's review and that nothing is on his side for now. (Mahyar, Slack https://fomf.slack.com/archives/C08RW4F6QJ1/p1794926193091819, 17 Nov 15:36 CET; Shervin, meviq PR #1079 comment; session with Mahyar)

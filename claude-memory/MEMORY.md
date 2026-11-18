@@ -16,6 +16,8 @@
 - [Team-service agents](team-service-agents.md) — when a Claude helper becomes a team service; Claude Tag vs Managed Agents vs Copilot (Oct 2026)
 - [Eviplex AVV review](eviplex-avv-review.md) — user AVV + FOMF↔Eviplex § 203 agreement; documents = end state; brief in eviplex/avv/
 - [Eviplex partner model](eviplex-medichub-partner-contract.md) — Medichub/Webop commission model; rates only from decisions.md; brief in eviplex/partnermodell/
+- [Eviplex documents](eviplex-documents.md) — patient documents / PDF upload; AlpineAI = Swiss benchmark; brief in eviplex/documents/
 - [Eviplex product folder](eviplex-product.md) — what Eviplex is, tiers, claims, support, brand, Linear: read eviplex/AGENTS.md first
 - [Platform product folder](platform-product.md) — offer, products, B2C definitions and findings, data, stack: read platform/AGENTS.md first
 - [M365 connector is read-only](m365-connector-read-only.md) — no drafts/sending; open a pre-filled Outlook compose window via mailto
+- [Verify live state](verify-live-state.md) — check gh/Linear/mail before calling something open or pending; briefs lag reality

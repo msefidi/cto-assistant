@@ -4,11 +4,11 @@ Eviplex GmbH needs a data processing agreement (AVV) with the doctors who book P
 
 ## Status
 
-**As of 17 Nov 2026:** Nothing is waiting on Mahyar. On 17 Nov Mahyar handed PR #1079 to Shervin, to finish ideally the same day. It now covers the Vercel AI Gateway's EU endpoint and TLS for Postgres and Redis; the EU model pin is already merged (PR #1093, 10 Nov). The Google PSA is with Prof. Risch-Kerst for review, answer due 20 Nov. Mahyar sent the review and the wording changes to Habib on 3 and 4 Nov; no reply from Habib, Felix or counsel on the AVV after 4 Nov was found.
+**As of 18 Nov 2026:** PR #1079 (Vercel AI Gateway EU endpoint, TLS for Postgres and Redis) was merged on 17 Nov at 20:49 CET, after Shervin finished it; the EU model pin was merged earlier (PR #1093, 10 Nov). That both are live in production is not verified. The Google PSA is with Prof. Risch-Kerst for review, answer due 20 Nov. Mahyar sent the review and the wording changes to Habib on 3 and 4 Nov; no reply from Habib, Felix or counsel on the AVV after 4 Nov was found.
 
-- **Next step:** Shervin finishes PR #1079. Once it and the unverified TOMs are done, Mahyar tells Habib the documents can go out. Owner: Shervin, then Mahyar.
+- **Next step:** Mahyar confirms #1079 and #1093 are live in production and checks the unverified TOMs; then he tells Habib the documents can go out. Owner: Mahyar.
 - **Next date:** 20 Nov 2026, Risch-Kerst's answer on the PSA
-- **Waiting on:** Shervin for PR #1079 (EU gateway endpoint, TLS); Prof. Risch-Kerst for her review of the Google PSA (Google has the final version ready for DocuSign since 11 Nov and needs the signer's name); Habib for the certificate wording and § 9 liability (with Erfan and counsel); Felix for the Art. 26 question and the DPIA.
+- **Waiting on:** Prof. Risch-Kerst for her review of the Google PSA (Google has the final version ready for DocuSign since 11 Nov and needs the signer's name); Habib for the certificate wording and § 9 liability (with Erfan and counsel); Felix for the Art. 26 question and the DPIA.
 
 ## Goal
 
@@ -32,9 +32,8 @@ Habib can hand out the user AVV (V-05 or later) and sign the FOMF↔Eviplex secr
 
 ## Open points
 
-- PR #1079 is open: switch to the Vercel AI Gateway's EU endpoint and enable TLS for Postgres and Redis. (owner: Shervin since 17 Nov)
-- Whether PR #1093 is deployed to prod is not verified. (owner: Mahyar)
-- The Vercel AI Gateway location and OpenAI retention are not confirmed; Anlage 2.2 says "Ort wird noch bestätigt". The EU endpoint is part of PR #1079 (Shervin); Anlage 2.2 can name it once that is live. (owner: Mahyar)
+- PRs #1079 (merged 17 Nov) and #1093 (merged 10 Nov): live in production not verified. (owner: Mahyar)
+- The Vercel AI Gateway location and OpenAI retention are not confirmed; Anlage 2.2 says "Ort wird noch bestätigt". The EU endpoint came with PR #1079 (merged 17 Nov); Anlage 2.2 can name it once it is confirmed live. (owner: Mahyar)
 - TOMs not verified on 3 Nov: admin roles, least privilege, alerting, subprocessor certificates. Further technical gaps from the review are listed in the review page, not here. (owner: Mahyar)
 - Certificates: Anlage 2 of the secrecy agreement names ISO 27001, BSI C5 and SOC 24/7, and Anlage 2.1 says "ausschließlich zertifizierte Unterauftragnehmer"; FOMF has none of these. Mahyar asked Habib on 4 Nov whether to strike them or set them as a dated goal. (owner: Habib)
 - § 9 unlimited liability between the sister companies. (owner: Habib, with Erfan and counsel)
@@ -63,7 +62,7 @@ Habib can hand out the user AVV (V-05 or later) and sign the FOMF↔Eviplex secr
 | SharePoint | Not searched yet. The draft `Entwurf_AVV-Anlage-Nutzungsbedingungen-Eviplex_V-05.docx` came as a mail attachment (Felix, 5 Oct; Habib, 28 Oct). |
 | Notion | "AVV-Anlage-Nutzungsbedingungen-Eviplex_V-03" (https://app.notion.com/p/fomf/AVV-Anlage-Nutzungsbedingungen-Eviplex_V-03-3ad7afedf3098046b105d08f53461eed), written by Mahyar on 30 Jul. |
 | Linear | Board issue CTO-1 (private team cto-assistant). Project "Professional secrecy compliance (§203 StGB)" (P-EVP-242, lead Mahyar, In Development); issue EVP-1314 "Data processing agreement (AVV) and internal confidentiality obligations" (Todo). Checked 15 Nov 2026. |
-| Other | GitHub `fomf-code/meviq` PRs #1079 (open, with Shervin) and #1093 (merged 10 Nov). GCP project `meviq-prod` (Cloud SQL, Redis, GKE, buckets). |
+| Other | GitHub `fomf-code/meviq` PRs #1079 (merged 17 Nov) and #1093 (merged 10 Nov). GCP project `meviq-prod` (Cloud SQL, Redis, GKE, buckets). |
 
 ## Files
 

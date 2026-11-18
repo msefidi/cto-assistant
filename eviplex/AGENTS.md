@@ -81,7 +81,7 @@ Point to these; do not copy them into this folder.
 
 ## Topics about Eviplex
 
-Active: `avv/` (AVV and secrecy agreement, Google PSA), `partnermodell/` (partner commissions). Recurring: `weekly/`, `changelog/`. Done: `../archive/eviplex-uae-pitch/`. The security assessment `../cybersecurity/` covers Eviplex too.
+Active: `avv/` (AVV and secrecy agreement, Google PSA), `partnermodell/` (partner commissions), `documents/` (patient documents in Eviplex). Recurring: `weekly/`, `changelog/`. Done: `../archive/eviplex-uae-pitch/`. The security assessment `../cybersecurity/` covers Eviplex too.
 
 ## Keeping this folder current
 
