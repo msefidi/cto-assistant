@@ -5,9 +5,6 @@
 # Sensitive: security findings / pentest results stay in SharePoint
 cybersecurity/reports/
 
-# Built Topics overview page (rebuild with topics-overview/build.py)
-topics-overview/topics-overview.html
-
 # Claude Code local state
 .claude/settings.local.json
 .claude/scheduled_tasks.lock
