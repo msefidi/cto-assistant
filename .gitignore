@@ -20,3 +20,6 @@ node_modules/
 temp/
 _debug*
 *.zip
+
+# Board hook state (last session time)
+.claude/linear-board.last
