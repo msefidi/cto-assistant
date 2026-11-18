@@ -2,6 +2,10 @@
 
 Newest first. One entry per event or result. Decisions go in `decisions.md`, one line each. Each entry ends with who said it and where, in brackets. Summarise the source; the original stays where it is.
 
+## 2026-11-18: Board issue reopened; topic stays open for the Google PSA
+
+Mahyar had set CTO-1 to Done at 11:26 UTC ("Shervin merged the PR - so this should be fine now."). He then said the topic stays open because the Google PSA is still to be clarified. CTO-1 is back in Delegated/Waiting (Risch-Kerst), due 20 Nov. (Mahyar, CTO-1 comment and session)
+
 ## 2026-11-18: PR #1079 merged
 
 PR #1079 "feat(avv): verified TLS for Postgres/Redis + EU AI Gateway endpoint" was merged into meviq main on 17 Nov at 19:49 UTC (20:49 CET). Together with #1093 (EU inference region for OpenAI calls and voice transcription, merged 10 Nov), the code now routes model calls through EU endpoints. Production deployment of both is not verified. (GitHub fomf-code/meviq; Mahyar in session)

@@ -6,7 +6,7 @@ Eviplex GmbH needs a data processing agreement (AVV) with the doctors who book P
 
 **As of 18 Nov 2026:** PR #1079 (Vercel AI Gateway EU endpoint, TLS for Postgres and Redis) was merged on 17 Nov at 20:49 CET, after Shervin finished it; the EU model pin was merged earlier (PR #1093, 10 Nov). That both are live in production is not verified. The Google PSA is with Prof. Risch-Kerst for review, answer due 20 Nov. Mahyar sent the review and the wording changes to Habib on 3 and 4 Nov; no reply from Habib, Felix or counsel on the AVV after 4 Nov was found.
 
-- **Next step:** Mahyar confirms #1079 and #1093 are live in production and checks the unverified TOMs; then he tells Habib the documents can go out. Owner: Mahyar.
+- **Next step:** Risch-Kerst answers on the Google PSA; then Google gets the signer's name and sends it for signature. The topic stays open until the PSA is clarified (Mahyar, 18 Nov). In parallel, Mahyar confirms #1079 and #1093 are live in production and checks the unverified TOMs; then he tells Habib the documents can go out. Owner: Mahyar.
 - **Next date:** 20 Nov 2026, Risch-Kerst's answer on the PSA
 - **Waiting on:** Prof. Risch-Kerst for her review of the Google PSA (Google has the final version ready for DocuSign since 11 Nov and needs the signer's name); Habib for the certificate wording and § 9 liability (with Erfan and counsel); Felix for the Art. 26 question and the DPIA.
 
