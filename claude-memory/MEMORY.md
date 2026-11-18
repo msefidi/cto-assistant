@@ -12,7 +12,7 @@
 - [folm.org short links](folm-shortlink-domain.md) — link.folm.org is FOMF's T2M short-link domain, not a typo
 - [FOMF team mail addresses](fomf-team-mail-addresses.md) — intern_events@, sponsoring@fomf.de/.at, kongress@fomf.ch, marketing@; no B2B group
 - [ÄKW](aekw-tender.md) — Ärztekammer Wien cooperation; confidential until ÄKW releases it; brief in platform/aekw/
-- [Security assessment vendor](security-assessment-vendor.md) — Blaze (M365, GCP, pentests); agreed dates cost money; brief in cybersecurity/
+- [Security assessment vendor](security-assessment-vendor.md) — Blaze (M365, GCP, pentests) + IT security mgmt with Andreas; agreed dates cost money; brief in cybersecurity/
 - [Team-service agents](team-service-agents.md) — when a Claude helper becomes a team service; Claude Tag vs Managed Agents vs Copilot (Oct 2026)
 - [Eviplex AVV review](eviplex-avv-review.md) — user AVV + FOMF↔Eviplex § 203 agreement; documents = end state; brief in eviplex/avv/
 - [Eviplex partner model](eviplex-medichub-partner-contract.md) — Medichub/Webop commission model; rates only from decisions.md; brief in eviplex/partnermodell/
