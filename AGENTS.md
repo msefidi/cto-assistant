@@ -96,7 +96,24 @@ A **topic** is a folder of work. A topic that belongs to one product lives insid
 - **A topic changes group** (a one-off analysis turns into a project, a recurring job gets a goal): add the files the new group needs and move its line, between `TOPICS.md` and `TOPICS-DONE.md` if needed. A topic that comes back moves out of `archive/` again.
 - **Product folders:** `platform/` and `eviplex/` each hold one product. Their `AGENTS.md` is the product brief and `knowledge/` holds what stays true (offer or tiers, positioning, definitions and findings, data, stack, people, how it is run); every other subfolder is a topic about that product. Before work on a product, read its `AGENTS.md`. When you learn a lasting fact, rewrite the matching file in `knowledge/` (who said it, when), not memory; status and next steps stay in the topics. Point to sources (repo, Notion, Linear) instead of copying them.
 - **Not topics:** the product folders themselves and their `knowledge/`; `_template/` and `artifact-index/` (workspace tooling); `archive/` (finished topics). They have no line in `TOPICS.md`.
-- **Board:** every active topic has one issue in Mahyar's private Linear team **cto-assistant** (key `CTO`). The board uses Linear's default statuses plus *Delegated/Waiting*: an issue Mahyar has handed to someone, or that waits on someone else, and the issue names who. *Done* and *Canceled* end an issue. *Backlog* holds every issue not due in the current week (Monday to Sunday), so the view *Scheduled* (https://linear.app/fomf/team/CTO/view/scheduled-e6b5316fa0d3) is Mahyar's week plan. When an issue's due date falls in the current week, move it out of Backlog. The issue holds a short status, the next step, the next date as due date, a label (Platform, Eviplex, Medical, Cross) and, for a topic, the folder path; the brief stays the record. At the start of a session that works on topics, read the board (`list_issues`, team `CTO`) and write into the brief whatever Mahyar changed there (status, due date, description). At the end, update the issue to match the brief. Never put contract terms, prices or commission rates, security findings or a confidential partner's name on an issue; they stay in the repo. Never link or mention another team's issue, project or pull request on a board issue: Linear shows the reference on the other side, and a linked GitHub PR can move the issue when it merges. Name the project in words instead.
+- **Board:** every active topic has one issue on Mahyar's Linear board, next to his tasks; how new work is captured and when a task becomes a topic is in "Board" below.
+
+### Board
+
+Mahyar's private Linear team **cto-assistant** (key `CTO`) holds all his work as issues of three kinds: a **task** (the issue is its whole record), a **topic issue** (one per active topic; the brief stays the record) and a **sub-issue** (a task that belongs to a topic, filed under its topic issue).
+
+- **New work:** create an issue in `CTO`; it lands in *Triage*. Sorting empties Triage: work that belongs to an open topic becomes a sub-issue of its topic issue (results go to that topic's log, decisions to its `decisions.md`); everything else is a task.
+- **A task becomes a topic** as soon as one of these happens, or is certain to:
+  1. it must keep something an issue may not hold: contract terms, prices, counsel advice, security findings, a confidential name;
+  2. it produces files that rebuild an output: a draft, analysis, SQL, deck or contract;
+  3. a decision is made that later work relies on;
+  4. continuing needs a catch-up across several rounds, people or threads. Waiting for one reply is still a task.
+
+  Then start the topic (section "One shape for active topics"). The issue keeps its number and becomes the topic issue, its description and comments become the first log entry, and related issues become its sub-issues. An output finished within one session goes to `archive/` instead.
+- **Statuses:** *Triage* is unsorted. *Backlog* holds every issue not due in the current week (Monday to Sunday) or without a due date. *Todo* and *In Progress* are Mahyar's move. *Delegated/Waiting* is with someone else, and the issue names who. *Done* and *Canceled* end an issue. The view *Week Plan* (https://linear.app/fomf/view/9350eb27-d908-4104-8569-d6e8516958af) shows everything outside Backlog, so it is Mahyar's week plan: when an issue's due date falls in the current week, move it out of Backlog.
+- **Issue content:** a short status, the next step, the next date as due date, a label (Platform, Eviplex, Medical, Cross) and, on a topic issue, the folder path.
+- **Sync:** at the start of a session that works on topics, read the board (`list_issues`, team `CTO`) and write into the brief whatever Mahyar changed there (status, due date, description). At the end, update the topic issue to match the brief.
+- **Guardrails:** contract terms, prices, commission rates, security findings and confidential partner names stay in the repo, never on an issue. Name another team's issue, project or pull request in words, never as a link or identifier: Linear shows the reference on the other side, and a linked GitHub PR can move the issue when it merges.
 
 ### One shape for active topics
 
@@ -109,7 +126,7 @@ Every active topic has the same four files:
 | `docs/log.md` | Events and results, newest first; each entry names who and where | Appending only |
 | `CLAUDE.md` | `@AGENTS.md`, an import, so Claude Code loads the brief | Never |
 
-- **Starting one:** copy `_template/` to a kebab-case folder, inside the product folder when it belongs to one product, else at the top level. Done when every heading of the brief is filled (write "none" where there is nothing), the log has its first entry, decisions made so far have their lines, `TOPICS.md` has its line and the board has its issue.
+- **Starting one:** copy `_template/` to a kebab-case folder, inside the product folder when it belongs to one product, else at the top level. Done when every heading of the brief is filled (write "none" where there is nothing), the log has its first entry, decisions made so far have their lines, `TOPICS.md` has its line and the board has its topic issue (the existing issue when the topic grew from a task).
 - **Working in one:** read the brief, the decisions and the newest log entries first. Done when each decision of the session has its line in `decisions.md`, each result is logged and the brief's Status and the board issue match it.
 - **"Catch up on X":** search every row of X's source map from the newest log date to today. Done when the news is logged, new decisions have their lines, the Status and the board issue are updated and each new thread, chat or person is in the source map. Then tell Mahyar what changed.
 - **Sources stay where they are.** The log summarises an email, chat or contract with who, where and when. The original stays in Outlook, Teams or SharePoint.
