@@ -13,6 +13,7 @@ Every topic in this workspace, one line each, grouped. Finished topics and one-o
 | `eviplex/documents/` | Patient documents in Eviplex: use case, MDR, § 203/CH, hosting (AlpineAI benchmark) | CTO-22 |
 | `platform/syfat/` | SYFAT commercials, 2× revenue by Sep 2027 | CTO-4 |
 | `platform/on-demand-accredited/` | On-Demand Accredited commercials, 2× revenue by Sep 2027 | CTO-5 |
+| `platform/oekg/` | ÖKG course on fomf.at, 50/50 revenue share; pilot for society partner courses | CTO-26 |
 
 ## Recurring
 

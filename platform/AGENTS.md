@@ -64,7 +64,7 @@ The medical team owns course content. Habib's EB project "PA-analysis" (SharePoi
 
 ## Topics about the platform
 
-Active: `syfat/`, `on-demand-accredited/`, `aekw/`; the security assessment `../cybersecurity/` covers it too. Done: the B2C analyses in `../archive/` (listed at the end of `knowledge/b2c-members.md`).
+Active: `syfat/`, `on-demand-accredited/`, `aekw/`, `oekg/`; the security assessment `../cybersecurity/` covers it too. Done: the B2C analyses in `../archive/` (listed at the end of `knowledge/b2c-members.md`).
 
 ## Keeping this folder current
 
