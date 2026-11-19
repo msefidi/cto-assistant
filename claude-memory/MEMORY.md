@@ -21,3 +21,4 @@
 - [Platform product folder](platform-product.md) — offer, products, B2C definitions and findings, data, stack: read platform/AGENTS.md first
 - [M365 connector is read-only](m365-connector-read-only.md) — no drafts/sending; open a pre-filled Outlook compose window via mailto
 - [Verify live state](verify-live-state.md) — check gh/Linear/mail before calling something open or pending; briefs lag reality
+- [No email draft files](no-email-draft-files.md) — mail drafts go in chat, not repo files; the mail is the record

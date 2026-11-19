@@ -4,11 +4,11 @@ Eviplex GmbH needs a data processing agreement (AVV) with the doctors who book P
 
 ## Status
 
-**As of 18 Nov 2026:** PR #1079 (Vercel AI Gateway EU endpoint, TLS for Postgres and Redis) was merged on 17 Nov at 20:49 CET, after Shervin finished it; the EU model pin was merged earlier (PR #1093, 10 Nov). That both are live in production is not verified. The Google PSA is with Prof. Risch-Kerst for review, answer due 20 Nov. Mahyar sent the review and the wording changes to Habib on 3 and 4 Nov; no reply from Habib, Felix or counsel on the AVV after 4 Nov was found.
+**As of 18 Nov 2026:** Prof. Risch-Kerst answered on the Google PSA on 18 Nov: sign it for DE and AT, but it lacks technical and organisational assurances, which should become contract terms in the Enterprise Agreement at the latest (details in the log). Mahyar sent the reply to Google (Stefanie Wonneberger) on 18 Nov, 16:38 CET: sign for DE and AT, DocuSign to Habib, questions on counsel's missing assurances, EA call offered; he also thanked counsel. No DocuSign or answer from Google yet. For the Enterprise Agreement Stefanie waits for Alex Vassileva's commit proposal of Dec 2025, which Mahyar promised "tonight or tomorrow". PR #1079 (Vercel AI Gateway EU endpoint, TLS for Postgres and Redis) was merged on 17 Nov and PR #1093 (EU model pin) on 10 Nov; that both are live in production is not verified. Mahyar sent the review and the wording changes to Habib on 3 and 4 Nov; no reply from Habib, Felix or counsel on the AVV after 4 Nov was found.
 
-- **Next step:** Risch-Kerst answers on the Google PSA; then Google gets the signer's name and sends it for signature. The topic stays open until the PSA is clarified (Mahyar, 18 Nov). In parallel, Mahyar confirms #1079 and #1093 are live in production and checks the unverified TOMs; then he tells Habib the documents can go out. Owner: Mahyar.
-- **Next date:** 20 Nov 2026, Risch-Kerst's answer on the PSA
-- **Waiting on:** Prof. Risch-Kerst for her review of the Google PSA (Google has the final version ready for DocuSign since 11 Nov and needs the signer's name); Habib for the certificate wording and § 9 liability (with Erfan and counsel); Felix for the Art. 26 question and the DPIA.
+- **Next step:** Mahyar forwards Alex's commit proposal ("Proposal Commit _ FomF", 4 Dec 2025) to Stefanie; Google sends the PSA to Habib by DocuSign and answers the assurance questions. The missing assurances go into the Enterprise Agreement talks. The topic stays open until the PSA is signed (Mahyar, 18 Nov). In parallel, Mahyar confirms #1079 and #1093 are live in production and checks the unverified TOMs; then he tells Habib the documents can go out. Owner: Mahyar.
+- **Next date:** 19 Nov 2026, commit proposal forwarded to Google
+- **Waiting on:** Habib for the certificate wording and § 9 liability (with Erfan and counsel); Felix for the Art. 26 question and the DPIA.
 
 ## Goal
 
@@ -39,7 +39,8 @@ Habib can hand out the user AVV (V-05 or later) and sign the FOMF↔Eviplex secr
 - § 9 unlimited liability between the sister companies. (owner: Habib, with Erfan and counsel)
 - Braintrust: Art. 26 (joint controllership) or quality checks on Eviplex's behalf under Art. 28. (owner: Felix, with counsel)
 - DPIA status. (owner: Felix)
-- Google PSA: the pay-as-you-go version is final and ready for DocuSign (11 Nov); Google needs the signer's name and any questions from counsel. With Prof. Risch-Kerst for review since 16 Nov, answer due 20 Nov. It does not cover Switzerland. Until it is signed, Google is a gap in the § 203 chain. (owner: Mahyar and Habib)
+- Google PSA: the pay-as-you-go version is final and ready for DocuSign (11 Nov). Counsel says sign it for DE and AT (18 Nov); Habib signs (Mahyar's mail to Google, 18 Nov). Which FOMF entity signs is not recorded (it must match the Google Cloud account holder). It does not cover Switzerland. Until it is signed, Google is a gap in the § 203 chain. (owner: Mahyar and Habib)
+- Counsel's missing assurances (human and automated access, training use, retention and deletion, third-country access and government requests, audit rights): ask Google where its Cloud terms cover them; the rest becomes terms of the Enterprise Agreement. (owner: Mahyar)
 - The review planned Anlagen 2.1 and 2.2 as tracked changes in a V-06 with legal entity names and a data-flow diagram. Whether V-06 exists is not recorded. (owner: Mahyar)
 - Habib announced on 28 Oct a revised terms of use that separates Free and paid; not seen yet. (owner: Habib)
 - The review page in this folder lists security gaps and is tracked in git. the root `AGENTS.md` puts security findings in `cybersecurity/reports/`, which git ignores. Whether to move it is for Mahyar to decide. (owner: Mahyar)
