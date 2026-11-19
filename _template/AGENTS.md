@@ -4,7 +4,7 @@
 
 ## Status
 
-**As of <DD Mon YYYY>:** <where it stands, in one or two sentences>
+**As of <DD Mon YYYY>:** <where it stands now, in one or two sentences: what exists, what is pending, who has the ball. State, not story: no "X told Y on …"; that goes in the log>
 
 - **Next step:** <what, who, by when>
 - **Next date:** <deadline or meeting, or "none">

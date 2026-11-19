@@ -4,9 +4,9 @@ FOMF bid in the public tender of the Ärztekammer Wien (ÄKW) for a streaming pl
 
 ## Status
 
-**As of 13 Nov 2026:** Won, unofficially. Dr. Glaser (ÄKW) told Andreas Eberl by phone on 11 Nov; ÄKW has not released the award yet. Nobody has planned the delivery: there is no owner per build item and no Linear project.
+**As of 13 Nov 2026:** Won unofficially (by phone, 11 Nov); the official award is pending. Delivery is not planned: no owner per build item, no Linear project.
 
-- **Next step:** plan the delivery for 01.02.2027 (proposed on 13 Nov, not yet confirmed by Mahyar). The first item would be the silent-SSO prototype.
+- **Next step:** plan the delivery for 01.02.2027 (proposed, not yet confirmed by Mahyar). The first item would be the silent-SSO prototype.
 - **Next date:** official award, which the tender schedules for KW 49 (30 Nov to 6 Dec 2026). Service start 01.02.2027.
 - **Waiting on:** ÄKW and Breitenfeld for the official award.
 

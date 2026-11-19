@@ -4,7 +4,7 @@ Since September 2026 Mahyar owns the commercials of SYFAT (Systematisiertes Fach
 
 ## Status
 
-**As of 15 Nov 2026:** The revenue baseline (workstream 1) is not done; nothing was logged here between 22 Sep and this catch-up. The Linear project "SYFAT SEO Baseline" has not moved since 22 Sep: all 14 issues are in Backlog, PLA-2014 is unassigned, and the target date of 23 Oct has passed. Marie is preparing a SYFAT user survey; she, Vahid and Mahyar discussed it on 12 Nov.
+**As of 15 Nov 2026:** The revenue baseline (workstream 1) is not done. The Linear project "SYFAT SEO Baseline" is stalled: all 14 issues in Backlog, PLA-2014 unassigned, target date 23 Oct passed. Marie is preparing a SYFAT user survey with Vahid and Mahyar.
 
 - **Next step:** to confirm with Mahyar. Proposed, not confirmed by Mahyar: produce the last-12-months baseline, then re-plan or close the Linear project.
 - **Next date:** none recorded. Marie's Notion plan: user survey 12/2026 to 02/2027, SYFAT Psychiatrie 11/2026 to 01/2027.

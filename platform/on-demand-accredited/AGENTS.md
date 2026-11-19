@@ -4,7 +4,7 @@ Since September 2026 Mahyar owns the commercials of the On-Demand Accredited pro
 
 ## Status
 
-**As of 15 Nov 2026:** The revenue baseline (workstream 1) is not done; nothing was logged here between 22 Sep and this catch-up. The brief of 22 Sep said the product had no owner, marketing or docs. Since 23 Oct a Notion project page names Isgard Eyberg as project lead and Tina Hoffmann as marketing, with a roadmap and a marketing overview; Isgard shared it in the medical team meeting chat on 5 Nov.
+**As of 15 Nov 2026:** The revenue baseline (workstream 1) is not done. Isgard Eyberg is project lead and Tina Hoffmann does marketing, per a Notion project page (since 23 Oct) with a roadmap and a marketing overview. How that page and Mahyar's commercial mandate fit together is open.
 
 - **Next step:** to confirm with Mahyar. Proposed, not confirmed by Mahyar: produce the last-12-months baseline and agree with Isgard how her project page and this mandate fit together.
 - **Next date:** none recorded.

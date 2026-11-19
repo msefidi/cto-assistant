@@ -6,12 +6,12 @@ Since 18 Nov 2026 this folder also holds the start of **IT security management**
 
 ## Status
 
-**As of 16 Nov 2026:** Contract v4 (#2026.11.014, €31,900 net, 29 days) and Blaze's Art. 28 DPA were signed on 9 Nov. Blaze proposed phase dates on 12 Nov, starting with M365 on 23–26 Nov. Those dates do not work: Andreas is in event high season until 28 Nov, Mahyar is away from 14 Dec, and nobody can support the work from 25 Dec to 5 Jan. On 16 Nov Mahyar sent Blaze a weekly timeline (`email-draft-blaze-dates-2026-11-16.md`) in which Blaze fits its own dates: only Phase 1 and its debrief in December, GCP and everything else from 6 Jan, same phase order.
+**As of 18 Nov 2026:** Contract v4 (#2026.11.014, €31,900 net, 29 days) and Blaze's Art. 28 DPA signed since 9 Nov. Phase dates are not fixed. FOMF's weekly timeline (`email-draft-blaze-dates-2026-11-16.md`) is with Blaze: only Phase 1 and its debrief in December, GCP and everything else from 6 Jan, same phase order. Constraints: Andreas is in event high season until 28 Nov, Mahyar is away from 14 Dec, nobody can support the work from 25 Dec to 5 Jan. IT security management with Andreas has a first baseline (`it-security-management-2026-11-18.md`).
 
 - **Next step:** wait for Blaze to confirm the weeks and set exact dates; make sure Andreas holds the week of 7 Dec (he called it optimistic) and that GCP access for Blaze is ready by 6 Jan.
 - **Next date:** proposed weeks, one per part: Phase 1 kick-off week of 30 Nov; M365 week of 7 Dec, with the debrief by 11 Dec; GCP 6–8 Jan, kick-off in the same week; OSINT week of 11 Jan; GKE week of 18 Jan; Eviplex pentest from 25 Jan; learning-platform pentest from 1 Feb 2027.
-- **IT security management (18 Nov):** Mahyar and Andreas wrote a first baseline in their 1:1 (`it-security-management-2026-11-18.md`). They meet in person on 21 Dec to set the 2027 roadmap, adjusted with Blaze's Phase 1 (M365) input. Mahyar follows up on the Mac surveys (CTO-24).
-- **Waiting on:** Blaze's answer to the timeline sent on 16 Nov. The team was onboarded the same day in #p-cybersecurity-assessment; post the exact dates there once Blaze confirms.
+- **IT security management:** next is the in-person meeting on 21 Dec to set the 2027 roadmap, adjusted with Blaze's Phase 1 (M365) input. Mahyar follows up on the Mac surveys (CTO-24).
+- **Waiting on:** Blaze, to confirm the timeline. Once confirmed, post the exact dates in #p-cybersecurity-assessment.
 
 ## Goal
 

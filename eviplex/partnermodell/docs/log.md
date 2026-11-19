@@ -2,6 +2,10 @@
 
 Newest first. One entry per event or result. Decisions go in `decisions.md`, one line each. Each entry ends with who said it and where, in brackets. Summarise the source; the original stays where it is.
 
+## 2026-11-19: Medichub acknowledges, expects the agreement next week
+
+Cristina Marin thanked Mahyar for the update and the feedback on the campaign and wrote that Medichub looks forward to "receiving the agreement next week"; they offered help in the meantime. She reads the 25 Nov promise as the agreement itself, not only a reply. No new questions. Ionut Stroea, Simona Melnic, Wafa and Habib in copy. (Cristina Marin, mail "Re: UTM Parameters Eviplex 4 Medichub", 19 Nov 09:12)
+
 ## 2026-11-18: holding reply to Medichub
 
 Mahyar wrote to Ionut Stroea, Cristina Marin and Simona Melnic (Wafa and Habib in copy) that he is now working on the topic for FOMF, that FOMF wants a written partner agreement before go-live, and that he will come back by mid next week, probably Wednesday 25 Nov; that message should also answer their open launch questions. Sent as a new mail with the old subject, not inside the 12 Nov thread. (Mahyar, mail "RE: UTM Parameters Eviplex 4 Medichub", 18 Nov 12:33)

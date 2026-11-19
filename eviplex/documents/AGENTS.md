@@ -4,7 +4,7 @@ How doctors could bring their own documents (hospital letters, specialist report
 
 ## Status
 
-**As of 18 Nov 2026:** Not started. Mahyar wants to think through how documents fit into Eviplex before anything goes to the EVP team. The reply to Benignia about AlpineAI is still open.
+**As of 18 Nov 2026:** Not started. Nothing goes to the EVP team until Mahyar has thought through how documents fit into Eviplex. The reply to Benignia about AlpineAI is open.
 
 - **Next step:** reply to Benignia: AlpineAI comparison, no conflict with a call with Hansueli Jud (Mahyar, 18 Nov). Then write a first product framing that covers the open points below (Mahyar).
 - **Next date:** 18 Mar 2027, the doctors' networking meeting in Basel where Eviplex is presented alongside AlpineAI (Max presents, Mahyar attends)

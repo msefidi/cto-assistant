@@ -1,0 +1,126 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Topic session flow</title>
+<!-- How an agent session in an active topic uses the board, the brief (AGENTS.md),
+     docs/decisions.md and docs/log.md. The rules themselves are in the root AGENTS.md,
+     section "One shape for active topics"; this page only draws them. If they change, change both. -->
+<style>
+  :root{--gap:10px;--radius:8px;--font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;--font-mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+    --background:#ffffff;--foreground:#1a1a1a;--muted-foreground:#666;--card:#f7f7f8;--secondary:#ececef;--border:#d9d9de;--warning:#b45309;
+    --chart-1:#3b6fe0;--chart-2:#14a38b;--chart-3:#e0a91b;--chart-4:#8b5cf6}
+  @media (prefers-color-scheme:dark){:root{--background:#111113;--foreground:#ececec;--muted-foreground:#9a9aa2;--card:#1b1b1f;--secondary:#26262b;--border:#33333a;--warning:#f59e0b;
+    --chart-1:#5b8cff;--chart-2:#2dd4b4;--chart-3:#f5c542;--chart-4:#a78bfa}}
+  body{margin:0;padding:16px;max-width:760px;background:var(--background);font-family:var(--font-sans);font-size:13px;line-height:1.45;color:var(--foreground)}
+  .wrap{display:flex;flex-direction:column;gap:14px}
+  .phase{display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:start}
+  .tag{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted-foreground);padding-top:10px}
+  .tag b{display:block;font-size:15px;letter-spacing:0;text-transform:none;color:var(--foreground)}
+  .row{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap);align-items:stretch}
+  .box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:10px 12px}
+  .box h4{margin:0 0 3px;font-size:12.5px;font-family:var(--font-mono);font-weight:600}
+  .box p{margin:0;color:var(--muted-foreground);font-size:12px}
+  .brief{border-left:4px solid var(--chart-1)}
+  .log{border-left:4px solid var(--chart-2)}
+  .dec{border-left:4px solid var(--chart-3)}
+  .board{border-left:4px solid var(--chart-4)}
+  .other{border-left:4px solid var(--border)}
+  .event{background:var(--secondary);border:1px dashed var(--border);border-radius:var(--radius);padding:10px 12px;margin-bottom:8px;font-size:12.5px}
+  .event b{font-weight:600}
+  .q{display:grid;grid-template-columns:1fr auto 1.35fr;gap:8px;align-items:center;margin-bottom:6px}
+  .q .ask{font-size:12.5px}
+  .q .ask small{display:block;color:var(--muted-foreground);font-size:11.5px}
+  .pill{font-size:11px;font-weight:600;padding:2px 7px;border-radius:999px;background:var(--secondary);color:var(--muted-foreground);white-space:nowrap}
+  .pill.always{background:var(--chart-2);color:var(--background)}
+  .q .box{flex:none}
+  hr{border:0;border-top:1px solid var(--border);margin:2px 0}
+  .compare{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+  .compare .box h4{margin-bottom:6px}
+  .kv{font-size:12px;margin:0}
+  .kv dt{color:var(--muted-foreground);font-size:11px;text-transform:uppercase;letter-spacing:.04em;margin-top:5px}
+  .kv dd{margin:0}
+  .ex{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px}
+  .ex h3{margin:0 0 8px;font-size:13px}
+  .ex table{width:100%;border-collapse:collapse;font-size:12px}
+  .ex td{padding:5px 6px;border-top:1px solid var(--border);vertical-align:top}
+  .ex td:first-child{font-family:var(--font-mono);white-space:nowrap;width:1%;padding-right:12px}
+  .ex .no{color:var(--muted-foreground)}
+  .ex .warn{color:var(--warning)}
+  @media (max-width:560px){
+    .phase{grid-template-columns:1fr}
+    .tag{padding-top:0}
+    .compare{grid-template-columns:1fr}
+    .q{grid-template-columns:1fr}
+    .row{grid-template-columns:1fr 1fr}
+  }
+</style></head><body><div class="wrap">
+
+<div class="phase">
+  <div class="tag">1 · Start<b>Read</b></div>
+  <div class="row">
+    <div class="box board"><h4>① Board</h4><p>Hook prints open + changed issues. Copy Mahyar's changes into the brief.</p></div>
+    <div class="box brief"><h4>② AGENTS.md</h4><p>The brief: what is true now.</p></div>
+    <div class="box dec"><h4>③ decisions.md</h4><p>Check before reusing any term.</p></div>
+    <div class="box log"><h4>④ log.md</h4><p>Newest entries only.</p></div>
+  </div>
+</div>
+
+<div class="phase">
+  <div class="tag">2 · During<b>Each event</b></div>
+  <div>
+    <div class="event"><b>Something happens:</b> a mail, chat, meeting, or a result of the session's own work (draft, analysis, finding).</div>
+    <div class="q">
+      <div class="ask">It happened<small>who, where, when</small></div>
+      <span class="pill always">always</span>
+      <div class="box log"><h4>log.md · append</h4><p>New entry on top. Summarise; the original stays in Outlook/Teams.</p></div>
+    </div>
+    <div class="q">
+      <div class="ask">Was something decided?<small>later work will rely on it</small></div>
+      <span class="pill">if yes</span>
+      <div class="box dec"><h4>decisions.md · append</h4><p>One line, who and where. A changed decision gets a new line saying what it replaces.</p></div>
+    </div>
+    <div class="q">
+      <div class="ask">Does it change today's state?<small>status, next step, open points, people, sources</small></div>
+      <span class="pill">if yes</span>
+      <div class="box brief"><h4>AGENTS.md · rewrite</h4><p>Edit in place so it reads true today. State, not story.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="phase">
+  <div class="tag">3 · End<b>Sync</b></div>
+  <div class="row">
+    <div class="box board"><h4>Board issue</h4><p>Status, next step and due date match the brief.</p></div>
+    <div class="box other"><h4>TOPICS.md</h4><p>Only when a topic opens, changes group or finishes.</p></div>
+    <div class="box other"><h4>Artifact Index</h4><p>Only when an output was made or changed.</p></div>
+    <div class="box other"><h4>Memory</h4><p>Pointer note only. Never status or history.</p></div>
+  </div>
+</div>
+
+<hr>
+
+<div class="compare">
+  <div class="box brief"><h4>AGENTS.md (brief)</h4><dl class="kv">
+    <dt>Answers</dt><dd>What is true now?</dd>
+    <dt>Changes by</dt><dd>Rewriting</dd>
+    <dt>Test</dt><dd>Read only this: can you act correctly today?</dd></dl></div>
+  <div class="box log"><h4>docs/log.md</h4><dl class="kv">
+    <dt>Answers</dt><dd>What happened, and who said it?</dd>
+    <dt>Changes by</dt><dd>Appending, newest first</dd>
+    <dt>Test</dt><dd>Read only this: can you rebuild the history?</dd></dl></div>
+  <div class="box dec"><h4>docs/decisions.md</h4><dl class="kv">
+    <dt>Answers</dt><dd>What did we settle?</dd>
+    <dt>Changes by</dt><dd>Appending, one line each</dd>
+    <dt>Test</dt><dd>Is this rate or term still valid?</dd></dl></div>
+</div>
+
+<div class="ex">
+  <h3>Worked example: Medichub's reply in <code>eviplex/partnermodell/</code> (19 Nov 2026)</h3>
+  <table>
+    <tr><td>log.md</td><td>Appended: Medichub acknowledges, expects the agreement next week. Cristina Marin, mail, 19 Nov 09:12.</td></tr>
+    <tr><td>decisions.md</td><td class="no">Untouched: nothing was decided.</td></tr>
+    <tr><td>AGENTS.md</td><td>Next step rewritten: the 25 Nov mail must deliver the agreement or say what comes instead. <span class="warn">First draft also added "On 19 Nov Cristina replied…" to the Status: story, not state. Trimmed to "Medichub expects the agreement by 25 Nov".</span></td></tr>
+    <tr><td>Board</td><td>CTO-3 status synced; CTO-11 closed as a sub-issue.</td></tr>
+  </table>
+</div>
+
+</div></body></html>

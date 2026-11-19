@@ -4,9 +4,9 @@ The commission model and the partner contract for Eviplex sales partners. The fi
 
 ## Status
 
-**As of 18 Nov 2026:** The concept is settled and a contract draft v0.1 is ready, with drafting notes and a cover letter to counsel Risch-Kerst (all 12 Nov). It has not been sent to counsel. On 18 Nov Mahyar told Medichub that FOMF wants a written partner agreement before go-live and that he will come back by Wednesday 25 Nov, answering their open launch questions too.
+**As of 19 Nov 2026:** Concept settled. Contract draft v0.1, drafting notes and the cover letter to counsel Risch-Kerst are ready since 12 Nov, not yet sent to counsel. Medichub knows a written agreement comes before go-live and expects it by Wed 25 Nov, together with answers to their launch questions.
 
-- **Next step:** agree with Wafa (call asked for on 12 Nov), fill the four placeholders in the cover letter and send the draft to Risch-Kerst (see Anhang C of `vertrag/Entwurfsnotizen v0.1.md`). Prepare the reply to Medichub for 25 Nov.
+- **Next step:** agree with Wafa (call asked for on 12 Nov), fill the four placeholders in the cover letter and send the draft to Risch-Kerst (see Anhang C of `vertrag/Entwurfsnotizen v0.1.md`). Prepare the reply to Medichub for 25 Nov. Medichub expects the agreement itself by then; if counsel has not reviewed it, the reply must say what they get instead (e.g. the terms sheet, or a date for the reviewed contract).
 - **Next date:** 25 Nov 2026, promised reply to Medichub.
 - **Waiting on:** Mahyar (sending to counsel, reply to Medichub).
 
