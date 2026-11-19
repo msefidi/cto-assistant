@@ -17,6 +17,8 @@
 - [Eviplex AVV review](eviplex-avv-review.md) — user AVV + FOMF↔Eviplex § 203 agreement; documents = end state; brief in eviplex/avv/
 - [Eviplex partner model](eviplex-medichub-partner-contract.md) — Medichub/Webop commission model; rates only from decisions.md; brief in eviplex/partnermodell/
 - [Eviplex documents](eviplex-documents.md) — patient documents / PDF upload; AlpineAI = Swiss benchmark; brief in eviplex/documents/
+- [Pharma MSAs](pharma-msa.md) — Moderna & Madrigal MSAs: IT security feedback + sub-processor list for Habib; names/terms off the board; brief in platform/pharma-msa/
+- [TMN press](tmn-press.md) — TMN = The Medical Network, press agency (mostly Eviplex); does press move Eviplex traffic; brief in eviplex/tmn-press/
 - [Eviplex product folder](eviplex-product.md) — what Eviplex is, tiers, claims, support, brand, Linear: read eviplex/AGENTS.md first
 - [Platform product folder](platform-product.md) — offer, products, B2C definitions and findings, data, stack: read platform/AGENTS.md first
 - [M365 connector is read-only](m365-connector-read-only.md) — no drafts/sending; open a pre-filled Outlook compose window via mailto

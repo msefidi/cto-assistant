@@ -66,6 +66,8 @@ The medical team owns course content. Habib's EB project "PA-analysis" (SharePoi
 
 Active: `syfat/`, `on-demand-accredited/`, `aekw/`; the security assessment `../cybersecurity/` covers it too. Done: the B2C analyses in `../archive/` (listed at the end of `knowledge/b2c-members.md`).
 
+Also active: `pharma-msa/` (IT security and sub-processor input for pharma MSAs).
+
 ## Keeping this folder current
 
 - Rewrite a line when its fact changes, and put who said it and when in brackets. Do not add "update" paragraphs.
