@@ -4,15 +4,13 @@ Which AI platform FOMF gives its non-technical departments (sales, marketing, ev
 
 ## Status
 
-**As of 19 Nov 2026:** No decision. Preference: keep Claude if the data question can be solved; the issue is processing outside the EU for sales (sponsor data) and events (speaker contracts). The facts are researched (`research-claude-vs-eu-hosting-2026-11-19.md`); the questions for Anthropic, counsel and Langdock are not yet sent. Claude Enterprise runs for the non-technical departments (35 seats, prepaid to Jul 2027); Product & Engineering stays on Claude Team. The Glean evaluation is paused since 5 Nov. One Langdock Business seat is on trial until 22 Nov. Google has never sent the Gemini Enterprise offer (CTO-7). Mahyar has the ball.
+**As of 19 Nov 2026:** No decision. Preference: keep Claude if the data question can be solved; the issue is processing outside the EU for sales (sponsor data) and events (speaker contracts). The questions for Anthropic, counsel and Langdock are not yet sent. Claude Enterprise runs for the non-technical departments (35 seats, prepaid to Jul 2027); Product & Engineering stays on Claude Team. The Glean evaluation is paused since 5 Nov. One Langdock Business seat is on trial until 22 Nov. Google has never sent the Gemini Enterprise offer (CTO-7). Mahyar has the ball.
 
 - **Next step:** pick the option to pursue; send the open questions to the Anthropic account team and counsel (Mahyar)
 - **Next date:** 9 Dec 2026, when Microsoft switches Claude on in Copilot for tenants without a setting (CTO-25, due 4 Dec); Claude Enterprise renewal in Jul 2027
 - **Waiting on:** Google, for the Gemini Enterprise offer (open since Jul 2026)
 
 ## What we know (19 Nov 2026)
-
-Details and sources in `research-claude-vs-eu-hosting-2026-11-19.md`.
 
 - **claude.ai Enterprise has no EU residency.** Data is stored in the US; processing may run in the US, Europe, Asia or Australia. Only a US-only inference setting exists. EU-only Claude exists only via cloud APIs (AWS Bedrock EU profiles; Vertex), not in claude.ai.
 - **No zero retention for Enterprise chat or Cowork.** Default is indefinite; custom retention down to 30 days (projects must be set separately). Local Cowork history sits on laptops outside retention. No training on FOMF data, except chats sent as feedback (kept 5 years; admins can switch rating off).
@@ -86,4 +84,3 @@ A decision on the platform for the non-technical departments, made in time to ac
 |---|---|
 | `docs/decisions.md` | Every decision, one line each, newest first |
 | `docs/log.md` | Dated record of events and results, newest first |
-| `research-claude-vs-eu-hosting-2026-11-19.md` | Sourced research: Claude data location, retention, DPA; Langdock; GDPR and DSK; Copilot with Claude |
