@@ -15,6 +15,7 @@ Every topic in this workspace, one line each, grouped. Finished topics and one-o
 | `eviplex/tmn-press/` | Does press coverage by The Medical Network (TMN) move Eviplex traffic? | CTO-28 |
 | `platform/syfat/` | SYFAT commercials, 2× revenue by Sep 2027 | CTO-4 |
 | `platform/on-demand-accredited/` | On-Demand Accredited commercials, 2× revenue by Sep 2027 | CTO-5 |
+| `platform/oekg/` | Society partnerships, ÖKG pilot: partner course, digital Jahrestagung, society All Access package | CTO-26 |
 
 ## Recurring
 
