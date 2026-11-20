@@ -1,18 +1,18 @@
 # ÖKG: partner courses from medical societies
 
-The Österreichische Kardiologische Gesellschaft (ÖKG) would host a course on fomf.at, and FOMF and the ÖKG would split the revenue 50/50. Sina and Anya Hubmayer want to do this. Mahyar is to write the concept: one model that works for the ÖKG and for any other society. Started 19 Nov 2026. Anya has been in contact with the ÖKG since Aug 2026 about patronage, and the ÖKG wants a say in the content, possibly from 2027.
+The Österreichische Kardiologische Gesellschaft (ÖKG) would host a course on fomf.at, and FOMF and the ÖKG would split the revenue 50/50; Sina also wants to run societies' Jahrestagung digitally and offer each society a combined All Access package. Sina and Anya Hubmayer want to do this. Mahyar is to write the concept: one model that works for the ÖKG and for any other society. Started 19 Nov 2026. Anya has been in contact with the ÖKG since Aug 2026 about patronage, and the ÖKG wants a say in the content, possibly from 2027.
 
 ## Status
 
-**As of 19 Nov 2026:** Concept v0.1 is a local draft for discussion (`docs/konzept-v0.1.md`, German, not committed until Mahyar has reviewed it). Sina, Anya and the ÖKG have not seen it. Which ÖKG course this is, and its numbers today, are unknown.
+**As of 20 Nov 2026:** Concept v0.2 is in `docs/konzept.md` (German, draft). It offers societies three levels: a partner course, the digital Jahrestagung and a society All Access package, and takes in Sina's ideas of 19 Nov. Sina, Anya and the ÖKG have not seen it. Nothing is decided. Which ÖKG course this is, the size of its Jahrestagung and its member count are unknown.
 
-- **Next step:** Mahyar and Claude talk through the concept. After that, Mahyar shares it with Sina and Anya.
+- **Next step:** Mahyar goes through v0.2 with Sina and Anya; they settle open decisions 1–3 in the concept (meaning of the €50–100k, which levels to offer the ÖKG, package variant).
 - **Next date:** none
-- **Waiting on:** Mahyar (concept discussion)
+- **Waiting on:** Mahyar (meeting with Sina and Anya)
 
 ## Goal
 
-A signed pilot with the ÖKG for one course in 2027 in which neither side earns less than today (the ÖKG's net from the course today; FOMF's own cardiology courses in AT) and FOMF gains participants and All Access members. After the pilot, the same rules become the standard offer for other societies: one framework contract and a terms sheet per partner.
+A signed pilot with the ÖKG in 2027 that is worth at least the €50–100k Sina named (its unit is still open) and in which neither side earns less than today (the ÖKG's net from the course today; FOMF's own cardiology courses in AT) and FOMF gains participants and All Access members. After the pilot, the same rules become the standard offer for other societies: one framework contract and a terms sheet per partner.
 
 ## People
 
@@ -27,8 +27,10 @@ A signed pilot with the ÖKG for one course in 2027 in which neither side earns 
 
 ## Open points
 
-- Talk through concept v0.1 and settle its open decisions before anyone else sees it. (owner: Mahyar)
+- Go through concept v0.2 with Sina and Anya and settle its open decisions. (owner: Mahyar)
 - Which ÖKG course this is, and its participants, prices and costs today. (owner: Anya)
+- What Sina's €50–100k means: per year or per society, FOMF's share or total revenue. (owner: Mahyar with Sina)
+- The ÖKG's Jahrestagung (participants, ticket and sponsoring revenue, how it is run today) and the ÖKG's member count. (owner: Anya)
 
 ## Rules
 
@@ -52,7 +54,7 @@ A signed pilot with the ÖKG for one course in 2027 in which neither side earns 
 
 | File | What |
 |---|---|
-| `docs/konzept-v0.1.md` | Concept v0.1 (German), local draft, not in git until Mahyar has reviewed it |
+| `docs/konzept.md` | The concept (German), now v0.2: three levels, rules, open decisions. Edit in place; git keeps earlier versions |
 | `sql/kardio-at-baseline.sql` | Baseline of FOMF's cardiology refreshers (bookings, member share, money) and AT reach |
 | `docs/decisions.md` | Every decision, one line each, newest first |
 | `docs/log.md` | Dated record of events and results, newest first |

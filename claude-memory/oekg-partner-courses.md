@@ -1,6 +1,6 @@
 ---
 name: oekg-partner-courses
-description: ÖKG (Austrian cardiology society) course on fomf.at with a 50/50 revenue share; pilot for a general society partner model; brief in platform/oekg/
+description: Partnerships with medical societies, ÖKG (Austrian cardiology society) as pilot: partner course, digital Jahrestagung, society All Access package; brief in platform/oekg/
 metadata:
   node_type: memory
   type: project
@@ -14,6 +14,6 @@ The topic lives in `platform/oekg/`. Read its brief, `docs/decisions.md` and the
 - The shares, rates and the ÖKG's figures stay in the repo and never go on the board issue. Texts for Sina, Anya and the ÖKG are in German.
 - The commission and attribution mechanics overlap with [[eviplex-medichub-partner-contract]]: one framework contract and a terms sheet per partner.
 
-**Why:** Sina and Anya want society courses as a channel. Mahyar's conditions are that no side loses revenue and that FOMF gains members.
+**Why:** Sina and Anya want medical societies as a channel. Mahyar's conditions are that no side loses revenue and that FOMF gains members.
 
 **How to apply:** "catch up on ÖKG" means the routine in the root `AGENTS.md`, see [[topic-shape]].
