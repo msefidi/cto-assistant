@@ -62,7 +62,7 @@ Habib can hand out the user AVV (V-05 or later) and sign the FOMF↔Eviplex secr
 | Slack | Handover of PR #1079 to Shervin, 17 Nov: https://fomf.slack.com/archives/C08RW4F6QJ1/p1794926193091819. Otherwise not searched yet. |
 | SharePoint | Not searched yet. The draft `Entwurf_AVV-Anlage-Nutzungsbedingungen-Eviplex_V-05.docx` came as a mail attachment (Felix, 5 Oct; Habib, 28 Oct). |
 | Notion | "AVV-Anlage-Nutzungsbedingungen-Eviplex_V-03" (https://app.notion.com/p/fomf/AVV-Anlage-Nutzungsbedingungen-Eviplex_V-03-3ad7afedf3098046b105d08f53461eed), written by Mahyar on 30 Jul. |
-| Linear | Board issue CTO-1 (private team cto-assistant). Project "Professional secrecy compliance (§203 StGB)" (P-EVP-242, lead Mahyar, In Development); issue EVP-1314 "Data processing agreement (AVV) and internal confidentiality obligations" (Todo). Checked 15 Nov 2026. |
+| Linear | Board issue CTO-1 (private team cto-assistant). Project "Professional secrecy compliance (§203 StGB)" (P-EVP-242, lead Mahyar, In Development); issues EVP-1314 "Data processing agreement (AVV) and internal confidentiality obligations" (the AVV part) and EVP-1315 "Google Cloud: close the §203 gap or move to an alternative provider" (the Google PSA part), both In Progress and assigned to Mahyar; they show the legal track on the §203 roadmap, so update them when this topic's status changes. Checked 20 Nov 2026. |
 | Other | GitHub `fomf-code/meviq` PRs #1079 (merged 17 Nov) and #1093 (merged 10 Nov). GCP project `meviq-prod` (Cloud SQL, Redis, GKE, buckets). |
 
 ## Files

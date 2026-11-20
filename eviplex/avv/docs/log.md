@@ -2,6 +2,10 @@
 
 Newest first. One entry per event or result. Decisions go in `decisions.md`, one line each. Each entry ends with who said it and where, in brackets. Summarise the source; the original stays where it is.
 
+## 2026-11-20: EVP-1314 and EVP-1315 brought in line with this topic
+
+The two §203-project issues had sat in Todo since 30 Oct. Both moved to In Progress, each with a status comment that names no terms or counsel advice: EVP-1314 (AVV with Habib; Mahyar checks the measures are live) and EVP-1315 (Google PSA to Habib for signature; open points into the Enterprise Agreement talks). They stay in the Eviplex team so the team sees the legal track; this brief's source map names them. (Mahyar in session, 20 Nov)
+
 ## 2026-11-18: Reply sent to Google; counsel thanked
 
 At 16:38 CET Mahyar sent the reply to Stefanie Wonneberger (cc Laura Latsch, Habib): FOMF signs the PSA for DE and AT, DocuSign to Habib (modabber@fomf.org); asked where Google's current Cloud terms cover counsel's missing points (human access, no training or product improvement, retention and deletion incl. backups and logs, non-EU access and government requests, audit rights) and which controls FOMF can switch on itself; these points and Swiss professional secrecy go into the Enterprise Agreement, call offered; the earlier EA info follows "tonight or tomorrow". At 16:39 CET he thanked Prof. Risch-Kerst (cc Habib): FOMF signs now for DE and AT, the missing assurances go into the EA talks, and FOMF will come back to her on the EA terms. No DocuSign and no answer from Google by 21:30 CET; Alex's commit proposal not yet forwarded. (Mahyar, mails "Re: DRAFT version - PSA" to Wonneberger and to Risch-Kerst, 18 Nov)

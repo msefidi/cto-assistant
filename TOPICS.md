@@ -1,6 +1,6 @@
 # Topics
 
-Every topic in this workspace, one line each, grouped. Finished topics and one-off outputs are in `TOPICS-DONE.md`, which is not loaded every session. Topics about one product sit in its folder (`platform/…`, `eviplex/…`). The product folders with their `knowledge/` and the workspace tooling (`_template/`, `_guide/`, `artifact-index/`) are not topics and are not listed in either file. `AGENTS.md` loads this file into every session, so keep the lines short. Status and next step live in each brief and on the board (Linear team cto-assistant, key `CTO`); this file changes only when a topic opens, changes group or finishes. The groups and the shape of an active topic are in `AGENTS.md`, section "Topics".
+Every topic in this workspace, one line each, grouped. Finished topics and one-off outputs are in `TOPICS-DONE.md`, which is not loaded every session. Topics about one product sit in its folder (`platform/…`, `eviplex/…`). The product folders with their `knowledge/` and the workspace tooling (`_template/`, `_guide/`, `artifact-index/`, `my-board/`) are not topics and are not listed in either file. `AGENTS.md` loads this file into every session, so keep the lines short. Status and next step live in each brief and on the board (Linear team cto-assistant, key `CTO`); this file changes only when a topic opens, changes group or finishes. The groups and the shape of an active topic are in `AGENTS.md`, section "Topics".
 
 ## Active
 
