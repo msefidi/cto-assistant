@@ -11,8 +11,8 @@ How Eviplex customers get help. The rulebook for Customer Support is the Notion 
 ## Addresses
 
 - Eviplex has two addresses: **kontakt@eviplex.com** and **feedback@eviplex.com** (Mahyar, 17 Nov 2026). The app's support link uses kontakt@ (meviq `web/shared-brand/src/brands/eviplex.ts`).
-- Still named on eviplex.com: support@ in the terms of use, info@ in the imprint and privacy page, datenschutz@ in the privacy page. Whether those mailboxes exist is not confirmed.
-- eviplex.com mail is not in FOMF's Microsoft 365.
+- **info@eviplex.com** exists as a send-as alias, display name "Eviplex-Team" (Mahyar, 19 Nov 2026). Still named on eviplex.com: support@ in the terms of use, info@ in the imprint and privacy page, datenschutz@ in the privacy page. Whether support@ and datenschutz@ exist is not confirmed.
+- eviplex.com mail runs on Eviplex GmbH's Google Workspace (Gmail), not FOMF's Microsoft 365, so the M365 connector cannot reach it (Mahyar, 19 Nov 2026).
 
 ## What CS may say
 
