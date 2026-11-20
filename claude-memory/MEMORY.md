@@ -24,4 +24,5 @@
 - [M365 connector is read-only](m365-connector-read-only.md) — no drafts/sending; open a pre-filled Outlook compose window via mailto
 - [Verify live state](verify-live-state.md) — check gh/Linear/mail before calling something open or pending; briefs lag reality
 - [No email draft files](no-email-draft-files.md) — mail drafts go in chat, not repo files; the mail is the record
+- [Enterprise AI](enterprise-ai.md) — AI platform for non-tech depts (Claude Enterprise vs Glean, Langdock, Gemini Enterprise); brief in enterprise-ai/
 - [ÖKG partner courses](oekg-partner-courses.md) — society partnerships (ÖKG pilot): partner course, digital Jahrestagung, society All Access package; Anya = Anya Hubmayer; brief in platform/oekg/

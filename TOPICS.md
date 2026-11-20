@@ -9,6 +9,7 @@ Every topic in this workspace, one line each, grouped. Finished topics and one-o
 | `platform/aekw/` | Ärztekammer Wien streaming cooperation, start 01.02.2027 | CTO-6 |
 | `platform/pharma-msa/` | Moderna and Madrigal MSAs: IT security requirements and sub-processor list for Habib | CTO-27 |
 | `cybersecurity/` | Security assessment with Blaze: M365, GCP, pentests | CTO-2 |
+| `enterprise-ai/` | AI platform for non-tech departments: Claude Enterprise vs Glean, Langdock, Gemini Enterprise | CTO-8 |
 | `eviplex/partnermodell/` | Eviplex partner commission model and contract (Medichub, Webop) | CTO-3 |
 | `eviplex/avv/` | Review of the Eviplex AVV and the FOMF↔Eviplex secrecy agreement | CTO-1 |
 | `eviplex/documents/` | Patient documents in Eviplex: use case, MDR, § 203/CH, hosting (AlpineAI benchmark) | CTO-22 |
