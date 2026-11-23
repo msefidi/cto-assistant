@@ -2,58 +2,55 @@
 
 Newest first. One entry per event or result. Decisions go in `decisions.md`, one line each. Each entry ends with who said it and where, in brackets. Summarise the source; the original stays where it is.
 
-## 2026-11-19: Claude in Microsoft 365 Copilot, details
+## 2026-11-23: Executive Board decides on a Langdock pilot
 
-Claude in Copilot runs under Microsoft's Product Terms and DPA (Anthropic as Microsoft subprocessor) and moves into the EU Data Boundary in early Dec 2026. It is available in Word, Excel, PowerPoint, Researcher, Copilot Studio and Power Platform, not as the claude.ai interface. On 9 Dec only "No users" and "Specific users and groups" survive; everything else becomes "All users". Licence requirement and retention for standard use are not stated. Added to the research file, section D addendum. (Claude, MS Learn pages of 10 and 17 Nov 2026)
+Mahyar presented the deck in `eb-slides-2026-11-23/`, which recommended Langdock for the departments, Claude for P&E and Copilot as fallback. The board decided on a pilot: about 20 people for one month, until 15 Dec. The proposed split is Langdock for sensitive data and broad team use, and Claude for Product, Marketing and parts of the medical team. The final decision and the licence count come after the pilot. Governance runs in parallel under the EU AI Act: as a deployer, FOMF needs a policy, an inventory and training with proof of attendance (Art. 4, 5). As a provider (learning platform, Eviplex), FOMF must avoid the high-risk category. A draft policy and an inventory template exist; the AI officer is not named. Onboarding of Wafa and Sina is on 1 Dec at 11:00. The board's notes repeat Langdock's own claims on EU hosting and zero retention, which are not yet confirmed in writing. (Executive Board; Notion Meetings, page "2026.11.23")
 
-## 2026-11-19: Research on Claude vs EU hosting done
+## 2026-11-23: Langdock checked (vendor claims)
 
-claude.ai Enterprise has no EU residency (US storage, processing in US/EU/Asia/Australia) and no zero retention for chat or Cowork (minimum custom retention 30 days). Contract with Anthropic Ireland; US transfers under SCCs, not the DPF. The DPF stands after the General Court ruling of 3 Sep 2025; appeal pending. Langdock hosts on Azure in the EU but lists older Claude versions. Microsoft brings Claude in Copilot into the EU Data Boundary in December and switches it on for tenants without a setting on 9 Dec 2026. Write-up with sources: `research-claude-vs-eu-hosting-2026-11-19.md`. (Claude research agent, session with Mahyar)
+Read on Langdock's own pages (models, docs, Terms and DPA v2.1, pricing):
+- **Hosting:** platform on Azure in Frankfurt. All Claude models are marked EU-hosted and served via Vertex and Bedrock. No page says which provider or region serves which model. Anthropic is named in the API docs but not in the DPA.
+- **Retention:** Langdock claims zero retention at the model providers, except Fable 5.x (30 days). This may conflict with AWS's docs and with Microsoft's end of Modified Abuse Monitoring for new models (17 Nov 2026). Chat retention can be set down to 7 days.
+- **DPA:** German law, 14 days' notice of new sub-processors. Sub-processors are in the EU except Sentry and Cloudflare. ISO 27001 and SOC 2 Type II.
+- **Integrations:** native for Notion, HubSpot, Slack, Linear, M365, Metabase, BigQuery and Google Drive, plus custom MCP. This corrects an earlier line that said there were none.
+- **Features:** a Document Editor with live preview, and Apps with a built-in database.
+- **Prices:** Core €23.20 and Work €31.20 per seat per month on annual billing; Max seats with 5× limits at €99 and €109.
+- **Usage limits:** a 5-hour and a weekly window. These limits are the main user complaint on Reddit and Trustpilot (3.5/5), since a cut in Apr 2026. Model choice gets the most praise.
 
-## 2026-11-19: The dilemma, as Mahyar frames it
+The cost scenario in the deck: 30 Claude seats plus 70 Langdock Work seats, 30 % of them Max, about €66,600 a year. (Claude, session with Mahyar; Langdock pages, Reddit via PullPush, Trustpilot)
 
-Everyone wants to keep working with Claude. The concern is that Claude processes and stores data outside the EU, which matters for GDPR in sales (sponsor data) and events (speaker contracts), less so for tech. Switching to an EU platform such as Langdock gives zero retention and EU residency but loses the fast-moving Claude interface (artifacts, collaboration); keeping Claude keeps the data issue. Research on the facts started (Anthropic residency, retention, DPA and DPF; Langdock; GDPR rules for US transfers). (Mahyar, session with Claude)
+## 2026-11-23: Microsoft 365 Copilot checked
 
-## 2026-11-19: Topic opened from CTO-8
+Copilot is an EU Data Boundary service under the existing Microsoft DPA. It is not zero retention, and LLM calls may leave the region at high utilisation. Connectors exist for Notion, HubSpot, Linear and Slack, but not for Metabase or BigQuery. The nearest thing to artifacts is Copilot Pages. Skills and authoritative SharePoint sites exist; there is no tenant-wide instruction. FOMF holds 2 add-on licences on a one-year commitment, billed to Sina's profile. Mahyar assigned one to himself; the second holder is unknown. Gemini Enterprise has data residency only in the Standard and Plus editions; Google still has not sent an offer. (Claude, session with Mahyar; Microsoft Learn, Outlook invoices)
 
-CTO-8 ("Research on enterprise AI solution", moved from Todoist, added 2 Nov 2026) became this topic; CTO-7 ("Review and make sense of Google's enterprise offer", added 25 Jun 2026) became its sub-issue. The entries below were rebuilt from Outlook, Teams and Notion. (Mahyar, session with Claude)
+## 2026-11-23: Prep for the Executive Board exchange
+
+Mahyar's lean going in was Copilot for sensitive data, with Claude for P&E and general use; it moved to Langdock during prep. Since 29 Oct, staff have been told Claude is for general use only and that a replacement would come by 15 Nov; Sina, Gerald Rupp and Wafa asked for it. The Langdock trial seat renewed to 22 Dec. (Mahyar; Teams, Outlook)
+
+## 2026-11-19: Claude vs EU hosting researched
+
+claude.ai Enterprise has no EU residency (US storage) and no zero retention; the minimum custom retention is 30 days. The contract is with Anthropic Ireland under SCCs, not the DPF; the DPF stands after the General Court ruling of 3 Sep 2025. Claude in Copilot moves into the EU Data Boundary in early Dec 2026. On 9 Dec it is switched on for tenants without a setting (CTO-25). (Claude research agent, session with Mahyar)
+
+## 2026-11-19: Topic opened from CTO-8; the dilemma
+
+Everyone wants to keep Claude, but it processes and stores data outside the EU. That matters for sales (sponsor data) and events (speaker contracts). An EU platform gives residency and short retention but loses the Claude interface. CTO-7 (Google's offer) became a sub-issue. (Mahyar, session with Claude)
 
 ## 2026-11-05: Glean evaluation paused
 
-Mahyar told Glean the time works but FOMF is still evaluating a few other solutions and needs more time; Glean cancelled the call and offered a side-by-side comparison with the other vendors. (Mahyar, William O'Brien, email "Glean <> FOMF")
-
-## 2026-10-22: Langdock Business trial seat
-
-One Langdock Business seat ("AI models included"), €29/month, 22 Oct to 22 Nov 2026. (Langdock receipt #2702-2765, Outlook)
-
-## 2026-10-15: Glean asks for 2–3 workflows
-
-Glean asked for the two or three workflows from the hackathon to compare Glean and Claude on quality, governance and cost; NDA sent for signature. No answer found in the mail. (William O'Brien, email "FOMF <> Glean | Recap and next steps")
+Mahyar told Glean FOMF needs more time to evaluate other solutions; Glean cancelled the call. (Mahyar, email "Glean <> FOMF")
 
 ## 2026-10-08: Spend snapshot sent to Glean
 
-Mahyar sent current AI spend: Claude Team €1,852/month for 32 seats; Claude Enterprise 35 seats at $240/seat/year ($8,400 prepaid Jul 2026 to Jul 2027) plus $1,000 initial credits and about $1,900 usage in Sep; Claude API about $270 in Sep. Glean candidates are the 70 to 80 non-technical users; P&E stays on Claude. He corrected his earlier $15–20k/month figure (upper bound incl. P&E) to about $5–8k/month for 70 to 80 Enterprise users. Glean had quoted $85k/year without implementation. Cost-analysis call followed on 9 Oct. (Mahyar, William O'Brien, email "Glean vs Claude eval")
-
-## 2026-10-02: Glean demo
-
-Glean proposed itself as the front end over the models (auto-routing, data residency, ZDR, knowledge graph). (William O'Brien, email "Glean vs Claude eval"; calendar "FOMF <> Glean | Demo")
+Claude Team €1,852/month for 32 seats; Claude Enterprise 35 seats, $8,400 prepaid Jul 2026 to Jul 2027, plus about $1,900 usage in Sep; Claude API about $270 in Sep. Estimate for 70 to 80 Enterprise users: about $5–8k/month. Glean had quoted $85k/year without implementation and with no seat count. (Mahyar, email "Glean vs Claude eval")
 
 ## 2026-09-29: Requirements stated to Glean
 
-Mahyar described use (research, everyday productivity, automating routine tasks), the agent plans (triage agent) and the gaps: Claude Enterprise retention cannot go below 30 days, no EU data residency from Anthropic, and about $100–150/month for a mid-level user. Top use cases: permission-aware search across SharePoint, Outlook, Notion, Slack, Linear and HubSpot; agents grounded in company data for non-technical teams. (Mahyar, email "Questions before tomorrow")
+Gaps in Claude Enterprise: retention not below 30 days, no EU residency, about $100–150/month per mid-level user. Wanted: permission-aware search across SharePoint, Outlook, Notion, Slack, Linear and HubSpot, and agents grounded in company data for non-technical teams. (Mahyar, email "Questions before tomorrow")
 
-## 2026-09-21: Glean discovery call
+## 2026-07-22: Google's answer on Gemini Enterprise
 
-Glean's recap: FOMF uses ChatGPT Enterprise and looks for alternatives over retention, EU hosting, sensitive pharma and medical data and pricing; wants one secure AI layer, enterprise search and agents for ambassadors. Decks attached. (Nickhil Kumar, email "Recap and next steps: Glean × FOMF")
-
-## 2026-08-04: Individual Claude access for marketing
-
-At Habib's request, a marketing colleague got individual Claude access with a $125 usage limit; Habib asked about smaller-budget access for the others. (Mahyar, Habib, email "personalisierte Accounts für MKT Mitarbeiter für claude")
-
-## 2026-07-22: Google's answer on terms and Gemini Enterprise ZDR
-
-Google said its standard terms (GCP terms, service-specific terms, Cloud DPA) cover confidentiality and there is no extra document to sign; for Gemini Enterprise it pointed to its zero-data-retention page. The enterprise offer itself was not sent. (Alexandra Vassileva, forwarded in Teams)
+Google's standard terms and its zero-data-retention page were offered; there is no extra document to sign. The enterprise offer itself was not sent. (Alexandra Vassileva, forwarded in Teams)
 
 ## 2026-07-21: Claude Enterprise signed
 
-35 seats at $240/seat/year plus $1,000 usage credits, $9,400 in total. (Mahyar, recap in email "Glean vs Claude eval" of 8 Oct)
+35 seats at $240/seat/year plus $1,000 usage credits. (Mahyar, email "Glean vs Claude eval" of 8 Oct)
