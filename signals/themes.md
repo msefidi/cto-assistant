@@ -63,3 +63,12 @@ AI tooling risk, data handling, EU AI Act / MDR, shadow AI; ties to cybersecurit
 - **Open questions:** —
 - **Moves:** —
 - **Signals:**
+
+## AI in medical care
+What doctors, practices and hospitals actually adopt, and what blocks them; market signals for Eviplex and the platform.
+
+- **Stance:** —
+- **Open questions:** —
+- **Moves:** —
+- **Signals:**
+  - 2026-11-23 [Practices adopt AI that buys time; unstructured letters are the blocker](entries/2026-11-23-practices-adopt-ai-that-buys-time.md) — MEDICA 2026 panel: time saved drives adoption, PDF discharge letters block it; KV Nordrhein pilot lab
