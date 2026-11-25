@@ -2,6 +2,10 @@
 
 Newest first. One entry per event or result. Decisions go in `decisions.md`, one line each. Each entry ends with who said it and where, in brackets. Summarise the source; the original stays where it is.
 
+## 2026-11-25: Introduction to Hansueli Jud
+
+Hansueli Jud (AlpineAI) wrote to Benigna that a colleague had forwarded the request for an exchange and asked to talk directly with the head of engineering. Benigna put Mahyar in copy and asked him to send one or two dates. Captured as sub-issue CTO-29. (Hansueli Jud and Benigna Hassler, Outlook "AW: Kontaktaufnahme via AlpineAI Desk", 24 Nov 2026)
+
 ## 2026-11-18: Topic opened
 
 Mahyar decided to think through documents in Eviplex as product work and opened this topic. Board issue CTO-22, with the reply to Benignia as a sub-issue. AlpineAI was added to the competitors in `../knowledge/positioning.md`. Draft reply to Benignia (English, not sent yet):

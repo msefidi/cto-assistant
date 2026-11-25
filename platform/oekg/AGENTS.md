@@ -4,10 +4,10 @@ The Österreichische Kardiologische Gesellschaft (ÖKG) would host a course on f
 
 ## Status
 
-**As of 20 Nov 2026:** Concept v0.2 is in `docs/konzept.md` (German, draft). It offers societies three levels: a partner course, the digital Jahrestagung and a society All Access package, and takes in Sina's ideas of 19 Nov. Sina, Anya and the ÖKG have not seen it. Nothing is decided. Which ÖKG course this is, the size of its Jahrestagung and its member count are unknown.
+**As of 25 Nov 2026:** Concept v0.2 is in `docs/konzept.md` (German, draft). Mahyar promised Sina the concept (B2B marketplace with the ÖKG) by 26 Nov (sub-issue CTO-31). It offers societies three levels: a partner course, the digital Jahrestagung and a society All Access package, and takes in Sina's ideas of 19 Nov. Sina, Anya and the ÖKG have not seen it. Nothing is decided. Which ÖKG course this is, the size of its Jahrestagung and its member count are unknown.
 
 - **Next step:** Mahyar goes through v0.2 with Sina and Anya; they settle open decisions 1–3 in the concept (meaning of the €50–100k, which levels to offer the ÖKG, package variant).
-- **Next date:** none
+- **Next date:** 26 Nov 2026, concept due to Sina
 - **Waiting on:** Mahyar (meeting with Sina and Anya)
 
 ## Goal
@@ -47,7 +47,7 @@ A signed pilot with the ÖKG in 2027 that is worth at least the €50–100k Sin
 | Slack | none |
 | SharePoint | none yet |
 | Notion | Event Unit DACH / Überblick Fachbereiche DACH / "Kardio" (https://app.notion.com/p/3567afedf309801d8cffc89c43e8f770): patronage talks with the ÖKG, ÖKG annual meeting dates, ~1,000 cardiologists in AT |
-| Linear | Board issue CTO-26 (private team cto-assistant); no product project |
+| Linear | Board issue CTO-26 (private team cto-assistant), sub-issue CTO-31 (concept to Sina by 26 Nov); no product project |
 | Other | BigQuery `fomf-dl`, `analysis.fct_course_bookings`, see `sql/kardio-at-baseline.sql` |
 
 ## Files
