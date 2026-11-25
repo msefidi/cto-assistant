@@ -2,882 +2,628 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: my issues by stage on the left, the week from Outlook on the right; drag an issue into a free slot to plan time. */
+/* Layout: tabs All · Overdue · Week · Today over one list of open CTO issues grouped by priority; a row opens its details in a side panel. Reads Linear live, writes nothing. */
 :root {
-  --bg: #f3f5f7; --surface: #ffffff; --sunk: #e9edf1; --ink: #18202b; --muted: #5b6574; --line: #dde2e8; --line-soft: #edf0f3;
+  --bg: #f3f5f7; --surface: #ffffff; --sunk: #e9edf1; --ink: #18202b; --muted: #5b6574; --faint: #8a93a1; --line: #dde2e8; --line-soft: #edf0f3;
   --accent: #12676b; --accent-soft: #e2f0ef; --accent-ink: #ffffff;
-  --late: #a33a22; --late-soft: #f8e6e1; --today: #8a5700; --today-soft: #f8eedb;
-  --mtg: #e4e8ed; --mtg-ink: #3b4452; --now: #c2410c;
-  --font-display: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --urgent: #b4401f; --wait: #7a5a12; --wait-soft: #f6efdc; --warn: #8a5700; --bad: #a33a22;
+  --a-eviplex: #12676b; --a-platform: #3b6fb6; --a-medical: #8a4fb5; --a-cross: #8a94a3;
+  --scrim: rgba(16, 20, 26, 0.28);
   --font-body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #10141a; --surface: #171c24; --sunk: #1d232c; --ink: #e5e9ef; --muted: #97a1af; --line: #29303b; --line-soft: #222832;
+    --bg: #10141a; --surface: #171c24; --sunk: #1d232c; --ink: #e5e9ef; --muted: #97a1af; --faint: #6c7684; --line: #29303b; --line-soft: #222832;
     --accent: #5db3ae; --accent-soft: #173233; --accent-ink: #0b1a1b;
-    --late: #f0896b; --late-soft: #3a211b; --today: #e5ae4b; --today-soft: #352a15;
-    --mtg: #2a313c; --mtg-ink: #c5ccd6; --now: #fb923c; color-scheme: dark;
+    --urgent: #f0896b; --wait: #e2b65a; --wait-soft: #30281a; --warn: #e5ae4b; --bad: #f0896b;
+    --a-eviplex: #5db3ae; --a-platform: #7aa7e6; --a-medical: #c194e6; --a-cross: #8a94a3;
+    --scrim: rgba(0, 0, 0, 0.5); color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #10141a; --surface: #171c24; --sunk: #1d232c; --ink: #e5e9ef; --muted: #97a1af; --line: #29303b; --line-soft: #222832;
+  --bg: #10141a; --surface: #171c24; --sunk: #1d232c; --ink: #e5e9ef; --muted: #97a1af; --faint: #6c7684; --line: #29303b; --line-soft: #222832;
   --accent: #5db3ae; --accent-soft: #173233; --accent-ink: #0b1a1b;
-  --late: #f0896b; --late-soft: #3a211b; --today: #e5ae4b; --today-soft: #352a15;
-  --mtg: #2a313c; --mtg-ink: #c5ccd6; --now: #fb923c; color-scheme: dark;
+  --urgent: #f0896b; --wait: #e2b65a; --wait-soft: #30281a; --warn: #e5ae4b; --bad: #f0896b;
+  --a-eviplex: #5db3ae; --a-platform: #7aa7e6; --a-medical: #c194e6; --a-cross: #8a94a3;
+  --scrim: rgba(0, 0, 0, 0.5); color-scheme: dark;
 }
 * { box-sizing: border-box; }
 body {
-  background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 14px; line-height: 1.4;
+  background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 14px; line-height: 1.45;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
   padding-block: 22px 48px;
 }
-.page { max-width: 1480px; margin: 0 auto; display: grid; gap: 16px; }
-header { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 20px; }
-h1 { font-family: var(--font-display); font-weight: 400; font-size: 2.2rem; line-height: 1; margin: 0; }
-.sub { color: var(--muted); font-size: 0.88rem; margin-top: 5px; font-variant-numeric: tabular-nums; }
-.tools { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-.fresh { color: var(--muted); font-size: 0.8rem; margin-right: 4px; }
-button, .btn { font: inherit; font-size: 0.84rem; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 7px; padding: 6px 12px; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
-button:hover, .btn:hover { border-color: var(--accent); }
-button[aria-pressed="true"], .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
-button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visible, li.row:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.cols { display: grid; grid-template-columns: minmax(0, 560px) minmax(0, 1fr); gap: 18px; align-items: start; }
-@media (max-width: 1100px) { .cols { grid-template-columns: minmax(0, 1fr); } }
-.pane { display: grid; gap: 12px; min-width: 0; }
-.label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-.bar { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
-.fchip { font-family: var(--font-mono); font-size: 0.74rem; padding: 3px 10px; border-radius: 999px; }
-.legend { margin-left: auto; display: inline-flex; gap: 5px; align-items: center; color: var(--muted); font-size: 0.76rem; }
-.banner { border: 1px solid var(--line); background: var(--surface); border-radius: 10px; padding: 10px 12px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; }
-.banner.warn { border-color: var(--today); } .banner.bad { border-color: var(--late); }
-.banner p { margin: 0; min-width: 0; flex: 1 1 240px; }
-section { display: grid; gap: 6px; }
-.shead { display: flex; gap: 8px; align-items: baseline; }
-.shead .n { font-family: var(--font-mono); font-size: 0.74rem; color: var(--muted); }
-.shead .hint { color: var(--muted); font-size: 0.76rem; }
-.st-progress .label { color: var(--accent); } .st-waiting .label { color: var(--today); } .st-next .label { color: var(--ink); }
-ul.list { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
-li.row { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: 10px; padding: 8px 12px; border-top: 1px solid var(--line-soft); align-items: start; cursor: grab; }
-li.row:first-child { border-top: 0; }
-li.row.dragging { opacity: 0.45; }
-.idc { font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); padding-top: 2px; white-space: nowrap; }
-.main { min-width: 0; display: grid; gap: 2px; }
-.tl { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
-.tl a { color: var(--ink); text-decoration: none; font-weight: 500; overflow-wrap: anywhere; }
-.tl a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
-.folder { display: inline-flex; gap: 4px; align-items: center; color: var(--accent); font-family: var(--font-mono); font-size: 0.68rem; }
-.ball { font-size: 0.78rem; color: var(--muted); overflow-wrap: anywhere; }
-.ball.wait { color: var(--today); }
-.side { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; }
-.due { font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); white-space: nowrap; }
-.due.late { color: var(--late); font-weight: 600; } .due.today { color: var(--today); font-weight: 600; }
-.plan { font-family: var(--font-mono); font-size: 0.7rem; white-space: nowrap; border-radius: 5px; padding: 0 5px; }
-.plan.set { color: var(--accent); border: 1px solid var(--accent); }
-.plan.none { color: var(--today); }
-.planbtn { font-size: 0.72rem; padding: 1px 8px; border-radius: 6px; }
-details > summary { cursor: pointer; list-style: none; }
-details > summary::-webkit-details-marker { display: none; }
-details > summary .label::before { content: "▸ "; }
-details[open] > summary .label::before { content: "▾ "; }
-details[open] > summary { margin-bottom: 6px; }
-.empty { color: var(--muted); font-size: 0.85rem; margin: 0; }
-.stats { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-.stat { padding: 3px 10px; border-radius: 999px; font-size: 0.8rem; background: var(--sunk); }
-.stat b { font-family: var(--font-mono); font-weight: 500; }
-.stat.box { background: var(--accent-soft); color: var(--accent); }
-.stat.free { background: var(--surface); border: 1px solid var(--line); }
-.warnline { margin-left: auto; color: var(--today); font-size: 0.8rem; }
-.calwrap { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow-x: auto; }
-.cal { min-width: 640px; display: grid; grid-template-columns: 46px repeat(5, minmax(0, 1fr)); }
-.dayhead { padding: 8px 10px; border-left: 1px solid var(--line-soft); border-bottom: 1px solid var(--line); background: var(--sunk); display: grid; gap: 2px; }
-.dayhead .dn { font-weight: 600; } .dayhead .dd { font-size: 0.72rem; color: var(--muted); overflow-wrap: anywhere; }
-.dayhead.is-today .dn { color: var(--accent); }
-.gutter-head { border-bottom: 1px solid var(--line); background: var(--sunk); }
-.gutter { position: relative; }
-.hour { position: absolute; right: 6px; font-family: var(--font-mono); font-size: 0.66rem; color: var(--muted); transform: translateY(-1px); }
-.day { position: relative; border-left: 1px solid var(--line-soft); background-image: repeating-linear-gradient(to bottom, var(--line-soft) 0, var(--line-soft) 1px, transparent 1px, transparent 54px); }
-.day.drop { background-color: var(--accent-soft); }
-.ev { position: absolute; border-radius: 6px; padding: 3px 6px; overflow: hidden; font-size: 0.72rem; line-height: 1.2; text-decoration: none; display: flex; flex-direction: column; gap: 1px; border: 1px solid var(--surface); }
-.ev.mtg { background: var(--mtg); color: var(--mtg-ink); }
-.ev.box { background: var(--accent); color: var(--accent-ink); }
-.ev.tentative { opacity: 0.6; }
-.ev .et { font-weight: 500; overflow-wrap: anywhere; }
-.ev.short { display: block; padding: 0 6px; white-space: nowrap; text-overflow: ellipsis; font-size: 0.66rem; }
-.ev.short .et { overflow-wrap: normal; }
-.duechip { justify-self: start; font-size: 0.7rem; padding: 1px 8px; border-radius: 999px; border: 1px solid transparent; background: var(--today-soft); color: var(--today); }
-.duechip.late { background: var(--late-soft); color: var(--late); }
-.duechip[aria-pressed="true"] { border-color: currentColor; background: var(--surface); }
-.dayhead .chips { display: flex; gap: 4px; flex-wrap: wrap; }
-.focus-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
-.ev .em { font-family: var(--font-mono); font-size: 0.64rem; opacity: 0.85; }
-.nowline { position: absolute; left: 0; right: 0; height: 2px; background: var(--now); pointer-events: none; }
-.allday { position: absolute; left: 3px; right: 3px; top: 2px; font-size: 0.66rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.legend2 { display: flex; gap: 14px; flex-wrap: wrap; color: var(--muted); font-size: 0.76rem; }
-.sw { display: inline-block; width: 10px; height: 10px; border-radius: 3px; vertical-align: -1px; margin-right: 4px; }
-.scrim { position: fixed; inset: 0; background: rgba(16, 20, 26, 0.35); display: grid; place-items: center; padding: 16px; z-index: 20; }
-.dialog { background: var(--surface); color: var(--ink); border: 2px solid var(--accent); border-radius: 14px; padding: 14px 18px; display: grid; gap: 10px; }
-.field select { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 7px; padding: 7px 9px; min-width: 0; width: 100%; }
-.ev.draft { background: var(--accent-soft); color: var(--accent); border: 2px dashed var(--accent); z-index: 40; overflow: visible; cursor: grab; touch-action: none; }
-.ev.draft.moving { cursor: grabbing; }
-.ev.draft .et, .ev.draft .em { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
-.ev.draft .rz { position: absolute; left: 0; right: 0; bottom: -3px; height: 8px; cursor: ns-resize; }
-.ev.draft .rz::after { content: ""; position: absolute; left: 50%; bottom: 3px; width: 22px; height: 3px; margin-left: -11px; border-radius: 2px; background: var(--accent); }
-.draftbar { position: absolute; left: -2px; display: flex; gap: 4px; z-index: 45; white-space: nowrap; }
-.draftbar button, .draftbar .btn { font-size: 0.72rem; padding: 3px 8px; }
-.draftbar button:disabled { opacity: 0.4; cursor: default; }
-.day.planning { cursor: copy; }
-.dialog h2 { font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; margin: 0; }
-.fields { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
-@media (max-width: 520px) { .fields { grid-template-columns: minmax(0, 1fr); } }
-.field { display: grid; gap: 4px; min-width: 0; }
-.field label { font-size: 0.76rem; color: var(--muted); }
-.field input { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 7px; padding: 7px 9px; min-width: 0; width: 100%; }
-.field input.mono { font-family: var(--font-mono); font-size: 0.8rem; }
-.dactions { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
-.dnote { color: var(--muted); font-size: 0.78rem; margin: 0; }
-.tabs { display: inline-flex; background: var(--sunk); border-radius: 9px; padding: 3px; gap: 2px; }
-.tabs a { text-decoration: none; color: var(--muted); font-weight: 500; font-size: 0.86rem; padding: 6px 14px; border-radius: 7px; }
+.page { max-width: 920px; margin: 0 auto; display: grid; gap: 18px; }
+button { font: inherit; font-size: 0.84rem; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 7px; padding: 6px 12px; cursor: pointer; }
+button:hover { border-color: var(--accent); }
+button.quiet { background: transparent; border-color: transparent; color: var(--muted); }
+button.quiet:hover { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+header { display: flex; flex-wrap: wrap; gap: 10px 20px; align-items: flex-end; justify-content: space-between; }
+h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 1.1; margin: 0; }
+.sub { color: var(--muted); font-size: 0.86rem; margin-top: 4px; font-variant-numeric: tabular-nums; }
+.tools { display: flex; gap: 10px; align-items: center; }
+
+/* list toolbar: count left, round Filter and Display buttons right, filter chips below (like a Linear view) */
+.listbar { position: relative; display: grid; gap: 8px; }
+.toolbar { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 34px; }
+.count { color: var(--muted); font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+.tb-right { display: flex; gap: 6px; }
+.round { width: 32px; height: 32px; padding: 0; border-radius: 50%; display: inline-grid; place-items: center; color: var(--muted); background: var(--surface); border: 1px solid var(--line); }
+.round:hover { color: var(--ink); border-color: var(--faint); }
+.round[aria-expanded="true"], .round.on { color: var(--accent); border-color: var(--accent); }
+.menu { position: absolute; z-index: 20; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 4px; min-width: 210px; display: grid; gap: 1px; box-shadow: 0 8px 22px rgba(16, 20, 26, 0.12); }
+.mi { display: flex; align-items: center; gap: 8px; width: 100%; padding: 6px 8px; border: 0; border-radius: 6px; background: none; color: var(--ink); font-size: 0.86rem; text-align: left; cursor: pointer; }
+.mi:hover { background: var(--sunk); border-color: transparent; }
+.mi .n { margin-left: auto; font-family: var(--font-mono); font-size: 0.72rem; color: var(--faint); }
+.mi .chev { margin-left: auto; color: var(--faint); }
+.mi input { margin: 0; accent-color: var(--accent); }
+.mhead { display: flex; align-items: center; gap: 6px; padding: 4px 6px 6px; font-size: 0.74rem; color: var(--muted); border-bottom: 1px solid var(--line-soft); margin-bottom: 2px; }
+.mhead button { border: 0; background: none; padding: 0 4px; color: var(--muted); font-size: 0.9rem; }
+.inline { display: flex; align-items: center; gap: 8px; padding: 2px 2px 2px 8px; white-space: nowrap; }
+.inline label { font-size: 0.82rem; color: var(--muted); }
+.sel { position: relative; display: inline-flex; }
+.sel::after { content: ""; position: absolute; right: 10px; top: 50%; width: 5px; height: 5px; border-right: 1.5px solid var(--muted); border-bottom: 1.5px solid var(--muted); transform: translateY(-70%) rotate(45deg); pointer-events: none; }
+.sel select { appearance: none; -webkit-appearance: none; font: inherit; font-size: 0.82rem; font-weight: 500; color: var(--ink); background: var(--sunk); border: 0; border-radius: 6px; padding: 4px 26px 4px 10px; cursor: pointer; }
+.sel select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.chip { display: inline-flex; align-items: stretch; border: 1px solid var(--line); border-radius: 7px; background: var(--surface); font-size: 0.8rem; overflow: hidden; }
+.chip button { border: 0; border-radius: 0; background: none; padding: 3px 8px; font-size: 0.8rem; }
+.chip button:hover { background: var(--sunk); }
+.chip .f { color: var(--muted); }
+.chip .op { color: var(--faint); margin: 0 4px; }
+.chip .x { border-left: 1px solid var(--line-soft); color: var(--muted); padding: 3px 7px; }
+.fresh { color: var(--muted); font-size: 0.8rem; }
+
+.tabs { display: flex; gap: 2px; background: var(--sunk); border-radius: 10px; padding: 3px; justify-self: start; max-width: 100%; overflow-x: auto; }
+.tabs a { text-decoration: none; color: var(--muted); font-weight: 500; font-size: 0.9rem; padding: 6px 16px; border-radius: 8px; white-space: nowrap; display: inline-flex; gap: 6px; align-items: baseline; }
+.tabs a:hover { color: var(--ink); }
 .tabs a[aria-current="page"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 2px rgba(16, 20, 26, 0.12); }
-.kanwrap { overflow-x: auto; padding-bottom: 4px; }
-.kanban { display: grid; grid-template-columns: repeat(4, minmax(250px, 1fr)); gap: 12px; align-items: start; min-width: 1040px; }
-.k-scheduled { background: var(--accent-soft); }
-.k-done .card { opacity: 0.75; }
-.khead .ks { font-size: 0.76rem; color: var(--muted); }
-ul.cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
-li.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 9px 10px; display: grid; gap: 4px; cursor: grab; min-width: 0; }
-li.card.dragging { opacity: 0.45; }
-.ctop { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
-.cright { margin-left: auto; display: inline-flex; gap: 6px; align-items: center; }
-.ctitle { color: var(--ink); text-decoration: none; font-weight: 500; overflow-wrap: anywhere; }
-.ctitle:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
-.cnav { display: flex; justify-content: flex-end; gap: 4px; }
-.cnav button { font-size: 0.8rem; padding: 0 9px; line-height: 1.6; }
-.cnav button:disabled { opacity: 0.3; cursor: default; }
-.kcol { display: grid; gap: 8px; padding: 10px; border-radius: 14px; background: var(--sunk); min-height: 220px; align-content: start; }
-.kcol.drop { outline: 2px dashed var(--accent); outline-offset: -2px; }
-.khead { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 2px 4px; }
-.khead .kt { font-family: var(--font-display); font-size: 1.35rem; }
-.khead .kn { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); }
-.kgroup { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding: 4px 4px 0; }
-.stagepill { font-size: 0.68rem; padding: 0 7px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); white-space: nowrap; }
-.stagepill.progress { background: var(--accent-soft); border-color: transparent; color: var(--accent); }
-.stagepill.waiting { background: var(--today-soft); border-color: transparent; color: var(--today); }
-.movebtn { font-size: 0.72rem; padding: 1px 8px; border-radius: 6px; }
-.fgroup { display: inline-flex; gap: 4px; align-items: center; padding-right: 8px; margin-right: 4px; border-right: 1px solid var(--line); }
-.fgroup:last-child { border-right: 0; }
-.planerr { color: var(--late); font-size: 0.82rem; margin: 0; }
-@media (max-width: 560px) { h1 { font-size: 1.9rem; } li.row { grid-template-columns: minmax(0, 1fr) auto; } .idc { grid-column: 1 / 3; } }
+.tabs .c { font-family: var(--font-mono); font-size: 0.74rem; color: var(--faint); }
+.banner { border: 1px solid var(--line); background: var(--surface); border-radius: 10px; padding: 10px 12px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.banner.warn { border-color: var(--warn); } .banner.bad { border-color: var(--bad); }
+.banner p { margin: 0; flex: 1 1 260px; min-width: 0; }
+
+.group { display: grid; gap: 6px; }
+.ghead { display: flex; gap: 8px; align-items: center; padding: 0 4px; }
+.ghead .t { font-size: 0.74rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); }
+.ghead .n { font-family: var(--font-mono); font-size: 0.74rem; color: var(--faint); }
+.list { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.row { display: grid; grid-template-columns: 18px 62px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 10px 14px; border-top: 1px solid var(--line-soft); cursor: pointer; }
+.row:first-child { border-top: 0; }
+.row:hover { background: var(--sunk); }
+.row.sel { background: var(--accent-soft); }
+.row .id { font-family: var(--font-mono); font-size: 0.76rem; color: var(--muted); }
+.row .main { min-width: 0; display: grid; gap: 2px; }
+.row .title { font-weight: 500; overflow-wrap: anywhere; }
+.row .meta { display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: 0.76rem; color: var(--muted); align-items: center; }
+.row .right { display: flex; gap: 8px; align-items: center; justify-content: flex-end; }
+@media (max-width: 620px) {
+  .row { grid-template-columns: 18px minmax(0, 1fr); }
+  .row .id { display: none; }
+  .row .right { grid-column: 2; justify-content: flex-start; }
+}
+.area { display: inline-flex; gap: 5px; align-items: center; }
+.dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
+.dot.eviplex { background: var(--a-eviplex); } .dot.platform { background: var(--a-platform); } .dot.medical { background: var(--a-medical); } .dot.cross { background: var(--a-cross); }
+.folder { display: inline-flex; gap: 4px; align-items: center; }
+.pill { font-size: 0.72rem; padding: 2px 8px; border-radius: 999px; background: var(--sunk); color: var(--muted); white-space: nowrap; }
+.pill.started { background: var(--accent-soft); color: var(--accent); font-weight: 500; }
+.pill.waiting { background: var(--wait-soft); color: var(--wait); font-weight: 500; }
+.date { font-size: 0.76rem; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.date.past { color: var(--faint); }
+.prio { width: 16px; height: 16px; display: block; color: var(--muted); }
+.prio.urgent { color: var(--urgent); }
+.empty { color: var(--muted); margin: 0; padding: 18px; text-align: center; border: 1px dashed var(--line); border-radius: 12px; }
+
+/* side panel */
+.scrim { position: fixed; inset: 0; background: var(--scrim); z-index: 30; }
+.panel { position: fixed; top: 0; right: 0; bottom: 0; width: min(480px, 100%); background: var(--surface); border-left: 1px solid var(--line); z-index: 31; overflow-y: auto;
+  padding: calc(16px + env(safe-area-inset-top, 0px)) max(20px, env(safe-area-inset-right, 0px)) calc(28px + env(safe-area-inset-bottom, 0px)) 20px;
+  display: grid; gap: 18px; align-content: start; box-shadow: -10px 0 30px rgba(16, 20, 26, 0.14); }
+.p-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.p-top .id { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); }
+.panel h2 { font-weight: 600; font-size: 1.25rem; line-height: 1.3; margin: 0; text-wrap: balance; overflow-wrap: anywhere; }
+.facts { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 7px 16px; margin: 0; font-size: 0.88rem; }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; min-width: 0; overflow-wrap: anywhere; display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; }
+.facts code { font-family: var(--font-mono); font-size: 0.8rem; }
+.linkbtn { background: none; border: 0; padding: 0; color: var(--accent); font: inherit; cursor: pointer; text-align: left; }
+.linkbtn:hover { text-decoration: underline; }
+.ball { display: grid; gap: 10px; background: var(--sunk); border-radius: 10px; padding: 12px 14px; }
+.ball div { display: grid; gap: 2px; }
+.ball .k { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); }
+.ball .wait .k { color: var(--wait); }
+.k2 { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); }
+.desc { font-size: 0.9rem; max-width: 65ch; overflow-wrap: anywhere; }
+.desc > :first-child { margin-top: 0; }
+.desc p, .desc ul, .desc ol { margin: 0 0 10px; }
+.desc ul, .desc ol { padding-left: 20px; }
+.desc h3, .desc h4 { font-size: 0.95rem; margin: 14px 0 6px; }
+.desc code { font-family: var(--font-mono); font-size: 0.8rem; background: var(--sunk); padding: 1px 4px; border-radius: 4px; }
+.desc a, .p-link { color: var(--accent); }
+.desc details { border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; margin: 0 0 10px; }
+.desc summary { cursor: pointer; color: var(--muted); }
+.loading { color: var(--faint); font-size: 0.86rem; }
+.p-link { font-weight: 500; text-decoration: none; }
+.p-link:hover { text-decoration: underline; }
 </style>
 
 <div class="page">
   <header>
     <div>
       <h1>Mahyar's Board</h1>
-      <div class="sub" id="dateline"></div>
+      <div class="sub" id="sub">Loading your issues from Linear…</div>
     </div>
-    <nav class="tabs" aria-label="Views"><a href="#plan" id="tab-plan">1 · Plan the week</a><a href="#timebox" id="tab-timebox">2 · Timebox</a></nav>
     <div class="tools">
-      <span class="fresh" id="fresh">Waiting for Linear and Outlook…</span>
-      <span id="wk-buttons" style="display:inline-flex; gap:8px"><button type="button" id="wk-this" aria-pressed="false">This week</button>
-      <button type="button" id="wk-next" aria-pressed="false">Next week</button></span>
+      <span class="fresh" id="fresh"></span>
       <button type="button" id="refresh">Refresh</button>
     </div>
   </header>
-
-  <div id="view-plan" class="pane" hidden>
-    <div class="bar" id="plan-filters"></div>
-    <div id="plan-banner" hidden></div>
-    <p class="planerr" id="plan-error" hidden></p>
-    <div class="kanwrap"><div class="kanban" id="kanban"><p class="empty">Loading your issues from Linear…</p></div></div>
-  </div>
-
-  <div class="cols" id="view-timebox">
-    <div class="pane" id="left">
-      <div class="bar" id="filters">
-        <span class="label" style="margin-right:4px">This week's plan</span>
-        <span class="legend"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>has a folder</span>
-      </div>
-      <div id="lin-banner" hidden></div>
-      <div id="issues"><p class="empty">The issues you picked for this week appear here by stage. Drag one into a free slot of the week to plan time for it.</p></div>
-    </div>
-
-    <div class="pane" id="right">
-      <div class="stats" id="stats"><span class="label" id="weeklabel">Week</span></div>
-      <div id="cal-banner" hidden></div>
-      <div class="calwrap"><div class="cal" id="cal"></div></div>
-      <div class="legend2">
-        <span><span class="sw" style="background:var(--mtg)"></span>meeting in Outlook</span>
-        <span><span class="sw" style="background:var(--accent)"></span>timebox: an Outlook event planned from this board (its text links the issue)</span>
-        <span>Drag an issue into a free slot, or press Plan on its row.</span>
+  <nav class="tabs" id="tabs" aria-label="Views"></nav>
+  <div class="listbar" id="listbar">
+    <div class="toolbar">
+      <span class="count" id="count"></span>
+      <div class="tb-right">
+        <button type="button" class="round" id="filter-btn" aria-label="Filter" title="Filter" aria-expanded="false"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M7 12h10M10 17h4"></path></svg></button>
+        <button type="button" class="round" id="display-btn" aria-label="Display options" title="Display options" aria-expanded="false"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 8h6M14 8h6M4 16h10M18 16h2"></path><circle cx="12" cy="8" r="2"></circle><circle cx="16" cy="16" r="2"></circle></svg></button>
       </div>
     </div>
+    <div class="chips" id="chips" hidden></div>
+    <div class="menu" id="menu" role="dialog" aria-label="Options" hidden></div>
   </div>
+  <div id="banner" hidden></div>
+  <main id="groups"></main>
 </div>
+<div id="panelhost"></div>
 
 <script>
 (() => {
   const LINEAR = "Linear";
-  const OUTLOOK = "Microsoft 365";
-  const FIELDS = ["id", "title", "url", "dueDate", "status", "statusType", "team", "project", "labels", "parentId", "priority", "updatedAt", "description"];
-  const STATES = ["triage", "backlog", "unstarted", "started", "completed"];
+  const TEAM = "CTO";
+  const FIELDS = ["id", "title", "url", "dueDate", "status", "statusType", "labels", "parentId", "priority", "updatedAt", "description"];
   const OPEN = new Set(["triage", "backlog", "unstarted", "started"]);
-  const FOLDER_LABEL = "Folder";
   const AREAS = ["Eviplex", "Platform", "Medical", "Cross"];
   const AUTHZ = new Set(["needs_reauth", "server_not_connected", "blocked_by_policy", "approval_required", "not_in_manifest", "selection_required", "not_granted", "capability_disabled", "capability_removed", "consent_required"]);
-  const START_H = 8, END_H = 19, PX = 54 / 60; // px per minute
-  const WORK_FROM = 9 * 60, WORK_TO = 18 * 60;
+  const GROUPS = [[1, "Urgent"], [2, "High"], [3, "Medium"], [4, "Low"], [0, "No priority"]];
+  const STATUS_ORDER = { started: 0, unstarted: 1, triage: 2, backlog: 3 };
 
-  const lin = {}; STATES.forEach(st => lin[st] = { status: "loading", issues: [], error: null, at: null });
-  const full = {};          // id -> full description (for folder issues whose list description was cut)
-  const fullWatch = new Map();
-  let cal = {};             // ymd -> { status, events, error, at, more }
-  let calUnsubs = [];
   let mcp = null;
-  let dueFocus = null;
-  const pending = new Map();  // id -> { statusType, status } while a move is being saved
-  let planError = "";
-  const pf = { scope: "board", who: "any", folder: false, dueWeek: false };
-  try { Object.assign(pf, JSON.parse(localStorage.getItem("board.pf") || "{}")); } catch (e) {}
-  const defaultView = () => { const n = new Date(), d = n.getDay(); return (d === 0 || (d === 1 && n.getHours() < 12)) ? "plan" : "timebox"; };
-  let view = ["#plan", "#timebox"].includes(location.hash) ? location.hash.slice(1) : defaultView();
-  window.addEventListener("hashchange", () => { const h = location.hash.slice(1); if (h === "plan" || h === "timebox") { view = h; render(); } });      // { label, ids } when a day's due chip is pressed
-  let area = "ALL";
-  try { area = localStorage.getItem("board.area") || "ALL"; } catch (e) {}
+  const state = { status: "loading", issues: [], error: null, at: null, more: false };
+  const full = {};             // id -> full description from get_issue
+  const fullWatch = new Map(); // id -> unsubscribe
+  let openId = null;
 
-  // ---------- dates ----------
+  // ---------- helpers ----------
+  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
   const pad = n => String(n).padStart(2, "0");
+  const WD = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   const ymd = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
   const parseYmd = s => { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); };
-  const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); return x; };
-  const mondayOf = d => { const x = new Date(d.getFullYear(), d.getMonth(), d.getDate()); return addDays(x, -((x.getDay() + 6) % 7)); };
-  const WD = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  const WDL = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  const fmtDay = d => `${WD[d.getDay()]} ${pad(d.getDate())}.${pad(d.getMonth() + 1)}`;
-  const hm = mins => `${pad(Math.floor(mins / 60))}:${pad(mins % 60)}`;
-  function isoWeek(d) {
-    const t = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
-    const day = t.getUTCDay() || 7; t.setUTCDate(t.getUTCDate() + 4 - day);
-    return Math.ceil(((t - new Date(Date.UTC(t.getUTCFullYear(), 0, 1))) / 86400000 + 1) / 7);
-  }
-  let weekOffset = (() => { const n = new Date(), dw = n.getDay(); return (dw === 0 || dw === 6 || (dw === 5 && n.getHours() >= 14)) ? 1 : 0; })();
-  const weekDays = () => { const m = addDays(mondayOf(new Date()), 7 * weekOffset); return [0, 1, 2, 3, 4].map(i => addDays(m, i)); };
-  function dueLabel(due) {
-    const today = ymd(new Date());
-    const diff = Math.round((parseYmd(due) - parseYmd(today)) / 86400000);
-    if (diff < 0) return { text: diff === -1 ? "1 day late" : `${-diff} days late`, cls: "late" };
-    if (diff === 0) return { text: "today", cls: "today" };
-    return { text: fmtDay(parseYmd(due)), cls: "" };
-  }
-
-  // ---------- issues ----------
-  const prefix = i => String(i.id || "").split("-")[0];
+  const fmtDate = s => { const d = parseYmd(s); return `${WD[d.getDay()]} ${d.getDate()} ${MON[d.getMonth()]}`; };
   const labelsOf = i => i.labels || [];
-  const hasFolder = i => labelsOf(i).includes(FOLDER_LABEL);
   const areaOf = i => labelsOf(i).find(l => AREAS.includes(l)) || "";
-  function stageOf(i) {
-    if (i.status === "Delegated/Waiting") return "waiting";
-    if (i.statusType === "started") return "progress";
-    if (i.statusType === "unstarted" || i.statusType === "triage") return "next";
-    return "later";
-  }
+  const hasFolder = i => labelsOf(i).includes("Folder");
+  const prioOf = i => (i.priority && typeof i.priority.value === "number") ? i.priority.value : 0;
+  const isWaiting = i => /waiting|delegated/i.test(i.status || "");
   const descOf = i => full[i.id] || i.description || "";
-  const cut = (s, n) => s.length > n ? s.slice(0, n - 1).trimEnd() + "…" : s;
   const clean = s => s.replace(/…?\s*\(truncated[^)]*\)/g, "…").replace(/\*\*/g, "").replace(/`/g, "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
-  function ballOf(i) {
-    const d = descOf(i);
-    const wait = (d.match(/\*\*Waiting on:\*\*\s*([^\n]+)/) || [])[1];
-    const next = (d.match(/\*\*Next step[^*]*:\*\*\s*([^\n]+)/) || [])[1];
-    const me = s => !s || /^\s*(mahyar|me)\b/i.test(clean(s));
-    if (stageOf(i) === "waiting" || (wait && !me(wait))) return { text: "Waiting: " + cut(clean(wait || "someone"), 110), wait: true };
-    if (next) return { text: "Me: " + cut(clean(next), 120), wait: false };
-    return { text: "", wait: false };
-  }
+  const lineOf = (i, key) => { const m = descOf(i).match(new RegExp("\\*\\*" + key + "[^*]*:\\*\\*\\s*([^\\n]+)")); return m ? clean(m[1]) : ""; };
   function folderOf(i) {
     const m = descOf(i).match(/\*\*(?:Folder|Brief[^*]*):\*\*[^`\n]*`([^`]+)`/);
-    return m ? m[1].replace(/\/$/, "") : (hasFolder(i) ? "folder" : "");
+    return m ? m[1].replace(/\/$/, "") : (hasFolder(i) ? "has a folder" : "");
   }
-  function allIssues() {
-    const seen = new Map();
-    STATES.forEach(st => lin[st].issues.forEach(i => { const o = seen.get(i.id); if (!o || String(i.updatedAt || "") >= String(o.updatedAt || "")) seen.set(i.id, i); }));
-    return [...seen.values()].map(i => pending.has(i.id) ? { ...i, ...pending.get(i.id) } : i);
+  const safeUrl = u => /^https:\/\//i.test(String(u || "")) ? String(u) : null;
+  const linearUrl = i => safeUrl(i.url) || `https://linear.app/fomf/issue/${encodeURIComponent(String(i.id).toLowerCase())}`;
+  function sorter(a, b) {
+    return (STATUS_ORDER[a.statusType] ?? 9) - (STATUS_ORDER[b.statusType] ?? 9)
+      || (a.dueDate || "9999").localeCompare(b.dueDate || "9999")
+      || String(a.id).localeCompare(String(b.id), undefined, { numeric: true });
   }
-  const allMine = () => allIssues().filter(i => OPEN.has(i.statusType));
-  // This week's plan: on the CTO board every issue outside Backlog; in product teams, what is started.
-  const inWeek = i => prefix(i) === "CTO" ? i.statusType !== "backlog" : i.statusType === "started";
-  const STAGE_ORDER = { progress: 0, next: 1, waiting: 2, later: 3 };
-  const byDue = (a, b) => (a.dueDate || "9999").localeCompare(b.dueDate || "9999") || ((a.priority?.value || 9) - (b.priority?.value || 9)) || String(a.id).localeCompare(String(b.id), undefined, { numeric: true });
+  const openIssues = () => state.issues.filter(i => OPEN.has(i.statusType));
+  const byId = id => state.issues.find(i => i.id === id);
 
-  // ---------- calendar ----------
-  function toDate(dt) {
-    if (!dt || !dt.dateTime) return null;
-    const s = String(dt.dateTime).replace(/(\.\d{3})\d*$/, "$1");
-    return /utc|coordinated universal/i.test(dt.timeZone || "") ? new Date(s + "Z") : new Date(s);
+  // ---------- views: All · Week · Today ----------
+  // Overdue = due date before today. Week and Today never show overdue issues.
+  // Week = not overdue, and outside Backlog or due by Sunday (the board's rule: Backlog holds what is not this week).
+  // Today = due date today.
+  const VIEWS = [["all", "All"], ["overdue", "Overdue"], ["week", "Week"], ["today", "Today"]];
+  const todayYmd = () => ymd(new Date());
+  const sundayYmd = () => { const n = new Date(); return ymd(new Date(n.getFullYear(), n.getMonth(), n.getDate() + (7 - n.getDay()) % 7)); };
+  const isOverdue = i => !!i.dueDate && i.dueDate < todayYmd();
+  const inWeek = i => !isOverdue(i) && (i.statusType !== "backlog" || (!!i.dueDate && i.dueDate <= sundayYmd()));
+  const inToday = i => i.dueDate === todayYmd();
+  const FILTERS = { all: () => true, overdue: isOverdue, week: inWeek, today: inToday };
+  const viewIssues = v => openIssues().filter(FILTERS[v] || FILTERS.all).filter(matchFilters);
+  let view = (() => { const h = location.hash.slice(1); if (VIEWS.some(([k]) => k === h)) return h; try { const s = localStorage.getItem("board.view"); if (VIEWS.some(([k]) => k === s)) return s; } catch (e) {} return "all"; })();
+  function setView(v) {
+    view = v;
+    try { history.replaceState(null, "", "#" + v); } catch (e) {}
+    try { localStorage.setItem("board.view", v); } catch (e) {}
+    render();
   }
-  function parseCal(result) {
-    const out = []; let more = false;
-    const take = v => {
-      if (Array.isArray(v)) return v.forEach(take);
-      if (!v || typeof v !== "object") return;
-      if (v.subject !== undefined && v.start) out.push(v);
-      else if (v.moreResults) more = true;
-      else if (Array.isArray(v.events)) v.events.forEach(take);
-      else if (Array.isArray(v.value)) v.value.forEach(take);
-    };
-    (result.content || []).forEach(b => { if (b.type === "text") { try { take(JSON.parse(b.text)); } catch (e) {} } });
-    if (!out.length && result.structuredContent) take(result.structuredContent);
-    const events = out.filter(e => !e.isCancelled).map(e => {
-      const s = toDate(e.start), en = toDate(e.end);
-      const text = String(e.summary || e.bodyPreview || "");
-      const m = String(e.subject || "").match(/^\s*\[([A-Z]+-\d+)\]/) || text.match(/^\s*([A-Z]{2,6}-\d+):/) || text.match(/linear\.app\/[^\/\s]+\/issue\/([A-Z]{2,6}-\d+)/);
-      return { subject: e.subject || "(no title)", start: s, end: en, allDay: !!e.isAllDay, tentative: e.showAs === "tentative" || e.showAs === "free", link: e.webLink || "", key: m ? m[1] : "" };
-    }).filter(e => e.start && e.end);
-    return { events, more };
+  window.addEventListener("hashchange", () => { const h = location.hash.slice(1); if (VIEWS.some(([k]) => k === h) && h !== view) { view = h; render(); } });
+  function weekRange() {
+    const n = new Date(); const mon = new Date(n.getFullYear(), n.getMonth(), n.getDate() - ((n.getDay() + 6) % 7)); const sun = new Date(mon.getFullYear(), mon.getMonth(), mon.getDate() + 6);
+    return `${WD[1]} ${mon.getDate()} ${MON[mon.getMonth()]} – ${WD[0]} ${sun.getDate()} ${MON[sun.getMonth()]}`;
   }
-  function boxesById() {
-    const map = {};
-    Object.values(cal).forEach(c => (c.events || []).forEach(e => { if (e.key) (map[e.key] = map[e.key] || []).push(e); }));
-    Object.values(map).forEach(l => l.sort((a, b) => a.start - b.start));
-    return map;
+  // Status groups: started first (waiting after the rest of started), then Todo, Triage, Backlog.
+  const statusName = i => isWaiting(i) ? "Waiting" : (i.status || "Other");
+  const statusRank = i => (STATUS_ORDER[i.statusType] ?? 9) * 10 + (isWaiting(i) ? 5 : 0);
+  const byPrioThenDue = (a, b) => ((prioOf(a) || 9) - (prioOf(b) || 9)) || (a.dueDate || "9999").localeCompare(b.dueDate || "9999") || String(a.id).localeCompare(String(b.id), undefined, { numeric: true });
+
+  // ---------- display: group by (None · Priority · Status) ----------
+  const GROUP_OPTS = [["none", "None"], ["priority", "Priority"], ["status", "Status"]];
+  let groupBy = "priority";
+  try { const g = localStorage.getItem("board.groupBy"); if (GROUP_OPTS.some(([k]) => k === g)) groupBy = g; } catch (e) {}
+  function setGroupBy(g) { groupBy = g; try { localStorage.setItem("board.groupBy", g); } catch (e) {} render(); }
+
+  // ---------- filters: added from the Filter button, shown as chips above the list ----------
+  const FFIELDS = {
+    status: { name: "Status", of: statusName, options: () => [...new Map(openIssues().slice().sort((a, b) => statusRank(a) - statusRank(b)).map(i => [statusName(i), statusName(i)])).entries()] },
+    priority: { name: "Priority", of: i => String(prioOf(i)), options: () => GROUPS.map(([v, n]) => [String(v), n]) },
+    area: { name: "Area", of: i => areaOf(i) || "none", options: () => [...AREAS.map(a => [a, a]), ["none", "No area"]] },
+    folder: { name: "Folder", of: i => hasFolder(i) ? "yes" : "no", options: () => [["yes", "Has a folder"], ["no", "No folder"]] },
+  };
+  let filters = {};
+  try { const f = JSON.parse(localStorage.getItem("board.filters") || "{}"); Object.keys(FFIELDS).forEach(k => { if (Array.isArray(f[k]) && f[k].length) filters[k] = f[k].map(String); }); } catch (e) {}
+  const saveFilters = () => { try { localStorage.setItem("board.filters", JSON.stringify(filters)); } catch (e) {} };
+  function matchFilters(i) { return Object.entries(filters).every(([k, vals]) => !vals.length || vals.includes(FFIELDS[k].of(i))); }
+  function toggleFilter(field, val) {
+    const cur = new Set(filters[field] || []);
+    cur.has(val) ? cur.delete(val) : cur.add(val);
+    if (cur.size) filters[field] = [...cur]; else delete filters[field];
+    saveFilters(); render();
   }
-  const minsOf = d => d.getHours() * 60 + d.getMinutes();
-  function union(intervals) {
-    const s = intervals.filter(([a, b]) => b > a).sort((x, y) => x[0] - y[0]); const out = [];
-    s.forEach(([a, b]) => { if (out.length && a <= out[out.length - 1][1]) out[out.length - 1][1] = Math.max(out[out.length - 1][1], b); else out.push([a, b]); });
-    return out;
-  }
-  const total = u => u.reduce((n, [a, b]) => n + (b - a), 0);
-  const clip = ([a, b]) => [Math.max(a, WORK_FROM), Math.min(b, WORK_TO)];
-  function dayIntervals(key) {
-    const evs = ((cal[key] || {}).events || []).filter(e => !e.allDay && !e.tentative);
-    return { mtg: evs.filter(e => !e.key).map(e => clip([minsOf(e.start), minsOf(e.end)])), box: evs.filter(e => e.key).map(e => clip([minsOf(e.start), minsOf(e.end)])) };
-  }
-  function firstFreeSlot(len) {
-    const now = new Date();
-    for (const d of weekDays()) {
-      const key = ymd(d);
-      if (key < ymd(now)) continue;
-      const iv = dayIntervals(key);
-      const busy = union([...iv.mtg, ...iv.box]);
-      let t = key === ymd(now) ? Math.max(WORK_FROM, Math.ceil(minsOf(now) / 15) * 15) : WORK_FROM;
-      for (const [a, b] of busy) { if (a - t >= len) break; if (b > t) t = b; }
-      if (WORK_TO - t >= len) return { date: key, from: t };
+  function removeFilter(field) { delete filters[field]; saveFilters(); if (menu && menu.field === field) menu = null; render(); }
+
+  // ---------- one menu at a time: display, filter fields, or one field's values ----------
+  let menu = null; // { type: "display" | "fields" | "values", field?, anchor: element id }
+  const menuEl = document.getElementById("menu");
+  function openMenu(m) { menu = (menu && menu.type === m.type && menu.field === m.field && menu.anchor === m.anchor) ? null : m; renderMenu(); }
+  function closeMenu(focusBack) { if (!menu) return; const a = menu.anchor; menu = null; renderMenu(); if (focusBack) { const b = document.getElementById(a); if (b) b.focus(); } }
+  document.getElementById("filter-btn").addEventListener("click", e => { e.stopPropagation(); openMenu({ type: "fields", anchor: "filter-btn" }); });
+  document.getElementById("display-btn").addEventListener("click", e => { e.stopPropagation(); openMenu({ type: "display", anchor: "display-btn" }); });
+  menuEl.addEventListener("click", e => e.stopPropagation());
+  document.addEventListener("click", () => closeMenu(false));
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && menu) { e.stopImmediatePropagation(); closeMenu(true); } }, true);
+
+  function renderMenu() {
+    ["filter-btn", "display-btn"].forEach(id => document.getElementById(id).setAttribute("aria-expanded", String(!!menu && menu.anchor === id)));
+    document.getElementById("filter-btn").classList.toggle("on", Object.keys(filters).length > 0);
+    menuEl.textContent = "";
+    if (!menu) { menuEl.hidden = true; return; }
+    const pool = openIssues().filter(FILTERS[view] || FILTERS.all);
+    if (menu.type === "display") {
+      const row = el("div", "inline");
+      const lab = el("label", null, "Group by"); lab.htmlFor = "group-by";
+      const wrap = el("span", "sel"); const s = el("select"); s.id = "group-by";
+      GROUP_OPTS.forEach(([k, n]) => { const o = el("option", null, n); o.value = k; s.append(o); });
+      s.value = groupBy;
+      s.addEventListener("change", () => setGroupBy(s.value));
+      wrap.append(s); row.append(lab, wrap); menuEl.append(row);
+    } else if (menu.type === "fields") {
+      Object.entries(FFIELDS).forEach(([k, f]) => {
+        const b = el("button", "mi"); b.type = "button";
+        b.append(document.createTextNode(f.name));
+        b.append(el("span", "chev", (filters[k] || []).length ? `${filters[k].length} ›` : "›"));
+        b.addEventListener("click", () => { menu = { type: "values", field: k, anchor: menu.anchor }; renderMenu(); });
+        menuEl.append(b);
+      });
+    } else {
+      const f = FFIELDS[menu.field];
+      const head = el("div", "mhead");
+      if (menu.anchor === "filter-btn") { const back = el("button", null, "‹"); back.type = "button"; back.setAttribute("aria-label", "Back to filters"); back.addEventListener("click", () => { menu = { type: "fields", anchor: "filter-btn" }; renderMenu(); }); head.append(back); }
+      head.append(document.createTextNode(f.name));
+      menuEl.append(head);
+      const chosen = new Set(filters[menu.field] || []);
+      f.options().forEach(([val, name], n) => {
+        const lab = el("label", "mi"); const id = `opt-${menu.field}-${n}`;
+        const cb = el("input"); cb.type = "checkbox"; cb.id = id; cb.checked = chosen.has(val);
+        cb.addEventListener("change", () => { toggleFilter(menu.field, val); const again = document.getElementById(id); if (again) again.focus(); });
+        lab.append(cb);
+        if (menu.field === "priority") lab.append(prioIcon(+val));
+        if (menu.field === "area" && val !== "none") lab.append(el("span", "dot " + val.toLowerCase()));
+        lab.append(document.createTextNode(name), el("span", "n", String(pool.filter(i => f.of(i) === val).length)));
+        menuEl.append(lab);
+      });
     }
-    return { date: ymd(weekDays()[0]), from: WORK_FROM };
+    menuEl.hidden = false;
+    // place the menu under its anchor, kept inside the list area
+    const anchor = document.getElementById(menu.anchor), host = document.getElementById("listbar");
+    if (!anchor) { menuEl.hidden = true; return; }
+    const ar = anchor.getBoundingClientRect(), hr = host.getBoundingClientRect();
+    menuEl.style.top = (ar.bottom - hr.top + 6) + "px";
+    const alignRight = menu.anchor === "filter-btn" || menu.anchor === "display-btn";
+    if (alignRight) { menuEl.style.left = "auto"; menuEl.style.right = Math.max(0, hr.right - ar.right) + "px"; }
+    else { menuEl.style.right = "auto"; menuEl.style.left = Math.max(0, ar.left - hr.left) + "px"; }
   }
 
-  // ---------- render helpers ----------
-  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
-  const FOLDER_SVG = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>';
-
-  function row(i, boxes, weekEnd) {
-    const li = el("li", "row"); li.draggable = true; li.tabIndex = 0;
-    li.addEventListener("dragstart", e => { e.dataTransfer.setData("text/plain", i.id); e.dataTransfer.effectAllowed = "copy"; li.classList.add("dragging"); });
-    li.addEventListener("dragend", () => li.classList.remove("dragging"));
-    li.append(el("span", "idc", i.id));
-    const main = el("div", "main");
-    const tl = el("div", "tl");
-    const a = el("a", null, i.title || "(untitled)"); a.href = i.url || "#"; a.target = "_blank"; a.rel = "noopener"; a.draggable = false;
-    tl.append(a);
-    const f = folderOf(i);
-    if (f) { const fb = el("span", "folder"); fb.innerHTML = FOLDER_SVG; fb.append(document.createTextNode(f)); tl.append(fb); }
-    if (prefix(i) !== "CTO" && i.team) tl.append(el("span", "ball", i.team));
-    main.append(tl);
-    const b = ballOf(i);
-    const extra = i.parentId && /^[A-Z]+-\d+$/.test(i.parentId) ? `sub-issue of ${i.parentId}` : "";
-    const line = [b.text, extra].filter(Boolean).join(" · ");
-    if (line) main.append(el("span", "ball" + (b.wait ? " wait" : ""), line));
-    li.append(main);
-    const side = el("div", "side");
-    if (i.dueDate) { const d = dueLabel(i.dueDate); side.append(el("span", "due " + d.cls, d.text)); }
-    const mine = (boxes[i.id] || []).filter(e => e.end > new Date());
-    if (mine.length) side.append(el("span", "plan set", `${WD[mine[0].start.getDay()]} ${hm(minsOf(mine[0].start))}`));
-    else if (i.dueDate && i.dueDate <= weekEnd && stageOf(i) !== "waiting") side.append(el("span", "plan none", "no time yet"));
-    const pb = el("button", "planbtn", "Plan"); pb.type = "button"; pb.setAttribute("aria-label", "Plan time for " + i.id);
-    pb.addEventListener("click", () => openPlan(i));
-    side.append(pb);
-    li.append(side);
-    return li;
+  function renderChips() {
+    const box = document.getElementById("chips"); box.textContent = "";
+    const active = Object.keys(FFIELDS).filter(k => (filters[k] || []).length);
+    box.hidden = !active.length;
+    active.forEach(k => {
+      const f = FFIELDS[k], names = new Map(f.options());
+      const vals = filters[k].map(v => names.get(v) || v);
+      const chip = el("span", "chip");
+      const body = el("button"); body.type = "button"; body.id = "chip-" + k;
+      body.append(el("span", "f", f.name), el("span", "op", vals.length > 1 ? "is any of" : "is"), document.createTextNode(vals.join(", ")));
+      body.addEventListener("click", e => { e.stopPropagation(); openMenu({ type: "values", field: k, anchor: "chip-" + k }); });
+      const x = el("button", "x", "×"); x.type = "button"; x.setAttribute("aria-label", `Remove ${f.name} filter`);
+      x.addEventListener("click", e => { e.stopPropagation(); removeFilter(k); });
+      chip.append(body, x); box.append(chip);
+    });
+    if (active.length > 1) { const c = el("button", "quiet", "Clear"); c.type = "button"; c.addEventListener("click", e => { e.stopPropagation(); filters = {}; saveFilters(); menu = null; render(); }); box.append(c); }
   }
 
-  function section(key, cls, title, hint, list, boxes, weekEnd, collapsible) {
-    const s = el("section", cls);
-    const head = el("div", "shead"); head.append(el("span", "label", title), el("span", "n", String(list.length)));
-    if (hint) head.append(el("span", "hint", hint));
-    const body = list.length ? (() => { const ul = el("ul", "list"); list.forEach(i => ul.append(row(i, boxes, weekEnd))); return ul; })() : el("p", "empty", "Nothing here.");
-    if (collapsible) {
-      const d = el("details"); const sm = el("summary"); sm.append(head); d.append(sm, body);
-      try { d.open = localStorage.getItem("board.open." + key) === "1"; } catch (e) {}
-      d.addEventListener("toggle", () => { try { localStorage.setItem("board.open." + key, d.open ? "1" : "0"); } catch (e) {} });
-      s.append(d);
-    } else s.append(head, body);
+  function renderTabs() {
+    const nav = document.getElementById("tabs"); nav.textContent = "";
+    const loaded = state.status === "ok";
+    VIEWS.forEach(([k, name]) => {
+      const a = el("a"); a.href = "#" + k;
+      a.setAttribute("aria-current", view === k ? "page" : "false");
+      a.append(document.createTextNode(name));
+      if (loaded) a.append(el("span", "c", String(viewIssues(k).length)));
+      a.addEventListener("click", e => { e.preventDefault(); setView(k); });
+      nav.append(a);
+    });
+  }
+
+  const SVG_NS = "http://www.w3.org/2000/svg";
+  function prioIcon(v) {
+    const s = document.createElementNS(SVG_NS, "svg");
+    s.setAttribute("viewBox", "0 0 16 16"); s.setAttribute("class", "prio" + (v === 1 ? " urgent" : "")); s.setAttribute("aria-hidden", "true");
+    const add = (tag, attrs) => { const n = document.createElementNS(SVG_NS, tag); Object.entries(attrs).forEach(([k, val]) => n.setAttribute(k, val)); s.append(n); };
+    if (v === 1) { add("rect", { x: 1, y: 1, width: 14, height: 14, rx: 3, fill: "currentColor" }); add("rect", { x: 7, y: 4, width: 2, height: 5.5, rx: 1, style: "fill: var(--surface)" }); add("rect", { x: 7, y: 10.5, width: 2, height: 2, rx: 1, style: "fill: var(--surface)" }); }
+    else if (v === 0) { [2, 7, 12].forEach(x => add("rect", { x, y: 7.25, width: 2.5, height: 1.5, rx: 0.75, fill: "currentColor", opacity: 0.6 })); }
+    else { const lit = { 2: 3, 3: 2, 4: 1 }[v] || 0; [[2, 9, 5], [6.5, 6, 8], [11, 3, 11]].forEach(([x, y, h], k) => add("rect", { x, y, width: 3, height: h, rx: 1, fill: "currentColor", opacity: k < lit ? 1 : 0.25 })); }
     return s;
   }
+  function statusPill(i) {
+    const cls = isWaiting(i) ? "pill waiting" : i.statusType === "started" ? "pill started" : "pill";
+    return el("span", cls, isWaiting(i) ? "Waiting" : (i.status || ""));
+  }
+  function dateTag(i) {
+    if (!i.dueDate) return null;
+    const past = i.dueDate < ymd(new Date());
+    const t = el("span", "date" + (past ? " past" : ""), (past ? "was " : "") + fmtDate(i.dueDate));
+    t.title = "Check-in date";
+    return t;
+  }
+  function areaTag(i) {
+    const a = areaOf(i); if (!a) return null;
+    const t = el("span", "area"); t.append(el("span", "dot " + a.toLowerCase()), document.createTextNode(a)); return t;
+  }
 
-  function errorCopy(err, server) {
+  // ---------- markdown (escaped first; links only https) ----------
+  const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  function inline(s) {
+    let t = esc(s);
+    const codes = [];
+    t = t.replace(/`([^`]+)`/g, (_, c) => { codes.push(c); return `\u0000${codes.length - 1}\u0000`; });
+    t = t.replace(/\[([^\]]+)\]\((https:\/\/[^)\s]+)\)/g, (_, txt, url) => `<a href="${url}" target="_blank" rel="noopener">${txt}</a>`);
+    t = t.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>").replace(/(^|[\s(])_([^_]+)_(?=[\s).,;:!?]|$)/g, "$1<em>$2</em>").replace(/(^|[\s(])\*([^*\s][^*]*)\*(?=[\s).,;:!?]|$)/g, "$1<em>$2</em>");
+    return t.replace(/\u0000(\d+)\u0000/g, (_, n) => `<code>${codes[+n]}</code>`);
+  }
+  function markdown(src) {
+    const lines = String(src).replace(/\r/g, "").split("\n");
+    const out = []; let para = [], list = null;
+    const flushP = () => { if (para.length) { out.push(`<p>${inline(para.join(" "))}</p>`); para = []; } };
+    const flushL = () => { if (list) { out.push(`<${list.tag}>${list.items.map(x => `<li>${inline(x)}</li>`).join("")}</${list.tag}>`); list = null; } };
+    for (const raw of lines) {
+      const line = raw.trimEnd();
+      let m;
+      if (!line.trim()) { flushP(); flushL(); continue; }
+      if ((m = line.match(/^\+\+\+\s*(.*)$/))) { flushP(); flushL(); out.push(m[1] ? `<details><summary>${inline(m[1])}</summary>` : "</details>"); continue; }
+      if ((m = line.match(/^#{1,6}\s+(.*)$/))) { flushP(); flushL(); out.push(`<h4>${inline(m[1])}</h4>`); continue; }
+      if ((m = line.match(/^\s*[-*]\s+(.*)$/))) { flushP(); if (!list || list.tag !== "ul") { flushL(); list = { tag: "ul", items: [] }; } list.items.push(m[1]); continue; }
+      if ((m = line.match(/^\s*\d+[.)]\s+(.*)$/))) { flushP(); if (!list || list.tag !== "ol") { flushL(); list = { tag: "ol", items: [] }; } list.items.push(m[1]); continue; }
+      flushL(); para.push(line.trim());
+    }
+    flushP(); flushL();
+    const opens = out.filter(x => x.startsWith("<details>")).length, closes = out.filter(x => x === "</details>").length;
+    for (let k = closes; k < opens; k++) out.push("</details>");
+    return out.join("");
+  }
+
+  // ---------- errors ----------
+  function errorCopy(err) {
     switch (err && err.code) {
-      case "needs_reauth": return { text: `${server} needs to be reconnected. Reconnect it in claude.ai under Settings → Connectors, then reload.`, tone: "bad" };
-      case "server_not_connected": return { text: `${server} isn't connected to your claude.ai account. Add it under Settings → Connectors, then reload.`, tone: "bad" };
-      case "selection_required": return { text: `You have more than one ${server} connector. Pick one in the prompt claude.ai shows, then reload.`, tone: "warn" };
-      case "not_in_manifest": return { text: `${server} access is turned off for this page.`, tone: "warn", action: "permissions" };
-      case "approval_required": case "consent_required": return { text: `This page needs your OK to read ${server}.`, tone: "warn", action: "approve" };
-      case "blocked_by_policy": return { text: `Your organization's policy blocks ${server} for this page.`, tone: "bad" };
-      case "server_unavailable": case "upstream_error": case "rate_limited": return { text: `${server} didn't answer just now. The board keeps what it loaded last; press Refresh to try again.`, tone: "warn" };
-      case "tool_error": return { text: `${server} reported an error: ${err.message || "unknown"}`, tone: "bad" };
-      case "not_granted": case "capability_disabled": case "capability_removed": return { text: `This view can't reach ${server}. Open the page in claude.ai.`, tone: "bad" };
-      default: return { text: `Couldn't load from ${server} (${(err && err.code) || "unknown error"}). Press Refresh to try again.`, tone: "warn" };
+      case "needs_reauth": return { text: "Linear needs to be reconnected. Reconnect it in claude.ai under Settings → Connectors, then reload.", tone: "bad" };
+      case "server_not_connected": return { text: "Linear isn't connected to your claude.ai account. Add it under Settings → Connectors, then reload.", tone: "bad" };
+      case "selection_required": return { text: "You have more than one Linear connector. Pick one in the prompt claude.ai shows, then reload.", tone: "warn" };
+      case "not_in_manifest": return { text: "Linear access is turned off for this page.", tone: "warn", action: "permissions" };
+      case "approval_required": case "consent_required": return { text: "This page needs your OK to read Linear.", tone: "warn", action: "approve" };
+      case "blocked_by_policy": return { text: "Your organization's policy blocks Linear for this page.", tone: "bad" };
+      case "server_unavailable": case "upstream_error": case "rate_limited": return { text: "Linear didn't answer just now. The list shows what it loaded last; press Refresh to try again.", tone: "warn" };
+      case "tool_error": return { text: `Linear reported an error: ${(err && err.message) || "unknown"}`, tone: "bad" };
+      case "not_granted": case "capability_disabled": case "capability_removed": return { text: "This view can't reach Linear. Open the page in claude.ai.", tone: "bad" };
+      default: return { text: `Couldn't load from Linear (${(err && err.code) || "unknown error"}). Press Refresh to try again.`, tone: "warn" };
     }
   }
-  function renderBanner(id, errs, server, approve) {
-    const box = document.getElementById(id);
-    if (!errs.length) { box.hidden = true; box.textContent = ""; return; }
-    const c = errorCopy(errs[0], server);
+  function renderBanner() {
+    const box = document.getElementById("banner");
+    if (!state.error) { box.hidden = true; box.textContent = ""; return; }
+    const c = errorCopy(state.error);
     box.className = "banner " + c.tone; box.textContent = "";
     box.append(el("p", null, c.text));
-    if (c.action === "permissions") { const b = el("button", null, "Open permissions"); b.type = "button"; b.addEventListener("click", async () => { const p = await claude.use("permissions"); if (p) p.manage().catch(() => {}); }); box.append(b); }
-    if (c.action === "approve") { const b = el("button", null, "Allow and load"); b.type = "button"; b.addEventListener("click", () => { b.disabled = true; approve(); }); box.append(b); }
+    if (c.action === "permissions") { const b = el("button", null, "Open permissions"); b.type = "button"; b.addEventListener("click", async () => { try { const p = await window.claude.use("permissions"); if (p) await p.manage(); } catch (e) {} }); box.append(b); }
+    if (c.action === "approve") { const b = el("button", null, "Allow and load"); b.type = "button"; b.addEventListener("click", () => { b.disabled = true; loadOnce(); }); box.append(b); }
     box.hidden = false;
   }
 
-  // ---------- render ----------
-  let draggingDraft = false;
+  // ---------- render: the list ----------
   function render() {
-    if (draggingDraft) return;
+    renderBanner();
+    renderTabs();
+    const open = viewIssues(view);
+    const sub = document.getElementById("sub");
     const now = new Date();
-    const days = weekDays();
-    const weekEnd = ymd(addDays(days[0], 6));
-    document.getElementById("dateline").textContent = `${WDL[now.getDay()]} ${pad(now.getDate())}.${pad(now.getMonth() + 1)}.${now.getFullYear()} · KW ${isoWeek(now)}`;
-    document.getElementById("wk-this").setAttribute("aria-pressed", String(weekOffset === 0));
-    document.getElementById("wk-next").setAttribute("aria-pressed", String(weekOffset === 1));
-    const times = [...STATES.map(s => lin[s].at), ...Object.values(cal).map(c => c.at)].filter(Boolean);
-    if (times.length) { const t = new Date(Math.min(...times)); document.getElementById("fresh").textContent = `Updated ${pad(t.getHours())}:${pad(t.getMinutes())}`; }
-    const boxes = boxesById();
-    document.getElementById("view-plan").hidden = view !== "plan";
-    document.getElementById("view-timebox").hidden = view !== "timebox";
-    document.getElementById("wk-buttons").style.display = view === "timebox" ? "inline-flex" : "none";
-    document.getElementById("tab-plan").setAttribute("aria-current", view === "plan" ? "page" : "false");
-    document.getElementById("tab-timebox").setAttribute("aria-current", view === "timebox" ? "page" : "false");
-    if (view === "plan") renderPlan(boxes, weekEnd);
-    else { renderIssues(boxes, weekEnd); renderWeek(days, boxes); }
+    if (state.status === "loading") sub.textContent = "Loading your issues from Linear…";
+    else if (state.status === "error" && !openIssues().length) sub.textContent = "Nothing loaded yet.";
+    else sub.textContent = view === "week" ? `This week, ${weekRange()} · scheduled, not overdue`
+      : view === "today" ? `Today, ${WD[now.getDay()]} ${now.getDate()} ${MON[now.getMonth()]} · due today`
+      : view === "overdue" ? "Due date has passed and the issue is still open"
+      : `Everything open on ${TEAM}${state.more ? " (first 250 shown)" : ""}`;
+    const nf = Object.keys(filters).length;
+    document.getElementById("count").textContent = state.status === "ok" || open.length ? `${open.length} issue${open.length === 1 ? "" : "s"}${nf ? " · filtered" : ""}` : "";
+    renderChips();
+    if (state.at) { const t = new Date(state.at); document.getElementById("fresh").textContent = `Updated ${pad(t.getHours())}:${pad(t.getMinutes())}`; }
+
+    const root = document.getElementById("groups"); root.textContent = "";
+    const wrap = el("div"); wrap.style.cssText = "display:grid;gap:18px";
+    const group = (icon, name, items) => {
+      if (!items.length) return;
+      const g = el("section", "group"); g.setAttribute("aria-label", name);
+      const head = el("div", "ghead"); if (icon) head.append(icon); head.append(el("span", "t", name), el("span", "n", String(items.length)));
+      const ul = el("ul", "list");
+      items.forEach(i => ul.append(row(i)));
+      g.append(head, ul); wrap.append(g);
+    };
+    if (state.status === "ok" && !open.length) wrap.append(el("p", "empty", Object.keys(filters).length ? "No issues match these filters." : ({ today: "Nothing is due today.", week: "Nothing else is scheduled for this week.", overdue: "Nothing is overdue." }[view] || "No open issues on the board.")));
+    if (groupBy === "none") {
+      if (open.length) { const ul = el("ul", "list"); open.slice().sort(byPrioThenDue).forEach(i => ul.append(row(i))); wrap.append(ul); }
+    } else if (groupBy === "status") {
+      const names = [...new Map(open.slice().sort((a, b) => statusRank(a) - statusRank(b)).map(i => [statusName(i), 1])).keys()];
+      names.forEach(n => group(null, n, open.filter(i => statusName(i) === n).sort(byPrioThenDue)));
+    } else {
+      GROUPS.forEach(([v, name]) => group(prioIcon(v), name, open.filter(i => prioOf(i) === v).sort(sorter)));
+    }
+    root.append(wrap);
+    renderMenu();
+    renderPanel();
   }
-
-  // ---------- 1 · Plan the week: a kanban ----------
-  const COLS = [
-    { key: "backlog", title: "Backlog", sub: "not this week", state: "Backlog", type: "backlog", match: i => i.statusType === "backlog" },
-    { key: "scheduled", title: "Scheduled", sub: "this week", state: "Todo", type: "unstarted", match: i => i.statusType === "unstarted" || i.statusType === "triage" },
-    { key: "progress", title: "In progress", sub: "incl. waiting on others", state: "In Progress", type: "started", match: i => i.statusType === "started" },
-    { key: "done", title: "Done", sub: "since Monday", state: "Done", type: "completed", match: i => i.statusType === "completed" },
-  ];
-  const colOf = i => COLS.findIndex(c => c.match(i));
-
-  function card(i, boxes, ci) {
-    const li = el("li", "card"); li.draggable = true; li.tabIndex = 0;
-    li.addEventListener("dragstart", e => { e.dataTransfer.setData("text/plain", i.id); e.dataTransfer.effectAllowed = "move"; li.classList.add("dragging"); });
-    li.addEventListener("dragend", () => li.classList.remove("dragging"));
-    li.addEventListener("keydown", e => {
-      if (e.key === "ArrowLeft" && ci > 0) { e.preventDefault(); moveIssue(i, ci - 1); }
-      if (e.key === "ArrowRight" && ci < COLS.length - 1) { e.preventDefault(); moveIssue(i, ci + 1); }
-    });
-    const top = el("div", "ctop");
-    top.append(el("span", "idc", i.id));
-    if (i.status === "Delegated/Waiting") top.append(el("span", "stagepill waiting", "Waiting"));
-    else if (i.status === "In Review") top.append(el("span", "stagepill progress", "In Review"));
-    if (prefix(i) !== "CTO" && i.team) top.append(el("span", "stagepill", i.team));
-    const right = el("span", "cright");
-    if (i.dueDate && i.statusType !== "completed") { const d = dueLabel(i.dueDate); right.append(el("span", "due " + d.cls, d.text)); }
-    const mine = (boxes[i.id] || []).filter(e => e.end > new Date());
-    if (mine.length && i.statusType !== "completed") right.append(el("span", "plan set", `${WD[mine[0].start.getDay()]} ${hm(minsOf(mine[0].start))}`));
-    top.append(right);
-    li.append(top);
-    const a = el("a", "ctitle", i.title || "(untitled)"); a.href = i.url || "#"; a.target = "_blank"; a.rel = "noopener"; a.draggable = false;
-    li.append(a);
-    const f = folderOf(i);
-    if (f) { const fb = el("span", "folder"); fb.innerHTML = FOLDER_SVG; fb.append(document.createTextNode(f)); li.append(fb); }
-    const b = ballOf(i);
-    if (b.text && i.statusType !== "completed") li.append(el("span", "ball" + (b.wait ? " wait" : ""), cut(b.text, 100)));
-    const nav = el("div", "cnav");
-    const left = el("button", null, "‹"); left.type = "button"; left.disabled = ci === 0; left.setAttribute("aria-label", ci > 0 ? `Move ${i.id} to ${COLS[ci - 1].title}` : "");
-    const rightB = el("button", null, "›"); rightB.type = "button"; rightB.disabled = ci === COLS.length - 1; rightB.setAttribute("aria-label", ci < COLS.length - 1 ? `Move ${i.id} to ${COLS[ci + 1].title}` : "");
-    left.addEventListener("click", () => moveIssue(i, ci - 1)); rightB.addEventListener("click", () => moveIssue(i, ci + 1));
-    nav.append(left, rightB);
-    li.append(nav);
+  function row(i) {
+    const li = el("li", "row" + (openId === i.id ? " sel" : ""));
+    li.tabIndex = 0; li.setAttribute("role", "button"); li.setAttribute("aria-label", `${i.id} ${i.title}. Open details.`);
+    li.addEventListener("click", () => openPanel(i.id));
+    li.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openPanel(i.id); } });
+    const main = el("div", "main");
+    main.append(el("span", "title", i.title || "(untitled)"));
+    const meta = el("div", "meta");
+    const a = areaTag(i); if (a) meta.append(a);
+    const f = folderOf(i); if (f) meta.append(el("span", "folder", "▸ " + f));
+    if (i.parentId) meta.append(el("span", null, "part of " + i.parentId));
+    if (meta.childNodes.length) main.append(meta);
+    const right = el("div", "right");
+    const d = dateTag(i); if (d) right.append(d);
+    right.append(statusPill(i));
+    li.append(prioIcon(prioOf(i)), el("span", "id", i.id), main, right);
     return li;
   }
 
-  function renderPlan(boxes, weekEnd) {
-    renderBanner("plan-banner", STATES.map(s => lin[s].error).filter(Boolean), LINEAR, approveLinear);
-    const errp = document.getElementById("plan-error"); errp.hidden = !planError; errp.textContent = planError;
-    const loaded = STATES.some(s => lin[s].status === "ok");
-    const all = allIssues();
-    const scoped = all.filter(i => pf.scope === "teams" ? prefix(i) !== "CTO" : prefix(i) === "CTO");
-    const bar = document.getElementById("plan-filters"); bar.textContent = "";
-    const save = () => { try { localStorage.setItem("board.pf", JSON.stringify(pf)); } catch (e) {} render(); };
-    const chip = (label, on, fn) => { const b = el("button", "fchip", label); b.type = "button"; b.setAttribute("aria-pressed", String(on)); b.addEventListener("click", fn); return b; };
-    const g1 = el("span", "fgroup");
-    g1.append(chip("My board", pf.scope === "board", () => { pf.scope = "board"; save(); }), chip("Product teams", pf.scope === "teams", () => { pf.scope = "teams"; save(); }));
-    const g2 = el("span", "fgroup");
-    [["any", "Anyone"], ["me", "My move"], ["waiting", "Waiting on others"]].forEach(([k, l]) => g2.append(chip(l, pf.who === k, () => { pf.who = k; save(); })));
-    const g3 = el("span", "fgroup");
-    g3.append(chip("With folder", pf.folder, () => { pf.folder = !pf.folder; save(); }), chip("Due by Sunday", pf.dueWeek, () => { pf.dueWeek = !pf.dueWeek; save(); }));
-    const g4 = el("span", "fgroup");
-    const present = AREAS.filter(a => scoped.some(i => areaOf(i) === a));
-    if (area !== "ALL" && !present.includes(area)) area = "ALL";
-    ["ALL", ...present].forEach(a => g4.append(chip(a === "ALL" ? "All areas" : a, area === a, () => { area = a; try { localStorage.setItem("board.area", a); } catch (e) {} render(); })));
-    bar.append(g1, g2, g3, g4);
-
-    const vis = scoped.filter(i =>
-      (area === "ALL" || areaOf(i) === area) &&
-      (pf.who === "any" || (pf.who === "waiting") === (ballOf(i).wait || stageOf(i) === "waiting")) &&
-      (!pf.folder || hasFolder(i)) &&
-      (!pf.dueWeek || (i.dueDate && i.dueDate <= weekEnd)));
-    const board = document.getElementById("kanban"); board.textContent = "";
-    COLS.forEach((c, ci) => {
-      const col = el("div", "kcol k-" + c.key); col.dataset.ci = String(ci);
-      const head = el("div", "khead");
-      const list = vis.filter(c.match).sort((a, b) => c.key === "done" ? String(b.completedAt || "").localeCompare(String(a.completedAt || "")) : byDue(a, b));
-      const ht = el("span"); ht.append(el("span", "kt", c.title), el("span", "ks", " " + c.sub));
-      head.append(ht, el("span", "kn", String(list.length)));
-      col.append(head);
-      if (!loaded) col.append(el("p", "empty", STATES.some(s => lin[s].error) ? "No issues loaded yet." : "Loading…"));
-      else if (!list.length) col.append(el("p", "empty", c.key === "scheduled" ? "Drag what you want to do this week here." : "Nothing here."));
-      else { const ul = el("ul", "cards"); list.forEach(i => ul.append(card(i, boxes, ci))); col.append(ul); }
-      col.addEventListener("dragover", e => { e.preventDefault(); e.dataTransfer.dropEffect = "move"; col.classList.add("drop"); });
-      col.addEventListener("dragleave", e => { if (!col.contains(e.relatedTarget)) col.classList.remove("drop"); });
-      col.addEventListener("drop", e => {
-        e.preventDefault(); col.classList.remove("drop");
-        const it = allIssues().find(i => i.id === e.dataTransfer.getData("text/plain"));
-        if (it && colOf(it) !== ci) moveIssue(it, ci);
-      });
-      board.append(col);
-    });
-  }
-
-  async function moveIssue(i, ci) {
-    if (!mcp || ci < 0 || ci >= COLS.length) return;
-    const c = COLS[ci];
-    planError = "";
-    const target = { statusType: c.type, status: c.state, ...(c.type === "completed" ? { completedAt: new Date().toISOString() } : {}) };
-    pending.set(i.id, target); render();
-    const again = document.querySelector(`.k-${c.key} li.card a[href="${CSS.escape(i.url || "#")}"]`);
-    if (again) again.closest("li").focus();
-    try {
-      await mcp.callTool(LINEAR, "save_issue", { id: i.id, state: c.state });
-      try { await mcp.invalidate(LINEAR, "list_issues"); } catch (e) {}
-    } catch (err) {
-      pending.delete(i.id);
-      planError = `${i.id} could not be moved to ${c.title}: ${errorCopy(err, LINEAR).text}`;
-      render();
-    }
-  }
-
-  function renderIssues(boxes, weekEnd) {
-    renderBanner("lin-banner", STATES.map(s => lin[s].error).filter(Boolean), LINEAR, approveLinear);
-    const loaded = STATES.some(s => lin[s].status === "ok");
-    const all = allMine();
-    const mine = all.filter(i => prefix(i) === "CTO");
-    const teams = all.filter(i => prefix(i) !== "CTO").sort(byDue);
-
-    const fbar = document.getElementById("filters");
-    [...fbar.querySelectorAll(".fchip")].forEach(n => n.remove());
-    const present = AREAS.filter(a => mine.some(i => areaOf(i) === a));
-    if (area !== "ALL" && !present.includes(area)) area = "ALL";
-    const legend = fbar.querySelector(".legend");
-    ["ALL", ...present].forEach(a => {
-      const b = el("button", "fchip", a === "ALL" ? `All ${mine.length}` : a); b.type = "button";
-      b.setAttribute("aria-pressed", String(a === area));
-      b.addEventListener("click", () => { area = a; try { localStorage.setItem("board.area", a); } catch (e) {} render(); });
-      fbar.insertBefore(b, legend);
-    });
-
-    const box = document.getElementById("issues"); box.textContent = "";
-    if (!loaded) { box.append(el("p", "empty", STATES.some(s => lin[s].error) ? "No issues loaded yet." : "Loading your issues from Linear…")); return; }
-    const vis = mine.filter(i => inWeek(i) && (area === "ALL" || areaOf(i) === area));
-    const g = { progress: [], waiting: [], next: [], later: [] };
-    vis.forEach(i => g[stageOf(i)].push(i));
-    Object.values(g).forEach(l => l.sort(byDue));
-    if (dueFocus) {
-      const list = all.filter(i => dueFocus.ids.includes(i.id)).sort(byDue);
-      const s = section("focus", "st-next", dueFocus.label, "drag each into a free slot", list, boxes, weekEnd);
-      const clear = el("button", "planbtn", "Show all"); clear.type = "button";
-      clear.addEventListener("click", () => { dueFocus = null; render(); });
-      s.querySelector(".shead").append(clear);
-      s.style.border = "1px solid var(--accent)"; s.style.borderRadius = "12px"; s.style.padding = "8px";
-      box.append(s);
-    }
-    box.append(
-      section("progress", "st-progress", "In progress", "my move, started", g.progress, boxes, weekEnd),
-      section("waiting", "st-waiting", "Waiting on others", "the ball is elsewhere", g.waiting, boxes, weekEnd),
-      section("next", "st-next", "Next", "my move, not started", g.next, boxes, weekEnd),
-      section("teams", "", "Started in product teams", "", teams.filter(inWeek), boxes, weekEnd, true),
-    );
-    box.style.display = "grid"; box.style.gap = "14px";
-  }
-
-  function renderWeek(days, boxes) {
-    renderBanner("cal-banner", Object.values(cal).map(c => c.error).filter(Boolean), "Outlook", approveCalendar);
-    const now = new Date(), today = ymd(now);
-    const stats = document.getElementById("stats");
-    stats.textContent = "";
-    stats.append(el("span", "label", `Week ${pad(days[0].getDate())}.${pad(days[0].getMonth() + 1)} – ${pad(days[4].getDate())}.${pad(days[4].getMonth() + 1)}`));
-    const anyCal = days.some(d => (cal[ymd(d)] || {}).status === "ok");
-    if (anyCal) {
-      let m = 0, b = 0, free = 0;
-      days.forEach(d => { const iv = dayIntervals(ymd(d)); const um = union(iv.mtg), ub = union(iv.box), ua = union([...iv.mtg, ...iv.box]); m += total(um); b += total(ub); free += (WORK_TO - WORK_FROM) - total(ua); });
-      const h = x => (Math.round(x / 30) / 2).toString().replace(/\.0$/, "") + " h";
-      const st = (cls, n, t) => { const s = el("span", "stat " + cls); s.append(el("b", null, n), document.createTextNode(" " + t)); return s; };
-      stats.append(st("", h(m), "meetings"), st("box", h(b), "timeboxed"), st("free", h(free), "free (9–18)"));
-      const weekEnd = ymd(addDays(days[0], 6));
-      const unplanned = allMine().filter(i => prefix(i) === "CTO" && i.dueDate && i.dueDate <= weekEnd && stageOf(i) !== "waiting" && !(boxes[i.id] || []).some(e => e.end > now));
-      if (unplanned.length) stats.append(el("span", "warnline", `${unplanned.length} issue${unplanned.length > 1 ? "s" : ""} due or late have no time planned`));
-    }
-
-    const grid = document.getElementById("cal"); grid.textContent = "";
-    grid.append(el("div", "gutter-head"));
-    const weekEnd = ymd(addDays(days[0], 6));
-    const dueBy = {}, overdue = [];
-    allMine().filter(i => i.dueDate && stageOf(i) !== "waiting").forEach(i => {
-      (dueBy[i.dueDate] = dueBy[i.dueDate] || []).push(i.id);
-      if (i.dueDate < today) overdue.push(i.id);
-    });
-    const plannedBy = (ids, k) => ids.filter(id => (boxes[id] || []).some(e => ymd(e.start) <= k && e.end > now)).length;
-    const chip = (ids, k, text, label, late) => {
-      const p = plannedBy(ids, k);
-      const b = el("button", "duechip" + (late ? " late" : ""), `${ids.length} ${text}${p ? ` · ${p} planned` : ""}`); b.type = "button";
-      b.title = ids.join(", ");
-      const on = dueFocus && dueFocus.label === label;
-      b.setAttribute("aria-pressed", String(!!on));
-      b.addEventListener("click", () => { dueFocus = on ? null : { label, ids }; render(); });
-      return b;
-    };
-    days.forEach(d => {
-      const k = ymd(d);
-      const h = el("div", "dayhead" + (k === today ? " is-today" : ""));
-      h.append(el("span", "dn", fmtDay(d)));
-      const c = cal[k];
-      const note = c && c.status === "loading" ? "loading…" : c && c.more ? "more than 25 events; some are missing" : "";
-      const chips = el("div", "chips");
-      if (k === today && overdue.length) chips.append(chip(overdue, k, "overdue", "Overdue", true));
-      if (dueBy[k]) chips.append(chip(dueBy[k], k, "due", "Due " + fmtDay(d), false));
-      if (chips.childNodes.length) h.append(chips);
-      if (note || !chips.childNodes.length) h.append(el("span", "dd", note || " "));
-      grid.append(h);
-    });
-    const height = (END_H - START_H) * 60 * PX;
-    const gut = el("div", "gutter"); gut.style.height = height + "px";
-    for (let hh = START_H; hh < END_H; hh++) { const t = el("span", "hour", pad(hh)); t.style.top = ((hh - START_H) * 60 * PX + 2) + "px"; gut.append(t); }
-    grid.append(gut);
-
-    days.forEach(d => {
-      const k = ymd(d);
-      const col = el("div", "day"); col.style.height = height + "px"; col.dataset.date = k;
-      col.addEventListener("dragover", e => { e.preventDefault(); e.dataTransfer.dropEffect = "copy"; col.classList.add("drop"); });
-      col.addEventListener("dragleave", () => col.classList.remove("drop"));
-      col.addEventListener("drop", e => {
-        e.preventDefault(); col.classList.remove("drop");
-        const id = e.dataTransfer.getData("text/plain");
-        const issue = allMine().find(i => i.id === id); if (!issue) return;
-        const y = e.clientY - col.getBoundingClientRect().top;
-        const from = Math.min(Math.max(START_H * 60 + Math.round(y / PX / 15) * 15, START_H * 60), END_H * 60 - 60);
-        openPlan(issue, { date: k, from });
-      });
-      const evs = ((cal[k] || {}).events || []);
-      const allday = evs.filter(e => e.allDay);
-      if (allday.length) col.append(el("div", "allday", allday.map(e => e.subject).join(" · ")));
-      const timed = evs.filter(e => !e.allDay).map(e => ({ e, s: Math.max(minsOf(e.start), START_H * 60), en: Math.min(minsOf(e.end) || 24 * 60, END_H * 60) })).filter(x => x.en > x.s).sort((a, b) => a.s - b.s || b.en - a.en);
-      let cluster = [], cEnd = 0;
-      const flush = () => {
-        const lanes = [];
-        cluster.forEach(x => { let i = lanes.findIndex(end => end <= x.s); if (i < 0) { i = lanes.length; lanes.push(0); } lanes[i] = x.en; x.lane = i; });
-        cluster.forEach(x => {
-          const w = 100 / lanes.length;
-          const short = (x.en - x.s) * PX < 30;
-          const a = el("a", "ev " + (x.e.key ? "box" : "mtg") + (x.e.tentative ? " tentative" : "") + (short ? " short" : ""));
-          if (short) a.style.lineHeight = Math.max((x.en - x.s) * PX - 2, 14) + "px";
-          a.style.zIndex = String(1 + x.lane);
-          if (x.e.link) { a.href = x.e.link; a.target = "_blank"; a.rel = "noopener"; }
-          a.style.top = ((x.s - START_H * 60) * PX + 1) + "px";
-          a.style.height = Math.max((x.en - x.s) * PX - 2, 14) + "px";
-          a.style.left = `calc(${x.lane * w}% + 2px)`; a.style.width = `calc(${w}% - 4px)`;
-          a.title = `${x.e.subject} · ${hm(minsOf(x.e.start))}–${hm(minsOf(x.e.end))}`;
-          a.append(el("span", "et", x.e.subject));
-          if (x.en - x.s >= 40) a.append(el("span", "em", `${hm(minsOf(x.e.start))}–${hm(minsOf(x.e.end))}`));
-          col.append(a);
-        });
-        cluster = [];
-      };
-      timed.forEach(x => { if (cluster.length && x.s >= cEnd) flush(); cluster.push(x); cEnd = Math.max(cluster.length > 1 ? cEnd : 0, x.en); });
-      if (cluster.length) flush();
-      if (planDraft && planDraft.date === k) drawDraft(col, height);
-      if (planDraft) {
-        col.classList.add("planning");
-        col.addEventListener("click", e => { if (e.target !== col || !planDraft) return; const y = e.clientY - col.getBoundingClientRect().top; planDraft.date = k; planDraft.from = Math.min(Math.max(START_H * 60 + Math.floor(y / PX / 15) * 15, START_H * 60), END_H * 60 - planDraft.dur); render(); });
-      }
-      if (k === today) { const m = minsOf(now); if (m >= START_H * 60 && m <= END_H * 60) { const ln = el("div", "nowline"); ln.style.top = ((m - START_H * 60) * PX) + "px"; col.append(ln); } }
-      grid.append(col);
-    });
-  }
-
-  // ---------- planning: a draft box on the calendar ----------
-  let planDraft = null;     // { issue, date, from, dur, sent }
-  const MIN_DUR = 15, MAX_DUR = 90;
-  const clampN = (v, a, b) => Math.min(Math.max(v, a), b);
-  const durText = m => m < 60 ? `${m} min` : m === 60 ? "1 h" : `1 h ${m - 60} min`;
-  function deeplink(d) {
-    const tz = x => { const m = -x.getTimezoneOffset(), s = m >= 0 ? "+" : "-", a = Math.abs(m); return s + pad(Math.floor(a / 60)) + ":" + pad(a % 60); };
-    const iso = (date, mins) => { const x = new Date(`${date}T${hm(mins)}:00`); return `${date}T${hm(mins)}:00${tz(x)}`; };
-    const goal = ballOf(d.issue).text.replace(/^Me:\s*/, "");
-    const body = [`${d.issue.id}: ${d.issue.url || ""}`.trim(), goal].filter(Boolean).join("\n\n");
-    return "https://outlook.office365.com/calendar/deeplink/compose?" + new URLSearchParams({ subject: d.issue.title, startdt: iso(d.date, d.from), enddt: iso(d.date, d.from + d.dur), body }).toString();
-  }
-  function openPlan(issue, at) {
-    const slot = at || firstFreeSlot(60);
-    planDraft = { issue, date: slot.date, from: slot.from, dur: 60, sent: false };
-    if (!weekDays().some(d => ymd(d) === slot.date)) { weekOffset = slot.date > ymd(weekDays()[4]) ? weekOffset + 1 : weekOffset; watchWeek(); }
+  // ---------- side panel ----------
+  function openPanel(id) {
+    openId = id;
+    watchFull(id);
     render();
-    const box = document.querySelector(".ev.draft");
-    if (box) box.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    const p = document.querySelector(".panel"); if (p) p.focus();
   }
-  function cancelPlan() { planDraft = null; render(); }
-  document.addEventListener("keydown", e => { if (e.key === "Escape" && planDraft) cancelPlan(); });
+  function closePanel() {
+    const was = openId; openId = null;
+    render();
+    const r = was && [...document.querySelectorAll(".row")].find(x => x.getAttribute("aria-label").startsWith(was + " ")); if (r) r.focus();
+  }
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && openId) closePanel(); });
 
-  function drawDraft(col, height) {
-    const d = planDraft;
-    const box = el("div", "ev draft"); box.tabIndex = 0;
-    box.setAttribute("aria-label", `Planned time for ${d.issue.id}. Drag to move, drag the bottom edge to change the length.`);
-    const label = el("span", "et"); const sub = el("span", "em");
-    const handle = el("div", "rz"); handle.setAttribute("aria-hidden", "true");
-    box.append(label, sub, handle);
-    const bar = el("div", "draftbar");
-    const save = el("a", "btn primary", d.sent ? "Saved? Refresh" : "Save in Outlook"); save.target = "_blank"; save.rel = "noopener";
-    const minus = el("button", null, "−15"); minus.type = "button"; minus.setAttribute("aria-label", "15 minutes shorter");
-    const plus = el("button", null, "+15"); plus.type = "button"; plus.setAttribute("aria-label", "15 minutes longer");
-    const x = el("button", null, "×"); x.type = "button"; x.setAttribute("aria-label", "Cancel this plan");
-    bar.append(save, minus, plus, x);
-    const paint = () => {
-      const s0 = d.from, e0 = d.from + d.dur, short = d.dur * PX < 34;
-      box.style.top = ((s0 - START_H * 60) * PX + 1) + "px";
-      box.style.height = Math.max(d.dur * PX - 2, 12) + "px";
-      box.classList.toggle("short", short);
-      label.textContent = short ? `${d.issue.id} · ${hm(s0)}–${hm(e0)}` : `${d.issue.id} ${d.issue.title}`;
-      sub.textContent = short ? "" : `${hm(s0)}–${hm(e0)} · ${durText(d.dur)}`;
-      const below = (e0 - START_H * 60) * PX + 44 < height;
-      bar.style.top = below ? `calc(100% + 4px)` : "auto"; bar.style.bottom = below ? "auto" : `calc(100% + 4px)`;
-      save.href = deeplink(d);
-      minus.disabled = d.dur <= MIN_DUR; plus.disabled = d.dur >= MAX_DUR || e0 >= END_H * 60;
-    };
-    paint();
-    save.addEventListener("click", e => { if (d.sent) { e.preventDefault(); refreshAll(); return; } d.sent = true; setTimeout(render, 0); });
-    minus.addEventListener("click", () => { d.dur = Math.max(MIN_DUR, d.dur - 15); render(); });
-    plus.addEventListener("click", () => { d.dur = Math.min(MAX_DUR, d.dur + 15, END_H * 60 - d.from); render(); });
-    x.addEventListener("click", cancelPlan);
-    box.addEventListener("keydown", e => {
-      if (e.key === "ArrowUp" || e.key === "ArrowDown") { e.preventDefault(); const dm = e.key === "ArrowUp" ? -15 : 15; if (e.shiftKey) d.dur = clampN(d.dur + dm, MIN_DUR, Math.min(MAX_DUR, END_H * 60 - d.from)); else d.from = clampN(d.from + dm, START_H * 60, END_H * 60 - d.dur); render(); document.querySelector(".ev.draft")?.focus(); }
-    });
-    box.addEventListener("pointerdown", e => {
-      if (e.target.closest(".draftbar") || e.button !== 0) return;
-      e.preventDefault();
-      const resizing = e.target === handle;
-      box.setPointerCapture(e.pointerId);
-      const y0 = e.clientY, from0 = d.from, dur0 = d.dur;
-      box.classList.add("moving"); draggingDraft = true;
-      const move = ev => {
-        const dm = Math.round((ev.clientY - y0) / PX / 15) * 15;
-        if (resizing) d.dur = clampN(dur0 + dm, MIN_DUR, Math.min(MAX_DUR, END_H * 60 - d.from));
-        else {
-          d.from = clampN(from0 + dm, START_H * 60, END_H * 60 - d.dur);
-          const target = document.elementsFromPoint(ev.clientX, ev.clientY).find(n => n.classList && n.classList.contains("day"));
-          if (target && target.dataset.date && target.dataset.date !== d.date) { d.date = target.dataset.date; target.append(box); }
-        }
-        paint();
-      };
-      const up = () => { draggingDraft = false; box.removeEventListener("pointermove", move); box.removeEventListener("pointerup", up); box.removeEventListener("pointercancel", up); render(); };
-      box.addEventListener("pointermove", move); box.addEventListener("pointerup", up); box.addEventListener("pointercancel", up);
-    });
-    box.append(bar);
-    col.append(box);
+  function watchFull(id) {
+    if (!mcp || fullWatch.has(id)) return;
+    fullWatch.set(id, mcp.watchTool(LINEAR, "get_issue", { id, fields: ["description"] }, ev => {
+      if (ev.type === "data") { const p = ev.result && ev.result.payload; if (p && typeof p.description === "string") { full[id] = p.description; if (openId === id) render(); } }
+    }, { cache: { staleTime: 60000, gcTime: 86400000 } }));
   }
 
-  // ---------- data wiring ----------
-  const linInput = st => st === "completed"
-    ? { assignee: "me", state: "completed", completedAt: ymd(mondayOf(new Date())) + "T00:00:00", limit: 100, fields: [...FIELDS, "completedAt"] }
-    : { assignee: "me", state: st, limit: 250, fields: FIELDS };
-  const calInput = d => ({ query: "*", afterDateTime: ymd(d) + "T00:00:00", beforeDateTime: ymd(addDays(d, 1)) + "T00:00:00", limit: 25, offset: 0, order: "oldest" });
-  const stamp = r => (r && r.cache && r.cache.storedAt) || Date.now();
+  function renderPanel() {
+    const host = document.getElementById("panelhost"); host.textContent = "";
+    if (!openId) return;
+    const i = byId(openId);
+    const panel = el("aside", "panel"); panel.setAttribute("role", "dialog"); panel.setAttribute("aria-modal", "true"); panel.tabIndex = -1;
+    const top = el("div", "p-top");
+    const close = el("button", "quiet", "Close ×"); close.type = "button"; close.addEventListener("click", closePanel);
+    top.append(el("span", "id", openId), close);
+    panel.append(top);
+    if (!i) {
+      panel.append(el("p", "loading", state.status === "loading" ? "Loading…" : `${openId} isn't among the open issues on the board.`));
+    } else {
+      const h2 = el("h2", null, i.title || "(untitled)"); h2.id = "p-title"; panel.setAttribute("aria-labelledby", "p-title");
+      panel.append(h2);
+      const dl = el("dl", "facts");
+      const fact = (k, ...v) => { const dd = el("dd"); v.filter(Boolean).forEach(x => dd.append(typeof x === "string" ? document.createTextNode(x) : x)); dl.append(el("dt", null, k), dd); };
+      const pr = el("span", "area"); pr.append(prioIcon(prioOf(i)), document.createTextNode((i.priority && i.priority.name) || "No priority"));
+      fact("Priority", pr);
+      fact("Status", statusPill(i));
+      if (areaOf(i)) fact("Area", areaTag(i));
+      if (i.dueDate) fact("Check-in", dateTag(i));
+      if (i.parentId) { const b = el("button", "linkbtn", byId(i.parentId) ? `${i.parentId} · ${byId(i.parentId).title}` : i.parentId); b.type = "button"; b.addEventListener("click", () => openPanel(i.parentId)); fact("Part of", b); }
+      const kids = openIssues().filter(x => x.parentId === i.id).sort(sorter);
+      if (kids.length) { const box = el("span"); box.style.cssText = "display:grid;gap:3px"; kids.forEach(k => { const b = el("button", "linkbtn", `${k.id} · ${k.title}`); b.type = "button"; b.addEventListener("click", () => openPanel(k.id)); box.append(b); }); fact("Sub-issues", box); }
+      const f = folderOf(i); if (f) { const c = el("code", null, f); fact("Folder", c); }
+      panel.append(dl);
 
-  function onLinear(st) {
-    return ev => {
-      const s = lin[st];
-      if (ev.type === "data") {
-        const p = ev.result && ev.result.payload;
-        s.issues = p && Array.isArray(p.issues) ? p.issues : []; s.status = "ok"; s.error = null; s.at = stamp(ev.result);
-        s.issues.forEach(i => { const pd = pending.get(i.id); if (pd && pd.statusType === i.statusType) pending.delete(i.id); });
-        watchFullDescriptions();
-      } else {
-        s.error = ev.error || { code: "upstream_error" };
-        if (AUTHZ.has(s.error.code)) { s.issues = []; s.status = "error"; s.at = null; } else if (s.status !== "ok") s.status = "error";
+      const next = lineOf(i, "Next step"), wait = lineOf(i, "Waiting on");
+      if (next || wait) {
+        const ball = el("div", "ball");
+        if (next) { const d = el("div"); d.append(el("span", "k", "Next step"), el("span", null, next)); ball.append(d); }
+        if (wait) { const d = el("div", "wait"); d.append(el("span", "k", "Waiting on"), el("span", null, wait)); ball.append(d); }
+        panel.append(ball);
       }
-      render();
-    };
-  }
-  function watchFullDescriptions() {
-    if (!mcp) return;
-    allMine().filter(i => hasFolder(i) && /\(truncated/.test(i.description || "") && !/\*\*Next step/.test(i.description || "") && !fullWatch.has(i.id)).forEach(i => {
-      fullWatch.set(i.id, mcp.watchTool(LINEAR, "get_issue", { id: i.id, fields: ["description"] }, ev => {
-        if (ev.type === "data") { const p = ev.result && ev.result.payload; if (p && p.description) { full[i.id] = p.description; render(); } }
-      }, { cache: { staleTime: 60000, gcTime: 86400000 }, refetchInterval: 600000 }));
-    });
-  }
-  function onCal(key) {
-    return ev => {
-      const c = cal[key]; if (!c) return;
-      if (ev.type === "data") { const r = parseCal(ev.result); c.events = r.events; c.more = r.more; c.status = "ok"; c.error = null; c.at = stamp(ev.result);
-        if (planDraft && planDraft.sent && planDraft.date === key && r.events.some(e => e.key === planDraft.issue.id && minsOf(e.start) === planDraft.from)) planDraft = null; }
-      else { c.error = ev.error || { code: "upstream_error" }; if (AUTHZ.has(c.error.code)) { c.events = []; c.status = "error"; c.at = null; } else if (c.status !== "ok") c.status = "error"; }
-      render();
-    };
-  }
-  function watchWeek() {
-    calUnsubs.forEach(u => { try { u(); } catch (e) {} }); calUnsubs = []; cal = {};
-    weekDays().forEach(d => { cal[ymd(d)] = { status: "loading", events: [], error: null, at: null, more: false }; });
-    if (!mcp) return;
-    weekDays().forEach(d => calUnsubs.push(mcp.watchTool(OUTLOOK, "outlook_calendar_search", calInput(d), onCal(ymd(d)), { cache: { staleTime: 60000, gcTime: 86400000 }, refetchInterval: 300000 })));
-  }
-  async function approveLinear() {
-    for (const st of STATES) { try { onLinear(st)({ type: "data", result: await mcp.callTool(LINEAR, "list_issues", linInput(st)) }); } catch (err) { onLinear(st)({ type: "error", error: err }); } }
-  }
-  async function approveCalendar() {
-    for (const d of weekDays()) { try { onCal(ymd(d))({ type: "data", result: await mcp.callTool(OUTLOOK, "outlook_calendar_search", calInput(d)) }); } catch (err) { onCal(ymd(d))({ type: "error", error: err }); } }
+
+      const descBox = el("div"); descBox.style.cssText = "display:grid;gap:8px";
+      descBox.append(el("span", "k2", "Description"));
+      const body = descOf(i);
+      if (body.trim()) { const d = el("div", "desc"); d.innerHTML = markdown(body); descBox.append(d); }
+      else descBox.append(el("p", "loading", "No description."));
+      if (!full[i.id] && /\(truncated/.test(i.description || "")) descBox.append(el("p", "loading", "Loading the full description…"));
+      panel.append(descBox);
+
+      const a = el("a", "p-link", "Open in Linear ↗"); a.href = linearUrl(i); a.target = "_blank"; a.rel = "noopener";
+      panel.append(a);
+    }
+    const scrim = el("div", "scrim"); scrim.addEventListener("click", closePanel);
+    host.append(scrim, panel);
   }
 
-  document.getElementById("wk-this").addEventListener("click", () => { if (weekOffset !== 0) { weekOffset = 0; watchWeek(); render(); } });
-  document.getElementById("wk-next").addEventListener("click", () => { if (weekOffset !== 1) { weekOffset = 1; watchWeek(); render(); } });
-  async function refreshAll() {
+  // ---------- data ----------
+  const listInput = { team: TEAM, limit: 250, fields: FIELDS };
+  function onList(ev) {
+    if (ev.type === "data") {
+      const p = ev.result && ev.result.payload;
+      state.issues = p && Array.isArray(p.issues) ? p.issues : [];
+      state.more = !!(p && p.hasNextPage);
+      state.status = "ok"; state.error = null;
+      state.at = (ev.result.cache && ev.result.cache.storedAt) || Date.now();
+    } else {
+      state.error = ev.error || { code: "upstream_error" };
+      if (AUTHZ.has(state.error.code)) { state.issues = []; state.status = "error"; state.at = null; }
+      else if (state.status !== "ok") state.status = "error";
+    }
+    render();
+  }
+  async function loadOnce() {
+    if (!mcp) return;
+    try { onList({ type: "data", result: await mcp.callTool(LINEAR, "list_issues", listInput) }); }
+    catch (err) { onList({ type: "error", error: err }); }
+  }
+  document.getElementById("refresh").addEventListener("click", async () => {
     if (!mcp) return;
     document.getElementById("fresh").textContent = "Refreshing…";
     try { await mcp.invalidate(LINEAR); } catch (e) {}
-    try { await mcp.invalidate(OUTLOOK); } catch (e) {}
     setTimeout(render, 4000);
-  }
-  document.getElementById("refresh").addEventListener("click", refreshAll);
+  });
 
-  watchWeek();
   render();
-  setInterval(render, 60 * 1000);
-
   (async () => {
     const m = await (window.claude && window.claude.use ? window.claude.use("mcp") : Promise.resolve(null));
-    if (!m) {
-      STATES.forEach(s => { lin[s].status = "error"; lin[s].error = { code: "not_granted" }; });
-      Object.values(cal).forEach(c => { c.status = "error"; c.error = { code: "not_granted" }; });
-      document.getElementById("fresh").textContent = "Not connected";
-      render(); return;
-    }
+    if (!m) { state.status = "error"; state.error = { code: "not_granted" }; document.getElementById("fresh").textContent = "Not connected"; render(); return; }
     mcp = m;
-    STATES.forEach(st => mcp.watchTool(LINEAR, "list_issues", linInput(st), onLinear(st), { cache: { staleTime: 60000, gcTime: 86400000 }, refetchInterval: 300000 }));
-    watchWeek();
-    render();
+    mcp.watchTool(LINEAR, "list_issues", listInput, onList, { cache: { staleTime: 60000, gcTime: 86400000 }, refetchInterval: 300000 });
   })();
+  setInterval(render, 10 * 60 * 1000); // Today and Week follow the clock past midnight
 })();
 </script>
