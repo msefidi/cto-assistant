@@ -11,4 +11,4 @@ He looks at his board once, at the start of the day. What breaks his week: booke
 
 **Why:** he felt uncomfortable with a board that planned for him; he wants an overview, not a workflow.
 
-**How to apply:** keep the board an overview. Later on 25 Nov 2026 he asked for quick edits on it: a clickable status icon and hover actions that set or clear the due date (Unschedule, This week, Today). Those stay; don't add planning, timeboxing or capture features unless he asks. See [[linear-one-issue-rule]].
+**How to apply:** keep the board an overview. Later on 25 Nov 2026 he asked for quick edits on it: a clickable status icon and hover actions (Unschedule, This week, Today). Since he made the CTO statuses Unscheduled, This week and Today (25 Nov 2026), those actions set only the status and the due date stays a separate check-in date. Those stay; don't add planning, timeboxing or capture features unless he asks. See [[linear-one-issue-rule]].

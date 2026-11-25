@@ -4,7 +4,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: tabs All · Unscheduled · Overdue · Week · Today over one list of open CTO issues grouped by priority, each row with Linear-style priority and status icons; a row opens its details in a side panel. Reads Linear live; the status icon is a menu that writes the issue's status back to Linear, and hover actions per tab set or clear the due date. */
+/* Layout: tabs All · Unscheduled · Overdue · This week · Today over one list of open CTO issues grouped by priority, each row with Linear-style priority and status icons; a row opens its details in a side panel. Reads Linear live; the CTO statuses Unscheduled, This week and Today are the plan and drive the tabs; the status icon is a menu and the hover actions set the status, both written back to Linear. Overdue uses the due date (check-in date), which the page never changes. */
 :root {
   --bg: #f3f5f7; --surface: #ffffff; --sunk: #e9edf1; --ink: #18202b; --muted: #5b6574; --faint: #8a93a1; --line: #dde2e8; --line-soft: #edf0f3;
   --accent: #12676b; --accent-soft: #e2f0ef; --accent-ink: #ffffff;
@@ -248,19 +248,16 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
   const openIssues = () => state.issues.filter(i => OPEN.has(i.statusType));
   const byId = id => state.issues.find(i => i.id === id);
 
-  // ---------- views: All · Unscheduled · Overdue · Week · Today ----------
-  // Overdue = due date before today. Week and Today never show overdue issues.
-  // Week = not overdue, and outside Backlog or due by Sunday (the board's rule: Backlog holds what is not this week).
-  // Today = due date today.
-  // Unscheduled = no due date.
-  const VIEWS = [["all", "All"], ["unscheduled", "Unscheduled"], ["overdue", "Overdue"], ["week", "Week"], ["today", "Today"]];
+  // ---------- views: All · Unscheduled · Overdue · This week · Today ----------
+  // The CTO statuses are the plan: Unscheduled (type backlog), This week (unstarted), Today (started).
+  // Unscheduled, This week and Today each show the issues in that status, so every open issue sits in exactly one of them.
+  // Overdue is the one date view: the due date (check-in date) has passed and the issue is still open, whatever its status.
+  const VIEWS = [["all", "All"], ["unscheduled", "Unscheduled"], ["overdue", "Overdue"], ["week", "This week"], ["today", "Today"]];
+  const PLAN = { unscheduled: { name: "Unscheduled", type: "backlog" }, week: { name: "This week", type: "unstarted" }, today: { name: "Today", type: "started" } };
+  const planOf = i => i.statusType === "started" ? "today" : i.statusType === "unstarted" ? "week" : "unscheduled";
   const todayYmd = () => ymd(new Date());
-  const sundayYmd = () => { const n = new Date(); return ymd(new Date(n.getFullYear(), n.getMonth(), n.getDate() + (7 - n.getDay()) % 7)); };
   const isOverdue = i => !!i.dueDate && i.dueDate < todayYmd();
-  const inWeek = i => !isOverdue(i) && (i.statusType !== "backlog" || (!!i.dueDate && i.dueDate <= sundayYmd()));
-  const inToday = i => i.dueDate === todayYmd();
-  const isUnscheduled = i => !i.dueDate;
-  const FILTERS = { all: () => true, overdue: isOverdue, week: inWeek, today: inToday, unscheduled: isUnscheduled };
+  const FILTERS = { all: () => true, overdue: isOverdue, unscheduled: i => planOf(i) === "unscheduled", week: i => planOf(i) === "week", today: i => planOf(i) === "today" };
   const viewIssues = v => openIssues().filter(FILTERS[v] || FILTERS.all).filter(matchFilters);
   let view = (() => { const h = location.hash.slice(1); if (VIEWS.some(([k]) => k === h)) return h; try { const s = localStorage.getItem("board.view"); if (VIEWS.some(([k]) => k === s)) return s; } catch (e) {} return "all"; })();
   function setView(v) {
@@ -274,7 +271,7 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
     const n = new Date(); const mon = new Date(n.getFullYear(), n.getMonth(), n.getDate() - ((n.getDay() + 6) % 7)); const sun = new Date(mon.getFullYear(), mon.getMonth(), mon.getDate() + 6);
     return `${WD[1]} ${mon.getDate()} ${MON[mon.getMonth()]} – ${WD[0]} ${sun.getDate()} ${MON[sun.getMonth()]}`;
   }
-  // Status groups: started first (waiting after the rest of started), then Todo, Triage, Backlog.
+  // Status groups by type: started (Today), unstarted (This week), backlog (Unscheduled).
   const statusName = i => isWaiting(i) ? "Waiting" : (i.status || "Other");
   const statusRank = i => (STATUS_ORDER[i.statusType] ?? 9) * 10 + (isWaiting(i) ? 5 : 0);
   const byPrioThenDue = (a, b) => ((prioOf(a) || 9) - (prioOf(b) || 9)) || (a.dueDate || "9999").localeCompare(b.dueDate || "9999") || String(a.id).localeCompare(String(b.id), undefined, { numeric: true });
@@ -531,28 +528,14 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
     }
   }
 
-  // ---------- row actions (shown on hover), per tab ----------
-  // Board rule: Backlog holds what is not due this week. Scheduling an issue in Backlog or Triage
-  // for today or this week also moves it to Todo; unscheduling moves it to Backlog (see unschedule).
-  // "This week" = Friday (Sunday from Friday on); on Sunday there is no "this week" left.
-  function weekTarget() {
-    const n = new Date(), dow = n.getDay();
-    if (dow >= 1 && dow <= 4) return ymd(new Date(n.getFullYear(), n.getMonth(), n.getDate() + (5 - dow)));
-    return dow === 0 ? null : sundayYmd();
-  }
-  function schedule(i, date) {
-    const patch = { dueDate: date };
-    if (i.statusType === "backlog" || i.statusType === "triage") patch.status = { name: "Todo", type: "unstarted" };
-    applyChange(i.id, patch, `${i.id} due ${date === todayYmd() ? "today" : fmtDate(date)}`);
-  }
-  // Unschedule = off this week's plan: clear the due date and move to Backlog (the Week tab shows
-  // everything outside Backlog). Delegated/Waiting keeps its status, because it names who has the ball.
-  const unscheduleMovesToBacklog = i => i.statusType !== "backlog" && !isWaiting(i);
-  const canUnschedule = i => !!i.dueDate || unscheduleMovesToBacklog(i);
-  function unschedule(i) {
-    const patch = { dueDate: null }, toBacklog = unscheduleMovesToBacklog(i);
-    if (toBacklog) patch.status = { name: "Backlog", type: "backlog" };
-    applyChange(i.id, patch, toBacklog ? `${i.id} unscheduled and moved to Backlog` : `${i.id} unscheduled`);
+  // ---------- row actions (shown on hover), from the issue's status ----------
+  // The actions change only the status (Unscheduled, This week, Today). The due date is the
+  // check-in date and stays as it is; change it in Linear.
+  function plan(i, key) {
+    const want = PLAN[key];
+    const st = (statuses || []).find(s => s.name === want.name) || want;
+    const msg = key === "unscheduled" ? `${i.id} unscheduled` : key === "today" ? `${i.id} planned for today` : `${i.id} planned for this week`;
+    applyChange(i.id, { status: st }, msg);
   }
   // Icon per action, from the Lucide set (ISC licence): sun (Today), calendar-range (This week),
   // calendar-off (Unschedule), sunset (Remove from today). Static markup, no outside data.
@@ -569,19 +552,15 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
     s.innerHTML = ACT_ICONS[label] || "";
     return s;
   }
+  // Same on every tab, by the issue's status. Order: Unschedule, This week (or Remove from today), Today.
   function rowActions(i) {
-    const t = todayYmd(), wk = weekTarget();
-    const today = ["Today", () => schedule(i, t)];
-    const week = wk && i.dueDate !== wk ? ["This week", () => schedule(i, wk)] : null;
-    const un = canUnschedule(i) ? ["Unschedule", () => unschedule(i)] : null;
-    // Order everywhere: Unschedule, This week (or Remove from today), Today.
-    // On All, an issue gets the actions of the tab it belongs to; one due after this week gets Unschedule, Today, This week.
-    const tab = view !== "all" ? view : !i.dueDate ? "unscheduled" : isOverdue(i) ? "overdue" : inToday(i) ? "today" : i.dueDate <= sundayYmd() ? "week" : "later";
-    if (tab === "unscheduled") return [week, today].filter(Boolean);
-    if (tab === "overdue" || tab === "later") return [un, week, today].filter(Boolean);
-    if (tab === "week") return (i.dueDate === t ? [un] : [un, today]).filter(Boolean);
-    if (tab === "today") return [un, wk && wk !== t ? ["Remove from today", () => schedule(i, wk)] : null].filter(Boolean);
-    return [];
+    const un = ["Unschedule", () => plan(i, "unscheduled")];
+    const week = ["This week", () => plan(i, "week")];
+    const today = ["Today", () => plan(i, "today")];
+    const p = planOf(i);
+    if (p === "unscheduled") return [week, today];
+    if (p === "week") return [un, today];
+    return [un, ["Remove from today", () => plan(i, "week")]];
   }
   const toastEl = el("div", "toast"); toastEl.setAttribute("role", "status"); toastEl.hidden = true;
   document.body.append(toastEl);
@@ -694,10 +673,10 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
     const now = new Date();
     if (state.status === "loading") sub.textContent = "Loading your issues from Linear…";
     else if (state.status === "error" && !openIssues().length) sub.textContent = "Nothing loaded yet.";
-    else sub.textContent = view === "week" ? `This week, ${weekRange()} · scheduled, not overdue`
-      : view === "today" ? `Today, ${WD[now.getDay()]} ${now.getDate()} ${MON[now.getMonth()]} · due today`
-      : view === "overdue" ? "Due date has passed and the issue is still open"
-      : view === "unscheduled" ? "Open issues without a due date"
+    else sub.textContent = view === "week" ? `This week, ${weekRange()} · status This week`
+      : view === "today" ? `Today, ${WD[now.getDay()]} ${now.getDate()} ${MON[now.getMonth()]} · status Today`
+      : view === "overdue" ? "Check-in date has passed and the issue is still open"
+      : view === "unscheduled" ? "Status Unscheduled"
       : `Everything open on ${TEAM}${state.more ? " (first 250 shown)" : ""}`;
     const nf = Object.keys(filters).length;
     document.getElementById("count").textContent = state.status === "ok" || open.length ? `${open.length} issue${open.length === 1 ? "" : "s"}${nf ? " · filtered" : ""}` : "";
@@ -714,7 +693,7 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
       items.forEach(i => ul.append(row(i)));
       g.append(head, ul); wrap.append(g);
     };
-    if (state.status === "ok" && !open.length) wrap.append(el("p", "empty", Object.keys(filters).length ? "No issues match these filters." : ({ today: "Nothing is due today.", week: "Nothing else is scheduled for this week.", overdue: "Nothing is overdue.", unscheduled: "Every open issue has a due date." }[view] || "No open issues on the board.")));
+    if (state.status === "ok" && !open.length) wrap.append(el("p", "empty", Object.keys(filters).length ? "No issues match these filters." : ({ today: "Nothing is planned for today.", week: "Nothing else is planned for this week.", overdue: "Nothing is overdue.", unscheduled: "Every open issue is planned." }[view] || "No open issues on the board.")));
     if (groupBy === "none") {
       if (open.length) { const ul = el("ul", "list"); open.slice().sort(byPrioThenDue).forEach(i => ul.append(row(i))); wrap.append(ul); }
     } else if (groupBy === "status") {
