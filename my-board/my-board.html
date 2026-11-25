@@ -4,7 +4,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: tabs All · Unscheduled · Overdue · This week · Today over one list of open CTO issues grouped by priority, each row with Linear-style priority and status icons; a row opens its details in a side panel. Reads Linear live; the CTO statuses Unscheduled, This week and Today are the plan and drive the tabs; the status icon is a menu and the hover actions set the status, both written back to Linear. Overdue uses the due date (check-in date), which the page never changes. */
+/* Layout: tabs All · Unscheduled · Overdue · This week · Today over one list of open CTO issues grouped by priority, each row with Linear-style priority and status icons; a row opens its details in a side panel. Reads Linear live; the CTO statuses Unscheduled, This week and Today are the plan and drive the tabs; the status icon is a menu and the hover actions set the status, both written back to Linear. Overdue uses the due date (check-in date), which the page never changes. The Today tab has two columns: the Today issues (not timeboxed on top, timeboxed below) and today's agenda (Outlook events, read live, plus the timeboxes). Dragging an issue onto the agenda sets its slot; slots live in the page's own database (collection slots), never in Linear. */
 :root {
   --bg: #f3f5f7; --surface: #ffffff; --sunk: #e9edf1; --ink: #18202b; --muted: #5b6574; --faint: #8a93a1; --line: #dde2e8; --line-soft: #edf0f3;
   --accent: #12676b; --accent-soft: #e2f0ef; --accent-ink: #ffffff;
@@ -34,12 +34,13 @@
   --scrim: rgba(0, 0, 0, 0.5); color-scheme: dark;
 }
 * { box-sizing: border-box; }
+html { scrollbar-gutter: stable; } /* keep the scrollbar's space, so short tabs don't shift sideways */
 body {
   background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 14px; line-height: 1.45;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
   padding-block: 22px 48px;
 }
-.page { max-width: 920px; margin: 0 auto; display: grid; gap: 18px; }
+.page { max-width: 1160px; margin: 0 auto; display: grid; gap: 18px; } /* one width for every tab, set by Today's two columns */
 button { font: inherit; font-size: 0.84rem; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 7px; padding: 6px 12px; cursor: pointer; }
 button:hover { border-color: var(--accent); }
 button.quiet { background: transparent; border-color: transparent; color: var(--muted); }
@@ -171,6 +172,58 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
 .loading { color: var(--faint); font-size: 0.86rem; }
 .p-link { font-weight: 500; text-decoration: none; }
 .p-link:hover { text-decoration: underline; }
+
+/* Today: issues left, agenda right */
+.today { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+.tcol { display: grid; gap: 18px; min-width: 0; border-radius: 12px; }
+.tcol.dropzone { outline: 2px dashed var(--accent); outline-offset: 6px; }
+.hint { margin: 0; padding: 12px 14px; font-size: 0.84rem; color: var(--muted); border: 1px dashed var(--line); border-radius: 12px; }
+.row[draggable="true"] { cursor: grab; }
+.row.dragging, .blk.dragging { opacity: 0.4; }
+/* Unscheduled: sub-issues fold under their parent */
+.fold { display: inline-flex; gap: 5px; align-items: center; padding: 1px 8px 1px 6px; border: 1px solid var(--line); border-radius: 999px; background: var(--sunk); color: var(--ink); font-size: 0.74rem; font-weight: 500; line-height: 1.5; }
+.fold:hover { border-color: var(--accent); color: var(--accent); }
+.fold .chev { display: inline-block; font-size: 0.9rem; line-height: 1; transition: transform 0.12s; }
+.fold.open .chev { transform: rotate(90deg); }
+.row.child { background: color-mix(in srgb, var(--sunk) 45%, var(--surface)); border-top-color: var(--line-soft); }
+.row.child:hover { background: var(--sunk); }
+.tag.slot { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); font-family: var(--font-mono); font-size: 0.7rem; }
+/* The agenda has a fixed height and scrolls inside itself, so it never makes the page longer. */
+.agenda { position: sticky; top: 12px; height: min(600px, calc(100dvh - 32px)); min-height: 320px; display: flex; flex-direction: column; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 0 0; overflow: hidden; }
+.agenda > * { flex: none; }
+.agscroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; position: relative; padding: 0 12px 16px 0; border-top: 1px solid var(--line-soft); }
+.ag-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 10px; padding-left: 14px; }
+.ag-head .t { font-weight: 600; }
+.ag-head .s { font-size: 0.78rem; color: var(--muted); }
+.ag-note { margin: 0 0 0 14px; font-size: 0.82rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.ag-note button { font-size: 0.78rem; padding: 3px 9px; }
+.allday { display: flex; flex-wrap: wrap; gap: 4px; margin-left: 52px; }
+.allday .blk { position: static; }
+.agrid { position: relative; margin: 12px 0 0 52px; }
+.hr { position: absolute; left: 0; right: 0; border-top: 1px solid var(--line-soft); }
+.hr span { position: absolute; left: -48px; top: -8px; width: 40px; text-align: right; font-family: var(--font-mono); font-size: 0.68rem; color: var(--faint); }
+.blk { position: absolute; border-radius: 6px; padding: 3px 22px 3px 7px; font-size: 0.76rem; line-height: 1.25; overflow: hidden; display: flex; flex-direction: column; gap: 1px; text-decoration: none; color: var(--ink); min-width: 0; }
+.blk .bt { font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.blk .bm { color: var(--muted); font-family: var(--font-mono); font-size: 0.66rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.blk.short { flex-direction: row; align-items: center; gap: 6px; padding-top: 0; padding-bottom: 0; }
+.blk.ev { background: var(--sunk); border-left: 3px solid var(--faint); }
+.blk.ev:hover { border-left-color: var(--muted); }
+.blk.ev.free { background: transparent; border: 1px dashed var(--line); border-left: 3px dashed var(--faint); color: var(--muted); }
+.blk.ev.focus { background: transparent; border: 1px dashed color-mix(in srgb, var(--accent) 40%, var(--line)); border-left: 3px solid color-mix(in srgb, var(--accent) 50%, var(--line)); color: var(--muted); }
+.blk.slot { background: var(--accent-soft); border-left: 3px solid var(--accent); cursor: grab; z-index: 2; box-shadow: 0 1px 2px rgba(16, 20, 26, 0.1); }
+.blk.slot .id { font-family: var(--font-mono); font-size: 0.68rem; color: var(--accent); margin-right: 4px; font-weight: 500; }
+.blk.slot.orphan { opacity: 0.6; border-left-style: dashed; }
+.blk .x { position: absolute; top: 2px; right: 2px; width: 18px; height: 18px; padding: 0; border: 0; border-radius: 4px; background: none; color: var(--muted); font-size: 0.95rem; line-height: 1; display: grid; place-items: center; }
+.blk .x:hover { background: var(--line); color: var(--ink); }
+@media (hover: hover) { .blk.slot .x { opacity: 0; } .blk.slot:hover .x, .blk.slot:focus-within .x, .blk.slot:focus .x { opacity: 1; } }
+.blk .grip { position: absolute; left: 0; right: 0; bottom: 0; height: 8px; cursor: ns-resize; touch-action: none; }
+.ghost { position: absolute; left: 2px; right: 2px; border: 2px dashed var(--accent); border-radius: 6px; background: color-mix(in srgb, var(--accent) 10%, transparent); pointer-events: none; font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent); padding: 2px 6px; z-index: 3; }
+.now { position: absolute; left: -6px; right: 0; border-top: 2px solid var(--urgent); z-index: 4; pointer-events: none; }
+.now::before { content: ""; position: absolute; left: 0; top: -5px; width: 8px; height: 8px; border-radius: 50%; background: var(--urgent); }
+@media (max-width: 820px) {
+  .today { grid-template-columns: minmax(0, 1fr); }
+  .agenda { position: static; height: min(520px, calc(100dvh - 32px)); }
+}
 </style>
 
 <div class="page">
@@ -264,9 +317,10 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
     view = v;
     try { history.replaceState(null, "", "#" + v); } catch (e) {}
     try { localStorage.setItem("board.view", v); } catch (e) {}
+    ensureToday();
     render();
   }
-  window.addEventListener("hashchange", () => { const h = location.hash.slice(1); if (VIEWS.some(([k]) => k === h) && h !== view) { view = h; render(); } });
+  window.addEventListener("hashchange", () => { const h = location.hash.slice(1); if (VIEWS.some(([k]) => k === h) && h !== view) { view = h; ensureToday(); render(); } });
   function weekRange() {
     const n = new Date(); const mon = new Date(n.getFullYear(), n.getMonth(), n.getDate() - ((n.getDay() + 6) % 7)); const sun = new Date(mon.getFullYear(), mon.getMonth(), mon.getDate() + 6);
     return `${WD[1]} ${mon.getDate()} ${MON[mon.getMonth()]} – ${WD[0]} ${sun.getDate()} ${MON[sun.getMonth()]}`;
@@ -281,6 +335,17 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
   let groupBy = "priority";
   try { const g = localStorage.getItem("board.groupBy"); if (GROUP_OPTS.some(([k]) => k === g)) groupBy = g; } catch (e) {}
   function setGroupBy(g) { groupBy = g; try { localStorage.setItem("board.groupBy", g); } catch (e) {} render(); }
+
+  // ---------- folding: which parents show their sub-issues (Unscheduled tab); folded by default ----------
+  const unfolded = new Set();
+  try { JSON.parse(localStorage.getItem("board.unfolded") || "[]").forEach(id => { if (typeof id === "string") unfolded.add(id); }); } catch (e) {}
+  function toggleFold(id) {
+    unfolded.has(id) ? unfolded.delete(id) : unfolded.add(id);
+    try { localStorage.setItem("board.unfolded", JSON.stringify([...unfolded])); } catch (e) {}
+    render();
+    const b = [...document.querySelectorAll(".row")].find(x => x.getAttribute("aria-label").startsWith(id + " "));
+    const f = b && b.querySelector(".fold"); if (f) f.focus();
+  }
 
   // ---------- filters: added from the Filter button, shown as chips above the list ----------
   const FFIELDS = {
@@ -544,6 +609,9 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
     "This week": '<rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M3 10h18M8 2v4M17 14h-6M13 18H7M7 14h.01M17 18h.01"/>',
     "Unschedule": '<path d="M4.2 4.2A2 2 0 0 0 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 1.82-1.18M21 15.5V6a2 2 0 0 0-2-2H9.5M16 2v4M3 10h7M21 10h-5.5M2 2l20 20M8 2v4"/>',
     "Remove from today": '<path d="M12 10V2M4.93 10.93l1.41 1.41M2 18h2M20 18h2M19.07 10.93l-1.41 1.41M22 22H2M16 6l-4 4-4-4M16 18a4 4 0 0 0-8 0"/>',
+    // calendar-clock (Timebox) and a clock with a cross (Clear timebox)
+    "Timebox": '<path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5M16 2v4M8 2v4M3 10h5"/><path d="M17.5 17.5 16 16.3V14"/><circle cx="16" cy="16" r="6"/>',
+    "Clear timebox": '<path d="M12 6v6l2 1"/><path d="M21.6 13.4A10 10 0 1 0 13.4 21.6"/><path d="m22 22-5-5M17 22l5-5"/>',
   };
   function actIcon(label) {
     const s = document.createElementNS(SVG_NS, "svg");
@@ -560,7 +628,10 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
     const p = planOf(i);
     if (p === "unscheduled") return [week, today];
     if (p === "week") return [un, today];
-    return [un, ["Remove from today", () => plan(i, "week")]];
+    const acts = [un, ["Remove from today", () => plan(i, "week")]];
+    // On the Today tab: put it in the next free hour, or clear its slot.
+    if (view === "today" && db) acts.push(slots.has(i.id) ? ["Clear timebox", () => saveSlot(i.id, null, `${i.id} timebox cleared`)] : ["Timebox", () => autoBox(i)]);
+    return acts;
   }
   const toastEl = el("div", "toast"); toastEl.setAttribute("role", "status"); toastEl.hidden = true;
   document.body.append(toastEl);
@@ -587,8 +658,11 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
   const ICON_CAL = "M2 3.5h8v6.5H2zM2 5.5h8M4 2v2.5M8 2v2.5";
   const ICON_FOLDER = "M1.5 3h3l1 1.2h5v5.3h-9z";
   const ICON_PARENT = "M3 2v5.5h6M7 5.5l2 2-2 2";
-  function rowTags(i) {
+  const ICON_CLOCK = "M6 1.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zM6 3.5V6l1.6 1";
+  function rowTags(i, opts) {
     const out = [];
+    const s = view === "today" && slots.get(i.id);
+    if (s) { const c = el("span", "tag slot"); c.title = "Timebox today"; c.append(tagIcon(ICON_CLOCK), document.createTextNode(`${fmtMin(s.start)}–${fmtMin(s.end)}`)); out.push(c); }
     if (i.dueDate) {
       const t = todayYmd(), cls = i.dueDate < t ? " overdue" : i.dueDate === t ? " today" : "";
       const c = el("span", "tag" + cls); c.title = "Check-in date";
@@ -599,7 +673,7 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
     if (a) { const c = el("span", "tag"); c.append(el("span", "dot " + a.toLowerCase()), document.createTextNode(a)); out.push(c); }
     const f = folderOf(i);
     if (f) { const c = el("span", "tag"); c.title = "Topic folder"; c.append(tagIcon(ICON_FOLDER), document.createTextNode(f)); out.push(c); }
-    if (i.parentId) { const c = el("span", "tag"); c.title = "Sub-issue of " + i.parentId; c.append(tagIcon(ICON_PARENT), document.createTextNode(i.parentId)); out.push(c); }
+    if (i.parentId && !(opts && opts.depth)) { const c = el("span", "tag"); c.title = "Sub-issue of " + i.parentId; c.append(tagIcon(ICON_PARENT), document.createTextNode(i.parentId)); out.push(c); }
     return out;
   }
   function areaTag(i) {
@@ -639,18 +713,18 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
   }
 
   // ---------- errors ----------
-  function errorCopy(err) {
+  function errorCopy(err, name = "Linear") {
     switch (err && err.code) {
-      case "needs_reauth": return { text: "Linear needs to be reconnected. Reconnect it in claude.ai under Settings → Connectors, then reload.", tone: "bad" };
-      case "server_not_connected": return { text: "Linear isn't connected to your claude.ai account. Add it under Settings → Connectors, then reload.", tone: "bad" };
-      case "selection_required": return { text: "You have more than one Linear connector. Pick one in the prompt claude.ai shows, then reload.", tone: "warn" };
-      case "not_in_manifest": return { text: "Linear access is turned off for this page.", tone: "warn", action: "permissions" };
-      case "approval_required": case "consent_required": return { text: "This page needs your OK to read Linear.", tone: "warn", action: "approve" };
-      case "blocked_by_policy": return { text: "Your organization's policy blocks Linear for this page.", tone: "bad" };
-      case "server_unavailable": case "upstream_error": case "rate_limited": return { text: "Linear didn't answer just now. The list shows what it loaded last; press Refresh to try again.", tone: "warn" };
-      case "tool_error": return { text: `Linear reported an error: ${(err && err.message) || "unknown"}`, tone: "bad" };
-      case "not_granted": case "capability_disabled": case "capability_removed": return { text: "This view can't reach Linear. Open the page in claude.ai.", tone: "bad" };
-      default: return { text: `Couldn't load from Linear (${(err && err.code) || "unknown error"}). Press Refresh to try again.`, tone: "warn" };
+      case "needs_reauth": return { text: `${name} needs to be reconnected. Reconnect it in claude.ai under Settings → Connectors, then reload.`, tone: "bad" };
+      case "server_not_connected": return { text: `${name} isn't connected to your claude.ai account. Add it under Settings → Connectors, then reload.`, tone: "bad" };
+      case "selection_required": return { text: `You have more than one ${name} connector. Pick one in the prompt claude.ai shows, then reload.`, tone: "warn" };
+      case "not_in_manifest": return { text: `${name} access is turned off for this page.`, tone: "warn", action: "permissions" };
+      case "approval_required": case "consent_required": return { text: `This page needs your OK to read ${name}.`, tone: "warn", action: "approve" };
+      case "blocked_by_policy": return { text: `Your organization's policy blocks ${name} for this page.`, tone: "bad" };
+      case "server_unavailable": case "upstream_error": case "rate_limited": return { text: `${name} didn't answer just now. This shows what it loaded last; press Refresh to try again.`, tone: "warn" };
+      case "tool_error": return { text: `${name} reported an error: ${(err && err.message) || "unknown"}`, tone: "bad" };
+      case "not_granted": case "capability_disabled": case "capability_removed": return { text: `This view can't reach ${name}. Open the page in claude.ai.`, tone: "bad" };
+      default: return { text: `Couldn't load from ${name} (${(err && err.code) || "unknown error"}). Press Refresh to try again.`, tone: "warn" };
     }
   }
   function renderBanner() {
@@ -666,56 +740,103 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
 
   // ---------- render: the list ----------
   function render() {
+    if (dragging) { renderPending = true; return; } // a rebuild mid-drag would drop the dragged element
     renderBanner();
     renderTabs();
     const open = viewIssues(view);
+    const isToday = view === "today";
+    document.getElementById("display-btn").hidden = isToday;
     const sub = document.getElementById("sub");
     const now = new Date();
     if (state.status === "loading") sub.textContent = "Loading your issues from Linear…";
     else if (state.status === "error" && !openIssues().length) sub.textContent = "Nothing loaded yet.";
     else sub.textContent = view === "week" ? `This week, ${weekRange()} · status This week`
-      : view === "today" ? `Today, ${WD[now.getDay()]} ${now.getDate()} ${MON[now.getMonth()]} · status Today`
+      : view === "today" ? `Today, ${WD[now.getDay()]} ${now.getDate()} ${MON[now.getMonth()]} · status Today · drag an issue onto the agenda to timebox it`
       : view === "overdue" ? "Check-in date has passed and the issue is still open"
       : view === "unscheduled" ? "Status Unscheduled"
       : `Everything open on ${TEAM}${state.more ? " (first 250 shown)" : ""}`;
     const nf = Object.keys(filters).length;
-    document.getElementById("count").textContent = state.status === "ok" || open.length ? `${open.length} issue${open.length === 1 ? "" : "s"}${nf ? " · filtered" : ""}` : "";
+    const boxedN = isToday ? open.filter(i => slots.has(i.id)).length : 0;
+    document.getElementById("count").textContent = state.status === "ok" || open.length ? `${open.length} issue${open.length === 1 ? "" : "s"}${isToday && open.length ? ` · ${boxedN} timeboxed` : ""}${nf ? " · filtered" : ""}` : "";
     renderChips();
     if (state.at) { const t = new Date(state.at); document.getElementById("fresh").textContent = `Updated ${pad(t.getHours())}:${pad(t.getMinutes())}`; }
 
-    const root = document.getElementById("groups"); root.textContent = "";
+    const root = document.getElementById("groups");
+    if (isToday) {
+      const old = root.querySelector(".agscroll"); if (old) agendaScroll = old.scrollTop;
+      root.textContent = "";
+      root.append(renderToday(open));
+      const ag = root.querySelector(".agscroll");
+      if (ag) {
+        if (agendaScroll == null) { const n = ag.querySelector(".now"), g = ag.querySelector(".agrid"); agendaScroll = n && !n.hidden && g ? Math.max(0, g.offsetTop + n.offsetTop - 90) : 0; }
+        ag.scrollTop = agendaScroll;
+      }
+      if (focusSlot) { const n = root.querySelector(`.blk.slot[data-id="${CSS.escape(focusSlot)}"]`); if (n) n.focus(); focusSlot = null; }
+      renderMenu();
+      renderPanel();
+      renderStatusMenu();
+      return;
+    }
+    root.textContent = "";
     const wrap = el("div"); wrap.style.cssText = "display:grid;gap:18px";
+    // Unscheduled folds sub-issues under their parent when the parent is in the same list.
+    const fold = view === "unscheduled";
+    const ids = new Set(open.map(i => i.id));
+    const kidsOf = id => open.filter(x => x.parentId === id).sort(byPrioThenDue);
+    const top = fold ? open.filter(i => !(i.parentId && ids.has(i.parentId))) : open;
+    const addRows = (ul, i, depth) => {
+      const kids = fold ? kidsOf(i.id) : [];
+      ul.append(row(i, { kids: kids.length, depth }));
+      if (kids.length && unfolded.has(i.id)) kids.forEach(k => addRows(ul, k, depth + 1));
+    };
     const group = (icon, name, items) => {
       if (!items.length) return;
       const g = el("section", "group"); g.setAttribute("aria-label", name);
       const head = el("div", "ghead"); if (icon) head.append(icon); head.append(el("span", "t", name), el("span", "n", String(items.length)));
       const ul = el("ul", "list");
-      items.forEach(i => ul.append(row(i)));
+      items.forEach(i => addRows(ul, i, 0));
       g.append(head, ul); wrap.append(g);
     };
     if (state.status === "ok" && !open.length) wrap.append(el("p", "empty", Object.keys(filters).length ? "No issues match these filters." : ({ today: "Nothing is planned for today.", week: "Nothing else is planned for this week.", overdue: "Nothing is overdue.", unscheduled: "Every open issue is planned." }[view] || "No open issues on the board.")));
     if (groupBy === "none") {
-      if (open.length) { const ul = el("ul", "list"); open.slice().sort(byPrioThenDue).forEach(i => ul.append(row(i))); wrap.append(ul); }
+      if (top.length) { const ul = el("ul", "list"); top.slice().sort(byPrioThenDue).forEach(i => addRows(ul, i, 0)); wrap.append(ul); }
     } else if (groupBy === "status") {
-      const names = [...new Map(open.slice().sort((a, b) => statusRank(a) - statusRank(b)).map(i => [statusName(i), 1])).keys()];
-      names.forEach(n => group(null, n, open.filter(i => statusName(i) === n).sort(byPrioThenDue)));
+      const names = [...new Map(top.slice().sort((a, b) => statusRank(a) - statusRank(b)).map(i => [statusName(i), 1])).keys()];
+      names.forEach(n => group(null, n, top.filter(i => statusName(i) === n).sort(byPrioThenDue)));
     } else {
-      GROUPS.forEach(([v, name]) => group(prioIcon(v), name, open.filter(i => prioOf(i) === v).sort(sorter)));
+      GROUPS.forEach(([v, name]) => group(prioIcon(v), name, top.filter(i => prioOf(i) === v).sort(sorter)));
     }
     root.append(wrap);
     renderMenu();
     renderPanel();
     renderStatusMenu();
   }
-  function row(i) {
+  function row(i, opts) {
     const li = el("li", "row" + (openId === i.id ? " sel" : ""));
     li.tabIndex = 0; li.setAttribute("role", "button"); li.setAttribute("aria-label", `${i.id} ${i.title}. Open details.`);
+    if (opts && opts.drag) {
+      li.draggable = true;
+      li.addEventListener("dragstart", e => startDrag(e, i.id, "list", li, 0));
+      li.addEventListener("dragend", endDrag);
+    }
     li.addEventListener("click", () => openPanel(i.id));
     li.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openPanel(i.id); } });
     const main = el("div", "main");
     main.append(el("span", "title", i.title || "(untitled)"));
     const meta = el("div", "meta");
-    rowTags(i).forEach(t => meta.append(t));
+    if (opts && opts.kids) {
+      // Fold toggle: shows or hides this issue's sub-issues right below it.
+      const open = unfolded.has(i.id);
+      const f = el("button", "fold" + (open ? " open" : "")); f.type = "button";
+      f.setAttribute("aria-expanded", String(open));
+      f.setAttribute("aria-label", `${open ? "Hide" : "Show"} ${opts.kids} sub-issue${opts.kids === 1 ? "" : "s"} of ${i.id}`);
+      f.append(el("span", "chev", "›"), document.createTextNode(`${opts.kids} sub-issue${opts.kids === 1 ? "" : "s"}`));
+      f.addEventListener("click", e => { e.stopPropagation(); toggleFold(i.id); });
+      f.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") e.stopPropagation(); });
+      meta.append(f);
+    }
+    if (opts && opts.depth) { li.classList.add("child"); li.style.paddingLeft = `${14 + opts.depth * 30}px`; }
+    rowTags(i, opts).forEach(t => meta.append(t));
     if (meta.childNodes.length) main.append(meta);
     li.append(prioIcon(prioOf(i)), el("span", "id", i.id), statusButton(i, "row"), main);
     const acts = rowActions(i);
@@ -805,6 +926,376 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
     host.append(scrim, panel);
   }
 
+  // ---------- Today: timeboxes and the agenda ----------
+  // A timebox is a slot today for one issue, kept in the page's database (collection "slots",
+  // doc "<yyyy-mm-dd>_<issue id>", fields date, issue, title, start, end in minutes after midnight).
+  // Nothing about it is written to Linear. The agenda shows today's Outlook events beside the slots;
+  // events in the Outlook category "To Do" are your own focus blocks and do not count as busy.
+  const M365 = "Microsoft 365";
+  const PX = 64 / 60;          // pixels per minute
+  const SNAP = 15, DEFAULT_LEN = 60;
+  let db = null, dbState = "loading", dbErr = null; // loading | ok | slow | error | off
+  const slots = new Map();     // issue id -> { start, end, title }
+  let slotsDay = null, slotsUnsub = null;
+  const cal = { status: "loading", events: [], error: null, at: null };
+  let calDay = null, calUnsub = null;
+  let drag = null, dragging = false, renderPending = false, resizing = null, justResized = 0;
+  let agendaRange = { h0: 8, h1: 19 }, ghostEl = null, nowEl = null, agendaScroll = null, focusSlot = null;
+  const fmtMin = m => `${pad(Math.floor(m / 60))}:${pad(m % 60)}`;
+  const fmtLen = m => (m >= 60 ? `${Math.floor(m / 60)}h` : "") + (m % 60 ? `${m >= 60 ? " " : ""}${m % 60}m` : "");
+  const minutesNow = () => { const n = new Date(); return n.getHours() * 60 + n.getMinutes(); };
+  const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+
+  function ensureToday() {
+    if (view !== "today") return;
+    watchSlots(); watchCal();
+  }
+  function watchSlots() {
+    if (!db) return;
+    const day = todayYmd();
+    if (slotsDay === day && slotsUnsub) return;
+    if (slotsUnsub) slotsUnsub();
+    slotsDay = day; slots.clear(); dbState = "loading";
+    const timer = setTimeout(() => { if (dbState === "loading") { dbState = "slow"; render(); } }, 10000);
+    slotsUnsub = db.collection("slots").where("date", "==", day).onSnapshot(snap => {
+      if (!snap.metadata.fromCache) clearTimeout(timer);
+      slots.clear();
+      snap.docs.forEach(d => {
+        const x = d.data();
+        if (x && typeof x.issue === "string" && Number.isFinite(x.start) && Number.isFinite(x.end) && x.end > x.start)
+          slots.set(x.issue, { start: x.start, end: x.end, title: typeof x.title === "string" ? x.title : "" });
+      });
+      if (!snap.metadata.fromCache || dbState === "loading") dbState = "ok";
+      render();
+    }, err => { clearTimeout(timer); dbState = "error"; dbErr = err; slotsUnsub = null; render(); });
+  }
+  // One write at a time per document.
+  const writeQ = new Map();
+  function queueWrite(key, fn) { const next = (writeQ.get(key) || Promise.resolve()).catch(() => {}).then(fn); writeQ.set(key, next); return next; }
+  function dbErrorText(err) {
+    switch (err && err.code) {
+      case "quota_exceeded": return "The board's storage is full.";
+      case "invalid_argument": return "Only the board's owner can change timeboxes.";
+      case "revoked": case "not_granted": case "capability_disabled": return "This view can't save timeboxes.";
+      default: return "Try again.";
+    }
+  }
+  // Set (slot) or clear (null) one issue's timebox today, shown at once, with Undo.
+  async function saveSlot(id, slot, msg, isUndo) {
+    if (!db) return;
+    const day = slotsDay || todayYmd(), prev = slots.get(id) || null;
+    if (slot) slots.set(id, slot); else slots.delete(id);
+    render();
+    const ref = db.collection("slots").doc(`${day}_${id}`);
+    try {
+      await queueWrite(ref.path, () => slot ? ref.set({ date: day, issue: id, title: slot.title || "", start: slot.start, end: slot.end }) : ref.delete());
+      if (msg) showToast(msg, isUndo ? null : () => saveSlot(id, prev, `${id} restored`, true));
+    } catch (err) {
+      if (prev) slots.set(id, prev); else slots.delete(id);
+      render();
+      showToast(`${id} timebox not saved. ${dbErrorText(err)}`);
+    }
+  }
+  const titleFor = id => { const i = byId(id); return (i && i.title) || (slots.get(id) || {}).title || ""; };
+  function placeSlot(id, start, len) {
+    const old = slots.get(id);
+    if (old && old.start === start && old.end === start + len) return;
+    saveSlot(id, { start, end: start + len, title: titleFor(id) }, `${id} ${old ? "moved to" : "timeboxed"} ${fmtMin(start)}–${fmtMin(start + len)}`);
+  }
+  // Next free stretch today from now (busy = Outlook events that are busy and not focus blocks, plus other slots).
+  function nextFree(len) {
+    const busy = [...cal.events.filter(e => !e.allDay && !e.free && !e.focus).map(e => [e.start, e.end]), ...[...slots.values()].map(s => [s.start, s.end])];
+    for (let t = Math.max(Math.ceil(minutesNow() / SNAP) * SNAP, 8 * 60); t + len <= 20 * 60; t += SNAP)
+      if (!busy.some(([a, b]) => a < t + len && t < b)) return t;
+    return null;
+  }
+  function autoBox(i) {
+    for (const len of [DEFAULT_LEN, 30]) { const t = nextFree(len); if (t != null) return placeSlot(i.id, t, len); }
+    showToast("No free half hour left today before 20:00. Drag it onto the agenda instead.");
+  }
+
+  // Outlook: today's events, read live. Times come as {dateTime, timeZone}; "UTC" is converted to local time.
+  function watchCal() {
+    if (!mcp) return;
+    const day = todayYmd();
+    if (calDay === day && calUnsub) return;
+    if (calUnsub) calUnsub();
+    calDay = day; cal.status = "loading"; cal.events = []; cal.error = null;
+    const d0 = parseYmd(day), d1 = new Date(d0.getFullYear(), d0.getMonth(), d0.getDate() + 1);
+    const input = { query: "*", afterDateTime: d0.toISOString(), beforeDateTime: d1.toISOString(), limit: 25, offset: 0, order: "oldest" };
+    calUnsub = mcp.watchTool(M365, "outlook_calendar_search", input, ev => {
+      if (ev.type === "data") { cal.events = parseEvents(ev.result, d0); cal.status = "ok"; cal.error = null; cal.at = (ev.result.cache && ev.result.cache.storedAt) || Date.now(); }
+      else {
+        cal.error = ev.error || { code: "upstream_error" };
+        if (AUTHZ.has(cal.error.code)) { cal.events = []; cal.status = "error"; } else if (cal.status !== "ok") cal.status = "error";
+      }
+      render();
+    }, { cache: { staleTime: 60000, gcTime: 86400000 }, refetchInterval: 300000 });
+  }
+  async function approveCal() {
+    try { await mcp.callTool(M365, "outlook_calendar_search", { query: "*", afterDateTime: parseYmd(todayYmd()).toISOString(), limit: 1, offset: 0 }); } catch (e) {}
+    if (calUnsub) calUnsub(); calUnsub = null; calDay = null; watchCal();
+  }
+  // The connector may answer with one JSON value or several event objects back to back.
+  function parseJsonStream(s) {
+    try { return [JSON.parse(s)]; } catch (e) {}
+    const out = []; let depth = 0, inStr = false, bs = false, from = -1;
+    for (let k = 0; k < s.length; k++) {
+      const c = s[k];
+      if (inStr) { if (bs) bs = false; else if (c === "\\") bs = true; else if (c === '"') inStr = false; continue; }
+      if (c === '"') inStr = true;
+      else if (c === "{") { if (depth === 0) from = k; depth++; }
+      else if (c === "}" && depth > 0) { depth--; if (depth === 0 && from >= 0) { try { out.push(JSON.parse(s.slice(from, k + 1))); } catch (e) {} from = -1; } }
+    }
+    return out;
+  }
+  function collectEvents(x, out, depth) {
+    if (x == null || depth > 5) return;
+    if (typeof x === "string") { parseJsonStream(x).forEach(v => collectEvents(v, out, depth + 1)); return; }
+    if (Array.isArray(x)) { x.forEach(v => collectEvents(v, out, depth + 1)); return; }
+    if (typeof x === "object") {
+      if (x.start && x.end && "subject" in x) { out.push(x); return; }
+      Object.values(x).forEach(v => { if (v && typeof v === "object") collectEvents(v, out, depth + 1); });
+    }
+  }
+  function evTime(t) {
+    if (!t || typeof t.dateTime !== "string") return null;
+    const s = t.dateTime.replace(/(\.\d{3})\d*$/, "$1").replace(/Z$/, "");
+    const d = /^(utc|gmt|z)$/i.test(t.timeZone || "") || /Z$/.test(t.dateTime) ? new Date(s + "Z") : new Date(s);
+    return isNaN(d) ? null : d;
+  }
+  function parseEvents(result, d0) {
+    // The connector sends one text block per event, and `payload` holds only the first block,
+    // so read every block as well (duplicates are dropped below).
+    const raw = [];
+    if (result && result.structuredContent != null) collectEvents(result.structuredContent, raw, 0);
+    ((result && result.content) || []).forEach(b => { if (b && b.type === "text") collectEvents(b.text, raw, 0); });
+    if (!raw.length && result) collectEvents(result.payload, raw, 0);
+    const seen = new Set(), out = [], dayStart = d0.getTime(), dayEnd = new Date(d0.getFullYear(), d0.getMonth(), d0.getDate() + 1).getTime();
+    raw.forEach(e => {
+      if (e.isCancelled) return;
+      const key = String(e.id || `${e.subject}|${JSON.stringify(e.start)}`); if (seen.has(key)) return; seen.add(key);
+      const s = evTime(e.start), en = evTime(e.end); if (!s || !en) return;
+      if (en.getTime() <= dayStart || s.getTime() >= dayEnd) return;
+      out.push({
+        id: key, subject: String(e.subject || "(no title)"),
+        start: Math.max(0, Math.round((s.getTime() - dayStart) / 60000)), end: Math.min(1440, Math.round((en.getTime() - dayStart) / 60000)),
+        allDay: !!e.isAllDay, free: e.showAs === "free",
+        focus: Array.isArray(e.categories) && e.categories.some(c => /^to ?do$/i.test(String(c))),
+        url: safeUrl(e.webLink), location: typeof e.location === "string" ? e.location : "",
+      });
+    });
+    return out.sort((a, b) => a.start - b.start);
+  }
+
+  // Overlapping blocks share the width, like a calendar day view.
+  function layoutLanes(items) {
+    const sorted = items.slice().sort((a, b) => a.start - b.start || b.end - a.end);
+    let cluster = [], clusterEnd = -1;
+    const flush = () => {
+      const cols = [];
+      cluster.forEach(it => { let c = cols.findIndex(end => end <= it.start); if (c < 0) { c = cols.length; cols.push(0); } cols[c] = it.end; it.col = c; });
+      cluster.forEach(it => { it.cols = cols.length; });
+      cluster = []; clusterEnd = -1;
+    };
+    sorted.forEach(it => { if (cluster.length && it.start >= clusterEnd) flush(); cluster.push(it); clusterEnd = Math.max(clusterEnd, it.end); });
+    if (cluster.length) flush();
+    return sorted;
+  }
+
+  // ---------- drag and drop: list -> agenda sets the slot, agenda -> agenda moves it, agenda -> list clears it ----------
+  function startDrag(e, id, from, node, grab) {
+    if (resizing || !db) { e.preventDefault(); return; }
+    const s = slots.get(id);
+    drag = { id, from, len: s ? s.end - s.start : DEFAULT_LEN, grab };
+    dragging = true;
+    try { e.dataTransfer.setData("text/plain", id); e.dataTransfer.effectAllowed = "move"; } catch (err) {}
+    requestAnimationFrame(() => {
+      node.classList.add("dragging");
+      if (from === "slot") { const l = document.querySelector(".tcol"); if (l) l.classList.add("dropzone"); }
+    });
+  }
+  function endDrag() {
+    if (!dragging) return;
+    drag = null; dragging = false;
+    if (ghostEl) ghostEl.hidden = true;
+    document.querySelectorAll(".dragging, .dropzone").forEach(n => n.classList.remove("dragging", "dropzone"));
+    if (renderPending) { renderPending = false; render(); }
+  }
+  document.addEventListener("dragend", () => setTimeout(endDrag, 0), true);
+  function minuteAt(grid, e, len, grab) {
+    const r = grid.getBoundingClientRect();
+    const m = agendaRange.h0 * 60 + (e.clientY - r.top) / PX - (grab || 0);
+    return clamp(Math.round(m / SNAP) * SNAP, agendaRange.h0 * 60, agendaRange.h1 * 60 - len);
+  }
+
+  function renderToday(open) {
+    const wrap = el("div", "today");
+    const left = el("div", "tcol");
+    const boxed = open.filter(i => slots.has(i.id)).sort((a, b) => slots.get(a.id).start - slots.get(b.id).start);
+    const unboxed = open.filter(i => !slots.has(i.id)).sort(byPrioThenDue);
+    const canBox = !!db;
+    const section = (name, items, extra, emptyText) => {
+      const g = el("section", "group"); g.setAttribute("aria-label", name);
+      const head = el("div", "ghead"); head.append(el("span", "t", name), el("span", "n", String(items.length)));
+      if (extra) head.append(el("span", "n", extra));
+      g.append(head);
+      if (items.length) { const ul = el("ul", "list"); items.forEach(i => ul.append(row(i, { drag: canBox }))); g.append(ul); }
+      else g.append(el("p", "hint", emptyText));
+      left.append(g);
+    };
+    if (state.status === "ok" && !open.length) left.append(el("p", "empty", Object.keys(filters).length ? "No issues match these filters." : "Nothing is planned for today."));
+    else if (open.length) {
+      section("Not timeboxed", unboxed, "", "Every issue for today has a slot.");
+      const total = boxed.reduce((n, i) => n + slots.get(i.id).end - slots.get(i.id).start, 0);
+      section("Timeboxed", boxed, total ? `· ${fmtLen(total)}` : "", canBox ? "Drag an issue onto the agenda to give it a slot." : "Timeboxes can't be saved in this view.");
+    }
+    // Dropping a slot back on the list clears it.
+    left.addEventListener("dragover", e => { if (drag && drag.from === "slot") { e.preventDefault(); e.dataTransfer.dropEffect = "move"; } });
+    left.addEventListener("drop", e => { if (!drag || drag.from !== "slot") return; e.preventDefault(); const id = drag.id; saveSlot(id, null, `${id} timebox cleared`); });
+    wrap.append(left, renderAgenda(open));
+    return wrap;
+  }
+
+  function renderAgenda(open) {
+    const box = el("section", "agenda"); box.setAttribute("aria-label", "Today's agenda");
+    const head = el("div", "ag-head");
+    const now = new Date();
+    head.append(el("span", "t", `Agenda · ${WD[now.getDay()]} ${now.getDate()} ${MON[now.getMonth()]}`));
+    if (cal.at && cal.status === "ok") { const t = new Date(cal.at); head.append(el("span", "s", `Outlook · ${pad(t.getHours())}:${pad(t.getMinutes())}`)); }
+    box.append(head);
+    const note = (text, btn) => { const p = el("p", "ag-note"); p.append(el("span", null, text)); if (btn) p.append(btn); box.append(p); };
+    if (!mcp) note("Outlook isn't reachable in this view.");
+    else if (cal.status === "loading") note("Loading your Outlook calendar…");
+    else if (cal.error) {
+      const c = errorCopy(cal.error, "Outlook");
+      let b = null;
+      if (c.action === "approve") { b = el("button", null, "Allow Outlook"); b.type = "button"; b.addEventListener("click", () => { b.disabled = true; approveCal(); }); }
+      note(c.text, b);
+    }
+    if (!db && dbState === "off") note("Timeboxes can't be saved in this view, so dragging is off.");
+    else if (dbState === "error") note(`Couldn't reach the board's storage. ${dbErrorText(dbErr)}`);
+    else if (dbState === "slow") note("Timeboxes are still loading…");
+
+    const allDay = cal.events.filter(e => e.allDay);
+    if (allDay.length) { const strip = el("div", "allday"); allDay.forEach(e => strip.append(eventBlock(e, true))); box.append(strip); }
+
+    const todayIds = new Set(open.map(i => i.id));
+    const items = [
+      ...cal.events.filter(e => !e.allDay).map(e => Object.assign({ kind: "event" }, e)),
+      ...[...slots].map(([id, s]) => ({ kind: "slot", id, start: s.start, end: s.end, title: titleFor(id), orphan: !todayIds.has(id) })),
+    ];
+    let h0 = 8, h1 = 19;
+    items.forEach(it => { h0 = Math.min(h0, Math.floor(it.start / 60)); h1 = Math.max(h1, Math.ceil(it.end / 60)); });
+    h0 = clamp(h0, 0, 23); h1 = clamp(h1, h0 + 1, 24);
+    agendaRange = { h0, h1 };
+    const top = m => (m - h0 * 60) * PX;
+
+    const grid = el("div", "agrid"); grid.style.height = `${(h1 - h0) * 60 * PX}px`;
+    for (let h = h0; h <= h1; h++) { const l = el("div", "hr"); l.style.top = `${top(h * 60)}px`; if (h < 24) l.append(el("span", null, `${pad(h)}:00`)); grid.append(l); }
+    layoutLanes(items).forEach(it => {
+      const b = it.kind === "event" ? eventBlock(it) : slotBlock(it, grid);
+      const len = Math.max(it.end - it.start, SNAP);
+      b.style.top = `${top(it.start) + 1}px`; b.style.height = `${len * PX - 2}px`;
+      b.style.left = `calc(${(it.col / it.cols) * 100}% + 2px)`; b.style.width = `calc(${100 / it.cols}% - 4px)`;
+      if (len * PX < 34) b.classList.add("short");
+      grid.append(b);
+    });
+    const mNow = minutesNow();
+    nowEl = el("div", "now"); nowEl.style.top = `${top(mNow)}px`; nowEl.hidden = mNow < h0 * 60 || mNow > h1 * 60;
+    grid.append(nowEl);
+    ghostEl = el("div", "ghost"); ghostEl.hidden = true; grid.append(ghostEl);
+
+    grid.addEventListener("dragover", e => {
+      if (!drag) return;
+      e.preventDefault(); e.dataTransfer.dropEffect = "move";
+      const m = minuteAt(grid, e, drag.len, drag.grab);
+      ghostEl.hidden = false; ghostEl.style.top = `${top(m)}px`; ghostEl.style.height = `${drag.len * PX}px`;
+      ghostEl.textContent = `${fmtMin(m)}–${fmtMin(m + drag.len)}`;
+    });
+    grid.addEventListener("dragleave", e => { if (!grid.contains(e.relatedTarget)) ghostEl.hidden = true; });
+    grid.addEventListener("drop", e => {
+      if (!drag) return;
+      e.preventDefault(); e.stopPropagation();
+      placeSlot(drag.id, minuteAt(grid, e, drag.len, drag.grab), drag.len);
+    });
+    const scroller = el("div", "agscroll");
+    scroller.append(grid);
+    box.append(scroller);
+    return box;
+  }
+  function updateNow() {
+    if (!nowEl || !nowEl.isConnected) return;
+    const m = minutesNow();
+    nowEl.style.top = `${(m - agendaRange.h0 * 60) * PX}px`; nowEl.hidden = m < agendaRange.h0 * 60 || m > agendaRange.h1 * 60;
+  }
+  function eventBlock(e, inline) {
+    const b = el(e.url ? "a" : "div", "blk ev" + (e.free ? " free" : "") + (e.focus ? " focus" : ""));
+    if (e.url) { b.href = e.url; b.target = "_blank"; b.rel = "noopener"; }
+    const when = e.allDay ? "All day" : `${fmtMin(e.start)}–${fmtMin(e.end)}`;
+    b.title = `${e.subject}\n${when}${e.location ? " · " + e.location : ""}${e.focus ? "\nFocus block (Outlook category To Do)" : ""}${e.free ? "\nShown as free" : ""}`;
+    b.append(el("span", "bt", e.subject), el("span", "bm", when));
+    if (inline) b.style.padding = "2px 8px";
+    return b;
+  }
+  function slotBlock(it, grid) {
+    const id = it.id, s = slots.get(id);
+    const b = el("div", "blk slot" + (it.orphan ? " orphan" : ""));
+    b.dataset.id = id; b.tabIndex = 0; b.draggable = !!db;
+    b.setAttribute("role", "button");
+    b.setAttribute("aria-label", `${id} ${it.title}, ${fmtMin(it.start)} to ${fmtMin(it.end)}. Enter opens it; arrow keys move it, Shift with arrows changes the length, Delete clears it.`);
+    b.title = `${id} · ${it.title}\n${fmtMin(it.start)}–${fmtMin(it.end)}${it.orphan ? "\nNot in Today any more" : ""}`;
+    const t = el("span", "bt"); t.append(el("span", "id", id), document.createTextNode(it.title || ""));
+    const m = el("span", "bm", `${fmtMin(it.start)}–${fmtMin(it.end)}${it.orphan ? " · not in Today" : ""}`);
+    b.append(t, m);
+    const x = el("button", "x", "×"); x.type = "button"; x.title = "Clear timebox"; x.setAttribute("aria-label", `Clear timebox: ${id}`);
+    x.addEventListener("click", e => { e.stopPropagation(); saveSlot(id, null, `${id} timebox cleared`); });
+    x.addEventListener("pointerdown", e => e.stopPropagation());
+    b.append(x);
+    b.addEventListener("click", () => { if (Date.now() - justResized > 300) openPanel(id); });
+    b.addEventListener("dragstart", e => { const r = b.getBoundingClientRect(); startDrag(e, id, "slot", b, (e.clientY - r.top) / PX); });
+    b.addEventListener("dragend", endDrag);
+    b.addEventListener("keydown", e => {
+      if (e.target !== b || !s) return;
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openPanel(id); return; }
+      if (e.key === "Delete" || e.key === "Backspace") { e.preventDefault(); saveSlot(id, null, `${id} timebox cleared`); return; }
+      if (e.key !== "ArrowUp" && e.key !== "ArrowDown") return;
+      e.preventDefault();
+      const d = e.key === "ArrowUp" ? -SNAP : SNAP;
+      focusSlot = id;
+      if (e.shiftKey) { const end = clamp(s.end + d, s.start + SNAP, 1440); if (end !== s.end) saveSlot(id, Object.assign({}, s, { end }), `${id} now ${fmtMin(s.start)}–${fmtMin(end)}`); }
+      else if (s.start + d >= 0 && s.end + d <= 1440) saveSlot(id, Object.assign({}, s, { start: s.start + d, end: s.end + d }), `${id} moved to ${fmtMin(s.start + d)}–${fmtMin(s.end + d)}`);
+    });
+    // Resize from the bottom edge, in 15-minute steps.
+    if (db) {
+      const grip = el("div", "grip"); grip.setAttribute("aria-hidden", "true");
+      grip.addEventListener("pointerdown", e => {
+        if (!s) return;
+        e.preventDefault(); e.stopPropagation();
+        resizing = { y0: e.clientY, end: s.end }; dragging = true;
+        try { grip.setPointerCapture(e.pointerId); } catch (err) {}
+      });
+      grip.addEventListener("pointermove", e => {
+        if (!resizing) return;
+        const end = clamp(Math.round((s.end + (e.clientY - resizing.y0) / PX) / SNAP) * SNAP, s.start + SNAP, agendaRange.h1 * 60);
+        if (end === resizing.end) return;
+        resizing.end = end;
+        b.style.height = `${(end - s.start) * PX - 2}px`; m.textContent = `${fmtMin(s.start)}–${fmtMin(end)}`;
+      });
+      const finish = () => {
+        if (!resizing) return;
+        const end = resizing.end; resizing = null; dragging = false; justResized = Date.now();
+        if (end !== s.end) saveSlot(id, Object.assign({}, s, { end }), `${id} now ${fmtMin(s.start)}–${fmtMin(end)}`);
+        else if (renderPending) { renderPending = false; render(); }
+      };
+      grip.addEventListener("pointerup", finish);
+      grip.addEventListener("pointercancel", finish);
+      grip.addEventListener("click", e => e.stopPropagation());
+      b.append(grip);
+    }
+    return b;
+  }
+
   // ---------- data ----------
   const listInput = { team: TEAM, limit: 250, fields: FIELDS };
   function onList(ev) {
@@ -839,7 +1330,15 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
     if (!m) { state.status = "error"; state.error = { code: "not_granted" }; document.getElementById("fresh").textContent = "Not connected"; render(); return; }
     mcp = m;
     mcp.watchTool(LINEAR, "list_issues", listInput, onList, { cache: { staleTime: 60000, gcTime: 86400000 }, refetchInterval: 300000 });
+    ensureToday();
+  })();
+  (async () => {
+    const d = await (window.claude && window.claude.use ? window.claude.use("db") : Promise.resolve(null));
+    db = d; dbState = d ? "loading" : "off";
+    ensureToday();
+    render();
   })();
   setInterval(render, 10 * 60 * 1000); // Today and Week follow the clock past midnight
+  setInterval(() => { ensureToday(); updateNow(); }, 60 * 1000); // the agenda's now-line, and a new day's slots and events
 })();
 </script>
