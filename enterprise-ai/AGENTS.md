@@ -52,7 +52,7 @@ A decision on the platform for the non-technical departments, made in time to ac
 
 ## Open points
 
-- Langdock pilot: which plan (Core or Work, monthly billing), who the about 20 participants are, which workspace settings (EU-only models, retention), and how feedback is collected by 15 Dec (Mahyar)
+- Langdock pilot: which FOMF company the workspace is billed to (it becomes the party to Langdock's data processing agreement, which needs no signature; question for Felix Dümpert), which plan (Core or Work, monthly billing), who the about 20 participants are, which workspace settings (EU-only models, retention), and how feedback is collected by 15 Dec (Mahyar)
 - Final platform decision after the pilot: number of Langdock seats and Max seats, who keeps Claude, migration of Claude projects, skills and apps (Mahyar, Executive Board)
 - AI governance (EU AI Act): name an AI officer; finalise the draft AI usage policy with a short legal review and have it approved for DE, AT and CH; keep the AI inventory; make a gate process binding (no new AI feature without an Annex III check); training plan for the AI Act and data protection with proof of attendance (Executive Board)
 - For the Anthropic account team: EU residency plans and dates; what the Enterprise geolocation and US-only settings do; sub-processor list; shorter or zero retention for chat by agreement (Mahyar)
@@ -92,4 +92,5 @@ A decision on the platform for the non-technical departments, made in time to ac
 |---|---|
 | `docs/decisions.md` | Every decision, one line each, newest first |
 | `docs/log.md` | Dated record of events and results, newest first |
+| `langdock/company-description.md` | Draft of the Langdock workspace company description (German), from the Notion product pages |
 | `eb-slides-2026-11-23/` | Deck for the Executive Board of 23 Nov 2026 (recommendation, comparison, costs) |

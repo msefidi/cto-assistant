@@ -2,6 +2,29 @@
 
 Newest first. One entry per event or result. Decisions go in `decisions.md`, one line each. Each entry ends with who said it and where, in brackets. Summarise the source; the original stays where it is.
 
+## 2026-11-25: Commit proposal sent to Google; Enterprise Agreement call requested
+
+Mahyar forwarded Alex's commit proposal with the drafts to Stefanie Wonneberger: asked for a current offer based on today's usage, said Switzerland is the open gap (Swiss hospitals are asking) and that FOMF wants to start the Enterprise Agreement now with the Swiss PSA and counsel's points in it; offered Tue 1, Wed 2 or Thu 3 Dec at 09:00 CET with Christian Putzar. (Mahyar, mail "FW: Proposal Commit _ FomF", 25 Nov 11:45 CET)
+
+## 2026-11-25: Google: no Swiss PSA under the online terms; answers on counsel's points
+
+Google offers no Swiss PSA to customers on the online terms (ToS) only; Switzerland needs the Enterprise Agreement. For counsel's missing points, Google names where the current terms cover them and which controls FOMF can switch on (Google's claims):
+- **Human access:** CDPA Appendix 2; controls Access Transparency, Access Approval, Key Access Justifications with Cloud EKM.
+- **Training:** contractual by default (CDPA instructions; Service Specific Terms § 18).
+- **Retention and deletion:** CDPA § 6, deletion within 180 days at most; soft delete up to 30 days, then purged from backups within about 6 months; FOMF sets retention and TTL, Cloud Logging bucket retention.
+- **Location and non-EU access:** Service Specific Terms, CDPA transfers clause (incl. Swiss FADP); controls Org Policy resource locations, Assured Workloads (EU), CMEK/EKM.
+- **Government requests:** redirect to customer, challenge overbroad ones; holding keys outside Google (EKM) as the control.
+- **Audit:** CDPA § 7.5, reports in Compliance Reports Manager.
+(Stefanie Wonneberger, cc Laura Latsch, Habib; mail "Re: DRAFT version - PSA", 25 Nov 10:46 CET)
+
+## 2026-11-25: Alex's commit proposal reviewed (draft of Dec 2025)
+
+The drafts (quote Q-353818, Google Cloud EMEA Ltd ↔ FomF GmbH, Hofheim) say more than the summary mail: Vertex credits are 50 % of Vertex GenAI spend per month for 6 months, capped at USD 250,000, valid 12 months and not counted toward the commit; the 5 % applies to the "Cloud Enterprise 2025" SKU group; sustained-use discounts no longer apply; any shortfall on the USD 260,000 is billed at the end; the commit renews for 12 months unless cancelled 15 days before the end (addendum) or 30 days (order form); Google may name FOMF as a customer and ask for case studies, press and reference calls. The order form has the old address (Elisabethenstraße 1). Checked against the billing export (account 010C6F, all FOMF projects): net spend Nov 2025 to Oct 2026 about €305k (about $354k); Aug to Oct 2026 about €22k a month (about $306k a year). Without Elastic Cloud (Marketplace, about €3k a month) and Maps (about €0.6k a month), whose counting toward the commit is unclear, it is about $258k a year, level with the commit. Sustained-use discounts were €14.9k in those 12 months, about as much as the 5 % would save (about €12–14k), so the price gain is close to zero. Vertex AI is small (€0.3–1.7k a month, mostly Gemini on the learning platform), so the 50 % credit is worth a few thousand euros. meviq-prod is about €41k a year; if Eviplex moves to its own billing account, that spend no longer counts. (Claude, session with Mahyar; attachments of mail "Proposal Commit _ FomF", 4 Dec 2025; BigQuery `fomf-v2-prod.billing_export_standard`)
+
+## 2026-11-24: Google PSA signed for DE and AT
+
+Google sent the DocuSign to Habib on 24 Nov; Habib signed at 12:10 CET and Google countersigned the same day. Google also asked for a call next week (09:00–15:00) with Christian Putzar from its legal team. (Stefanie Wonneberger and Habib, mail "Re: DRAFT version - PSA", 24 Nov)
+
 ## 2026-11-20: EVP-1314 and EVP-1315 brought in line with this topic
 
 The two §203-project issues had sat in Todo since 30 Oct. Both moved to In Progress, each with a status comment that names no terms or counsel advice: EVP-1314 (AVV with Habib; Mahyar checks the measures are live) and EVP-1315 (Google PSA to Habib for signature; open points into the Enterprise Agreement talks). They stay in the Eviplex team so the team sees the legal track; this brief's source map names them. (Mahyar in session, 20 Nov)

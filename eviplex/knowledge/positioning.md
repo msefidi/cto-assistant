@@ -26,7 +26,7 @@ Compare by category only (klinische Wissensportale, internationale KI-Tools, gen
 
 | Market | What holds |
 |---|---|
-| Germany, Austria | Home markets; the Google PSA (once signed) covers DE and AT |
+| Germany, Austria | Home markets; the Google PSA covers DE and AT (signed 24 Nov 2026) |
 | Switzerland | B2B to hospitals (Hirslanden Zürich asked, Oct 2026). EU hosting only, no Swiss-hosting offer; cantonal DPOs may ask for Swiss servers. Art. 321 StGB is not covered by Google until an Enterprise Agreement PSA exists. See `claims-and-legal.md`. |
 | Romania | Through the partner Medichub (referral of doctors), see `../partnermodell/` |
 | UAE | One contact (Oct 2026). The deck offered regional and in-country hosting and made no UAE compliance claims, see `claims-and-legal.md` |

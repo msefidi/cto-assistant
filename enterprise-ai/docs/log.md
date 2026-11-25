@@ -2,6 +2,10 @@
 
 Newest first. One entry per event or result. Decisions go in `decisions.md`, one line each. Each entry ends with who said it and where, in brackets. Summarise the source; the original stays where it is.
 
+## 2026-11-25: Langdock's data processing agreement needs no signature
+
+Langdock's agreement (Art. 28 GDPR, PDF at langdock.com/dpa) is concluded automatically with the Terms of Use when you sign up. The party is the company that provides the workspace, so the pilot workspace must be set up under FOMF's company billing details, not the trial seat. Art. 28(9) GDPR accepts electronic form. The open question is which FOMF company is billed when staff in DE, AT and CH take part (Felix Dümpert). (Claude, session with Mahyar; Langdock Terms, privacy policy, docs)
+
 ## 2026-11-23: Executive Board decides on a Langdock pilot
 
 Mahyar presented the deck in `eb-slides-2026-11-23/`, which recommended Langdock for the departments, Claude for P&E and Copilot as fallback. The board decided on a pilot: about 20 people for one month, until 15 Dec. The proposed split is Langdock for sensitive data and broad team use, and Claude for Product, Marketing and parts of the medical team. The final decision and the licence count come after the pilot. Governance runs in parallel under the EU AI Act: as a deployer, FOMF needs a policy, an inventory and training with proof of attendance (Art. 4, 5). As a provider (learning platform, Eviplex), FOMF must avoid the high-risk category. A draft policy and an inventory template exist; the AI officer is not named. Onboarding of Wafa and Sina is on 1 Dec at 11:00. The board's notes repeat Langdock's own claims on EU hosting and zero retention, which are not yet confirmed in writing. (Executive Board; Notion Meetings, page "2026.11.23")

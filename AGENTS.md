@@ -28,6 +28,8 @@ For now, the Notion page **"Produktwelt bei FOMF"** is the source of truth for a
 
 Company figures come only from the page "FOMF in Zahlen", linked from the Produktwelt page.
 
+**Cross-company context** (what holds for all of FOMF: products, glossary, communication rules) lives in Notion in the FOMF teamspace under **Docs** ("01 - Documents"): https://app.notion.com/p/fa59243369e847eab314d9b2025cedcd. The Produktwelt page and "FOMF All Access" are there. Mahyar wants new cross-company context documented there (since 25 Nov 2026), not in this repo.
+
 ### Shared / data
 - **Datalake & main BigQuery:** GCP project `fomf-dl`
 

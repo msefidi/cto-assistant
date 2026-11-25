@@ -1,6 +1,6 @@
 ---
 name: no-email-draft-files
-description: "Don't save email drafts as files in the repo; give the text in chat, the mail itself is the record"
+description: "Mail drafts go in chat, never repo files; every revision shows the full mail text for copy/paste"
 metadata:
   node_type: memory
   type: feedback
@@ -12,4 +12,4 @@ Don't write email drafts into repo files (e.g. `email-draft-*.md` in a topic fol
 
 **Why:** Mahyar asked on 18 Nov 2026 why a Google PSA email draft file was kept. The "repo keeps what rebuilds it" rule is meant for pages, SQL, scripts and decks, not for mails, and a draft file just goes stale next to Outlook.
 
-**How to apply:** Mail drafts go in chat only. In the log, write that a draft was given or is in Outlook drafts, not a file path. An Artifact Index row for a mail gets an empty `repo` field and a note saying where it lives. Related: [[m365-connector-read-only]], [[comms-style-short]].
+**How to apply:** Mail drafts go in chat only. Every time a draft is given or revised, show the complete mail (greeting to sign-off) in one plain code block (copies without quote markers), never only the changed lines or "rest unchanged"; Mahyar copies it as a whole (asked 25 Nov 2026). A mailto link may come in addition, not instead. In the log, write that a draft was given or is in Outlook drafts, not a file path. An Artifact Index row for a mail gets an empty `repo` field and a note saying where it lives. Related: [[m365-connector-read-only]], [[comms-style-short]].
