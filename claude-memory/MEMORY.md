@@ -26,5 +26,7 @@
 - [No email draft files](no-email-draft-files.md) — mail drafts go in chat, not repo files; the mail is the record
 - [Enterprise AI](enterprise-ai.md) — AI platform for non-tech depts (Claude Enterprise vs Glean, Langdock, Gemini Enterprise); brief in enterprise-ai/
 - [ÖKG partner courses](oekg-partner-courses.md) — society partnerships (ÖKG pilot): partner course, digital Jahrestagung, society All Access package; Anya = Anya Hubmayer; brief in platform/oekg/
-- [One issue, no copies](linear-one-issue-rule.md) — Mahyar-only work on CTO, team-visible work stays in the team; briefs link them; Folder label; board = issues by stage + Outlook week
+- [One issue, no copies](linear-one-issue-rule.md) — Mahyar-only work on CTO, team-visible work stays in the team; briefs link them; Folder label; board = open CTO issues by priority
 - [Teams meeting transcripts](teams-meeting-transcripts.md) — read via M365 connector: calendar event → meetingTranscriptUrl; only if transcription was on; "process <meeting>" workflow
+- [How Mahyar plans](mahyar-daily-routine.md) — by hand from a plain priority list; one morning look; missed blocks and mail/Slack promises break the week
+- [No serif headings](no-serif-headings.md) — don't use Instrument Serif or other serif display fonts on Mahyar's pages; sans semibold headings
