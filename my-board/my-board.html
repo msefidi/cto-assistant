@@ -533,7 +533,7 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
 
   // ---------- row actions (shown on hover), per tab ----------
   // Board rule: Backlog holds what is not due this week. Scheduling an issue in Backlog or Triage
-  // for today or this week also moves it to Todo; unscheduling a Todo issue moves it to Backlog.
+  // for today or this week also moves it to Todo; unscheduling moves it to Backlog (see unschedule).
   // "This week" = Friday (Sunday from Friday on); on Sunday there is no "this week" left.
   function weekTarget() {
     const n = new Date(), dow = n.getDay();
@@ -545,10 +545,14 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
     if (i.statusType === "backlog" || i.statusType === "triage") patch.status = { name: "Todo", type: "unstarted" };
     applyChange(i.id, patch, `${i.id} due ${date === todayYmd() ? "today" : fmtDate(date)}`);
   }
+  // Unschedule = off this week's plan: clear the due date and move to Backlog (the Week tab shows
+  // everything outside Backlog). Delegated/Waiting keeps its status, because it names who has the ball.
+  const unscheduleMovesToBacklog = i => i.statusType !== "backlog" && !isWaiting(i);
+  const canUnschedule = i => !!i.dueDate || unscheduleMovesToBacklog(i);
   function unschedule(i) {
-    const patch = { dueDate: null };
-    if (i.statusType === "unstarted") patch.status = { name: "Backlog", type: "backlog" };
-    applyChange(i.id, patch, `${i.id} unscheduled`);
+    const patch = { dueDate: null }, toBacklog = unscheduleMovesToBacklog(i);
+    if (toBacklog) patch.status = { name: "Backlog", type: "backlog" };
+    applyChange(i.id, patch, toBacklog ? `${i.id} unscheduled and moved to Backlog` : `${i.id} unscheduled`);
   }
   // Icon per action, from the Lucide set (ISC licence): sun (Today), calendar-range (This week),
   // calendar-off (Unschedule), sunset (Remove from today). Static markup, no outside data.
@@ -569,13 +573,13 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
     const t = todayYmd(), wk = weekTarget();
     const today = ["Today", () => schedule(i, t)];
     const week = wk && i.dueDate !== wk ? ["This week", () => schedule(i, wk)] : null;
-    const un = ["Unschedule", () => unschedule(i)];
+    const un = canUnschedule(i) ? ["Unschedule", () => unschedule(i)] : null;
     // Order everywhere: Unschedule, This week (or Remove from today), Today.
     // On All, an issue gets the actions of the tab it belongs to; one due after this week gets Unschedule, Today, This week.
     const tab = view !== "all" ? view : !i.dueDate ? "unscheduled" : isOverdue(i) ? "overdue" : inToday(i) ? "today" : i.dueDate <= sundayYmd() ? "week" : "later";
     if (tab === "unscheduled") return [week, today].filter(Boolean);
     if (tab === "overdue" || tab === "later") return [un, week, today].filter(Boolean);
-    if (tab === "week") return i.dueDate === t ? [un] : [un, today];
+    if (tab === "week") return (i.dueDate === t ? [un] : [un, today]).filter(Boolean);
     if (tab === "today") return [un, wk && wk !== t ? ["Remove from today", () => schedule(i, wk)] : null].filter(Boolean);
     return [];
   }
