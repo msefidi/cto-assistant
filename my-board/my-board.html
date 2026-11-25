@@ -4,11 +4,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: tabs All · Overdue · Week · Today over one list of open CTO issues grouped by priority; a row opens its details in a side panel. Reads Linear live, writes nothing. */
+/* Layout: tabs All · Unscheduled · Overdue · Week · Today over one list of open CTO issues grouped by priority, each row with Linear-style priority and status icons; a row opens its details in a side panel. Reads Linear live; the status icon is a menu that writes the issue's status back to Linear, and hover actions per tab set or clear the due date. */
 :root {
   --bg: #f3f5f7; --surface: #ffffff; --sunk: #e9edf1; --ink: #18202b; --muted: #5b6574; --faint: #8a93a1; --line: #dde2e8; --line-soft: #edf0f3;
   --accent: #12676b; --accent-soft: #e2f0ef; --accent-ink: #ffffff;
   --urgent: #b4401f; --wait: #7a5a12; --wait-soft: #f6efdc; --warn: #8a5700; --bad: #a33a22;
+  --st-triage: #d9622b; --st-progress: #c99a06; --st-review: #2f9e5b; --st-wait: #9a7420; --st-done: #5e6ad2;
   --a-eviplex: #12676b; --a-platform: #3b6fb6; --a-medical: #8a4fb5; --a-cross: #8a94a3;
   --scrim: rgba(16, 20, 26, 0.28);
   --font-body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -19,6 +20,7 @@
     --bg: #10141a; --surface: #171c24; --sunk: #1d232c; --ink: #e5e9ef; --muted: #97a1af; --faint: #6c7684; --line: #29303b; --line-soft: #222832;
     --accent: #5db3ae; --accent-soft: #173233; --accent-ink: #0b1a1b;
     --urgent: #f0896b; --wait: #e2b65a; --wait-soft: #30281a; --warn: #e5ae4b; --bad: #f0896b;
+    --st-triage: #f2945e; --st-progress: #f2c94c; --st-review: #4cb782; --st-wait: #d9a94a; --st-done: #8b93f0;
     --a-eviplex: #5db3ae; --a-platform: #7aa7e6; --a-medical: #c194e6; --a-cross: #8a94a3;
     --scrim: rgba(0, 0, 0, 0.5); color-scheme: dark;
   }
@@ -27,6 +29,7 @@
   --bg: #10141a; --surface: #171c24; --sunk: #1d232c; --ink: #e5e9ef; --muted: #97a1af; --faint: #6c7684; --line: #29303b; --line-soft: #222832;
   --accent: #5db3ae; --accent-soft: #173233; --accent-ink: #0b1a1b;
   --urgent: #f0896b; --wait: #e2b65a; --wait-soft: #30281a; --warn: #e5ae4b; --bad: #f0896b;
+  --st-triage: #f2945e; --st-progress: #f2c94c; --st-review: #4cb782; --st-wait: #d9a94a; --st-done: #8b93f0;
   --a-eviplex: #5db3ae; --a-platform: #7aa7e6; --a-medical: #c194e6; --a-cross: #8a94a3;
   --scrim: rgba(0, 0, 0, 0.5); color-scheme: dark;
 }
@@ -93,19 +96,28 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
 .ghead .t { font-size: 0.74rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); }
 .ghead .n { font-family: var(--font-mono); font-size: 0.74rem; color: var(--faint); }
 .list { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
-.row { display: grid; grid-template-columns: 18px 62px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 10px 14px; border-top: 1px solid var(--line-soft); cursor: pointer; }
+.row { display: grid; grid-template-columns: 18px 62px 22px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 10px 14px; border-top: 1px solid var(--line-soft); cursor: pointer; }
 .row:first-child { border-top: 0; }
 .row:hover { background: var(--sunk); }
 .row.sel { background: var(--accent-soft); }
 .row .id { font-family: var(--font-mono); font-size: 0.76rem; color: var(--muted); }
 .row .main { min-width: 0; display: grid; gap: 2px; }
 .row .title { font-weight: 500; overflow-wrap: anywhere; }
-.row .meta { display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: 0.76rem; color: var(--muted); align-items: center; }
-.row .right { display: flex; gap: 8px; align-items: center; justify-content: flex-end; }
+.row .main { gap: 5px; }
+.row .meta { display: flex; flex-wrap: wrap; gap: 5px; font-size: 0.74rem; color: var(--muted); align-items: center; }
+.tag { display: inline-flex; gap: 5px; align-items: center; padding: 1px 8px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; line-height: 1.5; }
+.tag.overdue { color: var(--bad); border-color: color-mix(in srgb, var(--bad) 45%, var(--line)); }
+.tag.today { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+.tag svg { width: 11px; height: 11px; flex: none; }
+.row .right { display: flex; gap: 6px; align-items: center; justify-content: flex-end; flex-wrap: wrap; }
+.act { width: 28px; height: 28px; padding: 0; display: inline-grid; place-items: center; border-radius: 7px; color: var(--muted); background: var(--surface); }
+.act svg { width: 16px; height: 16px; display: block; }
+.act:hover { color: var(--ink); border-color: var(--accent); }
+@media (hover: hover) { .row .acts { opacity: 0; transition: opacity 0.12s; } .row:hover .acts, .row:focus-within .acts { opacity: 1; } }
 @media (max-width: 620px) {
-  .row { grid-template-columns: 18px minmax(0, 1fr); }
+  .row { grid-template-columns: 18px 22px minmax(0, 1fr); }
   .row .id { display: none; }
-  .row .right { grid-column: 2; justify-content: flex-start; }
+  .row .right { grid-column: 3; justify-content: flex-start; }
 }
 .area { display: inline-flex; gap: 5px; align-items: center; }
 .dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
@@ -118,6 +130,14 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
 .date.past { color: var(--faint); }
 .prio { width: 16px; height: 16px; display: block; color: var(--muted); }
 .prio.urgent { color: var(--urgent); }
+.st { width: 14px; height: 14px; display: block; flex: none; color: var(--muted); }
+.st.backlog { color: var(--faint); } .st.triage { color: var(--st-triage); } .st.started { color: var(--st-progress); } .st.review { color: var(--st-review); } .st.waiting { color: var(--st-wait); } .st.completed { color: var(--st-done); } .st.canceled { color: var(--faint); }
+.stbtn { width: 22px; height: 22px; padding: 0; border: 0; border-radius: 6px; background: none; display: inline-grid; place-items: center; cursor: pointer; }
+.stbtn:hover, .stbtn[aria-expanded="true"] { background: var(--line); border-color: transparent; }
+.smenu { position: fixed; z-index: 40; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 4px; min-width: 200px; display: grid; gap: 1px; box-shadow: 0 8px 22px rgba(16, 20, 26, 0.16); }
+.smenu .mnote { padding: 6px 8px; font-size: 0.84rem; color: var(--muted); max-width: 260px; }
+.toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); z-index: 50; max-width: calc(100% - 32px); display: flex; gap: 10px; align-items: center; background: var(--ink); color: var(--bg); border-radius: 10px; padding: 8px 10px 8px 14px; font-size: 0.86rem; box-shadow: 0 8px 22px rgba(16, 20, 26, 0.2); }
+.toast button { background: none; border: 0; color: inherit; font-weight: 600; text-decoration: underline; padding: 2px 4px; }
 .empty { color: var(--muted); margin: 0; padding: 18px; text-align: center; border: 1px dashed var(--line); border-radius: 12px; }
 
 /* side panel */
@@ -228,17 +248,19 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
   const openIssues = () => state.issues.filter(i => OPEN.has(i.statusType));
   const byId = id => state.issues.find(i => i.id === id);
 
-  // ---------- views: All · Week · Today ----------
+  // ---------- views: All · Unscheduled · Overdue · Week · Today ----------
   // Overdue = due date before today. Week and Today never show overdue issues.
   // Week = not overdue, and outside Backlog or due by Sunday (the board's rule: Backlog holds what is not this week).
   // Today = due date today.
-  const VIEWS = [["all", "All"], ["overdue", "Overdue"], ["week", "Week"], ["today", "Today"]];
+  // Unscheduled = no due date.
+  const VIEWS = [["all", "All"], ["unscheduled", "Unscheduled"], ["overdue", "Overdue"], ["week", "Week"], ["today", "Today"]];
   const todayYmd = () => ymd(new Date());
   const sundayYmd = () => { const n = new Date(); return ymd(new Date(n.getFullYear(), n.getMonth(), n.getDate() + (7 - n.getDay()) % 7)); };
   const isOverdue = i => !!i.dueDate && i.dueDate < todayYmd();
   const inWeek = i => !isOverdue(i) && (i.statusType !== "backlog" || (!!i.dueDate && i.dueDate <= sundayYmd()));
   const inToday = i => i.dueDate === todayYmd();
-  const FILTERS = { all: () => true, overdue: isOverdue, week: inWeek, today: inToday };
+  const isUnscheduled = i => !i.dueDate;
+  const FILTERS = { all: () => true, overdue: isOverdue, week: inWeek, today: inToday, unscheduled: isUnscheduled };
   const viewIssues = v => openIssues().filter(FILTERS[v] || FILTERS.all).filter(matchFilters);
   let view = (() => { const h = location.hash.slice(1); if (VIEWS.some(([k]) => k === h)) return h; try { const s = localStorage.getItem("board.view"); if (VIEWS.some(([k]) => k === s)) return s; } catch (e) {} return "all"; })();
   function setView(v) {
@@ -285,7 +307,7 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
   // ---------- one menu at a time: display, filter fields, or one field's values ----------
   let menu = null; // { type: "display" | "fields" | "values", field?, anchor: element id }
   const menuEl = document.getElementById("menu");
-  function openMenu(m) { menu = (menu && menu.type === m.type && menu.field === m.field && menu.anchor === m.anchor) ? null : m; renderMenu(); }
+  function openMenu(m) { if (smenu) { smenu = null; smenuEl.hidden = true; } menu = (menu && menu.type === m.type && menu.field === m.field && menu.anchor === m.anchor) ? null : m; renderMenu(); }
   function closeMenu(focusBack) { if (!menu) return; const a = menu.anchor; menu = null; renderMenu(); if (focusBack) { const b = document.getElementById(a); if (b) b.focus(); } }
   document.getElementById("filter-btn").addEventListener("click", e => { e.stopPropagation(); openMenu({ type: "fields", anchor: "filter-btn" }); });
   document.getElementById("display-btn").addEventListener("click", e => { e.stopPropagation(); openMenu({ type: "display", anchor: "display-btn" }); });
@@ -385,16 +407,217 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
     else { const lit = { 2: 3, 3: 2, 4: 1 }[v] || 0; [[2, 9, 5], [6.5, 6, 8], [11, 3, 11]].forEach(([x, y, h], k) => add("rect", { x, y, width: 3, height: h, rx: 1, fill: "currentColor", opacity: k < lit ? 1 : 0.25 })); }
     return s;
   }
+  // Linear-style status icons: Backlog dashed ring, Triage filled with arrows, Todo empty ring,
+  // In Progress ring with a half pie, In Review (green) and Waiting (amber) rings with a three-quarter pie.
+  const statusKind = (name, type) => /waiting|delegated/i.test(name || "") ? "waiting" : (type === "started" && /review/i.test(name || "")) ? "review" : (type || "unstarted");
+  const statusIcon = i => statusGlyph(i.status, i.statusType);
+  function statusGlyph(name, type) {
+    const s = document.createElementNS(SVG_NS, "svg");
+    const kind = statusKind(name, type);
+    s.setAttribute("viewBox", "0 0 14 14"); s.setAttribute("class", "st " + kind); s.setAttribute("aria-hidden", "true");
+    const add = (tag, attrs) => { const n = document.createElementNS(SVG_NS, tag); Object.entries(attrs).forEach(([k, val]) => n.setAttribute(k, val)); s.append(n); return n; };
+    const ring = extra => add("circle", Object.assign({ cx: 7, cy: 7, r: 6, fill: "none", stroke: "currentColor", "stroke-width": 1.5 }, extra || {}));
+    const pie = f => { const a = f * 2 * Math.PI, x = 7 + 3 * Math.sin(a), y = 7 - 3 * Math.cos(a); add("path", { d: `M7 7 L7 4 A3 3 0 ${f > 0.5 ? 1 : 0} 1 ${x.toFixed(2)} ${y.toFixed(2)} Z`, fill: "currentColor" }); };
+    if (kind === "backlog") ring({ "stroke-dasharray": "1.4 1.75" });
+    else if (kind === "triage") { add("circle", { cx: 7, cy: 7, r: 6.5, fill: "currentColor" }); add("path", { d: "M4.2 5.6h5.2M7.9 4l1.6 1.6-1.6 1.6M9.8 8.4H4.6M6.1 6.8 4.5 8.4 6.1 10", fill: "none", style: "stroke: var(--surface)", "stroke-width": 1.2, "stroke-linecap": "round", "stroke-linejoin": "round" }); }
+    else if (kind === "started") { ring(); pie(0.5); }
+    else if (kind === "waiting" || kind === "review") { ring(); pie(0.75); }
+    else if (kind === "completed") { add("circle", { cx: 7, cy: 7, r: 6.5, fill: "currentColor" }); add("path", { d: "M4.3 7.2 6.2 9 9.7 5.2", fill: "none", style: "stroke: var(--surface)", "stroke-width": 1.5, "stroke-linecap": "round", "stroke-linejoin": "round" }); }
+    else if (kind === "canceled") { add("circle", { cx: 7, cy: 7, r: 6.5, fill: "currentColor" }); add("path", { d: "M5 5l4 4M9 5l-4 4", fill: "none", style: "stroke: var(--surface)", "stroke-width": 1.5, "stroke-linecap": "round" }); }
+    else ring();
+    return s;
+  }
   function statusPill(i) {
     const cls = isWaiting(i) ? "pill waiting" : i.statusType === "started" ? "pill started" : "pill";
     return el("span", cls, isWaiting(i) ? "Waiting" : (i.status || ""));
   }
+  // ---------- status: the icon is a button; picking a status saves it to Linear ----------
+  function statusButton(i, where) {
+    const b = el("button", "stbtn"); b.type = "button";
+    b.dataset.id = i.id; b.dataset.where = where;
+    b.title = "Change status"; b.setAttribute("aria-label", `Status: ${i.status || "unknown"}. Change status`);
+    b.setAttribute("aria-haspopup", "menu"); b.setAttribute("aria-expanded", String(!!smenu && smenu.id === i.id && smenu.where === where));
+    b.append(statusIcon(i));
+    b.addEventListener("click", e => { e.stopPropagation(); toggleStatusMenu(i.id, where, b); });
+    b.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") e.stopPropagation(); });
+    return b;
+  }
+  let statuses = null, statusesErr = null, statusesLoading = false;
+  const TYPE_ORDER = { backlog: 0, unstarted: 1, started: 2, completed: 3, canceled: 4 }; // Triage and Duplicate are not offered
+  const startedRank = n => /progress/i.test(n) ? 0 : /review/i.test(n) ? 1 : /waiting|delegated/i.test(n) ? 2 : 3;
+  async function loadStatuses() {
+    if (statuses || statusesLoading || !mcp) return;
+    statusesLoading = true; statusesErr = null;
+    try {
+      const r = await mcp.callTool(LINEAR, "list_issue_statuses", { team: TEAM });
+      const p = r && r.payload;
+      const arr = Array.isArray(p) ? p : (p && (p.statuses || p.issueStatuses || p.nodes)) || [];
+      statuses = arr.filter(x => x && x.id && x.name && x.type in TYPE_ORDER)
+        .sort((a, b) => (TYPE_ORDER[a.type] - TYPE_ORDER[b.type]) || (startedRank(a.name) - startedRank(b.name)) || a.name.localeCompare(b.name));
+    } catch (err) { statusesErr = err; }
+    statusesLoading = false;
+    renderStatusMenu();
+  }
+  let smenu = null; // { id, where, left, top, bottom, focus }
+  const smenuEl = el("div", "smenu"); smenuEl.setAttribute("role", "menu"); smenuEl.setAttribute("aria-label", "Status"); smenuEl.hidden = true;
+  document.body.append(smenuEl);
+  smenuEl.addEventListener("click", e => e.stopPropagation());
+  smenuEl.addEventListener("keydown", e => {
+    if (e.key !== "ArrowDown" && e.key !== "ArrowUp") return;
+    e.preventDefault();
+    const items = [...smenuEl.querySelectorAll("button")], k = items.indexOf(document.activeElement);
+    const next = items[(k + (e.key === "ArrowDown" ? 1 : -1) + items.length) % items.length]; if (next) next.focus();
+  });
+  document.addEventListener("click", () => { if (smenu) closeStatusMenu(false); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && smenu) { e.stopImmediatePropagation(); closeStatusMenu(true); } }, true);
+  window.addEventListener("scroll", () => { if (smenu) closeStatusMenu(false); }, true);
+  window.addEventListener("resize", () => { if (smenu) closeStatusMenu(false); });
+  function toggleStatusMenu(id, where, btn) {
+    if (smenu && smenu.id === id && smenu.where === where) { closeStatusMenu(true); return; }
+    closeMenu(false);
+    const r = btn.getBoundingClientRect();
+    smenu = { id, where, left: r.left, top: r.bottom + 4, bottom: r.top - 4, focus: true };
+    loadStatuses();
+    render();
+  }
+  function closeStatusMenu(focusBack) {
+    const was = smenu; smenu = null;
+    render();
+    if (focusBack && was) { const b = document.querySelector(`.stbtn[data-id="${CSS.escape(was.id)}"][data-where="${was.where}"]`); if (b) b.focus(); }
+  }
+  function renderStatusMenu() {
+    smenuEl.textContent = "";
+    const i = smenu && byId(smenu.id);
+    if (!i) { smenu = null; smenuEl.hidden = true; return; }
+    if (!mcp) smenuEl.append(el("div", "mnote", "Linear isn't connected on this page."));
+    else if (!statuses) smenuEl.append(el("div", "mnote", statusesErr ? errorCopy(statusesErr).text : "Loading statuses…"));
+    else statuses.forEach(st => {
+      const b = el("button", "mi"); b.type = "button"; b.setAttribute("role", "menuitemradio");
+      const cur = st.name === i.status; b.setAttribute("aria-checked", String(cur));
+      b.append(statusGlyph(st.name, st.type), document.createTextNode(st.name));
+      if (cur) b.append(el("span", "n", "✓"));
+      b.addEventListener("click", () => { closeStatusMenu(true); setStatus(i.id, st); });
+      smenuEl.append(b);
+    });
+    smenuEl.hidden = false;
+    const w = smenuEl.offsetWidth, h = smenuEl.offsetHeight;
+    smenuEl.style.left = Math.max(8, Math.min(smenu.left, innerWidth - w - 8)) + "px";
+    smenuEl.style.top = (smenu.top + h > innerHeight - 8 && smenu.bottom - h > 8 ? smenu.bottom - h : smenu.top) + "px";
+    if (smenu.focus && statuses) { smenu.focus = false; const c = smenuEl.querySelector('[aria-checked="true"]') || smenuEl.querySelector("button"); if (c) c.focus(); }
+  }
+  function setStatus(id, st) {
+    const i = byId(id); if (!i || i.status === st.name) return;
+    applyChange(id, { status: st }, `${id} moved to ${st.name}`);
+  }
+  // One save to Linear (due date and/or status), shown at once, rolled back if Linear refuses, with Undo.
+  async function applyChange(id, patch, msg, isUndo) {
+    const i = byId(id); if (!i || !mcp) return;
+    const prev = { dueDate: i.dueDate || null, status: i.status, statusType: i.statusType };
+    const input = { id };
+    if ("dueDate" in patch) { input.dueDate = patch.dueDate; i.dueDate = patch.dueDate; }
+    if (patch.status) { input.state = patch.status.id || patch.status.name; i.status = patch.status.name; i.statusType = patch.status.type; }
+    render();
+    try {
+      await mcp.callTool(LINEAR, "save_issue", input);
+      const undo = {};
+      if ("dueDate" in patch) undo.dueDate = prev.dueDate;
+      if (patch.status && prev.status) undo.status = { name: prev.status, type: prev.statusType };
+      showToast(msg, isUndo ? null : () => applyChange(id, undo, `${id} restored`, true));
+      try { await mcp.invalidate(LINEAR); } catch (e) {}
+    } catch (err) {
+      const j = byId(id); if (j) { j.dueDate = prev.dueDate; j.status = prev.status; j.statusType = prev.statusType; }
+      render();
+      showToast(`${id} not changed. ${errorCopy(err).text}`);
+    }
+  }
+
+  // ---------- row actions (shown on hover), per tab ----------
+  // Board rule: Backlog holds what is not due this week. Scheduling an issue in Backlog or Triage
+  // for today or this week also moves it to Todo; unscheduling a Todo issue moves it to Backlog.
+  // "This week" = Friday (Sunday from Friday on); on Sunday there is no "this week" left.
+  function weekTarget() {
+    const n = new Date(), dow = n.getDay();
+    if (dow >= 1 && dow <= 4) return ymd(new Date(n.getFullYear(), n.getMonth(), n.getDate() + (5 - dow)));
+    return dow === 0 ? null : sundayYmd();
+  }
+  function schedule(i, date) {
+    const patch = { dueDate: date };
+    if (i.statusType === "backlog" || i.statusType === "triage") patch.status = { name: "Todo", type: "unstarted" };
+    applyChange(i.id, patch, `${i.id} due ${date === todayYmd() ? "today" : fmtDate(date)}`);
+  }
+  function unschedule(i) {
+    const patch = { dueDate: null };
+    if (i.statusType === "unstarted") patch.status = { name: "Backlog", type: "backlog" };
+    applyChange(i.id, patch, `${i.id} unscheduled`);
+  }
+  // Icon per action, from the Lucide set (ISC licence): sun (Today), calendar-range (This week),
+  // calendar-off (Unschedule), sunset (Remove from today). Static markup, no outside data.
+  const ACT_ICONS = {
+    "Today": '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>',
+    "This week": '<rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M3 10h18M8 2v4M17 14h-6M13 18H7M7 14h.01M17 18h.01"/>',
+    "Unschedule": '<path d="M4.2 4.2A2 2 0 0 0 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 1.82-1.18M21 15.5V6a2 2 0 0 0-2-2H9.5M16 2v4M3 10h7M21 10h-5.5M2 2l20 20M8 2v4"/>',
+    "Remove from today": '<path d="M12 10V2M4.93 10.93l1.41 1.41M2 18h2M20 18h2M19.07 10.93l-1.41 1.41M22 22H2M16 6l-4 4-4-4M16 18a4 4 0 0 0-8 0"/>',
+  };
+  function actIcon(label) {
+    const s = document.createElementNS(SVG_NS, "svg");
+    s.setAttribute("viewBox", "0 0 24 24"); s.setAttribute("aria-hidden", "true");
+    s.setAttribute("fill", "none"); s.setAttribute("stroke", "currentColor"); s.setAttribute("stroke-width", "1.75"); s.setAttribute("stroke-linecap", "round"); s.setAttribute("stroke-linejoin", "round");
+    s.innerHTML = ACT_ICONS[label] || "";
+    return s;
+  }
+  function rowActions(i) {
+    const t = todayYmd(), wk = weekTarget();
+    const today = ["Today", () => schedule(i, t)];
+    const week = wk && i.dueDate !== wk ? ["This week", () => schedule(i, wk)] : null;
+    const un = ["Unschedule", () => unschedule(i)];
+    // Order everywhere: Unschedule, This week (or Remove from today), Today.
+    // On All, an issue gets the actions of the tab it belongs to; one due after this week gets Unschedule, Today, This week.
+    const tab = view !== "all" ? view : !i.dueDate ? "unscheduled" : isOverdue(i) ? "overdue" : inToday(i) ? "today" : i.dueDate <= sundayYmd() ? "week" : "later";
+    if (tab === "unscheduled") return [week, today].filter(Boolean);
+    if (tab === "overdue" || tab === "later") return [un, week, today].filter(Boolean);
+    if (tab === "week") return i.dueDate === t ? [un] : [un, today];
+    if (tab === "today") return [un, wk && wk !== t ? ["Remove from today", () => schedule(i, wk)] : null].filter(Boolean);
+    return [];
+  }
+  const toastEl = el("div", "toast"); toastEl.setAttribute("role", "status"); toastEl.hidden = true;
+  document.body.append(toastEl);
+  let toastTimer = null;
+  function showToast(text, undo) {
+    toastEl.textContent = ""; toastEl.append(el("span", null, text));
+    if (undo) { const b = el("button", null, "Undo"); b.type = "button"; b.addEventListener("click", () => { toastEl.hidden = true; undo(); }); toastEl.append(b); }
+    toastEl.hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => { toastEl.hidden = true; }, 6000);
+  }
+
   function dateTag(i) {
     if (!i.dueDate) return null;
     const past = i.dueDate < ymd(new Date());
     const t = el("span", "date" + (past ? " past" : ""), (past ? "was " : "") + fmtDate(i.dueDate));
     t.title = "Check-in date";
     return t;
+  }
+  // Chips on a row's second line: due date, area, folder, parent.
+  function tagIcon(d) {
+    const s = document.createElementNS(SVG_NS, "svg"); s.setAttribute("viewBox", "0 0 12 12"); s.setAttribute("aria-hidden", "true");
+    const p = document.createElementNS(SVG_NS, "path"); p.setAttribute("d", d); p.setAttribute("fill", "none"); p.setAttribute("stroke", "currentColor"); p.setAttribute("stroke-width", "1.2"); p.setAttribute("stroke-linecap", "round"); p.setAttribute("stroke-linejoin", "round");
+    s.append(p); return s;
+  }
+  const ICON_CAL = "M2 3.5h8v6.5H2zM2 5.5h8M4 2v2.5M8 2v2.5";
+  const ICON_FOLDER = "M1.5 3h3l1 1.2h5v5.3h-9z";
+  const ICON_PARENT = "M3 2v5.5h6M7 5.5l2 2-2 2";
+  function rowTags(i) {
+    const out = [];
+    if (i.dueDate) {
+      const t = todayYmd(), cls = i.dueDate < t ? " overdue" : i.dueDate === t ? " today" : "";
+      const c = el("span", "tag" + cls); c.title = "Check-in date";
+      c.append(tagIcon(ICON_CAL), document.createTextNode(i.dueDate < t ? `Overdue · ${fmtDate(i.dueDate)}` : i.dueDate === t ? "Due today" : `Due ${fmtDate(i.dueDate)}`));
+      out.push(c);
+    }
+    const a = areaOf(i);
+    if (a) { const c = el("span", "tag"); c.append(el("span", "dot " + a.toLowerCase()), document.createTextNode(a)); out.push(c); }
+    const f = folderOf(i);
+    if (f) { const c = el("span", "tag"); c.title = "Topic folder"; c.append(tagIcon(ICON_FOLDER), document.createTextNode(f)); out.push(c); }
+    if (i.parentId) { const c = el("span", "tag"); c.title = "Sub-issue of " + i.parentId; c.append(tagIcon(ICON_PARENT), document.createTextNode(i.parentId)); out.push(c); }
+    return out;
   }
   function areaTag(i) {
     const a = areaOf(i); if (!a) return null;
@@ -470,6 +693,7 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
     else sub.textContent = view === "week" ? `This week, ${weekRange()} · scheduled, not overdue`
       : view === "today" ? `Today, ${WD[now.getDay()]} ${now.getDate()} ${MON[now.getMonth()]} · due today`
       : view === "overdue" ? "Due date has passed and the issue is still open"
+      : view === "unscheduled" ? "Open issues without a due date"
       : `Everything open on ${TEAM}${state.more ? " (first 250 shown)" : ""}`;
     const nf = Object.keys(filters).length;
     document.getElementById("count").textContent = state.status === "ok" || open.length ? `${open.length} issue${open.length === 1 ? "" : "s"}${nf ? " · filtered" : ""}` : "";
@@ -486,7 +710,7 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
       items.forEach(i => ul.append(row(i)));
       g.append(head, ul); wrap.append(g);
     };
-    if (state.status === "ok" && !open.length) wrap.append(el("p", "empty", Object.keys(filters).length ? "No issues match these filters." : ({ today: "Nothing is due today.", week: "Nothing else is scheduled for this week.", overdue: "Nothing is overdue." }[view] || "No open issues on the board.")));
+    if (state.status === "ok" && !open.length) wrap.append(el("p", "empty", Object.keys(filters).length ? "No issues match these filters." : ({ today: "Nothing is due today.", week: "Nothing else is scheduled for this week.", overdue: "Nothing is overdue.", unscheduled: "Every open issue has a due date." }[view] || "No open issues on the board.")));
     if (groupBy === "none") {
       if (open.length) { const ul = el("ul", "list"); open.slice().sort(byPrioThenDue).forEach(i => ul.append(row(i))); wrap.append(ul); }
     } else if (groupBy === "status") {
@@ -498,6 +722,7 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
     root.append(wrap);
     renderMenu();
     renderPanel();
+    renderStatusMenu();
   }
   function row(i) {
     const li = el("li", "row" + (openId === i.id ? " sel" : ""));
@@ -507,14 +732,22 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
     const main = el("div", "main");
     main.append(el("span", "title", i.title || "(untitled)"));
     const meta = el("div", "meta");
-    const a = areaTag(i); if (a) meta.append(a);
-    const f = folderOf(i); if (f) meta.append(el("span", "folder", "▸ " + f));
-    if (i.parentId) meta.append(el("span", null, "part of " + i.parentId));
+    rowTags(i).forEach(t => meta.append(t));
     if (meta.childNodes.length) main.append(meta);
-    const right = el("div", "right");
-    const d = dateTag(i); if (d) right.append(d);
-    right.append(statusPill(i));
-    li.append(prioIcon(prioOf(i)), el("span", "id", i.id), main, right);
+    li.append(prioIcon(prioOf(i)), el("span", "id", i.id), statusButton(i, "row"), main);
+    const acts = rowActions(i);
+    if (acts.length) {
+      const r = el("div", "right acts");
+      acts.forEach(([label, fn]) => {
+        const b = el("button", "act"); b.type = "button";
+        b.title = label; b.setAttribute("aria-label", `${label}: ${i.id}`);
+        b.append(actIcon(label));
+        b.addEventListener("click", e => { e.stopPropagation(); fn(); });
+        b.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") e.stopPropagation(); });
+        r.append(b);
+      });
+      li.append(r);
+    }
     return li;
   }
 
@@ -557,7 +790,7 @@ h1 { font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em; line-height: 
       const fact = (k, ...v) => { const dd = el("dd"); v.filter(Boolean).forEach(x => dd.append(typeof x === "string" ? document.createTextNode(x) : x)); dl.append(el("dt", null, k), dd); };
       const pr = el("span", "area"); pr.append(prioIcon(prioOf(i)), document.createTextNode((i.priority && i.priority.name) || "No priority"));
       fact("Priority", pr);
-      fact("Status", statusPill(i));
+      fact("Status", statusButton(i, "panel"), statusPill(i));
       if (areaOf(i)) fact("Area", areaTag(i));
       if (i.dueDate) fact("Check-in", dateTag(i));
       if (i.parentId) { const b = el("button", "linkbtn", byId(i.parentId) ? `${i.parentId} · ${byId(i.parentId).title}` : i.parentId); b.type = "button"; b.addEventListener("click", () => openPanel(i.parentId)); fact("Part of", b); }
