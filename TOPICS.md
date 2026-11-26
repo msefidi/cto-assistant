@@ -14,6 +14,7 @@ Every topic in this workspace, one line each, grouped. Finished topics and one-o
 | `eviplex/avv/` | Review of the Eviplex AVV and the FOMF↔Eviplex secrecy agreement | CTO-1 |
 | `eviplex/documents/` | Patient documents in Eviplex: use case, MDR, § 203/CH, hosting (AlpineAI benchmark) | CTO-22 |
 | `eviplex/tmn-press/` | Does press coverage by The Medical Network (TMN) move Eviplex traffic? | CTO-28 |
+| `eviplex/pricing/` | Eviplex B2C prices and question quotas (Free, Plus, Pro; DE/AT, CH) | CTO-30 |
 | `platform/syfat/` | SYFAT commercials, 2× revenue by Sep 2027 | CTO-4 |
 | `platform/on-demand-accredited/` | On-Demand Accredited commercials, 2× revenue by Sep 2027 | CTO-5 |
 | `platform/oekg/` | Society partnerships, ÖKG pilot: partner course, digital Jahrestagung, society All Access package | CTO-26 |

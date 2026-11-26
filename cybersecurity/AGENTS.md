@@ -6,12 +6,12 @@ Since 18 Nov 2026 this folder also holds the start of **IT security management**
 
 ## Status
 
-**As of 25 Nov 2026:** Contract v4 (#2026.11.014, €31,900 net, 29 days) and Blaze's Art. 28 DPA signed since 9 Nov. Blaze confirmed our timeline on 16 Nov, in the client portal (ticket BCP-26), with exact dates: M365 7–10 Dec 2026; GCP 6–8 Jan 2027; OSINT 11–12 Jan; GKE 18–21 Jan; Eviplex pentest 25 Jan–4 Feb; learning-platform pentest 1–9 Feb. Our reply was missed until 25 Nov, because it came only as portal notifications. MSA 10.3 cancellation fees now apply to these dates. IT security management with Andreas has a first baseline (`it-security-management-2026-11-18.md`).
+**As of 26 Nov 2026:** Contract v4 (#2026.11.014, €31,900 net, 29 days) and Blaze's Art. 28 DPA signed since 9 Nov. Dates confirmed in the client portal (ticket BCP-26): M365 7–10 Dec 2026; GCP 6–8 Jan 2027; OSINT 11–12 Jan; GKE 18–21 Jan; Eviplex pentest 25 Jan–4 Feb; learning-platform pentest 1–9 Feb. MSA 10.3 cancellation fees apply to these dates. The Phase 1 kick-off is booked for **Mon 30 Nov, 15:00–15:30 CET** (Google Meet, invite from Mariana to Mahyar and Andreas, Enes Hamza from Blaze); in Mahyar's calendar it is still tentative and overlaps the "Weekly Event/ Kundendienst/ Engineering" (15:00–15:25), which Andreas also attends. Blaze agreed to the Phase 1 debrief on Fri 11 Dec and to GCP from 6 Jan, with a separate Phase 2 kick-off in the week of 7 Dec. IT security management with Andreas has a first baseline (`it-security-management-2026-11-18.md`).
 
-- **Next step:** answer Mariana: Phase 1 kick-off slot (Mon 30 Nov, 14:00–15:00 CET, Mahyar and Andreas), confirmation of the Phase 1 debrief by 11 Dec, and Phase 2 start 6 Jan with its kick-off in the week of 7 Dec. Then post the exact dates in #p-cybersecurity-assessment and make sure Andreas grants M365 Global Reader before 7 Dec and GCP access is ready by 6 Jan.
-- **Next date:** Phase 1 kick-off, offered 30 Nov, 2 Dec or 3 Dec; Phase 1 testing 7–10 Dec, debrief by 11 Dec.
+- **Next step:** accept the 30 Nov invite and skip or move the weekly event for Mahyar and Andreas. Answer Mariana in BCP-26 with two slots: the debrief on 11 Dec (12:30 CET is the only offered slot where Mahyar and Andreas are both free; it overlaps only the tentative Backend Roundtable) and the Phase 2 kick-off (Mon 7 Dec 16:30 CET is free for Mahyar and Shervin). Then post the dates in #p-cybersecurity-assessment and make sure Andreas grants M365 Global Reader before 7 Dec and GCP access is ready by 6 Jan.
+- **Next date:** Phase 1 kick-off Mon 30 Nov 15:00 CET; Phase 1 testing 7–10 Dec, debrief Fri 11 Dec.
 - **IT security management:** next is the in-person meeting on 21 Dec to set the 2027 roadmap, adjusted with Blaze's Phase 1 (M365) input. Mahyar follows up on the Mac surveys (CTO-24).
-- **Waiting on:** Mahyar, to pick the kick-off slot and answer the GCP start question.
+- **Waiting on:** Mahyar, to accept the invite and pick the debrief and Phase 2 kick-off slots.
 
 ## Goal
 
@@ -29,7 +29,8 @@ All six parts tested, each phase reported and debriefed, the fixed findings rete
 | Shervin | Supports Andreas with GCP/GKE access and configuration for Blaze; blocks the proposed weeks (asked 16 Nov) |
 | Simone, George, Rahim | EM Productivity, EM Platform, TL Backend. Kept informed; test accounts, data and windows before the January pentests; fixes land in their teams as product work |
 | Caroline "Carol" Galatoli (Blaze) | Cybersecurity Account Executive. Offers, contract, DPA |
-| Mariana Teixeira (Blaze, PM Europe) | Schedules the kick-off call before each phase |
+| Mariana Teixeira (Blaze, PM Europe) | Schedules the kick-off call before each phase. Gives times in GMT/WET unless she says CET |
+| Enes Hamza (Blaze) | On the Phase 1 (M365) kick-off invite; role not stated, probably the M365 analyst |
 | Jan Weis (Blaze, in copy) | Blaze contact. Also wrote from Exaspace Security offering separate consulting |
 | Julio Fort (Blaze) | Co-founder; signs for Blaze |
 | Alexander "Alex" Stati (PCG) | Account manager of the declined vendor |
@@ -37,7 +38,7 @@ All six parts tested, each phase reported and debriefed, the fixed findings rete
 
 ## Open points
 
-- Phase 1 kick-off slot and Phase 2 start (6 or 11 Jan) still to answer in BCP-26. Dates are confirmed, so MSA 10.3 cancellation fees apply; Andreas must hold 7–10 Dec. (owner: Mahyar)
+- Debrief slot on 11 Dec and Phase 2 kick-off slot (7, 9 or 10 Dec) still to answer in BCP-26. Dates are confirmed, so MSA 10.3 cancellation fees apply; Andreas must hold 7–10 Dec. (owner: Mahyar)
 - M365 Global Reader for Blaze before Phase 1; whether it is granted is not recorded. (owner: Andreas)
 - Test accounts in two organisations per product for the January pentests; test data, test windows and the AI usage limit before Phase 3. (owner: Mahyar)
 - The learning-platform pentest keeps 7 days although the scope grew to about 400 GraphQL operations and 100 REST handlers. Plan of 9 Nov: ask Carol how 7 days cover it, get a quote for 3 more days (€3,300 net at €1,100) and add them before the Phase 3 kick-off if her answer is thin. (owner: Mahyar)
@@ -69,7 +70,7 @@ Where this topic lives outside this folder. A catch-up searches every row.
 
 | Where | What to search or open |
 |---|---|
-| Outlook | Search `Blaze`, `blazeinfosec.com`, `Pentest`, `Security Assessment`, `PCG`, `Mandiant`. Threads: "Ihre Anfrage für einen Pentest bei Blaze Information Security" (main thread with Carol, cc Jan Weis and Habib: offers, answers, the 9 Nov "dates not binding" mail); "NDA \| Blaze <> FOMF", "NDA Blaze addition/changes", "NDA Blaze" (Habib, Amendment No. 1); "Blaze Contract" (Habib, 3 Nov); "Completed: Complete with Docusign: DPA FomF.docx.pdf, FomF x Blaze Security Assessment v4.pdf" (signed PDFs attached); "Kick-off call \| Blaze x FomF - Penetration test" (Carol, Mariana Teixeira, pm-europe@ and service-delivery@blazeinfosec.com); "[BCP-26] Kick-off call \| Blaze x FomF - Penetration test" (portal notifications from jira@blazeinfosec.atlassian.net: Mariana's replies arrive only this way, easy to miss); "Your access to Blaze Client Portal". PCG: "Fomf <> PCG Security Check - Google", "Kurze Frage zu unserem Projekt" (Alexander Stati). Exaspace: "InfoSec Consulting" (Jan Weis). |
+| Outlook | Search `Blaze`, `blazeinfosec.com`, `Pentest`, `Security Assessment`, `PCG`, `Mandiant`. Threads: "Ihre Anfrage für einen Pentest bei Blaze Information Security" (main thread with Carol, cc Jan Weis and Habib: offers, answers, the 9 Nov "dates not binding" mail); "NDA \| Blaze <> FOMF", "NDA Blaze addition/changes", "NDA Blaze" (Habib, Amendment No. 1); "Blaze Contract" (Habib, 3 Nov); "Completed: Complete with Docusign: DPA FomF.docx.pdf, FomF x Blaze Security Assessment v4.pdf" (signed PDFs attached); "Kick-off call \| Blaze x FomF - Penetration test" (Carol, Mariana Teixeira, pm-europe@ and service-delivery@blazeinfosec.com); "[BCP-26] Kick-off call \| Blaze x FomF - Penetration test" (portal notifications from jira@blazeinfosec.atlassian.net: Mariana's replies arrive only this way, easy to miss); "Your access to Blaze Client Portal". Calendar: "Blaze | FomF - Phase 1, Microsoft 365 configuration assessment Kick-off call" (30 Nov, Google Meet). PCG: "Fomf <> PCG Security Check - Google", "Kurze Frage zu unserem Projekt" (Alexander Stati). Exaspace: "InfoSec Consulting" (Jan Weis). |
 | Teams | Search `Blaze OR Pentest OR "Security Assessment" OR Mandiant`. Group chat "Executive Board" (15 Oct, 26 Oct, EB memo 9 Nov, Sina's question 10 Nov); Mahyar's 1:1 chat with Habib (NDA, 27 Oct and 9 Nov). |
 | Slack | Private channel #p-cybersecurity-assessment (C0CHXPGCWHH), created 16 Nov with Andreas, Shervin, Simone, George and Rahim: the team's project channel. Mahyar's DM with Andreas (D01N5T0MV9B): thread of 12 Nov on Blaze's dates (high season, 7 Dec earliest, vacation from 27 Dec); thread of 8 Oct with the Mac survey forms (engineers: "Engineering Hardware Survey – Zusammenarbeit"; unit leads). Not searched more widely. |
 | SharePoint | Not searched yet. The place for the signed contract, DPA, NDA and the reports is not recorded. |
