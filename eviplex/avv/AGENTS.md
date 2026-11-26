@@ -4,11 +4,11 @@ Eviplex GmbH needs a data processing agreement (AVV) with the doctors who book P
 
 ## Status
 
-**As of 18 Nov 2026:** AVV: the review and wording changes are with Habib (since 3–4 Nov); no reply from Habib, Felix or counsel on the AVV since. Google PSA: counsel's advice is to sign for DE and AT; the missing technical and organisational assurances become contract terms in the Enterprise Agreement at the latest (details in the log). Google has FOMF's answer (sign for DE and AT, DocuSign to Habib, questions on the assurances, EA call offered); its DocuSign and answers are pending. Enterprise Agreement: Google waits for Alex Vassileva's commit proposal of Dec 2025, which Mahyar has promised to forward. Technical: PR #1079 (Vercel AI Gateway EU endpoint, TLS for Postgres and Redis) and PR #1093 (EU model pin) are merged; that both are live in production is not verified.
+**As of 25 Nov 2026:** AVV: the review and wording changes are with Habib (since 3–4 Nov); no reply from Habib, Felix or counsel on the AVV since. Google PSA: signed for DE and AT (Habib and Google, 24 Nov). Switzerland is not covered: Google offers a Swiss PSA only under an Enterprise Agreement (25 Nov). Google has answered where its current terms cover counsel's missing assurances (log, 25 Nov); what stays open goes into the Enterprise Agreement. Enterprise Agreement: Mahyar sent Stefanie Alex Vassileva's commit draft of Dec 2025 (reviewed 25 Nov), asked for a current offer and pushed for the Swiss PSA; he offered 1, 2 or 3 Dec at 09:00 CET for a call with Google's legal contact. Google has the ball. Technical: PR #1079 (Vercel AI Gateway EU endpoint, TLS for Postgres and Redis) and PR #1093 (EU model pin) are merged; that both are live in production is not verified.
 
-- **Next step:** Mahyar forwards Alex's commit proposal ("Proposal Commit _ FomF", 4 Dec 2025) to Stefanie; Google sends the PSA to Habib by DocuSign and answers the assurance questions. The missing assurances go into the Enterprise Agreement talks. The topic stays open until the PSA is signed (Mahyar, 18 Nov). In parallel, Mahyar confirms #1079 and #1093 are live in production and checks the unverified TOMs; then he tells Habib the documents can go out. Owner: Mahyar.
-- **Next date:** 19 Nov 2026, commit proposal forwarded to Google
-- **Waiting on:** Habib for the certificate wording and § 9 liability (with Erfan and counsel); Felix for the Art. 26 question and the DPIA.
+- **Next step:** Google confirms the call and sends a current offer. Before the call, Mahyar decides what to ask for on the commit (spend checked 25 Nov) and has counsel check Google's answers on the assurances. In parallel, Mahyar confirms #1079 and #1093 are live in production and checks the unverified TOMs; then he tells Habib the documents can go out. Owner: Mahyar.
+- **Next date:** week of 30 Nov 2026, Enterprise Agreement call with Google
+- **Waiting on:** Google (Stefanie) for the call date and a current offer; Habib for the certificate wording and § 9 liability (with Erfan and counsel); Felix for the Art. 26 question and the DPIA.
 
 ## Goal
 
@@ -27,7 +27,8 @@ Habib can hand out the user AVV (V-05 or later) and sign the FOMF↔Eviplex secr
 | Shervin | Eviplex engineer. Owns PR #1079 since 17 Nov: Vercel AI Gateway EU endpoint and TLS for Postgres and Redis (Mahyar in Slack) |
 | Josip | Changes the dictation system (Mahyar in Teams, 3 Nov). PR #1093 is by GitHub user jole141, probably Josip (not confirmed) |
 | Max | Owns the "Professional secrecy (§203)" project in the Eviplex weekly memo |
-| Stefanie Wonneberger and Laura (Google) | Took over the Google PSA/CMA case on 30 Oct |
+| Stefanie Wonneberger and Laura Latsch (Google) | Took over the Google PSA/CMA case on 30 Oct; Christian Putzar is Google's legal contact |
+| Alexandra "Alex" Vassileva (Google) | Former account executive; wrote the commit proposal of Dec 2025 |
 | Wafa | Co-founder; commented on the AVV in July |
 
 ## Open points
@@ -39,8 +40,9 @@ Habib can hand out the user AVV (V-05 or later) and sign the FOMF↔Eviplex secr
 - § 9 unlimited liability between the sister companies. (owner: Habib, with Erfan and counsel)
 - Braintrust: Art. 26 (joint controllership) or quality checks on Eviplex's behalf under Art. 28. (owner: Felix, with counsel)
 - DPIA status. (owner: Felix)
-- Google PSA: the pay-as-you-go version is final and ready for DocuSign (11 Nov). Counsel says sign it for DE and AT (18 Nov); Habib signs (Mahyar's mail to Google, 18 Nov). Which FOMF entity signs is not recorded (it must match the Google Cloud account holder). It does not cover Switzerland. Until it is signed, Google is a gap in the § 203 chain. (owner: Mahyar and Habib)
-- Counsel's missing assurances (human and automated access, training use, retention and deletion, third-country access and government requests, audit rights): ask Google where its Cloud terms cover them; the rest becomes terms of the Enterprise Agreement. (owner: Mahyar)
+- Google PSA for Switzerland (Art. 321 StGB): only under an Enterprise Agreement, not under the online terms (Google, 25 Nov). The pay-as-you-go PSA for DE and AT is signed (24 Nov); which FOMF entity signed is not recorded (it must match the Google Cloud account holder). (owner: Mahyar and Habib)
+- Counsel's missing assurances: Google named the terms and controls that cover them (log, 25 Nov). Counsel to check whether that is enough; the rest becomes terms of the Enterprise Agreement. (owner: Mahyar)
+- Enterprise Agreement commit: Alex's draft is from Dec 2025 (USD 260,000 for 12 months). Spend runs at about $306k a year (Aug–Oct 2026), about $258k without Elastic Cloud and Maps; the 5 % roughly equals the sustained-use discounts lost, and Vertex credits are worth a few thousand euros (log, 25 Nov). Open: a current offer; whether Marketplace (Elastic) and Maps count toward the commit; a lower commit or a better discount; whether Eviplex's own billing account would count; publicity clause; auto-renewal; billing entity (FomF GmbH vs Eviplex GmbH or the Swiss company). (owner: Mahyar)
 - The review planned Anlagen 2.1 and 2.2 as tracked changes in a V-06 with legal entity names and a data-flow diagram. Whether V-06 exists is not recorded. (owner: Mahyar)
 - Habib announced on 28 Oct a revised terms of use that separates Free and paid; not seen yet. (owner: Habib)
 - The review page in this folder lists security gaps and is tracked in git. the root `AGENTS.md` puts security findings in `cybersecurity/reports/`, which git ignores. Whether to move it is for Mahyar to decide. (owner: Mahyar)
@@ -57,7 +59,7 @@ Habib can hand out the user AVV (V-05 or later) and sign the FOMF↔Eviplex secr
 
 | Where | What to search or open |
 |---|---|
-| Outlook | Main thread "AVV und Datenschutzerklärung Eviplex" (Jul to Nov; Habib, Felix, Mahyar). Earlier: "Datenschutz / AVV Topics" (27–28 Jul), "Datenschutzerklärung und AVV für Ziliar/Eviplex" (20 Jul), "Impressum und Nutzungsbedingungen Eviplex", "Datenfluss mit OpenAI" (5 Oct). Counsel: "EVIPLEX / OpenAI – § 203 StGB in der LLM-Lieferkette unsere Fragen", "Berufsgeheimnis -Dokumentation 1. Entwurf und to does", "Empfehlung für Bewerbung und Finales Compliances-Gutachten als Dokumentation für Berufsgeheimnis" (risch@eventlawyers.de). Google PSA: "Urgent: Gemini API Usage / Privacy Agreement" and "DRAFT version - PSA" (wonneberger@google.com). Search `AVV`, `Verschwiegenheitsvereinbarung`, `Berufsgeheimnis`, `TOMs`. |
+| Outlook | Main thread "AVV und Datenschutzerklärung Eviplex" (Jul to Nov; Habib, Felix, Mahyar). Earlier: "Datenschutz / AVV Topics" (27–28 Jul), "Datenschutzerklärung und AVV für Ziliar/Eviplex" (20 Jul), "Impressum und Nutzungsbedingungen Eviplex", "Datenfluss mit OpenAI" (5 Oct). Counsel: "EVIPLEX / OpenAI – § 203 StGB in der LLM-Lieferkette unsere Fragen", "Berufsgeheimnis -Dokumentation 1. Entwurf und to does", "Empfehlung für Bewerbung und Finales Compliances-Gutachten als Dokumentation für Berufsgeheimnis" (risch@eventlawyers.de). Google PSA: "Urgent: Gemini API Usage / Privacy Agreement" and "DRAFT version - PSA" (wonneberger@google.com). Enterprise Agreement: "Proposal Commit _ FomF" (alvassileva@google.com, Dec 2025, drafts attached). Search `AVV`, `Verschwiegenheitsvereinbarung`, `Berufsgeheimnis`, `TOMs`. |
 | Teams | Mahyar's 1:1 chat with Habib (2–4 Nov: reminder, "5 points open", end-state question). Eviplex weekly meeting chat (plan memo, project "Professional secrecy (§203)"). Search `AVV OR Verschwiegenheit OR TOMs OR Berufsgeheimnis`. |
 | Slack | Handover of PR #1079 to Shervin, 17 Nov: https://fomf.slack.com/archives/C08RW4F6QJ1/p1794926193091819. Otherwise not searched yet. |
 | SharePoint | Not searched yet. The draft `Entwurf_AVV-Anlage-Nutzungsbedingungen-Eviplex_V-05.docx` came as a mail attachment (Felix, 5 Oct; Habib, 28 Oct). |

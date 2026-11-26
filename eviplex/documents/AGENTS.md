@@ -4,9 +4,9 @@ How doctors could bring their own documents (hospital letters, specialist report
 
 ## Status
 
-**As of 18 Nov 2026:** Not started. Nothing goes to the EVP team until Mahyar has thought through how documents fit into Eviplex. The reply to Benignia about AlpineAI is open.
+**As of 25 Nov 2026:** Not started. Nothing goes to the EVP team until Mahyar has thought through how documents fit into Eviplex. Benigna introduced Mahyar to Hansueli Jud by mail on 24 Nov; a date for the call is open (sub-issue CTO-29).
 
-- **Next step:** reply to Benignia: AlpineAI comparison, no conflict with a call with Hansueli Jud (Mahyar, 18 Nov). Then write a first product framing that covers the open points below (Mahyar).
+- **Next step:** send Hansueli one or two dates in the mail thread and meet him (Mahyar). Then write a first product framing that covers the open points below (Mahyar).
 - **Next date:** 18 Mar 2027, the doctors' networking meeting in Basel where Eviplex is presented alongside AlpineAI (Max presents, Mahyar attends)
 - **Waiting on:** nobody
 
@@ -46,12 +46,12 @@ A product decision on documents in Eviplex: which use case, which tiers, where t
 
 | Where | What to search or open |
 |---|---|
-| Outlook | "Swiss HealthAssist" (HIN and AlpineAI webinar, Oct–Nov 2025: Angela Beutler, Habib). Search `AlpineAI`, `HIN` |
+| Outlook | "AW: Kontaktaufnahme via AlpineAI Desk" (24 Nov 2026: Benigna introduces Mahyar to Hansueli Jud). "Swiss HealthAssist" (HIN and AlpineAI webinar, Oct–Nov 2025: Angela Beutler, Habib). Search `AlpineAI`, `HIN` |
 | Teams | 1:1 chat Mahyar ↔ Benigna Hassler (17–18 Nov 2026: AlpineAI, Hansueli, Basel, PDF upload; 6 Oct 2026: Hirslanden data protection) |
 | Slack | none yet |
 | SharePoint | CH pitch with tech fact sheet: eng › 09-Eviplex/Marketing Planung/03_Pitches/Eviplex final |
 | Notion | Meviq › 01 - Product › "KIS and PVS integration – research" |
-| Linear | Board issue CTO-22 (private team cto-assistant). EVP: project "Patient context in chat" (P-EVP-246), project "MDR assessment" (P-EVP-245), backlog issues EVP-935 "Upload lab results and patient documentation" and EVP-1289 "Structured patient content" |
+| Linear | Board issue CTO-22 (private team cto-assistant), sub-issue CTO-29 (call with Hansueli). EVP: project "Patient context in chat" (P-EVP-246), project "MDR assessment" (P-EVP-245), backlog issues EVP-935 "Upload lab results and patient documentation" and EVP-1289 "Structured patient content" |
 | Other | https://alpineai.swiss (pages /gesundheitswesen/, /sicherheit/, /produkt/; read 18 Nov 2026) |
 
 ## Files

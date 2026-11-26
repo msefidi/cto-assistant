@@ -23,10 +23,11 @@
 - [Platform product folder](platform-product.md) — offer, products, B2C definitions and findings, data, stack: read platform/AGENTS.md first
 - [M365 connector is read-only](m365-connector-read-only.md) — no drafts/sending; open a pre-filled Outlook compose window via mailto
 - [Verify live state](verify-live-state.md) — check gh/Linear/mail before calling something open or pending; briefs lag reality
-- [No email draft files](no-email-draft-files.md) — mail drafts go in chat, not repo files; the mail is the record
+- [No email draft files](no-email-draft-files.md) — mail drafts go in chat, not repo files; always show the full mail for copy/paste
 - [Enterprise AI](enterprise-ai.md) — AI platform for non-tech depts (Claude Enterprise vs Glean, Langdock, Gemini Enterprise); brief in enterprise-ai/
 - [ÖKG partner courses](oekg-partner-courses.md) — society partnerships (ÖKG pilot): partner course, digital Jahrestagung, society All Access package; Anya = Anya Hubmayer; brief in platform/oekg/
 - [One issue, no copies](linear-one-issue-rule.md) — Mahyar-only work on CTO, team-visible work stays in the team; briefs link them; Folder label; board = open CTO issues by priority
 - [Teams meeting transcripts](teams-meeting-transcripts.md) — read via M365 connector: calendar event → meetingTranscriptUrl; only if transcription was on; "process <meeting>" workflow
 - [How Mahyar plans](mahyar-daily-routine.md) — by hand from a plain priority list; one morning look; missed blocks and mail/Slack promises break the week
 - [No serif headings](no-serif-headings.md) — don't use Instrument Serif or other serif display fonts on Mahyar's pages; sans semibold headings
+- [Cross-company docs in Notion](notion-cross-company-docs.md) — FOMF teamspace > Docs ("01 - Documents") holds company-wide context; Produktwelt moved there 25 Nov 2026

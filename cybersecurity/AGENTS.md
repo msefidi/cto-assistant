@@ -6,12 +6,12 @@ Since 18 Nov 2026 this folder also holds the start of **IT security management**
 
 ## Status
 
-**As of 18 Nov 2026:** Contract v4 (#2026.11.014, €31,900 net, 29 days) and Blaze's Art. 28 DPA signed since 9 Nov. Phase dates are not fixed. FOMF's weekly timeline (`email-draft-blaze-dates-2026-11-16.md`) is with Blaze: only Phase 1 and its debrief in December, GCP and everything else from 6 Jan, same phase order. Constraints: Andreas is in event high season until 28 Nov, Mahyar is away from 14 Dec, nobody can support the work from 25 Dec to 5 Jan. IT security management with Andreas has a first baseline (`it-security-management-2026-11-18.md`).
+**As of 25 Nov 2026:** Contract v4 (#2026.11.014, €31,900 net, 29 days) and Blaze's Art. 28 DPA signed since 9 Nov. Blaze confirmed our timeline on 16 Nov, in the client portal (ticket BCP-26), with exact dates: M365 7–10 Dec 2026; GCP 6–8 Jan 2027; OSINT 11–12 Jan; GKE 18–21 Jan; Eviplex pentest 25 Jan–4 Feb; learning-platform pentest 1–9 Feb. Our reply was missed until 25 Nov, because it came only as portal notifications. MSA 10.3 cancellation fees now apply to these dates. IT security management with Andreas has a first baseline (`it-security-management-2026-11-18.md`).
 
-- **Next step:** wait for Blaze to confirm the weeks and set exact dates; make sure Andreas holds the week of 7 Dec (he called it optimistic) and that GCP access for Blaze is ready by 6 Jan.
-- **Next date:** proposed weeks, one per part: Phase 1 kick-off week of 30 Nov; M365 week of 7 Dec, with the debrief by 11 Dec; GCP 6–8 Jan, kick-off in the same week; OSINT week of 11 Jan; GKE week of 18 Jan; Eviplex pentest from 25 Jan; learning-platform pentest from 1 Feb 2027.
+- **Next step:** answer Mariana: Phase 1 kick-off slot (Mon 30 Nov, 14:00–15:00 CET, Mahyar and Andreas), confirmation of the Phase 1 debrief by 11 Dec, and Phase 2 start 6 Jan with its kick-off in the week of 7 Dec. Then post the exact dates in #p-cybersecurity-assessment and make sure Andreas grants M365 Global Reader before 7 Dec and GCP access is ready by 6 Jan.
+- **Next date:** Phase 1 kick-off, offered 30 Nov, 2 Dec or 3 Dec; Phase 1 testing 7–10 Dec, debrief by 11 Dec.
 - **IT security management:** next is the in-person meeting on 21 Dec to set the 2027 roadmap, adjusted with Blaze's Phase 1 (M365) input. Mahyar follows up on the Mac surveys (CTO-24).
-- **Waiting on:** Blaze, to confirm the timeline. Once confirmed, post the exact dates in #p-cybersecurity-assessment.
+- **Waiting on:** Mahyar, to pick the kick-off slot and answer the GCP start question.
 
 ## Goal
 
@@ -37,7 +37,7 @@ All six parts tested, each phase reported and debriefed, the fixed findings rete
 
 ## Open points
 
-- Blaze to confirm the weekly timeline sent on 16 Nov. Once agreed, MSA 10.3 cancellation fees apply, and the week of 7 Dec is already within 15 working days, so Andreas must hold it. (owner: Mahyar)
+- Phase 1 kick-off slot and Phase 2 start (6 or 11 Jan) still to answer in BCP-26. Dates are confirmed, so MSA 10.3 cancellation fees apply; Andreas must hold 7–10 Dec. (owner: Mahyar)
 - M365 Global Reader for Blaze before Phase 1; whether it is granted is not recorded. (owner: Andreas)
 - Test accounts in two organisations per product for the January pentests; test data, test windows and the AI usage limit before Phase 3. (owner: Mahyar)
 - The learning-platform pentest keeps 7 days although the scope grew to about 400 GraphQL operations and 100 REST handlers. Plan of 9 Nov: ask Carol how 7 days cover it, get a quote for 3 more days (€3,300 net at €1,100) and add them before the Phase 3 kick-off if her answer is thin. (owner: Mahyar)
@@ -69,13 +69,13 @@ Where this topic lives outside this folder. A catch-up searches every row.
 
 | Where | What to search or open |
 |---|---|
-| Outlook | Search `Blaze`, `blazeinfosec.com`, `Pentest`, `Security Assessment`, `PCG`, `Mandiant`. Threads: "Ihre Anfrage für einen Pentest bei Blaze Information Security" (main thread with Carol, cc Jan Weis and Habib: offers, answers, the 9 Nov "dates not binding" mail); "NDA \| Blaze <> FOMF", "NDA Blaze addition/changes", "NDA Blaze" (Habib, Amendment No. 1); "Blaze Contract" (Habib, 3 Nov); "Completed: Complete with Docusign: DPA FomF.docx.pdf, FomF x Blaze Security Assessment v4.pdf" (signed PDFs attached); "Kick-off call \| Blaze x FomF - Penetration test" (Carol, Mariana Teixeira, pm-europe@ and service-delivery@blazeinfosec.com); "Your access to Blaze Client Portal". PCG: "Fomf <> PCG Security Check - Google", "Kurze Frage zu unserem Projekt" (Alexander Stati). Exaspace: "InfoSec Consulting" (Jan Weis). |
+| Outlook | Search `Blaze`, `blazeinfosec.com`, `Pentest`, `Security Assessment`, `PCG`, `Mandiant`. Threads: "Ihre Anfrage für einen Pentest bei Blaze Information Security" (main thread with Carol, cc Jan Weis and Habib: offers, answers, the 9 Nov "dates not binding" mail); "NDA \| Blaze <> FOMF", "NDA Blaze addition/changes", "NDA Blaze" (Habib, Amendment No. 1); "Blaze Contract" (Habib, 3 Nov); "Completed: Complete with Docusign: DPA FomF.docx.pdf, FomF x Blaze Security Assessment v4.pdf" (signed PDFs attached); "Kick-off call \| Blaze x FomF - Penetration test" (Carol, Mariana Teixeira, pm-europe@ and service-delivery@blazeinfosec.com); "[BCP-26] Kick-off call \| Blaze x FomF - Penetration test" (portal notifications from jira@blazeinfosec.atlassian.net: Mariana's replies arrive only this way, easy to miss); "Your access to Blaze Client Portal". PCG: "Fomf <> PCG Security Check - Google", "Kurze Frage zu unserem Projekt" (Alexander Stati). Exaspace: "InfoSec Consulting" (Jan Weis). |
 | Teams | Search `Blaze OR Pentest OR "Security Assessment" OR Mandiant`. Group chat "Executive Board" (15 Oct, 26 Oct, EB memo 9 Nov, Sina's question 10 Nov); Mahyar's 1:1 chat with Habib (NDA, 27 Oct and 9 Nov). |
 | Slack | Private channel #p-cybersecurity-assessment (C0CHXPGCWHH), created 16 Nov with Andreas, Shervin, Simone, George and Rahim: the team's project channel. Mahyar's DM with Andreas (D01N5T0MV9B): thread of 12 Nov on Blaze's dates (high season, 7 Dec earliest, vacation from 27 Dec); thread of 8 Oct with the Mac survey forms (engineers: "Engineering Hardware Survey – Zusammenarbeit"; unit leads). Not searched more widely. |
 | SharePoint | Not searched yet. The place for the signed contract, DPA, NDA and the reports is not recorded. |
 | Notion | Not searched yet. |
 | Linear | Board issue CTO-2 (private team cto-assistant), sub-issue CTO-24 (Mac surveys). Project "Eli Lilly Cybersecurity" (P-ENG-190, lead Andreas): the quick wins promised to Eli Lilly, with a requirements table in its description. IT security management gets its own board under Andreas; not created yet (18 Nov). The Blaze assessment has no Linear project (checked 15 Nov 2026). |
-| Other | Blaze Client Portal (blazeinfosec.atlassian.net; access since 12 Nov); Blaze's VulnKeep portal for findings; DocuSign; Blaze MSA blazeinfosec.com/legal/terms and DPA blazeinfosec.com/legal/dpa. |
+| Other | Blaze Client Portal (blazeinfosec.atlassian.net; access since 12 Nov; scheduling ticket BCP-26); Blaze's VulnKeep portal for findings; DocuSign; Blaze MSA blazeinfosec.com/legal/terms and DPA blazeinfosec.com/legal/dpa. |
 
 ## Files
 
