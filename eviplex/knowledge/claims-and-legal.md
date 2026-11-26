@@ -14,7 +14,7 @@ Re-check it against the code and against the AVV brief (`../avv/AGENTS.md`). The
 - On 8 Oct 2026 only OpenAI had signed a § 203 confidentiality agreement. Data sent to OpenAI is **not** anonymised; it is covered by zero data retention and the secrecy terms. Website text that says otherwise is wrong (Linear EVP-1349).
 - **Google Cloud** stores conversations with Google-managed keys. Its Professional Secrecy Addendum (PSA) is signed for DE and AT (24 Nov 2026); encryption at rest does not take Google out of scope. Status and history: `../avv/`.
 - Therefore never write „lückenlose Verschwiegenheitskette".
-- **Switzerland:** the CH deck writes „§ 203 dStGB". Counsel's wording (Risch-Kerst): OpenAI's § 203 obligation „wirkt analog" for Art. 321 StGB. Plus and Pro do not yet fully cover Art. 321 StGB: the pay-as-you-go PSA covers DE and AT only; CH needs an Enterprise Agreement PSA (Google, 25 Nov 2026).
+- **Switzerland:** the CH deck writes „§ 203 dStGB". Counsel's wording (Risch-Kerst): OpenAI's § 203 obligation „wirkt analog" for Art. 321 StGB. Plus and Pro do not yet fully cover Art. 321 StGB: the pay-as-you-go PSA covers DE and AT only; CH needs an Enterprise Agreement PSA (Google, 25 Nov 2026). OpenAI's Enterprise Agreement names § 203 only; OpenAI legal refused Swiss and Austrian wording on 7 Sep 2026 (asked again 26 Nov, see `eviplex/avv/`).
 
 ## Hosting and countries
 

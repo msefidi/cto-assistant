@@ -2,6 +2,10 @@
 
 Newest first. One entry per event or result. Decisions go in `decisions.md`, one line each. Each entry ends with who said it and where, in brackets. Summarise the source; the original stays where it is.
 
+## 2026-11-26: OpenAI asked to cover Art. 321 StGB (CH) for a higher commitment
+
+Mahyar asked Nathalie Henry (cc Wafa) to reopen Swiss professional secrecy: future Swiss customers ask for it and the current contract covers § 203 StGB only. FOMF is ready to increase its annual commitment (no figure named) and offered counsel's wording based on OpenAI's § 203 clause; he asked what commitment would make it possible and offered a call with OpenAI legal. Background: the Enterprise Agreement (USD 100,000 a year, 2.5 % discount, start 21 Sep 2026) carries OpenAI's standard § 203 wording; on 7 Sep OpenAI legal refused Swiss and Austrian wording ("no precedent", no capacity for a per-customer review). (Mahyar, mail "Swiss professional secrecy (Art. 321 StGB) – revisiting our agreement", 26 Nov 08:32 CET; earlier thread "URGENT AW: OpenAI API Follow Up", Aug–Sep)
+
 ## 2026-11-25: Commit proposal sent to Google; Enterprise Agreement call requested
 
 Mahyar forwarded Alex's commit proposal with the drafts to Stefanie Wonneberger: asked for a current offer based on today's usage, said Switzerland is the open gap (Swiss hospitals are asking) and that FOMF wants to start the Enterprise Agreement now with the Swiss PSA and counsel's points in it; offered Tue 1, Wed 2 or Thu 3 Dec at 09:00 CET with Christian Putzar. (Mahyar, mail "FW: Proposal Commit _ FomF", 25 Nov 11:45 CET)
