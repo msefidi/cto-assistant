@@ -2,6 +2,10 @@
 
 One line per decision, newest first. Each line ends with who decided and where. A line is never edited; when a decision changes, add a new line that says which one it replaces.
 
+- 2026-11-27: B2B SLA (Anlage 5): outages at OpenAI or Google do not count against the 99.5 % monthly availability; if Eviplex still answers, slower or with less, that is degraded mode, not an outage. (Mahyar, session)
+- 2026-11-27: B2B SLA (Anlage 5): response times run only within support hours (Mon–Fri 9–17); no on-call. (Mahyar, session)
+- 2026-11-27: B2B deletion policy: Mahyar delivers it to Habib before 20 Dec 2026; § 8.4 of the B2B contract is to point to it. (Mahyar, session)
+- 2026-11-27: B2B (Habib's B2B contract): the question quotas do not change. The customer pays per user and gets one shared pool for the whole organisation, the number of users × the edition's quota per user; usage is not counted per user. (Mahyar and Wafa; session with Mahyar)
 - 2026-11-26: Offer OpenAI a higher annual commitment in exchange for Art. 321 StGB cover, without naming a figure; Mahyar's own ceiling is about +20 % (USD 120,000), not disclosed. (Mahyar, session; mail to Nathalie Henry 26 Nov)
 - 2026-11-17: Shervin takes over PR #1079. Its scope: Vercel AI Gateway EU endpoint (regional hosting) and TLS for Postgres and Redis; the EU model pin is done (PR #1093). (Mahyar, Slack https://fomf.slack.com/archives/C08RW4F6QJ1/p1794926193091819)
 - 2026-11-11: Sign Google's fixed pay-as-you-go PSA now (good for DE and AT), then negotiate an Enterprise Agreement for a PSA that can cover Switzerland. (Mahyar and Habib, call with Google; recorded in memory note `eviplex-ch-tech-factsheet`)
