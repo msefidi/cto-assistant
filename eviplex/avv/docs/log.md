@@ -2,6 +2,10 @@
 
 Newest first. One entry per event or result. Decisions go in `decisions.md`, one line each. Each entry ends with who said it and where, in brackets. Summarise the source; the original stays where it is.
 
+## 2026-11-27: Habib told about the tax clause and the Swiss gap
+
+Mahyar told Habib what the reply left out: the tax clause (§ 7.5) needs Erfan and the tax adviser, and Swiss hospitals are not covered under Art. 321 StGB. (Mahyar, session)
+
 ## 2026-11-27: Mahyar answered Habib on the B2B contract
 
 Mahyar replied to all (Habib, Wafa; cc Jasmin Naimi, Ute Schellerer): deletion policy by 20 Dec; § 8.4 cannot be promised as written (Google backups up to 180 days, DIN 66399 is for physical media) and should point to the policy; § 4.5 conflicts with full deletion and hangs on Habib's question to Mandy about FOMF's role. SLA: the LLM providers define no degraded mode; Mahyar sends their availability promises and proposes Eviplex's own definition, with provider outages excluded from the 99.5 % and response times within support hours only. Prices and licences: he goes through them with Wafa; Anlage 3 to say per-user pricing with one shared quota for the organisation. Not in the mail: the tax clause (§ 7.5) and the missing Swiss cover (Art. 321 StGB). (Mahyar, reply "Re: B2B-Vereinbarung Eviplex – offene Punkte, SLA und abschließende Prüfung", 27 Nov 08:49 CET)
