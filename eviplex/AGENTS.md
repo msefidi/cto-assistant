@@ -27,6 +27,7 @@ Eviplex is an AI-supported information system for physicians in hospitals and pr
 
 - Quotas: Mahyar, 12 Nov 2026 (Plus is 150, never 300). The values come from `chatConfig.quota` in the meviq backend.
 - Plus and Pro are the § 203 tiers ("Erweiterter Datenschutz"). Their Patient Context feature (named patient records) holds **no documents** today (Mahyar, 17 Nov 2026).
+- **Student package** (decided, not live): free, Plus features with 50 questions per month, for students enrolled in a FOMF PJ, KPJ or WSJ programme (FOMF verifies them); shown on the pricing page like the All Access offer (Mahyar, 26–27 Nov 2026). Details and open points: `pricing/`.
 - **Prices** come from Stripe through the backend billing plan registry; the plan copy is in `web/shared-ui/pricing/plan-content.ts`. Never quote a price from memory: check eviplex.com or the code.
 
 ## Areas

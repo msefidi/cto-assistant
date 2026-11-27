@@ -4,8 +4,9 @@ Prices and question quotas of the Eviplex B2C tiers (Free, Plus, Pro) in DE/AT a
 
 ## Status
 
-**As of 26 Nov 2026:** A proposal exists (table below): Free from 30 to 15 questions, Plus DE/AT €19.90 / €199.90 with 75 questions, Plus CH CHF 39.90 / 405.90 with 150, Pro DE/AT €72.90 / €742.90 and Pro CH CHF 72.90 / 742.90 with 300 each. Nothing is decided. A worst-case cost check at 10 ct per question shows every tier in profit at full use (lowest break-even: Pro DE/AT yearly at 17 ct per question). The prices live today in Stripe; what is live is not recorded here.
+**As of 26 Nov 2026:** A proposal exists (table below): Free from 30 to 15 questions, Plus DE/AT €19.90 / €199.90 with 75 questions, Plus CH CHF 39.90 / 405.90 with 150, Pro DE/AT €72.90 / €742.90 and Pro CH CHF 72.90 / 742.90 with 300 each. Not decided. **Decided:** a free student package for everyone enrolled in a FOMF PJ, KPJ or WSJ programme: Plus features with 50 questions per month, eligibility from FOMF's own student verification, shown on the pricing page like the All Access offer (not a fourth card). Not built yet. A worst-case cost check at 10 ct per question shows every tier in profit at full use (lowest break-even: Pro DE/AT yearly at 17 ct per question). The prices live today in Stripe; what is live is not recorded here.
 
+- **Next step (student package):** EVP-1385 (Backlog, assigned to Mahyar). Open: which FOMF data marks a programme student, and the page copy. (EVP team)
 - **Next step:** check what is live today in Stripe and on eviplex.com, confirm the real cost per question (heavy users included), then settle the proposal with Wafa. (Mahyar, by 27 Nov)
 - **Next date:** check-in 27 Nov 2026 (CTO-30).
 - **Waiting on:** Mahyar.
@@ -19,6 +20,7 @@ Prices and question quotas of the Eviplex B2C tiers (Free, Plus, Pro) in DE/AT a
 | Plus CH | CHF 39.90 | CHF 405.90 | 150 |
 | Pro DE/AT | €72.90 | €742.90 | 300 |
 | Pro CH | CHF 72.90 | CHF 742.90 | 300 |
+| Student (decided) | free | free | 50 (Plus features) |
 
 ### Cost check (session with Mahyar, 25 Nov 2026)
 
@@ -50,6 +52,7 @@ Prices and quotas decided with Wafa, live in Stripe and the backend quota, and t
 
 ## Open points
 
+- Student package: which FOMF data marks a PJ, KPJ or WSJ student (FOMF verifies students; the meviq backend can grant a tier from a FOMF group), and when access ends. To settle in the EVP issue. (owner: EVP team, Mahyar)
 - The 10 ct per question: is it the average over all questions, and do heavy users (long follow-ups) cost more? Source it from the cost metrics. (owner: Mahyar)
 - Free at 15 instead of 30 halves the most a free user can cost (€3.00 to €1.50 a month); its effect on conversion is unknown. (owner: Mahyar)
 - All Access members get Plus through the cross-sell; if it is included, those users cost money without Eviplex revenue. Check their terms on Notion "FOMF All Access". (owner: Mahyar)
@@ -62,7 +65,7 @@ Prices and quotas decided with Wafa, live in Stripe and the backend quota, and t
 
 - Prices, quotas and the cost per question are confidential: they stay in this folder, never on a Linear issue or in external tools.
 - Prices are true only in Stripe and the backend billing plan registry; never quote a live price from this file.
-- Once decided, change these together: Stripe, `chatConfig.quota` in the meviq backend, the plan copy in `web/shared-ui/pricing/plan-content.ts` (the "+500 % / +1.000 %" lines), the CS rulebook in Notion, `../AGENTS.md` (Tiers) and `../knowledge/support.md`. The code changes land in the meviq repo as EVP product work.
+- Once decided, change these together: Stripe, `chatConfig.quota` in the meviq backend, the plan copy in `web/shared-ui/pricing/plan-content.ts` (the "+500 % / +1.000 %" lines), the CS rulebook in Notion, the pricing page (`web/marketing/app/[locale]/pricing/`, also for the student package), `../AGENTS.md` (Tiers) and `../knowledge/support.md`. The code changes land in the meviq repo as EVP product work.
 
 ## Source map
 
@@ -75,7 +78,7 @@ Where this topic lives outside this folder. A catch-up searches every row.
 | Slack | none |
 | SharePoint | Sales Membership › Preislisten GMS › "2025_08_Staffelpreise GMS DE-AT-CH inkl. Klinik-Modell.xlsx" (Eviplex block, hospital prices). The proposal spreadsheet from 25 Nov: location not recorded (screenshot in the session only). |
 | Notion | "FOMF All Access" (Eviplex terms for members per tier); Eviplex CS rulebook "Eviplex – Customer Support: Zuständigkeiten, Abläufe & verbindliche Aussagen". |
-| Linear | Board issue CTO-30 (private team cto-assistant), sub-issue CTO-16 (annual payments); related CTO-15 (selling outside the app stores). Product work in team EVP: none yet. |
+| Linear | Board issue CTO-30 (private team cto-assistant), sub-issue CTO-16 (annual payments); related CTO-15 (selling outside the app stores). Product work in team EVP: EVP-1385 (student package; Backlog, assigned to Mahyar). |
 | Other | Stripe (live prices); meviq repo: `chatConfig.quota`, `web/shared-ui/pricing/plan-content.ts`; eviplex.com pricing page. |
 
 ## Files
